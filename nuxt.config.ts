@@ -68,6 +68,22 @@ export default defineNuxtConfig({
     '/characters/**': {
       prerender: true,
       isr: true
+    },
+    '/items': {
+      prerender: true,
+      isr: true
+    },
+    '/items/**': {
+      prerender: true,
+      isr: true
+    },
+    '/trophies': {
+      prerender: true,
+      isr: true
+    },
+    '/trophies/**': {
+      prerender: true,
+      isr: true
     }
   },
   site: {
