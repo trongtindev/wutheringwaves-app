@@ -1,0 +1,77 @@
+{
+  "description": "The first Jinzhou Magistrate, in memory of the mysterious person who helped defend the border and build the city, created the Guardian series under his guidance. Today, it has become the cornerstone of the development of new weapons.",
+  "ranks": [
+    "Resonance Skill DMG Bonus is increased by 12%.",
+    "Resonance Skill DMG Bonus is increased by 15%.",
+    "Resonance Skill DMG Bonus is increased by 18%.",
+    "Resonance Skill DMG Bonus is increased by 21%.",
+    "Resonance Skill DMG Bonus is increased by 24%."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "24", "substats": "6.7%" },
+        { "level": 20, "baseStats": "62", "substats": "11.9%" }
+      ],
+      "materials": [
+        { "amount": 6000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "78", "substats": "11.9%" },
+        { "level": 40, "baseStats": "118", "substats": "17.2%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Impure Phlogiston" },
+        { "amount": 4, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "134", "substats": "17.2%" },
+        { "level": 50, "baseStats": "155", "substats": "19.8%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Extracted Phlogiston" },
+        { "amount": 3, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "171", "substats": "19.8%" },
+        { "level": 60, "baseStats": "191", "substats": "22.4%" }
+      ],
+      "materials": [
+        { "amount": 36000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Refined Phlohiston" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "207", "substats": "22.4%" },
+        { "level": 70, "baseStats": "227", "substats": "25.1%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Flawless Phlohiston" },
+        { "amount": 3, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "243", "substats": "25.1%" },
+        { "level": 80, "baseStats": "263", "substats": "27.7%" }
+      ],
+      "materials": [
+        { "amount": 72000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Flawless Phlohiston" },
+        { "amount": 5, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

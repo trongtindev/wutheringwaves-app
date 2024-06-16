@@ -1,0 +1,78 @@
+{
+  "slug": "yinlin",
+  "name": "Yinlin",
+  "nameLocalized": {
+    "en": "Yinlin",
+    "zhs": "吟霖",
+    "zht": "吟霖",
+    "ja": "吟霖",
+    "ko": "음림",
+    "fr": "Yinlin",
+    "de": "Yinlin",
+    "es": "Yinlin"
+  },
+  "quote": "Name's Yinlin. As for what I do... Shhh, we don't talk about that in public.",
+  "birthday": "September 17th",
+  "birthplace": "Huanglong",
+  "releaseDate": "June 06, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Group Abomination Tacet Core", "amount": 46 },
+    { "name": "Coriolus", "amount": 60 },
+    { "name": "LF Whisperin Core", "amount": 8 },
+    { "name": "MF Whisperin Core", "amount": 8 },
+    { "name": "HF Whisperin Core", "amount": 12 },
+    { "name": "FF Whisperin Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Zapstring's Dance"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Zapstring's Dance"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Magnetic Roar"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Thundering Wrath"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Chameleon Cipher"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Deadly Focus"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Pain Immersion"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Raging Storm"
+    },
+    { "url": "/wiki/Outro_Skill", "type": "Outro Skill", "name": "Strategist" }
+  ],
+  "resonanceChain": [
+    { "url": "/wiki/Morality%27s_Crossroad", "name": "Morality's Crossroad" },
+    { "url": "/wiki/Ensnarled_By_Rapport", "name": "Ensnarled By Rapport" },
+    { "url": "/wiki/Unyielding_Verdict", "name": "Unyielding Verdict" },
+    { "url": "/wiki/Steadfast_Conviction", "name": "Steadfast Conviction" },
+    { "url": "/wiki/Resounding_Will", "name": "Resounding Will" },
+    { "url": "/wiki/Pursuit_of_Justice", "name": "Pursuit of Justice" }
+  ]
+}

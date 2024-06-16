@@ -1,0 +1,77 @@
+{
+  "description": "A weapon designed to commemorate the Midnight Rangers' courage. \"A thousand echoes carry the war's tale, as spirits unite in resounding gorges of valor.\"",
+  "ranks": [
+    "When Intro Skill is released, increases ATK by 15%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 18.75%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 22.5%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 26.25%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 30%, lasting for 15s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "33", "substats": "6.7%" },
+        { "level": 20, "baseStats": "85", "substats": "11.9%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "LF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "107", "substats": "11.9%" },
+        { "level": 40, "baseStats": "163", "substats": "17.2%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Inert Metallic Drip" },
+        { "amount": 5, "name": "MF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "185", "substats": "17.2%" },
+        { "level": 50, "baseStats": "213", "substats": "19.8%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Reactive Metallic Drip" },
+        { "amount": 4, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "235", "substats": "19.8%" },
+        { "level": 60, "baseStats": "263", "substats": "22.4%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Polarized Metallic Drip" },
+        { "amount": 5, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "285", "substats": "22.4%" },
+        { "level": 70, "baseStats": "312", "substats": "25.1%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Heterized Metallic Drip" },
+        { "amount": 4, "name": "FF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "334", "substats": "25.1%" },
+        { "level": 80, "baseStats": "362", "substats": "27.7%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Heterized Metallic Drip" },
+        { "amount": 7, "name": "FF Howler Core" }
+      ]
+    }
+  ]
+}

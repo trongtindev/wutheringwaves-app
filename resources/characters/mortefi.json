@@ -1,0 +1,81 @@
+{
+  "slug": "mortefi",
+  "name": "Mortefi",
+  "nameLocalized": {
+    "en": "Mortefi",
+    "zhs": "莫特斐",
+    "zht": "莫特斐",
+    "ja": "モルトフィー",
+    "ko": "모르테피",
+    "fr": "Mortefi",
+    "de": "Mortefi",
+    "es": "Mortefi"
+  },
+  "quote": "Fine, since you've done this much for me... Go ahead, tell me the wildest inventions you can think of, and watch me make them happen for you.",
+  "birthday": "November 6th",
+  "birthplace": "New Federation",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Rage Tacet Core", "amount": 46 },
+    { "name": "Coriolus", "amount": 60 },
+    { "name": "LF Whisperin Core", "amount": 8 },
+    { "name": "MF Whisperin Core", "amount": 8 },
+    { "name": "HF Whisperin Core", "amount": 12 },
+    { "name": "FF Whisperin Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Impromptu Show"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Impromptu Show"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Passionate Variation"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Violent Finale"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Fury Fugue"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Harmonic Control"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Rhythmic Vibrato"
+    },
+    { "url": "/wiki/Intro_Skill", "type": "Intro Skill", "name": "Dissonance" },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Rage Transposition"
+    }
+  ],
+  "resonanceChain": [
+    { "url": "/wiki/Solitary_Etude", "name": "Solitary Etude" },
+    { "url": "/wiki/Hypocritical_Hymn", "name": "Hypocritical Hymn" },
+    { "url": "/wiki/Flaming_Recitativo", "name": "Flaming Recitativo" },
+    { "url": "/wiki/Cathartic_Waltz", "name": "Cathartic Waltz" },
+    { "url": "/wiki/Funerary_Quartet", "name": "Funerary Quartet" },
+    {
+      "url": "/wiki/Apoplectic_Instrumental",
+      "name": "Apoplectic Instrumental"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "description": "Stonard opens, the rope triggers, the sky is condensed, the enemy will be oppressed by the invisible momentum and unable to move, the Scar caused by the thousands of rapid electricity will never be able to heal.",
+  "ranks": [
+    "Increases the DMG Bonus by 12%. When dealing Resonance Skill DMG, increases ATK by 12%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 12%.",
+    "Increases the DMG Bonus by 15%. When dealing Resonance Skill DMG, increases ATK by 15%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 15%.",
+    "Increases the DMG Bonus by 18%. When dealing Resonance Skill DMG, increases ATK by 18%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 18%.",
+    "Increases the DMG Bonus by 21%. When dealing Resonance Skill DMG, increases ATK by 21%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 21%.",
+    "Increases the DMG Bonus by 24%. When dealing Resonance Skill DMG, increases ATK by 24%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 24%."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "40", "substats": "8.0%" },
+        { "level": 20, "baseStats": "104", "substats": "14.2%" }
+      ],
+      "materials": [
+        { "amount": 10000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "130", "substats": "14.2%" },
+        { "level": 40, "baseStats": "198", "substats": "20.4%" }
+      ],
+      "materials": [
+        { "amount": 20000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Lento Helix" },
+        { "amount": 6, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "224", "substats": "20.4%" },
+        { "level": 50, "baseStats": "258", "substats": "23.5%" }
+      ],
+      "materials": [
+        { "amount": 40000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Adagio Helix" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "285", "substats": "23.5%" },
+        { "level": 60, "baseStats": "318", "substats": "26.6%" }
+      ],
+      "materials": [
+        { "amount": 60000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Andante Helix" },
+        { "amount": 6, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "345", "substats": "26.6%" },
+        { "level": 70, "baseStats": "379", "substats": "29.7%" }
+      ],
+      "materials": [
+        { "amount": 80000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Presto Helix" },
+        { "amount": 4, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "405", "substats": "29.7%" },
+        { "level": 80, "baseStats": "439", "substats": "32.8%" }
+      ],
+      "materials": [
+        { "amount": 120000, "name": "Shell Credit" },
+        { "amount": 12, "name": "Presto Helix" },
+        { "amount": 8, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

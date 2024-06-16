@@ -1,0 +1,4 @@
+{
+  "description": "Allows the selected Resonators in the party to reduce the Vibration Strength of the targets by a certain percentage when they trigger Counterattack in the next 60s. Only works on your own Resonators in Co-op.",
+  "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products."
+}

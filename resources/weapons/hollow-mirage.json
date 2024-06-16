@@ -1,0 +1,77 @@
+{
+  "description": "The Gauntlets born from the strange phenomenon in the sky. The blacksmith infused the feelings of witnessing the strange star into the weapon, making it look hollow and light, but it can exert a tremendous momentum while protecting the user.",
+  "ranks": [
+    "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 3%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
+    "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 3.5%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
+    "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 4%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
+    "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 4.5%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
+    "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 5%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "33", "substats": "6.7%" },
+        { "level": 20, "baseStats": "85", "substats": "11.9%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "LF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "107", "substats": "11.9%" },
+        { "level": 40, "baseStats": "163", "substats": "17.2%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Seed" },
+        { "amount": 5, "name": "MF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "185", "substats": "17.2%" },
+        { "level": 50, "baseStats": "213", "substats": "19.8%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Cadence Bud" },
+        { "amount": 4, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "235", "substats": "19.8%" },
+        { "level": 60, "baseStats": "263", "substats": "22.4%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Leaf" },
+        { "amount": 5, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "285", "substats": "22.4%" },
+        { "level": 70, "baseStats": "312", "substats": "25.1%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Cadence Blossom" },
+        { "amount": 4, "name": "FF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "334", "substats": "25.1%" },
+        { "level": 80, "baseStats": "362", "substats": "27.7%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Cadence Blossom" },
+        { "amount": 7, "name": "FF Howler Core" }
+      ]
+    }
+  ]
+}

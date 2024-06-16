@@ -1,0 +1,77 @@
+{
+  "description": "These Gauntlets are ceremonial weapon used at the inauguration ceremony of the Huanglong Magistrate. The golden ginkgo leaf pattern represents that Huanglong should be like a ginkgo, although it is left alone in the world, it is still prosperous and long-lasting.",
+  "ranks": [
+    "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 18%, lasting for 15s.",
+    "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 27%, lasting for 15s.",
+    "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 36%, lasting for 15s.",
+    "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 45%, lasting for 15s.",
+    "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 54%, lasting for 15s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "33", "substats": "4.5%" },
+        { "level": 20, "baseStats": "85", "substats": "7.9%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "LF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "107", "substats": "7.9%" },
+        { "level": 40, "baseStats": "163", "substats": "11.4%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Seed" },
+        { "amount": 5, "name": "MF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "185", "substats": "11.4%" },
+        { "level": 50, "baseStats": "213", "substats": "13.2%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Cadence Bud" },
+        { "amount": 4, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "235", "substats": "13.2%" },
+        { "level": 60, "baseStats": "263", "substats": "14.9%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Leaf" },
+        { "amount": 5, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "285", "substats": "14.9%" },
+        { "level": 70, "baseStats": "312", "substats": "16.7%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Cadence Blossom" },
+        { "amount": 4, "name": "FF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "334", "substats": "16.7%" },
+        { "level": 80, "baseStats": "362", "substats": "18.4%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Cadence Blossom" },
+        { "amount": 7, "name": "FF Howler Core" }
+      ]
+    }
+  ]
+}

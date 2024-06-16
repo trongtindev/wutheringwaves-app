@@ -1,0 +1,115 @@
+import { defineStore } from 'pinia';
+import {
+  mdiHomeOutline,
+  mdiChartBarStacked,
+  mdiCounter,
+  mdiAccountGroup,
+  mdiTrophy,
+  mdiListStatus,
+  mdiChartTimeline,
+  mdiWalletGiftcard,
+  mdiMap,
+  mdiCalendar,
+  mdiGrid
+} from '@mdi/js';
+
+export interface IMenu {
+  url: string;
+  icon: string;
+  title: string;
+}
+
+export const useSidebar = defineStore('useSidebar', () => {
+  // uses
+  const notify = ref<{
+    id: string;
+    key: string;
+    value: number;
+  }>();
+
+  // states
+  const open = ref();
+  const items = ref<IMenu[]>([
+    {
+      url: '/',
+      icon: mdiHomeOutline,
+      title: 'sidebar.home'
+    },
+    {
+      url: '/timeline',
+      icon: mdiCalendar,
+      title: 'sidebar.timeline'
+    },
+    {
+      url: '/map',
+      icon: mdiMap,
+      title: 'sidebar.map'
+    },
+    {
+      url: '/convene-history',
+      icon: mdiCounter,
+      title: 'sidebar.conveneHistory'
+    },
+    {
+      url: '/characters',
+      icon: '/icons/character.png',
+      title: 'sidebar.characters'
+    },
+    {
+      url: '/teams',
+      icon: mdiAccountGroup,
+      title: 'sidebar.teams'
+    },
+    {
+      url: '/leaderboards',
+      icon: mdiChartTimeline,
+      title: 'sidebar.leaderboards'
+    },
+    {
+      url: '/tier-list',
+      icon: mdiChartBarStacked,
+      title: 'sidebar.tierList'
+    },
+    {
+      url: '/todo-list',
+      icon: mdiListStatus,
+      title: 'sidebar.todoList'
+    },
+    {
+      url: '/weapons',
+      icon: '/icons/weapon.png',
+      title: 'sidebar.weapons'
+    },
+    {
+      url: '/echos',
+      icon: '/icons/echo.png',
+      title: 'sidebar.echos'
+    },
+    {
+      url: '/codes',
+      icon: mdiWalletGiftcard,
+      title: 'sidebar.codes'
+    },
+    {
+      url: '/guide',
+      icon: mdiMap,
+      title: 'sidebar.guide'
+    },
+    {
+      url: '/trophies',
+      icon: mdiTrophy,
+      title: 'sidebar.trophies'
+    },
+    {
+      url: '/items',
+      icon: mdiGrid,
+      title: 'sidebar.items'
+    }
+  ]);
+
+  // functions
+  // TODO: add notify badge
+  const setNotify = (id: string, key: string, value: number) => {};
+
+  return { open, items, notify, setNotify };
+});

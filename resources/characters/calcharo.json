@@ -1,0 +1,82 @@
+{
+  "slug": "calcharo",
+  "name": "Calcharo",
+  "nameLocalized": {
+    "en": "Calcharo",
+    "zhs": "卡卡罗",
+    "zht": "卡卡羅",
+    "ja": "カカロ",
+    "ko": "카카루",
+    "fr": "Calcharo",
+    "de": "Calcharo",
+    "es": "Calcharo"
+  },
+  "quote": "They'll make an offer we like. I'll make sure of it.",
+  "birthday": "July 8th",
+  "birthplace": "New Federation",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Thundering Tacet Core", "amount": 46 },
+    { "name": "Iris", "amount": 60 },
+    { "name": "Crude Ring", "amount": 8 },
+    { "name": "Basic Ring", "amount": 8 },
+    { "name": "Improved Ring", "amount": 12 },
+    { "name": "Tailored Ring", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Gnawing Fangs"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Gnawing Fangs"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Extermination Order"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Phantom Etching"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Hunting Mission"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Bloodshed Awaken"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Revenant Rush"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Wanted Outlaw"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Shadowy Raid"
+    }
+  ],
+  "resonanceChain": [
+    { "url": "/wiki/Covert_Negotiation", "name": "Covert Negotiation" },
+    { "url": "/wiki/Zero-Sum_Game", "name": "Zero-Sum Game" },
+    { "url": "/wiki/Iron_Fist_Diplomacy", "name": "Iron Fist Diplomacy" },
+    { "url": "/wiki/Dark_Alliance", "name": "Dark Alliance" },
+    { "url": "/wiki/Unconventional_Compact", "name": "Unconventional Compact" },
+    { "url": "/wiki/The_Ultimatum", "name": "The Ultimatum" }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "description": "Designed after ginkgo leaves, these gauntlets are sturdy and unadorned. Made from durable material, they offer exceptional protection while dealing significant damage, making them a formidable weapon that excels in defense and offense.",
+  "ranks": [
+    "Energy Regen is increased by 12.8%. When Resonance Skill hits a target, Basic Attack Damage is increased by 10% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 10% lasting for 8s.",
+    "Energy Regen is increased by 16%. When Resonance Skill hits a target, Basic Attack Damage is increased by 12.5% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 12.5% lasting for 8s.",
+    "Energy Regen is increased by 19.2%. When Resonance Skill hits a target, Basic Attack Damage is increased by 15% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 15% lasting for 8s.",
+    "Energy Regen is increased by 22.4%. When Resonance Skill hits a target, Basic Attack Damage is increased by 17.5% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 17.5% lasting for 8s.",
+    "Energy Regen is increased by 25.6%. When Resonance Skill hits a target, Basic Attack Damage is increased by 20% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 20% lasting for 8s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        {
+          "level": 1,
+          "baseStats": "47",
+          "substats": "8.1%"
+        },
+        {
+          "level": 20,
+          "baseStats": "122",
+          "substats": "14.3%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 10000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 6,
+          "name": "LF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 20,
+          "baseStats": "153",
+          "substats": "14.3%"
+        },
+        {
+          "level": 40,
+          "baseStats": "232",
+          "substats": "20.6%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 20000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 6,
+          "name": "Cadence Seed"
+        },
+        {
+          "amount": 6,
+          "name": "MF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 40,
+          "baseStats": "264",
+          "substats": "20.6%"
+        },
+        {
+          "level": 50,
+          "baseStats": "303",
+          "substats": "23.8%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 40000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 8,
+          "name": "Cadence Bud"
+        },
+        {
+          "amount": 4,
+          "name": "HF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 50,
+          "baseStats": "335",
+          "substats": "23.8%"
+        },
+        {
+          "level": 60,
+          "baseStats": "374",
+          "substats": "26.9%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 60000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 6,
+          "name": "Cadence Leaf"
+        },
+        {
+          "amount": 6,
+          "name": "HF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 60,
+          "baseStats": "406",
+          "substats": "26.9%"
+        },
+        {
+          "level": 70,
+          "baseStats": "445",
+          "substats": "30.1%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 80000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 8,
+          "name": "Cadence Blossom"
+        },
+        {
+          "amount": 4,
+          "name": "FF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 70,
+          "baseStats": "476",
+          "substats": "30.1%"
+        },
+        {
+          "level": 80,
+          "baseStats": "516",
+          "substats": "33.2%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 120000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 12,
+          "name": "Cadence Blossom"
+        },
+        {
+          "amount": 8,
+          "name": "FF Howler Core"
+        }
+      ]
+    }
+  ]
+}

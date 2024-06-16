@@ -1,0 +1,77 @@
+{
+  "description": "This Sword is a ceremonial weapon used by the Jinzhou Magistrate of Huanglong at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left in the world, it is still prosperous and long-lasting.",
+  "ranks": [
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 20%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 31%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 42%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 53%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 64%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "31", "substats": "8.1%" },
+        { "level": 20, "baseStats": "80", "substats": "14.3%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "LF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "101", "substats": "14.3%" },
+        { "level": 40, "baseStats": "153", "substats": "20.6%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Inert Metallic Drip" },
+        { "amount": 5, "name": "MF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "174", "substats": "20.6%" },
+        { "level": 50, "baseStats": "200", "substats": "23.8%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Reactive Metallic Drip" },
+        { "amount": 4, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "221", "substats": "23.8%" },
+        { "level": 60, "baseStats": "247", "substats": "26.9%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Polarized Metallic Drip" },
+        { "amount": 5, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "267", "substats": "26.9%" },
+        { "level": 70, "baseStats": "293", "substats": "30.1%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Heterized Metallic Drip" },
+        { "amount": 4, "name": "FF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "314", "substats": "30.1%" },
+        { "level": 80, "baseStats": "340", "substats": "33.2%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Heterized Metallic Drip" },
+        { "amount": 7, "name": "FF Howler Core" }
+      ]
+    }
+  ]
+}

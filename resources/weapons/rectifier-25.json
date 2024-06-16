@@ -1,0 +1,77 @@
+{
+  "description": "Improved version of a Rectifier prototype from the Huanglong next-gen mass production weaponry project. With surging power and highly purified lens, its sound is only played by the wise of steel-like will.",
+  "ranks": [
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 5%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 12%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 6.25%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 15%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 7.5%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 18%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 8.75%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 21%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 10%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 24%, lasting for 10s.Materials Needed"
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "27", "substats": "11.5%" },
+        { "level": 20, "baseStats": "70", "substats": "20.4%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "88", "substats": "20.4%" },
+        { "level": 40, "baseStats": "133", "substats": "29.4%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Lento Helix" },
+        { "amount": 5, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "151", "substats": "29.4%" },
+        { "level": 50, "baseStats": "174", "substats": "33.9%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Adagio Helix" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "192", "substats": "33.9%" },
+        { "level": 60, "baseStats": "215", "substats": "38.3%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Andante Helix" },
+        { "amount": 5, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "233", "substats": "38.3%" },
+        { "level": 70, "baseStats": "255", "substats": "42.8%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Presto Helix" },
+        { "amount": 4, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "273", "substats": "42.8%" },
+        { "level": 80, "baseStats": "296", "substats": "47.3%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Presto Helix" },
+        { "amount": 7, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

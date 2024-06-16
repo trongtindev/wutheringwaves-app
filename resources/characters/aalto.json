@@ -1,0 +1,81 @@
+{
+  "slug": "aalto",
+  "name": "Aalto",
+  "nameLocalized": {
+    "en": "Aalto",
+    "zhs": "秋水",
+    "zht": "秋水",
+    "ja": "アールト",
+    "ko": "알토",
+    "fr": "Aalto",
+    "de": "Aalto",
+    "es": "Aalto"
+  },
+  "quote": "Well, if it isn't my loyal patron! What do you wish to inquire about today?\"",
+  "birthday": "June 11th",
+  "birthplace": "New Federation",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Roaring Rock Fist", "amount": 46 },
+    { "name": "Wintry Bell", "amount": 60 },
+    { "name": "LF Howler Core", "amount": 8 },
+    { "name": "MF Howler Core", "amount": 8 },
+    { "name": "HF Howler Core", "amount": 12 },
+    { "name": "FF Howler Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Half Truths"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Half Truths"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Shift Trick"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Flower in the Mist"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Misty Cover"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Perfect Performance"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Mid-game Break"
+    },
+    { "url": "/wiki/Intro_Skill", "type": "Intro Skill", "name": "Feint Shot" },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Dissolving Mist"
+    }
+  ],
+  "resonanceChain": [
+    {
+      "url": "/wiki/Trickster%27s_Opening_Show",
+      "name": "Trickster's Opening Show"
+    },
+    { "url": "/wiki/Mistweaver%27s_Debut", "name": "Mistweaver's Debut" },
+    { "url": "/wiki/Hazey_Transition", "name": "Hazey Transition" },
+    { "url": "/wiki/Blake_Bloom_for_Finale", "name": "Blake Bloom for Finale" },
+    { "url": "/wiki/Applause_of_the_Lost", "name": "Applause of the Lost" },
+    { "url": "/wiki/Broker%27s_Secrets", "name": "Broker's Secrets" }
+  ]
+}

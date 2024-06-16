@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "aalto",
+    "name": "Aalto",
+    "rarity": 4,
+    "attribute": "Aero",
+    "weapon": "Pistols",
+    "class": "Congenital",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "baizhi",
+    "name": "Baizhi",
+    "rarity": 4,
+    "attribute": "Glacio",
+    "weapon": "Rectifier",
+    "class": "Mutant",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "calcharo",
+    "name": "Calcharo",
+    "rarity": 5,
+    "attribute": "Electro",
+    "weapon": "Broadblade",
+    "class": "Natural",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "chixia",
+    "name": "Chixia",
+    "rarity": 4,
+    "attribute": "Fusion",
+    "weapon": "Pistols",
+    "class": "Mutant",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "danjin",
+    "name": "Danjin",
+    "rarity": 4,
+    "attribute": "Havoc",
+    "weapon": "Sword",
+    "class": "Mutant",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "encore",
+    "name": "Encore",
+    "rarity": 5,
+    "attribute": "Fusion",
+    "weapon": "Rectifier",
+    "class": "Congenital",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "jianxin",
+    "name": "Jianxin",
+    "rarity": 5,
+    "attribute": "Aero",
+    "weapon": "Gauntlet",
+    "class": "Natural",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "jiyan",
+    "name": "Jiyan",
+    "rarity": 5,
+    "attribute": "Aero",
+    "weapon": "Broadblade",
+    "class": "Mutant",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "lingyang",
+    "name": "Lingyang",
+    "rarity": 5,
+    "attribute": "Glacio",
+    "weapon": "Gauntlet",
+    "class": "Natural",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "mortefi",
+    "name": "Mortefi",
+    "rarity": 4,
+    "attribute": "Fusion",
+    "weapon": "Pistols",
+    "class": "Mutant",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "sanhua",
+    "name": "Sanhua",
+    "rarity": 4,
+    "attribute": "Glacio",
+    "weapon": "Sword",
+    "class": "Mutant",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "taoqi",
+    "name": "Taoqi",
+    "rarity": 4,
+    "attribute": "Havoc",
+    "weapon": "Broadblade",
+    "class": "Natural",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "verina",
+    "name": "Verina",
+    "rarity": 5,
+    "attribute": "Spectro",
+    "weapon": "Rectifier",
+    "class": "Congenital",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "yangyang",
+    "name": "Yangyang",
+    "rarity": 4,
+    "attribute": "Aero",
+    "weapon": "Sword",
+    "class": "Natural",
+    "releaseDate": "May 23, 2024"
+  },
+  {
+    "slug": "yinlin",
+    "name": "Yinlin",
+    "rarity": 5,
+    "attribute": "Electro",
+    "weapon": "Rectifier",
+    "class": "Congenital",
+    "releaseDate": "June 06, 2024"
+  },
+  {
+    "slug": "yuanwu",
+    "name": "Yuanwu",
+    "rarity": 4,
+    "attribute": "Electro",
+    "weapon": "Gauntlet",
+    "class": "Natural",
+    "releaseDate": "May 23, 2024"
+  }
+]

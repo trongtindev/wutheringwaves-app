@@ -1,0 +1,77 @@
+{
+  "description": "To create new Tacetite weapons, the Huaxu Academy designed this test Broadblade for technical verification. Its main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.",
+  "ranks": [
+    "When Resonance Skill is released, restores HP by 3%. This effect can be triggered 1 time(s) every 12s.",
+    "When Resonance Skill is released, restores HP by 3.75%. This effect can be triggered 1 time(s) every 12s.",
+    "When Resonance Skill is released, restores HP by 4.5%. This effect can be triggered 1 time(s) every 12s.",
+    "When Resonance Skill is released, restores HP by 5.25%. This effect can be triggered 1 time(s) every 12s.",
+    "When Resonance Skill is released, restores HP by 6%. This effect can be triggered 1 time(s) every 12s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "24", "substats": "8.5%" },
+        { "level": 20, "baseStats": "62", "substats": "15.1%" }
+      ],
+      "materials": [
+        { "amount": 6000, "name": "Shell Credit" },
+        { "amount": 4, "name": "LF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "78", "substats": "15.1%" },
+        { "level": 40, "baseStats": "118", "substats": "21.8%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Waveworn Residue 210" },
+        { "amount": 4, "name": "MF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "134", "substats": "21.8%" },
+        { "level": 50, "baseStats": "155", "substats": "25.1%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Waveworn Residue 226" },
+        { "amount": 3, "name": "HF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "171", "substats": "25.1%" },
+        { "level": 60, "baseStats": "191", "substats": "28.4%" }
+      ],
+      "materials": [
+        { "amount": 36000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Waveworn Residue 235" },
+        { "amount": 4, "name": "HF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "207", "substats": "28.4%" },
+        { "level": 70, "baseStats": "227", "substats": "31.8%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Waveworn Residue 239" },
+        { "amount": 3, "name": "FF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "243", "substats": "31.8%" },
+        { "level": 80, "baseStats": "263", "substats": "35.1%" }
+      ],
+      "materials": [
+        { "amount": 72000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Waveworn Residue 239" },
+        { "amount": 5, "name": "FF Whisperin Core" }
+      ]
+    }
+  ]
+}

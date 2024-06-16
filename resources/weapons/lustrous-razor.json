@@ -1,0 +1,77 @@
+{
+  "description": "Designed after ginkgo leaves, this broadblade boasts flawless sleekness and a formidably sharp edge.",
+  "ranks": [
+    "Increases Energy Regen by 12.8%. When Resonance Skill is released, Resonance Liberation DMG is increased by 8%, stacking up to 3 times. This effect lasts for 12s.",
+    "Increases Energy Regen by 16%. When Resonance Skill is released, Resonance Liberation DMG is increased by 10%, stacking up to 3 times. This effect lasts for 12s.",
+    "Increases Energy Regen by 19.2%. When Resonance Skill is released, Resonance Liberation DMG is increased by 12%, stacking up to 3 times. This effect lasts for 12s.",
+    "Increases Energy Regen by 22.4%. When Resonance Skill is released, Resonance Liberation DMG is increased by 14%, stacking up to 3 times. This effect lasts for 12s.",
+    "Increases Energy Regen by 25.6%. When Resonance Skill is released, Resonance Liberation DMG is increased by 16%, stacking up to 3 times. This effect lasts for 12s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "47", "substats": "8.1%" },
+        { "level": 20, "baseStats": "122", "substats": "14.3%" }
+      ],
+      "materials": [
+        { "amount": 10000, "name": "Shell Credit" },
+        { "amount": 6, "name": "LF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "153", "substats": "14.3%" },
+        { "level": 40, "baseStats": "232", "substats": "20.6%" }
+      ],
+      "materials": [
+        { "amount": 20000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Waveworn Residue 210" },
+        { "amount": 6, "name": "MF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "264", "substats": "20.6%" },
+        { "level": 50, "baseStats": "303", "substats": "23.8%" }
+      ],
+      "materials": [
+        { "amount": 40000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Waveworn Residue 226" },
+        { "amount": 4, "name": "HF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "335", "substats": "23.8%" },
+        { "level": 60, "baseStats": "374", "substats": "26.9%" }
+      ],
+      "materials": [
+        { "amount": 60000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Waveworn Residue 235" },
+        { "amount": 6, "name": "HF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "406", "substats": "26.9%" },
+        { "level": 70, "baseStats": "445", "substats": "30.1%" }
+      ],
+      "materials": [
+        { "amount": 80000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Waveworn Residue 239" },
+        { "amount": 4, "name": "FF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "476", "substats": "30.1%" },
+        { "level": 80, "baseStats": "516", "substats": "33.2%" }
+      ],
+      "materials": [
+        { "amount": 120000, "name": "Shell Credit" },
+        { "amount": 12, "name": "Waveworn Residue 239" },
+        { "amount": 8, "name": "FF Whisperin Core" }
+      ]
+    }
+  ]
+}

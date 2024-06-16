@@ -1,0 +1,120 @@
+{
+  "slug": "rover-havoc",
+  "name": "Rover (Havoc)",
+  "nameLocalized": {
+    "en": "Rover",
+    "zhs": "漂泊者",
+    "zht": "漂泊者",
+    "ja": "漂泊者",
+    "ko": "방랑자",
+    "fr": "Nomade",
+    "de": "Rover",
+    "es": "Errante"
+  },
+  "quote": "Is this the beginning of a new journey? Brimming with novel sounds, and untold stories...",
+  "birthday": "Player's Choice",
+  "birthplace": "Unknown",
+  "ascensionMaterials": [
+    {
+      "name": "Shell Credit",
+      "amount": 170000
+    },
+    {
+      "name": "Mysterious Code",
+      "amount": 46
+    },
+    {
+      "name": "Pecok Flower",
+      "amount": 60
+    },
+    {
+      "name": "LF Whisperin Core",
+      "amount": 8
+    },
+    {
+      "name": "MF Whisperin Core",
+      "amount": 8
+    },
+    {
+      "name": "HF Whisperin Core",
+      "amount": 12
+    },
+    {
+      "name": "FF Whisperin Core",
+      "amount": 4
+    }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Vibration Manifestation"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Vibration Manifestation"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Resonating Slashes"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Echoing Orchestra"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "World in a Grain of Sand"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Reticence"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Silent Listener"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Waveshock"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Instant"
+    }
+  ],
+  "resonanceChain": [
+    {
+      "url": "/wiki/Odyssey_of_Beginnings",
+      "name": "Odyssey of Beginnings"
+    },
+    {
+      "url": "/wiki/Microcosmic_Murmurs",
+      "name": "Microcosmic Murmurs"
+    },
+    {
+      "url": "/wiki/Visages_of_Dust",
+      "name": "Visages of Dust"
+    },
+    {
+      "url": "/wiki/Resonating_Lamella",
+      "name": "Resonating Lamella"
+    },
+    {
+      "url": "/wiki/Temporal_Virtuoso",
+      "name": "Temporal Virtuoso"
+    },
+    {
+      "url": "/wiki/Echoes_of_Wanderlust",
+      "name": "Echoes of Wanderlust"
+    }
+  ]
+}

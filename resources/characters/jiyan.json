@@ -1,0 +1,71 @@
+{
+  "slug": "jiyan",
+  "name": "Jiyan",
+  "nameLocalized": {
+    "en": "Jiyan",
+    "zhs": "忌炎",
+    "zht": "忌炎",
+    "ja": "忌炎",
+    "ko": "기염",
+    "fr": "Jiyan",
+    "de": "Jiyan",
+    "es": "Jiyan"
+  },
+  "quote": "I have never regretted to brave the long night.",
+  "birthday": "December 14th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Roaring Rock Fist", "amount": 46 },
+    { "name": "Pecok Flower", "amount": 60 },
+    { "name": "LF Howler Core", "amount": 8 },
+    { "name": "MF Howler Core", "amount": 8 },
+    { "name": "HF Howler Core", "amount": 12 },
+    { "name": "FF Howler Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Lone Lance"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Lone Lance"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Windqueller"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Emerald Storm: Prelude"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Qingloong at War"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Heavenly Balance"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Tempest Taming"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Tactical Strike"
+    },
+    { "url": "/wiki/Outro_Skill", "type": "Outro Skill", "name": "Discipline" }
+  ],
+  "resonanceChain": []
+}

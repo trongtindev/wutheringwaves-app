@@ -1,0 +1,42 @@
+{
+  "slug": "yuanwu",
+  "name": "Yuanwu",
+  "nameLocalized": {
+    "en": "Yuanwu",
+    "zhs": "渊武",
+    "zht": "淵武",
+    "ja": "淵武",
+    "ko": "연무",
+    "fr": "Yuanwu",
+    "de": "Yuanwu",
+    "es": "Yuanwu"
+  },
+  "quote": "Assuming I've thought my decisions through and acted with integrity, I am content.",
+  "birthday": "October 2nd",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Hidden Thunder Tacet Core", "amount": 46 },
+    { "name": "Terraspawn Fungus", "amount": 60 },
+    { "name": "Crude Ring", "amount": 8 },
+    { "name": "Basic Ring", "amount": 8 },
+    { "name": "Improved Ring", "amount": 12 },
+    { "name": "Tailored Ring", "amount": 4 }
+  ],
+  "forte": [],
+  "resonanceChain": [
+    {
+      "url": "/wiki/Steaming_Cup_of_Justice",
+      "name": "Steaming Cup of Justice"
+    },
+    {
+      "url": "/wiki/Fierce_Heart,_Serene_Mind",
+      "name": "Fierce Heart, Serene Mind"
+    },
+    { "url": "/wiki/Upholder_of_Integrity", "name": "Upholder of Integrity" },
+    { "url": "/wiki/Retributive_Knuckles", "name": "Retributive Knuckles" },
+    { "url": "/wiki/Neighborhood_Protector", "name": "Neighborhood Protector" },
+    { "url": "/wiki/Defender_of_All_Realms", "name": "Defender of All Realms" }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "description": "The inception of valiant venture. A pair of pistols designed for novice Resonators. Contains a power not to be underestimated under its simple outlook.",
+  "ranks": [
+    "Increases ATK by 5%.",
+    "Increases ATK by 6.25%.",
+    "Increases ATK by 7.5%.",
+    "Increases ATK by 8.75%.",
+    "Increases ATK by 10%."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "22", "substats": "3.2%" },
+        { "level": 20, "baseStats": "57", "substats": "5.8%" }
+      ],
+      "materials": [
+        { "amount": 4000, "name": "Shell Credit" },
+        { "amount": 3, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "71", "substats": "5.8%" },
+        { "level": 40, "baseStats": "108", "substats": "8.4%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 3, "name": "Impure Phlogiston" },
+        { "amount": 3, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "123", "substats": "8.4%" },
+        { "level": 50, "baseStats": "142", "substats": "9.7%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Extracted Phlogiston" },
+        { "amount": 2, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "156", "substats": "9.7%" },
+        { "level": 60, "baseStats": "175", "substats": "10.9%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 3, "name": "Refined Phlohiston" },
+        { "amount": 3, "name": "Improved Ring" }
+      ]
+    }
+  ]
+}

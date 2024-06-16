@@ -1,0 +1,121 @@
+{
+  "slug": "encore",
+  "name": "Encore",
+  "nameLocalized": {
+    "en": "Encore",
+    "zhs": "安可",
+    "zht": "安可",
+    "ja": "アンコ",
+    "ko": "앙코",
+    "fr": "Encore",
+    "de": "Encore",
+    "es": "Encore"
+  },
+  "quote": "A long, long time ago... Cosmos told Encore about a fun spot! Come on! Let's go check it out!",
+  "birthday": "March 21st",
+  "birthplace": "New Federation",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    {
+      "name": "Shell Credit",
+      "amount": 170000
+    },
+    {
+      "name": "Rage Tacet Core",
+      "amount": 46
+    },
+    {
+      "name": "Pecok Flower",
+      "amount": 60
+    },
+    {
+      "name": "LF Whisperin Core",
+      "amount": 8
+    },
+    {
+      "name": "MF Whisperin Core",
+      "amount": 8
+    },
+    {
+      "name": "HF Whisperin Core",
+      "amount": 12
+    },
+    {
+      "name": "FF Whisperin Core",
+      "amount": 4
+    }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Wooly Attack"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Wooly Attack"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Flaming Woolies"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Cosmos Rave"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Black & White Woolies"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Angry Cosmos"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Woolies Cheer Dance"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Woolies Can Help!"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Thermal Field"
+    }
+  ],
+  "resonanceChain": [
+    {
+      "url": "/wiki/Wooly%27s_Fairy_Tale",
+      "name": "Wooly's Fairy Tale"
+    },
+    {
+      "url": "/wiki/Sheep-counting_Lullaby",
+      "name": "Sheep-counting Lullaby"
+    },
+    {
+      "url": "/wiki/Fog%3F_The_Black_Shores!",
+      "name": "Fog? The Black Shores!"
+    },
+    {
+      "url": "/wiki/Adventure%3F_Let%27s_go!",
+      "name": "Adventure? Let's go!"
+    },
+    {
+      "url": "/wiki/Hero_Takes_the_Stage!",
+      "name": "Hero Takes the Stage!"
+    },
+    {
+      "url": "/wiki/Woolies_Save_the_World!",
+      "name": "Woolies Save the World!"
+    }
+  ]
+}

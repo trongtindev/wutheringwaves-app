@@ -1,0 +1,77 @@
+{
+  "description": "To create new Tacetite weapons, the Huaxu Academy designed these test Pistols for technical verification. Their main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.",
+  "ranks": [
+    "When Counter Attack is released, restores HP by 1.6%. This effect can be triggered 1 time(s) every 6s.",
+    "When Counter Attack is released, restores HP by 2%. This effect can be triggered 1 time(s) every 6s.",
+    "When Counter Attack is released, restores HP by 2.4%. This effect can be triggered 1 time(s) every 6s.",
+    "When Counter Attack is released, restores HP by 2.8%. This effect can be triggered 1 time(s) every 6s.",
+    "When Counter Attack is released, restores HP by 3.2%. This effect can be triggered 1 time(s) every 6s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "26", "substats": "5.4%" },
+        { "level": 20, "baseStats": "67", "substats": "9.5%" }
+      ],
+      "materials": [
+        { "amount": 6000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "84", "substats": "9.5%" },
+        { "level": 40, "baseStats": "128", "substats": "13.7%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Impure Phlogiston" },
+        { "amount": 4, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "146", "substats": "13.7%" },
+        { "level": 50, "baseStats": "168", "substats": "15.8%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Extracted Phlogiston" },
+        { "amount": 3, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "185", "substats": "15.8%" },
+        { "level": 60, "baseStats": "207", "substats": "17.9%" }
+      ],
+      "materials": [
+        { "amount": 36000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Refined Phlohiston" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "224", "substats": "17.9%" },
+        { "level": 70, "baseStats": "246", "substats": "20.0%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Flawless Phlohiston" },
+        { "amount": 3, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "263", "substats": "20.0%" },
+        { "level": 80, "baseStats": "285", "substats": "22.1%" }
+      ],
+      "materials": [
+        { "amount": 72000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Flawless Phlohiston" },
+        { "amount": 5, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

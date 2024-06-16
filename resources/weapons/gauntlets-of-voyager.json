@@ -1,0 +1,77 @@
+{
+  "description": "The Gauntlet provided by the Pioneer Association for the far walkers, with bright colors, not easy to lose, hard texture can cope with various extreme environments for a long time, and is very popular among the explorer group.",
+  "ranks": [
+    "When Resonance Skill is released, restores Resonance Energy by 8. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 9. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 10. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 11. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "26", "substats": "6.8%" },
+        { "level": 20, "baseStats": "67", "substats": "12.1%" }
+      ],
+      "materials": [
+        { "amount": 6000, "name": "Shell Credit" },
+        { "amount": 4, "name": "LF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "84", "substats": "12.1%" },
+        { "level": 40, "baseStats": "128", "substats": "17.4%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Cadence Seed" },
+        { "amount": 4, "name": "MF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "146", "substats": "17.4%" },
+        { "level": 50, "baseStats": "168", "substats": "20.1%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Bud" },
+        { "amount": 3, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "185", "substats": "20.1%" },
+        { "level": 60, "baseStats": "207", "substats": "22.7%" }
+      ],
+      "materials": [
+        { "amount": 36000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Cadence Leaf" },
+        { "amount": 4, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "224", "substats": "22.7%" },
+        { "level": 70, "baseStats": "246", "substats": "25.4%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Blossom" },
+        { "amount": 3, "name": "FF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "263", "substats": "25.4%" },
+        { "level": 80, "baseStats": "285", "substats": "28.1%" }
+      ],
+      "materials": [
+        { "amount": 72000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Cadence Blossom" },
+        { "amount": 5, "name": "FF Howler Core" }
+      ]
+    }
+  ]
+}

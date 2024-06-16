@@ -1,0 +1,4 @@
+{
+  "description": "Used to heal a selected Resonator for 20% of their max HP plus 1,500 extra HP. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products."
+}

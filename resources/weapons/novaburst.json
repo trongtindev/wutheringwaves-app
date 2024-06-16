@@ -1,0 +1,77 @@
+{
+  "description": "Pistols born from the strange phenomena in the sky. The forager infused the weapon with the feelings from witnessing the strange star, making it look hollow and light, yet extremely stable, with the power of thunder when it fires.",
+  "ranks": [
+    "When the Resonator dashes or dodges, increases ATK by 4%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 5%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 6%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 7%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 8%, stacking up to 3 time(s). This effect lasts for 8s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "33", "substats": "6.7%" },
+        { "level": 20, "baseStats": "85", "substats": "11.9%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "107", "substats": "11.9%" },
+        { "level": 40, "baseStats": "163", "substats": "17.2%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Impure Phlogiston" },
+        { "amount": 5, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "185", "substats": "17.2%" },
+        { "level": 50, "baseStats": "213", "substats": "19.8%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Extracted Phlogiston" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "235", "substats": "19.8%" },
+        { "level": 60, "baseStats": "263", "substats": "22.4%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Refined Phlohiston" },
+        { "amount": 5, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "285", "substats": "22.4%" },
+        { "level": 70, "baseStats": "312", "substats": "25.1%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Flawless Phlohiston" },
+        { "amount": 4, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "334", "substats": "25.1%" },
+        { "level": 80, "baseStats": "362", "substats": "27.7%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Flawless Phlohiston" },
+        { "amount": 7, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

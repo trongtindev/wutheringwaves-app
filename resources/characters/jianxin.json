@@ -1,0 +1,80 @@
+{
+  "slug": "jianxin",
+  "name": "Jianxin",
+  "nameLocalized": {
+    "en": "Jianxin",
+    "zhs": "鉴心",
+    "zht": "鑒心",
+    "ja": "鑑心",
+    "ko": "감심",
+    "fr": "Jianxin",
+    "de": "Jianxin",
+    "es": "Jianxin"
+  },
+  "quote": "Release the wants, and the mind quiets. Cleanse the thoughts, and the soul clears.",
+  "birthday": "April 6th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Roaring Rock Fist", "amount": 46 },
+    { "name": "Lanternberry", "amount": 60 },
+    { "name": "LF Whisperin Core", "amount": 8 },
+    { "name": "MF Whisperin Core", "amount": 8 },
+    { "name": "HF Whisperin Core", "amount": 12 },
+    { "name": "FF Whisperin Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Fengyiquan"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Fengyiquan"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Purification Force Field"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Primordial Chi Spiral"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Formless Release"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Reflection"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Essence of Tao"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Transcendence"
+    }
+  ],
+  "resonanceChain": [
+    { "url": "/wiki/Verdant_Branchlet", "name": "Verdant Branchlet" },
+    { "url": "/wiki/Tao_Seeker%27s_Journey", "name": "Tao Seeker's Journey" },
+    { "url": "/wiki/Principles_of_Wuwei", "name": "Principles of Wuwei" },
+    { "url": "/wiki/Multitide_Reflection", "name": "Multitide Reflection" },
+    {
+      "url": "/wiki/Mirroring_Introspection",
+      "name": "Mirroring Introspection"
+    },
+    { "url": "/wiki/Truth_from_Within", "name": "Truth from Within" }
+  ]
+}

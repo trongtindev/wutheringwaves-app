@@ -1,0 +1,82 @@
+{
+  "slug": "baizhi",
+  "name": "Baizhi",
+  "nameLocalized": {
+    "en": "Baizhi",
+    "zhs": "白芷",
+    "zht": "白芷",
+    "ja": "白芷",
+    "ko": "설지",
+    "fr": "Baizhi",
+    "de": "Baizhi",
+    "es": "Baizhi"
+  },
+  "quote": "No, I cannot place my faith in it, but my anticipation stems precisely from this distrust. A claim is always verifiable before it is discredited entirely.",
+  "birthday": "September 10th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Sound-Keeping Tacet Core", "amount": 46 },
+    { "name": "Lanternberry", "amount": 60 },
+    { "name": "LF Howler Core", "amount": 8 },
+    { "name": "MF Howler Core", "amount": 8 },
+    { "name": "HF Howler Core", "amount": 12 },
+    { "name": "FF Howler Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Destined Promise"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Destined Promise"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Emergency Plan"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Momentary Union"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Cycle of Life"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Harmonic Range"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Stimulus Feedback"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Overflowing Frost"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Rejuvinating Flow"
+    }
+  ],
+  "resonanceChain": [
+    { "url": "/wiki/Complex_Simplicity", "name": "Complex Simplicity" },
+    { "url": "/wiki/Silent_Tundra", "name": "Silent Tundra" },
+    { "url": "/wiki/Veritas_Lux_Mea", "name": "Veritas Lux Mea" },
+    { "url": "/wiki/Eternal_Verity", "name": "Eternal Verity" },
+    { "url": "/wiki/A_Wish_Answered", "name": "A Wish Answered" },
+    { "url": "/wiki/Seeker%27s_Devotion", "name": "Seeker's Devotion" }
+  ]
+}

@@ -1,0 +1,30 @@
+name: Docker build
+
+on:
+  push:
+    branches:
+      - production
+  pull_request:
+    branches:
+      - production
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 20.x
+        redis-version: [5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+
+      - uses: vitr/actions-build-and-upload-to-ecs@master
+        with:
+          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+          repo: wuthering-waves
+          region: ap-southeast-1
+          tags: latest,${{ github.sha }}
+          create_repo: true

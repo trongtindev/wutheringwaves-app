@@ -1,0 +1,29 @@
+{
+  "slug": "verina",
+  "name": "Verina",
+  "nameLocalized": {
+    "en": "Verina",
+    "zhs": "维里奈",
+    "zht": "維里奈",
+    "ja": "ヴェリーナ",
+    "ko": "벨리나",
+    "fr": "Verina",
+    "de": "Verina",
+    "es": "Verina"
+  },
+  "quote": "Plants talk in a silent and sincere language. I can translate their talk for you, if you want.",
+  "birthday": "May 18th",
+  "birthplace": "New Federation",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Elegy Tacet Core", "amount": 46 },
+    { "name": "Belle Poppy", "amount": 60 },
+    { "name": "LF Howler Core", "amount": 8 },
+    { "name": "MF Howler Core", "amount": 8 },
+    { "name": "HF Howler Core", "amount": 12 },
+    { "name": "FF Howler Core", "amount": 4 }
+  ],
+  "forte": [],
+  "resonanceChain": []
+}

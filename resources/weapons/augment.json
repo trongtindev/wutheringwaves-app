@@ -1,0 +1,77 @@
+{
+  "description": "This Rectifier is a ceremonial weapon used by the Jinzhou Magistrate of Huanglong at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left alone in the world, it is still prosperous and long-lasting.",
+  "ranks": [
+    "When Resonance Liberation is released, increases the caster's Atk by 15%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 23.25%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 31.5%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 39.75%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 48%, lasting for 15s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "33", "substats": "4.5%" },
+        { "level": 20, "baseStats": "85", "substats": "7.9%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "107", "substats": "7.9%" },
+        { "level": 40, "baseStats": "163", "substats": "11.4%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Lento Helix" },
+        { "amount": 5, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "185", "substats": "11.4%" },
+        { "level": 50, "baseStats": "213", "substats": "13.2%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Adagio Helix" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "235", "substats": "13.2%" },
+        { "level": 60, "baseStats": "263", "substats": "14.9%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Andante Helix" },
+        { "amount": 5, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "285", "substats": "14.9%" },
+        { "level": 70, "baseStats": "312", "substats": "16.7%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Presto Helix" },
+        { "amount": 4, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "334", "substats": "16.7%" },
+        { "level": 80, "baseStats": "362", "substats": "18.4%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Presto Helix" },
+        { "amount": 7, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

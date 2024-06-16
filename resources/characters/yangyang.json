@@ -1,0 +1,121 @@
+{
+  "slug": "yangyang",
+  "name": "Yangyang",
+  "nameLocalized": {
+    "en": "Yangyang",
+    "zhs": "秧秧",
+    "zht": "秧秧",
+    "ja": "秧秧",
+    "ko": "양양",
+    "fr": "Yangyang",
+    "de": "Yangyang",
+    "es": "Yangyang"
+  },
+  "quote": "I hope I can be the one to embrace all that you are, and share with you all that you carry.",
+  "birthday": "October 11th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    {
+      "name": "Shell Credit",
+      "amount": 170000
+    },
+    {
+      "name": "Roaring Rock Fist",
+      "amount": 46
+    },
+    {
+      "name": "Wintry Bell",
+      "amount": 60
+    },
+    {
+      "name": "Crude Ring",
+      "amount": 8
+    },
+    {
+      "name": "Basic Ring",
+      "amount": 8
+    },
+    {
+      "name": "Improved Ring",
+      "amount": 12
+    },
+    {
+      "name": "Tailored Ring",
+      "amount": 4
+    }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Feather as Blade"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Feather as Blade"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Zephyr Domain"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Wind Spirals"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Echoing Feathers"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Compassion"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Lazuline Mercy"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Cerulean Song"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Whispering Breeze"
+    }
+  ],
+  "resonanceChain": [
+    {
+      "url": "/wiki/Sapphire_Skies,_Soaring_Sparrows",
+      "name": "Sapphire Skies, Soaring Sparrows"
+    },
+    {
+      "url": "/wiki/Nesting_Twigs,_in_Beaks_They_Harrow",
+      "name": "Nesting Twigs, in Beaks They Harrow"
+    },
+    {
+      "url": "/wiki/Nature_Sings_in_Symphony",
+      "name": "Nature Sings in Symphony"
+    },
+    {
+      "url": "/wiki/Close_Your_Eyes_and_Listen_in",
+      "name": "Close Your Eyes and Listen in"
+    },
+    {
+      "url": "/wiki/Winds_Whisper_in_Harmony",
+      "name": "Winds Whisper in Harmony"
+    },
+    {
+      "url": "/wiki/A_Tribute_to_Life%27s_Sweet_Hymn",
+      "name": "A Tribute to Life's Sweet Hymn"
+    }
+  ]
+}

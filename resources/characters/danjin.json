@@ -1,0 +1,56 @@
+{
+  "slug": "danjin",
+  "name": "Danjin",
+  "nameLocalized": {
+    "en": "Danjin",
+    "zhs": "丹瑾",
+    "zht": "丹瑾",
+    "ja": "丹瑾",
+    "ko": "단근",
+    "fr": "Danjin",
+    "de": "Danjin",
+    "es": "Danjin"
+  },
+  "quote": "Wherever I go, I swear to vanquish evil, whether it's out in the daylight or hiding in the dark.",
+  "birthday": "August 31st",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Strife Tacet Core", "amount": 46 },
+    { "name": "Belle Poppy", "amount": 60 },
+    { "name": "Crude Ring", "amount": 8 },
+    { "name": "Basic Ring", "amount": 8 },
+    { "name": "Improved Ring", "amount": 12 },
+    { "name": "Tailored Ring", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Execution"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Execution"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Crimson Fragment"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Crimson Bloom"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Serene Vigil"
+    },
+    { "url": "/wiki/Intro_Skill", "type": "Intro Skill", "name": "Vindiction" }
+  ],
+  "resonanceChain": []
+}

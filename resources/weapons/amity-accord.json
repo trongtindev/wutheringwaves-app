@@ -1,0 +1,176 @@
+{
+  "description": "A weapon designed to commemorate the Midnight Rangers' comradeship. \"Thin garments yield to icy moons, while armor withstands the chill of stars.\"",
+  "ranks": [
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 20%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 25%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 30%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 35%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 40%, lasting for 15s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        {
+          "level": 1,
+          "baseStats": "27",
+          "substats": "13.6%"
+        },
+        {
+          "level": 20,
+          "baseStats": "70",
+          "substats": "24.3%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 8000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 5,
+          "name": "LF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 20,
+          "baseStats": "88",
+          "substats": "24.3%"
+        },
+        {
+          "level": 40,
+          "baseStats": "133",
+          "substats": "34.9%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 16000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 5,
+          "name": "Cadence Seed"
+        },
+        {
+          "amount": 5,
+          "name": "MF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 40,
+          "baseStats": "151",
+          "substats": "34.9%"
+        },
+        {
+          "level": 50,
+          "baseStats": "174",
+          "substats": "40.2%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 32000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 7,
+          "name": "Cadence Bud"
+        },
+        {
+          "amount": 4,
+          "name": "HF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 50,
+          "baseStats": "192",
+          "substats": "40.2%"
+        },
+        {
+          "level": 60,
+          "baseStats": "215",
+          "substats": "45.5%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 48000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 5,
+          "name": "Cadence Leaf"
+        },
+        {
+          "amount": 5,
+          "name": "HF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 60,
+          "baseStats": "233",
+          "substats": "45.5%"
+        },
+        {
+          "level": 70,
+          "baseStats": "255",
+          "substats": "50.9%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 64000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 7,
+          "name": "Cadence Blossom"
+        },
+        {
+          "amount": 4,
+          "name": "FF Howler Core"
+        }
+      ]
+    },
+    {
+      "stats": [
+        {
+          "level": 70,
+          "baseStats": "273",
+          "substats": "50.9%"
+        },
+        {
+          "level": 80,
+          "baseStats": "296",
+          "substats": "56.2%"
+        }
+      ],
+      "materials": [
+        {
+          "amount": 96000,
+          "name": "Shell Credit"
+        },
+        {
+          "amount": 10,
+          "name": "Cadence Blossom"
+        },
+        {
+          "amount": 7,
+          "name": "FF Howler Core"
+        }
+      ]
+    }
+  ]
+}

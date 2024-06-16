@@ -1,0 +1,77 @@
+{
+  "description": "The Rectifier provided by the Pioneer Association for the explorers, with bright colors, not easy to lose, hard texture can cope with various extreme environments for a long time, and is very popular among the explorers.",
+  "ranks": [
+    "When Resonance Skill is released, restores Resonance Energy by 8. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 9. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 10. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "24", "substats": "7.2%" },
+        { "level": 20, "baseStats": "62", "substats": "12.7%" }
+      ],
+      "materials": [
+        { "amount": 6000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "78", "substats": "12.7%" },
+        { "level": 40, "baseStats": "118", "substats": "18.3%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Lento Helix" },
+        { "amount": 4, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "134", "substats": "18.3%" },
+        { "level": 50, "baseStats": "155", "substats": "21.1%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Adagio Helix" },
+        { "amount": 3, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "171", "substats": "21.1%" },
+        { "level": 60, "baseStats": "191", "substats": "23.9%" }
+      ],
+      "materials": [
+        { "amount": 36000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Andante Helix" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "207", "substats": "23.9%" },
+        { "level": 70, "baseStats": "227", "substats": "26.7%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Presto Helix" },
+        { "amount": 3, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "243", "substats": "26.7%" },
+        { "level": 80, "baseStats": "263", "substats": "29.5%" }
+      ],
+      "materials": [
+        { "amount": 72000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Presto Helix" },
+        { "amount": 5, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

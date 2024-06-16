@@ -1,0 +1,45 @@
+{
+  "slug": "lingyang",
+  "name": "Lingyang",
+  "nameLocalized": {
+    "en": "Lingyang",
+    "zhs": "凌阳",
+    "zht": "凌陽",
+    "ja": "凌陽",
+    "ko": "능양",
+    "fr": "Lingyang",
+    "de": "Lingyang",
+    "es": "Lingyang"
+  },
+  "quote": "Awoo—Lion up! Victory is mine at this year's Greens-plucking Tournament!",
+  "birthday": "August 8th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Sound-Keeping Tacet Core", "amount": 46 },
+    { "name": "Coriolus", "amount": 60 },
+    { "name": "LF Whisperin Core", "amount": 8 },
+    { "name": "MF Whisperin Core", "amount": 8 },
+    { "name": "HF Whisperin Core", "amount": 12 },
+    { "name": "FF Whisperin Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Ancient Arts"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Ancient Arts"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Lion's Pride"
+    }
+  ],
+  "resonanceChain": []
+}

@@ -1,0 +1,76 @@
+{
+  "ranks": [
+    "When Resonance Skill is released, restores Concerto Energy by 8%. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 10%. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 12%. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 14%. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 16%. This effect can be triggered 1 time every 20s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "27", "substats": "11.5%" },
+        { "level": 20, "baseStats": "70", "substats": "20.4%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 5, "name": "LF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "88", "substats": "20.4%" },
+        { "level": 40, "baseStats": "133", "substats": "29.4%" }
+      ],
+      "materials": [
+        { "amount": 16000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Waveworn Residue 210" },
+        { "amount": 5, "name": "MF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "151", "substats": "29.4%" },
+        { "level": 50, "baseStats": "174", "substats": "33.9%" }
+      ],
+      "materials": [
+        { "amount": 32000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Waveworn Residue 226" },
+        { "amount": 4, "name": "HF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "192", "substats": "33.9%" },
+        { "level": 60, "baseStats": "215", "substats": "38.3%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Waveworn Residue 235" },
+        { "amount": 5, "name": "HF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "233", "substats": "38.3%" },
+        { "level": 70, "baseStats": "255", "substats": "42.8%" }
+      ],
+      "materials": [
+        { "amount": 64000, "name": "Shell Credit" },
+        { "amount": 7, "name": "Waveworn Residue 239" },
+        { "amount": 4, "name": "FF Whisperin Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "273", "substats": "42.8%" },
+        { "level": 80, "baseStats": "296", "substats": "47.3%" }
+      ],
+      "materials": [
+        { "amount": 96000, "name": "Shell Credit" },
+        { "amount": 10, "name": "Waveworn Residue 239" },
+        { "amount": 7, "name": "FF Whisperin Core" }
+      ]
+    }
+  ]
+}

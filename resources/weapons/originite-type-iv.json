@@ -1,0 +1,77 @@
+{
+  "description": "To create new Tacetite weapons, the Huaxu Academy designed these test Gauntlets for technical verification. Their main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.",
+  "ranks": [
+    "When hitting a target with Basic Attacks, restores HP by 0.5%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 0.65%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 0.8%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 0.95%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 1.1%. This effect can be triggered 1 time(s) every 3s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "24", "substats": "9.0%" },
+        { "level": 20, "baseStats": "62", "substats": "15.9%" }
+      ],
+      "materials": [
+        { "amount": 6000, "name": "Shell Credit" },
+        { "amount": 4, "name": "LF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "78", "substats": "15.9%" },
+        { "level": 40, "baseStats": "118", "substats": "22.9%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Cadence Seed" },
+        { "amount": 4, "name": "MF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "134", "substats": "22.9%" },
+        { "level": 50, "baseStats": "155", "substats": "26.4%" }
+      ],
+      "materials": [
+        { "amount": 24000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Bud" },
+        { "amount": 3, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "171", "substats": "26.4%" },
+        { "level": 60, "baseStats": "191", "substats": "29.9%" }
+      ],
+      "materials": [
+        { "amount": 36000, "name": "Shell Credit" },
+        { "amount": 4, "name": "Cadence Leaf" },
+        { "amount": 4, "name": "HF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "207", "substats": "29.9%" },
+        { "level": 70, "baseStats": "227", "substats": "33.4%" }
+      ],
+      "materials": [
+        { "amount": 48000, "name": "Shell Credit" },
+        { "amount": 5, "name": "Cadence Blossom" },
+        { "amount": 3, "name": "FF Howler Core" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "243", "substats": "33.4%" },
+        { "level": 80, "baseStats": "263", "substats": "36.9%" }
+      ],
+      "materials": [
+        { "amount": 72000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Cadence Blossom" },
+        { "amount": 5, "name": "FF Howler Core" }
+      ]
+    }
+  ]
+}

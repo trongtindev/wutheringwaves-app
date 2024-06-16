@@ -1,0 +1,4 @@
+{
+  "description": "Used to grant selected Resonators immunity to a fatal damage and heal the Resonator for 25% of their max HP, lasting for 60s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products."
+}

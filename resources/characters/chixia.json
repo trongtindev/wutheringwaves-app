@@ -1,0 +1,67 @@
+{
+  "slug": "chixia",
+  "name": "Chixia",
+  "nameLocalized": {
+    "en": "Chixia",
+    "zhs": "炽霞",
+    "zht": "熾霞",
+    "ja": "熾霞",
+    "ko": "치샤",
+    "fr": "Chixia",
+    "de": "Chixia",
+    "es": "Chixia"
+  },
+  "quote": "Jinzhou Patroller, Chixia. You can always call on me if you ever find yourself in a pickle!",
+  "birthday": "April 18th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Rage Tacet Core", "amount": 46 },
+    { "name": "Belle Poppy", "amount": 60 },
+    { "name": "LF Whisperin Core", "amount": 8 },
+    { "name": "MF Whisperin Core", "amount": 8 },
+    { "name": "HF Whisperin Core", "amount": 12 },
+    { "name": "FF Whisperin Core", "amount": 4 }
+  ],
+  "forte": [
+    { "url": "/wiki/Basic_Attack", "type": "Basic Attack", "name": "POW POW" },
+    { "url": "/wiki/Basic_Attack", "type": "Basic Attack", "name": "POW POW" },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Whizzing Fight Spirit"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Blazing Flames"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Heroic Bullets"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Scorching Magazine"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Numbingly Spicy!"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Grand Entrance"
+    },
+    {
+      "url": "/wiki/Outro_Skill",
+      "type": "Outro Skill",
+      "name": "Leaping Flames"
+    }
+  ],
+  "resonanceChain": []
+}

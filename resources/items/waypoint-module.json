@@ -1,0 +1,4 @@
+{
+  "description": "Used to activate the search funcion of Waypoint.",
+  "bgDescription": "The core module of the Waypoint, responsible for collecting, sharing, and updating location information. It connects the Waypoint and the Resonance Beacon, making it essential for initiating and maintaining the functioning of the Waypoint."
+}

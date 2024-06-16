@@ -1,0 +1,77 @@
+{
+  "description": "Designed after ginkgo leaves, this rectifier generates smooth and stable waveforms, making it reliable for a wide range of combat situations.",
+  "ranks": [
+    "Energy Regen is increased by 12.8%. When Basic Attack hits a target, Basic Attack Damage is increased by 3.2%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 16%. When Basic Attack hits a target, Basic Attack Damage is increased by 4%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 19.2%. When Basic Attack hits a target, Basic Attack Damage is increased by 4.8%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 22.4%. When Basic Attack hits a target, Basic Attack Damage is increased by 5.6%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 25.6%. When Basic Attack hits a target, Basic Attack Damage is increased by 6.4%. This effect can stack up to 5 times and last for 8s."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "40", "substats": "11.9%" },
+        { "level": 20, "baseStats": "104", "substats": "21.3%" }
+      ],
+      "materials": [
+        { "amount": 10000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "130", "substats": "21.3%" },
+        { "level": 40, "baseStats": "198", "substats": "30.6%" }
+      ],
+      "materials": [
+        { "amount": 20000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Lento Helix" },
+        { "amount": 6, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "224", "substats": "30.6%" },
+        { "level": 50, "baseStats": "258", "substats": "35.3%" }
+      ],
+      "materials": [
+        { "amount": 40000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Adagio Helix" },
+        { "amount": 4, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "285", "substats": "35.3%" },
+        { "level": 60, "baseStats": "318", "substats": "39.9%" }
+      ],
+      "materials": [
+        { "amount": 60000, "name": "Shell Credit" },
+        { "amount": 6, "name": "Andante Helix" },
+        { "amount": 6, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 60, "baseStats": "345", "substats": "39.9%" },
+        { "level": 70, "baseStats": "379", "substats": "44.6%" }
+      ],
+      "materials": [
+        { "amount": 80000, "name": "Shell Credit" },
+        { "amount": 8, "name": "Presto Helix" },
+        { "amount": 4, "name": "Tailored Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 70, "baseStats": "405", "substats": "44.6%" },
+        { "level": 80, "baseStats": "439", "substats": "49.3%" }
+      ],
+      "materials": [
+        { "amount": 120000, "name": "Shell Credit" },
+        { "amount": 12, "name": "Presto Helix" },
+        { "amount": 8, "name": "Tailored Ring" }
+      ]
+    }
+  ]
+}

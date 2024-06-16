@@ -1,0 +1,55 @@
+{
+  "description": "This rectifier is designed specifically for training and teaching, offering only the basic features.",
+  "ranks": [
+    "Increases ATK by 4%.",
+    "Increases ATK by 5%.",
+    "Increases ATK by 6%.",
+    "Increases ATK by 7%.",
+    "Increases ATK by 8%."
+  ],
+  "ascensionsAndStats": [
+    {
+      "stats": [
+        { "level": 1, "baseStats": "20", "substats": "2.5%" },
+        { "level": 20, "baseStats": "52", "substats": "4.5%" }
+      ],
+      "materials": [
+        { "amount": 2000, "name": "Shell Credit" },
+        { "amount": 2, "name": "Crude Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 20, "baseStats": "65", "substats": "4.5%" },
+        { "level": 40, "baseStats": "99", "substats": "6.5%" }
+      ],
+      "materials": [
+        { "amount": 4000, "name": "Shell Credit" },
+        { "amount": 2, "name": "Lento Helix" },
+        { "amount": 2, "name": "Basic Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 40, "baseStats": "112", "substats": "6.5%" },
+        { "level": 50, "baseStats": "129", "substats": "7.5%" }
+      ],
+      "materials": [
+        { "amount": 8000, "name": "Shell Credit" },
+        { "amount": 2, "name": "Adagio Helix" },
+        { "amount": 1, "name": "Improved Ring" }
+      ]
+    },
+    {
+      "stats": [
+        { "level": 50, "baseStats": "142", "substats": "7.5%" },
+        { "level": 60, "baseStats": "159", "substats": "8.4%" }
+      ],
+      "materials": [
+        { "amount": 12000, "name": "Shell Credit" },
+        { "amount": 2, "name": "Andante Helix" },
+        { "amount": 2, "name": "Improved Ring" }
+      ]
+    }
+  ]
+}

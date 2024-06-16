@@ -1,0 +1,71 @@
+{
+  "slug": "taoqi",
+  "name": "Taoqi",
+  "nameLocalized": {
+    "en": "Taoqi",
+    "zhs": "桃祈",
+    "zht": "桃祈",
+    "ja": "桃祈",
+    "ko": "도기",
+    "fr": "Taoqi",
+    "de": "Taoqi",
+    "es": "Taoqi"
+  },
+  "quote": "Phew... All set. Time for a little break.",
+  "birthday": "February 25th",
+  "birthplace": "Huanglong",
+  "releaseDate": "May 23, 2024",
+  "ascensionMaterials": [
+    { "name": "Shell Credit", "amount": 170000 },
+    { "name": "Gold-Dissolving Feather", "amount": 46 },
+    { "name": "Iris", "amount": 60 },
+    { "name": "LF Howler Core", "amount": 8 },
+    { "name": "MF Howler Core", "amount": 8 },
+    { "name": "HF Howler Core", "amount": 12 },
+    { "name": "FF Howler Core", "amount": 4 }
+  ],
+  "forte": [
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Concealed Edge"
+    },
+    {
+      "url": "/wiki/Basic_Attack",
+      "type": "Basic Attack",
+      "name": "Concealed Edge"
+    },
+    {
+      "url": "/wiki/Resonance_Skill",
+      "type": "Resonance Skill",
+      "name": "Fortified Defense"
+    },
+    {
+      "url": "/wiki/Resonance_Liberation",
+      "type": "Resonance Liberation",
+      "name": "Unmovable"
+    },
+    {
+      "url": "/wiki/Forte_Circuit",
+      "type": "Forte Circuit",
+      "name": "Power Shift"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Steadfast Protection"
+    },
+    {
+      "url": "/wiki/Inherent_Skill",
+      "type": "Inherent Skill",
+      "name": "Unyielding"
+    },
+    {
+      "url": "/wiki/Intro_Skill",
+      "type": "Intro Skill",
+      "name": "Defense Formation"
+    },
+    { "url": "/wiki/Outro_Skill", "type": "Outro Skill", "name": "Iron Will" }
+  ],
+  "resonanceChain": []
+}
