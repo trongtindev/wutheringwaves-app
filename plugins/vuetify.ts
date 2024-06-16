@@ -94,11 +94,6 @@ export default defineNuxtPlugin((nuxtApp) => {
             // success: '#00796b',
             // 'on-success': '#01A816',
             // error: '#e46962'
-          },
-          variables: {
-            // 'color-rarity5': '#ffe65a',
-            // 'color-online': '#01A816',
-            // 'color-offline': '#767676'
           }
         }
       }

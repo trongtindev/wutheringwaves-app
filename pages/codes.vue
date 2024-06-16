@@ -43,7 +43,7 @@ useSeoMeta({
         </template>
 
         <template #actions>
-          <contribute-button />
+          <contribute-button path="/blob/main/resources/codes.ts" />
         </template>
       </card-title>
 

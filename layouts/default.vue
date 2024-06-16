@@ -5,7 +5,9 @@ import {
   mdiLogout,
   mdiTranslate,
   mdiCogs,
-  mdiSwapVertical
+  mdiSwapVertical,
+  mdiPin,
+  mdiPinOff
 } from '@mdi/js';
 
 import BackupController from '../controllers/backup.vue';
@@ -124,6 +126,16 @@ watch(
               <v-icon v-else :icon="element.icon" :width="28" :height="28" />
             </v-sheet>
           </template>
+
+          <!-- <template #append>
+            <v-btn
+              @click.prevent="() => sidebar.togglePin(element.url)"
+              variant="text"
+              size="small"
+            >
+              <v-icon size="x-small" :icon="mdiPin" />
+            </v-btn>
+          </template> -->
         </v-list-item>
       </v-list>
 

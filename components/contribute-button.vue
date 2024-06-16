@@ -2,6 +2,7 @@
 import { mdiOpenInNew } from '@mdi/js';
 
 const props = defineProps<{
+  path?: string;
   color?: string;
 }>();
 
@@ -9,7 +10,9 @@ const props = defineProps<{
 const app = useApp();
 
 // events
-const onPressedContribute = () => window.open(app.githubRepo);
+const onPressedContribute = () => {
+  window.open(`${app.githubRepo}${props.path || ''}`);
+};
 </script>
 
 <template>

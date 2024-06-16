@@ -5,6 +5,14 @@
   --rarity-white: rgb(66 153 225 / var(--v-rarity-opacity));
   --v-color-rarity5: #ffe65a;
   --v-color-rarity4: #c96dff;
+
+  --color-attribute-aero: #2fc79f;
+  --color-attribute-havoc: #9a1754;
+  --color-attribute-spectro: #bca81d;
+  --color-attribute-electro: #a732b0;
+  --color-attribute-glacio: #38b0d2;
+  --color-attribute-fusion: #c72a4c;
+  --color-highlight: orange;
 }
 
 a,

@@ -121,8 +121,8 @@ useJsonld(() => ({
               <v-chip :text="$t(item.weapon)" :prepend-icon="weaponIcon" />
               <v-chip :text="$t(item.attribute)" />
             </div>
-            {{ item }}
-            {{ data }}
+
+            <div class="mt-2" :innerHTML="data.description"></div>
           </v-col>
         </v-row>
       </v-card-text>
@@ -140,30 +140,93 @@ useJsonld(() => ({
       </v-card-text>
     </v-card>
 
+    <!-- Skills -->
+    <v-card class="mt-4">
+      <v-card-title>
+        {{ $t('characters.skills') }}
+      </v-card-title>
+      <v-divider />
+
+      <v-card-text>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="6"
+            md="4"
+            v-for="(element, index) in data.skills"
+            :key="index"
+          >
+            <v-card class="fill-height">
+              <v-sheet class="pt-2">
+                <v-list-item
+                  :title="$t(element.name)"
+                  :subtitle="$t(element.type)"
+                >
+                  <template #prepend>
+                    <v-avatar class="border rounded"> </v-avatar>
+                  </template>
+                </v-list-item>
+              </v-sheet>
+
+              <v-card-text v-if="element.description">
+                <div
+                  :innerHTML="element.description.replaceAll('\n', '<br/>')"
+                />
+              </v-card-text>
+              <v-sheet v-else class="pb-2" />
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+
+    <!-- Resonance Chain -->
+    <v-card class="mt-4">
+      <v-card-title>
+        {{ $t('characters.resonanceChain') }}
+      </v-card-title>
+      <v-divider />
+
+      <v-card-text>
+        <v-row>
+          <v-col
+            cols="12"
+            md="6"
+            v-for="(element, index) in data.resonanceChain"
+            :key="index"
+          >
+            <v-card class="fill-height">
+              <v-sheet class="pt-2">
+                <v-list-item
+                  :title="$t(element.name)"
+                  :subtitle="$t(element.idx)"
+                >
+                  <template #prepend>
+                    <v-avatar class="border rounded"> </v-avatar>
+                  </template>
+                </v-list-item>
+              </v-sheet>
+
+              <v-card-text v-if="element.description">
+                <div
+                  :innerHTML="
+                    element.description
+                      .replace(
+                        /\{(\d+)\}/g,
+                        (_, index) => element.params[index] || ''
+                      )
+                      .replaceAll('\n', '<br/>')
+                  "
+                />
+              </v-card-text>
+              <v-sheet v-else class="pb-2" />
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+
     <v-row>
-      <v-col cols="12" sm="6">
-        <!-- Upgrade Materials -->
-        <v-card class="mt-4">
-          <v-card-title>
-            {{ $t('characters.resonanceChain') }}
-          </v-card-title>
-          <v-divider />
-
-          <v-list>
-            <v-list-item
-              v-for="(element, index) in data.resonanceChain"
-              :key="index"
-              :title="$t(element.name)"
-            >
-              <template #prepend>
-                <v-avatar class="border"> </v-avatar>
-              </template>
-            </v-list-item>
-          </v-list>
-          <v-divider />
-        </v-card>
-      </v-col>
-
       <v-col cols="12" sm="6">
         <!-- Upgrade Materials -->
         <v-card class="mt-4">

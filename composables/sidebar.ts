@@ -38,20 +38,19 @@ export const useSidebar = defineStore('useSidebar', () => {
       title: 'sidebar.home'
     },
     {
-      url: '/map',
-      icon: mdiMap,
-      title: 'sidebar.map'
+      url: '/convene-history',
+      icon: mdiCounter,
+      title: 'sidebar.conveneHistory'
     },
     {
       url: '/timeline',
       icon: mdiCalendar,
       title: 'sidebar.timeline'
     },
-
     {
-      url: '/convene-history',
-      icon: mdiCounter,
-      title: 'sidebar.conveneHistory'
+      url: '/map',
+      icon: mdiMap,
+      title: 'sidebar.map'
     },
     {
       url: '/characters',
@@ -111,7 +110,8 @@ export const useSidebar = defineStore('useSidebar', () => {
   ]);
 
   // functions
-  // TODO: add notify badge
+  const togglePin = (url: string) => {};
+
   const setNotify = (url: string, key: string, value: number) => {};
 
   // events
@@ -129,5 +129,5 @@ export const useSidebar = defineStore('useSidebar', () => {
     // TODO: update count to sort
   };
 
-  return { open, items, notify, setNotify, onOpened };
+  return { open, items, notify, togglePin, setNotify, onOpened };
 });

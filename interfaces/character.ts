@@ -31,7 +31,6 @@ export interface ICharacter {
 export interface ICharacterData {
   description: string;
   skills: {
-    icon: string;
     name: string;
     type: CharacterSkill;
     levels: {
@@ -44,9 +43,9 @@ export interface ICharacterData {
     description: string;
   }[];
   resonanceChain: {
-    icon: string;
+    idx: string;
     name: string;
-    params: string[] | number[];
+    params: string[];
     description: string;
   }[];
   stats: {
