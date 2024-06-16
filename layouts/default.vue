@@ -106,6 +106,7 @@ watch(
               : undefined
           "
           class="rounded"
+          @click="() => sidebar.onOpened(element.url)"
         >
           <template #prepend>
             <v-sheet

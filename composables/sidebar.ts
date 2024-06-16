@@ -21,13 +21,15 @@ export interface IMenu {
 
 export const useSidebar = defineStore('useSidebar', () => {
   // uses
+  const analytics = useAnalytics();
+
+  // states
   const notify = ref<{
     id: string;
     key: string;
     value: number;
+    priority?: number;
   }>();
-
-  // states
   const open = ref();
   const items = ref<IMenu[]>([
     {
@@ -36,15 +38,16 @@ export const useSidebar = defineStore('useSidebar', () => {
       title: 'sidebar.home'
     },
     {
-      url: '/timeline',
-      icon: mdiCalendar,
-      title: 'sidebar.timeline'
-    },
-    {
       url: '/map',
       icon: mdiMap,
       title: 'sidebar.map'
     },
+    {
+      url: '/timeline',
+      icon: mdiCalendar,
+      title: 'sidebar.timeline'
+    },
+
     {
       url: '/convene-history',
       icon: mdiCounter,
@@ -109,7 +112,22 @@ export const useSidebar = defineStore('useSidebar', () => {
 
   // functions
   // TODO: add notify badge
-  const setNotify = (id: string, key: string, value: number) => {};
+  const setNotify = (url: string, key: string, value: number) => {};
 
-  return { open, items, notify, setNotify };
+  // events
+  const onOpened = (
+    url: string,
+    options?: {
+      ignoreAnalytics?: boolean;
+    }
+  ) => {
+    options ??= {};
+    if (!options.ignoreAnalytics) {
+      analytics.logEvent('sidebar', { url });
+    }
+
+    // TODO: update count to sort
+  };
+
+  return { open, items, notify, setNotify, onOpened };
 });

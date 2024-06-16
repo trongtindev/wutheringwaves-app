@@ -172,7 +172,7 @@ useJsonld(() => ({
           </v-card-title>
           <v-divider />
 
-          <v-list>
+          <!-- <v-list>
             <v-list-item
               v-for="(element, index) in data.ascensionMaterials"
               :key="index"
@@ -196,7 +196,7 @@ useJsonld(() => ({
               variant="outlined"
               @click="onPressedAddTodo"
             />
-          </v-card-actions>
+          </v-card-actions> -->
         </v-card>
       </v-col>
 

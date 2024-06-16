@@ -1,3 +1,4 @@
+import type { ILocalized } from './common';
 import type { WeaponType } from './weapon';
 
 export type CharacterAttribute =
@@ -19,6 +20,7 @@ export type CharacterSkill =
 export interface ICharacter {
   slug: string;
   name: string;
+  nameLocalized?: ILocalized;
   attribute: CharacterAttribute;
   weapon: WeaponType;
   rarity: number;
@@ -68,16 +70,7 @@ export interface ICharacterData {
     icon: string;
     name: string;
   }[];
-  // name: string;
-  // nameLocalized: { [key: string]: string };
-  // quote: string;
-  // birthday: string;
-  // birthplace: string;
-  // resonanceChain: {
-  //   name: string;
-  // }[];
-  // ascensionMaterials: {
-  //   name: string;
-  //   amount: number;
-  // }[];
+  quote: string;
+  birthday: string;
+  birthplace: string;
 }
