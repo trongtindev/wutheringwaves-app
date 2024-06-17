@@ -14,6 +14,20 @@
   --color-highlight: orange;
 }
 
+/*::-webkit-scrollbar {*/
+/*  height: 8px;*/
+/*}*/
+
+/*::-webkit-scrollbar-track {*/
+/*  @apply bg-transparent;*/
+/*  margin: 0 20px;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+/*  background: rgba(0, 0, 0, 0.35);*/
+/*  @apply rounded-xl;*/
+/*}*/
+
 a,
 a:visited,
 a:hover,

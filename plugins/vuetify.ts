@@ -3,7 +3,6 @@ import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import { en, vi } from 'vuetify/locale';
 import { md3 } from 'vuetify/blueprints';
 import 'vuetify/styles';
-// import { VCalendar } from 'vuetify/labs/components';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
@@ -99,7 +98,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
     },
     blueprint: md3
-    // components: { VCalendar }
   });
 
   nuxtApp.vueApp.use(vuetify);
