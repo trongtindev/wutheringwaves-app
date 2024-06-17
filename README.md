@@ -9,18 +9,18 @@ In-development site for Wuthering Waves.
 ## Roadmap
 
 | Features                          | Description                          | Status      |
-| --------------------------------- | ------------------------------------ | ----------- |
-| Convene history                   | ...                                  | [x]         |
-| Convene history > Share card      | ...                                  | None        |
+|-----------------------------------|--------------------------------------|-------------|
+| Convene history                   | ...                                  | ✅           |
+| Convene history > Share card      | ...                                  | In progress |
 | Convene global stats              | ...                                  | In progress |
-| Cloud backup                      | ...                                  | [x]         |
+| Cloud backup                      | ...                                  | ✅           |
 | Database > Characters             | ...                                  | In progress |
 | Database > Weapons                | ...                                  | In progress |
 | Database > Echos                  | ...                                  | In progress |
 | Database > Achievements           | ...                                  | None        |
-| Accounts > Multiple               | Support multiple accounts            | [x]         |
-| Tier list                         | ...                                  | None        |
-| Tier list > Creator               | ...                                  | None        |
+| Accounts > Multiple               | Support multiple accounts            | ✅           |
+| Tier list                         | ...                                  | In progress |
+| Tier list > Creator               | ...                                  | In progress |
 | Tier list > Creator > Live voting | Create tier list and realtime voting | None        |
 | Todo list                         | ...                                  | None        |
 | OCR import tool                   | Using OCR to import account data     | None        |
@@ -29,6 +29,9 @@ In-development site for Wuthering Waves.
 | Profile > Share card              | Upload profile via screenshot        | None        |
 | Profile > Echo                    | Upload profile via screenshot        | None        |
 | Profile > Character               | Upload profile via screenshot        | None        |
+| Codes                             | Giftcode page                        | ✅           |
+| Interactive map                   | ...                                  | None        |
+| Trophies                          | ...                                  | ✅           |
 | Functions > Global search         | Search any thing                     | None        |
 | Functions > Notifications         | Web push notification functions      | None        |
 
@@ -47,17 +50,19 @@ src/locales
 ### Available Languages
 
 | Filename | Language Name |
-| -------- | ------------- |
+|----------|---------------|
 | en.json  | English       |
 | vi.json  | Vietnamese    |
 
 ## Development
 
-If you're interested in the API, it's here [https://github.com/trongtindev/wuthering-waves-app-api](https://github.com/trongtindev/wuthering-waves-app-api)
+If you're interested in the API, it's
+here [https://github.com/trongtindev/wuthering-waves-app-api](https://github.com/trongtindev/wuthering-waves-app-api)
 
 ### Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and
+disable Vetur).
 
 ### Project Setup
 
@@ -107,7 +112,8 @@ pnpm lint
 Data crawler [https://github.com/resonance-rest/api](https://github.com/resonance-rest/api)<br />
 Icon & images [https://wanderer.moe/wuthering-waves](https://wanderer.moe/wuthering-waves)<br />
 Material Icons [https://pictogrammers.com/library/mdi/](https://pictogrammers.com/library/mdi/)<br />
-wuthering Waves Wiki [https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki](https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki)
+wuthering Waves
+Wiki [https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki](https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki)
 
 # License
 
