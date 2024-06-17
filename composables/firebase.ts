@@ -3,7 +3,7 @@ import { initializeApp, type FirebaseApp } from 'firebase/app';
 import { getAuth, type Auth } from 'firebase/auth';
 import { getAnalytics, type Analytics } from 'firebase/analytics';
 import { getPerformance, type FirebasePerformance } from 'firebase/performance';
-import { getMessaging, type Messaging } from 'firebase/messaging';
+import { getMessaging, type Messaging, isSupported } from 'firebase/messaging';
 
 export const useFirebase = defineStore('useFirebase', () => {
   // uses
@@ -17,7 +17,7 @@ export const useFirebase = defineStore('useFirebase', () => {
   const performance = ref<FirebasePerformance>();
   const messaging = ref<Messaging>();
 
-  const initialize = () => {
+  const initialize = async () => {
     if (import.meta.server) {
       throw new Error('Cannot initialize firebase on server-side!');
     }
@@ -39,7 +39,7 @@ export const useFirebase = defineStore('useFirebase', () => {
     auth.value = getAuth(app.value);
 
     // Safari on iOS say no :)
-    if (isDesktop || isAndroid) {
+    if ((isDesktop || isAndroid) && (await isSupported())) {
       messaging.value = getMessaging(app.value);
     }
 

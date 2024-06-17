@@ -2,7 +2,6 @@ import { defineStore } from 'pinia';
 
 export const useNotification = defineStore('useNotification', () => {
   // uses
-  const { isAndroid, isDesktop } = useDevice();
   const firebase = useFirebase();
 
   // states
@@ -10,7 +9,7 @@ export const useNotification = defineStore('useNotification', () => {
 
   // computed
   const isSupported = computed<boolean>(() => {
-    return (isAndroid || isDesktop) && typeof firebase.messaging != 'undefined';
+    return typeof firebase.messaging != 'undefined';
   });
 
   return {

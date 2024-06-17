@@ -5,6 +5,7 @@ import { mdiTrashCan } from '@mdi/js';
 const i18n = useI18n();
 const dialog = useDialog();
 const notification = useNotification();
+const { isIos } = useDevice();
 </script>
 
 <template>
@@ -16,6 +17,11 @@ const notification = useNotification();
       <v-divider />
 
       <v-card-text v-if="!notification.isSupported">
+        <v-alert
+          v-if="isIos"
+          :text="$t('settings.notification.iosNotSupported')"
+          color="warning"
+        />
         <v-alert
           :text="$t('settings.notification.deviceNotSupported')"
           color="warning"

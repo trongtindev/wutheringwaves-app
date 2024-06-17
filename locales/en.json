@@ -192,7 +192,9 @@
     },
     "notification": {
       "title": "Notification",
-      "enabled": "Enabled"
+      "enabled": "Enabled",
+      "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
+      "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
     }
   },
   "comments": {
