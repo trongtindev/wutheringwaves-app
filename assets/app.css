@@ -1,10 +1,9 @@
 :root {
-  --rarity-yellow: rgb(255 177 63 / var(--v-rarity-opacity));
-  --rarity-purple: rgb(210 143 214 / var(--v-rarity-opacity));
-  --rarity-blue: rgb(66 153 225 / var(--v-rarity-opacity));
-  --rarity-white: rgb(66 153 225 / var(--v-rarity-opacity));
-  --v-color-rarity5: #ffe65a;
-  --v-color-rarity4: #c96dff;
+  --rarity-opacity : 0.5;
+  --color-background-rarity5: rgb(255 177 63 / var(--rarity-opacity));
+  --color-background-rarity4: rgb(210 143 214 / var(--rarity-opacity));
+  --color-background-rarity3: rgb(66 153 225 / var(--rarity-opacity));
+  --color-background-rarity2: rgb(66 153 225 / var(--rarity-opacity));
 
   --color-attribute-aero: #2fc79f;
   --color-attribute-havoc: #9a1754;
@@ -35,16 +34,16 @@ a {
 }
 
 .text-rarity5 {
-  color: var(--v-color-rarity5);
-  /* border-color: #ffe65a;
-  box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2);
-  border-top: 2px solid #ffe65a; */
+  /*color: var(--color-rarity5);*/
 }
 
 .text-rarity4 {
-  color: var(--v-color-rarity4);
+  /*color: var(--color-rarity4);*/
 }
 
 .border-rarity5 {
-  border: 1px solid var(--v-color-rarity5);
+  /*border: 1px solid var(--color-rarity5);*/
+  /* border-color: #ffe65a;
+  box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2);
+  border-top: 2px solid #ffe65a; */
 }

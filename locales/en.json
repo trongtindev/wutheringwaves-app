@@ -127,14 +127,12 @@
   "characters": {
     "title": "Characters",
     "introduction": "Introduction",
-    "ascensionMaterials": "Ascension Materials",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills"
   },
   "weapons": {
     "title": "Weapons",
-    "ranks": "Ranks",
-    "ascensionsCost": "Ascensions cost"
+    "ranks": "Ranks"
   },
   "tierList": {
     "title": "Tier list",
@@ -281,7 +279,8 @@
     "download": "Download",
     "language": "Language",
     "items": "Items",
-    "item": "Item"
+    "item": "Item",
+    "ascensionMaterial": "Ascension Material"
   },
   "other": {
     "underDevelopmentTitle": "This site is under development.",

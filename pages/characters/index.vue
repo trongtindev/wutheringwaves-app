@@ -132,11 +132,11 @@ useSeoMeta({
           >
             <v-card :to="localePath(`/characters/${element.slug}`)">
               <v-responsive
-                :aspect-ratio="1 / 1"
-                :style="`background-color: var(${element.rarity === 4 ? '--rarity-purple' : '--rarity-yellow'});`"
+                :aspect-ratio="1"
+                :style="`background-color: var(--color-background-rarity${element.rarity});`"
               >
                 <v-img
-                  :src="`/characters/icons/${element.slug}.png`"
+                  :src="`/characters/icons/${element.slug}.webp`"
                   :alt="$t(element.name)"
                   class="align-end h-100"
                   cover
@@ -151,16 +151,9 @@ useSeoMeta({
                       :alt="element.attribute"
                     />
                   </div>
-
-                  <div style="right: 5px; top: 5px; position: absolute">
-                    <v-chip
-                      v-if="isRecentlyAdded(element.releaseDate)"
-                      :text="$t('Recently added')"
-                      class="bg-red border"
-                    />
-                  </div>
                 </v-img>
               </v-responsive>
+              <v-divider />
 
               <v-card-title
                 class="text-center"

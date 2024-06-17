@@ -7,22 +7,20 @@ const items = [
     slug: 'rover',
     name: 'Rover',
     weapon: 'Sword',
-    attribute: 'Havoc',
-    releaseDate: 'May 23, 2024'
+    rarity: 5,
+    attribute: 'Spectro'
   },
   {
     slug: 'rover-havoc',
     name: 'Rover (Havoc)',
+    rarity: 5,
     weapon: 'Sword',
-    attribute: 'Havoc',
-    releaseDate: 'May 23, 2024'
+    attribute: 'Havoc'
   }
 ].map((e) => {
   return {
     ...e,
-    rarity: 5,
-    attribute: e.attribute || 'Spectro',
-    releaseDate: new Date(`${e.releaseDate}`)
+    attribute: e.attribute || 'Spectro'
   };
 }) as ICharacter[];
 

@@ -24,13 +24,12 @@ export interface ICharacter {
   attribute: CharacterAttribute;
   weapon: WeaponType;
   rarity: number;
-  class: string;
-  releaseDate: Date;
 }
 
 export interface ICharacterData {
   description: string;
   skills: {
+    slug: string;
     name: string;
     type: CharacterSkill;
     levels: {
@@ -44,6 +43,7 @@ export interface ICharacterData {
   }[];
   resonanceChain: {
     idx: string;
+    slug: string;
     name: string;
     params: string[];
     description: string;
@@ -56,7 +56,7 @@ export interface ICharacterData {
   };
   ascensions: {
     cost: {
-      name: string;
+      item: number;
       quantity: number;
     }[];
     minLevel: number;

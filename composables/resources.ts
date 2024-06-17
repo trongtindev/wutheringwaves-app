@@ -3,6 +3,7 @@ import type { ICode } from '@/interfaces/code';
 import type { IWeaponData } from '@/interfaces/weapon';
 import { defineStore } from 'pinia';
 import type { IItemData } from '~/interfaces/item';
+import type { IEchoData } from '~/interfaces/echo';
 
 export const useResources = defineStore('useResources', () => {
   // functions
@@ -33,6 +34,11 @@ export const useResources = defineStore('useResources', () => {
 
   const echos = async () => {
     const index = (await import('@/resources/echos')).default;
+    return index;
+  };
+
+  const getEchoData = async (slug: string): Promise<IEchoData> => {
+    const index = (await import(`@/resources/echos/${slug}.json`)).default;
     return index;
   };
 
@@ -67,6 +73,7 @@ export const useResources = defineStore('useResources', () => {
     characters,
     getCharacterData,
     echos,
+    getEchoData,
     getCodes,
     getItems,
     getItemData,

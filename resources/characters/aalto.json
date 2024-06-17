@@ -1,1 +1,415 @@
-{"slug":"aalto","description":"Aalto is an enigmatic Information Broker, known for his elusive nature and welcoming smile. Rumor has it he'll provide any information at the right price.","skills":[{"name":"Half Truths","type":"Basic Attack","description":"<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nAalto fires up to 5 consecutive shots, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>. Basic Attack 4 will spread the \"Mist\" forward, which lasts for <strong style=\"color: var(--color-attribute-aero);\">1.5</strong>s.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nAalto enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nAalto consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>."},{"name":"Shift Trick","type":"Resonance Skill","description":"<size=40><strong style=\"color: var(--color-title);\">Mist Avatar</strong></size>\r\nCasts \"Mist\" and <strong style=\"color: var(--color-attribute-aero);\">1</strong> \"Mist Avatar(s)\" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate <strong style=\"color: var(--color-attribute-aero);\">6</strong> <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> around them, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Mist Missiles</strong></size>\r\nDeals <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>, considered as Resonance Skill damage."},{"name":"Flower in the Mist","type":"Resonance Liberation","description":"Generate a \"Gate of Quandary\" in front, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>. When bullets pass through the \"Gate of Quandary\", ATK is increased. \"Gate of Quandary\" lasts for <strong style=\"color: var(--color-attribute-aero);\">10</strong>s."},{"name":"Perfect Performance","type":"Inherent Skill","description":"Aalto's <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> will always critically hit, triggered once every <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."},{"name":"Mid-game Break","type":"Inherent Skill","description":"Aalto will continuously recover Stamina when he is in the Forte Circuit <strong style=\"color: var(--color-highlight);\">Miscloak Dash</strong> state."},{"name":"Feint Shot","type":"Intro Skill","description":"Aalto shows up out of thin air to performs rapid continuous shooting, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero damage</strong>."},{"name":"Misty Cover","type":"Forte Circuit","description":"When Aalto passes through \"Mist\" or \"Gate of Quandary\", he enters \"Mistcloak Dash\".\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mistcloak Dash</strong></size>\nMovement speed increased;\nDuring this period, \"Mist Drops\" are continuously consumed, and for each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" consumed, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Missile</strong> is generated.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mist Drops</strong></size>\nAalto can hold up to <strong style=\"color: var(--theme-palette-color-1);\">6</strong> Mist Drops.\nWhen <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-air Attack</strong> passes through \"Mist\" and hits the target, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" is recovered."},{"name":"Skillful Cooking","type":"Inherent Skill","description":"Has a chance to produce special dishes when cooking"},{"name":"Dissolving Mist","type":"Outro Skill","description":""}],"resonanceChain":[{"idx":"Resonance 1-4","name":"Trickster's Opening Show","params":["4"],"description":"The cooldown of Resonance Skill <strong style=\"color: var(--color-highlight);\">Shift Trick</strong> is reduced by {0}s."},{"idx":"Resonance 2-4","name":"Mistweaver’s Debut","params":["100%","15%"],"description":"\"Mist Avatar\" inherits {0} more HP from Aalto. When Aalto attacks targets taunted by the \"Mist Avatar(s)\", his ATK is increased by {1}."},{"idx":"Resonance 3-4","name":"Hazey Transition","params":["50%"],"description":"When Aalto's <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong> passes through the \"Gate of Quandary\", 2 more bullets will be generated, dealing {0} of the DMG of <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong>."},{"idx":"Resonance 4-4","name":"Blake Bloom for Finale","params":["30%","30%"],"description":"The damage of Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> is increased by {0}; Aalto receives {1} less damage in his Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state."},{"idx":"Resonance 5-4","name":"Applause of the Lost","params":["25%","6"],"description":"In the Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state, Aalto's Aero DMG Bonus is increased by {0} for {1}s."},{"idx":"Resonance 6-4","name":"Broker’s Secrets","params":["8%","50%"],"description":"Resonance Liberation <strong style=\"color: var(--color-highlight);\">Flower in the Mist</strong> now additionally increases Crit. Rate by {0}. When Aalto's Heavy Attack passes through the \"Gate of Quandary\", the damage dealt is additionally increased by {1}."}],"stats":{"hp":788,"def":88,"atk":21,"energy":15000},"ascensions":[{"cost":[],"minLevel":0},{"cost":[{"item":41100021,"quantity":4},{"item":2,"quantity":5000}],"minLevel":20},{"cost":[{"item":41400054,"quantity":3},{"item":42300090,"quantity":4},{"item":41100022,"quantity":4},{"item":2,"quantity":10000}],"minLevel":40},{"cost":[{"item":41400054,"quantity":6},{"item":42300090,"quantity":8},{"item":41100022,"quantity":8},{"item":2,"quantity":15000}],"minLevel":50},{"cost":[{"item":41400054,"quantity":9},{"item":42300090,"quantity":12},{"item":41100023,"quantity":4},{"item":2,"quantity":20000}],"minLevel":60},{"cost":[{"item":41400054,"quantity":12},{"item":42300090,"quantity":16},{"item":41100023,"quantity":8},{"item":2,"quantity":40000}],"minLevel":70},{"cost":[{"item":41400054,"quantity":16},{"item":42300090,"quantity":20},{"item":41100024,"quantity":4},{"item":2,"quantity":80000}],"minLevel":80}],"forte":[{"id":169,"cost":[{"item":43020023,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"Aero DMG Bonus+1.80%"},{"id":170,"cost":[{"item":43020023,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"ATK+1.80%"},{"id":171,"cost":[{"item":43020023,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"ATK+1.80%"},{"id":172,"cost":[{"item":43020023,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"Aero DMG Bonus+1.80%"},{"id":173,"cost":[{"item":43020024,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"Aero DMG Bonus+4.20%"},{"id":174,"cost":[{"item":43020024,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"ATK+4.20%"},{"id":175,"cost":[{"item":43020024,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"ATK+4.20%"},{"id":176,"cost":[{"item":43020024,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"Aero DMG Bonus+4.20%"}],"quote":"Well, if it isn't my loyal patron! What do you wish to inquire about today?\"","birthday":"June 11th","birthplace":"New Federation"}
+{
+  "slug": "aalto",
+  "description": "Aalto is an enigmatic Information Broker, known for his elusive nature and welcoming smile. Rumor has it he'll provide any information at the right price.",
+  "skills": [
+    {
+      "slug": "half-truths",
+      "name": "Half Truths",
+      "type": "Basic Attack",
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nAalto fires up to 5 consecutive shots, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>. Basic Attack 4 will spread the \"Mist\" forward, which lasts for <strong style=\"color: var(--color-attribute-aero);\">1.5</strong>s.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nAalto enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nAalto consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>."
+    },
+    {
+      "slug": "shift-trick",
+      "name": "Shift Trick",
+      "type": "Resonance Skill",
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Mist Avatar</strong></size>\r\nCasts \"Mist\" and <strong style=\"color: var(--color-attribute-aero);\">1</strong> \"Mist Avatar(s)\" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate <strong style=\"color: var(--color-attribute-aero);\">6</strong> <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> around them, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Mist Missiles</strong></size>\r\nDeals <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>, considered as Resonance Skill damage."
+    },
+    {
+      "slug": "flower-in-the-mist",
+      "name": "Flower in the Mist",
+      "type": "Resonance Liberation",
+      "description": "Generate a \"Gate of Quandary\" in front, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>. When bullets pass through the \"Gate of Quandary\", ATK is increased. \"Gate of Quandary\" lasts for <strong style=\"color: var(--color-attribute-aero);\">10</strong>s."
+    },
+    {
+      "slug": "perfect-performance",
+      "name": "Perfect Performance",
+      "type": "Inherent Skill",
+      "description": "Aalto's <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> will always critically hit, triggered once every <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."
+    },
+    {
+      "slug": "mid-game-break",
+      "name": "Mid-game Break",
+      "type": "Inherent Skill",
+      "description": "Aalto will continuously recover Stamina when he is in the Forte Circuit <strong style=\"color: var(--color-highlight);\">Miscloak Dash</strong> state."
+    },
+    {
+      "slug": "feint-shot",
+      "name": "Feint Shot",
+      "type": "Intro Skill",
+      "description": "Aalto shows up out of thin air to performs rapid continuous shooting, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero damage</strong>."
+    },
+    {
+      "slug": "misty-cover",
+      "name": "Misty Cover",
+      "type": "Forte Circuit",
+      "description": "When Aalto passes through \"Mist\" or \"Gate of Quandary\", he enters \"Mistcloak Dash\".\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mistcloak Dash</strong></size>\nMovement speed increased;\nDuring this period, \"Mist Drops\" are continuously consumed, and for each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" consumed, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Missile</strong> is generated.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mist Drops</strong></size>\nAalto can hold up to <strong style=\"color: var(--theme-palette-color-1);\">6</strong> Mist Drops.\nWhen <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-air Attack</strong> passes through \"Mist\" and hits the target, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" is recovered."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "dissolving-mist",
+      "name": "Dissolving Mist",
+      "type": "Outro Skill",
+      "description": ""
+    }
+  ],
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "trickster-s-opening-show",
+      "name": "Trickster's Opening Show",
+      "params": [
+        "4"
+      ],
+      "description": "The cooldown of Resonance Skill <strong style=\"color: var(--color-highlight);\">Shift Trick</strong> is reduced by {0}s."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "mistweaver-s-debut",
+      "name": "Mistweaver’s Debut",
+      "params": [
+        "100%",
+        "15%"
+      ],
+      "description": "\"Mist Avatar\" inherits {0} more HP from Aalto. When Aalto attacks targets taunted by the \"Mist Avatar(s)\", his ATK is increased by {1}."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "hazey-transition",
+      "name": "Hazey Transition",
+      "params": [
+        "50%"
+      ],
+      "description": "When Aalto's <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong> passes through the \"Gate of Quandary\", 2 more bullets will be generated, dealing {0} of the DMG of <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong>."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "blake-bloom-for-finale",
+      "name": "Blake Bloom for Finale",
+      "params": [
+        "30%",
+        "30%"
+      ],
+      "description": "The damage of Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> is increased by {0}; Aalto receives {1} less damage in his Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "applause-of-the-lost",
+      "name": "Applause of the Lost",
+      "params": [
+        "25%",
+        "6"
+      ],
+      "description": "In the Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state, Aalto's Aero DMG Bonus is increased by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "broker-s-secrets",
+      "name": "Broker’s Secrets",
+      "params": [
+        "8%",
+        "50%"
+      ],
+      "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Flower in the Mist</strong> now additionally increases Crit. Rate by {0}. When Aalto's Heavy Attack passes through the \"Gate of Quandary\", the damage dealt is additionally increased by {1}."
+    }
+  ],
+  "stats": {
+    "hp": 788,
+    "def": 88,
+    "atk": 21,
+    "energy": 15000
+  },
+  "ascensions": [
+    {
+      "cost": [],
+      "minLevel": 0
+    },
+    {
+      "cost": [
+        {
+          "item": 41100021,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 5000
+        }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        {
+          "item": 41400054,
+          "quantity": 3
+        },
+        {
+          "item": 42300090,
+          "quantity": 4
+        },
+        {
+          "item": 41100022,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 10000
+        }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        {
+          "item": 41400054,
+          "quantity": 6
+        },
+        {
+          "item": 42300090,
+          "quantity": 8
+        },
+        {
+          "item": 41100022,
+          "quantity": 8
+        },
+        {
+          "item": 2,
+          "quantity": 15000
+        }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        {
+          "item": 41400054,
+          "quantity": 9
+        },
+        {
+          "item": 42300090,
+          "quantity": 12
+        },
+        {
+          "item": 41100023,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 20000
+        }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        {
+          "item": 41400054,
+          "quantity": 12
+        },
+        {
+          "item": 42300090,
+          "quantity": 16
+        },
+        {
+          "item": 41100023,
+          "quantity": 8
+        },
+        {
+          "item": 2,
+          "quantity": 40000
+        }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        {
+          "item": 41400054,
+          "quantity": 16
+        },
+        {
+          "item": 42300090,
+          "quantity": 20
+        },
+        {
+          "item": 41100024,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 80000
+        }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "forte": [
+    {
+      "id": 169,
+      "cost": [
+        {
+          "item": 43020023,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "Aero DMG Bonus+1.80%"
+    },
+    {
+      "id": 170,
+      "cost": [
+        {
+          "item": 43020023,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 171,
+      "cost": [
+        {
+          "item": 43020023,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 172,
+      "cost": [
+        {
+          "item": 43020023,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "Aero DMG Bonus+1.80%"
+    },
+    {
+      "id": 173,
+      "cost": [
+        {
+          "item": 43020024,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "Aero DMG Bonus+4.20%"
+    },
+    {
+      "id": 174,
+      "cost": [
+        {
+          "item": 43020024,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 175,
+      "cost": [
+        {
+          "item": 43020024,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 176,
+      "cost": [
+        {
+          "item": 43020024,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "Aero DMG Bonus+4.20%"
+    }
+  ],
+  "quote": "Well, if it isn't my loyal patron! What do you wish to inquire about today?\"",
+  "birthday": "June 11th",
+  "birthplace": "New Federation"
+}

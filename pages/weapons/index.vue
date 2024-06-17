@@ -15,9 +15,7 @@ const filterRarity = ref<number>(0);
 const items = computed(() => {
   return weapons.value.filter((e) => {
     if (filterText.value && filterText.value.length > 0) {
-      if (
-        e.name.toLowerCase().includes(filterText.value.toLowerCase()) == false
-      ) {
+      if (!e.name.toLowerCase().includes(filterText.value.toLowerCase())) {
         return false;
       }
     }
@@ -42,24 +40,12 @@ const items = computed(() => {
 const categories = computed(() => {
   const items: string[] = [];
   weapons.value.forEach((e) => {
-    if (items.includes(e.type) === false) {
+    if (!items.includes(e.type)) {
       items.push(e.type);
     }
   });
   return items;
 });
-
-// functions
-const backgroundColor = (rarity: number) => {
-  if (rarity === 5) {
-    return '--rarity-yellow';
-  } else if (rarity === 4) {
-    return '--rarity-purple';
-  } else if (rarity === 3) {
-    return '--rarity-blue';
-  }
-  return '--rarity-white';
-};
 
 // seo meta
 const title = i18n.t('meta.weapons.title');
@@ -137,17 +123,21 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           >
             <v-card :to="localePath(`/weapons/${element.slug}`)">
               <v-responsive
-                :aspect-ratio="1 / 1"
-                :style="`background-color: var(${backgroundColor(element.rarity)});`"
+                :aspect-ratio="1"
+                :style="`background-color: var(--color-background-rarity${element.rarity});`"
               >
                 <v-img
                   class="align-end h-100"
-                  :src="`/weapons/icons/${element.slug}.png`"
+                  :src="`/weapons/icons/${element.slug}.webp`"
                   :cover="true"
                 />
               </v-responsive>
+              <v-divider />
 
-              <v-card-title class="text-center">
+              <v-card-title
+                class="text-center"
+                :class="`text-rarity${element.rarity}`"
+              >
                 {{ $t(element.name) }}
               </v-card-title>
             </v-card>

@@ -1,13 +1,18 @@
-export type EchoClass = 'Common' | 'Elite' | 'Overlord' | 'Calamity';
-
 export interface IEcho {
   slug: string;
   name: string;
   cost: number;
-  class: EchoClass;
+  class: string;
+  attribute: string;
   sonataEffects: string[];
-  outline: string;
+}
+
+export interface IEchoData {
   description: string;
-  ranks: number[] | { [key: string]: number }[];
-  cooldown: string;
+  skill: {
+    id: number;
+    cd: number;
+    params: string[];
+    description: string;
+  };
 }

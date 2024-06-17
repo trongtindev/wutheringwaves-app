@@ -1,1 +1,420 @@
-{"slug":"baizhi","description":"Baizhi is a researcher in Remnant Ecoacoustics.\nBaizhi's once unfulfilled wish has now manifested as her loyal companion. The Remnant Creature You'tan is her source of healing powers, and a lifelong research focus.","skills":[{"name":"Destined Promise","type":"Basic Attack","description":"<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nBaizhi instructs You'tan to perform up to 4 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nBaizhi continuously consumes STA to command You'tan to attack enemies, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>. During Heavy Attack, Baizhi can command You'tan to move.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nBaizhi consumes STA and summons You’tan in mid-air to perform a Plunging Attack, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."},{"name":"Emergency Plan","type":"Resonance Skill","description":"Baizhi calls You'tan to attack the target, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> while immediately healing all characters on nearby teams."},{"name":"Momentary Union","type":"Resonance Liberation","description":"Baizhi summons You'tan to heal all characters on nearby teams, generating <strong style=\"color: var(--color-attribute-glacio);\">4</strong> stacks of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Remnant Entities</strong></size>\nRemnant Entities follow the active team members. <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stacks of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> are automatically consumed to attack the targets every <strong style=\"color: var(--color-attribute-glacio);\">2.5</strong>s, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> on hit while healing the active character on a nearby team."},{"name":"Harmonic Range","type":"Inherent Skill","description":"When Baizhi casts Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong>, You'tan generates a field of <strong style=\"color: var(--color-highlight);\">Euphonia</strong> that lasts for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Euphonia</strong></size>\nATK of the Resonators who picks up Euphonia is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."},{"name":"Stimulus Feedback","type":"Inherent Skill","description":"Baizhi's <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> on hit heals the character with the lowest HP on a nearby team by <strong style=\"color: var(--theme-palette-color-1);\">0.25%</strong> of her Max HP."},{"name":"Overflowing Frost","type":"Intro Skill","description":"Baizhi calls You'tan to perform 1 plunging attack, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> while healing all characters on a nearby team."},{"name":"Cycle of Life","type":"Forte Circuit","description":"<size=40><strong style=\"color: var(--color-title);\">You'tan</strong></size>\nA Remnant Creature that answers to Baizhi’s mind and desires while sharing all her stats. You’tan goes back to Baizhi when Baizhi dodges.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Concentration</strong></size>\nBaizhi consumes all \"Concentrations\" when casting <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> to continuously heal all characters on nearby teams. Each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" consumed provides 1 healing. The healings happen every <strong style=\"color: var(--theme-palette-color-1);\">2</strong>s.\nWhen Baizhi consumes \"Concentration\" to cast <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong>, Baizhi additionally restores Concerto Energy and Resonance Energy;\nWhen Baizhi consumes \"Concentration\" to cast Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong>, Baizhi additionally restores Concerto Energy.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Forte Gauge: Concentration</strong></size>\nBaizhi can hold up to <strong style=\"color: var(--theme-palette-color-1);\">4</strong> \"Concentrations\".\nBaizhi obtains <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" for every <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> on hit."},{"name":"Skillful Cooking","type":"Inherent Skill","description":"Has a chance to produce special dishes when cooking"},{"name":"Rejuvinating Flow","type":"Outro Skill","description":""}],"resonanceChain":[{"idx":"Resonance 1-4","name":"Complex Simplicity","params":["1","2.5"],"description":"Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> additionally restores {1} Resonance Energy for every {0} \"Concentration\" consumed."},{"idx":"Resonance II-IV","name":"Silent Tundra","params":["4","15%","15%","12"],"description":"Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> increases Baizhi's Glacio DMG Bonus by {1} and her Healing by {2} if she has {0} \"Concentration\". These effects last for {3}s."},{"idx":"Resonance III-4","name":"Veritas Lux Mea","params":["12%","10"],"description":"Intro Skill <strong style=\"color: var(--color-highlight);\">Overflowing Frost</strong> increases Baizhi's Max HP by {0} for {1}s."},{"idx":"Resonance IV-4","name":"Eternal Verity","params":["2","20%","1.20%"],"description":"Upon casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Momentary Union</strong>, Resonance Liberation <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> gains the following enhancements:\r\n-<strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> can be performed {0} more time(s);\r\n-Healing multiplier of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> is increased by {1};\r\n-<strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> deals additional Glacio DMG equal to {2} of Baizhi's Max HP."},{"idx":"Resonance V-IV","name":"A Wish Answered","params":["100%","10"],"description":"If a team member is downed when Baizhi is alive on the team, immediately revive them and restore their HP to {0} of their Max HP. This effect can be triggered once every {1} minute(s)."},{"idx":"Resonance VI-IV","name":"Seeker's Devotion","params":["12%","20"],"description":"When <strong style=\"color: var(--color-highlight);\">Euphonia</strong> is picked up, increase the Glacio DMG Bonus of all characters nearby by {0} for {1}s."}],"stats":{"hp":1025,"def":82,"atk":17,"energy":17500},"ascensions":[{"cost":[],"minLevel":0},{"cost":[{"item":41100021,"quantity":4},{"item":2,"quantity":5000}],"minLevel":20},{"cost":[{"item":41400074,"quantity":3},{"item":42300050,"quantity":4},{"item":41100022,"quantity":4},{"item":2,"quantity":10000}],"minLevel":40},{"cost":[{"item":41400074,"quantity":6},{"item":42300050,"quantity":8},{"item":41100022,"quantity":8},{"item":2,"quantity":15000}],"minLevel":50},{"cost":[{"item":41400074,"quantity":9},{"item":42300050,"quantity":12},{"item":41100023,"quantity":4},{"item":2,"quantity":20000}],"minLevel":60},{"cost":[{"item":41400074,"quantity":12},{"item":42300050,"quantity":16},{"item":41100023,"quantity":8},{"item":2,"quantity":40000}],"minLevel":70},{"cost":[{"item":41400074,"quantity":16},{"item":42300050,"quantity":20},{"item":41100024,"quantity":4},{"item":2,"quantity":80000}],"minLevel":80}],"forte":[{"id":25,"cost":[{"item":43020033,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"Healing Bonus+1.80%"},{"id":26,"cost":[{"item":43020033,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"HP+1.80%"},{"id":27,"cost":[{"item":43020033,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"HP+1.80%"},{"id":28,"cost":[{"item":43020033,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"Healing Bonus+1.80%"},{"id":29,"cost":[{"item":43020034,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"Healing Bonus+4.20%"},{"id":30,"cost":[{"item":43020034,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"HP+4.20%"},{"id":31,"cost":[{"item":43020034,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"HP+4.20%"},{"id":32,"cost":[{"item":43020034,"quantity":3},{"item":41100024,"quantity":3},{"item":41400094,"quantity":1},{"item":2,"quantity":100000}],"name":"Healing Bonus+4.20%"}],"quote":"No, I cannot place my faith in it, but my anticipation stems precisely from this distrust. A claim is always verifiable before it is discredited entirely.","birthday":"September 10th","birthplace":"Huanglong"}
+{
+  "slug": "baizhi",
+  "description": "Baizhi is a researcher in Remnant Ecoacoustics.\nBaizhi's once unfulfilled wish has now manifested as her loyal companion. The Remnant Creature You'tan is her source of healing powers, and a lifelong research focus.",
+  "skills": [
+    {
+      "slug": "destined-promise",
+      "name": "Destined Promise",
+      "type": "Basic Attack",
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nBaizhi instructs You'tan to perform up to 4 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nBaizhi continuously consumes STA to command You'tan to attack enemies, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>. During Heavy Attack, Baizhi can command You'tan to move.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nBaizhi consumes STA and summons You’tan in mid-air to perform a Plunging Attack, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."
+    },
+    {
+      "slug": "emergency-plan",
+      "name": "Emergency Plan",
+      "type": "Resonance Skill",
+      "description": "Baizhi calls You'tan to attack the target, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> while immediately healing all characters on nearby teams."
+    },
+    {
+      "slug": "momentary-union",
+      "name": "Momentary Union",
+      "type": "Resonance Liberation",
+      "description": "Baizhi summons You'tan to heal all characters on nearby teams, generating <strong style=\"color: var(--color-attribute-glacio);\">4</strong> stacks of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Remnant Entities</strong></size>\nRemnant Entities follow the active team members. <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stacks of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> are automatically consumed to attack the targets every <strong style=\"color: var(--color-attribute-glacio);\">2.5</strong>s, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> on hit while healing the active character on a nearby team."
+    },
+    {
+      "slug": "harmonic-range",
+      "name": "Harmonic Range",
+      "type": "Inherent Skill",
+      "description": "When Baizhi casts Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong>, You'tan generates a field of <strong style=\"color: var(--color-highlight);\">Euphonia</strong> that lasts for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Euphonia</strong></size>\nATK of the Resonators who picks up Euphonia is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."
+    },
+    {
+      "slug": "stimulus-feedback",
+      "name": "Stimulus Feedback",
+      "type": "Inherent Skill",
+      "description": "Baizhi's <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> on hit heals the character with the lowest HP on a nearby team by <strong style=\"color: var(--theme-palette-color-1);\">0.25%</strong> of her Max HP."
+    },
+    {
+      "slug": "overflowing-frost",
+      "name": "Overflowing Frost",
+      "type": "Intro Skill",
+      "description": "Baizhi calls You'tan to perform 1 plunging attack, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> while healing all characters on a nearby team."
+    },
+    {
+      "slug": "cycle-of-life",
+      "name": "Cycle of Life",
+      "type": "Forte Circuit",
+      "description": "<size=40><strong style=\"color: var(--color-title);\">You'tan</strong></size>\nA Remnant Creature that answers to Baizhi’s mind and desires while sharing all her stats. You’tan goes back to Baizhi when Baizhi dodges.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Concentration</strong></size>\nBaizhi consumes all \"Concentrations\" when casting <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> to continuously heal all characters on nearby teams. Each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" consumed provides 1 healing. The healings happen every <strong style=\"color: var(--theme-palette-color-1);\">2</strong>s.\nWhen Baizhi consumes \"Concentration\" to cast <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong>, Baizhi additionally restores Concerto Energy and Resonance Energy;\nWhen Baizhi consumes \"Concentration\" to cast Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong>, Baizhi additionally restores Concerto Energy.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Forte Gauge: Concentration</strong></size>\nBaizhi can hold up to <strong style=\"color: var(--theme-palette-color-1);\">4</strong> \"Concentrations\".\nBaizhi obtains <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" for every <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> on hit."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "rejuvinating-flow",
+      "name": "Rejuvinating Flow",
+      "type": "Outro Skill",
+      "description": ""
+    }
+  ],
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": [
+        "1",
+        "2.5"
+      ],
+      "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> additionally restores {1} Resonance Energy for every {0} \"Concentration\" consumed."
+    },
+    {
+      "idx": "Resonance II-IV",
+      "slug": "silent-tundra",
+      "name": "Silent Tundra",
+      "params": [
+        "4",
+        "15%",
+        "15%",
+        "12"
+      ],
+      "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> increases Baizhi's Glacio DMG Bonus by {1} and her Healing by {2} if she has {0} \"Concentration\". These effects last for {3}s."
+    },
+    {
+      "idx": "Resonance III-4",
+      "slug": "veritas-lux-mea",
+      "name": "Veritas Lux Mea",
+      "params": [
+        "12%",
+        "10"
+      ],
+      "description": "Intro Skill <strong style=\"color: var(--color-highlight);\">Overflowing Frost</strong> increases Baizhi's Max HP by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance IV-4",
+      "slug": "eternal-verity",
+      "name": "Eternal Verity",
+      "params": [
+        "2",
+        "20%",
+        "1.20%"
+      ],
+      "description": "Upon casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Momentary Union</strong>, Resonance Liberation <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> gains the following enhancements:\r\n-<strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> can be performed {0} more time(s);\r\n-Healing multiplier of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> is increased by {1};\r\n-<strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> deals additional Glacio DMG equal to {2} of Baizhi's Max HP."
+    },
+    {
+      "idx": "Resonance V-IV",
+      "slug": "a-wish-answered",
+      "name": "A Wish Answered",
+      "params": [
+        "100%",
+        "10"
+      ],
+      "description": "If a team member is downed when Baizhi is alive on the team, immediately revive them and restore their HP to {0} of their Max HP. This effect can be triggered once every {1} minute(s)."
+    },
+    {
+      "idx": "Resonance VI-IV",
+      "slug": "seeker-s-devotion",
+      "name": "Seeker's Devotion",
+      "params": [
+        "12%",
+        "20"
+      ],
+      "description": "When <strong style=\"color: var(--color-highlight);\">Euphonia</strong> is picked up, increase the Glacio DMG Bonus of all characters nearby by {0} for {1}s."
+    }
+  ],
+  "stats": {
+    "hp": 1025,
+    "def": 82,
+    "atk": 17,
+    "energy": 17500
+  },
+  "ascensions": [
+    {
+      "cost": [],
+      "minLevel": 0
+    },
+    {
+      "cost": [
+        {
+          "item": 41100021,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 5000
+        }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        {
+          "item": 41400074,
+          "quantity": 3
+        },
+        {
+          "item": 42300050,
+          "quantity": 4
+        },
+        {
+          "item": 41100022,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 10000
+        }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        {
+          "item": 41400074,
+          "quantity": 6
+        },
+        {
+          "item": 42300050,
+          "quantity": 8
+        },
+        {
+          "item": 41100022,
+          "quantity": 8
+        },
+        {
+          "item": 2,
+          "quantity": 15000
+        }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        {
+          "item": 41400074,
+          "quantity": 9
+        },
+        {
+          "item": 42300050,
+          "quantity": 12
+        },
+        {
+          "item": 41100023,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 20000
+        }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        {
+          "item": 41400074,
+          "quantity": 12
+        },
+        {
+          "item": 42300050,
+          "quantity": 16
+        },
+        {
+          "item": 41100023,
+          "quantity": 8
+        },
+        {
+          "item": 2,
+          "quantity": 40000
+        }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        {
+          "item": 41400074,
+          "quantity": 16
+        },
+        {
+          "item": 42300050,
+          "quantity": 20
+        },
+        {
+          "item": 41100024,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 80000
+        }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "forte": [
+    {
+      "id": 25,
+      "cost": [
+        {
+          "item": 43020033,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "Healing Bonus+1.80%"
+    },
+    {
+      "id": 26,
+      "cost": [
+        {
+          "item": 43020033,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "HP+1.80%"
+    },
+    {
+      "id": 27,
+      "cost": [
+        {
+          "item": 43020033,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "HP+1.80%"
+    },
+    {
+      "id": 28,
+      "cost": [
+        {
+          "item": 43020033,
+          "quantity": 3
+        },
+        {
+          "item": 41100023,
+          "quantity": 3
+        },
+        {
+          "item": 2,
+          "quantity": 50000
+        }
+      ],
+      "name": "Healing Bonus+1.80%"
+    },
+    {
+      "id": 29,
+      "cost": [
+        {
+          "item": 43020034,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "Healing Bonus+4.20%"
+    },
+    {
+      "id": 30,
+      "cost": [
+        {
+          "item": 43020034,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "HP+4.20%"
+    },
+    {
+      "id": 31,
+      "cost": [
+        {
+          "item": 43020034,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "HP+4.20%"
+    },
+    {
+      "id": 32,
+      "cost": [
+        {
+          "item": 43020034,
+          "quantity": 3
+        },
+        {
+          "item": 41100024,
+          "quantity": 3
+        },
+        {
+          "item": 41400094,
+          "quantity": 1
+        },
+        {
+          "item": 2,
+          "quantity": 100000
+        }
+      ],
+      "name": "Healing Bonus+4.20%"
+    }
+  ],
+  "quote": "No, I cannot place my faith in it, but my anticipation stems precisely from this distrust. A claim is always verifiable before it is discredited entirely.",
+  "birthday": "September 10th",
+  "birthplace": "Huanglong"
+}

@@ -141,13 +141,14 @@ useSeoMeta({
             lg="2"
           >
             <v-card :to="localePath(`/echos/${element.slug}`)">
-              <v-responsive :aspect-ratio="1 / 1">
+              <v-responsive :aspect-ratio="1">
                 <v-img
-                  :src="`/echos/icons/${element.slug}.png`"
+                  :src="`/echos/icons/${element.slug}.webp`"
                   class="align-end h-100"
                   cover
                 />
               </v-responsive>
+              <v-divider />
 
               <v-card-title class="text-center">
                 {{ $t(element.name) }}

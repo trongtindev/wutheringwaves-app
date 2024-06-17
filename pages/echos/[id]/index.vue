@@ -10,20 +10,21 @@ const runtimeConfig = useRuntimeConfig();
 const echos = await resources.echos();
 const item = echos.find((e) => e.slug === route.params.id)!;
 if (!item) throw createError({ statusCode: 404 });
-
-// events
-const onPressedAddTodo = () => {
-  router.push({
-    path: '/todo-list/create/character',
-    query: {
-      name: item.name
-    }
-  });
-};
+const data = await resources.getEchoData(item.slug);
+if (!data) throw createError({ statusCode: 404 });
 
 // computed
 const nameLocalized = computed(() => {
   return i18n.t(item.name);
+});
+
+const skillDescription = computed(() => {
+  return data.skill.description;
+  // const params = [data.skill.params[0], `${data.skill.cd}`];
+  // return data.skill.description.replace(
+  //   /\{(\d+)\}/g,
+  //   (_, index) => params[index]
+  // );
 });
 
 // seo meta
@@ -32,7 +33,7 @@ const description = i18n.t('meta.echos.description', {
   name: nameLocalized.value,
   rarity: item.class
 });
-const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.png`;
+const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.webp`;
 
 useHead({ title });
 
@@ -73,55 +74,49 @@ useJsonld({
     <v-card>
       <card-title>
         <template #title>
-          {{ i18n.t(item.name) }}
+          {{ nameLocalized }}
         </template>
 
         <template #actions>
-          <contribute-button />
+          <contribute-button path="/tree/main/resources" />
         </template>
       </card-title>
 
       <v-card-text>
         <v-row>
           <v-col cols="4">
-            <v-img :src="`/echos/icons/${item.slug}.png`" :height="256" />
+            <v-img :src="`/echos/icons/${item.slug}.webp`" :height="256" />
           </v-col>
 
           <v-col>
-            {{ item }}
+            <div class="d-flex flex-wrap ga-2">
+              <v-chip :text="`${item.cost} ${$t('echos.cost')}`" />
+              <v-chip :text="$t(item.class)" />
+              <v-chip :text="$t(item.attribute)" />
+            </div>
+
+            <div class="mt-2">
+              <div :innerHTML="skillDescription"></div>
+            </div>
           </v-col>
         </v-row>
       </v-card-text>
     </v-card>
 
-    <v-row>
-      <v-col cols="12" sm="6">
-        <!-- Skill -->
-        <v-card class="mt-4">
-          <v-card-title>
-            {{ $t('common.skill') }}
-          </v-card-title>
-          <v-divider />
+    <!-- Sonata Effect -->
+    <v-card class="mt-4">
+      <v-card-title>
+        {{ $t('echos.sonataEffect') }}
+      </v-card-title>
+      <v-divider />
 
-          <v-card-text />
-        </v-card>
-      </v-col>
-
-      <v-col cols="12" sm="6">
-        <!-- Same Element Characters -->
-        <v-card class="mt-4">
-          <v-card-title>
-            {{ $t('echos.sameElementCharacters') }}
-          </v-card-title>
-          <v-divider />
-
-          <v-card-text />
-        </v-card>
-      </v-col>
-    </v-row>
+      <v-card-text>
+        {{ item.sonataEffects }}
+      </v-card-text>
+    </v-card>
 
     <div class="mt-4">
-      <comments :channel="`echos.${item.slug}`" />
+      <comments :channel="route.path" />
     </div>
   </div>
 </template>

@@ -1,3 +1,5 @@
+import type { ILocalized } from '~/interfaces/common';
+
 export type WeaponType =
   | 'Gauntlets'
   | 'Rectifier'
@@ -21,19 +23,18 @@ export interface IWeapon {
 }
 
 export interface IWeaponData {
-  description: string;
-  ranks: string[];
-  ranksLocalized?: { [key: string]: string[] };
-  ascensionsAndStats: {
-    stats: {
-      level: number;
-      baseStats: string;
-      substats: string;
+  description?: string;
+  descriptionLocalized?: ILocalized;
+  skill: {
+    params: string[];
+  };
+  ascensions: {
+    cost: {
+      item: number;
+      quantity: number;
     }[];
-    materials: {
-      amount: number;
-      name: string;
-    }[];
+    minLevel: number;
   }[];
-  recommendedCharacters: string[];
+  ranks?: string;
+  ranksLocalized?: ILocalized;
 }

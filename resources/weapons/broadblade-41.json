@@ -1,4 +1,163 @@
 {
+  "slug": "broadblade-41",
+  "skill": {
+    "params": [
+      [
+        "80%",
+        "12%",
+        "40%",
+        "5%",
+        "8",
+        "1"
+      ],
+      [
+        "80%",
+        "15%",
+        "50%",
+        "6.25%",
+        "8",
+        "1"
+      ],
+      [
+        "80%",
+        "18%",
+        "60%",
+        "7.5%",
+        "8",
+        "1"
+      ],
+      [
+        "80%",
+        "21%",
+        "70%",
+        "8.75%",
+        "8",
+        "1"
+      ],
+      [
+        "80%",
+        "24%",
+        "80%",
+        "10%",
+        "8",
+        "1"
+      ]
+    ],
+    "description": "When the Resonator's HP is above {0}, increases ATK by {1}. When the Resonator's HP is below {2}, restores their HP by {3} for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered {5} time(s) every {4}s."
+  },
+  "stats": {
+    "atk": 33,
+    "energy": 720
+  },
+  "ascensions": [
+    {
+      "cost": [
+        {
+          "item": 41100011,
+          "quantity": 5
+        },
+        {
+          "item": 2,
+          "quantity": 8000
+        }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        {
+          "item": 43020041,
+          "quantity": 5
+        },
+        {
+          "item": 41100012,
+          "quantity": 5
+        },
+        {
+          "item": 2,
+          "quantity": 16000
+        }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        {
+          "item": 43020042,
+          "quantity": 7
+        },
+        {
+          "item": 41100013,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 32000
+        }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        {
+          "item": 43020043,
+          "quantity": 5
+        },
+        {
+          "item": 41100013,
+          "quantity": 5
+        },
+        {
+          "item": 2,
+          "quantity": 48000
+        }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        {
+          "item": 43020044,
+          "quantity": 7
+        },
+        {
+          "item": 41100014,
+          "quantity": 4
+        },
+        {
+          "item": 2,
+          "quantity": 64000
+        }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        {
+          "item": 43020044,
+          "quantity": 10
+        },
+        {
+          "item": 41100014,
+          "quantity": 7
+        },
+        {
+          "item": 2,
+          "quantity": 96000
+        }
+      ],
+      "minLevel": 80
+    },
+    {
+      "cost": [
+        {
+          "item": 2,
+          "quantity": 0
+        }
+      ],
+      "minLevel": 90
+    }
+  ],
   "description": "Improved version of a mass-produced broadblade model developed in Huanglong. With its formidable performance and innovative technologies, this broadblade carries a weight only to be wielded by seasoned warriors.",
   "ranks": [
     "When the Resonator's HP is above 80%, increases ATK by 12%. When the Resonator's HP is below 40%, restores their HP by 5% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
@@ -6,72 +165,5 @@
     "When the Resonator's HP is above 80%, increases ATK by 18%. When the Resonator's HP is below 60%, restores their HP by 7.5% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
     "When the Resonator's HP is above 80%, increases ATK by 21%. When the Resonator's HP is below 70%, restores their HP by 8.75% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
     "When the Resonator's HP is above 80%, increases ATK by 24%. When the Resonator's HP is below 80%, restores their HP by 10% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s."
-  ],
-  "ascensionsAndStats": [
-    {
-      "stats": [
-        { "level": 1, "baseStats": "33", "substats": "7.2%" },
-        { "level": 20, "baseStats": "85", "substats": "12.7%" }
-      ],
-      "materials": [
-        { "amount": 8000, "name": "Shell Credit" },
-        { "amount": 5, "name": "LF Whisperin Core" }
-      ]
-    },
-    {
-      "stats": [
-        { "level": 20, "baseStats": "107", "substats": "12.7%" },
-        { "level": 40, "baseStats": "163", "substats": "18.3%" }
-      ],
-      "materials": [
-        { "amount": 16000, "name": "Shell Credit" },
-        { "amount": 5, "name": "Waveworn Residue 210" },
-        { "amount": 5, "name": "MF Whisperin Core" }
-      ]
-    },
-    {
-      "stats": [
-        { "level": 40, "baseStats": "185", "substats": "18.3%" },
-        { "level": 50, "baseStats": "213", "substats": "21.1%" }
-      ],
-      "materials": [
-        { "amount": 32000, "name": "Shell Credit" },
-        { "amount": 7, "name": "Waveworn Residue 226" },
-        { "amount": 4, "name": "HF Whisperin Core" }
-      ]
-    },
-    {
-      "stats": [
-        { "level": 50, "baseStats": "235", "substats": "21.1%" },
-        { "level": 60, "baseStats": "263", "substats": "23.9%" }
-      ],
-      "materials": [
-        { "amount": 48000, "name": "Shell Credit" },
-        { "amount": 5, "name": "Waveworn Residue 235" },
-        { "amount": 5, "name": "HF Whisperin Core" }
-      ]
-    },
-    {
-      "stats": [
-        { "level": 60, "baseStats": "285", "substats": "23.9%" },
-        { "level": 70, "baseStats": "312", "substats": "26.7%" }
-      ],
-      "materials": [
-        { "amount": 64000, "name": "Shell Credit" },
-        { "amount": 7, "name": "Waveworn Residue 239" },
-        { "amount": 4, "name": "FF Whisperin Core" }
-      ]
-    },
-    {
-      "stats": [
-        { "level": 70, "baseStats": "334", "substats": "26.7%" },
-        { "level": 80, "baseStats": "362", "substats": "29.5%" }
-      ],
-      "materials": [
-        { "amount": 96000, "name": "Shell Credit" },
-        { "amount": 10, "name": "Waveworn Residue 239" },
-        { "amount": 7, "name": "FF Whisperin Core" }
-      ]
-    }
   ]
 }

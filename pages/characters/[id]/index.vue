@@ -1,29 +1,25 @@
 <script setup lang="ts">
 import { mdiPlus, mdiCake, mdiMapMarker, mdiSword, mdiPistol } from '@mdi/js';
+import type { IItem } from '~/interfaces/item';
 
 const i18n = useI18n();
 const route = useRoute();
 const router = useRouter();
 const resources = useResources();
+const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
 
 // states
+const dictItems = ref<{ [key: number]: IItem }>({});
+
+// fetch data
+const items = await resources.getItems();
 const characters = await resources.characters();
 const item = characters.find((e) => e.slug === route.params.id);
 if (!item) throw createError({ statusCode: 404 });
 
 const data = await resources.getCharacterData(item.slug);
 if (!data) throw createError({ statusCode: 404 });
-
-// events
-const onPressedAddTodo = () => {
-  router.push({
-    path: '/todo-list/create/character',
-    query: {
-      name: item.name
-    }
-  });
-};
 
 // computed
 const weaponIcon = computed(() => {
@@ -41,13 +37,23 @@ const nameLocalized = computed(() => {
   return i18n.t(item.name);
 });
 
+// lifecycle
+onMounted(() => {
+  data.ascensions.forEach((e) => {
+    e.cost.forEach((cost) => {
+      const item = items.find((item) => item.id === cost.item);
+      if (item) dictItems.value[cost.item] = item;
+    });
+  });
+});
+
 // seo meta
 const title = `${i18n.t('Character')}: ${nameLocalized.value}`;
 const description = i18n.t('meta.characters.id.description', {
   name: nameLocalized.value,
   attribute: item.attribute
 });
-const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.png`;
+const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
 
 useHead({ title });
 
@@ -60,7 +66,7 @@ useSeoMeta({
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.png`,
+  contentUrl: `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`,
   license: `${runtimeConfig.public.SITE_URL}/license`,
   acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
   creditText: 'Wuthering Waves',
@@ -98,7 +104,7 @@ useJsonld(() => ({
         </template>
 
         <template #actions>
-          <contribute-button />
+          <contribute-button path="/tree/main/resources" />
         </template>
       </card-title>
 
@@ -106,8 +112,9 @@ useJsonld(() => ({
         <v-row>
           <v-col cols="12" md="4" class="d-flex justify-center align-center">
             <v-img
-              :src="`/characters/portraits/${item.slug}.png`"
+              :src="`/characters/portraits/${item.slug}.webp`"
               :alt="i18n.t(item.name)"
+              :height="512"
             />
           </v-col>
 
@@ -122,21 +129,14 @@ useJsonld(() => ({
               <v-chip :text="$t(item.attribute)" />
             </div>
 
-            <div class="mt-2" :innerHTML="data.description"></div>
+            <div v-if="data.quote" class="mt-2" :innerHTML="data.quote"></div>
+            <div
+              v-if="data.description"
+              class="mt-2"
+              :innerHTML="data.description"
+            ></div>
           </v-col>
         </v-row>
-      </v-card-text>
-    </v-card>
-
-    <!-- Introduction -->
-    <v-card class="mt-4">
-      <v-card-title>
-        {{ $t('characters.introduction') }}
-      </v-card-title>
-      <v-divider />
-
-      <v-card-text>
-        {{ data.quote }}
       </v-card-text>
     </v-card>
 
@@ -150,11 +150,11 @@ useJsonld(() => ({
       <v-card-text>
         <v-row>
           <v-col
+            v-for="(element, index) in data.skills"
+            :key="index"
             cols="12"
             sm="6"
             md="4"
-            v-for="(element, index) in data.skills"
-            :key="index"
           >
             <v-card class="fill-height">
               <v-sheet class="pt-2">
@@ -163,7 +163,12 @@ useJsonld(() => ({
                   :subtitle="$t(element.type)"
                 >
                   <template #prepend>
-                    <v-avatar class="border rounded"> </v-avatar>
+                    <v-avatar class="border rounded">
+                      <v-img
+                        :src="`/skills/icons/${element.slug}.webp`"
+                        :alt="element.name"
+                      />
+                    </v-avatar>
                   </template>
                 </v-list-item>
               </v-sheet>
@@ -190,10 +195,10 @@ useJsonld(() => ({
       <v-card-text>
         <v-row>
           <v-col
-            cols="12"
-            md="6"
             v-for="(element, index) in data.resonanceChain"
             :key="index"
+            cols="12"
+            md="6"
           >
             <v-card class="fill-height">
               <v-sheet class="pt-2">
@@ -202,7 +207,12 @@ useJsonld(() => ({
                   :subtitle="$t(element.idx)"
                 >
                   <template #prepend>
-                    <v-avatar class="border rounded"> </v-avatar>
+                    <v-avatar class="border rounded">
+                      <v-img
+                        :src="`/resonance_chain/icons/${element.slug}.webp`"
+                        :alt="element.name"
+                      />
+                    </v-avatar>
                   </template>
                 </v-list-item>
               </v-sheet>
@@ -211,10 +221,7 @@ useJsonld(() => ({
                 <div
                   :innerHTML="
                     element.description
-                      .replace(
-                        /\{(\d+)\}/g,
-                        (_, index) => element.params[index] || ''
-                      )
+                      .replace(/\{(\d+)\}/g, (_, j) => element.params[j] || '')
                       .replaceAll('\n', '<br/>')
                   "
                 />
@@ -226,52 +233,78 @@ useJsonld(() => ({
       </v-card-text>
     </v-card>
 
-    <v-row>
-      <v-col cols="12" sm="6">
-        <!-- Upgrade Materials -->
-        <v-card class="mt-4">
-          <v-card-title>
-            {{ $t('characters.ascensionMaterials') }}
-          </v-card-title>
-          <v-divider />
+    <!-- Ascension Material -->
+    <v-card class="mt-4">
+      <v-card-title>
+        {{ $t('common.ascensionMaterial') }}
+      </v-card-title>
+      <v-divider />
 
-          <!-- <v-list>
-            <v-list-item
-              v-for="(element, index) in data.ascensionMaterials"
-              :key="index"
-              :subtitle="`x${formatNumber(element.amount)}`"
+      <v-card-text
+        v-for="(ascension, index) in data.ascensions.filter(
+          (e) => e.cost.length > 0
+        )"
+        :key="index"
+      >
+        <v-row>
+          <v-col cols="12" sm="3" md="2">
+            <v-card
+              class="d-flex align-center justify-center text-center text-h6 fill-height pa-2"
             >
-              <template #prepend>
-                <v-avatar class="border rounded"></v-avatar>
-              </template>
+              Lv. {{ ascension.minLevel }}
+            </v-card>
+          </v-col>
 
-              <template #title>
-                <item-inspector :name="element.name" />
-              </template>
-            </v-list-item>
-          </v-list>
-          <v-divider />
+          <v-col
+            v-for="(cost, j) in ascension.cost"
+            :key="j"
+            cols="4"
+            sm="3"
+            md="2"
+          >
+            <v-card
+              :to="
+                dictItems[cost.item]
+                  ? localePath(`/items/${dictItems[cost.item].slug}`)
+                  : `/items`
+              "
+            >
+              <v-responsive :aspect-ratio="1">
+                <v-img
+                  v-if="dictItems[cost.item]"
+                  :src="`/items/icons/${dictItems[cost.item].slug}.webp`"
+                  :alt="$t(dictItems[cost.item].name)"
+                  class="align-end h-100"
+                  cover
+                />
+              </v-responsive>
+              <v-divider />
 
-          <v-card-actions class="d-flex align-center justify-end">
-            <v-btn
-              :text="$t('Add to Todo list')"
-              :append-icon="mdiPlus"
-              variant="outlined"
-              @click="onPressedAddTodo"
-            />
-          </v-card-actions> -->
-        </v-card>
-      </v-col>
+              <v-card-title class="text-center">
+                x{{ formatNumber(cost.quantity) }}
+              </v-card-title>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card-text>
+      <v-divider />
 
-      <v-col cols="12" sm="6">
-        <!-- Recommended Characters -->
-        <v-card class="mt-4">
-          <v-card-title>
-            {{ $t('Recommended Weapons') }}
-          </v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
+      <v-card-actions class="d-flex align-center justify-end">
+        <v-btn
+          :to="localePath(`/todo-list/create?type=character&slug=${item.slug}`)"
+          :text="$t('Add to Todo list')"
+          :append-icon="mdiPlus"
+          variant="outlined"
+        />
+      </v-card-actions>
+    </v-card>
+
+    <!-- Recommended Weapons -->
+    <!--    <v-card class="mt-4">-->
+    <!--      <v-card-title>-->
+    <!--        {{ $t('Recommended Weapons') }}-->
+    <!--      </v-card-title>-->
+    <!--    </v-card>-->
 
     <div class="mt-4">
       <comments :channel="route.path" />
