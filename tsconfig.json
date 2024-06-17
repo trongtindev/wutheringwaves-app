@@ -1,8 +1,14 @@
 {
   "extends": "./.nuxt/tsconfig.json",
-  "exclude": ["./scripts"],
+  "exclude": [
+    "./scripts"
+  ],
   "compilerOptions": {
-    "types": ["@pinia/nuxt", "@nuxtjs/sitemap"],
+    "types": [
+      "@pinia/nuxt",
+      "@nuxtjs/sitemap",
+      "@nuxtjs/i18n"
+    ],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "noImplicitAny": false

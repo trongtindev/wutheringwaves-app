@@ -27,8 +27,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     'nuxt-og-image',
-    '@nuxtjs/device',
-    '@nuxtjs/google-adsense'
+    '@nuxtjs/device'
   ],
   nitro: {
     storage: {
@@ -110,8 +109,7 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
       useCookie: true,
-      redirectOn: 'all',
-      alwaysRedirect: true
+      redirectOn: 'root'
     },
     locales: [
       { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
@@ -121,10 +119,6 @@ export default defineNuxtConfig({
   },
   pinia: {
     storesDirs: ['./composables/**']
-  },
-  googleAdsense: {
-    analyticsDomainName: 'wutheringwaves.app',
-    onPageLoad: true
   },
   // eslint: {
   //   checker: true
@@ -166,11 +160,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      // Adsense
-      googleAdsense: {
-        id: process.env.GOOGLE_ADSENSE_ID || 'ca-pub-8470189548892016',
-        test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true'
-      },
       // app
       SITE_URL:
         process.env.NUXT_PUBLIC_SITE_URL || 'https://wutheringwaves.app',
@@ -192,7 +181,11 @@ export default defineNuxtConfig({
         process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'wutheringwaves.app',
       // sentry
       SENTRY_DNS:
-        'https://214a17c9a4934da4031b2e8faa80e026@o4505463839850496.ingest.us.sentry.io/4507391548784640'
+        'https://214a17c9a4934da4031b2e8faa80e026@o4505463839850496.ingest.us.sentry.io/4507391548784640',
+      // Adsense
+      GOOGLE_ADSENSE_ID:
+        process.env.GOOGLE_ADSENSE_ID || 'ca-pub-8470189548892016',
+      GOOGLE_ADSENSE_TEST_MODE: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true'
     }
   }
 });

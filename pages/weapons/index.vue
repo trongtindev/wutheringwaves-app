@@ -80,37 +80,39 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </card-title>
 
       <v-card-text>
-        <v-row>
-          <v-col cols="12" md="4">
-            <v-text-field
-              v-model="filterText"
-              :label="$t('Search')"
-              :hide-details="true"
-            />
-          </v-col>
+        <client-only>
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-text-field
+                v-model="filterText"
+                :label="$t('Search')"
+                :hide-details="true"
+              />
+            </v-col>
 
-          <v-col cols="6" md="4">
-            <v-select
-              v-model="filterType"
-              :label="$t('Type')"
-              :items="['All', ...categories]"
-              :item-title="(e) => i18n.t(e)"
-              :hide-details="true"
-            />
-          </v-col>
+            <v-col cols="6" md="4">
+              <v-select
+                v-model="filterType"
+                :label="$t('Type')"
+                :items="['All', ...categories]"
+                :item-title="(e) => i18n.t(e)"
+                :hide-details="true"
+              />
+            </v-col>
 
-          <v-col cols="6" md="4">
-            <v-select
-              v-model="filterRarity"
-              :label="$t('Rarity')"
-              :items="[0, 1, 2, 3, 4, 5]"
-              :item-title="
-                (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
-              "
-              :hide-details="true"
-            />
-          </v-col>
-        </v-row>
+            <v-col cols="6" md="4">
+              <v-select
+                v-model="filterRarity"
+                :label="$t('Rarity')"
+                :items="[0, 1, 2, 3, 4, 5]"
+                :item-title="
+                  (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
+                "
+                :hide-details="true"
+              />
+            </v-col>
+          </v-row>
+        </client-only>
 
         <v-row class="mt-4">
           <v-col

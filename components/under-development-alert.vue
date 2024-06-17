@@ -17,7 +17,7 @@ onMounted(() => {});
     v-model="hidden"
     color="warning"
     class="cursor-pointer mb-4"
-    :text="$t('other.underDevelopmentMessage')"
+    :text="$t('other.underDevelopment')"
     :closable="true"
     @click="onPressedContribute"
   />

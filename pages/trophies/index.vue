@@ -73,27 +73,29 @@ useSeoMeta({
       </card-title>
 
       <v-card-text>
-        <v-row>
-          <v-col cols="12" md="4">
-            <v-text-field v-model="filterText" :label="$t('common.search')" />
-          </v-col>
+        <client-only>
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-text-field v-model="filterText" :label="$t('common.search')" />
+            </v-col>
 
-          <v-col cols="6" md="4">
-            <v-select
-              v-model="filterGroup"
-              :label="$t('common.group')"
-              :item-title="(e) => e"
-            />
-          </v-col>
+            <v-col cols="6" md="4">
+              <v-select
+                v-model="filterGroup"
+                :label="$t('common.group')"
+                :item-title="(e) => e"
+              />
+            </v-col>
 
-          <v-col cols="6" md="4">
-            <v-select
-              v-model="filterCategory"
-              :label="$t('common.category')"
-              :item-title="(e) => e"
-            />
-          </v-col>
-        </v-row>
+            <v-col cols="6" md="4">
+              <v-select
+                v-model="filterCategory"
+                :label="$t('common.category')"
+                :item-title="(e) => e"
+              />
+            </v-col>
+          </v-row>
+        </client-only>
 
         <v-row class="mt-4">
           <v-col
@@ -114,7 +116,7 @@ useSeoMeta({
               </v-responsive>
 
               <v-tooltip :text="$t(element.name)">
-                <template v-slot:activator="{ props }">
+                <template #activator="{ props }">
                   <v-card-title v-bind="props" class="text-center">
                     {{ $t(element.name) }}
                   </v-card-title>
