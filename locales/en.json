@@ -280,10 +280,10 @@
     "language": "Language",
     "items": "Items",
     "item": "Item",
-    "ascensionMaterial": "Ascension Material"
+    "ascensionMaterial": "Ascension Material",
+    "successfully": "Successfully!"
   },
   "other": {
-    "underDevelopmentTitle": "This site is under development.",
-    "underDevelopmentMessage": "This site is under development."
+    "underDevelopmentTitle": "This site is under development."
   }
 }

@@ -28,9 +28,7 @@
       "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
-      "cardGenerator": {
-        "title": "Convene Card Generator"
-      },
+      "cardGenerator": { "title": "Convene Card Generator" },
       "history": {
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       }
@@ -42,11 +40,17 @@
       "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
+      "title": "Trophies",
       "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
-    }
+    },
+    "items": {
+      "title": "Item List",
+      "description": "List of all items in Wuthering Waves, along with their descriptions and rarity."
+    },
+    "settings": { "title": "Settings" }
   },
   "sidebar": {
     "home": "Trang chủ",
@@ -61,11 +65,12 @@
     "teams": "Đội hình",
     "leaderboards": "Leaderboards",
     "codes": "Mã quà tặng",
-    "map": "Map"
+    "map": "Map",
+    "guide": "Guide",
+    "items": "Items"
   },
-  "timeline": {
-    "title": "Timeline"
-  },
+  "items": { "title": "Items" },
+  "timeline": { "title": "Timeline" },
   "convene": {
     "import": {
       "title": "Nhập lịch sử cầu nguyện",
@@ -76,9 +81,7 @@
       "guides": {},
       "faqs": {}
     },
-    "history": {
-      "title": "Lịch sử cầu nguyện"
-    },
+    "history": { "title": "Lịch sử cầu nguyện" },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",
     "lifetimePulls": "Tổng số lần",
     "pity": "Pity",
@@ -104,42 +107,25 @@
       "top": "TOP",
       "bottom": "BOTTOM"
     },
-    "globalStats": {
-      "title": "Thống kê toàn cầu"
-    },
-    "cardGenerator": {
-      "title": "Convene Card Generator"
-    }
+    "globalStats": { "title": "Thống kê toàn cầu" },
+    "cardGenerator": { "title": "Convene Card Generator" }
   },
   "characters": {
     "title": "Nhân vật",
     "introduction": "Introduction",
-    "ascensionMaterials": "Ascension Materials",
-    "resonanceChain": "Resonance Chain"
+    "resonanceChain": "Resonance Chain",
+    "skills": "Skills"
   },
-  "weapons": {
-    "title": "Vũ khí",
-    "ranks": "Ranks",
-    "ascensionsCost": "Ascensions cost"
-  },
+  "weapons": { "title": "Vũ khí", "ranks": "Ranks" },
   "tierList": {
     "title": "Tier list",
-    "create": {
-      "title": "Create new Tier list",
-      "liveVoting": "Live Voting"
-    },
+    "create": { "title": "Create new Tier list", "liveVoting": "Live Voting" },
     "liveVoting": "Live Voting",
     "save": "Save"
   },
-  "todoList": {
-    "title": "Todo list"
-  },
-  "trophies": {
-    "title": "Thành tựu"
-  },
-  "teams": {
-    "title": "Đội hình"
-  },
+  "todoList": { "title": "Todo list" },
+  "trophies": { "title": "Thành tựu" },
+  "teams": { "title": "Đội hình" },
   "echos": {
     "title": "Echos",
     "cost": "Cost",
@@ -176,22 +162,19 @@
       "autoImportConveneHistory": "Auto import convene history",
       "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh."
     },
-    "backup": {
-      "title": "Sao lưu dữ liệu"
-    },
+    "backup": { "title": "Sao lưu dữ liệu" },
     "notification": {
       "title": "Notification",
-      "enabled": "Enabled"
+      "enabled": "Enabled",
+      "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
+      "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
     }
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
     "policy": "comments.policy"
   },
-  "dialog": {
-    "close": "Đóng",
-    "confirm": "Xác nhận"
-  },
+  "dialog": { "close": "Đóng", "confirm": "Xác nhận" },
   "backup": {
     "conflictTitle": "Cần hành động",
     "conflictMessage": "Dữ liệu cục bộ của bạn trong trình duyệt này xung đột với dữ liệu được lưu trữ trên đám mây!",
@@ -211,16 +194,9 @@
     "newAccountDetected": "Đã phát hiện tài khoản mới",
     "successfullySwitched": "Successfully switch to {0}"
   },
-  "leaderboards": {
-    "title": "Leaderboards"
-  },
-  "codes": {
-    "title": "Wuthering Waves Codes",
-    "expired": "Đã hết hạn"
-  },
-  "map": {
-    "title": "Interactive Map"
-  },
+  "leaderboards": { "title": "Leaderboards" },
+  "codes": { "title": "Wuthering Waves Codes", "expired": "Đã hết hạn" },
+  "map": { "title": "Interactive Map" },
   "common": {
     "name": "Tên",
     "time": "Thời gian",
@@ -263,10 +239,11 @@
     "copied": "Đã sao chép",
     "notEnoughData": "Không đủ dữ liệu!",
     "download": "Tải xuống",
-    "language": "Ngôn ngữ"
+    "language": "Ngôn ngữ",
+    "items": "Items",
+    "item": "Item",
+    "ascensionMaterial": "Ascension Material",
+    "successfully": "Successfully!"
   },
-  "other": {
-    "underDevelopmentTitle": "Trang này vẫn đang được phát triển.",
-    "underDevelopmentMessage": "This site is under development."
-  }
+  "other": { "underDevelopmentTitle": "Trang này vẫn đang được phát triển." }
 }
