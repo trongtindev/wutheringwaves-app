@@ -1,1 +1,15 @@
-{"slug":"glacio-predator","skill":{"id":200014,"cd":8,"params":[["28.80%","2.88%","14.40%","8"],["33.12%","3.31%","16.56%","8"],["37.44%","3.74%","18.72%","8"],["41.76%","4.18%","20.88%","8"],["46.08%","4.61%","23.04%","8"]],"description":"Summon a Glacio Predator that throws an ice spear, dealing {0} Glacio DMG on hit. Deal {1} Glacio DMG up to 10 times during the charging time, and {2} Glacio DMG when the spear explodes.\n\nCD: {3}s"}}
+{
+  "slug": "glacio-predator",
+  "skill": {
+    "id": 200014,
+    "cd": 8,
+    "params": [
+      ["28.80%", "2.88%", "14.40%", "8"],
+      ["33.12%", "3.31%", "16.56%", "8"],
+      ["37.44%", "3.74%", "18.72%", "8"],
+      ["41.76%", "4.18%", "20.88%", "8"],
+      ["46.08%", "4.61%", "23.04%", "8"]
+    ],
+    "description": "Summon a Glacio Predator that throws an ice spear, dealing {0} Glacio DMG on hit. Deal {1} Glacio DMG up to 10 times during the charging time, and {2} Glacio DMG when the spear explodes.\n\nCD: {3}s"
+  }
+}

@@ -1,1 +1,15 @@
-{"slug":"fusion-warrior","skill":{"id":200012,"cd":15,"params":[["70.00%","180.00%","15"],["70.00%","207.00%","15"],["70.00%","234.00%","15"],["70.00%","261.00%","15"],["70.00%","288.00%","15"]],"description":"Transform into Fusion Warrior to perform a Counterattack. If the Counterattack is successful, the cooldown time of this skill will be reduced by {0}, and {1} Fusion DMG will be dealt.\n\nCD: {2}s"}}
+{
+  "slug": "fusion-warrior",
+  "skill": {
+    "id": 200012,
+    "cd": 15,
+    "params": [
+      ["70.00%", "180.00%", "15"],
+      ["70.00%", "207.00%", "15"],
+      ["70.00%", "234.00%", "15"],
+      ["70.00%", "261.00%", "15"],
+      ["70.00%", "288.00%", "15"]
+    ],
+    "description": "Transform into Fusion Warrior to perform a Counterattack. If the Counterattack is successful, the cooldown time of this skill will be reduced by {0}, and {1} Fusion DMG will be dealt.\n\nCD: {2}s"
+  }
+}

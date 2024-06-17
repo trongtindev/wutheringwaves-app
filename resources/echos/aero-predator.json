@@ -1,1 +1,15 @@
-{"slug":"aero-predator","skill":{"id":200016,"cd":8,"params":[["18.00%","8"],["20.70%","8"],["23.40%","8"],["26.10%","8"],["28.80%","8"]],"description":"Summon an Aero Predator that throws a dart forward. The dart will bounce between enemies up to three times, dealing {0} Aero DMG each time it hits.\n\nCD: {1}s"}}
+{
+  "slug": "aero-predator",
+  "skill": {
+    "id": 200016,
+    "cd": 8,
+    "params": [
+      ["18.00%", "8"],
+      ["20.70%", "8"],
+      ["23.40%", "8"],
+      ["26.10%", "8"],
+      ["28.80%", "8"]
+    ],
+    "description": "Summon an Aero Predator that throws a dart forward. The dart will bounce between enemies up to three times, dealing {0} Aero DMG each time it hits.\n\nCD: {1}s"
+  }
+}

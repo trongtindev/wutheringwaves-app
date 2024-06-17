@@ -1,1 +1,15 @@
-{"slug":"vanguard-junrock","skill":{"id":200002,"cd":8,"params":[["20.00%+40","8"],["23.00%+46","8"],["26.00%+52","8"],["29.00%+58","8"],["32.00%+64","8"]],"description":"Summon a Vanguard Junrock that charges forward, dealing {0} Physical DMG to enemies in its path.\r\n\r\nCD: {1}s"}}
+{
+  "slug": "vanguard-junrock",
+  "skill": {
+    "id": 200002,
+    "cd": 8,
+    "params": [
+      ["20.00%+40", "8"],
+      ["23.00%+46", "8"],
+      ["26.00%+52", "8"],
+      ["29.00%+58", "8"],
+      ["32.00%+64", "8"]
+    ],
+    "description": "Summon a Vanguard Junrock that charges forward, dealing {0} Physical DMG to enemies in its path.\r\n\r\nCD: {1}s"
+  }
+}

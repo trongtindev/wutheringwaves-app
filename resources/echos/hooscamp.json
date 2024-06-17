@@ -1,1 +1,15 @@
-{"slug":"hooscamp","skill":{"id":200045,"cd":8,"params":[["30.00%+60","8"],["34.50%+69","8"],["39.00%+78","8"],["43.50%+87","8"],["48.00%+96","8"]],"description":"Transform into Hooscamp Flinger and pounce at the enemies, dealing {0} Aero DMG.\n\nCD: {1}s"}}
+{
+  "slug": "hooscamp",
+  "skill": {
+    "id": 200045,
+    "cd": 8,
+    "params": [
+      ["30.00%+60", "8"],
+      ["34.50%+69", "8"],
+      ["39.00%+78", "8"],
+      ["43.50%+87", "8"],
+      ["48.00%+96", "8"]
+    ],
+    "description": "Transform into Hooscamp Flinger and pounce at the enemies, dealing {0} Aero DMG.\n\nCD: {1}s"
+  }
+}

@@ -15,11 +15,9 @@ export type WeaponAcquisitionMethod =
 export interface IWeapon {
   slug: string;
   name: string;
-  nameLocalized: { [key: string]: string };
+  nameLocalized?: ILocalized;
   type: WeaponType;
   rarity: number;
-  subStats: string;
-  acquisitionMethod: WeaponAcquisitionMethod;
 }
 
 export interface IWeaponData {

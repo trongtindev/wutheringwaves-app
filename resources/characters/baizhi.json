@@ -62,63 +62,42 @@
       "idx": "Resonance 1-4",
       "slug": "complex-simplicity",
       "name": "Complex Simplicity",
-      "params": [
-        "1",
-        "2.5"
-      ],
+      "params": ["1", "2.5"],
       "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> additionally restores {1} Resonance Energy for every {0} \"Concentration\" consumed."
     },
     {
       "idx": "Resonance II-IV",
       "slug": "silent-tundra",
       "name": "Silent Tundra",
-      "params": [
-        "4",
-        "15%",
-        "15%",
-        "12"
-      ],
+      "params": ["4", "15%", "15%", "12"],
       "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Emergency Plan</strong> increases Baizhi's Glacio DMG Bonus by {1} and her Healing by {2} if she has {0} \"Concentration\". These effects last for {3}s."
     },
     {
       "idx": "Resonance III-4",
       "slug": "veritas-lux-mea",
       "name": "Veritas Lux Mea",
-      "params": [
-        "12%",
-        "10"
-      ],
+      "params": ["12%", "10"],
       "description": "Intro Skill <strong style=\"color: var(--color-highlight);\">Overflowing Frost</strong> increases Baizhi's Max HP by {0} for {1}s."
     },
     {
       "idx": "Resonance IV-4",
       "slug": "eternal-verity",
       "name": "Eternal Verity",
-      "params": [
-        "2",
-        "20%",
-        "1.20%"
-      ],
+      "params": ["2", "20%", "1.20%"],
       "description": "Upon casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Momentary Union</strong>, Resonance Liberation <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> gains the following enhancements:\r\n-<strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> can be performed {0} more time(s);\r\n-Healing multiplier of <strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> is increased by {1};\r\n-<strong style=\"color: var(--color-highlight);\">Remnant Entities</strong> deals additional Glacio DMG equal to {2} of Baizhi's Max HP."
     },
     {
       "idx": "Resonance V-IV",
       "slug": "a-wish-answered",
       "name": "A Wish Answered",
-      "params": [
-        "100%",
-        "10"
-      ],
+      "params": ["100%", "10"],
       "description": "If a team member is downed when Baizhi is alive on the team, immediately revive them and restore their HP to {0} of their Max HP. This effect can be triggered once every {1} minute(s)."
     },
     {
       "idx": "Resonance VI-IV",
       "slug": "seeker-s-devotion",
       "name": "Seeker's Devotion",
-      "params": [
-        "12%",
-        "20"
-      ],
+      "params": ["12%", "20"],
       "description": "When <strong style=\"color: var(--color-highlight);\">Euphonia</strong> is picked up, increase the Glacio DMG Bonus of all characters nearby by {0} for {1}s."
     }
   ],

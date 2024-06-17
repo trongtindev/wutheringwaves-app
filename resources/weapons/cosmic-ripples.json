@@ -1,1 +1,72 @@
-{"slug":"cosmic-ripples","skill":{"params":[["12.8%","3.2%","5","8","0.5","1"],["16%","4%","5","8","0.5","1"],["19.2%","4.8%","5","8","0.5","1"],["22.4%","5.6%","5","8","0.5","1"],["25.6%","6.4%","5","8","0.5","1"]],"description":"Increases Energy Regen by {0}. When hitting a target with Basic Attacks, increases Basic Attack DMG Bonus by {1}, stacking up to {2} time(s). This effect lasts for {3}s and can be triggered {5} time(s) every {4}s."},"stats":{"atk":40},"ascensions":[{"cost":[{"item":41100031,"quantity":6},{"item":2,"quantity":10000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":6},{"item":41100032,"quantity":6},{"item":2,"quantity":20000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":8},{"item":41100033,"quantity":4},{"item":2,"quantity":40000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":6},{"item":41100033,"quantity":6},{"item":2,"quantity":60000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":8},{"item":41100034,"quantity":4},{"item":2,"quantity":80000}],"minLevel":70},{"cost":[{"item":43020034,"quantity":12},{"item":41100034,"quantity":8},{"item":2,"quantity":120000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"Designed after ginkgo leaves, this rectifier generates smooth and stable waveforms, making it reliable for a wide range of combat situations.","ranks":["Energy Regen is increased by 12.8%. When Basic Attack hits a target, Basic Attack Damage is increased by 3.2%. This effect can stack up to 5 times and last for 8s.","Energy Regen is increased by 16%. When Basic Attack hits a target, Basic Attack Damage is increased by 4%. This effect can stack up to 5 times and last for 8s.","Energy Regen is increased by 19.2%. When Basic Attack hits a target, Basic Attack Damage is increased by 4.8%. This effect can stack up to 5 times and last for 8s.","Energy Regen is increased by 22.4%. When Basic Attack hits a target, Basic Attack Damage is increased by 5.6%. This effect can stack up to 5 times and last for 8s.","Energy Regen is increased by 25.6%. When Basic Attack hits a target, Basic Attack Damage is increased by 6.4%. This effect can stack up to 5 times and last for 8s."]}
+{
+  "slug": "cosmic-ripples",
+  "skill": {
+    "params": [
+      ["12.8%", "3.2%", "5", "8", "0.5", "1"],
+      ["16%", "4%", "5", "8", "0.5", "1"],
+      ["19.2%", "4.8%", "5", "8", "0.5", "1"],
+      ["22.4%", "5.6%", "5", "8", "0.5", "1"],
+      ["25.6%", "6.4%", "5", "8", "0.5", "1"]
+    ],
+    "description": "Increases Energy Regen by {0}. When hitting a target with Basic Attacks, increases Basic Attack DMG Bonus by {1}, stacking up to {2} time(s). This effect lasts for {3}s and can be triggered {5} time(s) every {4}s."
+  },
+  "stats": { "atk": 40 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 6 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 6 },
+        { "item": 41100032, "quantity": 6 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 8 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 6 },
+        { "item": 41100033, "quantity": 6 },
+        { "item": 2, "quantity": 60000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 8 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 12 },
+        { "item": 41100034, "quantity": 8 },
+        { "item": 2, "quantity": 120000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "Designed after ginkgo leaves, this rectifier generates smooth and stable waveforms, making it reliable for a wide range of combat situations.",
+  "ranks": [
+    "Energy Regen is increased by 12.8%. When Basic Attack hits a target, Basic Attack Damage is increased by 3.2%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 16%. When Basic Attack hits a target, Basic Attack Damage is increased by 4%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 19.2%. When Basic Attack hits a target, Basic Attack Damage is increased by 4.8%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 22.4%. When Basic Attack hits a target, Basic Attack Damage is increased by 5.6%. This effect can stack up to 5 times and last for 8s.",
+    "Energy Regen is increased by 25.6%. When Basic Attack hits a target, Basic Attack Damage is increased by 6.4%. This effect can stack up to 5 times and last for 8s."
+  ]
+}

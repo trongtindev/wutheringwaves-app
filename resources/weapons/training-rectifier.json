@@ -1,1 +1,57 @@
-{"slug":"training-rectifier","skill":{"params":[["4%"],["5%"],["6%"],["7%"],["8%"]],"description":"Increases ATK by {0}."},"stats":{"atk":20},"ascensions":[{"cost":[{"item":41100031,"quantity":2},{"item":2,"quantity":2000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":2},{"item":41100032,"quantity":2},{"item":2,"quantity":4000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":2},{"item":41100033,"quantity":1},{"item":2,"quantity":8000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":2},{"item":41100033,"quantity":2},{"item":2,"quantity":12000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":2},{"item":41100034,"quantity":1},{"item":2,"quantity":16000}],"minLevel":70}],"description":"This rectifier is designed specifically for training and teaching, offering only the basic features.","ranks":["Increases ATK by 4%.","Increases ATK by 5%.","Increases ATK by 6%.","Increases ATK by 7%.","Increases ATK by 8%."]}
+{
+  "slug": "training-rectifier",
+  "skill": {
+    "params": [["4%"], ["5%"], ["6%"], ["7%"], ["8%"]],
+    "description": "Increases ATK by {0}."
+  },
+  "stats": { "atk": 20 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 2 },
+        { "item": 2, "quantity": 2000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 2 },
+        { "item": 41100032, "quantity": 2 },
+        { "item": 2, "quantity": 4000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 2 },
+        { "item": 41100033, "quantity": 1 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 2 },
+        { "item": 41100033, "quantity": 2 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 2 },
+        { "item": 41100034, "quantity": 1 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 70
+    }
+  ],
+  "description": "This rectifier is designed specifically for training and teaching, offering only the basic features.",
+  "ranks": [
+    "Increases ATK by 4%.",
+    "Increases ATK by 5%.",
+    "Increases ATK by 6%.",
+    "Increases ATK by 7%.",
+    "Increases ATK by 8%."
+  ]
+}

@@ -1,1 +1,72 @@
-{"slug":"scale-slasher","skill":{"params":[["8","20","1"],["10","20","1"],["12","20","1"],["14","20","1"],["16","20","1"]],"description":"When Resonance Skill is released, restores Concerto Energy by {0}. This effect can be triggered {2} times every {1}s."},"stats":{"atk":27,"energy":1152},"ascensions":[{"cost":[{"item":41100021,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020011,"quantity":5},{"item":41100022,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020012,"quantity":7},{"item":41100023,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020013,"quantity":5},{"item":41100023,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020014,"quantity":7},{"item":41100024,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020014,"quantity":10},{"item":41100024,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"An ascending crescendo. This enchanting sword effortlessly cuts through anything in its way, like a glorious prelude.","ranks":["When Resonance Skill is released, restores Concerto Energy by 8. This effect can be triggered 1 times every 20s.","When Resonance Skill is released, restores Concerto Energy by 10. This effect can be triggered 1 times every 20s.","When Resonance Skill is released, restores Concerto Energy by 12. This effect can be triggered 1 times every 20s.","When Resonance Skill is released, restores Concerto Energy by 14. This effect can be triggered 1 times every 20s.","When Resonance Skill is released, restores Concerto Energy by 16. This effect can be triggered 1 times every 20s."]}
+{
+  "slug": "scale-slasher",
+  "skill": {
+    "params": [
+      ["8", "20", "1"],
+      ["10", "20", "1"],
+      ["12", "20", "1"],
+      ["14", "20", "1"],
+      ["16", "20", "1"]
+    ],
+    "description": "When Resonance Skill is released, restores Concerto Energy by {0}. This effect can be triggered {2} times every {1}s."
+  },
+  "stats": { "atk": 27, "energy": 1152 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "An ascending crescendo. This enchanting sword effortlessly cuts through anything in its way, like a glorious prelude.",
+  "ranks": [
+    "When Resonance Skill is released, restores Concerto Energy by 8. This effect can be triggered 1 times every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 10. This effect can be triggered 1 times every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 12. This effect can be triggered 1 times every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 14. This effect can be triggered 1 times every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 16. This effect can be triggered 1 times every 20s."
+  ]
+}

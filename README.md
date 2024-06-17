@@ -9,16 +9,16 @@ In-development site for Wuthering Waves.
 ## Roadmap
 
 | Features                          | Description                          | Status      |
-|-----------------------------------|--------------------------------------|-------------|
-| Convene history                   | ...                                  | ✅           |
+| --------------------------------- | ------------------------------------ | ----------- |
+| Convene history                   | ...                                  | ✅          |
 | Convene history > Share card      | ...                                  | In progress |
 | Convene global stats              | ...                                  | In progress |
-| Cloud backup                      | ...                                  | ✅           |
+| Cloud backup                      | ...                                  | ✅          |
 | Database > Characters             | ...                                  | In progress |
 | Database > Weapons                | ...                                  | In progress |
 | Database > Echos                  | ...                                  | In progress |
 | Database > Achievements           | ...                                  | None        |
-| Accounts > Multiple               | Support multiple accounts            | ✅           |
+| Accounts > Multiple               | Support multiple accounts            | ✅          |
 | Tier list                         | ...                                  | In progress |
 | Tier list > Creator               | ...                                  | In progress |
 | Tier list > Creator > Live voting | Create tier list and realtime voting | None        |
@@ -29,9 +29,9 @@ In-development site for Wuthering Waves.
 | Profile > Share card              | Upload profile via screenshot        | None        |
 | Profile > Echo                    | Upload profile via screenshot        | None        |
 | Profile > Character               | Upload profile via screenshot        | None        |
-| Codes                             | Giftcode page                        | ✅           |
+| Codes                             | Giftcode page                        | ✅          |
 | Interactive map                   | ...                                  | None        |
-| Trophies                          | ...                                  | ✅           |
+| Trophies                          | ...                                  | ✅          |
 | Functions > Global search         | Search any thing                     | None        |
 | Functions > Notifications         | Web push notification functions      | None        |
 
@@ -50,11 +50,12 @@ src/locales
 ### Available Languages
 
 | Filename | Language Name |
-|----------|---------------|
+| -------- | ------------- |
 | en.json  | English       |
 | vi.json  | Vietnamese    |
 
 ## Development
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 If you're interested in the API, it's

@@ -1,5 +1,5 @@
 :root {
-  --rarity-opacity : 0.5;
+  --rarity-opacity: 0.5;
   --color-background-rarity5: rgb(255 177 63 / var(--rarity-opacity));
   --color-background-rarity4: rgb(210 143 214 / var(--rarity-opacity));
   --color-background-rarity3: rgb(66 153 225 / var(--rarity-opacity));

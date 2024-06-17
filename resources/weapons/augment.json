@@ -1,1 +1,72 @@
-{"slug":"augment","skill":{"params":[["15%","15"],["23.25%","15"],["31.5%","15"],["39.75%","15"],["48%","15"]],"description":"When Resonance Liberation is released, increases the caster's ATK by {0}, lasting for {1}s."},"stats":{"atk":33,"critRate":450},"ascensions":[{"cost":[{"item":41100031,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":5},{"item":41100032,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":7},{"item":41100033,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":5},{"item":41100033,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":7},{"item":41100034,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020034,"quantity":10},{"item":41100034,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"This Rectifier is a ceremonial weapon used by the Jinzhou Magistrate of Huanglong at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left alone in the world, it is still prosperous and long-lasting.","ranks":["When Resonance Liberation is released, increases the caster's Atk by 15%, lasting for 15s.","When Resonance Liberation is released, increases the caster's Atk by 23.25%, lasting for 15s.","When Resonance Liberation is released, increases the caster's Atk by 31.5%, lasting for 15s.","When Resonance Liberation is released, increases the caster's Atk by 39.75%, lasting for 15s.","When Resonance Liberation is released, increases the caster's Atk by 48%, lasting for 15s."]}
+{
+  "slug": "augment",
+  "skill": {
+    "params": [
+      ["15%", "15"],
+      ["23.25%", "15"],
+      ["31.5%", "15"],
+      ["39.75%", "15"],
+      ["48%", "15"]
+    ],
+    "description": "When Resonance Liberation is released, increases the caster's ATK by {0}, lasting for {1}s."
+  },
+  "stats": { "atk": 33, "critRate": 450 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "This Rectifier is a ceremonial weapon used by the Jinzhou Magistrate of Huanglong at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left alone in the world, it is still prosperous and long-lasting.",
+  "ranks": [
+    "When Resonance Liberation is released, increases the caster's Atk by 15%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 23.25%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 31.5%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 39.75%, lasting for 15s.",
+    "When Resonance Liberation is released, increases the caster's Atk by 48%, lasting for 15s."
+  ]
+}

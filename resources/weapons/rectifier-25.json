@@ -1,1 +1,72 @@
-{"slug":"rectifier-25","skill":{"params":[["60%","5%","8","1","60%","12%","10"],["60%","6.25%","8","1","60%","15%","10"],["60%","7.5%","8","1","60%","18%","10"],["60%","8.75%","8","1","60%","21%","10"],["60%","10%","8","1","60%","24%","10"]],"description":"When Resonance Skill is released, if the Resonator's HP is below {0}, restores their HP by {1}. This effect can be triggered {3} time(s) every {2}s; if the Resonator's HP is above {4}, increases ATK by {5}, lasting for {6}s."},"stats":{"atk":27,"energy":1152},"ascensions":[{"cost":[{"item":41100031,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":5},{"item":41100032,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":7},{"item":41100033,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":5},{"item":41100033,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":7},{"item":41100034,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020034,"quantity":10},{"item":41100034,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"Improved version of a Rectifier prototype from the Huanglong next-gen mass production weaponry project. With surging power and highly purified lens, its sound is only played by the wise of steel-like will.","ranks":["When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 5%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 12%, lasting for 10s.Materials Needed","When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 6.25%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 15%, lasting for 10s.Materials Needed","When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 7.5%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 18%, lasting for 10s.Materials Needed","When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 8.75%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 21%, lasting for 10s.Materials Needed","When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 10%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 24%, lasting for 10s.Materials Needed"]}
+{
+  "slug": "rectifier-25",
+  "skill": {
+    "params": [
+      ["60%", "5%", "8", "1", "60%", "12%", "10"],
+      ["60%", "6.25%", "8", "1", "60%", "15%", "10"],
+      ["60%", "7.5%", "8", "1", "60%", "18%", "10"],
+      ["60%", "8.75%", "8", "1", "60%", "21%", "10"],
+      ["60%", "10%", "8", "1", "60%", "24%", "10"]
+    ],
+    "description": "When Resonance Skill is released, if the Resonator's HP is below {0}, restores their HP by {1}. This effect can be triggered {3} time(s) every {2}s; if the Resonator's HP is above {4}, increases ATK by {5}, lasting for {6}s."
+  },
+  "stats": { "atk": 27, "energy": 1152 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "Improved version of a Rectifier prototype from the Huanglong next-gen mass production weaponry project. With surging power and highly purified lens, its sound is only played by the wise of steel-like will.",
+  "ranks": [
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 5%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 12%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 6.25%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 15%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 7.5%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 18%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 8.75%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 21%, lasting for 10s.Materials Needed",
+    "When Resonance Skill is released, if Resonator's HP is below 60%, restores their HP by 10%. This effect an be triggered 1 time(s) every 8s; if Resonator's HP is above 60%, increases ATK by 24%, lasting for 10s.Materials Needed"
+  ]
+}

@@ -1,1 +1,72 @@
-{"slug":"abyss-surges","skill":{"params":[["12.8%","10%","8","10%","8"],["16%","12.5%","8","12.5%","8"],["19.2%","15%","8","15%","8"],["22.4%","17.5%","8","17.5%","8"],["25.6%","20%","8","20%","8"]],"description":"Increases Energy Regen by {0}. When hitting a target with Resonance Skill, increases Basic Attack DMG Bonus by {1}, lasting for {2}s. When hitting a target with Basic Attacks, increases Resonance Skill DMG Bonus by {3}, lasting for {4}s."},"stats":{"atk":47},"ascensions":[{"cost":[{"item":41100021,"quantity":6},{"item":2,"quantity":10000}],"minLevel":20},{"cost":[{"item":43020051,"quantity":6},{"item":41100022,"quantity":6},{"item":2,"quantity":20000}],"minLevel":40},{"cost":[{"item":43020052,"quantity":8},{"item":41100023,"quantity":4},{"item":2,"quantity":40000}],"minLevel":50},{"cost":[{"item":43020053,"quantity":6},{"item":41100023,"quantity":6},{"item":2,"quantity":60000}],"minLevel":60},{"cost":[{"item":43020054,"quantity":8},{"item":41100024,"quantity":4},{"item":2,"quantity":80000}],"minLevel":70},{"cost":[{"item":43020054,"quantity":12},{"item":41100024,"quantity":8},{"item":2,"quantity":120000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"Designed after ginkgo leaves, these gauntlets are sturdy and unadorned. Made from durable material, they offer exceptional protection while dealing significant damage, making them a formidable weapon that excels in defense and offense.","ranks":["Energy Regen is increased by 12.8%. When Resonance Skill hits a target, Basic Attack Damage is increased by 10% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 10% lasting for 8s.","Energy Regen is increased by 16%. When Resonance Skill hits a target, Basic Attack Damage is increased by 12.5% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 12.5% lasting for 8s.","Energy Regen is increased by 19.2%. When Resonance Skill hits a target, Basic Attack Damage is increased by 15% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 15% lasting for 8s.","Energy Regen is increased by 22.4%. When Resonance Skill hits a target, Basic Attack Damage is increased by 17.5% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 17.5% lasting for 8s.","Energy Regen is increased by 25.6%. When Resonance Skill hits a target, Basic Attack Damage is increased by 20% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 20% lasting for 8s."]}
+{
+  "slug": "abyss-surges",
+  "skill": {
+    "params": [
+      ["12.8%", "10%", "8", "10%", "8"],
+      ["16%", "12.5%", "8", "12.5%", "8"],
+      ["19.2%", "15%", "8", "15%", "8"],
+      ["22.4%", "17.5%", "8", "17.5%", "8"],
+      ["25.6%", "20%", "8", "20%", "8"]
+    ],
+    "description": "Increases Energy Regen by {0}. When hitting a target with Resonance Skill, increases Basic Attack DMG Bonus by {1}, lasting for {2}s. When hitting a target with Basic Attacks, increases Resonance Skill DMG Bonus by {3}, lasting for {4}s."
+  },
+  "stats": { "atk": 47 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 6 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020051, "quantity": 6 },
+        { "item": 41100022, "quantity": 6 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020052, "quantity": 8 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020053, "quantity": 6 },
+        { "item": 41100023, "quantity": 6 },
+        { "item": 2, "quantity": 60000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 8 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 12 },
+        { "item": 41100024, "quantity": 8 },
+        { "item": 2, "quantity": 120000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "Designed after ginkgo leaves, these gauntlets are sturdy and unadorned. Made from durable material, they offer exceptional protection while dealing significant damage, making them a formidable weapon that excels in defense and offense.",
+  "ranks": [
+    "Energy Regen is increased by 12.8%. When Resonance Skill hits a target, Basic Attack Damage is increased by 10% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 10% lasting for 8s.",
+    "Energy Regen is increased by 16%. When Resonance Skill hits a target, Basic Attack Damage is increased by 12.5% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 12.5% lasting for 8s.",
+    "Energy Regen is increased by 19.2%. When Resonance Skill hits a target, Basic Attack Damage is increased by 15% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 15% lasting for 8s.",
+    "Energy Regen is increased by 22.4%. When Resonance Skill hits a target, Basic Attack Damage is increased by 17.5% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 17.5% lasting for 8s.",
+    "Energy Regen is increased by 25.6%. When Resonance Skill hits a target, Basic Attack Damage is increased by 20% lasting for 8s. when Basic Attack hits a target, Resonance Skill Damage is increased by 20% lasting for 8s."
+  ]
+}

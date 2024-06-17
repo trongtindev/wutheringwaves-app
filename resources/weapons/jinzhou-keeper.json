@@ -1,1 +1,72 @@
-{"slug":"jinzhou-keeper","skill":{"params":[["8%","10%","15"],["10%","12.5%","15"],["12%","15%","15"],["14%","17.5%","15"],["16%","20%","15"]],"description":"When Intro Skill is released, increases the caster's ATK by {0} and HP by {1}, lasting for {2}s."},"stats":{"atk":31},"ascensions":[{"cost":[{"item":41100031,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":5},{"item":41100032,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":7},{"item":41100033,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":5},{"item":41100033,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":7},{"item":41100034,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020034,"quantity":10},{"item":41100034,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"A weapon designed to commemorate the Midnight Rangers' vigilant protection for Jinzhou. \"Cast your gaze towards the north, where the city's silhouette fades, its gates veiled by the tranquil rain.\"","ranks":["When Intro Skill is released, increases the caster's ATK by 8% and HP by 10%, lasting for 15s.","When Intro Skill is released, increases the caster's ATK by 10% and HP by 12.5%, lasting for 15s.","When Intro Skill is released, increases the caster's ATK by 12% and HP by 15%, lasting for 15s.","When Intro Skill is released, increases the caster's ATK by 14% and HP by 17.5%, lasting for 15s.","When Intro Skill is released, increases the caster's ATK by 16% and HP by 20%, lasting for 15s."]}
+{
+  "slug": "jinzhou-keeper",
+  "skill": {
+    "params": [
+      ["8%", "10%", "15"],
+      ["10%", "12.5%", "15"],
+      ["12%", "15%", "15"],
+      ["14%", "17.5%", "15"],
+      ["16%", "20%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases the caster's ATK by {0} and HP by {1}, lasting for {2}s."
+  },
+  "stats": { "atk": 31 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "A weapon designed to commemorate the Midnight Rangers' vigilant protection for Jinzhou. \"Cast your gaze towards the north, where the city's silhouette fades, its gates veiled by the tranquil rain.\"",
+  "ranks": [
+    "When Intro Skill is released, increases the caster's ATK by 8% and HP by 10%, lasting for 15s.",
+    "When Intro Skill is released, increases the caster's ATK by 10% and HP by 12.5%, lasting for 15s.",
+    "When Intro Skill is released, increases the caster's ATK by 12% and HP by 15%, lasting for 15s.",
+    "When Intro Skill is released, increases the caster's ATK by 14% and HP by 17.5%, lasting for 15s.",
+    "When Intro Skill is released, increases the caster's ATK by 16% and HP by 20%, lasting for 15s."
+  ]
+}

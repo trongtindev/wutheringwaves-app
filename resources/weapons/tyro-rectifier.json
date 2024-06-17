@@ -1,1 +1,57 @@
-{"slug":"tyro-rectifier","skill":{"params":[["5%"],["6.25%"],["7.5%"],["8.75%"],["10%"]],"description":"Increases ATK by {0}."},"stats":{"atk":22},"ascensions":[{"cost":[{"item":41100031,"quantity":3},{"item":2,"quantity":4000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":3},{"item":41100032,"quantity":3},{"item":2,"quantity":8000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":4},{"item":41100033,"quantity":2},{"item":2,"quantity":16000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":3},{"item":41100033,"quantity":3},{"item":2,"quantity":24000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":4},{"item":41100034,"quantity":2},{"item":2,"quantity":32000}],"minLevel":70}],"description":"The origin of universal genesis. A Rectifier designed for novice Resonators. Contains a power not to be underestimated under its simple outlook.","ranks":["Increases ATK by 5%.","Increases ATK by 6.25%.","Increases ATK by 7.5%.","Increases ATK by 8.75%.","Increases ATK by 10%."]}
+{
+  "slug": "tyro-rectifier",
+  "skill": {
+    "params": [["5%"], ["6.25%"], ["7.5%"], ["8.75%"], ["10%"]],
+    "description": "Increases ATK by {0}."
+  },
+  "stats": { "atk": 22 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 3 },
+        { "item": 2, "quantity": 4000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 3 },
+        { "item": 41100032, "quantity": 3 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 4 },
+        { "item": 41100033, "quantity": 2 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 4 },
+        { "item": 41100034, "quantity": 2 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 70
+    }
+  ],
+  "description": "The origin of universal genesis. A Rectifier designed for novice Resonators. Contains a power not to be underestimated under its simple outlook.",
+  "ranks": [
+    "Increases ATK by 5%.",
+    "Increases ATK by 6.25%.",
+    "Increases ATK by 7.5%.",
+    "Increases ATK by 8.75%.",
+    "Increases ATK by 10%."
+  ]
+}

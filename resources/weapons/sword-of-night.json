@@ -1,1 +1,72 @@
-{"slug":"sword-of-night","skill":{"params":[["8%","10"],["10%","10"],["12%","10"],["14%","10"],["16%","10"]],"description":"When Intro Skill is released, increases ATK by {0}, lasting for {1}s."},"stats":{"atk":26},"ascensions":[{"cost":[{"item":41100021,"quantity":4},{"item":2,"quantity":6000}],"minLevel":20},{"cost":[{"item":43020011,"quantity":4},{"item":41100022,"quantity":4},{"item":2,"quantity":12000}],"minLevel":40},{"cost":[{"item":43020012,"quantity":5},{"item":41100023,"quantity":3},{"item":2,"quantity":24000}],"minLevel":50},{"cost":[{"item":43020013,"quantity":4},{"item":41100023,"quantity":4},{"item":2,"quantity":36000}],"minLevel":60},{"cost":[{"item":43020014,"quantity":5},{"item":41100024,"quantity":3},{"item":2,"quantity":48000}],"minLevel":70},{"cost":[{"item":43020014,"quantity":8},{"item":41100024,"quantity":5},{"item":2,"quantity":72000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"May victory prevail the lasting night. In addition to the sworn oath of protection, this sword also represents the ambition of those brave souls.","ranks":["When Intro Skill is released, increases ATK by 8%, lasting for 10s.","When Intro Skill is released, increases ATK by 10%, lasting for 10s.","When Intro Skill is released, increases ATK by 12%, lasting for 10s.","When Intro Skill is released, increases ATK by 14%, lasting for 10s.","When Intro Skill is released, increases ATK by 16%, lasting for 10s."]}
+{
+  "slug": "sword-of-night",
+  "skill": {
+    "params": [
+      ["8%", "10"],
+      ["10%", "10"],
+      ["12%", "10"],
+      ["14%", "10"],
+      ["16%", "10"]
+    ],
+    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
+  },
+  "stats": { "atk": 26 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 4 },
+        { "item": 2, "quantity": 6000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 4 },
+        { "item": 41100022, "quantity": 4 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 5 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 4 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 36000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 5 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 8 },
+        { "item": 41100024, "quantity": 5 },
+        { "item": 2, "quantity": 72000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "May victory prevail the lasting night. In addition to the sworn oath of protection, this sword also represents the ambition of those brave souls.",
+  "ranks": [
+    "When Intro Skill is released, increases ATK by 8%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 10%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 12%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 14%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 16%, lasting for 10s."
+  ]
+}

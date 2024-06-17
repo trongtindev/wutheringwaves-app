@@ -1,1 +1,15 @@
-{"slug":"firebug","skill":{"id":200054,"cd":8,"params":[["24.00%","8"],["27.60%","8"],["31.20%","8"],["34.80%","8"],["38.40%","8"]],"description":"Summon a Firebug to perform a coordinated attack, dealing {0} Fusion DMG each time. The Firebug disappears when the summoner is switched out or moves a certain distance away.\n\nCD: {1}s"}}
+{
+  "slug": "firebug",
+  "skill": {
+    "id": 200054,
+    "cd": 8,
+    "params": [
+      ["24.00%", "8"],
+      ["27.60%", "8"],
+      ["31.20%", "8"],
+      ["34.80%", "8"],
+      ["38.40%", "8"]
+    ],
+    "description": "Summon a Firebug to perform a coordinated attack, dealing {0} Fusion DMG each time. The Firebug disappears when the summoner is switched out or moves a certain distance away.\n\nCD: {1}s"
+  }
+}

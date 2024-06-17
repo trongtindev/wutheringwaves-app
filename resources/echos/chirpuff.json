@@ -1,1 +1,15 @@
-{"slug":"chirpuff","skill":{"id":200027,"cd":8,"params":[["3","24.00%","8"],["3","27.60%","8"],["3","31.20%","8"],["3","34.80%","8"],["3","38.40%","8"]],"description":"Summon a Chirpuff that self-inflates and blasts a powerful gust of wind forward {0} times. Each blast inflicts {1} Aero DMG and pushes enemies backwards.\r\n\r\nCD: {2}s"}}
+{
+  "slug": "chirpuff",
+  "skill": {
+    "id": 200027,
+    "cd": 8,
+    "params": [
+      ["3", "24.00%", "8"],
+      ["3", "27.60%", "8"],
+      ["3", "31.20%", "8"],
+      ["3", "34.80%", "8"],
+      ["3", "38.40%", "8"]
+    ],
+    "description": "Summon a Chirpuff that self-inflates and blasts a powerful gust of wind forward {0} times. Each blast inflicts {1} Aero DMG and pushes enemies backwards.\r\n\r\nCD: {2}s"
+  }
+}

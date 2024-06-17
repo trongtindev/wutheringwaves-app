@@ -1,1 +1,15 @@
-{"slug":"glacio-dreadmane","skill":{"id":200055,"cd":20,"params":[["134.00%","20.00%","20.00%","20"],["154.10%","20.00%","23.00%","20"],["174.20%","20.00%","26.00%","20"],["194.30%","20.00%","29.00%","20"],["214.40%","20.00%","32.00%","20"]],"description":"Transform into a Glacio Dreadmane up to 2 times in a row, dealing {0} Glacio DMG each time. When releasing this Echo Skill in mid-air, increase DMG dealt by {1}. When landing on the ground, generate 6 \"Icicles\", each dealing {2} Glacio DMG.\n\nCD: {3}s"}}
+{
+  "slug": "glacio-dreadmane",
+  "skill": {
+    "id": 200055,
+    "cd": 20,
+    "params": [
+      ["134.00%", "20.00%", "20.00%", "20"],
+      ["154.10%", "20.00%", "23.00%", "20"],
+      ["174.20%", "20.00%", "26.00%", "20"],
+      ["194.30%", "20.00%", "29.00%", "20"],
+      ["214.40%", "20.00%", "32.00%", "20"]
+    ],
+    "description": "Transform into a Glacio Dreadmane up to 2 times in a row, dealing {0} Glacio DMG each time. When releasing this Echo Skill in mid-air, increase DMG dealt by {1}. When landing on the ground, generate 6 \"Icicles\", each dealing {2} Glacio DMG.\n\nCD: {3}s"
+  }
+}

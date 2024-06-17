@@ -1,1 +1,15 @@
-{"slug":"bell-borne-geochelone","skill":{"id":280003,"cd":20,"params":[["91.20%","15","50.00%","10.00%","3","20"],["104.88%","15","50.00%","10.00%","3","20"],["118.56%","15","50.00%","10.00%","3","20"],["132.24%","15","50.00%","10.00%","3","20"],["145.92%","15","50.00%","10.00%","3","20"]],"description":"Activate the protection of Bell-Borne Geochelone. Deal Glacio DMG based on {0} of the current character's DEF to nearby enemies, and obtain a Bell-Borne Shield that lasts for {1}s\n\nThe Bell-Borne Shield provides {2} DMG Reduction and {3} DMG Boost for the current team members, and disappears after the current character is hit for {4} times.\n\nCD: {5}s"}}
+{
+  "slug": "bell-borne-geochelone",
+  "skill": {
+    "id": 280003,
+    "cd": 20,
+    "params": [
+      ["91.20%", "15", "50.00%", "10.00%", "3", "20"],
+      ["104.88%", "15", "50.00%", "10.00%", "3", "20"],
+      ["118.56%", "15", "50.00%", "10.00%", "3", "20"],
+      ["132.24%", "15", "50.00%", "10.00%", "3", "20"],
+      ["145.92%", "15", "50.00%", "10.00%", "3", "20"]
+    ],
+    "description": "Activate the protection of Bell-Borne Geochelone. Deal Glacio DMG based on {0} of the current character's DEF to nearby enemies, and obtain a Bell-Borne Shield that lasts for {1}s\n\nThe Bell-Borne Shield provides {2} DMG Reduction and {3} DMG Boost for the current team members, and disappears after the current character is hit for {4} times.\n\nCD: {5}s"
+  }
+}

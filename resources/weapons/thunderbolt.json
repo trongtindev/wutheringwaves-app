@@ -1,1 +1,72 @@
-{"slug":"thunderbolt","skill":{"params":[["7%","3","10","1","1"],["11%","3","10","1","1"],["15%","3","10","1","1"],["19%","3","10","1","1"],["23%","3","10","1","1"]],"description":"When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by {0}, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."},"stats":{"atk":31},"ascensions":[{"cost":[{"item":41100031,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020021,"quantity":5},{"item":41100032,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020022,"quantity":7},{"item":41100033,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020023,"quantity":5},{"item":41100033,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020024,"quantity":7},{"item":41100034,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020024,"quantity":10},{"item":41100034,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"These Pistols are ceremonial weapons used in the inauguration ceremony of the Jinzhou Magistrate of Huanglong. The golden ginkgo leaf pattern represents that Huanglong should be like the ginkgo, although it is left in the world, it is still thriving.","ranks":["When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 7%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.","When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 11%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.","When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 15%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.","When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 19%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.","When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 23%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s."]}
+{
+  "slug": "thunderbolt",
+  "skill": {
+    "params": [
+      ["7%", "3", "10", "1", "1"],
+      ["11%", "3", "10", "1", "1"],
+      ["15%", "3", "10", "1", "1"],
+      ["19%", "3", "10", "1", "1"],
+      ["23%", "3", "10", "1", "1"]
+    ],
+    "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by {0}, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
+  },
+  "stats": { "atk": 31 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020021, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020022, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020023, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020024, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020024, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "These Pistols are ceremonial weapons used in the inauguration ceremony of the Jinzhou Magistrate of Huanglong. The golden ginkgo leaf pattern represents that Huanglong should be like the ginkgo, although it is left in the world, it is still thriving.",
+  "ranks": [
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 7%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 11%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 15%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 19%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 23%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s."
+  ]
+}

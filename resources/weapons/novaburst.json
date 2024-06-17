@@ -1,1 +1,72 @@
-{"slug":"novaburst","skill":{"params":[["4%","8","3"],["5%","8","3"],["6%","8","3"],["7%","8","3"],["8%","8","3"]],"description":"When the Resonator dashes or dodges, increases ATK by {0}, stacking up to {2} time(s). This effect lasts for {1}s."},"stats":{"atk":33},"ascensions":[{"cost":[{"item":41100031,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020021,"quantity":5},{"item":41100032,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020022,"quantity":7},{"item":41100033,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020023,"quantity":5},{"item":41100033,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020024,"quantity":7},{"item":41100034,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020024,"quantity":10},{"item":41100034,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"Pistols born from the strange phenomena in the sky. The forager infused the weapon with the feelings from witnessing the strange star, making it look hollow and light, yet extremely stable, with the power of thunder when it fires.","ranks":["When the Resonator dashes or dodges, increases ATK by 4%, stacking up to 3 time(s). This effect lasts for 8s.","When the Resonator dashes or dodges, increases ATK by 5%, stacking up to 3 time(s). This effect lasts for 8s.","When the Resonator dashes or dodges, increases ATK by 6%, stacking up to 3 time(s). This effect lasts for 8s.","When the Resonator dashes or dodges, increases ATK by 7%, stacking up to 3 time(s). This effect lasts for 8s.","When the Resonator dashes or dodges, increases ATK by 8%, stacking up to 3 time(s). This effect lasts for 8s."]}
+{
+  "slug": "novaburst",
+  "skill": {
+    "params": [
+      ["4%", "8", "3"],
+      ["5%", "8", "3"],
+      ["6%", "8", "3"],
+      ["7%", "8", "3"],
+      ["8%", "8", "3"]
+    ],
+    "description": "When the Resonator dashes or dodges, increases ATK by {0}, stacking up to {2} time(s). This effect lasts for {1}s."
+  },
+  "stats": { "atk": 33 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020021, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020022, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020023, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020024, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020024, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "Pistols born from the strange phenomena in the sky. The forager infused the weapon with the feelings from witnessing the strange star, making it look hollow and light, yet extremely stable, with the power of thunder when it fires.",
+  "ranks": [
+    "When the Resonator dashes or dodges, increases ATK by 4%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 5%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 6%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 7%, stacking up to 3 time(s). This effect lasts for 8s.",
+    "When the Resonator dashes or dodges, increases ATK by 8%, stacking up to 3 time(s). This effect lasts for 8s."
+  ]
+}

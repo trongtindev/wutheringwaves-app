@@ -1,1 +1,64 @@
-{"slug":"gauntlets-21d","skill":{"params":[["8%","50%","8","5%","6","1"],["10%","62.5%","8","6.25%","6","1"],["12%","75%","8","7.5%","6","1"],["14%","87.5%","8","8.75%","6","1"],["16%","100%","8","10%","6","1"]],"description":"When the Resonator dashes or dodges, increases ATK by {0}. Increases Counter Attack DMG by {1}, lasting for {2}s. When Counter Attack is performed, restores the Resonator's HP by {3}. This effect can be triggered {5} time(s) every {4}s."},"stats":{"atk":31,"energy":864},"ascensions":[{"cost":[{"item":41100021,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020051,"quantity":5},{"item":41100022,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020052,"quantity":7},{"item":41100023,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020053,"quantity":5},{"item":41100023,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020054,"quantity":7},{"item":41100024,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020054,"quantity":10},{"item":41100024,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}]}
+{
+  "slug": "gauntlets-21d",
+  "skill": {
+    "params": [
+      ["8%", "50%", "8", "5%", "6", "1"],
+      ["10%", "62.5%", "8", "6.25%", "6", "1"],
+      ["12%", "75%", "8", "7.5%", "6", "1"],
+      ["14%", "87.5%", "8", "8.75%", "6", "1"],
+      ["16%", "100%", "8", "10%", "6", "1"]
+    ],
+    "description": "When the Resonator dashes or dodges, increases ATK by {0}. Increases Counter Attack DMG by {1}, lasting for {2}s. When Counter Attack is performed, restores the Resonator's HP by {3}. This effect can be triggered {5} time(s) every {4}s."
+  },
+  "stats": { "atk": 31, "energy": 864 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020051, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020052, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020053, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ]
+}

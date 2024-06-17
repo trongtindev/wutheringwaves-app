@@ -1,1 +1,15 @@
-{"slug":"crownless","skill":{"id":280005,"cd":20,"params":[["83.80%","62.85%","41.90%","12.00%","12.00%","15","20"],["96.37%","72.28%","48.19%","12.00%","12.00%","15","20"],["108.94%","81.71%","54.47%","12.00%","12.00%","15","20"],["121.51%","91.13%","60.76%","12.00%","12.00%","15","20"],["134.08%","100.56%","67.04%","12.00%","12.00%","15","20"]],"description":"Transform into Crownless and perform up to 4 consecutive attacks. The first 2 attacks deal {0} Havoc DMG each, the 3rd attack deals {1} Havoc DMG 2 times, and the 4th attack deals {2} Havoc DMG 3 times.\n\nAfter the transformation, increase current character's Havoc DMG by {3} and Resonance Skill DMG by {4} for {5}s.\n\nCD: {6}s"}}
+{
+  "slug": "crownless",
+  "skill": {
+    "id": 280005,
+    "cd": 20,
+    "params": [
+      ["83.80%", "62.85%", "41.90%", "12.00%", "12.00%", "15", "20"],
+      ["96.37%", "72.28%", "48.19%", "12.00%", "12.00%", "15", "20"],
+      ["108.94%", "81.71%", "54.47%", "12.00%", "12.00%", "15", "20"],
+      ["121.51%", "91.13%", "60.76%", "12.00%", "12.00%", "15", "20"],
+      ["134.08%", "100.56%", "67.04%", "12.00%", "12.00%", "15", "20"]
+    ],
+    "description": "Transform into Crownless and perform up to 4 consecutive attacks. The first 2 attacks deal {0} Havoc DMG each, the 3rd attack deals {1} Havoc DMG 2 times, and the 4th attack deals {2} Havoc DMG 3 times.\n\nAfter the transformation, increase current character's Havoc DMG by {3} and Resonance Skill DMG by {4} for {5}s.\n\nCD: {6}s"
+  }
+}

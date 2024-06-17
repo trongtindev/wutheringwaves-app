@@ -62,58 +62,42 @@
       "idx": "Resonance 1-4",
       "slug": "trickster-s-opening-show",
       "name": "Trickster's Opening Show",
-      "params": [
-        "4"
-      ],
+      "params": ["4"],
       "description": "The cooldown of Resonance Skill <strong style=\"color: var(--color-highlight);\">Shift Trick</strong> is reduced by {0}s."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "mistweaver-s-debut",
       "name": "Mistweaver’s Debut",
-      "params": [
-        "100%",
-        "15%"
-      ],
+      "params": ["100%", "15%"],
       "description": "\"Mist Avatar\" inherits {0} more HP from Aalto. When Aalto attacks targets taunted by the \"Mist Avatar(s)\", his ATK is increased by {1}."
     },
     {
       "idx": "Resonance 3-4",
       "slug": "hazey-transition",
       "name": "Hazey Transition",
-      "params": [
-        "50%"
-      ],
+      "params": ["50%"],
       "description": "When Aalto's <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong> passes through the \"Gate of Quandary\", 2 more bullets will be generated, dealing {0} of the DMG of <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong>."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "blake-bloom-for-finale",
       "name": "Blake Bloom for Finale",
-      "params": [
-        "30%",
-        "30%"
-      ],
+      "params": ["30%", "30%"],
       "description": "The damage of Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> is increased by {0}; Aalto receives {1} less damage in his Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "applause-of-the-lost",
       "name": "Applause of the Lost",
-      "params": [
-        "25%",
-        "6"
-      ],
+      "params": ["25%", "6"],
       "description": "In the Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state, Aalto's Aero DMG Bonus is increased by {0} for {1}s."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "broker-s-secrets",
       "name": "Broker’s Secrets",
-      "params": [
-        "8%",
-        "50%"
-      ],
+      "params": ["8%", "50%"],
       "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Flower in the Mist</strong> now additionally increases Crit. Rate by {0}. When Aalto's Heavy Attack passes through the \"Gate of Quandary\", the damage dealt is additionally increased by {1}."
     }
   ],

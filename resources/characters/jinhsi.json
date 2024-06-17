@@ -1,1 +1,241 @@
-{"slug":"jinhsi","description":"Jinhsi, Magistrate of Jinzhou, gently brightens the hopes of her people, like rays of winter sunlight. \nAs the revered Sentinel's Appointed Resonator, she displays humility and wholeheartedly commits herself to guiding her people towards a brilliant future.","skills":[{"slug":"slash-of-breaking-dawn","name":"Slash of Breaking Dawn","type":"Basic Attack","description":"<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nPerform up to 4 consecutive strikes, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>Heavy Attack</color></size>\nPerform a charged attack by consuming Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-Air Attack</strong></size>\nPerform a Plunging Attack while in mid-air by consuming Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to counterattack, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>."},{"slug":"trailing-lights-of-eons","name":"Trailing Lights of Eons","type":"Resonance Skill","description":"Dash forward and perform consecutive strikes that inflict <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>\n<strong style=\"color: var(--color-title);\">Overflowing Radiance</strong>\nAfter Jinhsi uses <strong style=\"color: var(--color-attribute-spectro);\">Basic Attack 4</strong> or, while not in <strong style=\"color: var(--color-highlight);\">Incarnation</strong>, Intro Skill <strong style=\"color: var(--color-highlight);\">Loong's Halo</strong>, an alternative Resonance Skill <strong style=\"color: var(--color-highlight);\">Overflowing Radiance</strong> becomes available within <strong style=\"color: var(--color-attribute-spectro);\">5</strong>s.\nResonance Skill <strong style=\"color: var(--color-highlight);\">Overflowing Radiance</strong> inflicts <strong style=\"color: var(--color-highlight);\">Spectro DMG</strong> and sends Jinhsi into <strong style=\"color: var(--color-highlight);\"> Incarnation</strong>.\nCan be cast in mid-air."},{"slug":"purge-of-light","name":"Purge of Light","type":"Resonance Liberation","description":"Unleash the power of a heart's wish to deal <strong style=\"color: var(--color-highlight);\">Spectro DMG</strong>.\nCan be cast in mid-air."},{"slug":"radiant-surge","name":"Radiant Surge","type":"Inherent Skill","description":"Jinhsi's Spectro DMG Bonus is increased by <strong style=\"color: var(--color-attribute-spectro);\">20%</strong>."},{"slug":"converged-flash","name":"Converged Flash","type":"Inherent Skill","description":"Intro Skill <strong style=\"color: var(--color-highlight);\">Loong's Halo</strong> gains <strong style=\"color: var(--theme-palette-color-1);\">50%</strong> additional DMG."},{"slug":"loong-s-halo","name":"Loong's Halo","type":"Intro Skill","description":"Attack the target, dealing <strong style=\"color: var(--color-highlight);\">Spectro DMG</strong>."},{"slug":"luminal-synthesis","name":"Luminal Synthesis","type":"Forte Circuit","description":"<size=40><strong style=\"color: var(--color-title);\">Incarnation</strong></size>\nWhile in <strong style=\"color: var(--color-highlight);\">Incarnation</strong>:\n- Alternative Basic Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Basic Attack\"</strong> becomes available. Perform up to 4 consecutive strikes, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>. The basic attack cycle of this will not be reset. Can be cast in mid-air.\n- Alternative Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Crescent Divinity\"</strong> becomes available. Deal <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>. Can be cast in mid-air.\n- Alternative Heavy Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Heavy Attack\"</strong> becomes available. Attack the target in mid-air at the cost of Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n- Alternative Dodge <strong style=\"color: var(--color-highlight);\">\"Incarnation: Dodge\"</strong> becomes available while airborne. Can be cast multiple times at the cost of Stamina.\n- Alternative Dodge Counter <strong style=\"color: var(--color-highlight);\">\"Incarnation: Dodge Counter\"</strong> becomes available. Deal <strong style=\"color: var(--color-attribute-spectro);\">Spectro Damage</strong>.\nCan be cast in mid-air.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Resonance Skill: Illuminous Epiphany</strong></size>\nAfter Stage 4 of <strong style=\"color: var(--color-highlight);\">Incarnation: Basic Attack</strong>, <strong style=\"color: var(--color-highlight);\">Incarnation</strong> terminates and Jinhsi gains <strong style=\"color: var(--color-highlight);\">Ordination Glow</strong>. \nCan be cast in mid-air.\nWhile <strong style=\"color: var(--color-highlight);\">Ordination Glow</strong> lasts:\n- Basic Attack is replaced with the Alternative Heavy Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Heavy Attack\"</strong> when airborne. Attack the target in mid-air at the cost of Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\nResonance Skill is replaced with Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong>. Send out <strong style=\"color: var(--color-highlight);\">Solar Flare</strong> that detonates as <strong style=\"color: var(--color-highlight);\">Stella Glamour</strong> that deals <strong style=\"color: var(--color-attribute-spectro);\">Spectro Damage</strong> after a short delay. When Jinhsi has \"Incandescence\", consume up to <strong style=\"color: var(--color-attribute-spectro);\">40</strong> Incandescence, each point of Incandescence grants an additional DMG multiplier percentage to the <strong style=\"color: var(--color-highlight);\">Star Glamour</strong>. Can be cast in mid-air.\nAfter casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong>, Jinhsi gains <strong style=\"color: var(--color-highlight);\">Unison</strong>. This can be triggered once in <strong style=\"color: var(--color-attribute-spectro);\">25</strong>s.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Unison</strong></size>\nWhile Jinhsi has <strong style=\"color: var(--color-highlight);\">Unison</strong>, switching to other Characters will remove Jinhsi's <strong style=\"color: var(--color-highlight);\">Unison</strong> to trigger Jinhsi's Outro Skill and the incoming character's Intro Skill. <strong style=\"color: var(--color-highlight);\">Unison</strong> will be consumed in priority in place of Concerto Energy when Concerto Energy is full.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Incandescence</strong></size>\nJinhsi can hold up to <strong style=\"color: var(--color-attribute-spectro);\">40</strong> Incandescence。\nWhen Jinhsi is on the team, all nearby characters on the team gain <strong style=\"color: var(--color-highlight);\">Eras in Unity</strong>. When characters with <strong style=\"color: var(--color-highlight);\">Eras in Unity</strong> deal Damage with an attribute, Jinhsi gains <strong style=\"color: var(--color-attribute-spectro);\">1</strong> Incandescence. Damage of the same attribute can provide up to <strong style=\"color: var(--color-attribute-spectro);\">1</strong> Incandescence every <strong style=\"color: var(--color-attribute-spectro);\">3</strong>s."},{"slug":"skill-1002008-skill-name","name":"Skill_1002008_SkillName","type":"Inherent Skill","description":"Skill_1002008_SkillDescribe"},{"slug":"temporal-bender","name":"Temporal Bender","type":"Outro Skill","description":"With the power homologous with the Sentinel, Jinhsi reduces the Cooldown of <strong style=\"color: var(--color-highlight);\">Eras in Unity</strong> to <strong style=\"color: var(--theme-palette-color-1);\">1</strong>s. This lasts for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."}],"resonanceChain":[{"idx":"ResonantChain_460_NodeIndex","slug":"abyssal-ascension","name":"Abyssal Ascension","params":["4","6","20%"],"description":"When Jinhsi casts Basic Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Basic Attack\"</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Crescent Divinity\"</strong>, gain one stack of <strong style=\"color: var(--color-highlight);\">Herald of Revival</strong>, which stacks up to {0} times and last for {1}s. When casting Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Illuminous Epiphany\"</strong>, Jinhsi consumes all stacks of <strong style=\"color: var(--color-highlight);\">Herald of Revival</strong>. Each stack increases the DMG of Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Illuminous Epiphany\"</strong> by {2}."},{"idx":"ResonantChain_464_NodeIndex","slug":"chronofrost-repose","name":"Chronofrost Repose","params":["4","40","4","1"],"description":"Jinhsi recovers {1} Incandescence while staying out of combat for more than {0}s. This effect can only be triggered {3} every {2}s."},{"idx":"ResonantChain_468_NodeIndex","slug":"celestial-incarnate","name":"Celestial Incarnate","params":["12","25%","2","20"],"description":"Gain {0} Incandescence and a stack of <strong style=\"color: var(--color-highlight);\">Immortal's Descendancy</strong> after casting Intro Skill <strong style=\"color: var(--color-highlight);\">Loong's Halo</strong>. Every stack of <strong style=\"color: var(--color-highlight);\">Immortal's Descendancy</strong> increases ATK by {1}, for up to {2} stacks, lasting for {3}s."},{"idx":"ResonantChain_472_NodeIndex","slug":"benevolent-grace","name":"Benevolent Grace","params":["20%","20"],"description":"When casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Purge of Light</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong>, all nearby Characters in the team gain DMG Bonus for all attributes by {0} for {1}s."},{"idx":"ResonantChain_476_NodeIndex","slug":"frostfire-illumination","name":"Frostfire Illumination","params":["120%"],"description":"The DMG Multiplier of Resonance Liberation <strong style=\"color: var(--color-highlight);\">Purge of Evil</strong> is increased by {0}."},{"idx":"ResonantChain_480_NodeIndex","slug":"comes-spring-when-chill-exhausts","name":"Comes Spring when Chill Exhausts","params":["45%","71%"],"description":"DMG Multiplier percentage for Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong> is increased by {0}. The multiplier increase brought by Incandescence is additionally increased by {1}."}],"stats":{"hp":866,"def":103,"atk":33,"energy":15000},"ascensions":[{"cost":[],"minLevel":0},{"cost":[{"item":41100021,"quantity":4},{"item":2,"quantity":5000}],"minLevel":20},{"cost":[{"item":41400034,"quantity":3},{"item":42310210,"quantity":4},{"item":41100022,"quantity":4},{"item":2,"quantity":10000}],"minLevel":40},{"cost":[{"item":41400034,"quantity":6},{"item":42310210,"quantity":8},{"item":41100022,"quantity":8},{"item":2,"quantity":15000}],"minLevel":50},{"cost":[{"item":41400034,"quantity":9},{"item":42310210,"quantity":12},{"item":41100023,"quantity":4},{"item":2,"quantity":20000}],"minLevel":60},{"cost":[{"item":41400034,"quantity":12},{"item":42310210,"quantity":16},{"item":41100023,"quantity":8},{"item":2,"quantity":40000}],"minLevel":70},{"cost":[{"item":41400034,"quantity":16},{"item":42310210,"quantity":20},{"item":41100024,"quantity":4},{"item":2,"quantity":80000}],"minLevel":80}],"forte":[{"id":313,"cost":[{"item":43020043,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"Crit. Rate+1.20%"},{"id":314,"cost":[{"item":43020043,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"ATK+1.80%"},{"id":315,"cost":[{"item":43020043,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"ATK+1.80%"},{"id":316,"cost":[{"item":43020043,"quantity":3},{"item":41100023,"quantity":3},{"item":2,"quantity":50000}],"name":"Crit. Rate+1.20%"},{"id":317,"cost":[{"item":43020044,"quantity":3},{"item":41100024,"quantity":3},{"item":41400144,"quantity":1},{"item":2,"quantity":100000}],"name":"Crit. Rate+2.80%"},{"id":318,"cost":[{"item":43020044,"quantity":3},{"item":41100024,"quantity":3},{"item":41400144,"quantity":1},{"item":2,"quantity":100000}],"name":"ATK+4.20%"},{"id":319,"cost":[{"item":43020044,"quantity":3},{"item":41100024,"quantity":3},{"item":41400144,"quantity":1},{"item":2,"quantity":100000}],"name":"ATK+4.20%"},{"id":320,"cost":[{"item":43020044,"quantity":3},{"item":41100024,"quantity":3},{"item":41400144,"quantity":1},{"item":2,"quantity":100000}],"name":"Crit. Rate+2.80%"}],"quote":"None","birthday":"None","birthplace":"None"}
+{
+  "slug": "jinhsi",
+  "description": "Jinhsi, Magistrate of Jinzhou, gently brightens the hopes of her people, like rays of winter sunlight. \nAs the revered Sentinel's Appointed Resonator, she displays humility and wholeheartedly commits herself to guiding her people towards a brilliant future.",
+  "skills": [
+    {
+      "slug": "slash-of-breaking-dawn",
+      "name": "Slash of Breaking Dawn",
+      "type": "Basic Attack",
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nPerform up to 4 consecutive strikes, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>Heavy Attack</color></size>\nPerform a charged attack by consuming Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-Air Attack</strong></size>\nPerform a Plunging Attack while in mid-air by consuming Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to counterattack, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>."
+    },
+    {
+      "slug": "trailing-lights-of-eons",
+      "name": "Trailing Lights of Eons",
+      "type": "Resonance Skill",
+      "description": "Dash forward and perform consecutive strikes that inflict <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10></size>\n<strong style=\"color: var(--color-title);\">Overflowing Radiance</strong>\nAfter Jinhsi uses <strong style=\"color: var(--color-attribute-spectro);\">Basic Attack 4</strong> or, while not in <strong style=\"color: var(--color-highlight);\">Incarnation</strong>, Intro Skill <strong style=\"color: var(--color-highlight);\">Loong's Halo</strong>, an alternative Resonance Skill <strong style=\"color: var(--color-highlight);\">Overflowing Radiance</strong> becomes available within <strong style=\"color: var(--color-attribute-spectro);\">5</strong>s.\nResonance Skill <strong style=\"color: var(--color-highlight);\">Overflowing Radiance</strong> inflicts <strong style=\"color: var(--color-highlight);\">Spectro DMG</strong> and sends Jinhsi into <strong style=\"color: var(--color-highlight);\"> Incarnation</strong>.\nCan be cast in mid-air."
+    },
+    {
+      "slug": "purge-of-light",
+      "name": "Purge of Light",
+      "type": "Resonance Liberation",
+      "description": "Unleash the power of a heart's wish to deal <strong style=\"color: var(--color-highlight);\">Spectro DMG</strong>.\nCan be cast in mid-air."
+    },
+    {
+      "slug": "radiant-surge",
+      "name": "Radiant Surge",
+      "type": "Inherent Skill",
+      "description": "Jinhsi's Spectro DMG Bonus is increased by <strong style=\"color: var(--color-attribute-spectro);\">20%</strong>."
+    },
+    {
+      "slug": "converged-flash",
+      "name": "Converged Flash",
+      "type": "Inherent Skill",
+      "description": "Intro Skill <strong style=\"color: var(--color-highlight);\">Loong's Halo</strong> gains <strong style=\"color: var(--theme-palette-color-1);\">50%</strong> additional DMG."
+    },
+    {
+      "slug": "loong-s-halo",
+      "name": "Loong's Halo",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong style=\"color: var(--color-highlight);\">Spectro DMG</strong>."
+    },
+    {
+      "slug": "luminal-synthesis",
+      "name": "Luminal Synthesis",
+      "type": "Forte Circuit",
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Incarnation</strong></size>\nWhile in <strong style=\"color: var(--color-highlight);\">Incarnation</strong>:\n- Alternative Basic Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Basic Attack\"</strong> becomes available. Perform up to 4 consecutive strikes, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>. The basic attack cycle of this will not be reset. Can be cast in mid-air.\n- Alternative Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Crescent Divinity\"</strong> becomes available. Deal <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>. Can be cast in mid-air.\n- Alternative Heavy Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Heavy Attack\"</strong> becomes available. Attack the target in mid-air at the cost of Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n- Alternative Dodge <strong style=\"color: var(--color-highlight);\">\"Incarnation: Dodge\"</strong> becomes available while airborne. Can be cast multiple times at the cost of Stamina.\n- Alternative Dodge Counter <strong style=\"color: var(--color-highlight);\">\"Incarnation: Dodge Counter\"</strong> becomes available. Deal <strong style=\"color: var(--color-attribute-spectro);\">Spectro Damage</strong>.\nCan be cast in mid-air.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Resonance Skill: Illuminous Epiphany</strong></size>\nAfter Stage 4 of <strong style=\"color: var(--color-highlight);\">Incarnation: Basic Attack</strong>, <strong style=\"color: var(--color-highlight);\">Incarnation</strong> terminates and Jinhsi gains <strong style=\"color: var(--color-highlight);\">Ordination Glow</strong>. \nCan be cast in mid-air.\nWhile <strong style=\"color: var(--color-highlight);\">Ordination Glow</strong> lasts:\n- Basic Attack is replaced with the Alternative Heavy Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Heavy Attack\"</strong> when airborne. Attack the target in mid-air at the cost of Stamina, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\nResonance Skill is replaced with Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong>. Send out <strong style=\"color: var(--color-highlight);\">Solar Flare</strong> that detonates as <strong style=\"color: var(--color-highlight);\">Stella Glamour</strong> that deals <strong style=\"color: var(--color-attribute-spectro);\">Spectro Damage</strong> after a short delay. When Jinhsi has \"Incandescence\", consume up to <strong style=\"color: var(--color-attribute-spectro);\">40</strong> Incandescence, each point of Incandescence grants an additional DMG multiplier percentage to the <strong style=\"color: var(--color-highlight);\">Star Glamour</strong>. Can be cast in mid-air.\nAfter casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong>, Jinhsi gains <strong style=\"color: var(--color-highlight);\">Unison</strong>. This can be triggered once in <strong style=\"color: var(--color-attribute-spectro);\">25</strong>s.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Unison</strong></size>\nWhile Jinhsi has <strong style=\"color: var(--color-highlight);\">Unison</strong>, switching to other Characters will remove Jinhsi's <strong style=\"color: var(--color-highlight);\">Unison</strong> to trigger Jinhsi's Outro Skill and the incoming character's Intro Skill. <strong style=\"color: var(--color-highlight);\">Unison</strong> will be consumed in priority in place of Concerto Energy when Concerto Energy is full.\n<size=10></size>\n<size=40><strong style=\"color: var(--color-title);\">Incandescence</strong></size>\nJinhsi can hold up to <strong style=\"color: var(--color-attribute-spectro);\">40</strong> Incandescence。\nWhen Jinhsi is on the team, all nearby characters on the team gain <strong style=\"color: var(--color-highlight);\">Eras in Unity</strong>. When characters with <strong style=\"color: var(--color-highlight);\">Eras in Unity</strong> deal Damage with an attribute, Jinhsi gains <strong style=\"color: var(--color-attribute-spectro);\">1</strong> Incandescence. Damage of the same attribute can provide up to <strong style=\"color: var(--color-attribute-spectro);\">1</strong> Incandescence every <strong style=\"color: var(--color-attribute-spectro);\">3</strong>s."
+    },
+    {
+      "slug": "skill-1002008-skill-name",
+      "name": "Skill_1002008_SkillName",
+      "type": "Inherent Skill",
+      "description": "Skill_1002008_SkillDescribe"
+    },
+    {
+      "slug": "temporal-bender",
+      "name": "Temporal Bender",
+      "type": "Outro Skill",
+      "description": "With the power homologous with the Sentinel, Jinhsi reduces the Cooldown of <strong style=\"color: var(--color-highlight);\">Eras in Unity</strong> to <strong style=\"color: var(--theme-palette-color-1);\">1</strong>s. This lasts for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."
+    }
+  ],
+  "resonanceChain": [
+    {
+      "idx": "ResonantChain_460_NodeIndex",
+      "slug": "abyssal-ascension",
+      "name": "Abyssal Ascension",
+      "params": ["4", "6", "20%"],
+      "description": "When Jinhsi casts Basic Attack <strong style=\"color: var(--color-highlight);\">\"Incarnation: Basic Attack\"</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Crescent Divinity\"</strong>, gain one stack of <strong style=\"color: var(--color-highlight);\">Herald of Revival</strong>, which stacks up to {0} times and last for {1}s. When casting Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Illuminous Epiphany\"</strong>, Jinhsi consumes all stacks of <strong style=\"color: var(--color-highlight);\">Herald of Revival</strong>. Each stack increases the DMG of Resonance Skill <strong style=\"color: var(--color-highlight);\">\"Illuminous Epiphany\"</strong> by {2}."
+    },
+    {
+      "idx": "ResonantChain_464_NodeIndex",
+      "slug": "chronofrost-repose",
+      "name": "Chronofrost Repose",
+      "params": ["4", "40", "4", "1"],
+      "description": "Jinhsi recovers {1} Incandescence while staying out of combat for more than {0}s. This effect can only be triggered {3} every {2}s."
+    },
+    {
+      "idx": "ResonantChain_468_NodeIndex",
+      "slug": "celestial-incarnate",
+      "name": "Celestial Incarnate",
+      "params": ["12", "25%", "2", "20"],
+      "description": "Gain {0} Incandescence and a stack of <strong style=\"color: var(--color-highlight);\">Immortal's Descendancy</strong> after casting Intro Skill <strong style=\"color: var(--color-highlight);\">Loong's Halo</strong>. Every stack of <strong style=\"color: var(--color-highlight);\">Immortal's Descendancy</strong> increases ATK by {1}, for up to {2} stacks, lasting for {3}s."
+    },
+    {
+      "idx": "ResonantChain_472_NodeIndex",
+      "slug": "benevolent-grace",
+      "name": "Benevolent Grace",
+      "params": ["20%", "20"],
+      "description": "When casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Purge of Light</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong>, all nearby Characters in the team gain DMG Bonus for all attributes by {0} for {1}s."
+    },
+    {
+      "idx": "ResonantChain_476_NodeIndex",
+      "slug": "frostfire-illumination",
+      "name": "Frostfire Illumination",
+      "params": ["120%"],
+      "description": "The DMG Multiplier of Resonance Liberation <strong style=\"color: var(--color-highlight);\">Purge of Evil</strong> is increased by {0}."
+    },
+    {
+      "idx": "ResonantChain_480_NodeIndex",
+      "slug": "comes-spring-when-chill-exhausts",
+      "name": "Comes Spring when Chill Exhausts",
+      "params": ["45%", "71%"],
+      "description": "DMG Multiplier percentage for Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong> is increased by {0}. The multiplier increase brought by Incandescence is additionally increased by {1}."
+    }
+  ],
+  "stats": { "hp": 866, "def": 103, "atk": 33, "energy": 15000 },
+  "ascensions": [
+    { "cost": [], "minLevel": 0 },
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400034, "quantity": 3 },
+        { "item": 42310210, "quantity": 4 },
+        { "item": 41100022, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400034, "quantity": 6 },
+        { "item": 42310210, "quantity": 8 },
+        { "item": 41100022, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400034, "quantity": 9 },
+        { "item": 42310210, "quantity": 12 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400034, "quantity": 12 },
+        { "item": 42310210, "quantity": 16 },
+        { "item": 41100023, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400034, "quantity": 16 },
+        { "item": 42310210, "quantity": 20 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "forte": [
+    {
+      "id": 313,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Crit. Rate+1.20%"
+    },
+    {
+      "id": 314,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 315,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 316,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Crit. Rate+1.20%"
+    },
+    {
+      "id": 317,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Crit. Rate+2.80%"
+    },
+    {
+      "id": 318,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 319,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 320,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Crit. Rate+2.80%"
+    }
+  ],
+  "quote": "None",
+  "birthday": "None",
+  "birthplace": "None"
+}

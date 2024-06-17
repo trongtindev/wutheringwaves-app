@@ -1,1 +1,72 @@
-{"slug":"rectifier-of-voyager","skill":{"params":[["8","20","1"],["9","20","1"],["10","20","1"],["11","20","1"],["12","20","1"]],"description":"When Resonance Skill is released, restores Resonance Energy by {0}. This effect can be triggered {2} time(s) every {1}s."},"stats":{"atk":24,"energy":720},"ascensions":[{"cost":[{"item":41100031,"quantity":4},{"item":2,"quantity":6000}],"minLevel":20},{"cost":[{"item":43020031,"quantity":4},{"item":41100032,"quantity":4},{"item":2,"quantity":12000}],"minLevel":40},{"cost":[{"item":43020032,"quantity":5},{"item":41100033,"quantity":3},{"item":2,"quantity":24000}],"minLevel":50},{"cost":[{"item":43020033,"quantity":4},{"item":41100033,"quantity":4},{"item":2,"quantity":36000}],"minLevel":60},{"cost":[{"item":43020034,"quantity":5},{"item":41100034,"quantity":3},{"item":2,"quantity":48000}],"minLevel":70},{"cost":[{"item":43020034,"quantity":8},{"item":41100034,"quantity":5},{"item":2,"quantity":72000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"The Rectifier provided by the Pioneer Association for the explorers, with bright colors, not easy to lose, hard texture can cope with various extreme environments for a long time, and is very popular among the explorers.","ranks":["When Resonance Skill is released, restores Resonance Energy by 8. This effect can be triggered 1 time(s) every 20s.","When Resonance Skill is released, restores Resonance Energy by 9. This effect can be triggered 1 time(s) every 20s.","When Resonance Skill is released, restores Resonance Energy by 10. This effect can be triggered 1 time(s) every 20s.","When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s.","When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s."]}
+{
+  "slug": "rectifier-of-voyager",
+  "skill": {
+    "params": [
+      ["8", "20", "1"],
+      ["9", "20", "1"],
+      ["10", "20", "1"],
+      ["11", "20", "1"],
+      ["12", "20", "1"]
+    ],
+    "description": "When Resonance Skill is released, restores Resonance Energy by {0}. This effect can be triggered {2} time(s) every {1}s."
+  },
+  "stats": { "atk": 24, "energy": 720 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 4 },
+        { "item": 2, "quantity": 6000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 4 },
+        { "item": 41100032, "quantity": 4 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 5 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 4 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 36000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 5 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 8 },
+        { "item": 41100034, "quantity": 5 },
+        { "item": 2, "quantity": 72000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "The Rectifier provided by the Pioneer Association for the explorers, with bright colors, not easy to lose, hard texture can cope with various extreme environments for a long time, and is very popular among the explorers.",
+  "ranks": [
+    "When Resonance Skill is released, restores Resonance Energy by 8. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 9. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 10. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s."
+  ]
+}

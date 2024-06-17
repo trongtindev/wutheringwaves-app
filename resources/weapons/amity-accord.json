@@ -1,1 +1,72 @@
-{"slug":"amity-accord","skill":{"params":[["20%","15"],["25%","15"],["30%","15"],["35%","15"],["40%","15"]],"description":"When Intro Skill is released, increases Resonance Liberation DMG Bonus by {0}, lasting for {1}s."},"stats":{"atk":27},"ascensions":[{"cost":[{"item":41100021,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020051,"quantity":5},{"item":41100022,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020052,"quantity":7},{"item":41100023,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020053,"quantity":5},{"item":41100023,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020054,"quantity":7},{"item":41100024,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020054,"quantity":10},{"item":41100024,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"A weapon designed to commemorate the Midnight Rangers' comradeship. \"Thin garments yield to icy moons, while armor withstands the chill of stars.\"","ranks":["When Intro Skill is released, increases Resonance Liberation DMG Bonus by 20%, lasting for 15s.","When Intro Skill is released, increases Resonance Liberation DMG Bonus by 25%, lasting for 15s.","When Intro Skill is released, increases Resonance Liberation DMG Bonus by 30%, lasting for 15s.","When Intro Skill is released, increases Resonance Liberation DMG Bonus by 35%, lasting for 15s.","When Intro Skill is released, increases Resonance Liberation DMG Bonus by 40%, lasting for 15s."]}
+{
+  "slug": "amity-accord",
+  "skill": {
+    "params": [
+      ["20%", "15"],
+      ["25%", "15"],
+      ["30%", "15"],
+      ["35%", "15"],
+      ["40%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases Resonance Liberation DMG Bonus by {0}, lasting for {1}s."
+  },
+  "stats": { "atk": 27 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020051, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020052, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020053, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "A weapon designed to commemorate the Midnight Rangers' comradeship. \"Thin garments yield to icy moons, while armor withstands the chill of stars.\"",
+  "ranks": [
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 20%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 25%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 30%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 35%, lasting for 15s.",
+    "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 40%, lasting for 15s."
+  ]
+}

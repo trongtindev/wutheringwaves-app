@@ -4,31 +4,11 @@
     "id": 200019,
     "cd": 15,
     "params": [
-      [
-        "33.30%",
-        "1",
-        "15"
-      ],
-      [
-        "38.30%",
-        "1",
-        "15"
-      ],
-      [
-        "43.29%",
-        "1",
-        "15"
-      ],
-      [
-        "48.29%",
-        "1",
-        "15"
-      ],
-      [
-        "53.28%",
-        "1",
-        "15"
-      ]
+      ["33.30%", "1", "15"],
+      ["38.30%", "1", "15"],
+      ["43.29%", "1", "15"],
+      ["48.29%", "1", "15"],
+      ["53.28%", "1", "15"]
     ],
     "description": "Transform into Flautist, continuously emitting Electro lasers, dealing {0} Electro DMG for a total of 10 times. Gain {1} Concerto Energy every time a hit lands.\r\n\r\nCD: {2}s"
   }

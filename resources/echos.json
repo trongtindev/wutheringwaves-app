@@ -1,1 +1,609 @@
-[{"id":6000038,"slug":"hooscamp","name":"Hooscamp","cost":1,"class":"Common","attribute":"Aero","sonataEffects":["Lingering Tunes","Sierra Gale"]},{"id":6000039,"slug":"tempest-mephis","name":"Tempest Mephis","cost":4,"class":"Overlord","attribute":"Electro","sonataEffects":["Void Thunder"]},{"id":6000040,"slug":"hoochief","name":"Hoochief","cost":3,"class":"Elite","attribute":"Aero","sonataEffects":["Rejuvenating Glow","Sierra Gale"]},{"id":6000041,"slug":"diamondclaw","name":"Diamondclaw","cost":1,"class":"Common","attribute":"0","sonataEffects":["Moonlit Clouds","Lingering Tunes"]},{"id":6000042,"slug":"crownless","name":"Crownless","cost":4,"class":"Overlord","attribute":"Havoc","sonataEffects":["Sun-sinking Eclipse"]},{"id":6000043,"slug":"feilian-beringal","name":"Feilian Beringal","cost":4,"class":"Overlord","attribute":"Aero","sonataEffects":["Sierra Gale"]},{"id":6000044,"slug":"lampylumen-myriad","name":"Lampylumen Myriad","cost":4,"class":"Overlord","attribute":"Glacio","sonataEffects":["Freezing Frost"]},{"id":6000045,"slug":"mourning-aix","name":"Mourning Aix","cost":4,"class":"Overlord","attribute":"Spectro","sonataEffects":["Celestial Light"]},{"id":6000046,"slug":"chaserazor","name":"Chaserazor","cost":3,"class":"Elite","attribute":"Aero","sonataEffects":["Moonlit Clouds","Sierra Gale"]},{"id":6000047,"slug":"chirpuff","name":"Chirpuff","cost":1,"class":"Common","attribute":"Aero","sonataEffects":["Sun-sinking Eclipse","Sierra Gale"]},{"id":6000048,"slug":"mech-abomination","name":"Mech Abomination","cost":4,"class":"Overlord","attribute":"Electro","sonataEffects":["Lingering Tunes"]},{"id":6000049,"slug":"autopuppet-scout","name":"Autopuppet Scout","cost":3,"class":"Elite","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":6000050,"slug":"traffic-illuminator","name":"Traffic Illuminator","cost":1,"class":"Common","attribute":"0","sonataEffects":["Void Thunder","Sierra Gale","Molten Rift"]},{"id":6000051,"slug":"clang-bang","name":"Clang Bang","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":6000052,"slug":"impermanence-heron","name":"Impermanence Heron","cost":4,"class":"Overlord","attribute":"Havoc","sonataEffects":["Moonlit Clouds"]},{"id":6000053,"slug":"dreamless","name":"Dreamless","cost":4,"class":"Calamity","attribute":"Havoc","sonataEffects":["Sun-sinking Eclipse"]},{"id":6000054,"slug":"firebug","name":"Firebug","cost":1,"class":"Common","attribute":"Fusion","sonataEffects":["Lingering Tunes","Molten Rift"]},{"id":6000055,"slug":"dwarf-cassowary","name":"Dwarf Cassowary","cost":1,"class":"Common","attribute":"0","sonataEffects":["Sierra Gale","Rejuvenating Glow"]},{"id":6000056,"slug":"glacio-dreadmane","name":"Glacio Dreadmane","cost":3,"class":"Elite","attribute":"Glacio","sonataEffects":["Moonlit Clouds","Freezing Frost"]},{"id":6000057,"slug":"lumiscale-construct","name":"Lumiscale Construct","cost":3,"class":"Elite","attribute":"Glacio","sonataEffects":["Void Thunder","Freezing Frost"]},{"id":6000058,"slug":"lightcrusher","name":"Lightcrusher","cost":3,"class":"Elite","attribute":"Spectro","sonataEffects":["Celestial Light"]},{"id":6000059,"slug":"jue","name":"Jué","cost":4,"class":"Calamity","attribute":"Spectro","sonataEffects":["Celestial Light"]},{"id":6000145,"slug":"phantom-mourning-aix","name":"Phantom: Mourning Aix","cost":4,"class":"Overlord","attribute":"Spectro","sonataEffects":["Celestial Light"]},{"id":6010051,"slug":"altered-clang-bang","name":"Altered Clang Bang","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":6010052,"slug":"phantom-impermanence-heron","name":"Phantom: Impermanence Heron","cost":4,"class":"Overlord","attribute":"Havoc","sonataEffects":["Moonlit Clouds"]},{"id":6010058,"slug":"altered-lightcrusher","name":"Altered Lightcrusher","cost":3,"class":"Elite","attribute":"Spectro","sonataEffects":["Sun-sinking Eclipse"]},{"id":390070051,"slug":"vanguard-junrock","name":"Vanguard Junrock","cost":1,"class":"Common","attribute":"0","sonataEffects":["Rejuvenating Glow","Void Thunder","Lingering Tunes"]},{"id":390070052,"slug":"fission-junrock","name":"Fission Junrock","cost":1,"class":"Common","attribute":"0","sonataEffects":["Moonlit Clouds","Void Thunder","Rejuvenating Glow"]},{"id":390070053,"slug":"electro-predator","name":"Electro Predator","cost":1,"class":"Common","attribute":"Electro","sonataEffects":["Molten Rift","Void Thunder"]},{"id":390070064,"slug":"fusion-warrior","name":"Fusion Warrior","cost":1,"class":"Common","attribute":"Fusion","sonataEffects":["Sierra Gale","Void Thunder","Molten Rift"]},{"id":390070065,"slug":"havoc-warrior","name":"Havoc Warrior","cost":1,"class":"Common","attribute":"Havoc","sonataEffects":["Celestial Light","Sun-sinking Eclipse"]},{"id":390070066,"slug":"snip-snap","name":"Snip Snap","cost":1,"class":"Common","attribute":"Fusion","sonataEffects":["Lingering Tunes","Rejuvenating Glow","Molten Rift"]},{"id":390070067,"slug":"zig-zag","name":"Zig Zag","cost":1,"class":"Common","attribute":"Spectro","sonataEffects":["Moonlit Clouds","Lingering Tunes","Celestial Light"]},{"id":390070068,"slug":"whiff-whaff","name":"Whiff Whaff","cost":1,"class":"Common","attribute":"Aero","sonataEffects":["Rejuvenating Glow","Moonlit Clouds","Sierra Gale"]},{"id":390070069,"slug":"tick-tack","name":"Tick Tack","cost":1,"class":"Common","attribute":"Havoc","sonataEffects":["Lingering Tunes","Rejuvenating Glow","Sun-sinking Eclipse"]},{"id":390070070,"slug":"glacio-predator","name":"Glacio Predator","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":390070071,"slug":"aero-predator","name":"Aero Predator","cost":1,"class":"Common","attribute":"Aero","sonataEffects":["Void Thunder","Sierra Gale"]},{"id":390070074,"slug":"cruisewing","name":"Cruisewing","cost":1,"class":"Common","attribute":"Spectro","sonataEffects":["Rejuvenating Glow","Moonlit Clouds","Celestial Light"]},{"id":390070075,"slug":"sabyr-boar","name":"Sabyr Boar","cost":1,"class":"Common","attribute":"0","sonataEffects":["Moonlit Clouds","Sierra Gale","Freezing Frost"]},{"id":390070076,"slug":"gulpuff","name":"Gulpuff","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":390070077,"slug":"excarat","name":"Excarat","cost":1,"class":"Common","attribute":"Havoc","sonataEffects":["Freezing Frost","Sun-sinking Eclipse"]},{"id":390070078,"slug":"young-geohide-saurian","name":"Young Geohide Saurian","cost":1,"class":"Common","attribute":"Fusion","sonataEffects":["Lingering Tunes","Void Thunder","Molten Rift"]},{"id":390070079,"slug":"young-roseshroom","name":"Young Roseshroom","cost":1,"class":"Common","attribute":"Havoc","sonataEffects":["Sierra Gale","Sun-sinking Eclipse"]},{"id":390070100,"slug":"fusion-dreadmane","name":"Fusion Dreadmane","cost":1,"class":"Common","attribute":"Fusion","sonataEffects":["Rejuvenating Glow","Molten Rift"]},{"id":390070105,"slug":"hoartoise","name":"Hoartoise","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":390077004,"slug":"violet-feathered-heron","name":"Violet-Feathered Heron","cost":3,"class":"Elite","attribute":"Electro","sonataEffects":["Molten Rift","Void Thunder"]},{"id":390077005,"slug":"cyan-feathered-heron","name":"Cyan-Feathered Heron","cost":3,"class":"Elite","attribute":"Aero","sonataEffects":["Sierra Gale","Celestial Light"]},{"id":390077012,"slug":"fusion-prism","name":"Fusion Prism","cost":1,"class":"Common","attribute":"Fusion","sonataEffects":["Freezing Frost","Lingering Tunes","Molten Rift"]},{"id":390077013,"slug":"glacio-prism","name":"Glacio Prism","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Sun-sinking Eclipse","Moonlit Clouds","Freezing Frost"]},{"id":390077016,"slug":"spectro-prism","name":"Spectro Prism","cost":1,"class":"Common","attribute":"Spectro","sonataEffects":["Molten Rift","Void Thunder","Celestial Light"]},{"id":390077017,"slug":"havoc-prism","name":"Havoc Prism","cost":1,"class":"Common","attribute":"Havoc","sonataEffects":["Void Thunder","Celestial Light","Sun-sinking Eclipse"]},{"id":390077021,"slug":"stonewall-bracer","name":"Stonewall Bracer","cost":3,"class":"Elite","attribute":"0","sonataEffects":["Rejuvenating Glow","Moonlit Clouds"]},{"id":390077022,"slug":"flautist","name":"Flautist","cost":3,"class":"Elite","attribute":"Electro","sonataEffects":["Lingering Tunes","Void Thunder"]},{"id":390077023,"slug":"tambourinist","name":"Tambourinist","cost":3,"class":"Elite","attribute":"Havoc","sonataEffects":["Freezing Frost","Sun-sinking Eclipse"]},{"id":390077024,"slug":"rocksteady-guardian","name":"Rocksteady Guardian","cost":3,"class":"Elite","attribute":"Spectro","sonataEffects":["Rejuvenating Glow","Celestial Light"]},{"id":390077025,"slug":"chasm-guardian","name":"Chasm Guardian","cost":3,"class":"Elite","attribute":"Havoc","sonataEffects":["Lingering Tunes","Rejuvenating Glow"]},{"id":390077028,"slug":"geohide-saurian","name":"Geohide Saurian","cost":3,"class":"Elite","attribute":"Fusion","sonataEffects":["Moonlit Clouds","Molten Rift"]},{"id":390077029,"slug":"roseshroom","name":"Roseshroom","cost":3,"class":"Elite","attribute":"Havoc","sonataEffects":["Freezing Frost","Sun-sinking Eclipse"]},{"id":390077033,"slug":"havoc-dreadmane","name":"Havoc Dreadmane","cost":3,"class":"Elite","attribute":"Havoc","sonataEffects":["Molten Rift","Sun-sinking Eclipse"]},{"id":390077038,"slug":"spearback","name":"Spearback","cost":3,"class":"Elite","attribute":"0","sonataEffects":["Lingering Tunes","Moonlit Clouds"]},{"id":390080003,"slug":"thundering-mephis","name":"Thundering Mephis","cost":4,"class":"Overlord","attribute":"Electro","sonataEffects":["Void Thunder"]},{"id":390080005,"slug":"bell-borne-geochelone","name":"Bell-Borne Geochelone","cost":4,"class":"Calamity","attribute":"Glacio","sonataEffects":["Moonlit Clouds","Rejuvenating Glow"]},{"id":390080007,"slug":"inferno-rider","name":"Inferno Rider","cost":4,"class":"Overlord","attribute":"Fusion","sonataEffects":["Molten Rift"]},{"id":390180010,"slug":"phantom-feilian-beringal","name":"Phantom: Feilian Beringal","cost":4,"class":"Overlord","attribute":"Aero","sonataEffects":["Sierra Gale"]},{"id":391070105,"slug":"phantom-hoartoise","name":"Phantom: Hoartoise","cost":1,"class":"Common","attribute":"Glacio","sonataEffects":["Celestial Light","Freezing Frost"]},{"id":391077024,"slug":"phantom-rocksteady-guardian","name":"Phantom: Rocksteady Guardian","cost":3,"class":"Elite","attribute":"Spectro","sonataEffects":["Rejuvenating Glow","Celestial Light"]},{"id":391080003,"slug":"phantom-thundering-mephis","name":"Phantom: Thundering Mephis","cost":4,"class":"Overlord","attribute":"Electro","sonataEffects":["Void Thunder"]}]
+[
+  {
+    "id": 6000038,
+    "slug": "hooscamp",
+    "name": "Hooscamp",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Aero",
+    "sonataEffects": ["Lingering Tunes", "Sierra Gale"]
+  },
+  {
+    "id": 6000039,
+    "slug": "tempest-mephis",
+    "name": "Tempest Mephis",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Electro",
+    "sonataEffects": ["Void Thunder"]
+  },
+  {
+    "id": 6000040,
+    "slug": "hoochief",
+    "name": "Hoochief",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Aero",
+    "sonataEffects": ["Rejuvenating Glow", "Sierra Gale"]
+  },
+  {
+    "id": 6000041,
+    "slug": "diamondclaw",
+    "name": "Diamondclaw",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "0",
+    "sonataEffects": ["Moonlit Clouds", "Lingering Tunes"]
+  },
+  {
+    "id": 6000042,
+    "slug": "crownless",
+    "name": "Crownless",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Havoc",
+    "sonataEffects": ["Sun-sinking Eclipse"]
+  },
+  {
+    "id": 6000043,
+    "slug": "feilian-beringal",
+    "name": "Feilian Beringal",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Aero",
+    "sonataEffects": ["Sierra Gale"]
+  },
+  {
+    "id": 6000044,
+    "slug": "lampylumen-myriad",
+    "name": "Lampylumen Myriad",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Glacio",
+    "sonataEffects": ["Freezing Frost"]
+  },
+  {
+    "id": 6000045,
+    "slug": "mourning-aix",
+    "name": "Mourning Aix",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Spectro",
+    "sonataEffects": ["Celestial Light"]
+  },
+  {
+    "id": 6000046,
+    "slug": "chaserazor",
+    "name": "Chaserazor",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Aero",
+    "sonataEffects": ["Moonlit Clouds", "Sierra Gale"]
+  },
+  {
+    "id": 6000047,
+    "slug": "chirpuff",
+    "name": "Chirpuff",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Aero",
+    "sonataEffects": ["Sun-sinking Eclipse", "Sierra Gale"]
+  },
+  {
+    "id": 6000048,
+    "slug": "mech-abomination",
+    "name": "Mech Abomination",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Electro",
+    "sonataEffects": ["Lingering Tunes"]
+  },
+  {
+    "id": 6000049,
+    "slug": "autopuppet-scout",
+    "name": "Autopuppet Scout",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 6000050,
+    "slug": "traffic-illuminator",
+    "name": "Traffic Illuminator",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "0",
+    "sonataEffects": ["Void Thunder", "Sierra Gale", "Molten Rift"]
+  },
+  {
+    "id": 6000051,
+    "slug": "clang-bang",
+    "name": "Clang Bang",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 6000052,
+    "slug": "impermanence-heron",
+    "name": "Impermanence Heron",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Havoc",
+    "sonataEffects": ["Moonlit Clouds"]
+  },
+  {
+    "id": 6000053,
+    "slug": "dreamless",
+    "name": "Dreamless",
+    "cost": 4,
+    "class": "Calamity",
+    "attribute": "Havoc",
+    "sonataEffects": ["Sun-sinking Eclipse"]
+  },
+  {
+    "id": 6000054,
+    "slug": "firebug",
+    "name": "Firebug",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Fusion",
+    "sonataEffects": ["Lingering Tunes", "Molten Rift"]
+  },
+  {
+    "id": 6000055,
+    "slug": "dwarf-cassowary",
+    "name": "Dwarf Cassowary",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "0",
+    "sonataEffects": ["Sierra Gale", "Rejuvenating Glow"]
+  },
+  {
+    "id": 6000056,
+    "slug": "glacio-dreadmane",
+    "name": "Glacio Dreadmane",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Glacio",
+    "sonataEffects": ["Moonlit Clouds", "Freezing Frost"]
+  },
+  {
+    "id": 6000057,
+    "slug": "lumiscale-construct",
+    "name": "Lumiscale Construct",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Glacio",
+    "sonataEffects": ["Void Thunder", "Freezing Frost"]
+  },
+  {
+    "id": 6000058,
+    "slug": "lightcrusher",
+    "name": "Lightcrusher",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Spectro",
+    "sonataEffects": ["Celestial Light"]
+  },
+  {
+    "id": 6000059,
+    "slug": "jue",
+    "name": "Jué",
+    "cost": 4,
+    "class": "Calamity",
+    "attribute": "Spectro",
+    "sonataEffects": ["Celestial Light"]
+  },
+  {
+    "id": 6000145,
+    "slug": "phantom-mourning-aix",
+    "name": "Phantom: Mourning Aix",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Spectro",
+    "sonataEffects": ["Celestial Light"]
+  },
+  {
+    "id": 6010051,
+    "slug": "altered-clang-bang",
+    "name": "Altered Clang Bang",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 6010052,
+    "slug": "phantom-impermanence-heron",
+    "name": "Phantom: Impermanence Heron",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Havoc",
+    "sonataEffects": ["Moonlit Clouds"]
+  },
+  {
+    "id": 6010058,
+    "slug": "altered-lightcrusher",
+    "name": "Altered Lightcrusher",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Spectro",
+    "sonataEffects": ["Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390070051,
+    "slug": "vanguard-junrock",
+    "name": "Vanguard Junrock",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "0",
+    "sonataEffects": ["Rejuvenating Glow", "Void Thunder", "Lingering Tunes"]
+  },
+  {
+    "id": 390070052,
+    "slug": "fission-junrock",
+    "name": "Fission Junrock",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "0",
+    "sonataEffects": ["Moonlit Clouds", "Void Thunder", "Rejuvenating Glow"]
+  },
+  {
+    "id": 390070053,
+    "slug": "electro-predator",
+    "name": "Electro Predator",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Electro",
+    "sonataEffects": ["Molten Rift", "Void Thunder"]
+  },
+  {
+    "id": 390070064,
+    "slug": "fusion-warrior",
+    "name": "Fusion Warrior",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Fusion",
+    "sonataEffects": ["Sierra Gale", "Void Thunder", "Molten Rift"]
+  },
+  {
+    "id": 390070065,
+    "slug": "havoc-warrior",
+    "name": "Havoc Warrior",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Havoc",
+    "sonataEffects": ["Celestial Light", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390070066,
+    "slug": "snip-snap",
+    "name": "Snip Snap",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Fusion",
+    "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow", "Molten Rift"]
+  },
+  {
+    "id": 390070067,
+    "slug": "zig-zag",
+    "name": "Zig Zag",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Spectro",
+    "sonataEffects": ["Moonlit Clouds", "Lingering Tunes", "Celestial Light"]
+  },
+  {
+    "id": 390070068,
+    "slug": "whiff-whaff",
+    "name": "Whiff Whaff",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Aero",
+    "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds", "Sierra Gale"]
+  },
+  {
+    "id": 390070069,
+    "slug": "tick-tack",
+    "name": "Tick Tack",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Havoc",
+    "sonataEffects": [
+      "Lingering Tunes",
+      "Rejuvenating Glow",
+      "Sun-sinking Eclipse"
+    ]
+  },
+  {
+    "id": 390070070,
+    "slug": "glacio-predator",
+    "name": "Glacio Predator",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 390070071,
+    "slug": "aero-predator",
+    "name": "Aero Predator",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Aero",
+    "sonataEffects": ["Void Thunder", "Sierra Gale"]
+  },
+  {
+    "id": 390070074,
+    "slug": "cruisewing",
+    "name": "Cruisewing",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Spectro",
+    "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds", "Celestial Light"]
+  },
+  {
+    "id": 390070075,
+    "slug": "sabyr-boar",
+    "name": "Sabyr Boar",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "0",
+    "sonataEffects": ["Moonlit Clouds", "Sierra Gale", "Freezing Frost"]
+  },
+  {
+    "id": 390070076,
+    "slug": "gulpuff",
+    "name": "Gulpuff",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 390070077,
+    "slug": "excarat",
+    "name": "Excarat",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Havoc",
+    "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390070078,
+    "slug": "young-geohide-saurian",
+    "name": "Young Geohide Saurian",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Fusion",
+    "sonataEffects": ["Lingering Tunes", "Void Thunder", "Molten Rift"]
+  },
+  {
+    "id": 390070079,
+    "slug": "young-roseshroom",
+    "name": "Young Roseshroom",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Havoc",
+    "sonataEffects": ["Sierra Gale", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390070100,
+    "slug": "fusion-dreadmane",
+    "name": "Fusion Dreadmane",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Fusion",
+    "sonataEffects": ["Rejuvenating Glow", "Molten Rift"]
+  },
+  {
+    "id": 390070105,
+    "slug": "hoartoise",
+    "name": "Hoartoise",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 390077004,
+    "slug": "violet-feathered-heron",
+    "name": "Violet-Feathered Heron",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Electro",
+    "sonataEffects": ["Molten Rift", "Void Thunder"]
+  },
+  {
+    "id": 390077005,
+    "slug": "cyan-feathered-heron",
+    "name": "Cyan-Feathered Heron",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Aero",
+    "sonataEffects": ["Sierra Gale", "Celestial Light"]
+  },
+  {
+    "id": 390077012,
+    "slug": "fusion-prism",
+    "name": "Fusion Prism",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Fusion",
+    "sonataEffects": ["Freezing Frost", "Lingering Tunes", "Molten Rift"]
+  },
+  {
+    "id": 390077013,
+    "slug": "glacio-prism",
+    "name": "Glacio Prism",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Sun-sinking Eclipse", "Moonlit Clouds", "Freezing Frost"]
+  },
+  {
+    "id": 390077016,
+    "slug": "spectro-prism",
+    "name": "Spectro Prism",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Spectro",
+    "sonataEffects": ["Molten Rift", "Void Thunder", "Celestial Light"]
+  },
+  {
+    "id": 390077017,
+    "slug": "havoc-prism",
+    "name": "Havoc Prism",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Havoc",
+    "sonataEffects": ["Void Thunder", "Celestial Light", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390077021,
+    "slug": "stonewall-bracer",
+    "name": "Stonewall Bracer",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "0",
+    "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds"]
+  },
+  {
+    "id": 390077022,
+    "slug": "flautist",
+    "name": "Flautist",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Electro",
+    "sonataEffects": ["Lingering Tunes", "Void Thunder"]
+  },
+  {
+    "id": 390077023,
+    "slug": "tambourinist",
+    "name": "Tambourinist",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Havoc",
+    "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390077024,
+    "slug": "rocksteady-guardian",
+    "name": "Rocksteady Guardian",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Spectro",
+    "sonataEffects": ["Rejuvenating Glow", "Celestial Light"]
+  },
+  {
+    "id": 390077025,
+    "slug": "chasm-guardian",
+    "name": "Chasm Guardian",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Havoc",
+    "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow"]
+  },
+  {
+    "id": 390077028,
+    "slug": "geohide-saurian",
+    "name": "Geohide Saurian",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Fusion",
+    "sonataEffects": ["Moonlit Clouds", "Molten Rift"]
+  },
+  {
+    "id": 390077029,
+    "slug": "roseshroom",
+    "name": "Roseshroom",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Havoc",
+    "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390077033,
+    "slug": "havoc-dreadmane",
+    "name": "Havoc Dreadmane",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Havoc",
+    "sonataEffects": ["Molten Rift", "Sun-sinking Eclipse"]
+  },
+  {
+    "id": 390077038,
+    "slug": "spearback",
+    "name": "Spearback",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "0",
+    "sonataEffects": ["Lingering Tunes", "Moonlit Clouds"]
+  },
+  {
+    "id": 390080003,
+    "slug": "thundering-mephis",
+    "name": "Thundering Mephis",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Electro",
+    "sonataEffects": ["Void Thunder"]
+  },
+  {
+    "id": 390080005,
+    "slug": "bell-borne-geochelone",
+    "name": "Bell-Borne Geochelone",
+    "cost": 4,
+    "class": "Calamity",
+    "attribute": "Glacio",
+    "sonataEffects": ["Moonlit Clouds", "Rejuvenating Glow"]
+  },
+  {
+    "id": 390080007,
+    "slug": "inferno-rider",
+    "name": "Inferno Rider",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Fusion",
+    "sonataEffects": ["Molten Rift"]
+  },
+  {
+    "id": 390180010,
+    "slug": "phantom-feilian-beringal",
+    "name": "Phantom: Feilian Beringal",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Aero",
+    "sonataEffects": ["Sierra Gale"]
+  },
+  {
+    "id": 391070105,
+    "slug": "phantom-hoartoise",
+    "name": "Phantom: Hoartoise",
+    "cost": 1,
+    "class": "Common",
+    "attribute": "Glacio",
+    "sonataEffects": ["Celestial Light", "Freezing Frost"]
+  },
+  {
+    "id": 391077024,
+    "slug": "phantom-rocksteady-guardian",
+    "name": "Phantom: Rocksteady Guardian",
+    "cost": 3,
+    "class": "Elite",
+    "attribute": "Spectro",
+    "sonataEffects": ["Rejuvenating Glow", "Celestial Light"]
+  },
+  {
+    "id": 391080003,
+    "slug": "phantom-thundering-mephis",
+    "name": "Phantom: Thundering Mephis",
+    "cost": 4,
+    "class": "Overlord",
+    "attribute": "Electro",
+    "sonataEffects": ["Void Thunder"]
+  }
+]

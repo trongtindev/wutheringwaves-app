@@ -1,1 +1,15 @@
-{"slug":"jue","skill":{"id":280012,"cd":20,"params":[["30.40%","12.16%","30.40%","40.00%","10.00%","20"],["34.96%","13.98%","34.96%","46.00%","11.50%","20"],["39.52%","15.81%","39.52%","52.00%","13.00%","20"],["44.08%","17.63%","44.08%","58.00%","14.50%","20"],["48.64%","19.46%","48.64%","64.00%","16.00%","20"]],"description":"Summon Jué to leap into the air, dealing {0} Spectro DMG to the enemies and bringing forth Lightthunder. Lightthunder hits up to 5 times in total, each dealing {1} Spectro DMG to the surrounding enemies. Then Jué spirals downward to attack the surrounding enemies, dealing {2} Spectro DMG two times in a row. \nThe Resonator equipped with this Echo Skill obtains 1 stack of \"Blessing of Time\" every 6s, stacking up to 3 times. When the Resonator performs Resonance Skill, 1 stack of \"Blessing of Time\" is consumed, dealing {3} Spectro DMG to the surrounding enemies. The enemies hit receive {4} Spectro DMG per second over 6s, stacking up to 3 times and new stacks extending the effect period. The damage dealt through consuming the stacks of \"Blessing of Time\" is considered as Resonance Skill DMG.\n\nCD: {5}s"}}
+{
+  "slug": "jue",
+  "skill": {
+    "id": 280012,
+    "cd": 20,
+    "params": [
+      ["30.40%", "12.16%", "30.40%", "40.00%", "10.00%", "20"],
+      ["34.96%", "13.98%", "34.96%", "46.00%", "11.50%", "20"],
+      ["39.52%", "15.81%", "39.52%", "52.00%", "13.00%", "20"],
+      ["44.08%", "17.63%", "44.08%", "58.00%", "14.50%", "20"],
+      ["48.64%", "19.46%", "48.64%", "64.00%", "16.00%", "20"]
+    ],
+    "description": "Summon Jué to leap into the air, dealing {0} Spectro DMG to the enemies and bringing forth Lightthunder. Lightthunder hits up to 5 times in total, each dealing {1} Spectro DMG to the surrounding enemies. Then Jué spirals downward to attack the surrounding enemies, dealing {2} Spectro DMG two times in a row. \nThe Resonator equipped with this Echo Skill obtains 1 stack of \"Blessing of Time\" every 6s, stacking up to 3 times. When the Resonator performs Resonance Skill, 1 stack of \"Blessing of Time\" is consumed, dealing {3} Spectro DMG to the surrounding enemies. The enemies hit receive {4} Spectro DMG per second over 6s, stacking up to 3 times and new stacks extending the effect period. The damage dealt through consuming the stacks of \"Blessing of Time\" is considered as Resonance Skill DMG.\n\nCD: {5}s"
+  }
+}

@@ -1,1 +1,72 @@
-{"slug":"lunar-cutter","skill":{"params":[["6","2%","6","12","1","2","1","6"],["6","2.5%","6","12","1","2","1","6"],["6","3%","6","12","1","2","1","6"],["6","3.5%","6","12","1","2","1","6"],["6","4%","6","12","1","2","1","6"]],"description":"Equipped Resonator gains {0} stack(s) of Oath upon entering the battlefield. Each stack increases ATK by {1}, up to {2} stacks. This effect can be triggered {4} time(s) every {3}s. Oath reduces by {6} stack(s) every {5}s. Equipped Resonator gains an additional {7} stack(s) of Oath upon defeating an enemy."},"stats":{"atk":33},"ascensions":[{"cost":[{"item":41100021,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020011,"quantity":5},{"item":41100022,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020012,"quantity":7},{"item":41100023,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020013,"quantity":5},{"item":41100023,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020014,"quantity":7},{"item":41100024,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020014,"quantity":10},{"item":41100024,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"The Sword born from the aerial phenomenon. The forger integrates the feelings of witnessing the alien star into the weapon, making it look light and sharp, but it can exert the energy of breaking the sky and cutting iron like mud.","ranks":["Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 2%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.","Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 2.5%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.","Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 3%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.","Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 3.5%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.","Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 4%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy."]}
+{
+  "slug": "lunar-cutter",
+  "skill": {
+    "params": [
+      ["6", "2%", "6", "12", "1", "2", "1", "6"],
+      ["6", "2.5%", "6", "12", "1", "2", "1", "6"],
+      ["6", "3%", "6", "12", "1", "2", "1", "6"],
+      ["6", "3.5%", "6", "12", "1", "2", "1", "6"],
+      ["6", "4%", "6", "12", "1", "2", "1", "6"]
+    ],
+    "description": "Equipped Resonator gains {0} stack(s) of Oath upon entering the battlefield. Each stack increases ATK by {1}, up to {2} stacks. This effect can be triggered {4} time(s) every {3}s. Oath reduces by {6} stack(s) every {5}s. Equipped Resonator gains an additional {7} stack(s) of Oath upon defeating an enemy."
+  },
+  "stats": { "atk": 33 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "The Sword born from the aerial phenomenon. The forger integrates the feelings of witnessing the alien star into the weapon, making it look light and sharp, but it can exert the energy of breaking the sky and cutting iron like mud.",
+  "ranks": [
+    "Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 2%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.",
+    "Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 2.5%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.",
+    "Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 3%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.",
+    "Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 3.5%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy.",
+    "Equipped Resonator gains 6 stack(s) of Oath upon entering the battlefield. Each stack increases ATK by 4%, up to 6 stacks. This effect can be triggered 1 time(s) every 12s. Oath reduces by 1 stack(s) every 2s. Equipped Resonator gains an additional 6 stack(s) of Oath upon defeating an enemy."
+  ]
+}

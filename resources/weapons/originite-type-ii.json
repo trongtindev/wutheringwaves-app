@@ -1,1 +1,72 @@
-{"slug":"originite-type-ii","skill":{"params":[["5%","20","1"],["6.25%","20","1"],["7.5%","20","1"],["8.75%","20","1"],["10%","20","1"]],"description":"When Resonance Liberation is released, restores HP by {0}. This effect can be triggered {2} time(s) every {1}s."},"stats":{"atk":26},"ascensions":[{"cost":[{"item":41100021,"quantity":4},{"item":2,"quantity":6000}],"minLevel":20},{"cost":[{"item":43020011,"quantity":4},{"item":41100022,"quantity":4},{"item":2,"quantity":12000}],"minLevel":40},{"cost":[{"item":43020012,"quantity":5},{"item":41100023,"quantity":3},{"item":2,"quantity":24000}],"minLevel":50},{"cost":[{"item":43020013,"quantity":4},{"item":41100023,"quantity":4},{"item":2,"quantity":36000}],"minLevel":60},{"cost":[{"item":43020014,"quantity":5},{"item":41100024,"quantity":3},{"item":2,"quantity":48000}],"minLevel":70},{"cost":[{"item":43020014,"quantity":8},{"item":41100024,"quantity":5},{"item":2,"quantity":72000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"To create new Tacetite weapons, the Huaxu Academy designed this test Sword for technical verification. Its main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.","ranks":["When Resonance Liberation is released, restores HP by 5%. This effect can be triggered 1 time(s) every 20s.","When Resonance Liberation is released, restores HP by 6.25%. This effect can be triggered 1 time(s) every 20s.","When Resonance Liberation is released, restores HP by 7.5%. This effect can be triggered 1 time(s) every 20s.","When Resonance Liberation is released, restores HP by 8.75%. This effect can be triggered 1 time(s) every 20s.","When Resonance Liberation is released, restores HP by 10%. This effect can be triggered 1 time(s) every 20s."]}
+{
+  "slug": "originite-type-ii",
+  "skill": {
+    "params": [
+      ["5%", "20", "1"],
+      ["6.25%", "20", "1"],
+      ["7.5%", "20", "1"],
+      ["8.75%", "20", "1"],
+      ["10%", "20", "1"]
+    ],
+    "description": "When Resonance Liberation is released, restores HP by {0}. This effect can be triggered {2} time(s) every {1}s."
+  },
+  "stats": { "atk": 26 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 4 },
+        { "item": 2, "quantity": 6000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 4 },
+        { "item": 41100022, "quantity": 4 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 5 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 4 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 36000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 5 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 8 },
+        { "item": 41100024, "quantity": 5 },
+        { "item": 2, "quantity": 72000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "To create new Tacetite weapons, the Huaxu Academy designed this test Sword for technical verification. Its main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.",
+  "ranks": [
+    "When Resonance Liberation is released, restores HP by 5%. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Liberation is released, restores HP by 6.25%. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Liberation is released, restores HP by 7.5%. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Liberation is released, restores HP by 8.75%. This effect can be triggered 1 time(s) every 20s.",
+    "When Resonance Liberation is released, restores HP by 10%. This effect can be triggered 1 time(s) every 20s."
+  ]
+}

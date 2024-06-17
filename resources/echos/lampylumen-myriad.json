@@ -1,1 +1,15 @@
-{"slug":"lampylumen-myriad","skill":{"id":280007,"cd":20,"params":[["125.10%","125.10%","166.80%","4.00%","4.00%","15","20"],["143.87%","143.87%","191.82%","4.00%","4.00%","15","20"],["162.63%","162.63%","216.84%","4.00%","4.00%","15","20"],["181.40%","181.40%","241.86%","4.00%","4.00%","15","20"],["200.16%","200.16%","266.88%","4.00%","4.00%","15","20"]],"description":"Transform into Lampylumen Myriad. Perform up to 3 consecutive attacks.\n\nUnleash a freezing shock by performing consecutive forward strikes, with the initial two strikes inflicting {0} and {1} Glacio DMG respectively, and the final strike dealing {2} Glacio DMG. Enemies will be frozen on hit.\n\nEach shock increases the current character’s Glacio DMG by {3} and Resonance Skill DMG dealt by {4} for {5}s, stacking up to 3 times\n\nCD: {6}s"}}
+{
+  "slug": "lampylumen-myriad",
+  "skill": {
+    "id": 280007,
+    "cd": 20,
+    "params": [
+      ["125.10%", "125.10%", "166.80%", "4.00%", "4.00%", "15", "20"],
+      ["143.87%", "143.87%", "191.82%", "4.00%", "4.00%", "15", "20"],
+      ["162.63%", "162.63%", "216.84%", "4.00%", "4.00%", "15", "20"],
+      ["181.40%", "181.40%", "241.86%", "4.00%", "4.00%", "15", "20"],
+      ["200.16%", "200.16%", "266.88%", "4.00%", "4.00%", "15", "20"]
+    ],
+    "description": "Transform into Lampylumen Myriad. Perform up to 3 consecutive attacks.\n\nUnleash a freezing shock by performing consecutive forward strikes, with the initial two strikes inflicting {0} and {1} Glacio DMG respectively, and the final strike dealing {2} Glacio DMG. Enemies will be frozen on hit.\n\nEach shock increases the current character’s Glacio DMG by {3} and Resonance Skill DMG dealt by {4} for {5}s, stacking up to 3 times\n\nCD: {6}s"
+  }
+}

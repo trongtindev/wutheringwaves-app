@@ -1,1 +1,72 @@
-{"slug":"sword-18","skill":{"params":[["40%","18%","5%","8","1"],["50%","22.5%","6.25%","8","1"],["60%","27%","7.5%","8","1"],["70%","31.5%","8.75%","8","1"],["80%","36%","10%","8","1"]],"description":"When Equipped Resonator's HP drops below {0}, increases Heavy Attack DMG by {1} and restores HP by {2} upon dealing Heavy Attack DMG. This effect can be triggered {4} time(s) every {3}s."},"stats":{"atk":31},"ascensions":[{"cost":[{"item":41100021,"quantity":5},{"item":2,"quantity":8000}],"minLevel":20},{"cost":[{"item":43020011,"quantity":5},{"item":41100022,"quantity":5},{"item":2,"quantity":16000}],"minLevel":40},{"cost":[{"item":43020012,"quantity":7},{"item":41100023,"quantity":4},{"item":2,"quantity":32000}],"minLevel":50},{"cost":[{"item":43020013,"quantity":5},{"item":41100023,"quantity":5},{"item":2,"quantity":48000}],"minLevel":60},{"cost":[{"item":43020014,"quantity":7},{"item":41100024,"quantity":4},{"item":2,"quantity":64000}],"minLevel":70},{"cost":[{"item":43020014,"quantity":10},{"item":41100024,"quantity":7},{"item":2,"quantity":96000}],"minLevel":80},{"cost":[{"item":2,"quantity":0}],"minLevel":90}],"description":"Improved version of a mass-produced sword model developed in Huanglong. With its sleek blade and minimalist design, this sword is exclusively crafted for the skilled hands of seasoned warriors.","ranks":["When Equipped Resonator's HP drops below 40%, increases Heavy Attack DMG by 18% and restores HP by 5% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.","When Equipped Resonator's HP drops below 50%, increases Heavy Attack DMG by 22.5% and restores HP by 6.25% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.","When Equipped Resonator's HP drops below 60%, increases Heavy Attack DMG by 27% and restores HP by 7.5% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.","When Equipped Resonator's HP drops below 70%, increases Heavy Attack DMG by 31.5% and restores HP by 8.75% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.","When Equipped Resonator's HP drops below 80%, increases Heavy Attack DMG by 36% and restores HP by 10% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s."]}
+{
+  "slug": "sword-18",
+  "skill": {
+    "params": [
+      ["40%", "18%", "5%", "8", "1"],
+      ["50%", "22.5%", "6.25%", "8", "1"],
+      ["60%", "27%", "7.5%", "8", "1"],
+      ["70%", "31.5%", "8.75%", "8", "1"],
+      ["80%", "36%", "10%", "8", "1"]
+    ],
+    "description": "When Equipped Resonator's HP drops below {0}, increases Heavy Attack DMG by {1} and restores HP by {2} upon dealing Heavy Attack DMG. This effect can be triggered {4} time(s) every {3}s."
+  },
+  "stats": { "atk": 31 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "Improved version of a mass-produced sword model developed in Huanglong. With its sleek blade and minimalist design, this sword is exclusively crafted for the skilled hands of seasoned warriors.",
+  "ranks": [
+    "When Equipped Resonator's HP drops below 40%, increases Heavy Attack DMG by 18% and restores HP by 5% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
+    "When Equipped Resonator's HP drops below 50%, increases Heavy Attack DMG by 22.5% and restores HP by 6.25% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
+    "When Equipped Resonator's HP drops below 60%, increases Heavy Attack DMG by 27% and restores HP by 7.5% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
+    "When Equipped Resonator's HP drops below 70%, increases Heavy Attack DMG by 31.5% and restores HP by 8.75% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
+    "When Equipped Resonator's HP drops below 80%, increases Heavy Attack DMG by 36% and restores HP by 10% upon dealing Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s."
+  ]
+}

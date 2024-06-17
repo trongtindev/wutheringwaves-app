@@ -1,1 +1,15 @@
-{"slug":"spectro-prism","skill":{"id":200010,"cd":8,"params":[["8","9.00%","8"],["8","10.35%","8"],["8","11.70%","8"],["8","13.05%","8"],["8","14.40%","8"]],"description":"Summon a Spectro Prism to emit a laser that hits the enemy up to {0} times, dealing {1} Spectro DMG each time.\r\n\r\nCD: {2}s"}}
+{
+  "slug": "spectro-prism",
+  "skill": {
+    "id": 200010,
+    "cd": 8,
+    "params": [
+      ["8", "9.00%", "8"],
+      ["8", "10.35%", "8"],
+      ["8", "11.70%", "8"],
+      ["8", "13.05%", "8"],
+      ["8", "14.40%", "8"]
+    ],
+    "description": "Summon a Spectro Prism to emit a laser that hits the enemy up to {0} times, dealing {1} Spectro DMG each time.\r\n\r\nCD: {2}s"
+  }
+}
