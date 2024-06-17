@@ -51,6 +51,9 @@
     "items": {
       "title": "Item List",
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity."
+    },
+    "settings": {
+      "title": "Settings"
     }
   },
   "sidebar": {
