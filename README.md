@@ -55,6 +55,7 @@ src/locales
 | vi.json  | Vietnamese    |
 
 ## Development
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 If you're interested in the API, it's
 here [https://github.com/trongtindev/wuthering-waves-app-api](https://github.com/trongtindev/wuthering-waves-app-api)
