@@ -233,7 +233,22 @@
     "expired": "Expired"
   },
   "map": {
-    "title": "Interactive Map"
+    "title": "Interactive Map",
+    "locations": "Locations",
+    "exploration": "Exploration",
+    "ascension": "Ascension",
+    "puzzles": "Puzzles",
+    "echosCost3": "Echos Cost 3",
+    "echosCost1": "Echos Cost 1",
+    "ore": "Ore",
+    "animals": "Animals",
+    "collection": "Collection",
+    "comments": {
+      "pleaseSelectMarker": "Please select a marker on the map to enable comments."
+    },
+    "hideFoundMarkers": "Hide found markers",
+    "markAsNotFound": "Mark as Not found",
+    "markAsFound": "Mark as Found"
   },
   "common": {
     "name": "Name",
@@ -281,7 +296,9 @@
     "items": "Items",
     "item": "Item",
     "ascensionMaterial": "Ascension Material",
-    "successfully": "Successfully!"
+    "successfully": "Successfully!",
+    "checkAll": "Check all",
+    "clear": "Clear"
   },
   "other": {
     "underDevelopment": "This site is under development."

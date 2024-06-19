@@ -196,7 +196,22 @@
   },
   "leaderboards": { "title": "Leaderboards" },
   "codes": { "title": "Wuthering Waves Codes", "expired": "Đã hết hạn" },
-  "map": { "title": "Interactive Map" },
+  "map": {
+    "title": "Interactive Map",
+    "locations": "Locations",
+    "exploration": "Exploration",
+    "ascension": "Ascension",
+    "puzzles": "Puzzles",
+    "echosCost3": "Echos Cost 3",
+    "echosCost1": "Echos Cost 1",
+    "ore": "Ore",
+    "animals": "Animals",
+    "collection": "Collection",
+    "comments": {
+      "pleaseSelectMarker": "Please select a marker on the map to enable comments."
+    },
+    "hideFoundMarkers": "Hide found markers"
+  },
   "common": {
     "name": "Tên",
     "time": "Thời gian",
@@ -243,7 +258,9 @@
     "items": "Items",
     "item": "Item",
     "ascensionMaterial": "Ascension Material",
-    "successfully": "Successfully!"
+    "successfully": "Successfully!",
+    "checkAll": "Check all",
+    "clear": "Clear"
   },
   "other": { "underDevelopment": "This site is under development." }
 }

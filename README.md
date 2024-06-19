@@ -17,7 +17,7 @@ In-development site for Wuthering Waves.
 | Database > Characters             | ...                                  | In progress |
 | Database > Weapons                | ...                                  | In progress |
 | Database > Echos                  | ...                                  | In progress |
-| Database > Achievements           | ...                                  | None        |
+| Database > Trophies               | ...                                  | ✅          |
 | Accounts > Multiple               | Support multiple accounts            | ✅          |
 | Tier list                         | ...                                  | In progress |
 | Tier list > Creator               | ...                                  | In progress |
@@ -30,7 +30,7 @@ In-development site for Wuthering Waves.
 | Profile > Echo                    | Upload profile via screenshot        | None        |
 | Profile > Character               | Upload profile via screenshot        | None        |
 | Codes                             | Giftcode page                        | ✅          |
-| Interactive map                   | ...                                  | None        |
+| Interactive map                   | ...                                  | In progress |
 | Trophies                          | ...                                  | ✅          |
 | Functions > Global search         | Search any thing                     | None        |
 | Functions > Notifications         | Web push notification functions      | None        |

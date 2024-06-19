@@ -20,11 +20,18 @@ import { defineStore } from 'pinia';
 import { createRxDatabase, type RxDatabase } from 'rxdb';
 import { getRxStorageDexie } from 'rxdb/plugins/storage-dexie';
 import { createId } from '@paralleldrive/cuid2';
+import {
+  markerSchema,
+  markerDocMethods,
+  markerCollectionMethods,
+  type MarkerCollection
+} from '~/collections/marker';
 
 export type DatabaseCollections = {
   convenes: ConveneCollection;
   settings: SettingCollection;
   accounts: AccountCollection;
+  markers: MarkerCollection;
 };
 export type MyDatabase = RxDatabase<DatabaseCollections>;
 
@@ -90,6 +97,12 @@ export const useDatabase = defineStore('useDatabase', () => {
                 //   return oldDoc;
                 // },
               }
+            },
+            markers: {
+              schema: markerSchema,
+              methods: markerDocMethods,
+              statics: markerCollectionMethods,
+              autoMigrate: false
             }
           });
 
@@ -121,6 +134,12 @@ export const useDatabase = defineStore('useDatabase', () => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
           db.accounts.postInsert(() => onChanged(), false);
+
+          // map
+          db.markers.preInsert((plainData) => {
+            plainData.createdAt ??= new Date().getTime();
+          }, false);
+          db.markers.postInsert(() => onChanged(), false);
 
           state.value = '';
           isInitialized.value = true;

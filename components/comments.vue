@@ -5,6 +5,8 @@ import { mdiSend, mdiImageSearch } from '@mdi/js';
 
 const props = defineProps<{
   channel: string;
+  flat?: boolean;
+  hideTitle?: boolean;
 }>();
 
 // uses
@@ -97,14 +99,29 @@ watch(
   }
 );
 
+watch(
+  () => props.channel,
+  () => {
+    data.value = null as any;
+    loadData();
+  }
+);
+
 // lifecycle
 onMounted(() => loadData());
 </script>
 
 <template>
-  <v-card>
-    <v-card-title> {{ $t('Comments') }} ({{ total }}) </v-card-title>
-    <v-divider />
+  <v-card
+    :class="{
+      'border-none': props.flat
+    }"
+  >
+    <v-card-title v-if="!props.hideTitle">
+      {{ $t('Comments') }} ({{ total }})
+    </v-card-title>
+    <v-divider v-if="!props.hideTitle" />
+
     <v-card-actions>
       <v-form class="w-100" @submit.prevent="onSubmit">
         <v-text-field

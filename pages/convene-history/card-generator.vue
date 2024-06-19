@@ -306,7 +306,7 @@ useSeoMeta({
                     primary.type == CardPoolType['featured-resonator'] ||
                     primary.type == CardPoolType['standard-resonator']
                   "
-                  :src="`/characters/portraits/${primary.slug}.png`"
+                  :src="`/characters/portraits/${primary.slug}.webp`"
                 />
 
                 <div
@@ -369,21 +369,22 @@ useSeoMeta({
                     :class="{
                       'ml-2': index > 0
                     }"
-                    class="border-rarity5"
+                    class="bg-rarity5 border-rarity5 rounded border"
+                    :rounded="true"
                   >
                     <v-img
                       v-if="
                         element.type == CardPoolType['featured-resonator'] ||
                         element.type == CardPoolType['standard-resonator']
                       "
-                      :src="`/characters/icons/${element.slug}.png`"
+                      :src="`/characters/icons/${element.slug}.webp`"
                     />
                     <v-img
                       v-else-if="
                         element.type == CardPoolType['featured-weapon'] ||
                         element.type == CardPoolType['standard-weapon']
                       "
-                      :src="`/weapons/icons/${element.slug}.png`"
+                      :src="`/weapons/icons/${element.slug}.webp`"
                     />
                   </v-avatar>
                 </v-badge>

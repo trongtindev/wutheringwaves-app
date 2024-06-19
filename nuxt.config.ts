@@ -9,6 +9,7 @@ dotenv.config({ path: './.env', override: true });
 export default defineNuxtConfig({
   ignore: ['./scripts/**/*'],
   $development: {
+    ssr: false,
     runtimeConfig: {
       public: {
         SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:8080',
@@ -27,7 +28,8 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     'nuxt-og-image',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    'nuxt3-leaflet'
   ],
   nitro: {
     storage: {

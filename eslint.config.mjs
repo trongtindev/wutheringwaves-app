@@ -16,6 +16,8 @@ export default withNuxt({}).append({
     '@typescript-eslint/ban-types': 1,
     'vue/no-side-effects-in-computed-properties': 1,
     'vue/html-self-closing': 0,
-    'vue/no-unused-vars': 1
+    'vue/no-unused-vars': 1,
+    '@typescript-eslint/no-dynamic-delete': 1,
+    'prefer-rest-params': 1
   }
 });

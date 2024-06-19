@@ -246,7 +246,7 @@ watch(
     </v-app-bar>
 
     <v-main>
-      <v-container>
+      <v-container :fluid="app.fluid">
         <under-development-alert />
         <slot />
       </v-container>
