@@ -3,6 +3,8 @@ import { RxDBJsonDumpPlugin } from 'rxdb/plugins/json-dump';
 import { RxDBQueryBuilderPlugin } from 'rxdb/plugins/query-builder';
 import { RxDBMigrationPlugin } from 'rxdb/plugins/migration-schema';
 import { RxDBUpdatePlugin } from 'rxdb/plugins/update';
+import { RxDBCleanupPlugin } from 'rxdb/plugins/cleanup';
+import { RxDBLeaderElectionPlugin } from 'rxdb/plugins/leader-election';
 
 export default defineNuxtPlugin(async () => {
   if (import.meta.dev) {
@@ -16,4 +18,6 @@ export default defineNuxtPlugin(async () => {
   addRxPlugin(RxDBQueryBuilderPlugin);
   addRxPlugin(RxDBMigrationPlugin);
   addRxPlugin(RxDBUpdatePlugin);
+  addRxPlugin(RxDBCleanupPlugin);
+  addRxPlugin(RxDBLeaderElectionPlugin);
 });
