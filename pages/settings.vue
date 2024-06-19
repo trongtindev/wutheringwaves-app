@@ -45,6 +45,10 @@ useSeoMeta({});
         </v-col>
 
         <v-col cols="12" sm="6">
+          <settings-analytics />
+        </v-col>
+
+        <v-col cols="12" sm="6">
           <settings-erase-data />
         </v-col>
       </v-row>

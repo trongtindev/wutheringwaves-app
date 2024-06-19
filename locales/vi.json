@@ -168,6 +168,11 @@
       "enabled": "Enabled",
       "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
       "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "optOut": "Opt-out",
+      "optOutSubtitle": "You can opt-out of Google Analytics"
     }
   },
   "comments": {
@@ -210,7 +215,9 @@
     "comments": {
       "pleaseSelectMarker": "Please select a marker on the map to enable comments."
     },
-    "hideFoundMarkers": "Hide found markers"
+    "hideFoundMarkers": "Hide found markers",
+    "markAsNotFound": "Mark as Not found",
+    "markAsFound": "Mark as Found"
   },
   "common": {
     "name": "Tên",

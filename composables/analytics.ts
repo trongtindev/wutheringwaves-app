@@ -5,6 +5,9 @@ export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
   const firebase = useFirebase();
 
+  // states
+  const optOut = useCookie<boolean>('analytics.optOut');
+
   // functions
   const initialize = () => {
     if (import.meta.server) {
@@ -19,6 +22,12 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     }
   };
 
+  // watch
+  // watch(
+  //   () => optOut,
+  //   (value) => {}
+  // );
+
   // exports
-  return { initialize, logEvent };
+  return { optOut, initialize, logEvent };
 });

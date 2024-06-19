@@ -23,6 +23,7 @@ const { isIos } = useDevice();
           color="warning"
         />
         <v-alert
+          v-else
           :text="$t('settings.notification.deviceNotSupported')"
           color="warning"
         />

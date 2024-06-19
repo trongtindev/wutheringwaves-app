@@ -9,7 +9,7 @@ dotenv.config({ path: './.env', override: true });
 export default defineNuxtConfig({
   ignore: ['./scripts/**/*'],
   $development: {
-    ssr: false,
+    // ssr: false,
     runtimeConfig: {
       public: {
         SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:8080',
