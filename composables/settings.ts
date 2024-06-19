@@ -14,9 +14,9 @@ export const useSettings = defineStore('useSettings', () => {
   ) => {
     options ??= {};
 
-    const result = await database
-      .getInstance()
-      .settings.findOne({
+    const db = await database.getInstance();
+    const result = await db.settings
+      .findOne({
         selector: {
           key
         }
@@ -34,7 +34,8 @@ export const useSettings = defineStore('useSettings', () => {
   };
 
   const set = async (key: string, value: any) => {
-    return await database.getInstance().settings.upsert({
+    const db = await database.getInstance();
+    return db.settings.upsert({
       key,
       value: JSON.stringify(value)
     });

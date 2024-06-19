@@ -26,15 +26,16 @@ export const useAccount = defineStore('useAccount', () => {
     }
 
     // register hook
-    database.getInstance().accounts.postInsert(() => loadItems(), false);
+    const db = await database.getInstance();
+    db.accounts.postInsert(() => loadItems(), false);
 
     await loadItems();
   };
 
   const upsert = async (playerId: string) => {
-    const exists = await database
-      .getInstance()
-      .accounts.findOne({
+    const db = await database.getInstance();
+    const exists = await db.accounts
+      .findOne({
         selector: { playerId }
       })
       .exec();
@@ -42,16 +43,17 @@ export const useAccount = defineStore('useAccount', () => {
       snackbar.show({
         content: i18n.t('accounts.newAccountDetected')
       });
-      await database.getInstance().accounts.upsert({
+
+      await db.accounts.upsert({
         playerId
       });
     }
   };
 
   const loadItems = async () => {
-    const result = await database
-      .getInstance()
-      .accounts.find()
+    const db = await database.getInstance();
+    const result = await db.accounts
+      .find()
       .sort({
         createdAt: 'asc'
       })
@@ -73,9 +75,9 @@ export const useAccount = defineStore('useAccount', () => {
   };
 
   const getDocument = async (playerId: string) => {
-    return await database
-      .getInstance()
-      .accounts.findOne({
+    const db = await database.getInstance();
+    return await db.accounts
+      .findOne({
         selector: {
           playerId
         }

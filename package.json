@@ -1,9 +1,11 @@
 {
+  "appVersion": "0.0.2",
   "name": "wutheringwaves-app",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "nuxt dev",
+    "build-only": "nuxt build --prerender false",
     "build": "nuxt build --prerender true",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

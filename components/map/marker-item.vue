@@ -30,11 +30,12 @@ const iconUrl = computed(() => {
 // events
 const onPressed = (args) => emits('on-pressed', args);
 
-const onPressedMarkAsFound = () => {
+const onPressedMarkAsFound = async () => {
   isFound.value = true;
   restart.value = true;
 
-  database.getInstance().markers.upsert({
+  const db = await database.getInstance();
+  db.markers.upsert({
     key: `${props.data.id}`
   });
   emits('on-mark-changed', true);
@@ -43,14 +44,14 @@ const onPressedMarkAsFound = () => {
   setTimeout(() => (restart.value = false), 50);
 };
 
-const onPressedMarkAsNotFound = () => {
+const onPressedMarkAsNotFound = async () => {
   isFound.value = false;
   restart.value = true;
 
   // remove document
-  database
-    .getInstance()
-    .markers.findOne({
+  const db = await database.getInstance();
+  db.markers
+    .findOne({
       selector: {
         key: `${props.data.id}`
       }

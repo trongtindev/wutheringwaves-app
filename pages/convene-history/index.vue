@@ -51,27 +51,23 @@ const totalPulls = computed(() => {
 
 // functions
 const initialize = () => {
-  if (!database.isInitialized) {
-    setTimeout(() => initialize(), 250);
-    return;
-  }
-
-  database
-    .getInstance()
-    .convenes.find({
-      selector: {
-        playerId: account.active
-      }
-    })
-    .sort({
-      createdAt: 'desc'
-    })
-    .exec()
-    .then((result) => {
-      // TODO: fixme
-      convenes.value = result as any;
-    })
-    .catch(console.error);
+  database.getInstance().then((db) => {
+    db.convenes
+      .find({
+        selector: {
+          playerId: account.active
+        }
+      })
+      .sort({
+        createdAt: 'desc'
+      })
+      .exec()
+      .then((result) => {
+        // TODO: fixme
+        convenes.value = result as any;
+      })
+      .catch(console.error);
+  });
 };
 
 // changes

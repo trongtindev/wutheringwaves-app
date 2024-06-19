@@ -10,6 +10,7 @@ const i18nHead = useLocaleHead({
   addSeoAttributes: true,
   identifierAttribute: 'default'
 });
+const app = useApp();
 const auth = useAuth();
 const account = useAccount();
 const backup = useBackup();
@@ -20,6 +21,7 @@ const runtimeConfig = useRuntimeConfig();
 
 // lifecycle
 if (import.meta.client) {
+  app.initialize();
   auth.initialize();
   account.initialize();
   backup.initialize();

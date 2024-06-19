@@ -15,7 +15,7 @@ const drawer = ref(true);
 const tab = ref('markers');
 const markers = ref<IMarker[]>();
 const selected = ref<IMarker>();
-const foundMarkers = ref<string[]>([]);
+const foundMarkers = ref<string[]>(null as any);
 const displayMarkers = ref<IMarker[]>([]);
 const hideFound = ref(false);
 
@@ -58,8 +58,8 @@ const onMarkChanged = (id: number, status: boolean) => {
   }
 };
 
-// lifecycle
-onMounted(async () => {
+// functions
+const initialize = () => {
   app.fluid = true;
   sidebar.open = false;
 
@@ -83,14 +83,18 @@ onMounted(async () => {
     });
 
   // get found markers
-  database
-    .getInstance()
-    .markers.find()
-    .exec()
-    .then((documents) => {
-      foundMarkers.value = documents.filter((e) => !e.type).map((e) => e.key);
-    });
-});
+  database.getInstance().then((db) => {
+    db.markers
+      .find()
+      .exec()
+      .then((documents) => {
+        foundMarkers.value = documents.filter((e) => !e.type).map((e) => e.key);
+      });
+  });
+};
+
+// lifecycle
+onMounted(initialize);
 
 onUnmounted(() => {
   app.fluid = true;
@@ -182,7 +186,7 @@ useSeoMeta({
       <v-responsive :aspect-ratio="16 / 9">
         <client-only>
           <l-map
-            v-if="foundMarkers.length > 0"
+            v-if="foundMarkers"
             class="w-100 h-100"
             :zoom="11"
             :min-zoom="11"

@@ -74,7 +74,8 @@ const onImport = async (url: string) => {
         createdAt: new Date(e.time).getTime()
       };
     });
-    await database.getInstance().convenes.bulkUpsert(writes);
+    const db = await database.getInstance();
+    db.convenes.bulkUpsert(writes);
 
     router.push(localePath('/convene-history'));
   } catch (error) {

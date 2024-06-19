@@ -49,15 +49,17 @@ export const useDatabase = defineStore('useDatabase', () => {
 
   // functions
   const initialize = async (options?: { override?: boolean }) => {
-    console.log('database', 'initialize', state.value);
+    console.log('database', 'initialize');
     options ??= {};
 
     if (import.meta.server) {
       throw new Error('Cannot initialize database on server side!');
     }
 
-    if (state.value != '' && !options.override) {
-      return;
+    if (!options.override) {
+      if (db || state.value != '') {
+        return;
+      }
     }
 
     state.value = 'initializing';
@@ -66,7 +68,10 @@ export const useDatabase = defineStore('useDatabase', () => {
       createRxDatabase<DatabaseCollections>({
         name: 'default',
         storage: getRxStorageDexie(),
-        multiInstance: false
+        multiInstance: false,
+        cleanupPolicy: {
+          minimumDeletedTime: 1000 * 60 * 60 * 24 * 7
+        }
       })
         .then(async (result) => {
           db = result;
@@ -143,6 +148,7 @@ export const useDatabase = defineStore('useDatabase', () => {
 
           state.value = '';
           isInitialized.value = true;
+
           resolve(db);
         })
         .catch(async (error) => {
@@ -166,11 +172,16 @@ export const useDatabase = defineStore('useDatabase', () => {
     });
   };
 
-  const getInstance = () => db;
+  const getInstance = async () => {
+    while (!db || !isInitialized.value) {
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+    return db;
+  };
 
   const eraseAllData = async () => {
-    console.warn('eraseAllData', await getInstance().remove());
-    console.warn('eraseAllData', await getInstance().destroy());
+    console.warn('eraseAllData', await db.remove());
+    console.warn('eraseAllData', await db.destroy());
   };
 
   // events

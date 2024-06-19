@@ -58,15 +58,10 @@ const guaranteedAt5List = computed(() => {
 });
 
 // functions
-const initialize = () => {
-  if (!database.isInitialized) {
-    setTimeout(() => initialize(), 250);
-    return;
-  }
-
-  database
-    .getInstance()
-    .convenes.find({
+const initialize = async () => {
+  const db = await database.getInstance();
+  db.convenes
+    .find({
       selector: {
         playerId: account.active,
         cardPoolType: props.type

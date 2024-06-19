@@ -59,25 +59,21 @@ const convenes = ref<ConveneDocument[]>(null as any);
 
 // functions
 const initialize = () => {
-  if (!database.isInitialized) {
-    setTimeout(() => initialize(), 250);
-    return;
-  }
-
-  database
-    .getInstance()
-    .convenes.find({
-      selector: {
-        playerId: account.active
-      }
-    })
-    .sort({
-      createdAt: 'desc'
-    })
-    .exec()
-    .then((result) => {
-      convenes.value = result as any;
-    });
+  database.getInstance().then((db) => {
+    db.convenes
+      .find({
+        selector: {
+          playerId: account.active
+        }
+      })
+      .sort({
+        createdAt: 'desc'
+      })
+      .exec()
+      .then((result) => {
+        convenes.value = result as any;
+      });
+  });
 };
 
 const downloadImage = async () => {

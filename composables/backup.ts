@@ -53,7 +53,8 @@ export const useBackup = defineStore('useBackup', () => {
       throw new Error('database not initialized');
     }
 
-    const json = await database.getInstance().exportJSON();
+    const db = await database.getInstance();
+    const json = await db.exportJSON();
     const response = await api
       .getInstance()
       .post<{ createdAt: string }>('backup', { data: JSON.stringify(json) });
@@ -90,12 +91,15 @@ export const useBackup = defineStore('useBackup', () => {
         }
       });
 
-    await database.getInstance().remove();
-    await database.initialize({ override: true });
-    await database.getInstance().importJSON(response.data.data as any);
+    // remove
+    let db = await database.getInstance();
+    await db.remove();
 
-    // console.log(await database.getInstance().convenes.countAllDocuments());
-    // console.log(await database.getInstance().convenes.countAllDocuments());
+    // recreate
+    await database.initialize({ override: true });
+    db = await database.getInstance();
+
+    await db.importJSON(response.data.data as any);
 
     const time = new Date(response.data.createdAt).getTime();
     lastLocalChanged.value = time;

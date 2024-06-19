@@ -1,8 +1,9 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
+import pkg from './package.json';
 
 // environment
-dotenv.config({ path: './.env.production', override: true });
+// dotenv.config({ path: './.env.development', override: true });
 dotenv.config({ path: './.env', override: true });
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -132,6 +133,11 @@ export default defineNuxtConfig({
       }
     },
     build: {
+      terserOptions: {
+        compress: {
+          drop_console: false
+        }
+      },
       rollupOptions: {
         output: {
           manualChunks: (id: string) => {
@@ -160,6 +166,9 @@ export default defineNuxtConfig({
     },
     plugins: [vuetify({ autoImport: true })]
   },
+  appConfig: {
+    buildNumber: Date.now()
+  },
   runtimeConfig: {
     public: {
       // app
@@ -168,7 +177,7 @@ export default defineNuxtConfig({
       APP_NAME: 'WutheringWaves.app',
       APP_REPO: 'https://github.com/trongtindev/wuthering-waves-app',
       APP_DISCORD: 'https://discord.gg/MxxYyUJEfT',
-      APP_VERSION: process.env.NUXT_PUBLIC_APP_VERSION || '0.0.0',
+      APP_VERSION: process.env.NUXT_PUBLIC_APP_VERSION || pkg.appVersion,
       // api
       API_URL:
         process.env.NUXT_PUBLIC_API_URL || 'https://api.wutheringwaves.app',

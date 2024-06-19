@@ -1,7 +1,12 @@
 import { defineStore } from 'pinia';
 
 export const useApp = defineStore('useApp', () => {
+  let interval: any;
+
   // uses
+  const i18n = useI18n();
+  const dialog = useDialog();
+  const appConfig = useAppConfig();
   const runtimeConfig = useRuntimeConfig();
 
   // config
@@ -22,6 +27,42 @@ export const useApp = defineStore('useApp', () => {
   const indBeta = computed(() => false);
 
   // functions
+  const initialize = () => {
+    if (import.meta.server) {
+      throw new Error('Cannot run app.initialize on server-side!');
+    }
+
+    checkForUpdates();
+    interval = setInterval(checkForUpdates, 60 * 5 * 1000);
+  };
+
+  const checkForUpdates = async () => {
+    try {
+      const { buildNumber } = await $fetch<{ buildNumber: number }>(
+        '/api/checkForUpdates',
+        {
+          signal: AbortSignal.timeout(5000)
+        }
+      );
+
+      console.debug('checkForUpdates', appConfig.buildNumber, buildNumber);
+      if (appConfig.buildNumber === buildNumber) {
+        return;
+      }
+
+      dialog.show({
+        title: i18n.t('common.updateFound'),
+        content: i18n.t('common.updateFoundMessage'),
+        onConfirm: () => {
+          reloadNuxtApp();
+        }
+      });
+      clearInterval(interval);
+    } catch (error: any) {
+      console.error(error);
+    }
+  };
+
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -39,6 +80,7 @@ export const useApp = defineStore('useApp', () => {
     inDev,
     indProd,
     indBeta,
+    initialize,
     scrollTop
   };
 });
