@@ -20,6 +20,15 @@ export default defineNuxtConfig({
       }
     }
   },
+  $production: {
+    nitro: {
+      storage: {
+        data: {
+          driver: 'vercelKV'
+        }
+      }
+    }
+  },
   modules: [
     '@nuxtjs/i18n',
     '@pinia/nuxt',
@@ -33,11 +42,7 @@ export default defineNuxtConfig({
     'nuxt3-leaflet'
   ],
   nitro: {
-    storage: {
-      data: {
-        driver: 'vercelKV'
-      }
-    },
+    preset: 'vercel',
     prerender: {
       routes: ['/sitemap.xml']
     }

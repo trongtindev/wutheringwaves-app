@@ -68,10 +68,7 @@ export const useDatabase = defineStore('useDatabase', () => {
       createRxDatabase<DatabaseCollections>({
         name: 'default',
         storage: getRxStorageDexie(),
-        multiInstance: false,
-        cleanupPolicy: {
-          minimumDeletedTime: 1000 * 60 * 60 * 24 * 7
-        }
+        multiInstance: false
       })
         .then(async (result) => {
           db = result;
