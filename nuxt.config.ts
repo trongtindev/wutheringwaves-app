@@ -42,7 +42,6 @@ export default defineNuxtConfig({
     'nuxt3-leaflet'
   ],
   nitro: {
-    preset: 'vercel',
     prerender: {
       routes: ['/sitemap.xml']
     }
