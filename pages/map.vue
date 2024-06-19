@@ -198,7 +198,7 @@ useSeoMeta({
             }"
           >
             <l-tile-layer
-              url="https://game-cdn.appsample.com/ww/map-main/v1-rc2/{z}/tile-{getX}_{getY}.jpg"
+              url="https://files.wutheringwaves.app/tiles/{z}/{getX}/{getY}.webp"
               layer-type="base"
               :options="{
                 tms: true,
