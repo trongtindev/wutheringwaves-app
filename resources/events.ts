@@ -91,6 +91,15 @@ const items: IEvent[] = [
     },
     color: '#b19abd',
     thumbnail: '/events/covers/wuthering-exploration.webp'
+  },
+  {
+    name: '"Chord Cleansing" LT Echo Double Drop Event',
+    time: {
+      start: '2024-06-20 04:00',
+      end: '2024-06-27 03:59'
+    },
+    color: '#6e371e',
+    thumbnail: '/events/covers/chord-cleansing.webp'
   }
 ];
 export default items;
