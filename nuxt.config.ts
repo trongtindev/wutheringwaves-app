@@ -29,6 +29,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  typescript: {
+    strict: true
+  },
   modules: [
     '@nuxtjs/i18n',
     '@pinia/nuxt',
@@ -127,9 +130,9 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./composables/**']
   },
-  // eslint: {
-  //   checker: true
-  // },
+  eslint: {
+    // checker: true
+  },
   vite: {
     vue: {
       template: {

@@ -15,18 +15,13 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const logEvent = (event: string, params: { [Key: string]: any }) => {
     if (import.meta.dev) return;
     if (firebase.analytics) {
       firebaseLogEvent(firebase.analytics, event, params);
     }
   };
-
-  // watch
-  // watch(
-  //   () => optOut,
-  //   (value) => {}
-  // );
 
   // exports
   return { optOut, initialize, logEvent };

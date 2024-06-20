@@ -22,6 +22,7 @@ export const useFirebase = defineStore('useFirebase', () => {
       throw new Error('Cannot initialize firebase on server-side!');
     }
 
+    // define
     const { FIREBASE_API_KEY, FIREBASE_PROJECT_ID, FIREBASE_AUTH_DOMAIN } =
       runtimeConfig.public;
 
@@ -44,7 +45,12 @@ export const useFirebase = defineStore('useFirebase', () => {
     }
 
     if (!import.meta.dev) {
-      analytics.value = getAnalytics(app.value);
+      if (useAnalytics().optOut) {
+        console.warn('firebase', 'analytics', 'optOut', true);
+      } else {
+        analytics.value = getAnalytics(app.value);
+      }
+
       performance.value = getPerformance(app.value);
     }
   };

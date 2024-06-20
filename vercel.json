@@ -1,9 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "devCommand": "pnpm run dev",
   "rewrites": [
     {
       "source": "/__/auth/(.*)",
       "destination": "https://wuthering-357ea.firebaseapp.com/__/auth/$1"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/$1"
     }
   ]
 }
