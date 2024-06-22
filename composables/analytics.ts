@@ -6,9 +6,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
   const firebase = useFirebase();
 
   // states
-  const optOut = useCookie<boolean>('analytics.optOut', {
-    maxAge: 60 * 60 * 24 * 30
-  });
+  const optOut = useCookie<boolean>('analytics.optOut');
 
   // functions
   const initialize = () => {
