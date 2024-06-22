@@ -108,9 +108,6 @@ importers:
       '@types/leaflet':
         specifier: ^1.9.12
         version: 1.9.12
-      '@vue/language-core':
-        specifier: ^2.0.21
-        version: 2.0.21(typescript@5.4.5)
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
