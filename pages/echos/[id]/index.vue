@@ -78,7 +78,9 @@ useJsonld({
         </template>
 
         <template #actions>
-          <contribute-button path="/tree/main/resources" />
+          <contribute-button
+            :path="`/tree/main/resources/echos/${item.slug}.json`"
+          />
         </template>
       </card-title>
 

@@ -133,10 +133,8 @@ export const useBackup = defineStore('useBackup', () => {
       throw new Error('database not initialized');
     }
 
-    const response = await api
-      .getInstance()
-      .get<{ createdAt: string }>('backup');
-    lastCloudChanged.value = new Date(response.data.createdAt).getTime();
+    const response = await api.getInstance().get<{ createdAt: Date }>('backup');
+    lastCloudChanged.value = response.data.createdAt.getTime();
 
     if (lastCloudChanged.value > lastLocalChanged.value) {
       console.warn(

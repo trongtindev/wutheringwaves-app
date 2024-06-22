@@ -23,8 +23,15 @@ export interface IWeapon {
 export interface IWeaponData {
   description?: string;
   descriptionLocalized?: ILocalized;
+  stats: {
+    atk?: string;
+    critRate?: string;
+    energy?: string;
+    critDMG?: string;
+  };
   skill: {
     params: string[];
+    description: string;
   };
   ascensions: {
     cost: {

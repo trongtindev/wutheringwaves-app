@@ -17,10 +17,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       replaysSessionSampleRate: 0.1,
       replaysOnErrorSampleRate: 1.0,
       ignoreErrors: [
-        'Network request failed',
+        'Network*',
         'Failed to fetch',
-        'NetworkError',
-        'Network Error',
         'Load failed',
         'TypeError: Load failed',
         'AxiosError'

@@ -34,14 +34,12 @@ if (import.meta.client) {
   watch(
     () => i18n.locale.value,
     (value) => {
-      console.log('locale', value);
       dayjs.locale(value);
       vuetifyLocale.current.value = value;
     }
   );
 
   onMounted(() => {
-    console.log('locale', i18n.locale.value);
     dayjs.locale(i18n.locale.value);
     vuetifyLocale.current.value = i18n.locale.value;
   });

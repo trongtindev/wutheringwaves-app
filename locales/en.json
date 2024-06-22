@@ -54,6 +54,10 @@
     },
     "settings": {
       "title": "Settings"
+    },
+    "guide": {
+      "title": "Game Guide",
+      "description": ""
     }
   },
   "sidebar": {
@@ -186,7 +190,8 @@
     "accounts": {
       "title": "Accounts",
       "autoImportConveneHistory": "Auto import convene history",
-      "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh."
+      "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
+      "empty": "To add an account, you just need to import convene history."
     },
     "backup": {
       "title": "Cloud Backup"
@@ -205,7 +210,9 @@
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
-    "policy": "comments.policy"
+    "policy": "comments.policy",
+    "submit": "Post comment",
+    "replies": "Replies"
   },
   "dialog": {
     "close": "Close",
@@ -255,6 +262,9 @@
     "markAsNotFound": "Mark as Not found",
     "markAsFound": "Mark as Found"
   },
+  "guide": {
+    "title": "Game Guide"
+  },
   "common": {
     "name": "Name",
     "time": "Time",
@@ -303,7 +313,11 @@
     "ascensionMaterial": "Ascension Material",
     "successfully": "Successfully!",
     "checkAll": "Check all",
-    "clear": "Clear"
+    "clear": "Clear",
+    "retry": "Retry",
+    "upcomingContent": "This page is about upcoming content.",
+    "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
+    "energy": "Energy"
   },
   "other": {
     "underDevelopment": "This site is under development."

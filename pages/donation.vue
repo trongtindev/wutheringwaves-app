@@ -3,10 +3,18 @@
 const i18n = useI18n();
 
 // seo meta
-const title = i18n.t('donation.title');
-const description = i18n.t('donation.description');
+const title = i18n.t('meta.donation.title');
+const description = i18n.t('meta.donation.description');
 
-useHead({ title });
+useHead({
+  title,
+  meta: [
+    {
+      name: 'robots',
+      content: 'noindex'
+    }
+  ]
+});
 
 useSeoMeta({
   ogTitle: title,

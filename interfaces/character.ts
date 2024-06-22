@@ -24,6 +24,7 @@ export interface ICharacter {
   attribute: CharacterAttribute;
   weapon: WeaponType;
   rarity: number;
+  upcoming?: boolean;
 }
 
 export interface ICharacterData {

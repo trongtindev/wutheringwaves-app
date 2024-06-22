@@ -4,7 +4,6 @@ import type { IItem } from '~/interfaces/item';
 
 const i18n = useI18n();
 const route = useRoute();
-const router = useRouter();
 const resources = useResources();
 const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
@@ -24,6 +23,13 @@ if (!data) throw createError({ statusCode: 404 });
 // computed
 const nameLocalized = computed(() => {
   return i18n.t(item.name);
+});
+
+const skillDescription = computed(() => {
+  return data.skill.description.replace(
+    /\{(\d+)\}/g,
+    (_, j) => data.skill.params[j] || ''
+  );
 });
 
 // lifecycle
@@ -84,6 +90,15 @@ useJsonld({
       ]"
     />
 
+    <!-- upcoming -->
+    <v-alert
+      v-if="item.upcoming"
+      color="warning"
+      class="mb-4"
+      :title="$t('common.upcomingContent')"
+      :text="$t('common.upcomingContentMessage')"
+    />
+
     <v-card>
       <card-title>
         <template #title>
@@ -99,10 +114,12 @@ useJsonld({
         <v-row>
           <v-col cols="12" md="4">
             <v-sheet class="border rounded hidden-sm-and-down">
-              <v-img
-                :src="`/weapons/icons/${item.slug}.webp`"
-                :alt="item.name"
-              />
+              <v-responsive :aspect-ratio="1">
+                <v-img
+                  :src="`/weapons/icons/${item.slug}.webp`"
+                  :alt="item.name"
+                />
+              </v-responsive>
             </v-sheet>
 
             <div class="hidden-md-and-up">
@@ -119,6 +136,57 @@ useJsonld({
           <v-col cols="12" md="8">
             <div class="d-flex flex-wrap ga-2">
               <v-chip :text="item.type" />
+            </div>
+
+            <div>
+              <v-sheet v-if="data.stats.atk" class="border rounded mt-2 pa-2">
+                <v-row>
+                  <v-col cols="6"> ATK </v-col>
+                  <v-col cols="6">
+                    {{ data.stats.atk }}
+                  </v-col>
+                </v-row>
+              </v-sheet>
+
+              <v-sheet
+                v-if="data.stats.critRate"
+                class="border rounded mt-2 pa-2"
+              >
+                <v-row>
+                  <v-col cols="6"> {{ $t('common.critRate') }} </v-col>
+                  <v-col cols="6">
+                    {{ data.stats.critRate }}
+                  </v-col>
+                </v-row>
+              </v-sheet>
+
+              <v-sheet
+                v-if="data.stats.critRate"
+                class="border rounded mt-2 pa-2"
+              >
+                <v-row>
+                  <v-col cols="6"> {{ $t('common.critDMG') }} </v-col>
+                  <v-col cols="6">
+                    {{ data.stats.critDMG }}
+                  </v-col>
+                </v-row>
+              </v-sheet>
+
+              <v-sheet
+                v-if="data.stats.energy"
+                class="border rounded mt-2 pa-2"
+              >
+                <v-row>
+                  <v-col cols="6"> {{ $t('common.energy') }} </v-col>
+                  <v-col cols="6">
+                    {{ data.stats.energy }}
+                  </v-col>
+                </v-row>
+              </v-sheet>
+            </div>
+
+            <div v-if="data.skill" class="mt-2">
+              {{ skillDescription }}
             </div>
 
             <div v-if="data.description" class="mt-2">

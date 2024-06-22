@@ -30,7 +30,7 @@ const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
       </v-card-title>
       <v-divider />
 
-      <v-list v-if="account.items">
+      <v-list v-if="account.items.length > 0">
         <settings-account-item
           v-for="(element, index) in account.items"
           :key="index"

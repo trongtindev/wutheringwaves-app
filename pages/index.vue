@@ -14,9 +14,11 @@ const openGithubRepo = () => {
   window.open(app.githubRepo);
 };
 
-// initialize
+// seo meta
+const title = 'wutheringwaves.app';
+useHead({ title });
 useSeoMeta({
-  title: i18n.t('meta.title'),
+  title: title,
   description: i18n.t('meta.description')
 });
 </script>

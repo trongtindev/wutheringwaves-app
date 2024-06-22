@@ -33,7 +33,33 @@ export const useApi = defineStore('useApi', () => {
     return config;
   });
 
+  instance.interceptors.response.use((response) => {
+    if (response.status >= 200 && response.status <= 299) {
+      response.data = parseDate(response.data);
+    }
+    return response;
+  });
+
   // functions
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const parseDate = (data: any) => {
+    if (data.createdAt) {
+      data.createdAt = new Date(data.createdAt);
+    }
+
+    if (data.updatedAt) {
+      data.updatedAt = new Date(data.updatedAt);
+    }
+
+    if (data.items) {
+      for (let i = 0; i < data.items.length; i += 1) {
+        data.items[i] = parseDate(data.items[i]);
+      }
+    }
+
+    return data;
+  };
+
   const getInstance = () => instance;
 
   // exports

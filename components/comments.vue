@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { IListResponse } from '@/interfaces/api';
 import type { IComment } from '@/interfaces/comment';
-import { mdiSend, mdiImageSearch } from '@mdi/js';
+import { mdiSend, mdiImageSearch, mdiAlert, mdiTrashCan } from '@mdi/js';
+import { createId } from '@paralleldrive/cuid2';
+import type { IFile } from '~/interfaces/file';
 
 const props = defineProps<{
   channel: string;
@@ -12,7 +14,9 @@ const props = defineProps<{
 // uses
 const api = useApi();
 const auth = useAuth();
-const fileChoose = useFileDialog({ accept: 'image/*' });
+const fileChoose = useFileDialog({
+  accept: 'image/png, image/jpg, image/webp, image/jpeg'
+});
 const runtimeConfig = useRuntimeConfig();
 
 // states
@@ -21,12 +25,17 @@ const data = ref<IListResponse<IComment>>();
 const limit = ref(20);
 const offset = ref(0);
 const page = ref(1);
-const comment = ref<string>();
-
-// computed
-const total = computed(() => {
-  return 0;
-});
+const content = ref<string>();
+const attachments = ref<
+  {
+    id: string;
+    file: File;
+    status: '' | 'uploaded' | 'upload_error';
+    error?: string;
+    result?: IFile;
+    progress?: number;
+  }[]
+>([]);
 
 // functions
 const loadData = (parent?: IComment) => {
@@ -47,6 +56,7 @@ const loadData = (parent?: IComment) => {
     })
     .then((result) => {
       data.value = result.data;
+      content.value = '';
     })
     .catch((error) => {
       data.value = {
@@ -61,7 +71,57 @@ const loadData = (parent?: IComment) => {
     });
 };
 
+const uploadFile = (id: string) => {
+  const getIndex = () => {
+    const index = attachments.value.findIndex((e) => e.id === id);
+    if (index < 0) throw new Error(`not found #${id}`);
+    return index;
+  };
+
+  attachments.value[getIndex()].status = '';
+  api
+    .getInstance()
+    .post<IFile>(
+      'files',
+      {
+        file: attachments.value[getIndex()].file
+      },
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+        onUploadProgress: (e) => {
+          attachments.value[getIndex()].progress = e.progress;
+        }
+      }
+    )
+    .then((result) => {
+      attachments.value[getIndex()].result = result.data;
+      attachments.value[getIndex()].status = 'uploaded';
+    })
+    .catch((error) => {
+      console.error(error);
+      attachments.value[getIndex()].error = error.message;
+      attachments.value[getIndex()].status = 'upload_error';
+    });
+};
+
 // computed
+const total = computed(() => {
+  return 0;
+});
+
+const isContentError = computed<boolean>(() => {
+  if (content.value) {
+    return content.value.length < 6 || content.value.length > 500;
+  }
+  return false;
+});
+
+const canSubmit = computed<boolean>(() => {
+  return `${content.value}`.length > 0 && !isContentError.value;
+});
+
 const pages = computed(() => {
   if (data.value) {
     return Math.ceil(data.value.total / limit.value);
@@ -76,9 +136,15 @@ const onSubmit = () => {
     .getInstance()
     .post<IComment>(`/comments`, {
       channel: `${runtimeConfig.public.SITE_URL}${props.channel}`,
-      comment: comment.value
+      content: content.value,
+      attachments: attachments.value
+        .filter((e) => e.result)
+        .map((e) => e.result?.id)
     })
-    .then((result) => {})
+    .then(() => {
+      attachments.value = [];
+      loadData();
+    })
     .catch((error) => {
       // TODO: handle error
       console.log(error);
@@ -91,13 +157,31 @@ const onSubmit = () => {
 
 const onPressedAddAttachment = () => fileChoose.open();
 
-// changes
-watch(
-  () => fileChoose.files,
-  () => {
-    console.log('fileChoose', fileChoose.files);
+const onPressedDeleteAttachment = (id: string) => {
+  const index = attachments.value.findIndex((e) => e.id === id);
+  if (index >= 0) {
+    const result = attachments.value[index].result;
+    if (result) {
+      api.getInstance().delete(`files/${result.id}`);
+    }
+
+    attachments.value.splice(index, 1);
   }
-);
+};
+
+// changes
+watch(fileChoose.files, (value) => {
+  Array.from(value!).forEach((file) => {
+    const id = createId();
+    console.log(file);
+    attachments.value.push({
+      id,
+      file: file,
+      status: ''
+    });
+    uploadFile(id);
+  });
+});
 
 watch(
   () => props.channel,
@@ -122,22 +206,115 @@ onMounted(() => loadData());
     </v-card-title>
     <v-divider v-if="!props.hideTitle" />
 
-    <v-card-actions>
-      <v-form class="w-100" @submit.prevent="onSubmit">
-        <v-text-field
-          v-model="comment"
-          :disabled="!auth.isLoggedIn || state != ''"
-          :loading="state == 'submit'"
-          :hide-details="true"
-          :placeholder="$t('Write your comment here...')"
-        >
-          <template #append-inner>
-            <v-icon :icon="mdiImageSearch" @click="onPressedAddAttachment" />
-            <v-icon class="ml-2" :icon="mdiSend" @click="onSubmit" />
-          </template>
-        </v-text-field>
-      </v-form>
-    </v-card-actions>
+    <v-card-text>
+      <client-only>
+        <v-form @submit.prevent="onSubmit">
+          <v-textarea
+            v-model="content"
+            :disabled="!auth.isLoggedIn || state != ''"
+            :loading="state == 'submit'"
+            :hide-details="true"
+            :placeholder="$t('Write your comment here...')"
+            :rows="1"
+            :max-rows="10"
+            :auto-grow="true"
+            :error="isContentError"
+          />
+
+          <v-row class="mt-2">
+            <v-col>
+              <v-btn
+                variant="text"
+                :disabled="state != ''"
+                @click="onPressedAddAttachment"
+              >
+                <v-icon :icon="mdiImageSearch" color="white" />
+              </v-btn>
+            </v-col>
+
+            <v-col class="d-flex justify-end">
+              <v-btn
+                type="submit"
+                :loading="state == 'submit'"
+                :disabled="!canSubmit || state != ''"
+                :prepend-icon="mdiSend"
+                :text="$t('comments.submit')"
+              />
+            </v-col>
+          </v-row>
+        </v-form>
+
+        <div>
+          <v-row v-if="attachments.length > 0" class="mt-2">
+            <v-col
+              v-for="(element, index) in attachments"
+              :key="index"
+              cols="6"
+              sm="3"
+              md="2"
+            >
+              <v-responsive class="border rounded" :aspect-ratio="1">
+                <!-- uploaded -->
+                <v-hover v-if="element.status === 'uploaded' && element.result">
+                  <template #default="hover">
+                    <v-img
+                      v-bind="hover.props"
+                      :src="element.result.url"
+                      class="w-100 h-100"
+                      cover
+                    >
+                      <div
+                        v-if="hover.isHovering"
+                        class="d-flex align-center justify-center h-100 w-100"
+                      >
+                        <v-btn
+                          :icon="mdiTrashCan"
+                          size="x-small"
+                          color="red"
+                          @click="() => onPressedDeleteAttachment(element.id)"
+                        />
+                      </div>
+                    </v-img>
+                  </template>
+                </v-hover>
+
+                <!-- upload error -->
+                <div
+                  v-else-if="element.status === 'upload_error'"
+                  class="d-flex align-center justify-center h-100 w-100"
+                >
+                  <div>
+                    <div class="text-center">
+                      <v-icon :icon="mdiAlert" color="error" class="mb-2" />
+                    </div>
+                    <div class="text-center">
+                      {{ element.error }}
+                    </div>
+                    <div class="text-center mt-2">
+                      <v-btn
+                        :text="$t('common.retry')"
+                        @click="() => uploadFile(element.id)"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- uploading -->
+                <div
+                  v-else
+                  class="d-flex align-center justify-center h-100 w-100"
+                >
+                  <v-progress-circular
+                    v-model="element.progress"
+                    :indeterminate="true"
+                  />
+                </div>
+              </v-responsive>
+            </v-col>
+          </v-row>
+        </div>
+      </client-only>
+    </v-card-text>
     <v-divider />
 
     <client-only>
@@ -150,6 +327,17 @@ onMounted(() => loadData());
       </v-list>
       <v-card-text v-else-if="data.total === 0">
         <v-alert color="info" :text="$t('comments.empty')" />
+      </v-card-text>
+
+      <v-card-text v-else>
+        <comments-item
+          v-for="(element, index) in data.items"
+          :key="index"
+          :data="element"
+          :class="{
+            'mt-2': index > 0
+          }"
+        />
       </v-card-text>
 
       <v-divider v-if="pages > 0" />

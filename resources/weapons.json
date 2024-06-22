@@ -137,7 +137,8 @@
     "slug": "blazing-brilliance",
     "name": "Blazing Brilliance",
     "type": "Sword",
-    "rarity": 5
+    "rarity": 5,
+    "upcoming": true
   },
   {
     "id": 21020023,

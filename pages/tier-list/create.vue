@@ -379,7 +379,7 @@ useHead({
               class="rounded cursor-grab"
               :width="100"
               :height="100"
-              :style="`background-size: cover;background-image: url(/${type}s/icons/${element.slug}.png)`"
+              :style="`background-size: cover;background-image: url(/${type}s/icons/${element.slug}.webp)`"
             />
           </v-sheet>
         </v-sheet>

@@ -6,7 +6,15 @@ const auth = useAuth();
 // seo meta
 const title = i18n.t('meta.settings.title');
 
-useHead({ title });
+useHead({
+  title,
+  meta: [
+    {
+      name: 'robots',
+      content: 'noindex'
+    }
+  ]
+});
 
 useSeoMeta({});
 </script>

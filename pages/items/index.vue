@@ -124,7 +124,7 @@ useSeoMeta({
               </v-responsive>
 
               <v-tooltip :text="$t(element.name)">
-                <template v-slot:activator="{ props }">
+                <template #activator="{ props }">
                   <v-card-title v-bind="props" class="text-center">
                     {{ $t(element.name) }}
                   </v-card-title>

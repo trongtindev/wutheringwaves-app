@@ -87,7 +87,7 @@ onMounted(() => {});
         }"
         :width="96"
         :height="96"
-        :style="`background-size: cover;background-image: url(/${props.type}s/icons/${element.slug}.png)`"
+        :style="`background-size: cover;background-image: url(/${props.type}s/icons/${element.slug}.webp)`"
       />
     </v-sheet>
   </v-sheet>
