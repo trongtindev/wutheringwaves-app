@@ -38,6 +38,7 @@ const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.webp`
 useHead({ title });
 
 useSeoMeta({
+  ogTitle: title,
   description,
   ogDescription: description,
   ogImage

@@ -20,15 +20,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  $production: {
-    nitro: {
-      storage: {
-        data: {
-          driver: 'vercelKV'
-        }
-      }
-    }
-  },
+  $production: {},
   typescript: {
     strict: true
   },
@@ -40,7 +32,6 @@ export default defineNuxtConfig({
     'nuxt-jsonld',
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
-    'nuxt-og-image',
     '@nuxtjs/device',
     'nuxt3-leaflet'
   ],

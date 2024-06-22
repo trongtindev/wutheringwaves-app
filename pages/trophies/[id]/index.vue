@@ -22,6 +22,7 @@ const ogImage = `${runtimeConfig.public.SITE_URL}/trophies/icons/${item.slug}.we
 useHead({ title });
 
 useSeoMeta({
+  ogTitle: title,
   description,
   ogDescription: description,
   ogImage

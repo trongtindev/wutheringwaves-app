@@ -58,6 +58,7 @@ const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.
 useHead({ title });
 
 useSeoMeta({
+  ogTitle: title,
   ogImage: ogImage,
   description,
   ogDescription: description

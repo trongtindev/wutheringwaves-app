@@ -32,6 +32,7 @@ export interface ICharacterData {
   skills: {
     slug: string;
     name: string;
+    nameLocalized?: ILocalized;
     type: CharacterSkill;
     levels: {
       cost: {
@@ -41,13 +42,16 @@ export interface ICharacterData {
       level: number;
     }[];
     description: string;
+    descriptionLocalized?: ILocalized;
   }[];
   resonanceChain: {
     idx: string;
     slug: string;
     name: string;
+    nameLocalized?: ILocalized;
     params: string[];
     description: string;
+    descriptionLocalized?: ILocalized;
   }[];
   stats: {
     hp: number;
@@ -65,12 +69,14 @@ export interface ICharacterData {
   forte: {
     cost: {
       name: string;
+      nameLocalized?: ILocalized;
       quantity: number;
     }[];
     icon: string;
     name: string;
   }[];
   quote: string;
+  quoteLocalized?: ILocalized;
   birthday: string;
   birthplace: string;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const tileBounds = {
   10: { minX: -2, maxX: 1, minY: -2, maxY: 1 },
   11: { minX: -4, maxX: 2, minY: -4, maxY: 2 },

@@ -204,6 +204,7 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(interval.value);
 });
+
 // seo meta
 const title = i18n.t('meta.timeline.title');
 const description = i18n.t('meta.timeline.description');

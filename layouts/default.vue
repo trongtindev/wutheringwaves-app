@@ -19,12 +19,9 @@ import SnackbarController from '../controllers/snackbar.vue';
 // uses
 const app = useApp();
 const route = useRoute();
-const firebase = useFirebase();
 const auth = useAuth();
 const sidebar = useSidebar();
 const { locales } = useI18n();
-const resources = useResources();
-const database = useDatabase();
 const account = useAccount();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
@@ -257,9 +254,9 @@ watch(
           <div>
             <v-row :no-gutters="true">
               <v-col cols="12" md="6" class="d-flex align-center">
-                <h1>
+                <h2>
                   {{ app.name }}
-                </h1>
+                </h2>
               </v-col>
 
               <!-- Developers -->

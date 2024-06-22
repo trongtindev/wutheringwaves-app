@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // uses
 const i18n = useI18n();
-const localePath = useLocalePath();
+// const localePath = useLocalePath();
 
 // seo meta
 const title = i18n.t('todoList.title');

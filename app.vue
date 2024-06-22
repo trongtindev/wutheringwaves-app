@@ -16,6 +16,7 @@ const account = useAccount();
 const backup = useBackup();
 const database = useDatabase();
 const firebase = useFirebase();
+// const resources = useResources();
 const vuetifyLocale = useLocale();
 const runtimeConfig = useRuntimeConfig();
 
@@ -27,6 +28,7 @@ if (import.meta.client) {
   backup.initialize();
   database.initialize();
   firebase.initialize();
+  // resources.initialize();
 }
 
 // lifecycle

@@ -18,6 +18,7 @@ export interface IWeapon {
   nameLocalized?: ILocalized;
   type: WeaponType;
   rarity: number;
+  upcoming?: boolean;
 }
 
 export interface IWeaponData {
