@@ -31,11 +31,14 @@ useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
   contentUrl: ogImage,
+  license: `${runtimeConfig.public.SITE_URL}/license`,
+  acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
   creditText: 'Wuthering Waves',
   creator: {
     '@type': 'Organization',
     name: 'Wuthering Waves'
-  }
+  },
+  copyrightNotice: 'trongtindev'
 });
 </script>
 
