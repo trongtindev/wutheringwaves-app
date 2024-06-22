@@ -48,7 +48,7 @@ const loadData = (parent?: IComment) => {
     .getInstance()
     .get<IListResponse<IComment>>(`/comments`, {
       params: {
-        channel: `${runtimeConfig.public.SITE_URL}${props.channel}`,
+        channel: channel.value,
         limit: limit.value,
         offset: offset.value,
         parent: parent ? parent.id : undefined
@@ -111,6 +111,10 @@ const total = computed(() => {
   return 0;
 });
 
+const channel = computed(() => {
+  return `${runtimeConfig.public.SITE_URL}${props.channel.startsWith('/') ? '' : '/'}${props.channel}`;
+});
+
 const isContentError = computed<boolean>(() => {
   if (content.value) {
     return content.value.length < 6 || content.value.length > 500;
@@ -135,7 +139,7 @@ const onSubmit = () => {
   api
     .getInstance()
     .post<IComment>(`/comments`, {
-      channel: `${runtimeConfig.public.SITE_URL}${props.channel}`,
+      channel: channel.value,
       content: content.value,
       attachments: attachments.value
         .filter((e) => e.result)

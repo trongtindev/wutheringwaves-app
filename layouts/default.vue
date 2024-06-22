@@ -5,9 +5,9 @@ import {
   mdiLogout,
   mdiTranslate,
   mdiCogs,
-  mdiSwapVertical,
-  mdiPin,
-  mdiPinOff
+  mdiSwapVertical
+  // mdiPin,
+  // mdiPinOff
 } from '@mdi/js';
 
 import BackupController from '../controllers/backup.vue';
@@ -163,7 +163,7 @@ watch(
           </v-menu>
 
           <v-list-item
-            to="/settings"
+            :to="localePath('/settings')"
             :title="$t('settings.title')"
             :append-icon="mdiCogs"
           />
