@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-pnpm dlx commitlint --edit "$1"
+npx --no-install commitlint --edit "$1"
