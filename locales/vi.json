@@ -108,8 +108,16 @@
       "top": "TOP",
       "bottom": "BOTTOM"
     },
-    "globalStats": { "title": "Thống kê toàn cầu" },
-    "cardGenerator": { "title": "Convene Card Generator" }
+    "globalStats": { "title": "Thống kê toàn cầu" }
+  },
+  "showcase": {
+    "title": "Showcase",
+    "convene": {
+      "title": "Convene Showcase",
+      "showUID": "Show UID",
+      "emptyCard": "Please import convene history to fill the card."
+    },
+    "character": {}
   },
   "characters": {
     "title": "Nhân vật",
@@ -276,7 +284,8 @@
     "retry": "Retry",
     "upcomingContent": "This page is about upcoming content.",
     "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
-    "energy": "Energy"
+    "energy": "Energy",
+    "options": "Options"
   },
   "other": { "underDevelopment": "This site is under development." }
 }

@@ -60,6 +60,7 @@
     "nuxt": "^3.12.2",
     "nuxt3-leaflet": "^1.0.13",
     "prettier": "^3.3.2",
+    "typescript": "^5.5.2",
     "vite-plugin-eslint2": "^4.4.0",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-tsc": "^2.0.21"

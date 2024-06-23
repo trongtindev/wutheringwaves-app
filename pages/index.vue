@@ -65,8 +65,8 @@ useSeoMeta({
               :append-icon="mdiChevronRight"
             />
             <v-list-item
-              :to="localePath('/convene-history/card-generator')"
-              :title="$t('convene.cardGenerator.title')"
+              :to="localePath('/showcase/convene')"
+              :title="$t('showcase.convene.title')"
               :append-icon="mdiChevronRight"
             />
             <v-list-item

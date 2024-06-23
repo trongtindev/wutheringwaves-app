@@ -2,6 +2,7 @@
   --rarity-opacity: 0.5;
 
   --color-rarity5: rgb(255 177 63);
+  --color-rarity4: rgb(210 143 214);
 
   --color-background-rarity5: rgb(255 177 63 / var(--rarity-opacity));
   --color-background-rarity4: rgb(210 143 214 / var(--rarity-opacity));
@@ -51,11 +52,11 @@ a {
 }
 
 .text-rarity5 {
-  /*color: var(--color-rarity5);*/
+  color: var(--color-rarity5);
 }
 
 .text-rarity4 {
-  /*color: var(--color-rarity4);*/
+  color: var(--color-rarity4);
 }
 
 .border-rarity5 {
@@ -69,4 +70,8 @@ a {
 
 .leaflet-attribution-flag {
   display: none !important;
+}
+
+.z-1 {
+  z-index: 1;
 }

@@ -111,7 +111,7 @@
       "totalPull": "Total Pull",
       "luck5": "Luckiness 5★",
       "luck4": "Luckiness 4★",
-      "luckWinRateOff": "Luckiness Win 50: 50",
+      "luckWinRateOff": "Luckiness Win 50:50",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
       "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
@@ -123,10 +123,16 @@
     },
     "globalStats": {
       "title": "Global Convene Stats"
-    },
-    "cardGenerator": {
-      "title": "Convene Card Generator"
     }
+  },
+  "showcase": {
+    "title": "Showcase",
+    "convene": {
+      "title": "Convene Showcase",
+      "showUID": "Show UID",
+      "emptyCard": "Please import convene history to fill the card."
+    },
+    "character": {}
   },
   "characters": {
     "title": "Characters",
@@ -317,7 +323,8 @@
     "retry": "Retry",
     "upcomingContent": "This page is about upcoming content.",
     "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
-    "energy": "Energy"
+    "energy": "Energy",
+    "options": "Options"
   },
   "other": {
     "underDevelopment": "This site is under development."
