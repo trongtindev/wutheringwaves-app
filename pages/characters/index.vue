@@ -77,6 +77,8 @@ useSeoMeta({
       ]"
     />
 
+    <alert id="characters" :text="$t('characters.alert')" />
+
     <v-card>
       <card-title>
         <template #title>

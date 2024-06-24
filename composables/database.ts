@@ -26,12 +26,19 @@ import {
   markerCollectionMethods,
   type MarkerCollection
 } from '~/collections/marker';
+import {
+  characterCollectionMethods,
+  characterDocMethods,
+  characterSchema,
+  type CharacterCollection
+} from '~/collections/character';
 
 export type DatabaseCollections = {
   convenes: ConveneCollection;
   settings: SettingCollection;
   accounts: AccountCollection;
   markers: MarkerCollection;
+  characters: CharacterCollection;
 };
 export type MyDatabase = RxDatabase<DatabaseCollections>;
 
@@ -108,6 +115,12 @@ export const useDatabase = defineStore('useDatabase', () => {
               methods: markerDocMethods,
               statics: markerCollectionMethods,
               autoMigrate: false
+            },
+            characters: {
+              schema: characterSchema,
+              methods: characterDocMethods,
+              statics: characterCollectionMethods,
+              autoMigrate: false
             }
           });
 
@@ -145,6 +158,12 @@ export const useDatabase = defineStore('useDatabase', () => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
           db.markers.postInsert(() => onChanged(), false);
+
+          // character
+          db.characters.preInsert((plainData) => {
+            plainData.createdAt ??= new Date().getTime();
+          }, false);
+          db.characters.postInsert(() => onChanged(), false);
 
           state.value = '';
           isInitialized.value = true;

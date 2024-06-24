@@ -138,9 +138,14 @@
     "title": "Nhân vật",
     "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
-    "skills": "Skills"
+    "skills": "Skills",
+    "alert": "Import convene history to see already owned characters."
   },
-  "weapons": { "title": "Vũ khí", "ranks": "Ranks" },
+  "weapons": {
+    "title": "Vũ khí",
+    "ranks": "Ranks",
+    "alert": "Import convene history to see already owned weapons."
+  },
   "tierList": {
     "title": "Tier list",
     "create": { "title": "Create new Tier list", "liveVoting": "Live Voting" },

@@ -151,11 +151,13 @@
     "title": "Characters",
     "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
-    "skills": "Skills"
+    "skills": "Skills",
+    "alert": "Import convene history to see already owned characters."
   },
   "weapons": {
     "title": "Weapons",
-    "ranks": "Ranks"
+    "ranks": "Ranks",
+    "alert": "Import convene history to see already owned weapons."
   },
   "tierList": {
     "title": "Tier list",

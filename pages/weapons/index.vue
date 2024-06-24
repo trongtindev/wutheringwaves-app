@@ -68,6 +68,8 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       ]"
     />
 
+    <alert id="weapons" :text="$t('weapons.alert')" />
+
     <v-card>
       <card-title>
         <template #title>
