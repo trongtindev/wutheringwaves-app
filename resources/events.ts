@@ -1,6 +1,6 @@
 import type { IEvent } from '~/interfaces/event';
 
-const items: IEvent[] = [
+const items = [
   {
     url: 'https://wutheringwaves-echoes.kurogames-global.com/',
     name: 'Echo Summon Web Event',
@@ -20,15 +20,28 @@ const items: IEvent[] = [
     thumbnail:
       'https://hw-media-cdn-mingchao.kurogame.com/object/1716825600000/a3kz8j2pfjc2nyzz9k-1716864253876.jpg'
   },
-  {
-    name: 'Intensive Training – Limited Time EXP Material Double Drop Event',
-    time: {
-      start: '2024-06-06 04:00',
-      end: '2024-06-13 03:59'
+  [
+    {
+      name: 'Intensive Training – Limited Time EXP Material Double Drop Event',
+      time: {
+        start: '2024-06-06 04:00',
+        end: '2024-06-13 03:59'
+      },
+      color: '#a5b8d1',
+      thumbnail: '/events/covers/intensive-training.webp'
     },
-    color: '#a5b8d1',
-    thumbnail: '/events/covers/intensive-training.webp'
-  },
+    {
+      name: '"Chord Cleansing" LT Echo Double Drop Event',
+      time: {
+        start: '2024-06-20 04:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#6e371e',
+      thumbnail: '/events/covers/chord-cleansing.webp',
+      description:
+        'During the Chord Cleansing event period, players can claim double the rewards from Tacet Suppressions.'
+    }
+  ],
   {
     name: 'Alloy Smelt – Limited Time Battle Event',
     time: {
@@ -38,6 +51,7 @@ const items: IEvent[] = [
     color: '#181f35',
     thumbnail: '/events/covers/alloy-smelt.webp'
   },
+  // start: jiyan
   {
     name: 'Absolute Pulsation: Verdant Summit – Featured Weapon Convene',
     time: {
@@ -56,6 +70,8 @@ const items: IEvent[] = [
     color: '#1f5456',
     thumbnail: '/cards/T_Card5.png'
   },
+  // end: jiyan
+  // start: yinlin
   {
     name: 'Absolute Pulsation: Stringmaster – Featured Weapon Convene',
     time: {
@@ -74,6 +90,7 @@ const items: IEvent[] = [
     color: '#721f29',
     thumbnail: '/cards/T_Card19.png'
   },
+  // end: yinlin
   {
     name: 'Second Coming of Solaris',
     time: {
@@ -81,7 +98,9 @@ const items: IEvent[] = [
       end: '2024-06-27 03:59'
     },
     color: '#141427',
-    thumbnail: '/events/covers/second-coming-of-solaris.webp'
+    thumbnail: '/events/covers/second-coming-of-solaris.webp',
+    description:
+      "Accept Maqi's daily commission and retrieve the items requested for rewards."
   },
   {
     name: 'Wuthering Exploration',
@@ -90,16 +109,9 @@ const items: IEvent[] = [
       end: '2024-06-27 03:59'
     },
     color: '#b19abd',
-    thumbnail: '/events/covers/wuthering-exploration.webp'
-  },
-  {
-    name: '"Chord Cleansing" LT Echo Double Drop Event',
-    time: {
-      start: '2024-06-20 04:00',
-      end: '2024-06-27 03:59'
-    },
-    color: '#6e371e',
-    thumbnail: '/events/covers/chord-cleansing.webp'
+    thumbnail: '/events/covers/wuthering-exploration.webp',
+    description:
+      'Complete Exploration Quests daily to get Exploration Points and claim rewards after achieving Exploration Point milestones.'
   }
 ];
-export default items;
+export default items as IEvent[] | IEvent[][];

@@ -3,8 +3,26 @@ import dotenv from 'dotenv';
 import pkg from './package.json';
 
 // environment
-// dotenv.config({ path: './.env.development', override: true });
+if (process.env.NODE_ENV === 'development') {
+  dotenv.config({ path: './.env.development', override: true });
+} else {
+  dotenv.config({ path: './.env.production', override: true });
+}
 dotenv.config({ path: './.env', override: true });
+
+const {
+  // general
+  NUXT_PUBLIC_SITE_URL,
+  NUXT_PUBLIC_API_URL,
+  // adsense
+  GOOGLE_ADSENSE_TEST_MODE,
+  // firebase
+  NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  NUXT_PUBLIC_FIREBASE_API_KEY,
+  NUXT_PUBLIC_FIREBASE_PROJECT_ID,
+  // sentry
+  NUXT_PUBLIC_SENTRY_DEBUG
+} = process.env;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -16,13 +34,22 @@ export default defineNuxtConfig({
         SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:8080',
         googleAdsense: {
           test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true' || true
-        },
+        }
         // FIREBASE_AUTH_DOMAIN:
         //   process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'localhost:8080'
       }
     }
   },
-  $production: {},
+  $production: {
+    nitro: {
+      storage: {
+        data: {
+          driver: 'vercelKV'
+        }
+      },
+      preset: 'vercel'
+    }
+  },
   typescript: {
     strict: true
   },
@@ -95,7 +122,7 @@ export default defineNuxtConfig({
     port: 8080
   },
   sourcemap: {
-    server: true,
+    server: false,
     client: true
   },
   build: {

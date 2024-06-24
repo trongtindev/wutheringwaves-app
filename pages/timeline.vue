@@ -2,7 +2,7 @@
 // Converted from https://github.com/MadeBaruna/paimon-moe/tree/main/src/routes/timeline
 
 import dayjs from 'dayjs';
-import type { IEvent } from '~/interfaces/event';
+import type { IEvent, IEventConverted } from '~/interfaces/event';
 
 // define
 const dayWidth = 40;
@@ -43,8 +43,8 @@ const dialog = ref(false);
 const dialogData = ref<IEvent>();
 
 // functions
-const convertToDate = (e: IEvent, i) => {
-  let start;
+const convertToDate = (e: IEvent, i): IEventConverted => {
+  let start: dayjs.Dayjs;
   if (e.time.timezoneDependent) {
     start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
       timeDifferenceAsia,
@@ -69,7 +69,7 @@ const convertToDate = (e: IEvent, i) => {
     start,
     end,
     duration
-  };
+  } as IEventConverted;
 };
 
 // events

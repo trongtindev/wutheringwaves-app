@@ -34,6 +34,10 @@ const onPressedLike = (type: 'like' | 'dislike') => {
     });
 };
 
+const onPressedReply = () => {
+  /** TODO */
+};
+
 // computed
 const photoUrl = computed(() => {
   if (typeof props.data.user !== 'string') {
@@ -55,6 +59,7 @@ const createdAt = computed(() => {
           <template #prepend>
             <v-avatar class="border">
               <v-img v-if="photoUrl" :src="photoUrl" />
+              <span v-else>?</span>
             </v-avatar>
           </template>
 
@@ -125,7 +130,7 @@ const createdAt = computed(() => {
         variant="text"
         color="white"
         :disabled="true"
-        @click="onPressedDislike"
+        @click="onPressedReply"
       >
         <span>
           {{ $t('comments.replies') }}

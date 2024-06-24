@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
+import type { IEventConverted } from '~/interfaces/event';
 
 // define
 const props = defineProps<{
@@ -7,7 +8,7 @@ const props = defineProps<{
   prev?: any;
   next?: any;
   now: dayjs.Dayjs;
-  event: any;
+  event: IEventConverted;
   dayWidth: number;
   marginTop: number;
   eventHeight: number;

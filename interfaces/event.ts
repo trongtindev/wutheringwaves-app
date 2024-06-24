@@ -1,4 +1,5 @@
 import type { ILocalized } from '~/interfaces/common';
+import type { Dayjs } from 'dayjs';
 
 export interface IEvent {
   url?: string;
@@ -23,4 +24,13 @@ export interface IEvent {
    * Example: #FAE2B4
    */
   color?: string;
+}
+
+export interface IEventConverted extends IEvent {
+  index: number;
+  start: Dayjs;
+  end: Dayjs;
+  duration: any;
+  offset: any;
+  startOnly: any;
 }
