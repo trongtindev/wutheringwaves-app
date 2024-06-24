@@ -46,8 +46,7 @@ export default defineNuxtConfig({
         data: {
           driver: 'vercelKV'
         }
-      },
-      preset: 'vercel'
+      }
     }
   },
   typescript: {
