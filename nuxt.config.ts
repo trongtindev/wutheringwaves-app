@@ -17,6 +17,8 @@ export default defineNuxtConfig({
         googleAdsense: {
           test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true' || true
         }
+        // FIREBASE_AUTH_DOMAIN:
+        // process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'localhost:8080',
       }
     }
   },
@@ -162,7 +164,15 @@ export default defineNuxtConfig({
         }
       }
     },
-    plugins: [vuetify({ autoImport: true })]
+    plugins: [vuetify({ autoImport: true })],
+    server: {
+      proxy: {
+        '/__/auth': {
+          changeOrigin: true,
+          target: 'https://wuthering-357ea.firebaseapp.com'
+        }
+      }
+    }
   },
   appConfig: {
     buildNumber: Date.now()
@@ -191,6 +201,7 @@ export default defineNuxtConfig({
       // sentry
       SENTRY_DNS:
         'https://214a17c9a4934da4031b2e8faa80e026@o4505463839850496.ingest.us.sentry.io/4507391548784640',
+      SENTRY_DEBUG: process.env.NUXT_PUBLIC_SENTRY_DEBUG == 'true',
       // Adsense
       GOOGLE_ADSENSE_ID:
         process.env.GOOGLE_ADSENSE_ID || 'ca-pub-8470189548892016',

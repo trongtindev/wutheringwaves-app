@@ -229,7 +229,7 @@ onMounted(() => loadData());
             <v-col>
               <v-btn
                 variant="text"
-                :disabled="state != ''"
+                :disabled="state != '' || !auth.isLoggedIn"
                 @click="onPressedAddAttachment"
               >
                 <v-icon :icon="mdiImageSearch" color="white" />
@@ -240,7 +240,7 @@ onMounted(() => loadData());
               <v-btn
                 type="submit"
                 :loading="state == 'submit'"
-                :disabled="!canSubmit || state != ''"
+                :disabled="!canSubmit || state != '' || !auth.isLoggedIn"
                 :prepend-icon="mdiSend"
                 :text="$t('comments.submit')"
               />

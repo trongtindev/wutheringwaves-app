@@ -39,6 +39,8 @@ const months = ref<
 const monthList = ref();
 const todayOffset = ref(0);
 const timelineContainer = ref<HTMLElement>(null as any);
+const dialog = ref(false);
+const dialogData = ref<IEvent>();
 
 // functions
 const convertToDate = (e: IEvent, i) => {
@@ -76,8 +78,9 @@ const onTick = () => {
   todayOffset.value = Math.abs(firstDay.value.diff(today.value, 'day', true));
 };
 
-const onPressedEvent = (args: object) => {
-  console.log(args);
+const onPressedEvent = (data: IEvent) => {
+  dialog.value = true;
+  dialogData.value = data;
 };
 
 const onWheel = (event: WheelEvent) => {
@@ -299,6 +302,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                     :event-height="eventHeight"
                     :event-margin="eventMargin"
                     :i="i"
+                    @on-pressed="() => onPressedEvent(item)"
                   />
                 </div>
 
@@ -311,6 +315,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                   :event-height="eventHeight"
                   :event-margin="eventMargin"
                   :i="i"
+                  @on-pressed="() => onPressedEvent(event)"
                 />
               </div>
 
@@ -331,6 +336,14 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         </client-only>
       </v-card-text>
     </v-card>
+
+    <v-dialog v-model="dialog" :width="720" :scrollable="true">
+      <timeline-dialog
+        v-if="dialogData"
+        :data="dialogData"
+        @on-close="() => (dialog = false)"
+      />
+    </v-dialog>
   </div>
 </template>
 

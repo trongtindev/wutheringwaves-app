@@ -97,7 +97,7 @@ useJsonld({
       </v-card-text>
     </v-card>
 
-    <div class="mt-4">
+    <div class="mt-2">
       <comments :channel="route.path" />
     </div>
   </div>

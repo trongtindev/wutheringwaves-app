@@ -1,17 +1,38 @@
-import * as Sentry from '@sentry/vue';
+import {
+  init,
+  httpClientIntegration,
+  browserTracingIntegration,
+  browserProfilingIntegration,
+  replayIntegration,
+  vueIntegration,
+  breadcrumbsIntegration,
+  feedbackIntegration,
+  debugIntegration
+} from '@sentry/vue';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const analytics = useAnalytics();
   const runtimeConfig = useRuntimeConfig();
 
   if (!analytics.optOut) {
-    Sentry.init({
+    init({
       app: nuxtApp.vueApp,
       dsn: runtimeConfig.public.SENTRY_DNS,
+      debug: runtimeConfig.public.SENTRY_DEBUG,
       enabled: !import.meta.dev,
+      environment: import.meta.dev ? 'development' : 'production',
       integrations: [
-        Sentry.browserTracingIntegration(),
-        Sentry.replayIntegration()
+        // Captures errors on failed requests from Fetch and XHR and attaches request and response information.
+        httpClientIntegration(),
+        browserTracingIntegration(),
+        browserProfilingIntegration(),
+        replayIntegration(),
+        vueIntegration({
+          app: nuxtApp.vueApp
+        }),
+        breadcrumbsIntegration(),
+        feedbackIntegration(),
+        ...(import.meta.dev ? [debugIntegration()] : [])
       ],
       tracesSampleRate: 1.0,
       replaysSessionSampleRate: 0.1,
@@ -22,7 +43,16 @@ export default defineNuxtPlugin((nuxtApp) => {
         'Load failed',
         'TypeError: Load failed',
         'AxiosError'
-      ]
+      ],
+      // This option is required for capturing headers and cookies.
+      sendDefaultPii: true
+      // beforeSend(event, hint) {
+      //   // Check if it is an exception, and if so, show the report dialog
+      //   if (event.exception && event.event_id) {
+      //     showReportDialog({ eventId: event.event_id });
+      //   }
+      //   return event;
+      // }
     });
   }
 });

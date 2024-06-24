@@ -3,53 +3,20 @@ import { type ConveneDocument } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
 import { toBlob } from 'html-to-image';
 import download from 'downloadjs';
-import { mdiDownload } from '@mdi/js';
+import { mdiDownload, mdiUpload } from '@mdi/js';
 import urlSlug from 'url-slug';
 
 // define
-const CARDS = Array.from(Array(25).keys())
-  .map((i) => {
-    return {
-      id: i + 1
-    };
-  })
-  .map((e) => {
-    let character: string | undefined = undefined;
-    switch (e.id) {
-      case 3:
-        character = 'Calcharo';
-        break;
-
-      case 5:
-        character = 'Jiyan';
-        break;
-
-      case 7:
-        character = 'Verina';
-        break;
-
-      case 16:
-        character = 'Lingyang';
-        break;
-
-      case 19:
-        character = 'Yinlin';
-        break;
-    }
-
-    return {
-      ...e,
-      character
-    };
-  });
+const CARDS = Array.from(Array(25).keys()).map((i) => {
+  return {
+    id: i + 1
+  };
+});
 
 // uses
-const app = useApp();
 const i18n = useI18n();
 const account = useAccount();
 const database = useDatabase();
-const localePath = useLocalePath();
-const runtimeConfig = useRuntimeConfig();
 
 // states
 const card = ref();
@@ -63,9 +30,15 @@ const showOptions = ref(false);
 const showUID = ref(true);
 const show4Star = ref(true);
 const show5Star = ref(true);
+const background = ref();
 
 // functions
 const initialize = () => {
+  if (!account.active) {
+    setTimeout(initialize, 250);
+    return;
+  }
+
   database.getInstance().then((db) => {
     db.convenes
       .find({
@@ -80,7 +53,8 @@ const initialize = () => {
       .then((result) => {
         convenes.value = result as any;
         totalPull.value = convenes.value.length;
-      });
+      })
+      .catch(console.error);
   });
 };
 
@@ -114,16 +88,102 @@ const downloadImage = async () => {
 
 // computed
 const items = computed(() => {
-  return Array.from(Array(14).keys()).map(() => {
-    return {
-      chain: 0,
-      rarity: 5
-    };
-  });
+  let output: {
+    resourceType: string;
+    name: string;
+    slug: string;
+    chain: number;
+    rarity: number;
+    items: any[];
+  }[] = [];
+
+  if (convenes.value) {
+    const filterItems = convenes.value
+      .filter((e) => {
+        return (
+          e.cardPoolType == CardPoolType['featured-resonator'] ||
+          e.cardPoolType == CardPoolType['featured-weapon'] ||
+          e.cardPoolType == CardPoolType['standard-resonator'] ||
+          e.cardPoolType == CardPoolType['standard-weapon']
+        );
+      })
+      .filter((e) => {
+        if (!show4Star.value) {
+          return e.qualityLevel >= 5;
+        }
+        return e.qualityLevel >= 4;
+      });
+
+    filterItems.forEach((filterItem) => {
+      const index = output.findIndex((element) => {
+        return element.name == filterItem.name;
+      });
+
+      const conveneHistory = convenes.value.filter((e) => {
+        return e.cardPoolType == filterItem.cardPoolType;
+      });
+
+      const items: number[] = [];
+      for (let i = 0; i < conveneHistory.length; i += 1) {
+        const element = conveneHistory[i];
+        if (element.qualityLevel < 5) {
+          if (items.length > 0) {
+            items[items.length - 1] += 1;
+          }
+          continue;
+        }
+
+        if (element.name == filterItem.name) {
+          items.push(1);
+        }
+      }
+
+      if (index >= 0) {
+        output[index].chain += 1;
+      } else {
+        output.push({
+          resourceType: filterItem.resourceType,
+          name: filterItem.name,
+          slug: urlSlug(filterItem.name),
+          chain: 0,
+          rarity: filterItem.qualityLevel,
+          items: items
+        });
+      }
+    });
+  }
+
+  output.sort((a, b) => b.rarity - a.rarity);
+  if (output.length > 14) {
+    output = output.slice(0, 14);
+  } else if (output.length < 14) {
+    Array.from(Array(14 - output.length).keys())
+      .map(() => {
+        return {
+          chain: 0,
+          rarity: 0
+        };
+      })
+      .forEach((e) => {
+        output.push(e as any);
+      });
+  }
+
+  return output;
 });
 
 const bestPull = computed(() => {
+  const match = items.value
+    .sort((a, b) => {
+      return b.rarity - a.rarity && b.chain - a.chain;
+    })
+    .find((e) => {
+      return e.resourceType == 'Resonators';
+    });
+  if (match) return match;
+
   return {
+    slug: null,
     name: 'Unknown',
     chain: 0,
     rarity: 5
@@ -135,6 +195,9 @@ const backgroundUrl = computed(() => {
   //   const card = CARDS.find((e) => e.character == primary.value?.name);
   //   if (card) return `/cards/T_Card${card.id}.png`;
   // }
+  if (background.value) {
+    return `/cards/T_Card${background.value}.png`;
+  }
   return `/cards/T_Card1.png`;
 });
 
@@ -181,11 +244,12 @@ onMounted(initialize);
               :style="`background-image: url(${backgroundUrl})`"
             ></div>
 
-            <div class="left pa-4">
+            <div class="left pt-4 pl-4 pr-4">
               <div
                 class="border-lg rounded h-100"
                 :class="`border-rarity${bestPull.rarity} bg-rarity${bestPull.rarity}`"
               >
+                <v-img :src="`/characters/portraits/${bestPull.slug}.webp`" />
                 <div
                   class="name position-absolute text-center w-100"
                   style="left: 0px; bottom: 0px"
@@ -257,19 +321,12 @@ onMounted(initialize);
               </div>
 
               <div class="bottom bg-orange">
-                <div
+                <showcase-convene-secondary-character
                   v-for="(element, index) in items"
                   :key="index"
-                  :style="
-                    index > 6
-                      ? `left: ${72 * (index - 8) + index * 10}px; bottom: 118px`
-                      : `left: ${72 * index + index * 10}px; bottom: 36px`
-                  "
-                  :class="`border-rarity${element.rarity}`"
-                  style="width: 72px; height: 72px"
-                  cols="2"
-                  class="item border rounded-circle position-absolute"
-                ></div>
+                  :data="element"
+                  :index="index"
+                />
               </div>
             </div>
 
@@ -323,7 +380,31 @@ onMounted(initialize);
         <v-divider />
 
         <v-card-text>
-          {{ CARDS }}
+          <v-row>
+            <v-col
+              v-for="(element, index) in CARDS"
+              :key="index"
+              cols="6"
+              sm="4"
+              lg="2"
+            >
+              <v-card
+                class="border rounded h-100"
+                :disabled="background == element.id"
+                @click="() => (background = element.id)"
+              >
+                <v-img :src="`/cards/T_Card${element.id}.png`" />
+              </v-card>
+            </v-col>
+
+            <v-col cols="6" sm="4" lg="2">
+              <v-card
+                class="border rounded h-100 d-flex align-center justify-center"
+              >
+                <v-icon :icon="mdiUpload" />
+              </v-card>
+            </v-col>
+          </v-row>
         </v-card-text>
       </v-card>
     </v-expand-transition>
@@ -339,13 +420,6 @@ onMounted(initialize);
   width: 100%;
   height: 100%;
   position: relative;
-
-  /* width: 100%;
-  height: 100%;
-  display: grid;
-  position: relative;
-  display: grid;
-  grid-template-columns: 364px 728px; */
 }
 
 .card-container .background {
@@ -358,7 +432,7 @@ onMounted(initialize);
 
 .card-container .left {
   width: 364px;
-  height: 100%;
+  height: 505px;
 
   position: absolute;
   left: 0px;
@@ -371,18 +445,18 @@ onMounted(initialize);
 }
 
 .card-container .right {
-  width: calc(1092px - 364px);
+  width: 720px;
   height: 100%;
 
   position: absolute;
-  left: 364px;
+  left: 372px;
   top: 0px;
 }
 
 .card-container .right .top {
   font-weight: bold;
   font-size: 30px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .card-container .footer {

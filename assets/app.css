@@ -18,19 +18,20 @@
   --color-highlight: orange;
 }
 
-/*::-webkit-scrollbar {*/
-/*  height: 8px;*/
-/*}*/
+/* ::-webkit-scrollbar {
+  width: 0.4em;
+  border-radius: 50px;
+}
 
-/*::-webkit-scrollbar-track {*/
-/*  @apply bg-transparent;*/
-/*  margin: 0 20px;*/
-/*}*/
+::-webkit-scrollbar-thumb {
+  background: #241e2f;
+  border-radius: 5px;
+}
 
-/*::-webkit-scrollbar-thumb {*/
-/*  background: rgba(0, 0, 0, 0.35);*/
-/*  @apply rounded-xl;*/
-/*}*/
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 10px;
+} */
 
 a,
 a:visited,
@@ -64,8 +65,17 @@ a {
   box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important;
 }
 
+.border-rarity4 {
+  border-color: var(--color-rarity4) !important;
+  box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important;
+}
+
 .bg-rarity5 {
   background-color: var(--color-background-rarity5) !important;
+}
+
+.bg-rarity4 {
+  background-color: var(--color-background-rarity4) !important;
 }
 
 .leaflet-attribution-flag {

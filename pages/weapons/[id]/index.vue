@@ -198,7 +198,7 @@ useJsonld({
     </v-card>
 
     <!-- Ranks -->
-    <v-card class="mt-4">
+    <v-card class="mt-2">
       <v-card-title>
         {{ $t('weapons.ranks') }}
       </v-card-title>
@@ -218,7 +218,7 @@ useJsonld({
     </v-card>
 
     <!-- Ascension Material -->
-    <v-card class="mt-4">
+    <v-card class="mt-2">
       <v-card-title>
         {{ $t('common.ascensionMaterial') }}
       </v-card-title>
@@ -283,8 +283,8 @@ useJsonld({
       </v-card-actions>
     </v-card>
 
-    <div class="mt-4">
-      <comments :channel="`character.${item.slug}`" />
+    <div class="mt-2">
+      <comments :channel="route.path" />
     </div>
   </div>
 </template>

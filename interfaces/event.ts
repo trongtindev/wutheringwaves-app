@@ -4,6 +4,8 @@ export interface IEvent {
   url?: string;
   name: string;
   nameLocalized?: ILocalized;
+  description?: string;
+  descriptionLocalized?: ILocalized;
   thumbnail?: string;
   thumbnailLocalized?: ILocalized;
   time: {

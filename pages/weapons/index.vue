@@ -114,7 +114,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           </v-row>
         </client-only>
 
-        <v-row class="mt-4">
+        <v-row class="mt-2">
           <v-col
             v-for="(element, index) in items"
             :key="index"

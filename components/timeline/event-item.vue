@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
 
+// define
 const props = defineProps<{
   i: number;
   prev?: any;
@@ -12,6 +13,13 @@ const props = defineProps<{
   eventHeight: number;
   eventMargin: number;
 }>();
+
+const emits = defineEmits<{
+  (e: 'on-pressed'): void;
+}>();
+
+// events
+const onPressed = () => emits('on-pressed');
 
 // computed
 const prevDiff = computed(() => {
@@ -111,6 +119,7 @@ const itemStyle = computed(() => {
   <div
     class="d-flex align-center justify-center z-10 text-white cursor-pointer position-absolute rounded-xl"
     :style="style"
+    @click="() => onPressed()"
   >
     <div
       class="event-item"

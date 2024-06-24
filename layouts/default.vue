@@ -30,15 +30,21 @@ const switchLocalePath = useSwitchLocalePath();
 const state = ref<'' | 'sign-in' | 'sign-out'>('');
 
 // events
-const onPressedSignIn = async () => {
+const onPressedSignIn = async (options?: { signInWithRedirect?: boolean }) => {
   state.value = 'sign-in';
 
   try {
-    const result = await auth.signIn();
-    console.log('result', result);
-  } catch (error) {
+    options ??= {};
+    await auth.signIn({
+      signInWithRedirect: options.signInWithRedirect
+    });
+  } catch (error: any) {
+    if (error.code === 'auth/popup-blocked') {
+      return onPressedSignIn({ signInWithRedirect: true });
+    }
+
     // TODO: handle this
-    console.warn('error', error);
+    console.error(error);
     alert(error);
   } finally {
     state.value = '';
@@ -235,7 +241,7 @@ watch(
               :loading="state == 'sign-in'"
               color="primary"
               variant="flat"
-              @click="onPressedSignIn"
+              @click="() => onPressedSignIn()"
             />
           </div>
         </client-only>
@@ -266,11 +272,7 @@ watch(
                 </div>
 
                 <div>
-                  <a
-                    href="https://github.com/trongtindev/wuthering"
-                    target="_blank"
-                    title="Github"
-                  >
+                  <a :href="app.githubRepo" target="_blank" title="Github">
                     Github
                   </a>
                 </div>
@@ -281,7 +283,7 @@ watch(
                 </div>
                 <div>
                   <a
-                    href="https://github.com/trongtindev/wuthering/issues"
+                    :href="`${app.githubRepo}/issues`"
                     target="_blank"
                     :title="$t('Report a Bug')"
                   >

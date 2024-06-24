@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type ConveneDocument } from '@/collections/convene';
+import type { ConveneDocument } from '@/collections/convene';
 import { CardPoolType, type IBanner } from '@/interfaces/banner';
 import { mdiImport, mdiChevronRight } from '@mdi/js';
 
@@ -179,7 +179,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </v-card-text>
     </v-card>
 
-    <div class="mt-4">
+    <div class="mt-2">
       <v-row>
         <v-col cols="12" sm="6">
           <convene-history-banner-summary
@@ -324,7 +324,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             <v-card-title>
               <v-row>
                 <v-col>
-                  {{ $t('convene.globalStats.title') }}
+                  {{ $t('convene.global.title') }}
                 </v-col>
 
                 <v-col class="d-flex justify-end align-center">
@@ -334,14 +334,11 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             </v-card-title>
           </v-card>
 
-          <v-card
-            :to="localePath('/convene-history/card-generator')"
-            class="mt-2"
-          >
+          <v-card :to="localePath('/showcase/convene')" class="mt-2">
             <v-card-title>
               <v-row>
                 <v-col>
-                  {{ $t('convene.cardGenerator.title') }}
+                  {{ $t('showcase.convene.title') }}
                 </v-col>
 
                 <v-col class="d-flex justify-end align-center">

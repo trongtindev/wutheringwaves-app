@@ -31,8 +31,8 @@ const filterType = ref();
 const filterBanner = ref();
 
 // seo meta
-const title = i18n.t('convene.globalStats.title');
-const description = i18n.t('convene.globalStats.description');
+const title = i18n.t('meta.convene.global.title');
+const description = i18n.t('meta.convene.global.description');
 
 useHead({ title });
 
@@ -60,16 +60,16 @@ useSeoMeta({
     />
 
     <v-alert
-      class="mb-2"
-      type="info"
-      :text="$t('Global average pity from {0} users submissions')"
+      class="mb-4"
+      color="info"
+      :text="$t('convene.global.message', [0])"
     />
 
     <v-card>
       <v-card-title>
         <v-row>
           <v-col class="d-flex align-center">
-            {{ $t('Global Convene Stats') }}
+            {{ $t('convene.global.title') }}
           </v-col>
 
           <v-col class="d-flex align-center justify-end">
@@ -144,5 +144,33 @@ useSeoMeta({
         />
       </v-card-text>
     </v-card>
+
+    <v-row class="mt-4">
+      <v-col>
+        <v-card>
+          <v-card-title class="text-rarity5">
+            {{ $t('convene.global.fiveStar') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>
+            <v-alert :text="$t('common.noRecords')" />
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col>
+        <v-card>
+          <v-card-title class="text-rarity4">
+            {{ $t('convene.global.fourStar') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>
+            <v-alert :text="$t('common.noRecords')" />
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>

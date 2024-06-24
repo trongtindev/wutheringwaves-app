@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
-import { initializeApp, type FirebaseApp } from 'firebase/app';
-import { getAuth, type Auth } from 'firebase/auth';
-import { getAnalytics, type Analytics } from 'firebase/analytics';
-import { getPerformance, type FirebasePerformance } from 'firebase/performance';
-import { getMessaging, type Messaging, isSupported } from 'firebase/messaging';
+import type { FirebaseApp } from 'firebase/app';
+import type { Auth } from 'firebase/auth';
+import type { Analytics } from 'firebase/analytics';
+import type { FirebasePerformance } from 'firebase/performance';
+import type { Messaging } from 'firebase/messaging';
 
 export const useFirebase = defineStore('useFirebase', () => {
   // uses
@@ -36,10 +36,14 @@ export const useFirebase = defineStore('useFirebase', () => {
       measurementId: 'G-TJSX2XNTR9'
     };
 
+    const { initializeApp } = await import('firebase/app');
     app.value = initializeApp(firebaseConfig);
+
+    const { getAuth } = await import('firebase/auth');
     auth.value = getAuth(app.value);
 
     // Safari on iOS say no :)
+    const { getMessaging, isSupported } = await import('firebase/messaging');
     if ((isDesktop || isAndroid) && (await isSupported())) {
       messaging.value = getMessaging(app.value);
     }
@@ -48,9 +52,11 @@ export const useFirebase = defineStore('useFirebase', () => {
       if (useAnalytics().optOut) {
         console.warn('firebase', 'analytics', 'optOut', true);
       } else {
+        const { getAnalytics } = await import('firebase/analytics');
         analytics.value = getAnalytics(app.value);
       }
 
+      const { getPerformance } = await import('firebase/performance');
       performance.value = getPerformance(app.value);
     }
   };

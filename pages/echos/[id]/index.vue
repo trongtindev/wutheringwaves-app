@@ -107,7 +107,7 @@ useJsonld({
     </v-card>
 
     <!-- Sonata Effect -->
-    <v-card class="mt-4">
+    <v-card class="mt-2">
       <v-card-title>
         {{ $t('echos.sonataEffect') }}
       </v-card-title>
@@ -118,7 +118,7 @@ useJsonld({
       </v-card-text>
     </v-card>
 
-    <div class="mt-4">
+    <div class="mt-2">
       <comments :channel="route.path" />
     </div>
   </div>

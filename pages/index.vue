@@ -16,6 +16,7 @@ const openGithubRepo = () => {
 
 // seo meta
 const title = 'wutheringwaves.app';
+
 useHead({ title });
 useSeoMeta({
   title: title,
@@ -44,62 +45,125 @@ useSeoMeta({
       </div>
     </v-card>
 
+    <!-- grids -->
+    <v-row class="mt-1">
+      <!-- current event -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-title>
+            {{ $t('common.currentEvents') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>...</v-card-text>
+          <v-divider />
+
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              variant="text"
+              :to="localePath('/timeline')"
+              :text="$t('timeline.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-card-actions>
+        </v-card>
+      </v-col>
+
+      <!-- current event -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-title>
+            {{ $t('common.yourLastConvene') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>...</v-card-text>
+          <v-divider />
+
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              :to="localePath('/convene-history')"
+              variant="text"
+              :text="$t('convene.history.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-card-actions>
+        </v-card>
+      </v-col>
+
+      <!-- global convene -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card>
+          <v-card-title>
+            {{ $t('convene.global.title') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>...</v-card-text>
+          <v-divider />
+
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              variant="text"
+              :to="localePath('/convene-history/global')"
+              :text="$t('convene.global.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+
     <!-- shortcuts -->
-    <v-card class="mt-4">
+    <v-card class="mt-2">
       <v-card-title>
         {{ $t('common.shortcuts') }}
       </v-card-title>
       <v-divider />
 
-      <v-row>
-        <v-col cols="12" md="6">
-          <v-list>
-            <v-list-item
-              :to="localePath('/convene-history')"
-              :title="$t('convene.history.title')"
-              :append-icon="mdiChevronRight"
-            />
-            <v-list-item
-              :to="localePath('/convene-history/global')"
-              :title="$t('convene.globalStats.title')"
-              :append-icon="mdiChevronRight"
-            />
+      <v-list>
+        <v-row :no-gutters="true">
+          <v-col cols="12" md="6">
             <v-list-item
               :to="localePath('/showcase/convene')"
               :title="$t('showcase.convene.title')"
               :append-icon="mdiChevronRight"
             />
+          </v-col>
+          <v-col cols="12" md="6">
             <v-list-item
               :to="localePath('/todo-list')"
               :title="$t('todoList.title')"
               :append-icon="mdiChevronRight"
             />
-          </v-list>
-        </v-col>
-        <v-col cols="12" md="6">
-          <v-list>
+          </v-col>
+          <v-col cols="12" md="6">
             <v-list-item
               :to="localePath('/echos')"
               :title="$t('echos.title')"
               :append-icon="mdiChevronRight"
             />
+          </v-col>
+          <v-col cols="12" md="6">
             <v-list-item
               :to="localePath('/weapons')"
               :title="$t('weapons.title')"
               :append-icon="mdiChevronRight"
             />
+          </v-col>
+          <v-col cols="12" md="6">
             <v-list-item
               :to="localePath('/characters')"
               :title="$t('characters.title')"
               :append-icon="mdiChevronRight"
             />
-          </v-list>
-        </v-col>
-      </v-row>
+          </v-col>
+        </v-row>
+      </v-list>
     </v-card>
 
     <!-- faqs -->
-    <div class="mt-4">
+    <div class="mt-2">
       <v-expansion-panels>
         <v-expansion-panel v-for="index in faqs" :key="index">
           <v-expansion-panel-title class="font-weight-bold">

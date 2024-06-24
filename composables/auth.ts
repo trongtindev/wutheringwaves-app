@@ -19,7 +19,11 @@ export const useAuth = defineStore('useAuth', () => {
   const state = ref<'' | 'sign-in'>('');
 
   // functions
-  const signIn = async () => {
+  const signIn = async (options?: { signInWithRedirect?: boolean }) => {
+    options ??= {};
+
+    // const { OAuth2Client } = await import('google-auth-library');
+
     const provider = new GoogleAuthProvider();
     /**
      * Best practices for using signInWithRedirect on browsers that block third-party storage access
@@ -30,7 +34,8 @@ export const useAuth = defineStore('useAuth', () => {
           navigator.userAgent
         ) ||
         navigator.cookieEnabled === false ||
-        route.query.signInWithRedirect
+        route.query.signInWithRedirect ||
+        options.signInWithRedirect
       ) {
         localStorage.setItem('signInWithRedirect', 'true');
         signInWithRedirect(firebase.auth!, provider)

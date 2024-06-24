@@ -31,6 +31,10 @@
       "cardGenerator": { "title": "Convene Card Generator" },
       "history": {
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+      },
+      "global": {
+        "title": "Global Convene Stats",
+        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       }
     },
     "todoList": {
@@ -51,7 +55,11 @@
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity."
     },
     "settings": { "title": "Settings" },
-    "guide": { "title": "Game Guide", "description": "" }
+    "guide": { "title": "Game Guide", "description": "" },
+    "leaderboards": {
+      "title": "Leaderboards",
+      "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
+    }
   },
   "sidebar": {
     "home": "Trang chủ",
@@ -108,14 +116,21 @@
       "top": "TOP",
       "bottom": "BOTTOM"
     },
-    "globalStats": { "title": "Thống kê toàn cầu" }
+    "global": {
+      "title": "Global Convene Stats",
+      "message": "Global average pity from {0} users submissions",
+      "fiveStar": "5★ List",
+      "fourStar": "4★ List"
+    }
   },
   "showcase": {
     "title": "Showcase",
     "convene": {
       "title": "Convene Showcase",
       "showUID": "Show UID",
-      "emptyCard": "Please import convene history to fill the card."
+      "emptyCard": "Please import convene history to fill the card.",
+      "show4Star": "Show 4 star",
+      "show5Star": "Show 5 star"
     },
     "character": {}
   },
@@ -285,7 +300,11 @@
     "upcomingContent": "This page is about upcoming content.",
     "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
     "energy": "Energy",
-    "options": "Options"
+    "options": "Options",
+    "trophy": "Trophy",
+    "noRecords": "No records found.",
+    "currentEvents": "Current events",
+    "yourLastConvene": "Your Last Convene"
   },
   "other": { "underDevelopment": "This site is under development." }
 }
