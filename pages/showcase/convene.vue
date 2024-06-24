@@ -2,7 +2,7 @@
 import { type ConveneDocument } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
 import { toBlob } from 'html-to-image';
-import download from 'downloadjs';
+import { saveAs } from 'file-saver';
 import { mdiDownload, mdiUpload } from '@mdi/js';
 import urlSlug from 'url-slug';
 
@@ -76,7 +76,7 @@ const downloadImage = async () => {
         skipFonts: true
       })
     ]).then((res) => res[2] as Blob);
-    download(blob, `${account.active}-convene-history.png`);
+    saveAs(blob, `${account.active}-convene-history.png`);
   } catch (error) {
     // TODO: handle error
     console.error(error);
@@ -249,7 +249,10 @@ onMounted(initialize);
                 class="border-lg rounded h-100"
                 :class="`border-rarity${bestPull.rarity} bg-rarity${bestPull.rarity}`"
               >
-                <v-img :src="`/characters/portraits/${bestPull.slug}.webp`" />
+                <v-img
+                  v-if="bestPull.slug"
+                  :src="`/characters/portraits/${bestPull.slug}.webp`"
+                />
                 <div
                   class="name position-absolute text-center w-100"
                   style="left: 0px; bottom: 0px"

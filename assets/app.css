@@ -61,11 +61,15 @@ a {
 }
 
 .border-rarity5 {
+  border-style: solid;
+  border-width: thin;
   border-color: var(--color-rarity5) !important;
   box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important;
 }
 
 .border-rarity4 {
+  border-style: solid;
+  border-width: thin;
   border-color: var(--color-rarity4) !important;
   box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important;
 }

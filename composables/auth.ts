@@ -1,13 +1,6 @@
 import { defineStore } from 'pinia';
-import {
-  signInWithPopup,
-  signInWithRedirect,
-  GoogleAuthProvider,
-  getRedirectResult,
-  type User,
-  signOut as firebaseSignOut
-} from 'firebase/auth';
-import * as Sentry from '@sentry/vue';
+import type { User } from 'firebase/auth';
+import { setUser } from '@sentry/vue';
 
 export const useAuth = defineStore('useAuth', () => {
   // uses
@@ -22,13 +15,21 @@ export const useAuth = defineStore('useAuth', () => {
   const signIn = async (options?: { signInWithRedirect?: boolean }) => {
     options ??= {};
 
-    // const { OAuth2Client } = await import('google-auth-library');
+    const {
+      signInWithPopup,
+      signInWithRedirect,
+      signInAnonymously,
+      GoogleAuthProvider
+    } = await import('firebase/auth');
 
-    const provider = new GoogleAuthProvider();
-    /**
-     * Best practices for using signInWithRedirect on browsers that block third-party storage access
-     */
     return new Promise((resolve, reject) => {
+      if (import.meta.dev) {
+        // https://github.com/firebase/firebase-js-sdk/issues/7342
+        signInAnonymously(firebase.auth!).then(resolve).catch(reject);
+        return;
+      }
+
+      const provider = new GoogleAuthProvider();
       if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
@@ -48,6 +49,8 @@ export const useAuth = defineStore('useAuth', () => {
   };
 
   const signOut = async () => {
+    const { signOut: firebaseSignOut } = await import('firebase/auth');
+
     return new Promise((resolve, reject) => {
       firebaseSignOut(firebase.auth!).then(resolve).catch(reject);
     });
@@ -63,7 +66,7 @@ export const useAuth = defineStore('useAuth', () => {
   });
 
   // lifecycle
-  const initialize = () => {
+  const initialize = async () => {
     if (import.meta.server) {
       throw new Error('Cannot initialize auth on server-side!');
     }
@@ -77,12 +80,12 @@ export const useAuth = defineStore('useAuth', () => {
       user.value = e as any;
 
       if (user.value) {
-        Sentry.setUser({
+        setUser({
           id: user.value.uid,
           email: user.value.email || undefined
         });
       } else {
-        Sentry.setUser(null);
+        setUser(null);
       }
     });
 
@@ -90,6 +93,8 @@ export const useAuth = defineStore('useAuth', () => {
       localStorage.removeItem('signInWithRedirect');
 
       state.value = 'sign-in';
+      const { getRedirectResult } = await import('firebase/auth');
+
       getRedirectResult(firebase.auth!)
         .then(() => {})
         .catch(console.warn)

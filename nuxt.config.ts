@@ -16,9 +16,9 @@ export default defineNuxtConfig({
         SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:8080',
         googleAdsense: {
           test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true' || true
-        }
+        },
         // FIREBASE_AUTH_DOMAIN:
-        // process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'localhost:8080',
+        //   process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'localhost:8080'
       }
     }
   },
@@ -168,6 +168,10 @@ export default defineNuxtConfig({
     server: {
       proxy: {
         '/__/auth': {
+          changeOrigin: true,
+          target: 'https://wuthering-357ea.firebaseapp.com'
+        },
+        '/__/firebase': {
           changeOrigin: true,
           target: 'https://wuthering-357ea.firebaseapp.com'
         }

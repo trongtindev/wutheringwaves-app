@@ -57,9 +57,9 @@ export const useBackup = defineStore('useBackup', () => {
     const json = await db.exportJSON();
     const response = await api
       .getInstance()
-      .post<{ createdAt: string }>('backup', { data: JSON.stringify(json) });
+      .post<{ createdAt: Date }>('backup', { data: JSON.stringify(json) });
 
-    const time = new Date(response.data.createdAt).getTime();
+    const time = response.data.createdAt.getTime();
     lastCloudChanged.value = time;
     lastLocalChanged.value = time;
 
@@ -85,7 +85,7 @@ export const useBackup = defineStore('useBackup', () => {
     state.value = 'restore';
     const response = await api
       .getInstance()
-      .get<{ data: string; createdAt: string }>('backup', {
+      .get<{ data: string; createdAt: Date }>('backup', {
         params: {
           withData: true
         }
@@ -101,7 +101,7 @@ export const useBackup = defineStore('useBackup', () => {
 
     await db.importJSON(response.data.data as any);
 
-    const time = new Date(response.data.createdAt).getTime();
+    const time = response.data.createdAt.getTime();
     lastLocalChanged.value = time;
 
     setTimeout(() => window.location.reload(), 250);
@@ -122,7 +122,7 @@ export const useBackup = defineStore('useBackup', () => {
     lastCloudChanged.value = new Date().getTime();
   };
 
-  // TODO: check data conflict multiple devices
+  // TODO: check data conflict by key
   const checkSync = async () => {
     // prevent recheck
     if (isCheckSync.value) return;
@@ -140,13 +140,13 @@ export const useBackup = defineStore('useBackup', () => {
       ? response.data.createdAt.getTime()
       : 0;
 
+    console.warn(
+      'backup',
+      'checkSync',
+      lastLocalChanged.value,
+      lastCloudChanged.value
+    );
     if (lastCloudChanged.value > lastLocalChanged.value) {
-      console.warn(
-        'backup',
-        'data conflict',
-        lastCloudChanged.value,
-        lastLocalChanged.value
-      );
       dialog.show({
         title: i18n.t('backup.conflictTitle'),
         content: i18n.t('backup.conflictMessage'),

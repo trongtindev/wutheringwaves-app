@@ -81,9 +81,33 @@ watch(
 <template>
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
-      <v-sheet class="pa-4 text-center">
-        <client-only>
-          <v-avatar class="mb-4 bg-grey-darken-3" size="64">
+      <client-only>
+        <v-list>
+          <v-list-item
+            :title="
+              auth.user
+                ? auth.user.displayName || 'Anonymous'
+                : $t('common.guest')
+            "
+            :subtitle="
+              auth.user
+                ? auth.user.email || auth.user.uid
+                : $t('common.guestSubtitle')
+            "
+          >
+            <template #prepend>
+              <v-avatar class="border">
+                <v-img
+                  v-if="auth.user && auth.user.photoURL"
+                  :src="auth.user.photoURL"
+                />
+                <span v-else>?</span>
+              </v-avatar>
+            </template>
+          </v-list-item>
+        </v-list>
+
+        <!-- <v-avatar class="mb-4 bg-grey-darken-3" size="64">
             <v-img
               v-if="auth.user && auth.user.photoURL"
               :src="auth.user.photoURL"
@@ -93,9 +117,8 @@ watch(
           <div v-if="auth.user">
             {{ auth.user.email || auth.user.displayName || auth.user.uid }}
           </div>
-          <div v-else>{{ $t('Guest') }}</div>
-        </client-only>
-      </v-sheet>
+          <div v-else>{{ $t('Guest') }}</div> -->
+      </client-only>
       <v-divider />
 
       <v-list :nav="true" :lines="false">

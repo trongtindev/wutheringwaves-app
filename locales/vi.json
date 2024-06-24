@@ -304,7 +304,9 @@
     "trophy": "Trophy",
     "noRecords": "No records found.",
     "currentEvents": "Current events",
-    "yourLastConvene": "Your Last Convene"
+    "yourLastConvene": "Your Last Convene",
+    "guest": "Guest",
+    "guestSubtitle": "Sign in to use Cloud Sync."
   },
   "other": { "underDevelopment": "This site is under development." }
 }
