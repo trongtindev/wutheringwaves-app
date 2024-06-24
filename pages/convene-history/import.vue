@@ -7,7 +7,7 @@ interface IConvene {
   name: string;
   qualityLevel: number;
   resourceId: number;
-  resourceType: string;
+  resourceType: 'Weapons' | 'Resonators';
   time: string;
 }
 
