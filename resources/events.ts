@@ -1,26 +1,15 @@
 import type { IEvent } from '~/interfaces/event';
 
 const items = [
-  {
-    url: 'https://wutheringwaves-echoes.kurogames-global.com/',
-    name: 'Echo Summon Web Event',
-    time: {
-      start: '2024-04-29 00:00',
-      end: '2024-06-06 00:00'
-    }
-  },
-  {
-    url: 'https://wutheringwaves.kurogames.com/en/main/news/detail/813',
-    name: 'Overdash Club',
-    time: {
-      start: '2024-05-30 04:00',
-      end: '2024-06-17 03:59'
-    },
-    color: '#c2a262',
-    thumbnail:
-      'https://hw-media-cdn-mingchao.kurogame.com/object/1716825600000/a3kz8j2pfjc2nyzz9k-1716864253876.jpg'
-  },
   [
+    {
+      url: 'https://wutheringwaves-echoes.kurogames-global.com/',
+      name: 'Echo Summon Web Event',
+      time: {
+        start: '2024-04-29 00:00',
+        end: '2024-06-06 00:00'
+      }
+    },
     {
       name: 'Intensive Training – Limited Time EXP Material Double Drop Event',
       time: {
@@ -29,6 +18,30 @@ const items = [
       },
       color: '#a5b8d1',
       thumbnail: '/events/covers/intensive-training.webp'
+    },
+    {
+      name: 'Second Coming of Solaris',
+      time: {
+        start: '2024-06-13 04:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#141427',
+      thumbnail: '/events/covers/second-coming-of-solaris.webp',
+      description:
+        "Accept Maqi's daily commission and retrieve the items requested for rewards."
+    }
+  ],
+  [
+    {
+      url: 'https://wutheringwaves.kurogames.com/en/main/news/detail/813',
+      name: 'Overdash Club',
+      time: {
+        start: '2024-05-30 04:00',
+        end: '2024-06-17 03:59'
+      },
+      color: '#c2a262',
+      thumbnail:
+        'https://hw-media-cdn-mingchao.kurogame.com/object/1716825600000/a3kz8j2pfjc2nyzz9k-1716864253876.jpg'
     },
     {
       name: '"Chord Cleansing" LT Echo Double Drop Event',
@@ -50,6 +63,17 @@ const items = [
     },
     color: '#181f35',
     thumbnail: '/events/covers/alloy-smelt.webp'
+  },
+  {
+    name: 'Wuthering Exploration',
+    time: {
+      start: '2024-06-13 10:00',
+      end: '2024-06-27 03:59'
+    },
+    color: '#b19abd',
+    thumbnail: '/events/covers/wuthering-exploration.webp',
+    description:
+      'Complete Exploration Quests daily to get Exploration Points and claim rewards after achieving Exploration Point milestones.'
   },
   // start: jiyan
   {
@@ -89,29 +113,7 @@ const items = [
     },
     color: '#721f29',
     thumbnail: '/cards/T_Card19.png'
-  },
-  // end: yinlin
-  {
-    name: 'Second Coming of Solaris',
-    time: {
-      start: '2024-06-13 04:00',
-      end: '2024-06-27 03:59'
-    },
-    color: '#141427',
-    thumbnail: '/events/covers/second-coming-of-solaris.webp',
-    description:
-      "Accept Maqi's daily commission and retrieve the items requested for rewards."
-  },
-  {
-    name: 'Wuthering Exploration',
-    time: {
-      start: '2024-06-13 10:00',
-      end: '2024-06-27 03:59'
-    },
-    color: '#b19abd',
-    thumbnail: '/events/covers/wuthering-exploration.webp',
-    description:
-      'Complete Exploration Quests daily to get Exploration Points and claim rewards after achieving Exploration Point milestones.'
   }
+  // end: yinlin
 ];
 export default items as IEvent[] | IEvent[][];

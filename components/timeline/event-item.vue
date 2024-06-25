@@ -118,15 +118,24 @@ const itemStyle = computed(() => {
 
 <template>
   <div
-    class="d-flex align-center justify-center z-10 text-white cursor-pointer position-absolute rounded-xl"
+    class="d-flex align-center justify-center z-10 text-white cursor-pointer position-absolute"
+    :class="{
+      'rounded-l-xl': prevDiff > 0,
+      'rounded-r-xl': nextDiff > 1,
+      'border-s-md border-gray-3': prevDiff < 1
+    }"
     :style="style"
     @click="() => onPressed()"
   >
     <div
       class="event-item"
       :style="itemStyle"
-      :class="nextDiff < 1 ? '' : 'rounded-xl'"
+      :class="{
+        'rounded-r-xl': nextDiff > 1,
+        'border-e-md border-gray-3': nextDiff < 1
+      }"
     />
+
     <span
       class="event-name text position-sticky left-0 text-no-wrap overflow-hidden"
     >

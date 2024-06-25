@@ -18,6 +18,23 @@
   --color-highlight: orange;
 }
 
+.bg-opacity-75 {
+  background-color: rgb(255 255 255 / 0.75) !important;
+}
+
+.border-gray-3 {
+  border-color: #eeeeee !important;
+}
+.rounded-l-xl {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.rounded-r-xl {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
 /* ::-webkit-scrollbar {
   width: 0.4em;
   border-radius: 50px;
