@@ -13,8 +13,9 @@ export const useBackup = defineStore('useBackup', () => {
 
   // states
   const state = ref<'' | 'syncing' | 'synced' | 'restore'>('');
-  const lastLocalChanged = useCookie<number>('lastLocalChanged');
-  const lastCloudChanged = useCookie<number>('lastCloudChanged');
+  const isInitialized = ref(false);
+  const lastLocalChanged = ref(0);
+  const lastCloudChanged = ref(0);
   const isCheckSync = ref(false);
 
   // functions
@@ -124,6 +125,11 @@ export const useBackup = defineStore('useBackup', () => {
 
   // TODO: check data conflict by key
   const checkSync = async () => {
+    if (!isInitialized.value) {
+      setTimeout(checkSync, 250);
+      return;
+    }
+
     // prevent recheck
     if (isCheckSync.value) return;
 
@@ -146,7 +152,10 @@ export const useBackup = defineStore('useBackup', () => {
       lastLocalChanged.value,
       lastCloudChanged.value
     );
-    if (lastCloudChanged.value > lastLocalChanged.value) {
+
+    if (lastCloudChanged.value && !lastLocalChanged.value) {
+      restore();
+    } else if (lastCloudChanged.value > lastLocalChanged.value) {
       dialog.show({
         title: i18n.t('backup.conflictTitle'),
         content: i18n.t('backup.conflictMessage'),
@@ -166,6 +175,12 @@ export const useBackup = defineStore('useBackup', () => {
     if (import.meta.server) {
       throw new Error('Cannot initialize backup on server-side!');
     }
+
+    lastLocalChanged.value = parseInt(
+      localStorage.getItem('lastLocalChanged') || '0'
+    );
+
+    isInitialized.value = true;
   };
 
   // changes
@@ -187,6 +202,10 @@ export const useBackup = defineStore('useBackup', () => {
         checkSyncQueue = setTimeout(() => checkSync(), 5000);
       }
     );
+
+    watch(lastLocalChanged, (value) => {
+      localStorage.setItem('lastLocalChanged', value.toString());
+    });
   }
 
   return {
