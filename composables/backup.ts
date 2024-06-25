@@ -100,6 +100,7 @@ export const useBackup = defineStore('useBackup', () => {
     await database.initialize({ override: true });
     db = await database.getInstance();
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await db.importJSON(response.data.data as any);
 
     const time = response.data.createdAt.getTime();

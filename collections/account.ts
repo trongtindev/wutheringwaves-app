@@ -6,7 +6,9 @@ export type AccountDocType = {
   createdAt: number;
 };
 
-export type AccountDocMethods = {};
+export type AccountDocMethods = {
+  /** Something */
+};
 
 export type AccountDocument = RxDocument<AccountDocType, AccountDocMethods>;
 

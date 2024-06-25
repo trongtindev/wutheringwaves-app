@@ -126,9 +126,11 @@ export const useDatabase = defineStore('useDatabase', () => {
 
           // check migration
           for (const collection of Object.keys(collections)) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if (await (collections as any)[collection].migrationNeeded()) {
               state.value = 'migration';
               console.info('database', collection, 'startMigration');
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               await (collections as any)[collection].startMigration();
               console.info('database', collection, 'startMigration', 'done');
             }

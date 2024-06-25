@@ -11,7 +11,7 @@ In-development site for Wuthering Waves.
 | Features                          | Description                          | Status      |
 | --------------------------------- | ------------------------------------ | ----------- |
 | Convene history                   | ...                                  | ✅          |
-| Convene history > Share card      | ...                                  | In progress |
+| Convene history > Share card      | ...                                  | ✅          |
 | Convene global stats              | ...                                  | In progress |
 | Cloud backup                      | ...                                  | ✅          |
 | Database > Characters             | ...                                  | In progress |
@@ -32,6 +32,7 @@ In-development site for Wuthering Waves.
 | Codes                             | Giftcode page                        | ✅          |
 | Interactive map                   | ...                                  | In progress |
 | Trophies                          | ...                                  | ✅          |
+| Timeline                          | ...                                  | ✅          |
 | Functions > Global search         | Search any thing                     | None        |
 | Functions > Notifications         | Web push notification functions      | None        |
 
@@ -102,20 +103,6 @@ pnpm test:e2e tests/example.spec.ts
 # Runs the tests in debug mode
 pnpm test:e2e --debug
 ```
-
-#### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
-
-#### Special Thanks
-
-Data crawler [https://github.com/resonance-rest/api](https://github.com/resonance-rest/api)<br />
-Icon & images [https://wanderer.moe/wuthering-waves](https://wanderer.moe/wuthering-waves)<br />
-Material Icons [https://pictogrammers.com/library/mdi/](https://pictogrammers.com/library/mdi/)<br />
-wuthering Waves
-Wiki [https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki](https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki)
 
 # License
 

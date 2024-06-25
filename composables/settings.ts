@@ -7,6 +7,7 @@ export const useSettings = defineStore('useSettings', () => {
   // functions
   const get = async (
     key: string,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     defaultValue: any,
     options?: {
       upsert?: boolean;
@@ -33,6 +34,7 @@ export const useSettings = defineStore('useSettings', () => {
     return defaultValue;
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const set = async (key: string, value: any) => {
     const db = await database.getInstance();
     return db.settings.upsert({

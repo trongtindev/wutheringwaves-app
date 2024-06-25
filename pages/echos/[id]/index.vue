@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const i18n = useI18n();
 const route = useRoute();
-const router = useRouter();
-const localePath = useLocalePath();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
 

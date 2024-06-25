@@ -2,4 +2,6 @@
 const notification = useNotification();
 </script>
 
-<template></template>
+<template>
+  <client-only></client-only>
+</template>

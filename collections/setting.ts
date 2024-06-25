@@ -6,7 +6,9 @@ export type SettingDocType = {
   createdAt: number;
 };
 
-export type SettingDocMethods = {};
+export type SettingDocMethods = {
+  /** Something */
+};
 
 export type SettingDocument = RxDocument<SettingDocType, SettingDocMethods>;
 

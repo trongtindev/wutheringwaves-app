@@ -7,7 +7,9 @@ export type MarkerDocType = {
   createdAt: number;
 };
 
-export type MarkerDocMethods = {};
+export type MarkerDocMethods = {
+  /** Something */
+};
 
 export type MarkerDocument = RxDocument<MarkerDocType, MarkerDocMethods>;
 

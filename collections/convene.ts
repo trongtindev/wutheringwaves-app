@@ -12,7 +12,9 @@ export type ConveneDocType = {
   createdAt: number;
 };
 
-export type ConveneDocMethods = {};
+export type ConveneDocMethods = {
+  /** Something */
+};
 
 export type ConveneDocument = RxDocument<ConveneDocType, ConveneDocMethods>;
 

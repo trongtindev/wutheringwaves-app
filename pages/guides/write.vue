@@ -40,7 +40,7 @@ useHead({
       </card-title>
 
       <v-card-text>
-        <guides-editor />
+        <editor />
       </v-card-text>
     </v-card>
   </div>

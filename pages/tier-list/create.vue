@@ -215,8 +215,7 @@ const onDrop = (args: ITierListRow, parent?: TierListItem) => {
   dragPreviousRow.value = null;
 };
 
-const onDragEnd = (event: any) => {
-  // console.debug('onDragEnd', event);
+const onDragEnd = () => {
   dragItem.value = null as any;
   dragPreviousRow.value = null;
 };
@@ -369,7 +368,7 @@ useHead({
             :key="element.slug"
             class="rounded border cursor-grab"
             :ondragstart="() => onDragStart(element)"
-            :ondragend="() => onDragEnd(element)"
+            :ondragend="() => onDragEnd()"
             :class="index > 0 ? 'ml-2' : ''"
             :width="100"
             :height="100"
