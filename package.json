@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@nuxtjs/i18n": "^8.3.1",
-    "@nuxtjs/sitemap": "^5.2.0",
+    "@nuxtjs/sitemap": "^5.2.1",
     "@paralleldrive/cuid2": "^2.2.2",
     "@pinia/nuxt": "^0.5.1",
     "@sentry/vue": "^8.11.0",
@@ -37,14 +37,14 @@
     "html-to-image": "^1.11.11",
     "leaflet": "^1.9.4",
     "nuxt-jsonld": "^2.0.8",
-    "nuxt-schema-org": "^3.3.7",
+    "nuxt-schema-org": "^3.3.8",
     "pinia": "^2.1.7",
     "rxdb": "^15.24.0",
     "rxjs": "^7.8.1",
     "url-slug": "^4.0.1",
-    "vue": "^3.4.29",
+    "vue": "^3.4.30",
     "vue-chartjs": "^5.3.1",
-    "vue-router": "^4.3.3",
+    "vue-router": "^4.4.0",
     "vuetify": "^3.6.10"
   },
   "devDependencies": {
