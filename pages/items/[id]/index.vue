@@ -9,7 +9,7 @@ const items = await resources.getItems();
 const item = items.find((e) => e.slug === route.params.id)!;
 if (!item) throw createError({ statusCode: 404 });
 
-const data = await resources.getItemData(`${route.params.id}`);
+const data = await resources.getItemData(item.slug);
 if (!data) throw createError({ statusCode: 404 });
 
 // computed

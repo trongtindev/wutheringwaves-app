@@ -5,10 +5,6 @@
     {
       "source": "/__/auth/(.*)",
       "destination": "https://wuthering-357ea.firebaseapp.com/__/auth/$1"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "/$1"
     }
   ]
 }

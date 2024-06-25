@@ -27,27 +27,8 @@ const {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  $development: {
-    // ssr: false,
-  },
-  $production: {
-    nitro: {
-      storage: {
-        // data: {
-        //   driver: 'redis'
-        // }
-      }
-    },
-    sitemap: {
-      // runtimeCacheStorage: {
-      //   driver: 'redis'
-      // }
-    }
-  },
-  css: ['~/assets/tiptap.scss'],
-  typescript: {
-    strict: true
-  },
+  $production: {},
+  $development: {},
   modules: [
     '@nuxtjs/i18n',
     '@pinia/nuxt',
@@ -59,6 +40,24 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     'nuxt3-leaflet'
   ],
+  build: {
+    transpile: ['vuetify', 'leaflet']
+  },
+  sitemap: {
+    autoLastmod: true,
+    exclude: ['/settings'],
+    sources: [
+      '/api/__sitemap__/characters',
+      '/api/__sitemap__/echos',
+      '/api/__sitemap__/items',
+      '/api/__sitemap__/trophies',
+      '/api/__sitemap__/weapons'
+    ]
+  },
+  css: ['~/assets/tiptap.scss'],
+  typescript: {
+    strict: true
+  },
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
@@ -73,9 +72,6 @@ export default defineNuxtConfig({
   sourcemap: {
     server: false,
     client: true
-  },
-  build: {
-    transpile: ['vuetify']
   },
   devtools: { enabled: true },
   components: ['./components'],
@@ -93,24 +89,13 @@ export default defineNuxtConfig({
     locales: [
       { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
       { name: 'Vietnamese', code: 'vi', iso: 'vi' }
-    ],
+    ]
   },
   pinia: {
     storesDirs: ['./composables/**']
   },
   eslint: {
     // checker: true
-  },
-  sitemap: {
-    autoLastmod: true,
-    exclude: ['/settings'],
-    sources: [
-      '/api/__sitemap__/characters',
-      '/api/__sitemap__/echos',
-      '/api/__sitemap__/items',
-      '/api/__sitemap__/trophies',
-      '/api/__sitemap__/weapons'
-    ]
   },
   vite: {
     vue: {
@@ -149,6 +134,8 @@ export default defineNuxtConfig({
               return 'tiptap';
             } else if (id.includes('chartjs')) {
               return 'chartjs';
+            } else if (id.includes('leaflet')) {
+              return 'leaflet';
             }
           }
         }
