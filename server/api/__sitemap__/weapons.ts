@@ -1,4 +1,4 @@
-import weapons from '~/resources/characters';
+import weapons from '~/resources/weapons';
 
 export default defineSitemapEventHandler(async () => {
   return weapons.map((e) => {
