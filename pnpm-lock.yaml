@@ -107,6 +107,9 @@ importers:
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
+      nuxt3-leaflet:
+        specifier: ^1.0.13
+        version: 1.0.13(typescript@5.5.2)
       pinia:
         specifier: ^2.1.7
         version: 2.1.7(typescript@5.5.2)(vue@3.4.30(typescript@5.5.2))
@@ -119,18 +122,9 @@ importers:
       url-slug:
         specifier: ^4.0.1
         version: 4.0.1
-      vue:
-        specifier: ^3.4.30
-        version: 3.4.30(typescript@5.5.2)
       vue-chartjs:
         specifier: ^5.3.1
         version: 5.3.1(chart.js@4.4.3)(vue@3.4.30(typescript@5.5.2))
-      vue-router:
-        specifier: ^4.4.0
-        version: 4.4.0(vue@3.4.30(typescript@5.5.2))
-      vuetify:
-        specifier: ^3.6.10
-        version: 3.6.10(typescript@5.5.2)(vite-plugin-vuetify@2.0.3)(vue-i18n@9.13.1(vue@3.4.30(typescript@5.5.2)))(vue@3.4.30(typescript@5.5.2))
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -192,9 +186,6 @@ importers:
       nuxt-schema-org:
         specifier: ^3.3.8
         version: 3.3.8(@nuxt/devtools@1.3.6(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1)))(@unocss/webpack@0.61.0(rollup@4.18.0)(webpack@5.92.0(esbuild@0.21.5)))(@vue/compiler-core@3.4.30)(axios@1.7.2)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.8)(@upstash/redis@1.31.6)(@vercel/kv@1.0.1)(encoding@0.1.13)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.22(typescript@5.5.2)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1))(vue@3.4.30(typescript@5.5.2))(webpack@5.92.0(esbuild@0.21.5))
-      nuxt3-leaflet:
-        specifier: ^1.0.13
-        version: 1.0.13(typescript@5.5.2)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -210,9 +201,18 @@ importers:
       vite-plugin-vuetify:
         specifier: ^2.0.3
         version: 2.0.3(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1))(vue@3.4.30(typescript@5.5.2))(vuetify@3.6.10)
+      vue:
+        specifier: ^3.4.30
+        version: 3.4.30(typescript@5.5.2)
+      vue-router:
+        specifier: ^4.4.0
+        version: 4.4.0(vue@3.4.30(typescript@5.5.2))
       vue-tsc:
         specifier: ^2.0.22
         version: 2.0.22(typescript@5.5.2)
+      vuetify:
+        specifier: ^3.6.10
+        version: 3.6.10(typescript@5.5.2)(vite-plugin-vuetify@2.0.3)(vue-i18n@9.13.1(vue@3.4.30(typescript@5.5.2)))(vue@3.4.30(typescript@5.5.2))
 
 packages:
 

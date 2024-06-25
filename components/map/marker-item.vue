@@ -69,7 +69,7 @@ const onPressedMarkAsNotFound = async () => {
 </script>
 
 <template>
-  <div>
+  <client-only>
     <div v-if="restart"></div>
     <l-marker
       v-else
@@ -110,5 +110,5 @@ const onPressedMarkAsNotFound = async () => {
         </div>
       </l-popup>
     </l-marker>
-  </div>
+  </client-only>
 </template>

@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     'nuxt3-leaflet'
   ],
   build: {
-    transpile: ['vuetify', 'leaflet']
+    transpile: ['vuetify']
   },
   sitemap: {
     autoLastmod: true,
@@ -70,7 +70,7 @@ export default defineNuxtConfig({
     port: 8080
   },
   sourcemap: {
-    server: false,
+    server: true,
     client: true
   },
   devtools: { enabled: true },
