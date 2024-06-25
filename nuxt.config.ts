@@ -70,48 +70,37 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/echos': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/echos/**': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/weapons': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/weapons/**': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/characters': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/characters/**': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/items': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/items/**': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/trophies': {
-      prerender: true,
-      isr: true
+      prerender: true
     },
     '/trophies/**': {
-      prerender: true,
-      isr: true
+      prerender: true
     }
   },
   site: {
