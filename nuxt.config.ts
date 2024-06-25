@@ -1,12 +1,10 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
-import pkg from './package.json';
 
 // environment
+dotenv.config({ path: './.env.production', override: true });
 if (process.env.NODE_ENV === 'development') {
   dotenv.config({ path: './.env.development', override: true });
-} else {
-  dotenv.config({ path: './.env.production', override: true });
 }
 dotenv.config({ path: './.env', override: true });
 
@@ -14,38 +12,36 @@ const {
   // general
   NUXT_PUBLIC_SITE_URL,
   NUXT_PUBLIC_API_URL,
+  NUXT_PUBLIC_APP_VERSION,
   // adsense
   GOOGLE_ADSENSE_TEST_MODE,
+  GOOGLE_ADSENSE_ID,
   // firebase
   NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   NUXT_PUBLIC_FIREBASE_API_KEY,
   NUXT_PUBLIC_FIREBASE_PROJECT_ID,
   // sentry
-  NUXT_PUBLIC_SENTRY_DEBUG
+  NUXT_PUBLIC_SENTRY_DEBUG,
+  NUXT_PUBLIC_SENTRY_DNS
 } = process.env;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   $development: {
     // ssr: false,
-    runtimeConfig: {
-      public: {
-        SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:8080',
-        googleAdsense: {
-          test: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true' || true
-        }
-        // FIREBASE_AUTH_DOMAIN:
-        //   process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'localhost:8080'
-      }
-    }
   },
   $production: {
     nitro: {
       storage: {
-        data: {
-          driver: 'vercelKV'
-        }
+        // data: {
+        //   driver: 'redis'
+        // }
       }
+    },
+    sitemap: {
+      // runtimeCacheStorage: {
+      //   driver: 'redis'
+      // }
     }
   },
   css: ['~/assets/tiptap.scss'],
@@ -68,43 +64,8 @@ export default defineNuxtConfig({
       routes: ['/sitemap.xml']
     }
   },
-  routeRules: {
-    '/': {
-      prerender: true
-    },
-    '/echos': {
-      prerender: true
-    },
-    '/echos/**': {
-      prerender: true
-    },
-    '/weapons': {
-      prerender: true
-    },
-    '/weapons/**': {
-      prerender: true
-    },
-    '/characters': {
-      prerender: true
-    },
-    '/characters/**': {
-      prerender: true
-    },
-    '/items': {
-      prerender: true
-    },
-    '/items/**': {
-      prerender: true
-    },
-    '/trophies': {
-      prerender: true
-    },
-    '/trophies/**': {
-      prerender: true
-    }
-  },
   site: {
-    url: 'https://wutheringwaves.app'
+    url: NUXT_PUBLIC_SITE_URL
   },
   devServer: {
     port: 8080
@@ -133,13 +94,23 @@ export default defineNuxtConfig({
       { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
       { name: 'Vietnamese', code: 'vi', iso: 'vi' }
     ],
-    baseUrl: 'https://wutheringwaves.app'
   },
   pinia: {
     storesDirs: ['./composables/**']
   },
   eslint: {
     // checker: true
+  },
+  sitemap: {
+    autoLastmod: true,
+    exclude: ['/settings'],
+    sources: [
+      '/api/__sitemap__/characters',
+      '/api/__sitemap__/echos',
+      '/api/__sitemap__/items',
+      '/api/__sitemap__/trophies',
+      '/api/__sitemap__/weapons'
+    ]
   },
   vite: {
     vue: {
@@ -183,19 +154,19 @@ export default defineNuxtConfig({
         }
       }
     },
-    plugins: [vuetify({ autoImport: true })],
-    server: {
-      proxy: {
-        '/__/auth': {
-          changeOrigin: true,
-          target: 'https://wuthering-357ea.firebaseapp.com'
-        },
-        '/__/firebase': {
-          changeOrigin: true,
-          target: 'https://wuthering-357ea.firebaseapp.com'
-        }
-      }
-    }
+    plugins: [vuetify({ autoImport: true })]
+    // server: {
+    //   proxy: {
+    //     '/__/auth': {
+    //       changeOrigin: true,
+    //       target: `https://${NUXT_PUBLIC_FIREBASE_PROJECT_ID}.firebaseapp.com`
+    //     },
+    //     '/__/firebase': {
+    //       changeOrigin: true,
+    //       target: `https://${NUXT_PUBLIC_FIREBASE_PROJECT_ID}.firebaseapp.com`
+    //     }
+    //   }
+    // }
   },
   appConfig: {
     buildNumber: Date.now()
@@ -203,32 +174,24 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       // app
-      SITE_URL:
-        process.env.NUXT_PUBLIC_SITE_URL || 'https://wutheringwaves.app',
+      SITE_URL: NUXT_PUBLIC_SITE_URL,
       APP_NAME: 'WutheringWaves.app',
       APP_REPO: 'https://github.com/trongtindev/wuthering-waves-app',
       APP_DISCORD: 'https://discord.gg/MxxYyUJEfT',
-      APP_VERSION: process.env.NUXT_PUBLIC_APP_VERSION || pkg.appVersion,
+      APP_VERSION: NUXT_PUBLIC_APP_VERSION,
       // api
-      API_URL:
-        process.env.NUXT_PUBLIC_API_URL || 'https://api.wutheringwaves.app',
+      API_URL: NUXT_PUBLIC_API_URL,
       API_TIMEOUT: 15000,
       // firebase
-      FIREBASE_API_KEY:
-        process.env.NUXT_PUBLIC_FIREBASE_API_KEY ||
-        'AIzaSyDbcnxqQFlNfsGIBE9INTXsI5MfrTQ_GM0',
-      FIREBASE_PROJECT_ID:
-        process.env.NUXT_PUBLIC_FIREBASE_PROJECT_ID || 'wuthering-357ea',
-      FIREBASE_AUTH_DOMAIN:
-        process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'wutheringwaves.app',
+      FIREBASE_API_KEY: NUXT_PUBLIC_FIREBASE_API_KEY,
+      FIREBASE_PROJECT_ID: NUXT_PUBLIC_FIREBASE_PROJECT_ID,
+      FIREBASE_AUTH_DOMAIN: NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
       // sentry
-      SENTRY_DNS:
-        'https://214a17c9a4934da4031b2e8faa80e026@o4505463839850496.ingest.us.sentry.io/4507391548784640',
-      SENTRY_DEBUG: process.env.NUXT_PUBLIC_SENTRY_DEBUG == 'true',
+      SENTRY_DNS: NUXT_PUBLIC_SENTRY_DNS,
+      SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',
       // Adsense
-      GOOGLE_ADSENSE_ID:
-        process.env.GOOGLE_ADSENSE_ID || 'ca-pub-8470189548892016',
-      GOOGLE_ADSENSE_TEST_MODE: process.env.GOOGLE_ADSENSE_TEST_MODE === 'true'
+      GOOGLE_ADSENSE_ID: GOOGLE_ADSENSE_ID,
+      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true'
     }
   }
 });
