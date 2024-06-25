@@ -93,9 +93,9 @@ export const useSidebar = defineStore('useSidebar', () => {
       title: 'sidebar.codes'
     },
     {
-      url: '/guide',
+      url: '/guides',
       icon: mdiMap,
-      title: 'sidebar.guide'
+      title: 'sidebar.guides'
     },
     {
       url: '/trophies',

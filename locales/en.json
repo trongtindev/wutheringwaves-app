@@ -59,8 +59,8 @@
     "settings": {
       "title": "Settings"
     },
-    "guide": {
-      "title": "Game Guide",
+    "guides": {
+      "title": "Game Guides",
       "description": ""
     },
     "leaderboards": {
@@ -82,7 +82,7 @@
     "leaderboards": "Leaderboards",
     "codes": "Codes",
     "map": "Map",
-    "guide": "Guide",
+    "guides": "Guides",
     "items": "Items"
   },
   "items": {
@@ -283,8 +283,8 @@
     "markAsNotFound": "Mark as Not found",
     "markAsFound": "Mark as Found"
   },
-  "guide": {
-    "title": "Game Guide"
+  "guides": {
+    "title": "Game Guides"
   },
   "common": {
     "name": "Name",

@@ -55,7 +55,7 @@
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity."
     },
     "settings": { "title": "Settings" },
-    "guide": { "title": "Game Guide", "description": "" },
+    "guides": { "title": "Game Guides", "description": "" },
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
@@ -75,7 +75,7 @@
     "leaderboards": "Leaderboards",
     "codes": "Mã quà tặng",
     "map": "Map",
-    "guide": "Guide",
+    "guides": "Guides",
     "items": "Items"
   },
   "items": { "title": "Items" },
@@ -251,7 +251,7 @@
     "markAsNotFound": "Mark as Not found",
     "markAsFound": "Mark as Found"
   },
-  "guide": { "title": "Game Guide" },
+  "guides": { "title": "Game Guides" },
   "common": {
     "name": "Tên",
     "time": "Thời gian",

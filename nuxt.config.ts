@@ -26,7 +26,6 @@ const {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ignore: ['./scripts/**/*'],
   $development: {
     // ssr: false,
     runtimeConfig: {
@@ -49,6 +48,7 @@ export default defineNuxtConfig({
       }
     }
   },
+  css: ['~/assets/tiptap.scss'],
   typescript: {
     strict: true
   },
@@ -185,6 +185,10 @@ export default defineNuxtConfig({
               return 'collections';
             } else if (id.includes('dayjs')) {
               return 'dayjs';
+            } else if (id.includes('tiptap')) {
+              return 'tiptap';
+            } else if (id.includes('chartjs')) {
+              return 'chartjs';
             }
           }
         }
