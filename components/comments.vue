@@ -2,7 +2,6 @@
 import type { IListResponse } from '@/interfaces/api';
 import type { IComment } from '@/interfaces/comment';
 import { mdiSend, mdiImageSearch, mdiAlert, mdiTrashCan } from '@mdi/js';
-import { createId } from '@paralleldrive/cuid2';
 import type { IFile } from '~/interfaces/file';
 
 const props = defineProps<{
@@ -176,7 +175,7 @@ const onPressedDeleteAttachment = (id: string) => {
 // changes
 watch(fileChoose.files, (value) => {
   Array.from(value!).forEach((file) => {
-    const id = createId();
+    const id = randomId();
     console.log(file);
     attachments.value.push({
       id,

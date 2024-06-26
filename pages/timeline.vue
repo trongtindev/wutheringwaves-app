@@ -239,7 +239,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           <contribute-button path="/blob/main/resources/events.ts" />
         </template>
       </card-title>
-
+      <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
       <v-card-text>
         <client-only>
           <div

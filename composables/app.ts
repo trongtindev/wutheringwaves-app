@@ -32,8 +32,10 @@ export const useApp = defineStore('useApp', () => {
       throw new Error('Cannot run app.initialize on server-side!');
     }
 
-    checkForUpdates();
-    interval = setInterval(checkForUpdates, 60 * 5 * 1000);
+    if (!import.meta.dev) {
+      checkForUpdates();
+      interval = setInterval(checkForUpdates, 60 * 5 * 1000);
+    }
   };
 
   const checkForUpdates = async () => {

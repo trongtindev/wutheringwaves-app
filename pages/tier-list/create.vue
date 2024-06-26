@@ -7,7 +7,6 @@ import {
   type TierListType
 } from '@/interfaces/tier-list';
 import type { ICharacter } from '@/interfaces/character';
-import { createId } from '@paralleldrive/cuid2';
 import type { IWeapon } from '@/interfaces/weapon';
 import type { IEcho } from '@/interfaces/echo';
 
@@ -39,7 +38,7 @@ const onPressedLiveVoting = () => liveVoting();
 
 // functions
 const initialize = () => {
-  title.value = `${i18n.t('common.draft')} #${createId()}`;
+  title.value = `${i18n.t('common.draft')} #${randomId()}`;
   rows.value = [
     {
       label: 'S',
@@ -62,7 +61,7 @@ const initialize = () => {
       color: '#bfff7f'
     }
   ].map((e) => {
-    return { ...e, id: createId() };
+    return { ...e, id: randomId() };
   });
 
   switch (type.value) {

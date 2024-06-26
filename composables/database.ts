@@ -17,9 +17,8 @@ import {
   type SettingCollection
 } from '@/collections/setting';
 import { defineStore } from 'pinia';
-import { createRxDatabase, type RxDatabase } from 'rxdb';
+import type { RxDatabase } from 'rxdb';
 import { getRxStorageDexie } from 'rxdb/plugins/storage-dexie';
-import { createId } from '@paralleldrive/cuid2';
 import {
   markerSchema,
   markerDocMethods,
@@ -70,6 +69,8 @@ export const useDatabase = defineStore('useDatabase', () => {
     }
 
     state.value = 'initializing';
+    const { createRxDatabase } = await import('rxdb');
+
     return new Promise((resolve, reject) => {
       // LINK: https://rxdb.info/migration-schema.html
       createRxDatabase<DatabaseCollections>({
@@ -209,7 +210,7 @@ export const useDatabase = defineStore('useDatabase', () => {
   const onChanged = (emit?: boolean) => {
     if (emit) {
       console.log('database', 'onChanged');
-      isChanged.value = createId();
+      isChanged.value = randomId();
     } else {
       if (emitChanged) clearTimeout(emitChanged);
       emitChanged = setTimeout(() => onChanged(true), 250);

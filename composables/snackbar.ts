@@ -1,6 +1,5 @@
 import type { ISnackbar } from '@/interfaces/snackbar';
 import { defineStore } from 'pinia';
-import { createId } from '@paralleldrive/cuid2';
 
 export const useSnackbar = defineStore('useSnackbar', () => {
   // states
@@ -9,9 +8,9 @@ export const useSnackbar = defineStore('useSnackbar', () => {
 
   // functions
   const show = (args: Partial<ISnackbar>) => {
-    args._id = createId();
+    args._id = randomId();
     queues.value.push(args as ISnackbar);
-    isCreated.value = createId();
+    isCreated.value = randomId();
   };
 
   // exports
