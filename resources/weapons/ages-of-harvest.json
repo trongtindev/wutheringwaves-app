@@ -1,6 +1,7 @@
 {
   "slug": "ages-of-harvest",
   "skill": {
+    "name": "Devine Blessing",
     "params": [
       ["12%", "24%", "12"],
       ["15%", "30%", "12"],
@@ -8,8 +9,57 @@
       ["21%", "42%", "12"],
       ["24%", "48%", "12"]
     ],
-    "description": "Gain {0} additional DMG Bonus for all Attributes. When release Intro Skill, acquire ?, increase Resonance Skill DMG by {1}, last for {2}s. When use Resonance Skill, acquire ?, increase Resonance Skill DMG by {1}, last for {2}s."
+    "description": "Grants {0} Attribute DMG Bonus.\nCasting Intro Skill gives the equipper Ageless Marking, which grants {1} Resonance Skill DMG Bonus for {2}s. Casting Resonance Skill gives the equipper Ethereal Endowment, which grants {1} Resonance Skill DMG Bonus for {2}s."
   },
-  "stats": { "atk": 47 },
-  "ascensions": []
+  "stats": { "atk": 587.5, "critRate": 24.3 },
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 6 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020041, "quantity": 6 },
+        { "item": 41100012, "quantity": 6 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020042, "quantity": 8 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020043, "quantity": 6 },
+        { "item": 41100013, "quantity": 6 },
+        { "item": 2, "quantity": 60000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 8 },
+        { "item": 41100014, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 12 },
+        { "item": 41100014, "quantity": 8 },
+        { "item": 2, "quantity": 120000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ]
 }

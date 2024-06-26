@@ -149,14 +149,11 @@ useJsonld({
                 </v-row>
               </v-sheet>
 
-              <v-sheet
-                v-if="data.stats.critRate"
-                class="border rounded mt-2 pa-2"
-              >
+              <v-sheet v-if="data.stats.atkRate" class="border rounded mt-2 pa-2">
                 <v-row>
-                  <v-col cols="6"> {{ $t('common.critRate') }} </v-col>
+                  <v-col cols="6"> ATK </v-col>
                   <v-col cols="6">
-                    {{ data.stats.critRate }}
+                    {{ data.stats.atkRate }}%
                   </v-col>
                 </v-row>
               </v-sheet>
@@ -166,9 +163,21 @@ useJsonld({
                 class="border rounded mt-2 pa-2"
               >
                 <v-row>
+                  <v-col cols="6"> {{ $t('common.critRate') }} </v-col>
+                  <v-col cols="6">
+                    {{ data.stats.critRate }}%
+                  </v-col>
+                </v-row>
+              </v-sheet>
+
+              <v-sheet
+                v-if="data.stats.critDMG"
+                class="border rounded mt-2 pa-2"
+              >
+                <v-row>
                   <v-col cols="6"> {{ $t('common.critDMG') }} </v-col>
                   <v-col cols="6">
-                    {{ data.stats.critDMG }}
+                    {{ data.stats.critDMG }}%
                   </v-col>
                 </v-row>
               </v-sheet>
@@ -195,26 +204,6 @@ useJsonld({
             </div>
           </v-col>
         </v-row>
-      </v-card-text>
-    </v-card>
-
-    <!-- Ranks -->
-    <v-card class="mt-2">
-      <v-card-title>
-        {{ $t('weapons.ranks') }}
-      </v-card-title>
-      <v-divider />
-
-      <v-card-text>
-        <v-alert
-          v-for="(element, index) in data.ranks"
-          :key="index"
-          :title="`${i18n.t('common.level')} ${index + 1}`"
-          :class="{
-            'mt-4': index > 0
-          }"
-          :text="element"
-        />
       </v-card-text>
     </v-card>
 

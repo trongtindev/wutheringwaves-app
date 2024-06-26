@@ -10,7 +10,7 @@
     ],
     "description": "Increases Energy Regen by {0}. When Resonance Skill is released, Resonance Liberation DMG is increased by {1}, stacking up to {2} times. This effect lasts for {3}s."
   },
-  "stats": { "atk": 47 },
+  "stats": { "atk": 587, "atkRate": 36.45 },
   "ascensions": [
     {
       "cost": [

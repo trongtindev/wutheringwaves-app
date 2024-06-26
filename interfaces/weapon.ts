@@ -25,10 +25,11 @@ export interface IWeaponData {
   description?: string;
   descriptionLocalized?: ILocalized;
   stats: {
-    atk?: string;
-    critRate?: string;
-    energy?: string;
-    critDMG?: string;
+    atk?: number;
+    atkRate?: number;
+    critRate?: number;
+    critDMG?: number;
+    energy?: number;
   };
   skill: {
     params: string[];

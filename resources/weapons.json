@@ -53,7 +53,8 @@
     "slug": "ages-of-harvest",
     "name": "Ages of Harvest",
     "type": "Broadblade",
-    "rarity": 5
+    "rarity": 5,
+    "upcoming": true
   },
   {
     "id": 21010034,
