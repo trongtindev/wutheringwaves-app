@@ -26,9 +26,10 @@ const nameLocalized = computed(() => {
 });
 
 const skillDescription = computed(() => {
+  const lastIndex = data.skill.params.length - 1;
   return data.skill.description.replace(
     /\{(\d+)\}/g,
-    (_, j) => data.skill.params[j] || ''
+    (_, j) => data.skill.params[lastIndex][j] || ''
   );
 });
 

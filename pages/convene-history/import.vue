@@ -18,7 +18,7 @@ const localePath = useLocalePath();
 const router = useRouter();
 const account = useAccount();
 const database = useDatabase();
-const platform = usePlatform();
+const { isIos, isAndroid } = useDevice();
 
 // states
 const state = ref<'' | 'import'>('');
@@ -114,9 +114,9 @@ watch(
 
 // lifecycle
 onMounted(() => {
-  if (platform.isiOS) {
+  if (isIos) {
     method.value = 'ios';
-  } else if (platform.isAndroid) {
+  } else if (isAndroid) {
     method.value = 'android';
   }
 
