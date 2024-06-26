@@ -193,25 +193,13 @@ useSeoMeta({
 
     <v-sheet class="mt-4">
       <v-expansion-panels>
-        <v-expansion-panel>
-          <v-expansion-panel-title class="font-weight-bold">
-            <span v-if="i18n.locale.value === 'vi'">
-              Tại sao dữ liệu không được cập nhật?
-            </span>
-            <span v-else> Why not updating the record? </span>
+        <v-expansion-panel v-for="index in 3" :key="index">
+          <v-expansion-panel-title>
+            {{ $t(`convene.import.faqs.${index}.title`) }}
           </v-expansion-panel-title>
 
           <v-expansion-panel-text>
-            <span v-if="i18n.locale.value === 'vi'">
-              Có độ trễ 30 phút để cập nhật hồ sơ. Nếu không có dữ liệu nào được
-              hiển thị trên trang này, vui lòng thử lại sau. Triệu tập múi giờ
-              hiển thị: Mỹ(UTC-5); Châu Âu(UTC+1); Châu Á,HMT, BIỂN(UTC+8).
-            </span>
-            <span v-else>
-              There is a 30-minute delay for record updates. If no data is shown
-              on this page, please try again later. Convene displayed time
-              zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8).
-            </span>
+            {{ $t(`convene.import.faqs.${index}.content`) }}
           </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>

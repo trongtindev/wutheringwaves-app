@@ -88,7 +88,20 @@
       "processing": "Đang xử lý",
       "invalidLink": "Invalid link, please check it again",
       "guides": {},
-      "faqs": {}
+      "faqs": {
+        "1": {
+          "title": "Sẽ ra sao nếu tôi có nhiều tài khoản?",
+          "content": "Đừng lo lắng, khi bạn có nhiều tài khoản hệ thống sẽ tự động phát hiện và chia chúng và bạn sẽ thấy một nút chuyển đổi tài khoản xuất hiện."
+        },
+        "2": {
+          "title": "Tại sao dữ liệu không cập nhật?",
+          "content": "Sau khi triệu hồi, sẽ mất tới 30 phút để máy chủ Wuthering Waves cập nhật nó. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+        },
+        "3": {
+          "title": "Tài khoản của tôi liệu có an toàn?",
+          "content": "Có, qua phương thức nhập này sẽ không thể can thiệp vào tài khoản của bạn. Và cuối cùng, trang web này là mã nguồn mở trên github bạn có thể xem và tự đánh giá nó, nếu bạn vẫn không tin tưởng có thể bỏ qua tính năng này và sử dụng các tính năng khác."
+        }
+      }
     },
     "history": { "title": "Lịch sử triệu hồi" },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",

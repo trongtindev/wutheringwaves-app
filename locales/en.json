@@ -99,7 +99,20 @@
       "processing": "Processing",
       "invalidLink": "Invalid link, please check it again",
       "guides": {},
-      "faqs": {}
+      "faqs": {
+        "1": {
+          "title": "What if I import many different accounts?",
+          "content": "Don't worry, when you import multiple accounts we will automatically split them and you will see an account switch button appear."
+        },
+        "2": {
+          "title": "Why not updating the record?",
+          "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+        },
+        "3": {
+          "title": "Is my account safe?",
+          "content": "Yes, through this import method it will not be possible to interfere with your account. And finally, this website is open source on github you can see and evaluate it yourself, if you still don't trust you can skip this feature and use other features."
+        }
+      }
     },
     "history": {
       "title": "Convene History"

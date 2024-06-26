@@ -4,11 +4,34 @@ const items = [
   [
     {
       url: 'https://wutheringwaves-echoes.kurogames-global.com/',
+      name: 'Version 1.0',
+      time: {
+        start: '2024-05-22 10:00',
+        end: '2024-06-27 10:00'
+      },
+      color: '#535353'
+    },
+    {
+      name: 'Version 1.1',
+      time: {
+        start: '2024-06-27 10:00',
+        end: '2024-07-27 10:00'
+      },
+      color: '#535353'
+    }
+  ],
+  [
+    {
+      url: 'https://wutheringwaves-echoes.kurogames-global.com/',
       name: 'Echo Summon Web Event',
       time: {
         start: '2024-04-29 00:00',
         end: '2024-06-06 00:00'
-      }
+      },
+      color: '#bbb44e',
+      thumbnail: '/events/covers/echo-summon.webp',
+      description:
+        "Log in with your Kuro Account to participate in this event. To claim the rewards, create a profile on the server you've pre-registered your Kuro Account under during this event after the official release of Wuthering Waves."
     },
     {
       name: 'Intensive Training – Limited Time EXP Material Double Drop Event',
