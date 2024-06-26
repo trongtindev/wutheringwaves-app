@@ -2,14 +2,14 @@
   "slug": "ages-of-harvest",
   "skill": {
     "params": [
-      ["12%", "1", "4", "4", "48%", "2.5", "6"],
-      ["15%", "1", "4", "4", "60%", "2.5", "6"],
-      ["18%", "1", "4", "4", "72%", "2.5", "6"],
-      ["21%", "1", "4", "4", "84%", "2.5", "6"],
-      ["24%", "1", "4", "4", "96%", "2.5", "6"]
+      ["12%", "24%", "12"],
+      ["15%", "30%", "12"],
+      ["18%", "36%", "12"],
+      ["21%", "42%", "12"],
+      ["24%", "48%", "12"]
     ],
-    "description": "Gain {0} additional DMG Bonus for all Attributes. The wielder is bestowed with divine blessings and gains {1} stack of Blessing of Ages for each Basic Attack strike, for up to {2} stacks, which is removed when the wielder leaves the field. At {3} stacks of Blessing of Ages or more, the wielder consumes all stacks of Blessing of Ages when casting the next Resonance Skill, with its DMG increased by {4} for {5}s. This can be triggered 1 time every {6}s."
+    "description": "Gain {0} additional DMG Bonus for all Attributes. When release Intro Skill, acquire ?, increase Resonance Skill DMG by {1}, last for {2}s. When use Resonance Skill, acquire ?, increase Resonance Skill DMG by {1}, last for {2}s."
   },
-  "stats": { "atk": 47, "critRate": 540 },
+  "stats": { "atk": 47 },
   "ascensions": []
 }
