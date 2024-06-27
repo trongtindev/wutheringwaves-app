@@ -7,14 +7,14 @@ const items = [
       name: 'Version 1.0',
       time: {
         start: '2024-05-22 10:00',
-        end: '2024-06-27 10:00'
+        end: '2024-06-28 06:00'
       },
       color: '#535353'
     },
     {
       name: 'Version 1.1',
       time: {
-        start: '2024-06-27 10:00',
+        start: '2024-06-28 13:00',
         end: '2024-07-27 10:00'
       },
       color: '#535353'
@@ -98,45 +98,72 @@ const items = [
     description:
       'Complete Exploration Quests daily to get Exploration Points and claim rewards after achieving Exploration Point milestones.'
   },
-  // start: jiyan
-  {
-    name: 'Absolute Pulsation: Verdant Summit – Featured Weapon Convene',
-    time: {
-      start: '2024-05-23 10:00',
-      end: '2024-06-13 09:59'
+  // Featured Weapon
+  [
+    {
+      name: 'Absolute Pulsation: Verdant Summit',
+      time: {
+        start: '2024-05-23 10:00',
+        end: '2024-06-13 09:59'
+      },
+      color: '#1f5456',
+      thumbnail: '/cards/T_Card5.png'
     },
-    color: '#1f5456',
-    thumbnail: '/cards/T_Card5.png'
-  },
-  {
-    name: 'Prevail the Lasting Night – Featured Resonator Convene',
-    time: {
-      start: '2024-05-23 10:00',
-      end: '2024-06-13 09:59'
+    {
+      name: 'Absolute Pulsation: Ages of Harvest',
+      time: {
+        start: '2024-06-28 13:00',
+        end: '2024-07-22 09:59'
+      },
+      color: '#143a4f',
+      thumbnail: '/events/covers/ages-of-harvest.webp',
+      description:
+        'During the event, boosted drop rates for 5-Star Weapon: Ages of Harvest, 4-Star Weapons: Discord, Commando of Conviction, and Amity Accord!'
+    }
+  ],
+  // Featured Resonator
+  [
+    {
+      name: 'Prevail the Lasting Night – Jiyan',
+      time: {
+        start: '2024-05-23 10:00',
+        end: '2024-06-13 09:59'
+      },
+      color: '#1f5456',
+      thumbnail: '/cards/T_Card5.png'
     },
-    color: '#1f5456',
-    thumbnail: '/cards/T_Card5.png'
-  },
-  // end: jiyan
-  // start: yinlin
+    {
+      name: 'Thawborn Renewal — Jinhsi',
+      time: {
+        start: '2024-06-28 13:00',
+        end: '2024-07-22 09:59'
+      },
+      color: '#b59270',
+      thumbnail: '/events/covers/thawborn-renewal.webp',
+      description:
+        'During the event, boosted drop rates for 5-Star Resonator: Jinhsi, 4-Star Resonators: Sanhua, Danjin, and Yangyang!'
+    }
+  ],
+  // jinlin
   {
-    name: 'Absolute Pulsation: Stringmaster – Featured Weapon Convene',
+    name: 'Absolute Pulsation: Stringmaster',
     time: {
       start: '2024-06-06 10:00',
       end: '2024-06-26 11:59'
     },
     color: '#721f29',
-    thumbnail: '/cards/T_Card19.png'
+    thumbnail: '/events/covers/stringmaster.webp',
+    description:
+      'During the event, boosted drop rates for 5-star Weapon [Stringmaster], 4-star Weapons [Jinzhou Keeper], [Cadenza], and [Lunar Cutter]!'
   },
   {
-    name: 'When Thunder Pours – Featured Resonator Convene',
+    name: 'When Thunder Pours – Jinlin',
     time: {
       start: '2024-06-06 10:00',
       end: '2024-06-26 11:59'
     },
-    color: '#721f29',
-    thumbnail: '/cards/T_Card19.png'
+    color: '#0f1014',
+    thumbnail: '/events/covers/when-thunder-pours.webp',
   }
-  // end: yinlin
 ];
 export default items as IEvent[] | IEvent[][];

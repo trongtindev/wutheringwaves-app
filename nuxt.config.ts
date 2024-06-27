@@ -22,7 +22,9 @@ const {
   NUXT_PUBLIC_FIREBASE_PROJECT_ID,
   // sentry
   NUXT_PUBLIC_SENTRY_DEBUG,
-  NUXT_PUBLIC_SENTRY_DNS
+  NUXT_PUBLIC_SENTRY_DNS,
+  // dayjs
+  DAYJS_TIMEZONE
 } = process.env;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -178,7 +180,9 @@ export default defineNuxtConfig({
       SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',
       // Adsense
       GOOGLE_ADSENSE_ID: GOOGLE_ADSENSE_ID,
-      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true'
+      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',
+      // dayjs
+      DAYJS_TIMEZONE: DAYJS_TIMEZONE
     }
   }
 });

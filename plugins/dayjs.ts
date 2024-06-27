@@ -7,8 +7,14 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import duration from 'dayjs/plugin/duration';
 
 export default defineNuxtPlugin(() => {
+  const runtimeConfig = useRuntimeConfig();
+
   dayjs.extend(utc);
   dayjs.extend(timezone);
   dayjs.extend(relativeTime);
   dayjs.extend(duration);
+
+  dayjs.tz.setDefault(runtimeConfig.public.DAYJS_TIMEZONE);
+
+  return { provide: { dayjs } };
 });

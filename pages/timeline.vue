@@ -1,7 +1,8 @@
 <script setup lang="ts">
 // Converted from https://github.com/MadeBaruna/paimon-moe/tree/main/src/routes/timeline
 
-import dayjs from 'dayjs';
+// import dayjs from 'dayjs';
+import type { Dayjs } from 'dayjs';
 import type { IEvent, IEventConverted } from '~/interfaces/event';
 
 // define
@@ -13,16 +14,17 @@ const marginTop = 80;
 const timeDifference = 0;
 const timeDifferenceEvent = 0;
 const timeDifferenceAsia = 0;
-const lastEventTime = ref(dayjs().year(2000));
 
 // uses
 const i18n = useI18n();
 const resources = useResources();
+const runtimeConfig = useRuntimeConfig();
 
 // fetch
 const eventsData = await resources.getEvents();
 
 // states
+const lastEventTime = ref(dayjs().year(2000));
 const events = ref<any>([]);
 const interval = ref();
 const today = ref(dayjs());
@@ -44,7 +46,7 @@ const dialogData = ref<IEvent>();
 
 // functions
 const convertToDate = (e: IEvent, i): IEventConverted => {
-  let start: dayjs.Dayjs;
+  let start: Dayjs;
   if (e.time.timezoneDependent) {
     start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
       timeDifferenceAsia,

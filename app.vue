@@ -75,6 +75,11 @@ useSeoMeta({
   description: i18n.t('meta.description'),
   ogDescription: i18n.t('meta.description')
 });
+
+// lifecycle
+onMounted(() => {
+  dayjs.tz.setDefault(runtimeConfig.public.DAYJS_TIMEZONE);
+});
 </script>
 
 <template>
