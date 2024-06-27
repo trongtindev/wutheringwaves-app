@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // Converted from https://github.com/MadeBaruna/paimon-moe/tree/main/src/routes/timeline
 
-// import dayjs from 'dayjs';
 import type { Dayjs } from 'dayjs';
 import type { IEvent, IEventConverted } from '~/interfaces/event';
 
@@ -11,19 +10,17 @@ const eventHeight = 36;
 const eventMargin = 20;
 const padding = 10;
 const marginTop = 80;
-const timeDifference = 0;
-const timeDifferenceEvent = 0;
-const timeDifferenceAsia = 0;
 
 // uses
 const i18n = useI18n();
 const resources = useResources();
-const runtimeConfig = useRuntimeConfig();
+const { $dayjs } = useNuxtApp();
 
 // fetch
 const eventsData = await resources.getEvents();
 
 // states
+const timeDifference = ref(0);
 const lastEventTime = ref(dayjs().year(2000));
 const events = ref<any>([]);
 const interval = ref();
@@ -43,23 +40,16 @@ const todayOffset = ref(0);
 const timelineContainer = ref<HTMLElement>(null as any);
 const dialog = ref(false);
 const dialogData = ref<IEvent>();
+const browserTimeZone = ref();
 
 // functions
 const convertToDate = (e: IEvent, i): IEventConverted => {
-  let start: Dayjs;
-  if (e.time.timezoneDependent) {
-    start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
-      timeDifferenceAsia,
-      'minute'
-    );
-  } else {
-    start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
-      timeDifferenceEvent,
-      'minute'
-    );
-  }
+  const start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
+    timeDifference.value,
+    'minute'
+  );
   const end = dayjs(e.time.end, 'YYYY-MM-DD HH:mm').subtract(
-    timeDifferenceEvent,
+    timeDifference.value,
     'minute'
   );
   const duration = end.diff(start, 'day', true);
@@ -76,7 +66,7 @@ const convertToDate = (e: IEvent, i): IEventConverted => {
 
 // events
 const onTick = () => {
-  today.value = dayjs().add(timeDifference, 'minute');
+  today.value = dayjs().subtract(timeDifference.value, 'minute');
   todayOffset.value = Math.abs(firstDay.value.diff(today.value, 'day', true));
 };
 
@@ -117,6 +107,9 @@ watch(
 
 // lifecycle
 onMounted(() => {
+  browserTimeZone.value = $dayjs.tz.guess();
+  timeDifference.value = getTimeDifference();
+
   events.value = eventsData.map((e, i) => {
     if (Array.isArray(e)) {
       return e.map((item) => convertToDate(item, i));
@@ -235,6 +228,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       <card-title>
         <template #title>
           {{ $t('timeline.title') }}
+          <client-only> ({{ browserTimeZone }}) </client-only>
         </template>
 
         <template #actions>

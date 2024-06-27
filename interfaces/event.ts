@@ -18,7 +18,6 @@ export interface IEvent {
      * Example: 2021-03-16 13:00:00
      */
     end: string;
-    timezoneDependent?: boolean;
   };
   /**
    * Example: #FAE2B4

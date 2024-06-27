@@ -92,3 +92,4 @@
     "*.{ts,mjs}": "pnpm run lint"
   }
 }
+

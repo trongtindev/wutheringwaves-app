@@ -118,7 +118,7 @@ const itemStyle = computed(() => {
 
 <template>
   <div
-    class="d-flex align-center justify-center z-10 text-white cursor-pointer position-absolute"
+    class="d-flex align-center justify-start z-10 text-white cursor-pointer position-absolute"
     :class="{
       'rounded-l-xl': prevDiff > 0,
       'rounded-r-xl': nextDiff > 1,

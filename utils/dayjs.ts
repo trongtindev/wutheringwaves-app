@@ -1,5 +1,12 @@
 import dayjsLib from 'dayjs';
 
+const timeOffset = {
+  Asia: 8,
+  China: 8,
+  America: -5,
+  Europe: 1
+};
+
 export const dayjs = (
   date?: string | number | Date | dayjsLib.Dayjs | null | undefined,
   format?: dayjsLib.OptionType | undefined,
@@ -7,4 +14,11 @@ export const dayjs = (
 ) => {
   const runtimeConfig = useRuntimeConfig();
   return dayjsLib(date, format, strict).tz(runtimeConfig.public.DAYJS_TIMEZONE);
+};
+
+export const getTimeDifference = () => {
+  const now = dayjsLib();
+  const local = now.utcOffset();
+  const serverTime = now.utcOffset(timeOffset.Asia).utcOffset();
+  return serverTime - local;
 };
