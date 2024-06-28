@@ -13,6 +13,7 @@ const props = defineProps<{
 // uses
 const api = useApi();
 const auth = useAuth();
+const i18n = useI18n();
 const fileChoose = useFileDialog({
   accept: 'image/png, image/jpg, image/webp, image/jpeg'
 });
@@ -111,7 +112,8 @@ const total = computed(() => {
 });
 
 const channel = computed(() => {
-  return `${runtimeConfig.public.SITE_URL}${props.channel.startsWith('/') ? '' : '/'}${props.channel}`;
+  const path = props.channel.replace(`${i18n.locale.value}/`, '');
+  return `${runtimeConfig.public.SITE_URL}${path.startsWith('/') ? '' : '/'}${path}`;
 });
 
 const isContentError = computed<boolean>(() => {
