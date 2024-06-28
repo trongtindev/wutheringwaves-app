@@ -7,7 +7,7 @@ import type { Messaging } from 'firebase/messaging';
 
 export const useFirebase = defineStore('useFirebase', () => {
   // uses
-  const { isDesktop, isAndroid } = useDevice();
+  const { isDesktop, isAndroid, isCrawler } = useDevice();
   const runtimeConfig = useRuntimeConfig();
 
   // states
@@ -48,7 +48,8 @@ export const useFirebase = defineStore('useFirebase', () => {
       messaging.value = getMessaging(app.value);
     }
 
-    if (!import.meta.dev) {
+    // ignore dev and crawler bot
+    if (!import.meta.dev && !isCrawler) {
       if (useAnalytics().optOut) {
         console.warn('firebase', 'analytics', 'optOut', true);
       } else {
