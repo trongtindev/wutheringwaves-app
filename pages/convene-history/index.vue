@@ -33,10 +33,10 @@ const convenesFiltered = computed(() => {
             CardPoolType['featured-weapon']
           ].includes(e.cardPoolType)
         ) {
-          const time = new Date(e.time).getTime();
+          const time = dayjs(e.time);
           return (
-            time >= filterBanner.value.time.start.getTime() &&
-            time <= filterBanner.value.time.end.getTime() &&
+            time >= dayjs(filterBanner.value.time.start) &&
+            time <= dayjs(filterBanner.value.time.end) &&
             filterBanner.value.type == e.cardPoolType
           );
         }

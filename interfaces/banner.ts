@@ -15,8 +15,8 @@ export interface IBanner {
     [key: string]: string;
   };
   time?: {
-    start: Date;
-    end: Date;
+    start: string;
+    end: string;
   };
   featured?: string[];
   featuredRare?: string;
