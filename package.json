@@ -52,7 +52,7 @@
     "leaflet": "^1.9.4",
     "nuxt3-leaflet": "^1.0.13",
     "pinia": "^2.1.7",
-    "rxdb": "^15.24.0",
+    "rxdb": "^15.25.0",
     "rxjs": "^7.8.1",
     "url-slug": "^4.0.1",
     "vue-chartjs": "^5.3.1"
@@ -64,9 +64,9 @@
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/device": "^3.1.1",
     "@nuxtjs/i18n": "^8.3.1",
-    "@nuxtjs/sitemap": "^5.2.1",
+    "@nuxtjs/sitemap": "^5.2.2",
     "@pinia/nuxt": "^0.5.1",
-    "@sentry/vue": "^8.12.0",
+    "@sentry/vue": "^8.13.0",
     "@types/file-saver": "^2.0.7",
     "@types/leaflet": "^1.9.12",
     "@vueuse/core": "^10.11.0",
@@ -83,7 +83,7 @@
     "typescript": "^5.5.2",
     "vite-plugin-eslint2": "^4.4.0",
     "vite-plugin-vuetify": "^2.0.3",
-    "vue": "^3.4.30",
+    "vue": "^3.4.31",
     "vue-router": "^4.4.0",
     "vue-tsc": "^2.0.22",
     "vuetify": "^3.6.10"
@@ -92,4 +92,3 @@
     "*.{ts,mjs}": "pnpm run lint"
   }
 }
-
