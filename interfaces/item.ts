@@ -14,4 +14,12 @@ export interface IItemData {
   descriptionLocalized?: ILocalized;
   bgDescription?: string;
   bgDescriptionLocalized?: ILocalized;
+  obtainDescription?: string;
+  obtainDescriptionLocalized?: ILocalized;
+  unlockDescription?: string;
+  unlockDescriptionLocalized?: ILocalized;
+  cookingIngredients?: {
+    item: string;
+    quantity: number;
+  }[];
 }

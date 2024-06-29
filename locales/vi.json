@@ -52,7 +52,14 @@
     },
     "items": {
       "title": "Item List",
-      "description": "List of all items in Wuthering Waves, along with their descriptions and rarity."
+      "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
+      "id": {
+        "title": { "default": "Item: {name}", "recipe": "Recipe: {name}" },
+        "description": {
+          "default": "{name} in Wuthering Waves. Learn where to find {name} and other information in this guide!",
+          "recipe": "{name} in Wuthering Waves. Learn where to the recipe for {name} and other information in this guide!"
+        }
+      }
     },
     "settings": { "title": "Settings" },
     "guides": { "title": "Game Guides", "description": "" },
@@ -78,7 +85,12 @@
     "guides": "Guides",
     "items": "Items"
   },
-  "items": { "title": "Items" },
+  "items": {
+    "title": "Items",
+    "howToObtain": "How to obtain {0}?",
+    "howToUnlock": "How to unlock {0}?",
+    "cookingIngredients": "Cooking Ingredients"
+  },
   "timeline": { "title": "Timeline" },
   "convene": {
     "import": {

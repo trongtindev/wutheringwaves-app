@@ -48,9 +48,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       VCard: {
         class: 'border rounded'
       },
-      VCardText: {
-        class: 'pa-2'
-      },
+      VCardText: {},
       VRow: {
         dense: true
       },
