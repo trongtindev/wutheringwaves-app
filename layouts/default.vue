@@ -273,7 +273,6 @@ watch(
 
     <v-main>
       <v-container :fluid="app.fluid">
-        <under-development-alert />
         <slot />
       </v-container>
 

@@ -24,4 +24,4 @@ const items = [
   };
 }) as ICharacter[];
 
-export default items;
+export default items.sort((a, b) => a.name.localeCompare(b.name));

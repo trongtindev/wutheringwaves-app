@@ -22,9 +22,9 @@ export const useApp = defineStore('useApp', () => {
   const fluid = ref(false);
 
   // computed
-  const inDev = computed(() => import.meta.dev);
+  const inDev = computed(() => import.meta.dev || APP_VERSION.startsWith('0.'));
+  const indBeta = computed(() => APP_VERSION.endsWith('.beta'));
   const indProd = computed(() => !import.meta.dev);
-  const indBeta = computed(() => false);
 
   // functions
   const initialize = () => {
