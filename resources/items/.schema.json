@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wutheringwaves.app/item.schema.json",
+  "title": "Item",
+  "description": "A item in the catalog",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "descriptionLocalized": {
+      "type": "object"
+    },
+    "bgDescription": {
+      "type": "string"
+    },
+    "bgDescriptionLocalized": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "obtainDescription": {
+      "type": "string"
+    },
+    "obtainDescriptionLocalized": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "unlockDescription": {
+      "type": "string"
+    },
+    "unlockDescriptionLocalized": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "cookingIngredients": {
+      "type": "array",
+      "properties": {
+        "item": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": ["description"]
+}
