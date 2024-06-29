@@ -1,12 +1,13 @@
 import type { IEvent } from '~/interfaces/event';
 
 const items = [
+  // Version
   [
     {
       url: 'https://wutheringwaves-echoes.kurogames-global.com/',
       name: 'Version 1.0',
       time: {
-        start: '2024-05-22 10:00',
+        start: '2024-05-23 10:00',
         end: '2024-06-28 06:00'
       },
       color: '#535353'
@@ -20,19 +21,57 @@ const items = [
       color: '#535353'
     }
   ],
+  // Tower of Adversity
   [
     {
-      url: 'https://wutheringwaves-echoes.kurogames-global.com/',
-      name: 'Echo Summon Web Event',
+      name: 'Tower of Adversity - Hazard Zone',
       time: {
-        start: '2024-04-29 00:00',
-        end: '2024-06-06 00:00'
+        start: '2024-06-23 10:00',
+        end: '2024-07-07 09:59'
       },
-      color: '#bbb44e',
-      thumbnail: '/events/covers/echo-summon.webp',
-      description:
-        "Log in with your Kuro Account to participate in this event. To claim the rewards, create a profile on the server you've pre-registered your Kuro Account under during this event after the official release of Wuthering Waves."
+      color: '#8c4987'
+    }
+  ],
+  // Depths of Illusive Realm
+  [
+    {
+      name: 'Depths of Illusive Realm - Dreams Ablaze in Darkness',
+      time: {
+        start: '2024-05-23 04:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#ef772e'
     },
+    {
+      name: 'Depths of Illusive Realm - Dreams Ablaze in Darkness',
+      time: {
+        start: '2024-07-04 04:00',
+        end: '2024-08-05 03:59'
+      },
+      color: '#ef772e'
+    }
+  ],
+  // Pioneer Podcast
+  [
+    {
+      name: 'Pioneer Podcast',
+      time: {
+        start: '2024-05-23 10:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#e6b453'
+    },
+    {
+      name: 'Pioneer Podcast',
+      time: {
+        start: '2024-06-28 10:00',
+        end: '2024-08-13 03:59'
+      },
+      color: '#e6b453'
+    }
+  ],
+  // Events
+  [
     {
       name: 'Intensive Training – Limited Time EXP Material Double Drop Event',
       time: {
@@ -43,15 +82,16 @@ const items = [
       thumbnail: '/events/covers/intensive-training.webp'
     },
     {
-      name: 'Second Coming of Solaris',
+      url: 'https://wutheringwaves.kurogames.com/en/main/news/detail/975',
+      name: '[Bountiful Crescendo] Leveling Material Double Drop Event',
       time: {
-        start: '2024-06-13 04:00',
-        end: '2024-06-27 03:59'
+        start: '2024-07-11 04:00',
+        end: '2024-07-18 03:59'
       },
-      color: '#141427',
-      thumbnail: '/events/covers/second-coming-of-solaris.webp',
+      color: '#a5b8d1',
+      thumbnail: '/events/covers/intensive-training.webp',
       description:
-        "Accept Maqi's daily commission and retrieve the items requested for rewards."
+        'Consume Wavesplates to claim double rewards when completing [Simulation Challenge] and [Forgery Challenge].'
     }
   ],
   [
@@ -76,32 +116,92 @@ const items = [
       thumbnail: '/events/covers/chord-cleansing.webp',
       description:
         'During the Chord Cleansing event period, players can claim double the rewards from Tacet Suppressions.'
+    },
+    {
+      name: '"Chord Cleansing" LT Echo Double Drop Event',
+      time: {
+        start: '2024-08-06 04:00',
+        end: '2024-08-13 03:59'
+      },
+      color: '#6e371e',
+      thumbnail: '/events/covers/chord-cleansing.webp',
+      description:
+        'During the Chord Cleansing event period, players can claim double the rewards from Tacet Suppressions.'
     }
   ],
-  {
-    name: 'Alloy Smelt – Limited Time Battle Event',
-    time: {
-      start: '2024-06-06 10:00',
-      end: '2024-06-27 03:59'
+  // Commission
+  [
+    {
+      name: 'Second Coming of Solaris',
+      time: {
+        start: '2024-06-13 04:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#141427',
+      thumbnail: '/events/covers/second-coming-of-solaris.webp',
+      description:
+        "Accept Maqi's daily commission and retrieve the items requested for rewards."
     },
-    color: '#181f35',
-    thumbnail: '/events/covers/alloy-smelt.webp'
-  },
-  {
-    name: 'Wuthering Exploration',
-    time: {
-      start: '2024-06-13 10:00',
-      end: '2024-06-27 03:59'
+    {
+      name: 'Lollo Campaign: Limited-time Commission Event',
+      time: {
+        start: '2024-07-25 10:00',
+        end: '2024-08-08 03:59'
+      },
+      color: '#141427',
+      description:
+        'Complete tasks in [Lollo Campaign] to earn Lollo Stamps. Lollo Stamps can be used in the roulette of "Lollo Helper" to get random rewards.'
+    }
+  ],
+  // Battle
+  [
+    {
+      name: 'Alloy Smelt – Limited Time Battle Event',
+      time: {
+        start: '2024-06-06 10:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#181f35',
+      thumbnail: '/events/covers/alloy-smelt.webp'
     },
-    color: '#b19abd',
-    thumbnail: '/events/covers/wuthering-exploration.webp',
-    description:
-      'Complete Exploration Quests daily to get Exploration Points and claim rewards after achieving Exploration Point milestones.'
-  },
+    {
+      name: 'Tactical Simulacra: Limited-time Battle Challenge',
+      time: {
+        start: '2024-07-20 10:00',
+        end: '2024-08-08 03:59'
+      },
+      color: '#181f35'
+    }
+  ],
+  [
+    {
+      url: 'https://wutheringwaves-echoes.kurogames-global.com/',
+      name: 'Echo Summon Web Event',
+      time: {
+        start: '2024-04-29 00:00',
+        end: '2024-06-06 00:00'
+      },
+      color: '#bbb44e',
+      thumbnail: '/events/covers/echo-summon.webp',
+      description:
+        "Log in with your Kuro Account to participate in this event. To claim the rewards, create a profile on the server you've pre-registered your Kuro Account under during this event after the official release of Wuthering Waves."
+    },
+    {
+      name: 'Wuthering Exploration',
+      time: {
+        start: '2024-06-13 10:00',
+        end: '2024-06-27 03:59'
+      },
+      color: '#b19abd',
+      thumbnail: '/events/covers/wuthering-exploration.webp',
+      description:
+        'Complete Exploration Quests daily to get Exploration Points and claim rewards after achieving Exploration Point milestones.'
+    }
+  ],
   // Featured Weapon
   [
     {
-      name: 'Absolute Pulsation: Verdant Summit',
+      name: 'Absolute Pulsation – Jiyan - Verdant Summit',
       time: {
         start: '2024-05-23 10:00',
         end: '2024-06-13 09:59'
@@ -110,7 +210,7 @@ const items = [
       thumbnail: '/cards/T_Card5.png'
     },
     {
-      name: 'Absolute Pulsation: Ages of Harvest',
+      name: 'Absolute Pulsation – Jinlin - Ages of Harvest',
       time: {
         start: '2024-06-28 13:00',
         end: '2024-07-22 09:59'
@@ -119,6 +219,14 @@ const items = [
       thumbnail: '/events/covers/ages-of-harvest.webp',
       description:
         'During the event, boosted drop rates for 5-Star Weapon: Ages of Harvest, 4-Star Weapons: Discord, Commando of Conviction, and Amity Accord!'
+    },
+    {
+      name: 'Absolute Pulsation - Changli - Blazing Brilliance',
+      time: {
+        start: '2024-07-22 10:00',
+        end: '2024-08-14 11:59'
+      },
+      color: '#f8835a'
     }
   ],
   // Featured Resonator
@@ -142,11 +250,19 @@ const items = [
       thumbnail: '/events/covers/thawborn-renewal.webp',
       description:
         'During the event, boosted drop rates for 5-Star Resonator: Jinhsi, 4-Star Resonators: Sanhua, Danjin, and Yangyang!'
+    },
+    {
+      name: 'Stellar Plummage - Changli',
+      time: {
+        start: '2024-07-22 10:00',
+        end: '2024-08-14 11:59'
+      },
+      color: '#892b27'
     }
   ],
   // jinlin
   {
-    name: 'Absolute Pulsation: Stringmaster',
+    name: 'Absolute Pulsation - Jinlin - Stringmaster',
     time: {
       start: '2024-06-06 10:00',
       end: '2024-06-26 11:59'
@@ -163,7 +279,7 @@ const items = [
       end: '2024-06-26 11:59'
     },
     color: '#0f1014',
-    thumbnail: '/events/covers/when-thunder-pours.webp',
+    thumbnail: '/events/covers/when-thunder-pours.webp'
   }
 ];
 export default items as IEvent[] | IEvent[][];
