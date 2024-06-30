@@ -1,19 +1,38 @@
 <script setup lang="ts">
-import type { ICharacter } from '@/interfaces/character';
+import type { CharacterDocument } from '~/collections/character';
 
 const i18n = useI18n();
 const resources = useResources();
 const localePath = useLocalePath();
+const database = useDatabase();
+
+// fetch
+const result = await resources.characters();
+const characters = result.sort((a, b) => a.name.localeCompare(b.name));
 
 // states
-const characters = ref<ICharacter[]>([]);
+const owned = ref<{ [key: string]: CharacterDocument }>();
 const filterText = ref<string>();
 const filterRarity = ref<number>(0);
 const filterAttribute = ref<string>('All');
 
+// functions
+const loadOwned = () => {
+  database.getInstance().then((db) => {
+    db.characters
+      .find()
+      .exec()
+      .then((result) => {
+        if (result.length > 0) {
+          owned.value = result.reduce((acc, e) => ((acc[e.name] = e), acc), {});
+        }
+      });
+  });
+};
+
 // computed
 const items = computed(() => {
-  return characters.value.filter((e) => {
+  return characters.filter((e) => {
     if (filterText.value && filterText.value.length > 0) {
       if (
         e.name.toLowerCase().includes(filterText.value.toLowerCase()) == false
@@ -39,16 +58,8 @@ const items = computed(() => {
   });
 });
 
-// functions
-const isRecentlyAdded = (time: Date) => {
-  const expiresAt = new Date();
-  expiresAt.setSeconds(expiresAt.getSeconds() - 60 * 60 * 24 * 7);
-  return time.getTime() > expiresAt.getTime();
-};
-
-// initialize
-const result = await resources.characters();
-characters.value = result.sort((a, b) => a.name.localeCompare(b.name));
+// lifecycle
+onMounted(() => loadOwned());
 
 // seo meta
 const title = i18n.t('characters.title');
@@ -145,16 +156,35 @@ useSeoMeta({
                   class="align-end h-100"
                   cover
                 >
-                  <div>
+                  <v-sheet
+                    style="left: 5px; top: 5px; position: absolute"
+                    class="pa-1 d-flex op-90"
+                    :class="
+                      owned && owned[element.name]
+                        ? 'rounded-xl'
+                        : 'rounded-circle'
+                    "
+                  >
                     <v-img
                       class="bg-grey-darken-3 rounded-circle"
-                      style="left: 5px; top: 5px; position: absolute"
-                      :width="24"
-                      :height="24"
+                      :width="18"
+                      :height="18"
                       :src="`/attributes/icons/${element.attribute.toLowerCase()}.png`"
                       :alt="element.attribute"
                     />
-                  </div>
+
+                    <span
+                      v-if="owned && owned[element.name]"
+                      class="font-weight-bold ml-1 pr-1"
+                      :class="
+                        owned[element.name].resonanceChain > 6
+                          ? 'text-red'
+                          : 'text-green'
+                      "
+                    >
+                      RC{{ owned[element.name].resonanceChain }}
+                    </span>
+                  </v-sheet>
                 </v-img>
               </v-responsive>
               <v-divider />

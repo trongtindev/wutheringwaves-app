@@ -60,8 +60,11 @@ const onImport = async (url: string) => {
     // save convene history url
     await account.setConveneHistoryUrl(url);
 
-    //  bulk writes history
-    const writes = items.map((e) => {
+    // get database instance
+    const db = await database.getInstance();
+
+    //  update convene history
+    const conveneWrites = items.map((e) => {
       return {
         key: e.key,
         playerId: playerId!,
@@ -74,10 +77,39 @@ const onImport = async (url: string) => {
         createdAt: new Date(e.time).getTime()
       };
     });
-    const db = await database.getInstance();
-    await db.convenes.bulkUpsert(writes);
-    await new Promise((resolve) => setTimeout(resolve, 250)); // ensure :D
+    await db.convenes.bulkUpsert(conveneWrites);
 
+    // update character list
+    const resonators = items.filter((e) => e.resourceType === 'Resonators');
+    const characterObjects = (() => {
+      const output = {};
+
+      for (const element of resonators) {
+        output[element.name] ??= {
+          name: element.name,
+          resonanceChain: -1,
+          obtainedAt: 0
+        };
+        output[element.name].resonanceChain += 1;
+        output[element.name].obtainedAt = (() => {
+          return resonators
+            .filter((e) => e.name === element.name)
+            .sort((a, b) => {
+              const timeA = dayjs(a.time);
+              const timeB = dayjs(b.time);
+              return timeA.toDate().getTime() - timeB.toDate().getTime();
+            })[0].time;
+        })();
+      }
+
+      return output;
+    })();
+    const characterWrites = Object.keys(characterObjects).flatMap((e) => {
+      return characterObjects[e];
+    });
+    await db.characters.bulkUpsert(characterWrites);
+
+    await new Promise((resolve) => setTimeout(resolve, 250)); // ensure :D
     router.push(localePath('/convene-history'));
   } catch (error) {
     // TODO: handle error
@@ -169,27 +201,29 @@ useSeoMeta({
       </v-card-title>
       <v-divider />
 
-      <v-tabs v-model="method">
-        <v-tab value="pc">{{ $t('PC') }}</v-tab>
-        <v-tab value="android">{{ $t('Android') }}</v-tab>
-        <v-tab value="ios">{{ $t('iOS') }}</v-tab>
-      </v-tabs>
+      <client-only>
+        <v-tabs v-model="method">
+          <v-tab value="pc">{{ $t('PC') }}</v-tab>
+          <v-tab value="android">{{ $t('Android') }}</v-tab>
+          <v-tab value="ios">{{ $t('iOS') }}</v-tab>
+        </v-tabs>
 
-      <convene-history-import-method-pc
-        v-if="method == 'pc'"
-        :convene-history-url="conveneHistoryUrl"
-        @on-import="onImport"
-      />
-      <convene-history-import-method-android
-        v-if="method == 'android'"
-        :convene-history-url="conveneHistoryUrl"
-        @on-import="onImport"
-      />
-      <convene-history-import-method-ios
-        v-if="method == 'ios'"
-        :convene-history-url="conveneHistoryUrl"
-        @on-import="onImport"
-      />
+        <convene-history-import-method-pc
+          v-if="method == 'pc'"
+          :convene-history-url="conveneHistoryUrl"
+          @on-import="onImport"
+        />
+        <convene-history-import-method-android
+          v-if="method == 'android'"
+          :convene-history-url="conveneHistoryUrl"
+          @on-import="onImport"
+        />
+        <convene-history-import-method-ios
+          v-if="method == 'ios'"
+          :convene-history-url="conveneHistoryUrl"
+          @on-import="onImport"
+        />
+      </client-only>
     </v-card>
 
     <v-sheet class="mt-4">
