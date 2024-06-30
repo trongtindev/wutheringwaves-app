@@ -139,6 +139,15 @@ watch(
               <v-icon v-else :icon="element.icon" :width="28" :height="28" />
             </v-sheet>
           </template>
+
+          <template #append>
+            <v-badge
+              v-if="sidebar.notify[element.url]"
+              :content="sidebar.notify[element.url].value"
+              color="red"
+              inline
+            />
+          </template>
         </v-list-item>
       </v-list>
 

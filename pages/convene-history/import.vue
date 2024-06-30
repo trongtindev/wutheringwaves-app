@@ -19,6 +19,7 @@ const router = useRouter();
 const account = useAccount();
 const database = useDatabase();
 const { isIos, isAndroid } = useDevice();
+const sidebar = useSidebar();
 
 // states
 const state = ref<'' | 'import'>('');
@@ -109,6 +110,7 @@ const onImport = async (url: string) => {
     });
     await db.characters.bulkUpsert(characterWrites);
 
+    sidebar.setNotify('/characters', 1, 'resetOnVisit');
     await new Promise((resolve) => setTimeout(resolve, 250)); // ensure :D
     router.push(localePath('/convene-history'));
   } catch (error) {

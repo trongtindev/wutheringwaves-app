@@ -25,11 +25,11 @@ export const useSidebar = defineStore('useSidebar', () => {
 
   // states
   const notify = ref<{
-    id: string;
-    key: string;
-    value: number;
-    priority?: number;
-  }>();
+    [key: string]: {
+      value: number;
+      policy?: 'default' | 'resetOnVisit';
+    };
+  }>({});
   const open = ref();
   const items = ref<IMenu[]>([
     {
@@ -112,7 +112,13 @@ export const useSidebar = defineStore('useSidebar', () => {
   // functions
   const togglePin = (url: string) => {};
 
-  const setNotify = (url: string, key: string, value: number) => {};
+  const setNotify = (
+    url: string,
+    value: number,
+    policy?: 'default' | 'resetOnVisit'
+  ) => {
+    notify.value[url] = { value, policy };
+  };
 
   // events
   const onOpened = (
@@ -126,8 +132,21 @@ export const useSidebar = defineStore('useSidebar', () => {
       analytics.logEvent('sidebar', { url });
     }
 
+    Object.keys(notify.value).forEach((e) => {
+      if (notify.value[e].policy === 'resetOnVisit') {
+        delete notify.value[e];
+      }
+    });
+
     // TODO: update count to sort
   };
+
+  // lifecycle
+  // onMounted(() => {
+  //   setTimeout(() => {
+  //     setNotify('/', 1, 'resetOnVisit');
+  //   }, 1500);
+  // });
 
   return { open, items, notify, togglePin, setNotify, onOpened };
 });
