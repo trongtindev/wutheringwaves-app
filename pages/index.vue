@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiGithub, mdiChevronRight } from '@mdi/js';
+import { mdiGithub, mdiChevronRight, mdiOpenInNew } from '@mdi/js';
 
 // uses
 const app = useApp();
@@ -8,11 +8,6 @@ const localePath = useLocalePath();
 
 // states
 const faqs = ref<number[]>([0, 1, 2, 3, 4]);
-
-// functions
-const openGithubRepo = () => {
-  window.open(app.githubRepo);
-};
 
 // seo meta
 const title = 'wutheringwaves.app';
@@ -27,11 +22,19 @@ useSeoMeta({
 <template>
   <div>
     <v-card class="pa-4 rounded border">
-      <div class="text-center">
+      <div class="d-flex flex-wrap ga-2 justify-center">
         <v-chip
           :prepend-icon="mdiGithub"
-          :text="`${app.name} (${app.version})`"
-          @click="openGithubRepo"
+          :text="$t('common.viewOnGithub')"
+          :href="app.githubRepo"
+          target="_blank"
+        />
+
+        <v-chip
+          :prepend-icon="mdiOpenInNew"
+          :text="$t('common.joinTheDiscord')"
+          :href="app.discord"
+          target="_blank"
         />
       </div>
 

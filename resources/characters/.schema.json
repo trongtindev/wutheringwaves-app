@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wutheringwaves.app/character.schema.json",
+  "title": "Character",
+  "description": "A character in the catalog",
+  "type": "object",
+  "properties": {},
+  "required": []
+}

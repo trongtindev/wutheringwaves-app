@@ -1,4 +1,5 @@
 {
+  "$schema": "./.schema.json",
   "description": "Ingredients obtained through culinary research.",
   "bgDescription": "A nutritious ingredient made from beans, widely used in various specialty dishes due to its unique taste."
 }

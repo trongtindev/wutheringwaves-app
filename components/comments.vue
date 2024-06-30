@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IListResponse } from '@/interfaces/api';
 import type { IComment } from '@/interfaces/comment';
-import { mdiSend, mdiImageSearch, mdiAlert, mdiTrashCan } from '@mdi/js';
+import { mdiSend, mdiImageOutline, mdiAlert, mdiTrashCan } from '@mdi/js';
 import type { IFile } from '~/interfaces/file';
 
 const props = defineProps<{
@@ -229,11 +229,12 @@ onMounted(() => loadData());
           <v-row class="mt-2">
             <v-col>
               <v-btn
+                class="border"
                 variant="text"
                 :disabled="state != '' || !auth.isLoggedIn"
                 @click="onPressedAddAttachment"
               >
-                <v-icon :icon="mdiImageSearch" color="white" />
+                <v-icon :icon="mdiImageOutline" color="white" />
               </v-btn>
             </v-col>
 

@@ -16,10 +16,7 @@ if (!data) throw createError({ statusCode: 404 });
 
 // computed
 const title = computed(() => {
-  if (item.name.toLowerCase().includes('recipe')) {
-    return i18n.t('meta.items.id.title.recipe', { name: nameLocalized.value });
-  }
-  return i18n.t('meta.items.id.title.default', { name: nameLocalized.value });
+  return i18n.t('meta.items.id.title', { name: nameLocalized.value });
 });
 
 const description = computed(() => {
@@ -35,6 +32,24 @@ const description = computed(() => {
 
 const nameLocalized = computed(() => {
   return i18n.t(item.name);
+});
+
+const obtainDescriptionLocalized = computed(() => {
+  const content =
+    data.obtainDescriptionLocalized &&
+    data.obtainDescriptionLocalized[i18n.locale.value]
+      ? data.obtainDescriptionLocalized[i18n.locale.value]
+      : data.obtainDescription;
+
+  if (content) {
+    return content;
+  } else if (item.name.toLowerCase().includes('waveband')) {
+    return i18n.t('items.obtainedFromConvenes', {
+      item: nameLocalized.value,
+      character: '?'
+    });
+  }
+  return null;
 });
 
 // seo meta
@@ -116,7 +131,7 @@ useJsonld({
     </v-card>
 
     <v-row class="mt-1">
-      <v-col v-if="data.obtainDescription" cols="12" md="6">
+      <v-col v-if="obtainDescriptionLocalized" cols="12" md="6">
         <!-- obtain -->
         <v-card class="fill-height">
           <v-card-title>
@@ -124,7 +139,7 @@ useJsonld({
           </v-card-title>
           <v-divider />
           <v-card-text>
-            <div :innerHTML="parseContent(data.obtainDescription)"></div>
+            <div :innerHTML="parseContent(obtainDescriptionLocalized)"></div>
           </v-card-text>
         </v-card>
       </v-col>

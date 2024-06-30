@@ -42,7 +42,8 @@ export default defineNuxtPlugin((nuxtApp) => {
         'Failed to fetch',
         'Load failed',
         'TypeError: Load failed',
-        'AxiosError'
+        'AxiosError',
+        'offline'
       ],
       // This option is required for capturing headers and cookies.
       sendDefaultPii: true

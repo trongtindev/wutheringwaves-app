@@ -89,7 +89,8 @@
     "title": "Items",
     "howToObtain": "How to obtain {0}?",
     "howToUnlock": "How to unlock {0}?",
-    "cookingIngredients": "Cooking Ingredients"
+    "cookingIngredients": "Cooking Ingredients",
+    "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": { "title": "Timeline" },
   "convene": {
@@ -336,7 +337,9 @@
     "currentEvents": "Current events",
     "yourLastConvene": "Your Last Convene",
     "guest": "Guest",
-    "guestSubtitle": "Sign in to use Cloud Sync."
+    "guestSubtitle": "Sign in to use Cloud Sync.",
+    "joinTheDiscord": "Join the Discord",
+    "viewOnGithub": "View on GitHub"
   },
   "other": { "underDevelopment": "This site is under development." }
 }

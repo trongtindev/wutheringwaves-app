@@ -8,5 +8,7 @@ export default defineI18nConfig(() => ({
     en,
     vi
   },
-  missingWarn: false
+  missingWarn: false,
+  warnHtmlInMessage: false,
+  warnHtmlMessage: false
 }));

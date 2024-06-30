@@ -70,7 +70,7 @@ useHead({
 
 useSeoMeta({
   ogSiteName: 'WutheringWaves.app',
-  ogImage: `${runtimeConfig.public.SITE_URL}/cover.png`,
+  ogImage: `${runtimeConfig.public.SITE_URL}/cover.webp`,
   ogType: 'website',
   description: i18n.t('meta.description'),
   ogDescription: i18n.t('meta.description')

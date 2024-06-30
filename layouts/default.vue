@@ -6,8 +6,6 @@ import {
   mdiTranslate,
   mdiCogs,
   mdiSwapVertical
-  // mdiPin,
-  // mdiPinOff
 } from '@mdi/js';
 
 import BackupController from '../controllers/backup.vue';
@@ -81,8 +79,8 @@ watch(
 <template>
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
-      <client-only>
-        <v-list>
+      <v-list>
+        <client-only>
           <v-list-item
             :title="
               auth.user
@@ -105,20 +103,9 @@ watch(
               </v-avatar>
             </template>
           </v-list-item>
-        </v-list>
+        </client-only>
+      </v-list>
 
-        <!-- <v-avatar class="mb-4 bg-grey-darken-3" size="64">
-            <v-img
-              v-if="auth.user && auth.user.photoURL"
-              :src="auth.user.photoURL"
-            />
-          </v-avatar>
-
-          <div v-if="auth.user">
-            {{ auth.user.email || auth.user.displayName || auth.user.uid }}
-          </div>
-          <div v-else>{{ $t('Guest') }}</div> -->
-      </client-only>
       <v-divider />
 
       <v-list :nav="true" :lines="false">
@@ -152,16 +139,6 @@ watch(
               <v-icon v-else :icon="element.icon" :width="28" :height="28" />
             </v-sheet>
           </template>
-
-          <!-- <template #append>
-            <v-btn
-              @click.prevent="() => sidebar.togglePin(element.url)"
-              variant="text"
-              size="small"
-            >
-              <v-icon size="x-small" :icon="mdiPin" />
-            </v-btn>
-          </template> -->
         </v-list-item>
       </v-list>
 
