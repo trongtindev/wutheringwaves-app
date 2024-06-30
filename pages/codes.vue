@@ -5,9 +5,9 @@ const resources = useResources();
 
 // states
 const items = (await resources.getCodes()).sort((a, b) => {
-  const aExpiredAt = a.expiredAt ?? new Date(0);
-  const bExpiredAt = b.expiredAt ?? new Date(0);
-  return aExpiredAt.getTime() - bExpiredAt.getTime();
+  const aExpiredAt = dayjs(a.expiredAt ?? 0);
+  const bExpiredAt = dayjs(b.expiredAt ?? 0);
+  return aExpiredAt.toDate().getTime() - bExpiredAt.toDate().getTime();
 });
 
 // seo meta
@@ -48,7 +48,7 @@ useSeoMeta({
       </card-title>
 
       <v-list>
-        <CodesCodeItem
+        <codes-item
           v-for="(element, index) in items"
           :key="index"
           :data="element"

@@ -1,9 +1,8 @@
 export interface ICode {
   code: string;
   rewards?: {
-    name: string;
-    amount: number;
+    item: string;
+    quantity: number;
   }[];
-  expiredAt?: Date;
-  createdAt: Date;
+  expiredAt?: string;
 }
