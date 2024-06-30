@@ -165,7 +165,7 @@
     "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills",
-    "alert": "Import convene history to see already owned characters."
+    "alert": "Nhập lịch sử triệu hồi để xem các nhân vật đã sở hữu."
   },
   "weapons": {
     "title": "Vũ khí",
@@ -339,7 +339,9 @@
     "guest": "Guest",
     "guestSubtitle": "Sign in to use Cloud Sync.",
     "joinTheDiscord": "Join the Discord",
-    "viewOnGithub": "View on GitHub"
+    "viewOnGithub": "View on GitHub",
+    "rarity": "Rarity",
+    "category": "Category"
   },
   "other": { "underDevelopment": "This site is under development." }
 }

@@ -1,11 +1,10 @@
 import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
 
 export type ConveneDocType = {
-  key: string;
+  _id: string;
   playerId: string;
   cardPoolType: number;
   qualityLevel: number;
-  resourceId: number;
   resourceType: 'Weapons' | 'Resonators';
   name: string;
   time: string;
@@ -42,12 +41,12 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
 };
 
 export const conveneSchema: RxJsonSchema<ConveneDocType> = {
-  version: 0,
+  version: 1,
   keyCompression: false,
-  primaryKey: 'key',
+  primaryKey: '_id',
   type: 'object',
   properties: {
-    key: {
+    _id: {
       type: 'string',
       maxLength: 50
     },
@@ -58,9 +57,6 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
       type: 'number'
     },
     qualityLevel: {
-      type: 'number'
-    },
-    resourceId: {
       type: 'number'
     },
     resourceType: {
@@ -77,11 +73,10 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     }
   },
   required: [
-    'key',
+    '_id',
     'playerId',
     'cardPoolType',
     'qualityLevel',
-    'resourceId',
     'resourceType',
     'name',
     'time'

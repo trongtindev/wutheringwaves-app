@@ -371,7 +371,9 @@
     "guest": "Guest",
     "guestSubtitle": "Sign in to use Cloud Sync.",
     "joinTheDiscord": "Join the Discord",
-    "viewOnGithub": "View on GitHub"
+    "viewOnGithub": "View on GitHub",
+    "rarity": "Rarity",
+    "category": "Category"
   },
   "other": {
     "underDevelopment": "This site is under development."

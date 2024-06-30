@@ -84,13 +84,21 @@ export const useDatabase = defineStore('useDatabase', () => {
         .then(async (result) => {
           db = result;
 
+          console.log('database', 'addCollections');
           const collections = await db.addCollections({
             convenes: {
               schema: conveneSchema,
               methods: conveneDocMethods,
               statics: conveneCollectionMethods,
               autoMigrate: false,
-              migrationStrategies: {}
+              migrationStrategies: {
+                1: function (oldDoc) {
+                  oldDoc._id = randomId();
+                  oldDoc.key = undefined;
+                  oldDoc.resourceId = undefined;
+                  return oldDoc;
+                }
+              }
             },
             settings: {
               schema: settingSchema,
@@ -126,6 +134,7 @@ export const useDatabase = defineStore('useDatabase', () => {
           });
 
           // check migration
+          console.log('database', 'check migration');
           for (const collection of Object.keys(collections)) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if (await (collections as any)[collection].migrationNeeded()) {

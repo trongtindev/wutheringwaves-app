@@ -1,7 +1,7 @@
 import { createVuetify } from 'vuetify';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import { en, vi } from 'vuetify/locale';
-import { md2 } from 'vuetify/blueprints';
+import { md3 } from 'vuetify/blueprints';
 import 'vuetify/styles';
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -72,7 +72,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       VSwitch: {},
       VPagination: {
-        totalVisible: 6
+        totalVisible: 4
       }
     },
     theme: {
@@ -98,7 +98,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
       }
     },
-    blueprint: md2
+    blueprint: md3
   });
 
   nuxtApp.vueApp.use(vuetify);

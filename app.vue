@@ -20,7 +20,7 @@ const firebase = useFirebase();
 const vuetifyLocale = useLocale();
 const runtimeConfig = useRuntimeConfig();
 
-// lifecycle
+// initialize
 if (import.meta.client) {
   app.initialize();
   auth.initialize();
@@ -32,20 +32,18 @@ if (import.meta.client) {
 }
 
 // lifecycle
-if (import.meta.client) {
-  watch(
-    () => i18n.locale.value,
-    (value) => {
-      dayjs.locale(value);
-      vuetifyLocale.current.value = value;
-    }
-  );
+watch(
+  () => i18n.locale.value,
+  (value) => {
+    dayjs.locale(value);
+    vuetifyLocale.current.value = value;
+  }
+);
 
-  onMounted(() => {
-    dayjs.locale(i18n.locale.value);
-    vuetifyLocale.current.value = i18n.locale.value;
-  });
-}
+onMounted(() => {
+  dayjs.locale(i18n.locale.value);
+  vuetifyLocale.current.value = i18n.locale.value;
+});
 
 // seo meta
 useHead({

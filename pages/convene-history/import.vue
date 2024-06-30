@@ -1,16 +1,6 @@
 <script setup lang="ts">
 import { mdiCancel } from '@mdi/js';
 
-interface IConvene {
-  key: string;
-  cardPoolType: number;
-  name: string;
-  qualityLevel: number;
-  resourceId: number;
-  resourceType: 'Weapons' | 'Resonators';
-  time: string;
-}
-
 // uses
 const api = useApi();
 const i18n = useI18n();
@@ -33,29 +23,27 @@ const onImport = async (url: string) => {
     resetState();
     state.value = 'import';
 
-    const total = 7;
-    const items: IConvene[] = [];
-
-    for (let i = 1; i <= total; i += 1) {
-      importState.value = `${i18n.t('convene.import.processing')} ${i}/${total}`;
-
-      const response = await api.getInstance().post<{
-        items: IConvene[];
-      }>('/convenes/import', {
-        url,
-        userAgent: navigator.userAgent,
-        cardPoolType: i
-      });
-      response.data.items.forEach((e) => items.push(e));
-    }
-
-    const uri = new URL(url.replaceAll('index.html#', 'index.html'));
-    const playerId = uri.searchParams.get('player_id');
+    const response = await api.getInstance().post<{
+      playerId: number;
+      items: {
+        time: string;
+        name: string;
+        qualityLevel: number;
+        cardPoolType: number;
+        resourceType: string;
+      }[];
+      total: number;
+    }>('/convenes/import', {
+      url,
+      userAgent: navigator.userAgent
+    });
+    console.log(response.data);
 
     // initial account
-    await account.upsert(playerId!);
+    const playerId = response.data.playerId.toString();
+    await account.upsert(playerId);
     if (account.active != playerId) {
-      account.active = playerId!;
+      account.active = playerId;
     }
 
     // save convene history url
@@ -64,21 +52,24 @@ const onImport = async (url: string) => {
     // get database instance
     const db = await database.getInstance();
 
-    //  update convene history
-    const conveneWrites = items.map((e) => {
+    // remove previous history
+    const items = await db.convenes.find().exec();
+    await db.convenes.bulkRemove(items.map((e) => e._id));
+
+    //  insert convene history
+    const conveneWrites = response.data.items.map((e, i) => {
       return {
-        key: e.key,
-        playerId: playerId!,
+        _id: randomId(),
+        playerId: playerId,
         cardPoolType: e.cardPoolType,
-        resourceId: e.resourceId,
-        resourceType: e.resourceType,
         qualityLevel: e.qualityLevel,
+        resourceType: e.resourceType as any,
         name: e.name,
         time: e.time,
-        createdAt: new Date(e.time).getTime()
+        createdAt: new Date(e.time).getTime() + i
       };
     });
-    await db.convenes.bulkUpsert(conveneWrites);
+    await db.convenes.bulkInsert(conveneWrites);
 
     // update character list
     const resonators = items.filter((e) => e.resourceType === 'Resonators');

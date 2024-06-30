@@ -8,12 +8,10 @@ const timeOffset = {
 };
 
 export const dayjs = (
-  date?: string | number | Date | dayjsLib.Dayjs | null | undefined,
-  format?: dayjsLib.OptionType | undefined,
-  strict?: boolean | undefined
+  date?: string | number | Date | dayjsLib.Dayjs | null | undefined
 ) => {
   const runtimeConfig = useRuntimeConfig();
-  return dayjsLib(date, format, strict).tz(runtimeConfig.public.DAYJS_TIMEZONE);
+  return dayjsLib(date).tz(runtimeConfig.public.DAYJS_TIMEZONE);
 };
 
 export const getTimeDifference = () => {
@@ -21,4 +19,18 @@ export const getTimeDifference = () => {
   const local = now.utcOffset();
   const serverTime = now.utcOffset(timeOffset.Asia).utcOffset();
   return serverTime - local;
+};
+
+export const dayjsFormat = (
+  date?: string | number | Date | dayjsLib.Dayjs | null | undefined,
+  format?: string
+) => {
+  const i18n = useI18n();
+
+  if (!format) {
+    format =
+      i18n.locale.value === 'vi' ? 'DD/MM/YYYY - HH:mm' : 'YYYY/MM/DD - HH:mm';
+  }
+
+  return dayjs(date).format(format);
 };

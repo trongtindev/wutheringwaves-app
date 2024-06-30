@@ -53,7 +53,7 @@ const items: IBanner[] = [
       end: '2024-06-13 09:59'
     },
     name: {
-      en: 'Absolute Pulsation - Verdant Summit'
+      en: 'Absolute Pulsation - Jiyan - Verdant Summit'
     },
     featuredRare: 'Verdant Summit',
     featured: ['Dauntless Evernight', 'Variation', 'Hollow Mirage']
@@ -78,7 +78,7 @@ const items: IBanner[] = [
       end: '2024-06-26 11:59'
     },
     name: {
-      en: 'Absolute Pulsation - Stringmaster'
+      en: 'Absolute Pulsation - Yinlin - Stringmaster'
     },
     featuredRare: 'Stringmaster',
     featured: ['Jinzhou Keeper', 'Cadenza', 'Lunar Cutter']
@@ -87,7 +87,7 @@ const items: IBanner[] = [
   {
     type: CardPoolType['featured-resonator'],
     name: {
-      en: 'Thawborn Renewal — Jinhsi'
+      en: 'Thawborn Renewal - Jinhsi'
     },
     time: {
       start: '2024-06-28 13:00',
@@ -103,7 +103,7 @@ const items: IBanner[] = [
       end: '2024-07-22 09:59'
     },
     name: {
-      en: 'Absolute Pulsation - Ages of Harvest'
+      en: 'Absolute Pulsation - Jinhsi - Ages of Harvest'
     },
     featuredRare: 'Ages of Harvest',
     featured: ['Discord', 'Commando of Conviction', 'Amity Accord']

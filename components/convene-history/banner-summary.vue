@@ -40,8 +40,7 @@ const guaranteedAt5List = computed(() => {
   }[] = [];
 
   for (let i = 0; i < convenes.value.length; i += 1) {
-    const element = convenes.value[i];
-    if (element.qualityLevel < 5) {
+    if (convenes.value[i].qualityLevel < 5) {
       if (items.length > 0) {
         items[items.length - 1].pity += 1;
       }
@@ -49,7 +48,7 @@ const guaranteedAt5List = computed(() => {
     }
 
     items.push({
-      name: element.name,
+      name: convenes.value[i].name,
       pity: 1
     });
   }
@@ -92,7 +91,7 @@ if (import.meta.client) {
 </script>
 
 <template>
-  <v-card>
+  <v-card class="fill-height">
     <v-card-title>
       {{ props.title }}
     </v-card-title>

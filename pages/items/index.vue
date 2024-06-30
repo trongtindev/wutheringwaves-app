@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import type { IItem } from '~/interfaces/item';
+
 // uses
 const i18n = useI18n();
+const route = useRoute();
+const router = useRouter();
 const resources = useResources();
 const localePath = useLocalePath();
 
@@ -10,13 +14,22 @@ const items = await resources.getItems();
 // states
 const page = ref(1);
 const limit = ref(48);
-const filterText = ref();
+const matchItems = ref<IItem[]>([]);
+const displayItems = ref<IItem[]>([]);
+const filterText = ref(route.query.q ? route.query.q.toString() : undefined);
 const filterCategory = ref();
 const filterRarity = ref(0);
+const debouncedSearch = useDebounceFn(() => loadData(), 350);
 
-// computed.value
-const matchItems = computed(() => {
-  return items.filter((e) => {
+// functions
+const loadData = () => {
+  router.replace({
+    query: {
+      q: filterText.value || undefined
+    }
+  });
+
+  matchItems.value = items.filter((e) => {
     if (filterText.value) {
       // TODO: search in nameLocalized
       return e.name.toLowerCase().includes(filterText.value.toLowerCase());
@@ -26,18 +39,25 @@ const matchItems = computed(() => {
     }
     return true;
   });
-});
 
-const displayItems = computed(() => {
   const offset = limit.value * page.value - limit.value;
-  return matchItems.value.filter((e, i) => {
+  displayItems.value = matchItems.value.filter((e, i) => {
     return i >= offset && i < offset + limit.value;
   });
-});
+};
 
+// computed
 const pages = computed(() => {
   return Math.ceil(matchItems.value.length / limit.value);
 });
+
+// changes
+watch(filterText, () => debouncedSearch());
+watch(filterCategory, () => loadData());
+watch(filterRarity, () => loadData());
+
+// lifecycle
+onMounted(() => loadData());
 
 // seo meta
 const title = i18n.t('meta.items.title');

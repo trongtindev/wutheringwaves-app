@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ConveneDocument } from '@/collections/convene';
 import { CardPoolType, type IBanner } from '@/interfaces/banner';
-import { mdiImport, mdiChevronRight } from '@mdi/js';
+import { mdiImport, mdiChevronRight, mdiGrid, mdiViewList } from '@mdi/js';
 
 // uses
 const i18n = useI18n();
@@ -12,15 +12,47 @@ const account = useAccount();
 
 // states
 const banners = await resources.banners();
-const convenes = ref<ConveneDocument[]>();
+const convenes = ref<ConveneDocument[]>([]);
 const filterBanner = ref<IBanner | null>(null);
+const filterRarity = ref<number[]>([5, 4, 3]);
+const displayType = ref<'list' | 'grid'>('list');
+const displayConvenes = ref<{ pity: number; doc: ConveneDocument }[]>([]);
 
 // computed
-const convenesFiltered = computed(() => {
-  return (convenes.value || [])
+const totalPulls = computed(() => {
+  return (convenes.value || []).length;
+});
+
+// functions
+const initialize = () => {
+  database.getInstance().then((db) => {
+    db.convenes
+      .find({
+        selector: {
+          playerId: account.active
+        }
+      })
+      .sort({
+        createdAt: 'desc'
+      })
+      .exec()
+      .then((result) => {
+        // TODO: fixme
+        convenes.value = result as any;
+        updateFilter();
+      })
+      .catch(console.error);
+  });
+};
+
+const updateFilter = () => {
+  displayConvenes.value = convenes.value
     .filter((e) => {
       if (filterBanner.value) {
         return e.cardPoolType === filterBanner.value.type;
+      }
+      if (filterRarity.value) {
+        return filterRarity.value.includes(e.qualityLevel);
       }
       return true;
     })
@@ -42,32 +74,47 @@ const convenesFiltered = computed(() => {
         }
       }
       return true;
+    })
+    .map((e) => {
+      return {
+        pity: 0,
+        doc: e
+      };
     });
-});
 
-const totalPulls = computed(() => {
-  return (convenes.value || []).length;
-});
+  // console.log(displayConvenes.value);
+  // let pity = 0;
+  // let current = -1;
+  // for (let i = 0; i < convenes.value.length; i += 1) {
+  //   const isEnd = i >= convenes.value.length - 1;
+  //   if (convenes.value[i].qualityLevel >= 4 || isEnd) {
+  //     if (
+  //       current >= 0 &&
+  //       (convenes.value[i].qualityLevel >=
+  //         displayConvenes.value[current].doc.qualityLevel ||
+  //         isEnd)
+  //     ) {
+  //       console.log(displayConvenes.value[current].doc.name, pity);
+  //       displayConvenes.value[current].pity = pity;
 
-// functions
-const initialize = () => {
-  database.getInstance().then((db) => {
-    db.convenes
-      .find({
-        selector: {
-          playerId: account.active
-        }
-      })
-      .sort({
-        createdAt: 'desc'
-      })
-      .exec()
-      .then((result) => {
-        // TODO: fixme
-        convenes.value = result as any;
-      })
-      .catch(console.error);
-  });
+  //       // reset
+  //       pity = 1;
+  //     }
+
+  //     for (let j = 0; j < displayConvenes.value.length; j += 1) {
+  //       if (
+  //         displayConvenes.value[j].doc.name === convenes.value[i].name &&
+  //         displayConvenes.value[j].doc.time === convenes.value[i].time
+  //       ) {
+  //         current = j;
+  //         console.log(displayConvenes.value[current].doc.name);
+  //         break;
+  //       }
+  //     }
+  //   } else if (current >= 0) {
+  //     pity += 1;
+  //   }
+  // }
 };
 
 // changes
@@ -75,14 +122,15 @@ watch(
   () => account.active,
   () => initialize()
 );
-
-const title = i18n.t('convene.history.title');
-const description = i18n.t('meta.convene.history.description');
+watch(() => filterBanner.value, updateFilter);
+watch(() => filterRarity.value, updateFilter);
 
 // lifecycle
-if (import.meta.client) {
-  onMounted(() => initialize());
-}
+onMounted(() => initialize());
+
+// seo meta
+const title = i18n.t('convene.history.title');
+const description = i18n.t('meta.convene.history.description');
 
 useHead({
   title: title,
@@ -104,45 +152,60 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     />
 
     <v-card>
-      <v-card-title>
-        <v-row>
-          <v-col class="d-flex align-center">
-            {{ $t('convene.history.title') }} ({{ totalPulls }})
-          </v-col>
+      <card-title>
+        <template #title>
+          {{ $t('convene.history.title') }} ({{ totalPulls }})
+        </template>
 
-          <v-col class="d-flex align-center justify-end">
-            <v-btn
-              :text="$t('common.import')"
-              :append-icon="mdiImport"
-              :to="localePath('/convene-history/import')"
-            />
-          </v-col>
-        </v-row>
-      </v-card-title>
-      <v-divider />
+        <template #actions>
+          <v-btn-toggle
+            v-model="displayType"
+            color="primary"
+            variant="outlined"
+          >
+            <v-btn :icon="mdiViewList" value="list" />
+            <v-btn :icon="mdiGrid" value="grid" />
+          </v-btn-toggle>
+
+          <v-btn
+            :text="$t('common.import')"
+            :append-icon="mdiImport"
+            :to="localePath('/convene-history/import')"
+          />
+        </template>
+      </card-title>
 
       <v-card-text>
         <div class="mb-4">
-          <v-select
-            v-model="filterBanner"
-            :placeholder="$t('Select banner')"
-            :items="banners"
-            :return-object="true"
-            :item-title="
-              (e) => {
-                return e.name[i18n.locale.value] || e.name.en;
-              }
-            "
-            :clearable="true"
-          />
-        </div>
+          <v-row>
+            <v-col cols="12" md="8">
+              <v-select
+                v-model="filterBanner"
+                :placeholder="$t('Select banner')"
+                :items="banners"
+                :return-object="true"
+                :item-title="
+                  (e) => {
+                    return e.name[i18n.locale.value] || e.name.en;
+                  }
+                "
+                :clearable="true"
+              />
+            </v-col>
 
-        <div v-if="!convenes" class="text-center">
-          <v-progress-circular :indeterminate="true" />
+            <v-col cols="12" md="4">
+              <v-select
+                v-model="filterRarity"
+                :label="$t('common.rarity')"
+                :items="[5, 4, 3]"
+                :multiple="true"
+              />
+            </v-col>
+          </v-row>
         </div>
 
         <v-alert
-          v-else-if="convenes.length === 0"
+          v-if="convenes.length === 0"
           type="info"
           :text="$t('You currently have no Convene History.')"
         />
@@ -150,32 +213,62 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         <v-data-table
           v-else
           class="border rounded"
-          :items="convenesFiltered"
+          :items="displayConvenes"
           :headers="[
             {
               title: $t('Time'),
               align: 'center',
               key: 'time',
-              width: '30%'
+              width: '20%'
             },
-            { title: $t('Name'), key: 'name', align: 'center', width: '30%' },
+            { title: $t('Pity'), align: 'center', width: '10%' },
+            { title: $t('Name'), align: 'center', width: '30%' },
             {
               title: $t('Type'),
               key: 'resourceType',
               align: 'center',
-              width: '20%',
-              value: (item) => i18n.t(item.resourceType)
+              width: '20%'
             },
             {
               title: $t('Rarity'),
               key: 'rarity',
               align: 'center',
-              value: (item) => item.qualityLevel,
               width: '20%'
             }
           ]"
           item-value="key"
-        />
+        >
+          <template #item="{ item }">
+            <tr :class="`bg-linear-rarity${item.doc.qualityLevel}`">
+              <td class="text-center">
+                {{ item.doc.time }}
+              </td>
+              <td class="text-center">
+                <span
+                  v-if="item.doc.qualityLevel >= 4"
+                  :style="`color: hsl(${100 - (item.pity / (item.doc.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
+                >
+                  {{ item.pity }}
+                </span>
+                <span v-else>
+                  {{ item.pity }}
+                </span>
+              </td>
+              <td class="text-center">
+                <span :class="`text-rarity${item.doc.qualityLevel}`">
+                  {{ $t(item.doc.name) }}
+                </span>
+              </td>
+              <td class="text-center">
+                [{{ item.doc.cardPoolType }}]
+                {{ $t(item.doc.resourceType) }}
+              </td>
+              <td class="text-center">
+                {{ item.doc.qualityLevel }}
+              </td>
+            </tr>
+          </template>
+        </v-data-table>
       </v-card-text>
     </v-card>
 
@@ -352,3 +445,23 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     </div>
   </div>
 </template>
+
+<style>
+.bg-linear-rarity5 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(185, 129, 46, 0.55) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.bg-linear-rarity4 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(173, 118, 176, 0.55) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+</style>

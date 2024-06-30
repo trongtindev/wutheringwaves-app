@@ -3,6 +3,7 @@ import { mdiTrashCan } from '@mdi/js';
 
 // uses
 const i18n = useI18n();
+const auth = useAuth();
 const dialog = useDialog();
 const backup = useBackup();
 const database = useDatabase();
@@ -17,7 +18,9 @@ const onPressedConfirm = async (isConfirmed?: boolean) => {
       state.value = 'erase';
 
       await database.eraseAllData();
-      await backup.eraseAll();
+      if (auth.isLoggedIn) {
+        await backup.eraseAll();
+      }
 
       window.location.reload();
     } catch (error) {

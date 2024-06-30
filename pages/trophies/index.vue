@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ITrophy } from '~/interfaces/trophy';
+
 // uses
 const i18n = useI18n();
 const resources = useResources();
@@ -13,28 +15,38 @@ const limit = ref(48);
 const filterText = ref();
 const filterGroup = ref();
 const filterCategory = ref();
+const matchItems = ref<ITrophy[]>([]);
+const displayItems = ref<ITrophy[]>([]);
+const debouncedSearch = useDebounceFn(() => loadData(), 350);
 
-// computed.value
-const matchItems = computed(() => {
-  return items.filter((e) => {
+// functions
+const loadData = () => {
+  matchItems.value = items.filter((e) => {
     if (filterText.value) {
       // TODO: search in nameLocalized
       return e.name.toLowerCase().includes(filterText.value.toLowerCase());
     }
     return true;
   });
-});
 
-const displayItems = computed(() => {
   const offset = limit.value * page.value - limit.value;
-  return matchItems.value.filter((e, i) => {
+  displayItems.value = matchItems.value.filter((e, i) => {
     return i >= offset && i < offset + limit.value;
   });
-});
+};
 
+// computed
 const pages = computed(() => {
   return Math.ceil(matchItems.value.length / limit.value);
 });
+
+// changes
+watch(filterText, () => debouncedSearch());
+watch(filterGroup, () => loadData());
+watch(filterCategory, () => loadData());
+
+// lifecycle
+onMounted(() => loadData());
 
 // seo meta
 const title = i18n.t('meta.trophies.title');
