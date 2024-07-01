@@ -11,13 +11,14 @@ const items = (await resources.getCodes()).sort((a, b) => {
 });
 
 // seo meta
+const description = i18n.t('meta.codes.description');
+
+useApp().title = i18n.t('codes.title');
 useHead({
   title: i18n.t('meta.codes.title', {
     time: `${new Date().getMonth() + 1}/${new Date().getFullYear()}`
   })
 });
-
-const description = i18n.t('meta.codes.description');
 useSeoMeta({
   description,
   ogDescription: description
@@ -37,16 +38,6 @@ useSeoMeta({
     />
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ $t('codes.title') }}
-        </template>
-
-        <template #actions>
-          <contribute-button path="/blob/main/resources/codes.ts" />
-        </template>
-      </card-title>
-
       <v-list>
         <codes-item
           v-for="(element, index) in items"

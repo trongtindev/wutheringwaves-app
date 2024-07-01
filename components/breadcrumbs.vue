@@ -50,9 +50,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- TODO: https://developers.google.com/search/docs/appearance/structured-data/breadcrumb?hl=en#json-ld_1 -->
-
-  <v-breadcrumbs
+  <div>
+    <!-- something -->
+  </div>
+  <!-- <v-breadcrumbs
     class="pt-0"
     :items="[
       {
@@ -70,5 +71,5 @@ onUnmounted(() => {
     <template #title="{ item }">
       {{ item.title }}
     </template>
-  </v-breadcrumbs>
+  </v-breadcrumbs> -->
 </template>

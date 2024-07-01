@@ -24,7 +24,7 @@
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
     },
     "codes": {
-      "title": "Wuthering Waves Gift codes for {time}",
+      "title": "Wuthering Waves Gift Codes for {time}",
       "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
@@ -87,10 +87,12 @@
     "trophies": "Trophies",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
-    "codes": "Codes",
+    "codes": "Gift Codes",
     "map": "Map",
     "guides": "Guides",
-    "items": "Items"
+    "items": "Items",
+    "comparison": "Comparison",
+    "database": "Database"
   },
   "items": {
     "title": "Items",
@@ -100,12 +102,16 @@
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {
-    "title": "Timeline"
+    "title": "Timeline",
+    "startsIn": "Starts {0}",
+    "endsIn": "Ends {0}",
+    "current": "Current",
+    "upcoming": "Upcoming"
   },
   "convene": {
     "import": {
       "title": "Import Convenes",
-      "info": "Your data will be saved, just enter it once next time it will be automatic Re-fill previously retrieved data. If you are logged in, the data will also be available synchronized between logged in devices.",
+      "alert": "After entering it for the first time, the data will be saved on your browser or synced to other devices if you use Cloud Sync. From next time, you just need to come back here and click enter history.",
       "success": "",
       "processing": "Processing",
       "invalidLink": "Invalid link, please check it again",
@@ -126,7 +132,8 @@
       }
     },
     "history": {
-      "title": "Convene History"
+      "title": "Convene History",
+      "alert": "Import and backup your Wuthering Waves convene history to keep it for more than 6 months. It also automatically tracks your pity and statistics about your convenes!"
     },
     "guaranteedAt": "Guaranteed at {0}",
     "lifetimePulls": "Lifetime Pulls",
@@ -144,6 +151,7 @@
       "luck5": "Luckiness 5★",
       "luck4": "Luckiness 4★",
       "luckWinRateOff": "Luckiness Win 50:50",
+      "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
       "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
@@ -244,6 +252,7 @@
     "notification": {
       "title": "Notification",
       "enabled": "Enabled",
+      "enabledSubtitle": "Receive notifications from items you're interested in.",
       "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
       "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
     },
@@ -286,7 +295,7 @@
     "title": "Leaderboards"
   },
   "codes": {
-    "title": "Wuthering Waves Codes",
+    "title": "Gift codes",
     "expired": "Expired"
   },
   "map": {
@@ -373,7 +382,11 @@
     "joinTheDiscord": "Join the Discord",
     "viewOnGithub": "View on GitHub",
     "rarity": "Rarity",
-    "category": "Category"
+    "category": "Category",
+    "downloadImage": "Download image",
+    "upcoming": "Upcoming",
+    "editThisPage": "Edit this page",
+    "noRecordsFound": "No records found."
   },
   "other": {
     "underDevelopment": "This site is under development."

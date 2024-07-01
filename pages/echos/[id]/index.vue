@@ -33,15 +33,14 @@ const description = i18n.t('meta.echos.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.webp`;
 
+useApp().title = i18n.t('echos.title');
 useHead({ title });
-
 useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
   ogImage
 });
-
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
@@ -77,7 +76,7 @@ useJsonld({
         </template>
 
         <template #actions>
-          <contribute-button
+          <edit-this-page
             :path="`/tree/main/resources/echos/${item.slug}.json`"
           />
         </template>

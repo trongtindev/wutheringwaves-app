@@ -83,20 +83,28 @@
     "codes": "Mã quà tặng",
     "map": "Map",
     "guides": "Guides",
-    "items": "Items"
+    "items": "Vật phẩm",
+    "comparison": "Comparison",
+    "database": "Database"
   },
   "items": {
-    "title": "Items",
+    "title": "Vật phẩm",
     "howToObtain": "How to obtain {0}?",
     "howToUnlock": "How to unlock {0}?",
     "cookingIngredients": "Cooking Ingredients",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
-  "timeline": { "title": "Timeline" },
+  "timeline": {
+    "title": "Timeline",
+    "startsIn": "Starts in {0}",
+    "endsIn": "Ends in {0}",
+    "current": "Current",
+    "upcoming": "Upcoming"
+  },
   "convene": {
     "import": {
       "title": "Nhập lịch sử triệu hồi",
-      "info": "Your data will be saved, just enter it once next time it will be automatic Re-fill previously retrieved data. If you are logged in, the data will also be available synchronized between logged in devices.",
+      "alert": "Sau khi nhập lần đầu tiên, dữ liệu sẽ được lưu lại trên trình duyệt của bạn hoặc đồng bộ các thiết bị khác nếu bạn có sử dụng Cloud Sync. Từ các lần sau, bạn chỉ cần quay lại đây và nhấn nhập lịch sử.",
       "success": "",
       "processing": "Đang xử lý",
       "invalidLink": "Invalid link, please check it again",
@@ -116,7 +124,10 @@
         }
       }
     },
-    "history": { "title": "Lịch sử triệu hồi" },
+    "history": {
+      "title": "Lịch sử triệu hồi",
+      "alert": "Import and backup your Wuthering Waves convene history to keep it for more than 6 months. It also automatically tracks your pity and statistics about your convenes!"
+    },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",
     "lifetimePulls": "Tổng số lần",
     "pity": "Pity",
@@ -132,7 +143,8 @@
       "totalPull": "Tổng số lần",
       "luck5": "Luckiness 5★",
       "luck4": "Luckiness 4★",
-      "luckWinRateOff": "Luckiness Win 50: 50",
+      "luckWinRateOff": "Tỉ lệ thắng 50:50",
+      "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
       "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
@@ -214,14 +226,15 @@
     "eraseAllData": "Erase All Data",
     "accounts": {
       "title": "Tài khoản",
-      "autoImportConveneHistory": "Auto import convene history",
-      "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
+      "autoImportConveneHistory": "Tự động nhập",
+      "autoImportConveneHistorySubtitle": "Lịch sử sẽ tự động nhập khi bạn truy cập website.",
       "empty": "Để thêm tài khoản, bạn chỉ cần nhập lịch sử triệu hồi."
     },
     "backup": { "title": "Sao lưu dữ liệu" },
     "notification": {
       "title": "Notification",
       "enabled": "Enabled",
+      "enabledSubtitle": "Nhận các thông báo từ các mục bạn đã quan tâm.",
       "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
       "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
     },
@@ -321,8 +334,8 @@
     "notEnoughData": "Không đủ dữ liệu!",
     "download": "Tải xuống",
     "language": "Ngôn ngữ",
-    "items": "Items",
-    "item": "Item",
+    "items": "Vật phẩm",
+    "item": "Vật phẩm",
     "ascensionMaterial": "Ascension Material",
     "successfully": "Successfully!",
     "checkAll": "Check all",
@@ -341,7 +354,11 @@
     "joinTheDiscord": "Join the Discord",
     "viewOnGithub": "View on GitHub",
     "rarity": "Rarity",
-    "category": "Category"
+    "category": "Category",
+    "downloadImage": "Download image",
+    "upcoming": "Upcoming",
+    "editThisPage": "Edit this page",
+    "noRecordsFound": "No records found."
   },
   "other": { "underDevelopment": "This site is under development." }
 }

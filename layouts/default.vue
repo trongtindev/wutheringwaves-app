@@ -105,50 +105,15 @@ watch(
           </v-list-item>
         </client-only>
       </v-list>
-
       <v-divider />
 
       <v-list :nav="true" :lines="false">
-        <v-list-item
+        <nav-item
           v-for="(element, index) in sidebar.items"
           :key="index"
-          :to="localePath(element.url)"
-          :title="$t(element.title)"
-          :exact="index === 0"
-          :active="
-            index > 0
-              ? route.path.startsWith(localePath(element.url))
-              : undefined
-          "
-          class="rounded"
-          @click="() => sidebar.onOpened(element.url)"
-        >
-          <template #prepend>
-            <v-sheet
-              class="mr-4 d-flex align-center justify-center"
-              :width="32"
-              :height="32"
-            >
-              <v-img
-                v-if="element.icon && element.icon.startsWith('/')"
-                :src="element.icon"
-                :alt="$t(element.title)"
-                :width="28"
-                :height="28"
-              />
-              <v-icon v-else :icon="element.icon" :width="28" :height="28" />
-            </v-sheet>
-          </template>
-
-          <template #append>
-            <v-badge
-              v-if="sidebar.notify[element.url]"
-              :content="sidebar.notify[element.url].value"
-              color="red"
-              inline
-            />
-          </template>
-        </v-list-item>
+          :data="element"
+          :index="index"
+        />
       </v-list>
 
       <template #append>
@@ -186,15 +151,13 @@ watch(
     <v-app-bar class="border-b">
       <v-app-bar-nav-icon @click="sidebar.open = !sidebar.open" />
       <v-app-bar-title>
-        <span class="mr-2">{{ app.name }}</span>
-
         <client-only>
-          <v-chip v-if="app.inDev" color="warning" class="hidden-sm-and-down">
-            {{ $t('Development') }}
-          </v-chip>
-          <v-chip v-if="app.indBeta" color="info" class="hidden-sm-and-down">
-            {{ $t('Beta') }}
-          </v-chip>
+          <span v-if="app.title">
+            {{ app.title }}
+          </span>
+          <span v-else>
+            {{ app.name }}
+          </span>
         </client-only>
       </v-app-bar-title>
 

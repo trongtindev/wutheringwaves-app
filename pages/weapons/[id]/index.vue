@@ -51,15 +51,14 @@ const description = i18n.t('meta.weapons.id.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/weapons/icons/${item.slug}.webp`;
 
+useApp().title = i18n.t('weapons.title');
 useHead({ title });
-
 useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
   ogImage
 });
-
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
@@ -95,7 +94,7 @@ useJsonld({
     <v-alert
       v-if="item.upcoming"
       color="warning"
-      class="mb-4"
+      class="mb-2"
       :title="$t('common.upcomingContent')"
       :text="$t('common.upcomingContentMessage')"
     />
@@ -107,7 +106,9 @@ useJsonld({
         </template>
 
         <template #actions>
-          <contribute-button path="/tree/main/resources" />
+          <edit-this-page
+            :path="`/tree/main/resources/weapons/${item.slug}.json`"
+          />
         </template>
       </card-title>
 
@@ -149,12 +150,13 @@ useJsonld({
                 </v-row>
               </v-sheet>
 
-              <v-sheet v-if="data.stats.atkRate" class="border rounded mt-2 pa-2">
+              <v-sheet
+                v-if="data.stats.atkRate"
+                class="border rounded mt-2 pa-2"
+              >
                 <v-row>
                   <v-col cols="6"> ATK </v-col>
-                  <v-col cols="6">
-                    {{ data.stats.atkRate }}%
-                  </v-col>
+                  <v-col cols="6"> {{ data.stats.atkRate }}% </v-col>
                 </v-row>
               </v-sheet>
 
@@ -164,9 +166,7 @@ useJsonld({
               >
                 <v-row>
                   <v-col cols="6"> {{ $t('common.critRate') }} </v-col>
-                  <v-col cols="6">
-                    {{ data.stats.critRate }}%
-                  </v-col>
+                  <v-col cols="6"> {{ data.stats.critRate }}% </v-col>
                 </v-row>
               </v-sheet>
 
@@ -176,9 +176,7 @@ useJsonld({
               >
                 <v-row>
                   <v-col cols="6"> {{ $t('common.critDMG') }} </v-col>
-                  <v-col cols="6">
-                    {{ data.stats.critDMG }}%
-                  </v-col>
+                  <v-col cols="6"> {{ data.stats.critDMG }}% </v-col>
                 </v-row>
               </v-sheet>
 

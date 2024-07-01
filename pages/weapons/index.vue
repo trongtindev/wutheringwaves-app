@@ -51,8 +51,8 @@ const categories = computed(() => {
 const title = i18n.t('meta.weapons.title');
 const description = i18n.t('meta.weapons.description');
 
+useApp().title = i18n.t('weapons.title');
 useHead({ title });
-
 useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>
 
@@ -68,19 +68,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       ]"
     />
 
-    <alert id="weapons" :text="$t('weapons.alert')" />
+    <!-- alert -->
+    <!-- <alert id="weapons" :text="$t('weapons.alert')" /> -->
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ i18n.t('weapons.title') }} ({{ items.length }})
-        </template>
-
-        <template #actions>
-          <contribute-button />
-        </template>
-      </card-title>
-
       <v-card-text>
         <client-only>
           <v-row>

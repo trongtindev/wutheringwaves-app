@@ -207,8 +207,8 @@ onUnmounted(() => {
 const title = i18n.t('meta.timeline.title');
 const description = i18n.t('meta.timeline.description');
 
+useApp().title = i18n.t('timeline.title');
 useHead({ title });
-
 useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>
 
@@ -225,16 +225,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     />
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ $t('timeline.title') }}
-          <client-only> ({{ browserTimeZone }}) </client-only>
-        </template>
-
-        <template #actions>
-          <contribute-button path="/blob/main/resources/events.ts" />
-        </template>
-      </card-title>
       <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
       <v-card-text>
         <client-only>

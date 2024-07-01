@@ -63,8 +63,8 @@ onMounted(() => loadData());
 const title = i18n.t('meta.items.title');
 const description = i18n.t('meta.items.description');
 
+useApp().title = i18n.t('items.title');
 useHead({ title });
-
 useSeoMeta({
   ogTitle: title,
   description,
@@ -85,16 +85,6 @@ useSeoMeta({
     />
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ $t('items.title') }} ({{ matchItems.length }})
-        </template>
-
-        <template #actions>
-          <contribute-button />
-        </template>
-      </card-title>
-
       <v-card-text>
         <v-row>
           <v-col cols="12" md="4">

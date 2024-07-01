@@ -101,6 +101,10 @@ export const useDatabase = defineStore('useDatabase', () => {
                 2: function (oldDoc) {
                   oldDoc.pity = 0;
                   return oldDoc;
+                },
+                3: function (oldDoc) {
+                  oldDoc.win = false;
+                  return oldDoc;
                 }
               }
             },

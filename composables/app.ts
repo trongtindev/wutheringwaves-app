@@ -14,6 +14,7 @@ export const useApp = defineStore('useApp', () => {
 
   // define
   const name = computed(() => APP_NAME);
+  const title = ref();
   const discord = computed(() => APP_DISCORD);
   const version = computed(() => APP_VERSION);
   const githubRepo = computed(() => APP_REPO);
@@ -22,8 +23,8 @@ export const useApp = defineStore('useApp', () => {
   const fluid = ref(false);
 
   // computed
-  const inDev = computed(() => import.meta.dev || APP_VERSION.startsWith('0.'));
-  const indBeta = computed(() => APP_VERSION.endsWith('.beta'));
+  const inDev = computed(() => import.meta.dev);
+  const indBeta = computed(() => APP_VERSION.startsWith('0.'));
   const indProd = computed(() => !import.meta.dev);
 
   // functions
@@ -75,6 +76,7 @@ export const useApp = defineStore('useApp', () => {
   // exports
   return {
     name,
+    title,
     version,
     discord,
     githubRepo,

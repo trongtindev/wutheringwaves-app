@@ -10,6 +10,7 @@ const account = useAccount();
 const database = useDatabase();
 const { isIos, isAndroid } = useDevice();
 const sidebar = useSidebar();
+const resources = useResources();
 
 // states
 const state = ref<'' | 'import'>('');
@@ -55,10 +56,13 @@ const onImport = async (url: string) => {
     const items = await db.convenes.find().exec();
     await db.convenes.bulkRemove(items.map((e) => e._id));
 
-    // pity calculator
+    // data calculator
+    const banners = await resources.getBanners();
     const conveneWrites = response.data.items.map((e, i) => {
       let pity = 1;
+      let win = false;
 
+      // calc pity
       if (response.data.items[i].qualityLevel >= 4) {
         for (let j = i + 1; j < response.data.items.length; j += 1) {
           if (
@@ -79,6 +83,28 @@ const onImport = async (url: string) => {
         }
       }
 
+      // calc win
+      if (response.data.items[i].qualityLevel >= 5) {
+        const conveneTime = dayjs(response.data.items[i].time);
+        const matchBanners = banners
+          .filter((e) => {
+            return e.type === response.data.items[i].cardPoolType && e.time;
+          })
+          .filter((banner) => {
+            const timeStart = dayjs(banner.time!.start);
+            const timeEnd = dayjs(banner.time!.end);
+            return timeStart < conveneTime && timeEnd > conveneTime;
+          });
+
+        if (matchBanners.length) {
+          win =
+            matchBanners.findIndex((e) => {
+              return e.featuredRare === response.data.items[i].name;
+            }) >= 0;
+        }
+        console.debug(response.data.items[i].name, win);
+      }
+
       return {
         _id: randomId(),
         playerId: playerId,
@@ -88,54 +114,10 @@ const onImport = async (url: string) => {
         name: e.name,
         time: e.time,
         pity,
+        win,
         createdAt: new Date(e.time).getTime() - i
       };
     });
-
-    // for (let i = 0; i < response.data.items.length; i += 1) {
-    //   if (response.data.items[i].qualityLevel >= 4) {
-
-    //     let pity = 1;
-    //     for (let j = i + 1; j < response.data.items.length; j += 1) {
-    //       if (
-    //         response.data.items[j].cardPoolType !==
-    //         response.data.items[i].cardPoolType
-    //       ) {
-    //         continue;
-    //       }
-
-    //       if (
-    //         response.data.items[j].qualityLevel >=
-    //         response.data.items[i].qualityLevel
-    //       ) {
-    //         break;
-    //       } else {
-    //         pity += 1;
-    //       }
-    //     }
-
-    //     console.log(response.data.items[i].name, pity);
-    //   }
-    // }
-
-    //  insert convene history
-    // const conveneWrites = response.data.items.map((e, i) => {
-    //   return {
-    //     _id: randomId(),
-    //     playerId: playerId,
-    //     cardPoolType: e.cardPoolType,
-    //     qualityLevel: e.qualityLevel,
-    //     resourceType: e.resourceType as any,
-    //     name: e.name,
-    //     time: e.time,
-    //     createdAt: new Date(e.time).getTime() - i
-    //   };
-    // });
-    // console.log(
-    //   conveneWrites
-    //     .filter((e) => e.cardPoolType === 4)
-    //     .map((e) => `${e.name} ${e.createdAt}`)
-    // );
     await db.convenes.bulkInsert(conveneWrites);
 
     // update character list
@@ -220,8 +202,8 @@ onMounted(() => {
 const title = i18n.t('convene.import.title');
 const description = i18n.t('meta.convene.history.description');
 
+useApp().title = i18n.t('convene.import.title');
 useHead({ title });
-
 useSeoMeta({
   ogTitle: title,
   description,
@@ -245,28 +227,21 @@ useSeoMeta({
       ]"
     />
 
-    <v-alert type="info" class="mb-4" :text="$t('convene.import.info')" />
+    <!-- alert -->
+    <alert
+      id="convene.import.alert"
+      class="mb-2"
+      :text="$t('convene.import.alert')"
+    />
 
     <v-card>
-      <v-card-title>
-        <v-row>
-          <v-col class="d-flex align-center">
-            {{ $t('convene.import.title') }}
-          </v-col>
-
-          <v-col class="d-flex align-center justify-end">
-            <back-button class="ml-2" to="/convene-history" />
-          </v-col>
-        </v-row>
-      </v-card-title>
-      <v-divider />
-
       <client-only>
         <v-tabs v-model="method">
           <v-tab value="pc">{{ $t('PC') }}</v-tab>
           <v-tab value="android">{{ $t('Android') }}</v-tab>
           <v-tab value="ios">{{ $t('iOS') }}</v-tab>
         </v-tabs>
+        <v-divider />
 
         <convene-history-import-method-pc
           v-if="method == 'pc'"
@@ -286,7 +261,7 @@ useSeoMeta({
       </client-only>
     </v-card>
 
-    <v-sheet class="mt-4">
+    <v-sheet class="mt-2">
       <v-expansion-panels>
         <v-expansion-panel v-for="index in 3" :key="index">
           <v-expansion-panel-title>

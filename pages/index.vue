@@ -12,6 +12,7 @@ const faqs = ref<number[]>([0, 1, 2, 3, 4]);
 // seo meta
 const title = 'wutheringwaves.app';
 
+useApp().title = i18n.t('common.home');
 useHead({ title });
 useSeoMeta({
   title: title,
@@ -40,10 +41,10 @@ useSeoMeta({
 
       <div class="text-center mt-4">
         <div>
-          <h1>{{ i18n.t('meta.title') }}</h1>
+          <h1 class="text-h4">{{ i18n.t('meta.title') }}</h1>
         </div>
         <div class="mt-2">
-          <h3>{{ i18n.t('meta.description') }}</h3>
+          <h3 class="text-h6">{{ i18n.t('meta.description') }}</h3>
         </div>
       </div>
     </v-card>
@@ -58,7 +59,7 @@ useSeoMeta({
           </v-card-title>
           <v-divider />
 
-          <v-card-text>...</v-card-text>
+          <timeline-recently />
           <v-divider />
 
           <v-card-actions class="d-flex justify-end">
@@ -80,7 +81,7 @@ useSeoMeta({
           </v-card-title>
           <v-divider />
 
-          <v-card-text>...</v-card-text>
+          <convene-history-recently-widget />
           <v-divider />
 
           <v-card-actions class="d-flex justify-end">
@@ -102,7 +103,7 @@ useSeoMeta({
           </v-card-title>
           <v-divider />
 
-          <v-card-text>...</v-card-text>
+          <convene-history-global-widget />
           <v-divider />
 
           <v-card-actions class="d-flex justify-end">
@@ -169,7 +170,7 @@ useSeoMeta({
     <div class="mt-2">
       <v-expansion-panels>
         <v-expansion-panel v-for="index in faqs" :key="index">
-          <v-expansion-panel-title class="font-weight-bold">
+          <v-expansion-panel-title>
             {{ $t(`faqs.${index}.title`) }}
           </v-expansion-panel-title>
 

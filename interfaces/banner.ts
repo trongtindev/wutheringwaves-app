@@ -14,6 +14,7 @@ export interface IBanner {
     en: string;
     [key: string]: string;
   };
+  thumbnail?: string;
   time?: {
     start: string;
     end: string;

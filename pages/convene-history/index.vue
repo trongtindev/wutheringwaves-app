@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import type { ConveneDocument } from '@/collections/convene';
 import { CardPoolType, type IBanner } from '@/interfaces/banner';
-import { mdiImport, mdiChevronRight, mdiGrid, mdiViewList } from '@mdi/js';
+import {
+  mdiImport,
+  mdiChevronRight,
+  mdiGrid,
+  mdiViewList
+  // mdiDownload
+} from '@mdi/js';
+import urlSlug from 'url-slug';
 
 // uses
 const i18n = useI18n();
@@ -14,9 +21,10 @@ const account = useAccount();
 const banners = await resources.banners();
 const convenes = ref<ConveneDocument[]>([]);
 const filterBanner = ref<IBanner | null>(null);
-const filterRarity = ref<number[]>([5, 4, 3]);
+const filterRarity = ref<number[]>([5, 4]);
 const displayType = ref<'list' | 'grid'>('list');
 const displayConvenes = ref<ConveneDocument[]>([]);
+const showExportImage = ref(false);
 
 // computed
 const totalPulls = computed(() => {
@@ -92,6 +100,7 @@ onMounted(() => initialize());
 const title = i18n.t('convene.history.title');
 const description = i18n.t('meta.convene.history.description');
 
+useApp().title = i18n.t('convene.history.title');
 useHead({
   title: title,
   meta: [{}]
@@ -111,30 +120,31 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       ]"
     />
 
+    <!-- alert -->
+    <alert
+      id="convene.history.alert"
+      color="warning"
+      :text="$t('convene.history.alert')"
+    />
+
+    <!-- page -->
+    <page-header>
+      <template #actions>
+        <v-btn-toggle v-model="displayType" color="primary" variant="outlined">
+          <v-btn :icon="mdiViewList" value="list" />
+          <v-btn :icon="mdiGrid" value="grid" />
+        </v-btn-toggle>
+
+        <v-btn
+          :text="$t('common.import')"
+          :append-icon="mdiImport"
+          :to="localePath('/convene-history/import')"
+        />
+      </template>
+    </page-header>
+    <!-- actions -->
+
     <v-card>
-      <card-title>
-        <template #title>
-          {{ $t('convene.history.title') }} ({{ totalPulls }})
-        </template>
-
-        <template #actions>
-          <v-btn-toggle
-            v-model="displayType"
-            color="primary"
-            variant="outlined"
-          >
-            <v-btn :icon="mdiViewList" value="list" />
-            <v-btn :icon="mdiGrid" value="grid" />
-          </v-btn-toggle>
-
-          <v-btn
-            :text="$t('common.import')"
-            :append-icon="mdiImport"
-            :to="localePath('/convene-history/import')"
-          />
-        </template>
-      </card-title>
-
       <v-card-text>
         <div class="mb-4">
           <v-row>
@@ -170,66 +180,105 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           :text="$t('You currently have no Convene History.')"
         />
 
-        <v-data-table
-          v-else
-          class="border rounded"
-          :items="displayConvenes"
-          :headers="[
-            {
-              title: $t('Time'),
-              align: 'center',
-              key: 'time',
-              width: '20%'
-            },
-            { title: $t('Pity'), align: 'center', width: '10%' },
-            { title: $t('Name'), align: 'center', width: '30%' },
-            {
-              title: $t('Type'),
-              key: 'resourceType',
-              align: 'center',
-              width: '20%'
-            },
-            {
-              title: $t('Rarity'),
-              key: 'rarity',
-              align: 'center',
-              width: '20%'
-            }
-          ]"
-          item-value="key"
-        >
-          <template #item="{ item }">
-            <tr :class="`bg-linear-rarity${item.qualityLevel}`">
-              <td class="text-center">
-                {{ item.time }}
-              </td>
-              <td class="text-center">
-                <span
-                  v-if="item.qualityLevel >= 4"
-                  :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
-                >
-                  {{ item.pity }}
-                </span>
-                <span v-else>
-                  {{ item.pity }}
-                </span>
-              </td>
-              <td class="text-center">
-                <span :class="`text-rarity${item.qualityLevel}`">
-                  {{ $t(item.name) }}
-                </span>
-              </td>
-              <td class="text-center">
-                [{{ item.cardPoolType }}]
-                {{ $t(item.resourceType) }}
-              </td>
-              <td class="text-center">
-                {{ item.qualityLevel }}
-              </td>
-            </tr>
-          </template>
-        </v-data-table>
+        <div v-else-if="displayType === 'list'" ref="exportElement">
+          <v-data-table
+            class="border rounded"
+            :items="displayConvenes"
+            :headers="[
+              {
+                title: $t('Time'),
+                width: '20%'
+              },
+              { title: $t('Pity'), width: '10%' },
+              { title: $t('Name'), width: '30%' },
+              {
+                title: $t('Type'),
+                key: 'resourceType'
+              },
+              {
+                title: $t('Rarity'),
+                key: 'rarity'
+              }
+            ]"
+            item-value="key"
+          >
+            <template #item="{ item }">
+              <tr :class="`bg-linear-rarity${item.qualityLevel}`">
+                <td>
+                  {{ item.time }}
+                </td>
+
+                <td>
+                  <span
+                    v-if="item.qualityLevel >= 4"
+                    :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
+                  >
+                    {{ item.pity }}
+                  </span>
+                  <span v-else>
+                    {{ item.pity }}
+                  </span>
+                </td>
+
+                <td class="d-flex align-center">
+                  <v-avatar
+                    class="border mr-2"
+                    :class="`bg-rarity${item.qualityLevel}`"
+                  >
+                    <v-img
+                      :src="`/${item.resourceType === 'Resonators' ? 'characters' : 'weapons'}/icons/${urlSlug(item.name)}.webp`"
+                    />
+                  </v-avatar>
+                  <span :class="`text-rarity${item.qualityLevel}`">
+                    {{ $t(item.name) }}
+                  </span>
+                </td>
+
+                <td>
+                  [{{ item.cardPoolType }}]
+                  {{ $t(item.resourceType) }}
+                </td>
+
+                <td>
+                  {{ item.qualityLevel }}
+                </td>
+              </tr>
+            </template>
+          </v-data-table>
+        </div>
+
+        <!-- grid -->
+        <div v-else ref="gridElement" class="d-flex flex-wrap justify-center">
+          <div
+            v-for="(element, index) in displayConvenes"
+            :key="index"
+            class="pa-2 d-flex position-relative"
+          >
+            <v-badge
+              :color="`hsl(${100 - (element.pity / (element.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%)`"
+              :content="element.pity"
+              location="bottom right"
+            >
+              <v-avatar
+                class="border"
+                :class="`bg-rarity${element.qualityLevel}`"
+                :size="64"
+                :image="`/${element.resourceType === 'Resonators' ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
+              />
+            </v-badge>
+          </div>
+        </div>
       </v-card-text>
+
+      <!-- <v-divider />
+      <v-card-actions>
+        <v-spacer />
+        <v-btn
+          :text="$t('common.exportAsImage')"
+          :prepend-icon="mdiDownload"
+          @click="() => (showExportImage = true)"
+        />
+      </v-card-actions> -->
     </v-card>
 
     <div class="mt-2">
@@ -403,25 +452,14 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         </v-col>
       </v-row>
     </div>
+
+    <!-- <v-dialog
+      v-model="showExportImage"
+      :width="720"
+      :scrollable="true"
+      :persistent="true"
+    >
+      <convene-history-export-image :items="displayConvenes" />
+    </v-dialog> -->
   </div>
 </template>
-
-<style>
-.bg-linear-rarity5 {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(185, 129, 46, 0.55) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
-.bg-linear-rarity4 {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(173, 118, 176, 0.55) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-</style>

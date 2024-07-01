@@ -55,15 +55,14 @@ const description = i18n.t('meta.characters.id.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
 
+useApp().title = i18n.t('characters.title');
 useHead({ title });
-
 useSeoMeta({
   ogTitle: title,
   ogImage: ogImage,
   description,
   ogDescription: description
 });
-
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
@@ -105,7 +104,7 @@ useJsonld(() => ({
         </template>
 
         <template #actions>
-          <contribute-button
+          <edit-this-page
             :path="`/tree/main/resources/characters/${item.slug}.json`"
           />
         </template>

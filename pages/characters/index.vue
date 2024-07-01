@@ -65,10 +65,10 @@ onMounted(() => loadOwned());
 const title = i18n.t('characters.title');
 const description = i18n.t('meta.characters.description');
 
+useApp().title = i18n.t('characters.title');
 useHead({
   title
 });
-
 useSeoMeta({
   ogTitle: title,
   description,
@@ -91,16 +91,6 @@ useSeoMeta({
     <alert id="characters" :text="$t('characters.alert')" />
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ i18n.t('characters.title') }} ({{ items.length }})
-        </template>
-
-        <template #actions>
-          <contribute-button />
-        </template>
-      </card-title>
-
       <v-card-text>
         <client-only>
           <v-row>

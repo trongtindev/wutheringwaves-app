@@ -69,19 +69,19 @@ a {
 }
 
 .text-legendary {
-  color: rgb(255 177 63);
+  color: rgb(255 177 63) !important;
 }
 
 .text-rare {
-  color: rgb(210 143 214);
+  color: rgb(210 143 214) !important;
 }
 
 .text-rarity5 {
-  color: var(--color-rarity5);
+  color: var(--color-rarity5) !important;
 }
 
 .text-rarity4 {
-  color: var(--color-rarity4);
+  color: var(--color-rarity4) !important;
 }
 
 .border-rarity5 {
@@ -120,4 +120,22 @@ a {
 
 .op-90 {
   opacity: 0.9;
+}
+
+.bg-linear-rarity5 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(185, 129, 46, 0.55) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.bg-linear-rarity4 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(173, 118, 176, 0.55) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }

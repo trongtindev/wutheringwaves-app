@@ -19,15 +19,14 @@ const title = `${i18n.t('common.trophy')}: ${nameLocalized.value}`;
 const description = i18n.t(item.description);
 const ogImage = `${runtimeConfig.public.SITE_URL}/trophies/icons/${item.slug}.webp`;
 
+useApp().title = i18n.t('trophies.title');
 useHead({ title });
-
 useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
   ogImage
 });
-
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
@@ -66,7 +65,9 @@ useJsonld({
         </template>
 
         <template #actions>
-          <contribute-button />
+          <edit-this-page
+            :path="`/tree/main/resources/trophies/${item.slug}.json`"
+          />
         </template>
       </card-title>
 

@@ -67,8 +67,8 @@ onMounted(() => initialize());
 const title = i18n.t('meta.echos.title');
 const description = i18n.t('meta.echos.description');
 
+useApp().title = i18n.t('echos.title');
 useHead({ title });
-
 useSeoMeta({
   title,
   ogTitle: title,
@@ -90,16 +90,6 @@ useSeoMeta({
     />
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ i18n.t('echos.title') }} ({{ items.length }})
-        </template>
-
-        <template #actions>
-          <contribute-button />
-        </template>
-      </card-title>
-
       <v-card-text>
         <v-row>
           <v-col cols="12" sm="4">

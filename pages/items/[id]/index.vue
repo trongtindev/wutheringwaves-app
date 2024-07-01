@@ -55,15 +55,14 @@ const obtainDescriptionLocalized = computed(() => {
 // seo meta
 const ogImage = `${runtimeConfig.public.SITE_URL}/items/icons/${item.slug}.webp`;
 
+useApp().title = i18n.t('items.title');
 useHead({ title: title.value });
-
 useSeoMeta({
   ogTitle: title.value,
   description,
   ogDescription: description,
   ogImage
 });
-
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
@@ -102,7 +101,9 @@ useJsonld({
         </template>
 
         <template #actions>
-          <contribute-button />
+          <edit-this-page
+            :path="`/tree/main/resources/items/${item.slug}.json`"
+          />
         </template>
       </card-title>
 

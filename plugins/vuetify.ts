@@ -1,7 +1,7 @@
 import { createVuetify } from 'vuetify';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import { en, vi } from 'vuetify/locale';
-import { md3 } from 'vuetify/blueprints';
+import { md2 } from 'vuetify/blueprints';
 import 'vuetify/styles';
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -21,7 +21,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       global: {
         density: 'comfortable',
         elevation: 0,
-        hideDetails: true
+        hideDetails: true,
+        ripple: false
       },
       VBtn: {
         density: 'default',
@@ -64,6 +65,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       VProgressCircular: {
         color: 'primary'
       },
+      VExpansionPanel: {
+        class: 'border rounded'
+      },
       VExpansionPanels: {
         variant: 'accordion'
       },
@@ -73,6 +77,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       VSwitch: {},
       VPagination: {
         totalVisible: 4
+      },
+      VContainer: {
+        class: 'pa-2'
+      },
+      VListSubheader: {
+        class: 'font-italic font-weight-bold'
       }
     },
     theme: {
@@ -81,24 +91,28 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark: {
           dark: true,
           colors: {
-            // primary: '#0045AC',
-            // 'on-primary': '#041e49',
-            // secondary: '#F2F4F5',
-            // 'on-secondary': '#F2F4F5',
-            // background: '#0d2136',
-            // 'on-background': '#B8C5C9'
-            // surface: '#071a2b',
-            // 'on-surface': '#F2F4F5',
-            // warning: '#B78800',
-            // 'on-warning': '#B78800'
-            // success: '#00796b',
-            // 'on-success': '#01A816',
-            // error: '#e46962'
+            // primary: '#1e88e5',
+            // 'on-primary': '#ffffff',
+            // secondary: '#03dac6',
+            // 'on-secondary': '#000000',
+            // background: '#121212',
+            // 'on-background': '#ffffff',
+            // surface: '#1e1e1e',
+            // 'on-surface': '#ffffff',
+            // warning: '#ff9800',
+            // 'on-warning': '#000000',
+            // success: '#4caf50',
+            // 'on-success': '#ffffff',
+            // error: '#f44336',
+            // 'on-error': '#ffffff'
           }
+        },
+        light: {
+          dark: false
         }
       }
     },
-    blueprint: md3
+    blueprint: md2
   });
 
   nuxtApp.vueApp.use(vuetify);

@@ -9,6 +9,7 @@ export type ConveneDocType = {
   name: string;
   time: string;
   pity: number;
+  win: boolean;
   createdAt: number;
 };
 
@@ -42,7 +43,7 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
 };
 
 export const conveneSchema: RxJsonSchema<ConveneDocType> = {
-  version: 2,
+  version: 3,
   keyCompression: false,
   primaryKey: '_id',
   type: 'object',
@@ -71,6 +72,9 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     },
     pity: {
       type: 'number'
+    },
+    win: {
+      type: 'boolean'
     },
     createdAt: {
       type: 'number'

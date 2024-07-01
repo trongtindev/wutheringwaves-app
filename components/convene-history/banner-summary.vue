@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type ConveneDocument } from '@/collections/convene';
-import type { CardPoolType } from '@/interfaces/banner';
+import { CardPoolType } from '@/interfaces/banner';
 
 // uses
 const i18n = useI18n();
@@ -34,6 +34,20 @@ const guaranteedAt5List = computed(() => {
   return convenes.value.filter((e) => e.qualityLevel >= 5);
 });
 
+const skipLuckWinRateOff = computed(() => {
+  return [
+    CardPoolType['standard-resonator'],
+    CardPoolType['standard-weapon']
+  ].includes(props.type);
+});
+
+const luckWinRateOff = computed(() => {
+  const total = guaranteedAt5List.value.length;
+  if (total == 0) return '~';
+  const wins = guaranteedAt5List.value.filter((e) => e.win).length;
+  return formatNumber((wins / total) * 100);
+});
+
 // functions
 const initialize = async () => {
   const db = await database.getInstance();
@@ -49,7 +63,7 @@ const initialize = async () => {
     })
     .exec()
     .then((result) => {
-      // TODO: fixme
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       convenes.value = result as any;
       guaranteedAt.value = 80;
     })
@@ -77,6 +91,7 @@ if (import.meta.client) {
 
     <v-card-text>
       <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2">
+        <!-- lifetime pull -->
         <v-list-item>
           <v-list-item-title>
             {{ $t('convene.lifetimePulls') }}
@@ -104,6 +119,29 @@ if (import.meta.client) {
         </v-list-item>
       </v-sheet>
 
+      <!-- luckWinRateOff -->
+      <v-sheet
+        v-if="!skipLuckWinRateOff"
+        class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2"
+      >
+        <v-list-item>
+          <v-list-item-title>
+            {{ $t('convene.rank.luckWinRateOff') }}
+          </v-list-item-title>
+
+          <v-list-item-subtitle>
+            {{ $t('convene.rank.luckWinRateOffSubtitle') }}
+          </v-list-item-subtitle>
+
+          <template #append>
+            <span class="text-h6 text-legendary font-weight-bold">
+              {{ luckWinRateOff }}%
+            </span>
+          </template>
+        </v-list-item>
+      </v-sheet>
+
+      <!-- 5 star pity -->
       <v-sheet class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2">
         <v-list-item>
           <v-list-item-title>
@@ -124,6 +162,7 @@ if (import.meta.client) {
         </v-list-item>
       </v-sheet>
 
+      <!-- 4 star pity -->
       <v-sheet class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2">
         <v-list-item>
           <v-list-item-title>

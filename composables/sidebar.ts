@@ -10,13 +10,17 @@ import {
   mdiWalletGiftcard,
   mdiMap,
   mdiCalendar,
-  mdiGrid
+  mdiGrid,
+  mdiCompareHorizontal,
+  mdiBagPersonal
 } from '@mdi/js';
 
 export interface IMenu {
-  url: string;
+  url?: string;
   icon: string;
   title: string;
+  items?: IMenu[];
+  upcoming?: boolean;
 }
 
 export const useSidebar = defineStore('useSidebar', () => {
@@ -58,54 +62,71 @@ export const useSidebar = defineStore('useSidebar', () => {
       title: 'sidebar.characters'
     },
     {
-      url: '/teams',
-      icon: mdiAccountGroup,
-      title: 'sidebar.teams'
-    },
-    {
-      url: '/leaderboards',
-      icon: mdiChartTimeline,
-      title: 'sidebar.leaderboards'
-    },
-    {
-      url: '/tier-list',
-      icon: mdiChartBarStacked,
-      title: 'sidebar.tierList'
-    },
-    {
-      url: '/todo-list',
-      icon: mdiListStatus,
-      title: 'sidebar.todoList'
-    },
-    {
-      url: '/weapons',
-      icon: '/icons/weapon.png',
-      title: 'sidebar.weapons'
-    },
-    {
-      url: '/echos',
-      icon: '/icons/echo.png',
-      title: 'sidebar.echos'
-    },
-    {
       url: '/codes',
       icon: mdiWalletGiftcard,
       title: 'sidebar.codes'
     },
     {
+      url: '/teams',
+      icon: mdiAccountGroup,
+      title: 'sidebar.teams',
+      upcoming: true
+    },
+    {
+      url: '/leaderboards',
+      icon: mdiChartTimeline,
+      title: 'sidebar.leaderboards',
+      upcoming: true
+    },
+    {
+      url: '/tier-list',
+      icon: mdiChartBarStacked,
+      title: 'sidebar.tierList',
+      upcoming: true
+    },
+    {
+      url: '/todo-list',
+      icon: mdiListStatus,
+      title: 'sidebar.todoList',
+      upcoming: true
+    },
+    {
       url: '/guides',
       icon: mdiMap,
-      title: 'sidebar.guides'
+      title: 'sidebar.guides',
+      upcoming: true
     },
     {
-      url: '/trophies',
-      icon: mdiTrophy,
-      title: 'sidebar.trophies'
+      url: '/comparison',
+      icon: mdiCompareHorizontal,
+      title: 'sidebar.comparison',
+      upcoming: true
     },
     {
-      url: '/items',
-      icon: mdiGrid,
-      title: 'sidebar.items'
+      icon: mdiBagPersonal,
+      title: 'sidebar.database',
+      items: [
+        {
+          url: '/items',
+          icon: mdiGrid,
+          title: 'sidebar.items'
+        },
+        {
+          url: '/trophies',
+          icon: mdiTrophy,
+          title: 'sidebar.trophies'
+        },
+        {
+          url: '/echos',
+          icon: '/icons/echo.png',
+          title: 'sidebar.echos'
+        },
+        {
+          url: '/weapons',
+          icon: '/icons/weapon.png',
+          title: 'sidebar.weapons'
+        }
+      ]
     }
   ]);
 

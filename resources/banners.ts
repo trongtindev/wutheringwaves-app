@@ -94,7 +94,8 @@ const items: IBanner[] = [
       end: '2024-07-22 09:59'
     },
     featuredRare: 'Jinhsi',
-    featured: ['Sanhua', 'Danjin', 'Yangyang']
+    featured: ['Sanhua', 'Danjin', 'Yangyang'],
+    thumbnail: '/events/covers/thawborn-renewal.webp'
   },
   {
     type: CardPoolType['featured-weapon'],
@@ -106,7 +107,8 @@ const items: IBanner[] = [
       en: 'Absolute Pulsation - Jinhsi - Ages of Harvest'
     },
     featuredRare: 'Ages of Harvest',
-    featured: ['Discord', 'Commando of Conviction', 'Amity Accord']
+    featured: ['Discord', 'Commando of Conviction', 'Amity Accord'],
+    thumbnail: '/events/covers/ages-of-harvest.webp'
   }
 ];
 export default items;
