@@ -31,29 +31,7 @@ const guaranteedAt5 = computed<number>(() => {
 
 const guaranteedAt5List = computed(() => {
   if (!convenes.value) return [];
-
-  const items: {
-    name: string;
-    pity: number;
-    // TODO: check win-rate
-    win?: boolean;
-  }[] = [];
-
-  for (let i = 0; i < convenes.value.length; i += 1) {
-    if (convenes.value[i].qualityLevel < 5) {
-      if (items.length > 0) {
-        items[items.length - 1].pity += 1;
-      }
-      continue;
-    }
-
-    items.push({
-      name: convenes.value[i].name,
-      pity: 1
-    });
-  }
-
-  return items;
+  return convenes.value.filter((e) => e.qualityLevel >= 5);
 });
 
 // functions
@@ -165,12 +143,12 @@ if (import.meta.client) {
       </v-sheet>
     </v-card-text>
 
+    <!-- :color="element.win ? 'success' : undefined" -->
     <v-divider v-if="guaranteedAt5List.length > 0" />
     <v-card-text v-if="guaranteedAt5List.length > 0">
       <v-chip
         v-for="(element, index) in guaranteedAt5List"
         :key="index"
-        :color="element.win ? 'success' : undefined"
         :class="index > 0 ? `ml-2` : ``"
       >
         <span>{{ $t(element.name) }}</span>

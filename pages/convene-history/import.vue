@@ -37,7 +37,6 @@ const onImport = async (url: string) => {
       url,
       userAgent: navigator.userAgent
     });
-    console.log(response.data);
 
     // initial account
     const playerId = response.data.playerId.toString();
@@ -56,8 +55,30 @@ const onImport = async (url: string) => {
     const items = await db.convenes.find().exec();
     await db.convenes.bulkRemove(items.map((e) => e._id));
 
-    //  insert convene history
+    // pity calculator
     const conveneWrites = response.data.items.map((e, i) => {
+      let pity = 1;
+
+      if (response.data.items[i].qualityLevel >= 4) {
+        for (let j = i + 1; j < response.data.items.length; j += 1) {
+          if (
+            response.data.items[j].cardPoolType !==
+            response.data.items[i].cardPoolType
+          ) {
+            continue;
+          }
+
+          if (
+            response.data.items[j].qualityLevel >=
+            response.data.items[i].qualityLevel
+          ) {
+            break;
+          } else {
+            pity += 1;
+          }
+        }
+      }
+
       return {
         _id: randomId(),
         playerId: playerId,
@@ -66,9 +87,55 @@ const onImport = async (url: string) => {
         resourceType: e.resourceType as any,
         name: e.name,
         time: e.time,
-        createdAt: new Date(e.time).getTime() + i
+        pity,
+        createdAt: new Date(e.time).getTime() - i
       };
     });
+
+    // for (let i = 0; i < response.data.items.length; i += 1) {
+    //   if (response.data.items[i].qualityLevel >= 4) {
+
+    //     let pity = 1;
+    //     for (let j = i + 1; j < response.data.items.length; j += 1) {
+    //       if (
+    //         response.data.items[j].cardPoolType !==
+    //         response.data.items[i].cardPoolType
+    //       ) {
+    //         continue;
+    //       }
+
+    //       if (
+    //         response.data.items[j].qualityLevel >=
+    //         response.data.items[i].qualityLevel
+    //       ) {
+    //         break;
+    //       } else {
+    //         pity += 1;
+    //       }
+    //     }
+
+    //     console.log(response.data.items[i].name, pity);
+    //   }
+    // }
+
+    //  insert convene history
+    // const conveneWrites = response.data.items.map((e, i) => {
+    //   return {
+    //     _id: randomId(),
+    //     playerId: playerId,
+    //     cardPoolType: e.cardPoolType,
+    //     qualityLevel: e.qualityLevel,
+    //     resourceType: e.resourceType as any,
+    //     name: e.name,
+    //     time: e.time,
+    //     createdAt: new Date(e.time).getTime() - i
+    //   };
+    // });
+    // console.log(
+    //   conveneWrites
+    //     .filter((e) => e.cardPoolType === 4)
+    //     .map((e) => `${e.name} ${e.createdAt}`)
+    // );
     await db.convenes.bulkInsert(conveneWrites);
 
     // update character list

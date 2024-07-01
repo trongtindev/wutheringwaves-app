@@ -16,7 +16,7 @@ const convenes = ref<ConveneDocument[]>([]);
 const filterBanner = ref<IBanner | null>(null);
 const filterRarity = ref<number[]>([5, 4, 3]);
 const displayType = ref<'list' | 'grid'>('list');
-const displayConvenes = ref<{ pity: number; doc: ConveneDocument }[]>([]);
+const displayConvenes = ref<ConveneDocument[]>([]);
 
 // computed
 const totalPulls = computed(() => {
@@ -74,47 +74,7 @@ const updateFilter = () => {
         }
       }
       return true;
-    })
-    .map((e) => {
-      return {
-        pity: 0,
-        doc: e
-      };
     });
-
-  // console.log(displayConvenes.value);
-  // let pity = 0;
-  // let current = -1;
-  // for (let i = 0; i < convenes.value.length; i += 1) {
-  //   const isEnd = i >= convenes.value.length - 1;
-  //   if (convenes.value[i].qualityLevel >= 4 || isEnd) {
-  //     if (
-  //       current >= 0 &&
-  //       (convenes.value[i].qualityLevel >=
-  //         displayConvenes.value[current].doc.qualityLevel ||
-  //         isEnd)
-  //     ) {
-  //       console.log(displayConvenes.value[current].doc.name, pity);
-  //       displayConvenes.value[current].pity = pity;
-
-  //       // reset
-  //       pity = 1;
-  //     }
-
-  //     for (let j = 0; j < displayConvenes.value.length; j += 1) {
-  //       if (
-  //         displayConvenes.value[j].doc.name === convenes.value[i].name &&
-  //         displayConvenes.value[j].doc.time === convenes.value[i].time
-  //       ) {
-  //         current = j;
-  //         console.log(displayConvenes.value[current].doc.name);
-  //         break;
-  //       }
-  //     }
-  //   } else if (current >= 0) {
-  //     pity += 1;
-  //   }
-  // }
 };
 
 // changes
@@ -239,14 +199,14 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           item-value="key"
         >
           <template #item="{ item }">
-            <tr :class="`bg-linear-rarity${item.doc.qualityLevel}`">
+            <tr :class="`bg-linear-rarity${item.qualityLevel}`">
               <td class="text-center">
-                {{ item.doc.time }}
+                {{ item.time }}
               </td>
               <td class="text-center">
                 <span
-                  v-if="item.doc.qualityLevel >= 4"
-                  :style="`color: hsl(${100 - (item.pity / (item.doc.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
+                  v-if="item.qualityLevel >= 4"
+                  :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
                 >
                   {{ item.pity }}
                 </span>
@@ -255,16 +215,16 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                 </span>
               </td>
               <td class="text-center">
-                <span :class="`text-rarity${item.doc.qualityLevel}`">
-                  {{ $t(item.doc.name) }}
+                <span :class="`text-rarity${item.qualityLevel}`">
+                  {{ $t(item.name) }}
                 </span>
               </td>
               <td class="text-center">
-                [{{ item.doc.cardPoolType }}]
-                {{ $t(item.doc.resourceType) }}
+                [{{ item.cardPoolType }}]
+                {{ $t(item.resourceType) }}
               </td>
               <td class="text-center">
-                {{ item.doc.qualityLevel }}
+                {{ item.qualityLevel }}
               </td>
             </tr>
           </template>

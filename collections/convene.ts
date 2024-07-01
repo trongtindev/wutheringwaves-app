@@ -8,6 +8,7 @@ export type ConveneDocType = {
   resourceType: 'Weapons' | 'Resonators';
   name: string;
   time: string;
+  pity: number;
   createdAt: number;
 };
 
@@ -41,7 +42,7 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
 };
 
 export const conveneSchema: RxJsonSchema<ConveneDocType> = {
-  version: 1,
+  version: 2,
   keyCompression: false,
   primaryKey: '_id',
   type: 'object',
@@ -67,6 +68,9 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     },
     time: {
       type: 'string'
+    },
+    pity: {
+      type: 'number'
     },
     createdAt: {
       type: 'number'

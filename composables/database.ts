@@ -97,6 +97,10 @@ export const useDatabase = defineStore('useDatabase', () => {
                   oldDoc.key = undefined;
                   oldDoc.resourceId = undefined;
                   return oldDoc;
+                },
+                2: function (oldDoc) {
+                  oldDoc.pity = 0;
+                  return oldDoc;
                 }
               }
             },
