@@ -1,8 +1,8 @@
-# WutheringWaves.app
+# Astrite.app
 
 In-development site for Wuthering Waves.
 
-![home.png](./.github/screenshots/home.png 'wutheringwaves.app')
+![home.png](./.github/screenshots/home.png 'astrite.app')
 
 <center>A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!</center>
 
@@ -60,7 +60,7 @@ src/locales
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 If you're interested in the API, it's
-here [https://github.com/trongtindev/wuthering-waves-app-api](https://github.com/trongtindev/wuthering-waves-app-api)
+here [https://github.com/trongtindev/astrite-app-api](https://github.com/trongtindev/astrite-app-api)
 
 ### Recommended IDE Setup
 

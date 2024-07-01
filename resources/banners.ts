@@ -4,41 +4,29 @@ const items: IBanner[] = [
   // beginner
   {
     type: CardPoolType.beginner,
-    name: {
-      en: 'Beginner Convene'
-    }
+    name: 'Beginner Convene'
   },
   {
     type: CardPoolType['beginner-choice'],
-    name: {
-      en: "Beginner's Choice Convene"
-    }
+    name: "Beginner's Choice Convene"
   },
   {
     type: CardPoolType['beginner-choice-custom'],
-    name: {
-      en: "Beginner's Choice Convene (Giveback Custom Convene)"
-    }
+    name: "Beginner's Choice Convene (Giveback Custom Convene)"
   },
   // standard-resonator
   {
     type: CardPoolType['standard-resonator'],
-    name: {
-      en: 'Standard Resonator Convene'
-    }
+    name: 'Standard Resonator Convene'
   },
   {
     type: CardPoolType['standard-weapon'],
-    name: {
-      en: 'Standard Weapon Convene'
-    }
+    name: 'Standard Weapon Convene'
   },
   // featured Jiyan
   {
     type: CardPoolType['featured-resonator'],
-    name: {
-      en: 'Prevail the Lasting Night - Jiyan'
-    },
+    name: 'Prevail the Lasting Night - Jiyan',
     time: {
       start: '2024-05-23 10:00',
       end: '2024-06-13 09:59'
@@ -52,18 +40,14 @@ const items: IBanner[] = [
       start: '2024-05-23 10:00',
       end: '2024-06-13 09:59'
     },
-    name: {
-      en: 'Absolute Pulsation - Jiyan - Verdant Summit'
-    },
+    name: 'Absolute Pulsation - Jiyan - Verdant Summit',
     featuredRare: 'Verdant Summit',
     featured: ['Dauntless Evernight', 'Variation', 'Hollow Mirage']
   },
   // featured Yinlin
   {
     type: CardPoolType['featured-resonator'],
-    name: {
-      en: 'When Thunder Pours - Yinlin'
-    },
+    name: 'When Thunder Pours - Yinlin',
     time: {
       start: '2024-06-06 10:00',
       end: '2024-06-26 11:59'
@@ -77,18 +61,14 @@ const items: IBanner[] = [
       start: '2024-06-06 10:00',
       end: '2024-06-26 11:59'
     },
-    name: {
-      en: 'Absolute Pulsation - Yinlin - Stringmaster'
-    },
+    name: 'Absolute Pulsation - Yinlin - Stringmaster',
     featuredRare: 'Stringmaster',
     featured: ['Jinzhou Keeper', 'Cadenza', 'Lunar Cutter']
   },
   // featured Jinhsi
   {
     type: CardPoolType['featured-resonator'],
-    name: {
-      en: 'Thawborn Renewal - Jinhsi'
-    },
+    name: 'Thawborn Renewal - Jinhsi',
     time: {
       start: '2024-06-28 13:00',
       end: '2024-07-22 09:59'
@@ -103,9 +83,7 @@ const items: IBanner[] = [
       start: '2024-06-28 13:00',
       end: '2024-07-22 09:59'
     },
-    name: {
-      en: 'Absolute Pulsation - Jinhsi - Ages of Harvest'
-    },
+    name: 'Absolute Pulsation - Jinhsi - Ages of Harvest',
     featuredRare: 'Ages of Harvest',
     featured: ['Discord', 'Commando of Conviction', 'Amity Accord'],
     thumbnail: '/events/covers/ages-of-harvest.webp'

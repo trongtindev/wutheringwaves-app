@@ -5,7 +5,7 @@ import { setUser } from '@sentry/vue';
 export const useAuth = defineStore('useAuth', () => {
   // uses
   const route = useRoute();
-  const firebase = useFirebase();
+  const nuxtApp = useNuxtApp();
 
   // states
   const user = ref<User>(null as any);
@@ -23,9 +23,13 @@ export const useAuth = defineStore('useAuth', () => {
     } = await import('firebase/auth');
 
     return new Promise((resolve, reject) => {
+      if (!nuxtApp.$firebase.auth) {
+        throw new Error('firebase_not_initialized');
+      }
+
       if (import.meta.dev) {
         // https://github.com/firebase/firebase-js-sdk/issues/7342
-        signInAnonymously(firebase.auth!).then(resolve).catch(reject);
+        signInAnonymously(nuxtApp.$firebase.auth).then(resolve).catch(reject);
         return;
       }
 
@@ -39,11 +43,13 @@ export const useAuth = defineStore('useAuth', () => {
         options.signInWithRedirect
       ) {
         localStorage.setItem('signInWithRedirect', 'true');
-        signInWithRedirect(firebase.auth!, provider)
+        signInWithRedirect(nuxtApp.$firebase.auth, provider)
           .then(resolve)
           .catch(reject);
       } else {
-        signInWithPopup(firebase.auth!, provider).then(resolve).catch(reject);
+        signInWithPopup(nuxtApp.$firebase.auth, provider)
+          .then(resolve)
+          .catch(reject);
       }
     });
   };
@@ -52,12 +58,12 @@ export const useAuth = defineStore('useAuth', () => {
     const { signOut: firebaseSignOut } = await import('firebase/auth');
 
     return new Promise((resolve, reject) => {
-      firebaseSignOut(firebase.auth!).then(resolve).catch(reject);
+      firebaseSignOut(nuxtApp.$firebase.auth!).then(resolve).catch(reject);
     });
   };
 
   const getAccessToken = async () => {
-    return await firebase.auth!.currentUser?.getIdToken();
+    return await nuxtApp.$firebase.auth!.currentUser?.getIdToken();
   };
 
   // computed
@@ -71,12 +77,13 @@ export const useAuth = defineStore('useAuth', () => {
       throw new Error('Cannot initialize auth on server-side!');
     }
 
-    if (!firebase.app || !firebase.auth) {
+    if (!nuxtApp.$firebase.auth) {
+      console.log('reinit');
       setTimeout(() => initialize(), 250);
       return;
     }
 
-    firebase.auth.onAuthStateChanged((e) => {
+    nuxtApp.$firebase.auth.onAuthStateChanged((e) => {
       user.value = e as any;
 
       if (user.value) {
@@ -95,7 +102,7 @@ export const useAuth = defineStore('useAuth', () => {
       state.value = 'sign-in';
       const { getRedirectResult } = await import('firebase/auth');
 
-      getRedirectResult(firebase.auth!)
+      getRedirectResult(nuxtApp.$firebase.auth)
         .then(() => {})
         .catch(console.warn)
         .finally(() => {

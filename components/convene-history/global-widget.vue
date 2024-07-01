@@ -48,7 +48,7 @@ onMounted(initialize);
 
     <div v-else>
       <v-row class="mb-2">
-        <v-col>
+        <v-col cols="6">
           <v-card class="fill-height">
             <v-img v-if="banners[0].thumbnail" :src="banners[0].thumbnail">
               <div class="d-flex align-center justify-center h-100">
@@ -62,7 +62,7 @@ onMounted(initialize);
           </v-card>
         </v-col>
 
-        <v-col>
+        <v-col cols="6">
           <v-card class="fill-height">
             <v-img v-if="banners[1].thumbnail" :src="banners[1].thumbnail">
               <div class="d-flex align-center justify-center h-100">
@@ -77,7 +77,7 @@ onMounted(initialize);
         </v-col>
       </v-row>
 
-      <v-alert color="info" :text="$t('convene.global.message', [0])" />
+      <v-alert color="info" :text="$t('convene.global.alert', [0])" />
     </div>
   </v-card-text>
 </template>

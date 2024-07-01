@@ -1,20 +1,19 @@
-import {
-  init,
-  httpClientIntegration,
-  browserTracingIntegration,
-  browserProfilingIntegration,
-  replayIntegration,
-  vueIntegration,
-  breadcrumbsIntegration,
-  feedbackIntegration,
-  debugIntegration
-} from '@sentry/vue';
-
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(async (nuxtApp) => {
+  const device = useDevice();
   const analytics = useAnalytics();
   const runtimeConfig = useRuntimeConfig();
 
-  if (!analytics.optOut) {
+  if (!device.isCrawler && !analytics.optOut) {
+    const {
+      init,
+      httpClientIntegration,
+      browserTracingIntegration,
+      browserProfilingIntegration,
+      vueIntegration,
+      breadcrumbsIntegration,
+      debugIntegration
+    } = await import('@sentry/vue');
+
     init({
       app: nuxtApp.vueApp,
       dsn: runtimeConfig.public.SENTRY_DNS,
@@ -22,21 +21,17 @@ export default defineNuxtPlugin((nuxtApp) => {
       enabled: !import.meta.dev,
       environment: import.meta.dev ? 'development' : 'production',
       integrations: [
+        vueIntegration({
+          app: nuxtApp.vueApp
+        }),
         // Captures errors on failed requests from Fetch and XHR and attaches request and response information.
         httpClientIntegration(),
         browserTracingIntegration(),
         browserProfilingIntegration(),
-        replayIntegration(),
-        vueIntegration({
-          app: nuxtApp.vueApp
-        }),
         breadcrumbsIntegration(),
-        feedbackIntegration(),
         ...(import.meta.dev ? [debugIntegration()] : [])
       ],
       tracesSampleRate: 1.0,
-      replaysSessionSampleRate: 0.1,
-      replaysOnErrorSampleRate: 1.0,
       ignoreErrors: [
         'Network*',
         'Failed to fetch',

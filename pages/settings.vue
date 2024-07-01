@@ -15,8 +15,6 @@ useHead({
     }
   ]
 });
-
-useSeoMeta({});
 </script>
 
 <template>

@@ -20,6 +20,7 @@ const {
   NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   NUXT_PUBLIC_FIREBASE_API_KEY,
   NUXT_PUBLIC_FIREBASE_PROJECT_ID,
+  NUXT_PUBLIC_FIREBASE_APP_ID,
   // sentry
   NUXT_PUBLIC_SENTRY_DEBUG,
   NUXT_PUBLIC_SENTRY_DNS,
@@ -41,6 +42,7 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/device',
     'nuxt3-leaflet'
+    // '@nuxtjs/web-vitals'
   ],
   build: {
     transpile: ['vuetify']
@@ -67,9 +69,6 @@ export default defineNuxtConfig({
   },
   site: {
     url: NUXT_PUBLIC_SITE_URL
-  },
-  devServer: {
-    port: 8080
   },
   sourcemap: {
     server: true,
@@ -157,6 +156,7 @@ export default defineNuxtConfig({
     //   }
     // }
   },
+  vueuse: { ssrHandlers: true },
   appConfig: {
     buildNumber: Date.now()
   },
@@ -164,8 +164,8 @@ export default defineNuxtConfig({
     public: {
       // app
       SITE_URL: NUXT_PUBLIC_SITE_URL,
-      APP_NAME: 'WutheringWaves.app',
-      APP_REPO: 'https://github.com/trongtindev/wuthering-waves-app',
+      APP_NAME: 'Astrite.app',
+      APP_REPO: 'https://github.com/trongtindev/astrite-app',
       APP_DISCORD: 'https://discord.gg/MxxYyUJEfT',
       APP_VERSION: NUXT_PUBLIC_APP_VERSION,
       // api
@@ -175,6 +175,7 @@ export default defineNuxtConfig({
       FIREBASE_API_KEY: NUXT_PUBLIC_FIREBASE_API_KEY,
       FIREBASE_PROJECT_ID: NUXT_PUBLIC_FIREBASE_PROJECT_ID,
       FIREBASE_AUTH_DOMAIN: NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+      FIREBASE_APP_ID: NUXT_PUBLIC_FIREBASE_APP_ID,
       // sentry
       SENTRY_DNS: NUXT_PUBLIC_SENTRY_DNS,
       SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',

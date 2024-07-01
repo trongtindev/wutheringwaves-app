@@ -36,7 +36,7 @@
       },
       "global": {
         "title": "Global Convene Stats",
-        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+        "description": "Wuthering Waves Convene Global average pity percentage from astrite.app users."
       }
     },
     "todoList": {
@@ -144,8 +144,8 @@
       "level": "Your Total Pulls Rank",
       "based": "Based on Global Convene Stats",
       "current": "Current {banner} median is {median} pulls",
-      "more": "You have more pull than {percentage}% of wutheringwaves.app users",
-      "less": "You have less pull than {percentage}% of wutheringwaves.app users",
+      "more": "You have more pull than {percentage}% of astrite.app users",
+      "less": "You have less pull than {percentage}% of astrite.app users",
       "currentLuck": "Current {banner} median is {median}%",
       "totalPull": "Total Pull",
       "luck5": "Luckiness 5★",
@@ -154,18 +154,22 @@
       "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
-      "lessTotal": "Less pulls than {percentage}% of wutheringwaves.app users",
-      "moreLuck": "Luckier than {percentage}% of wutheringwaves.app users",
-      "lessLuck": "Less lucky than {percentage}% of wutheringwaves.app users",
+      "moreTotal": "More pulls than {percentage}% of astrite.app users",
+      "lessTotal": "Less pulls than {percentage}% of astrite.app users",
+      "moreLuck": "Luckier than {percentage}% of astrite.app users",
+      "lessLuck": "Less lucky than {percentage}% of astrite.app users",
       "top": "TOP",
       "bottom": "BOTTOM"
     },
     "global": {
       "title": "Global Convene Stats",
-      "message": "Global average pity from {0} users submissions.",
+      "alert": "Global average pity from {0} users submissions.",
       "fiveStar": "5★ List",
-      "fourStar": "4★ List"
+      "fourStar": "4★ List",
+      "median": "5★ Median",
+      "totalUsers": "Total Users",
+      "conveneTotal": "Convene Total",
+      "worth": "Worth"
     }
   },
   "showcase": {
@@ -386,7 +390,9 @@
     "downloadImage": "Download image",
     "upcoming": "Upcoming",
     "editThisPage": "Edit this page",
-    "noRecordsFound": "No records found."
+    "noRecordsFound": "No records found.",
+    "astrite": "Astrite",
+    "beta": "Beta"
   },
   "other": {
     "underDevelopment": "This site is under development."

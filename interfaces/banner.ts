@@ -1,3 +1,5 @@
+import type { ILocalized } from './common';
+
 export enum CardPoolType {
   'featured-resonator' = 1,
   'featured-weapon' = 2,
@@ -10,10 +12,8 @@ export enum CardPoolType {
 
 export interface IBanner {
   type: CardPoolType;
-  name: {
-    en: string;
-    [key: string]: string;
-  };
+  name: string;
+  nameLocalized?: ILocalized;
   thumbnail?: string;
   time?: {
     start: string;

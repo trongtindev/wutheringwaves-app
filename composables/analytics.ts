@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia';
-import { logEvent as firebaseLogEvent } from 'firebase/analytics';
 
 export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
   const { isCrawler } = useDevice();
-  const firebase = useFirebase();
+  const { $firebase } = useNuxtApp();
 
   // states
   const optOut = useCookie<boolean>('analytics.optOut');
+  const firebaseLogEvent = ref();
 
   // functions
   const initialize = () => {
@@ -17,10 +17,14 @@ export const useAnalytics = defineStore('useAnalytics', () => {
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const logEvent = (event: string, params: { [Key: string]: any }) => {
+  const logEvent = async (event: string, params: { [Key: string]: any }) => {
     if (import.meta.dev || isCrawler) return;
-    if (firebase.analytics) {
-      firebaseLogEvent(firebase.analytics, event, params);
+    if ($firebase.analytics) {
+      if (!firebaseLogEvent.value) {
+        const { logEvent: _logEvent } = await import('firebase/analytics');
+        firebaseLogEvent.value = _logEvent;
+      }
+      firebaseLogEvent.value($firebase.analytics, event, params);
     }
   };
 

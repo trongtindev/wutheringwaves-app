@@ -16,7 +16,7 @@ import SnackbarController from '../controllers/snackbar.vue';
 
 // uses
 const app = useApp();
-const route = useRoute();
+const i18n = useI18n();
 const auth = useAuth();
 const sidebar = useSidebar();
 const { locales } = useI18n();
@@ -116,6 +116,7 @@ watch(
         />
       </v-list>
 
+      <!-- language -->
       <template #append>
         <v-divider />
         <v-list :nav="true" :lines="false">
@@ -127,16 +128,20 @@ watch(
                 v-bind="props"
               />
             </template>
-            <v-list>
-              <v-list-item
-                v-for="(element, index) in locales"
-                :key="index"
-                :value="index"
-                :to="switchLocalePath(element.code)"
-              >
-                <v-list-item-title>{{ element.name }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
+
+            <v-sheet class="border rounded">
+              <v-list>
+                <v-list-item
+                  v-for="(element, index) in locales"
+                  :key="index"
+                  :value="index"
+                  :disabled="i18n.locale.value === element.code"
+                  :to="switchLocalePath(element.code)"
+                >
+                  <v-list-item-title>{{ element.name }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-sheet>
           </v-menu>
 
           <v-list-item

@@ -34,7 +34,7 @@
       },
       "global": {
         "title": "Global Convene Stats",
-        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+        "description": "Wuthering Waves Convene Global average pity percentage from astrite.app users."
       }
     },
     "todoList": {
@@ -81,10 +81,10 @@
     "teams": "Đội hình",
     "leaderboards": "Leaderboards",
     "codes": "Mã quà tặng",
-    "map": "Map",
-    "guides": "Guides",
+    "map": "Bản đồ",
+    "guides": "Hướng dẫn",
     "items": "Vật phẩm",
-    "comparison": "Comparison",
+    "comparison": "So sánh",
     "database": "Database"
   },
   "items": {
@@ -95,11 +95,11 @@
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {
-    "title": "Timeline",
-    "startsIn": "Starts in {0}",
-    "endsIn": "Ends in {0}",
-    "current": "Current",
-    "upcoming": "Upcoming"
+    "title": "Hoạt động",
+    "startsIn": "Bắt đầu {0}",
+    "endsIn": "Kết thúc {0}",
+    "current": "Hiện tại",
+    "upcoming": "Sắp tới"
   },
   "convene": {
     "import": {
@@ -137,8 +137,8 @@
       "level": "Your Total Pulls Rank",
       "based": "Based on Global Convene Stats",
       "current": "Current {banner} median is {median} pulls",
-      "more": "Bạn có nhiều pull hơn {percentage}% người dùng wutheringwaves.app",
-      "less": "Bạn có ít pull hơn {percentage}% người dùng wutheringwaves.app",
+      "more": "Bạn có nhiều pull hơn {percentage}% người dùng astrite.app",
+      "less": "Bạn có ít pull hơn {percentage}% người dùng astrite.app",
       "currentLuck": "Current {banner} median is {median}%",
       "totalPull": "Tổng số lần",
       "luck5": "Luckiness 5★",
@@ -147,18 +147,22 @@
       "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
-      "lessTotal": "Less pulls than {percentage}% of wutheringwaves.app users",
-      "moreLuck": "Luckier than {percentage}% of wutheringwaves.app users",
-      "lessLuck": "Less lucky than {percentage}% of wutheringwaves.app users",
+      "moreTotal": "More pulls than {percentage}% of astrite.app users",
+      "lessTotal": "Less pulls than {percentage}% of astrite.app users",
+      "moreLuck": "Luckier than {percentage}% of astrite.app users",
+      "lessLuck": "Less lucky than {percentage}% of astrite.app users",
       "top": "TOP",
       "bottom": "BOTTOM"
     },
     "global": {
       "title": "Global Convene Stats",
-      "message": "Global average pity from {0} users submissions",
+      "alert": "Global average pity from {0} users submissions.",
       "fiveStar": "5★ List",
-      "fourStar": "4★ List"
+      "fourStar": "4★ List",
+      "median": "5★ Median",
+      "totalUsers": "Total Users",
+      "conveneTotal": "Convene Total",
+      "worth": "Worth"
     }
   },
   "showcase": {
@@ -347,8 +351,8 @@
     "options": "Options",
     "trophy": "Trophy",
     "noRecords": "No records found.",
-    "currentEvents": "Current events",
-    "yourLastConvene": "Your Last Convene",
+    "currentEvents": "Sự kiện hiện tại",
+    "yourLastConvene": "Triệu hồi gần đây",
     "guest": "Guest",
     "guestSubtitle": "Sign in to use Cloud Sync.",
     "joinTheDiscord": "Join the Discord",
@@ -356,9 +360,11 @@
     "rarity": "Rarity",
     "category": "Category",
     "downloadImage": "Download image",
-    "upcoming": "Upcoming",
+    "upcoming": "Sắp có",
     "editThisPage": "Edit this page",
-    "noRecordsFound": "No records found."
+    "noRecordsFound": "No records found.",
+    "astrite": "Astrite",
+    "beta": "Beta"
   },
   "other": { "underDevelopment": "This site is under development." }
 }

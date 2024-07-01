@@ -20,6 +20,7 @@ export interface IMenu {
   icon: string;
   title: string;
   items?: IMenu[];
+  beta?: boolean;
   upcoming?: boolean;
 }
 
@@ -54,7 +55,8 @@ export const useSidebar = defineStore('useSidebar', () => {
     {
       url: '/map',
       icon: mdiMap,
-      title: 'sidebar.map'
+      title: 'sidebar.map',
+      beta: true
     },
     {
       url: '/characters',

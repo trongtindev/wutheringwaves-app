@@ -341,7 +341,7 @@ onMounted(initialize);
                   </span>
                 </v-col>
                 <v-col class="d-flex justify-end align-center pr-2">
-                  <span>wutheringwaves.app</span>
+                  <span>astrite.app</span>
                 </v-col>
               </v-row>
             </div>

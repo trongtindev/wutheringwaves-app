@@ -16,8 +16,6 @@ const auth = useAuth();
 const account = useAccount();
 const backup = useBackup();
 const database = useDatabase();
-const firebase = useFirebase();
-// const resources = useResources();
 const vuetifyLocale = useLocale();
 const runtimeConfig = useRuntimeConfig();
 
@@ -28,8 +26,6 @@ if (import.meta.client) {
   account.initialize();
   backup.initialize();
   database.initialize();
-  firebase.initialize();
-  // resources.initialize();
 }
 
 // lifecycle
@@ -65,10 +61,17 @@ useHead({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang
   }
+  // script: [
+  //   {
+  //     src: '/scripts/masonry.pkgd.min.js',
+  //     async: true,
+  //     defer: true
+  //   }
+  // ]
 });
 
 useSeoMeta({
-  ogSiteName: 'WutheringWaves.app',
+  ogSiteName: 'Astrite.app',
   ogImage: `${runtimeConfig.public.SITE_URL}/cover.webp`,
   ogType: 'website',
   description: i18n.t('meta.description'),
@@ -78,6 +81,11 @@ useSeoMeta({
 // lifecycle
 onMounted(() => {
   dayjs.tz.setDefault(runtimeConfig.public.DAYJS_TIMEZONE);
+});
+
+onNuxtReady(() => {
+  console.log('onNuxtReady');
+  window.postMessage('onNuxtReady');
 });
 </script>
 

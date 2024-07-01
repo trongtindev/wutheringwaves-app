@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://wutheringwaves.app/item.schema.json",
+  "$id": "https://astrite.app/item.schema.json",
   "title": "Item",
   "description": "A item in the catalog",
   "type": "object",

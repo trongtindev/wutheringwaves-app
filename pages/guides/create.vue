@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // uses
 const i18n = useI18n();
+const localePath = useLocalePath();
 
 // seo meta
 const title = i18n.t('meta.guides.write.title');
@@ -23,22 +24,19 @@ useHead({
       :items="[
         {
           to: 'guides',
-          title: i18n.t('guides.write.title')
+          title: i18n.t('guides.create.title')
         }
       ]"
     />
 
+    <!-- header -->
+    <page-header>
+      <template #actions>
+        <back-button to="guides" />
+      </template>
+    </page-header>
+
     <v-card>
-      <card-title>
-        <template #title>
-          {{ i18n.t('guides.write.title') }}
-        </template>
-
-        <template #actions>
-          <back-button to="guides" />
-        </template>
-      </card-title>
-
       <v-card-text>
         <editor />
       </v-card-text>

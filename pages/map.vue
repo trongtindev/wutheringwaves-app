@@ -202,7 +202,7 @@ useSeoMeta({
             }"
           >
             <l-tile-layer
-              url="https://files.wutheringwaves.app/tiles/{z}/{getX}/{getY}.webp"
+              url="https://files.astrite.app/tiles/{z}/{getX}/{getY}.webp"
               layer-type="base"
               :options="{
                 tms: true,
