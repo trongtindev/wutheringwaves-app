@@ -99,7 +99,8 @@
     "startsIn": "Bắt đầu {0}",
     "endsIn": "Kết thúc {0}",
     "current": "Hiện tại",
-    "upcoming": "Sắp tới"
+    "upcoming": "Sắp tới",
+    "summary": "Tóm tắt hoạt động"
   },
   "convene": {
     "import": {
@@ -351,7 +352,6 @@
     "options": "Options",
     "trophy": "Trophy",
     "noRecords": "No records found.",
-    "currentEvents": "Sự kiện hiện tại",
     "yourLastConvene": "Triệu hồi gần đây",
     "guest": "Guest",
     "guestSubtitle": "Sign in to use Cloud Sync.",

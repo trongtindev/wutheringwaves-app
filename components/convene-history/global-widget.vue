@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import { toBlob } from 'html-to-image';
-import { saveAs } from 'file-saver';
-import type { ConveneDocument } from '~/collections/convene';
-import urlSlug from 'url-slug';
-import {
-  mdiImport,
-  mdiChevronRight,
-  mdiGrid,
-  mdiViewList,
-  mdiDownload
-} from '@mdi/js';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
+
+// define
+const emits = defineEmits<{
+  (e: 'on-done'): void;
+}>();
 
 // uses
 const resources = useResources();
@@ -33,6 +27,7 @@ const initialize = () => {
         const timeB = new Date(b.time!.start).getTime();
         return timeB - timeA;
       });
+    setTimeout(() => emits('on-done'), 50);
   });
 };
 

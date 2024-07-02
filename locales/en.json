@@ -106,7 +106,8 @@
     "startsIn": "Starts {0}",
     "endsIn": "Ends {0}",
     "current": "Current",
-    "upcoming": "Upcoming"
+    "upcoming": "Upcoming",
+    "summary": "Timeline Summary"
   },
   "convene": {
     "import": {
@@ -379,7 +380,6 @@
     "options": "Options",
     "trophy": "Trophy",
     "noRecords": "No records found.",
-    "currentEvents": "Current Events",
     "yourLastConvene": "Your Last Convene",
     "guest": "Guest",
     "guestSubtitle": "Sign in to use Cloud Sync.",

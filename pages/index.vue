@@ -1,56 +1,13 @@
 <script setup lang="ts">
 import { mdiGithub, mdiChevronRight, mdiOpenInNew } from '@mdi/js';
-import { useDisplay } from 'vuetify';
 
 // uses
 const app = useApp();
 const i18n = useI18n();
-const display = useDisplay();
 const localePath = useLocalePath();
 
 // states
 const faqs = ref<number[]>([0, 1, 2, 3, 4]);
-const masonryElement = ref();
-const masonryInstance = ref();
-const emitSetTimeout = ref();
-
-// events
-const onResize = () => initialize();
-
-// functions
-const initialize = (emit?: boolean) => {
-  if (!masonryElement.value) {
-    setTimeout(initialize, 50);
-    return;
-  }
-
-  if (!emit) {
-    if (emitSetTimeout.value) {
-      clearTimeout(emitSetTimeout.value);
-    }
-    emitSetTimeout.value = setTimeout(() => initialize(true), 150);
-    return;
-  }
-
-  if (display.mdAndUp.value) {
-    masonryInstance.value = new window.Masonry(masonryElement.value, {
-      itemSelector: '.masonry-tile'
-    });
-    console.log('ini');
-  } else if (masonryInstance.value) {
-    masonryInstance.value.destroy();
-    masonryInstance.value = undefined;
-    console.log('des');
-  }
-};
-
-// lifecycle
-onNuxtReady(initialize);
-onUnmounted(() => {
-  if (masonryInstance.value) {
-    masonryInstance.value.destroy();
-  }
-});
 
 // seo meta
 const title = 'astrite.app';
@@ -66,107 +23,99 @@ useSeoMeta({
 <template>
   <div>
     <!-- grids -->
-    <div ref="masonryElement" class="masonry" item-selector=".masonry-tile">
-      <v-row class="mt-1">
-        <v-col cols="12" sm="6" md="4" class="masonry-tile">
-          <v-card v-resize="onResize" class="pa-4 rounded border">
-            <div class="d-flex flex-wrap ga-2 justify-center">
-              <v-chip
-                :prepend-icon="mdiGithub"
-                :text="$t('common.viewOnGithub')"
-                :href="app.githubRepo"
-                target="_blank"
-              />
+    <masonry>
+      <template #default="masonry">
+        <v-card class="pa-4 rounded border">
+          <div class="d-flex flex-wrap ga-2 justify-center">
+            <v-chip
+              :prepend-icon="mdiGithub"
+              :text="$t('common.viewOnGithub')"
+              :href="app.githubRepo"
+              target="_blank"
+            />
 
-              <v-chip
-                :prepend-icon="mdiOpenInNew"
-                :text="$t('common.joinTheDiscord')"
-                :href="app.discord"
-                target="_blank"
-              />
-            </div>
+            <v-chip
+              :prepend-icon="mdiOpenInNew"
+              :text="$t('common.joinTheDiscord')"
+              :href="app.discord"
+              target="_blank"
+            />
+          </div>
 
-            <div class="text-center mt-4">
-              <div>
-                <h1 class="text-h4">Astrite.app</h1>
-              </div>
-              <div class="mt-1">
-                <h2 class="text-h5">{{ i18n.t('meta.title') }}</h2>
-              </div>
-              <div class="mt-2">
-                <h3 class="text-h6">{{ i18n.t('meta.description') }}</h3>
-              </div>
+          <div class="text-center mt-4">
+            <div>
+              <h1 class="text-h4">Astrite.app</h1>
             </div>
-          </v-card>
-        </v-col>
+            <div class="mt-1">
+              <h2 class="text-h5">{{ i18n.t('meta.title') }}</h2>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-h6">{{ i18n.t('meta.description') }}</h3>
+            </div>
+          </div>
+        </v-card>
 
         <!-- current event -->
-        <v-col cols="12" sm="6" md="4" class="masonry-tile">
-          <v-card v-resize="onResize">
-            <v-card-title>
-              {{ $t('common.currentEvents') }}
-            </v-card-title>
-            <v-divider />
+        <v-card @on-done="masonry.refreshLayout">
+          <v-card-title>
+            {{ $t('timeline.summary') }}
+          </v-card-title>
+          <v-divider />
 
-            <timeline-recently />
-            <v-divider />
+          <timeline-summary-widget />
+          <v-divider />
 
-            <v-card-actions class="d-flex justify-end">
-              <v-btn
-                variant="text"
-                :to="localePath('/timeline')"
-                :text="$t('timeline.title')"
-                :append-icon="mdiChevronRight"
-              />
-            </v-card-actions>
-          </v-card>
-        </v-col>
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              variant="text"
+              :to="localePath('/timeline')"
+              :text="$t('timeline.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-card-actions>
+        </v-card>
 
         <!-- yourLastConvene -->
-        <v-col cols="12" sm="6" md="4" class="masonry-tile">
-          <v-card v-resize="onResize">
-            <v-card-title>
-              {{ $t('common.yourLastConvene') }}
-            </v-card-title>
-            <v-divider />
+        <v-card @on-done="masonry.refreshLayout">
+          <v-card-title>
+            {{ $t('common.yourLastConvene') }}
+          </v-card-title>
+          <v-divider />
 
-            <convene-history-recently-widget />
-            <v-divider />
+          <convene-history-recently-widget />
+          <v-divider />
 
-            <v-card-actions class="d-flex justify-end">
-              <v-btn
-                :to="localePath('/convene-history')"
-                variant="text"
-                :text="$t('convene.history.title')"
-                :append-icon="mdiChevronRight"
-              />
-            </v-card-actions>
-          </v-card>
-        </v-col>
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              :to="localePath('/convene-history')"
+              variant="text"
+              :text="$t('convene.history.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-card-actions>
+        </v-card>
 
         <!-- global convene -->
-        <v-col cols="12" sm="6" md="4" class="masonry-tile">
-          <v-card v-resize="onResize">
-            <v-card-title>
-              {{ $t('convene.global.title') }}
-            </v-card-title>
-            <v-divider />
+        <v-card>
+          <v-card-title>
+            {{ $t('convene.global.title') }}
+          </v-card-title>
+          <v-divider />
 
-            <convene-history-global-widget />
-            <v-divider />
+          <convene-history-global-widget @on-done="masonry.refreshLayout" />
+          <v-divider />
 
-            <v-card-actions class="d-flex justify-end">
-              <v-btn
-                variant="text"
-                :to="localePath('/convene-history/global')"
-                :text="$t('convene.global.title')"
-                :append-icon="mdiChevronRight"
-              />
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-    </div>
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              variant="text"
+              :to="localePath('/convene-history/global')"
+              :text="$t('convene.global.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-card-actions>
+        </v-card>
+      </template>
+    </masonry>
 
     <!-- shortcuts -->
     <v-card class="mt-2">

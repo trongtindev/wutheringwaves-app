@@ -2,8 +2,12 @@
 import { type ConveneDocument } from '@/collections/convene';
 import urlSlug from 'url-slug';
 
+// define
+const emits = defineEmits<{
+  (e: 'on-done'): void;
+}>();
+
 // uses
-const i18n = useI18n();
 const account = useAccount();
 const database = useDatabase();
 
@@ -35,6 +39,7 @@ const initialize = () => {
       .then((result) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         items.value = result as any;
+        setTimeout(() => emits('on-done'), 50);
       });
   });
 };

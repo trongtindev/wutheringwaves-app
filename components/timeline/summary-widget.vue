@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import type { IEvent } from '~/interfaces/event';
 
+// define
+const emits = defineEmits<{
+  (e: 'on-done'): void;
+}>();
+
 // uses
 const resources = useResources();
 
@@ -47,6 +52,7 @@ const initialize = () => {
           })
           .splice(0, 3);
 
+        setTimeout(() => emits('on-done'), 50);
         resolve(true);
       })
       .catch(reject);

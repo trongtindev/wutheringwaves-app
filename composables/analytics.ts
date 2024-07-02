@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import { logEvent as _logEvent } from 'firebase/analytics';
 
 export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
@@ -7,7 +8,6 @@ export const useAnalytics = defineStore('useAnalytics', () => {
 
   // states
   const optOut = useCookie<boolean>('analytics.optOut');
-  const firebaseLogEvent = ref();
 
   // functions
   const initialize = () => {
@@ -21,11 +21,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     if (import.meta.dev || isCrawler) return;
 
     if (nuxtApp.$firebase.analytics) {
-      if (!firebaseLogEvent.value) {
-        const { logEvent: _logEvent } = await import('firebase/analytics');
-        firebaseLogEvent.value = _logEvent;
-      }
-      firebaseLogEvent.value(nuxtApp.$firebase.analytics, event, params);
+      _logEvent(nuxtApp.$firebase.analytics, event, params);
     }
   };
 
