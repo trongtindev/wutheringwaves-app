@@ -10,7 +10,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
 
   // states
   const isInitialized = ref(false);
-  const optOut = useCookie<boolean>('analytics.optOut');
+  const optOut = useLocalStorage('analytics.optOut', false);
   const analytics = ref<Analytics>();
   const performance = ref<FirebasePerformance>();
   const firebaseLogEvent = ref();

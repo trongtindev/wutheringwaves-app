@@ -46,7 +46,7 @@ onMounted(() => {
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk
-      ? `${titleChunk} | ${i18n.t('meta.title')}`
+      ? `${titleChunk} - ${i18n.t('meta.title')}`
       : i18n.t('meta.title');
   },
   link: [

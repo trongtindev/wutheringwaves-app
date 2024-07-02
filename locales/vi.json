@@ -1,7 +1,8 @@
 {
   "meta": {
-    "title": "Tiện ích Wuthering Waves",
+    "title": "Astrite.app",
     "description": "Theo dõi Pity, danh sách việc cần làm, cơ sở dữ liệu, phân tích và hơn thế nữa cho Wuthering Waves!",
+    "index": { "title": "Tiện ích Wuthering Waves" },
     "timeline": {
       "title": "Lịch sự kiện",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."

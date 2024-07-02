@@ -10,7 +10,7 @@ const localePath = useLocalePath();
 const faqs = ref<number[]>([0, 1, 2, 3, 4]);
 
 // seo meta
-const title = 'astrite.app';
+const title = i18n.t('meta.index.title');
 
 useApp().title = i18n.t('common.home');
 useHead({ title });

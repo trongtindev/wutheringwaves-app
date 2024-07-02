@@ -5,13 +5,14 @@ export const useNotification = defineStore('useNotification', () => {
   const { $firebase } = useNuxtApp();
 
   // states
-  const enabled = useCookie<boolean>('notification.enabled');
+  const enabled = useLocalStorage('notification.enabled', false);
 
   // computed
   const isSupported = computed<boolean>(() => {
     return typeof $firebase.messaging != 'undefined';
   });
 
+  // exports
   return {
     enabled,
     isSupported

@@ -41,11 +41,10 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     '@nuxtjs/device',
-    'nuxt3-leaflet',
-    'nuxt-vitalizer'
+    'nuxt3-leaflet'
   ],
   build: {
-    transpile: ['vuetify']
+    transpile: ['vuetify'],
   },
   sitemap: {
     autoLastmod: true,
@@ -65,6 +64,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
+    },
+    storage: {
+      db: {
+        driver: 'vercelKV'
+      }
     }
   },
   site: {
@@ -80,9 +84,6 @@ export default defineNuxtConfig({
     dirs: ['./composables', './components']
   },
   // modules config
-  vitalizer: {
-    disableStylesheets: 'entry'
-  },
   i18n: {
     vueI18n: './i18n.config.ts',
     defaultLocale: 'en',
@@ -109,7 +110,7 @@ export default defineNuxtConfig({
       terserOptions: {
         compress: {
           drop_console: false,
-          keep_classnames: false,
+          keep_classnames: false
         }
       },
       rollupOptions: {

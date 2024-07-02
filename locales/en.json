@@ -1,7 +1,10 @@
 {
   "meta": {
-    "title": "Wuthering Waves Utilities",
-    "description": "Track pity, todo list, database, analysis and more for Wuthering Waves!",
+    "title": "Astrite.app",
+    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "index": {
+      "title": "Wuthering Waves Utilities"
+    },
     "timeline": {
       "title": "Event timeline calendar",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
