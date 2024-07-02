@@ -120,11 +120,12 @@ const onImport = async (url: string) => {
     });
     await db.convenes.bulkInsert(conveneWrites);
 
-    // update character list
-    const resonators = items.filter((e) => e.resourceType === 'Resonators');
+    // calc owned
+    const resonators = response.data.items.filter((e) => {
+      return e.resourceType === 'Resonators';
+    });
     const characterObjects = (() => {
       const output = {};
-
       for (const element of resonators) {
         output[element.name] ??= {
           name: element.name,
@@ -150,8 +151,8 @@ const onImport = async (url: string) => {
     });
     await db.characters.bulkUpsert(characterWrites);
 
+    // redirect
     sidebar.setNotify('/characters', 1, 'resetOnVisit');
-    await new Promise((resolve) => setTimeout(resolve, 250)); // ensure :D
     router.push(localePath('/convene-history'));
   } catch (error) {
     // TODO: handle error

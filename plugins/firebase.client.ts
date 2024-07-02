@@ -8,7 +8,6 @@ export default defineNuxtPlugin(async () => {
   // uses
   const { isCrawler } = useDevice();
   const runtimeConfig = useRuntimeConfig();
-  const uAnalytics = useAnalytics();
 
   // define
   const {
@@ -36,23 +35,27 @@ export default defineNuxtPlugin(async () => {
       measurementId: 'G-TJSX2XNTR9'
     });
 
+    console.debug('getAuth');
     const { getAuth } = await import('firebase/auth');
     auth = getAuth(app);
 
-    const { getMessaging } = await import('firebase/messaging');
-    messaging = getMessaging(app);
-
-    if (!uAnalytics.optOut) {
-      if (useAnalytics().optOut) {
-        console.warn('firebase', 'analytics', 'optOut', true);
-      } else if (!import.meta.dev) {
-        const { getAnalytics } = await import('firebase/analytics');
-        analytics = getAnalytics(app);
-
-        const { getPerformance } = await import('firebase/performance');
-        performance = getPerformance(app);
-      }
+    console.debug('getMessaging');
+    const { getMessaging, isSupported } = await import('firebase/messaging');
+    if (await isSupported()) {
+      messaging = getMessaging(app);
     }
+
+    if (!import.meta.dev) {
+      console.debug('getAnalytics');
+      const { getAnalytics } = await import('firebase/analytics');
+      analytics = getAnalytics(app);
+
+      console.debug('getPerformance');
+      const { getPerformance } = await import('firebase/performance');
+      performance = getPerformance(app);
+    }
+  } else {
+    console.warn('firebasePlugin', 'ignore');
   }
 
   // exports

@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nuxt dev",
     "build": "nuxt build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ignore-pattern \"**/*.js\"",
+    "lint:fix": "eslint . --fix --ignore-pattern \"**/*.js\"",
     "format": "prettier --write ./",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -66,7 +66,6 @@
     "@nuxtjs/device": "^3.1.1",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/sitemap": "^5.2.2",
-    "@nuxtjs/web-vitals": "^0.2.7",
     "@pinia/nuxt": "^0.5.1",
     "@sentry/vue": "^8.13.0",
     "@types/file-saver": "^2.0.7",
@@ -92,5 +91,8 @@
   },
   "lint-staged": {
     "*.{ts,mjs}": "pnpm run lint"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

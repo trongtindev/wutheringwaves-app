@@ -60,14 +60,14 @@ useHead({
   meta: [...(i18nHead.value.meta || [])],
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang
-  }
-  // script: [
-  //   {
-  //     src: '/scripts/masonry.pkgd.min.js',
-  //     async: true,
-  //     defer: true
-  //   }
-  // ]
+  },
+  script: [
+    {
+      src: '/scripts/masonry.pkgd.min.js',
+      async: true,
+      defer: true
+    }
+  ]
 });
 
 useSeoMeta({

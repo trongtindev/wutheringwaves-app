@@ -41,8 +41,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     '@nuxtjs/device',
-    'nuxt3-leaflet',
-    '@nuxtjs/web-vitals'
+    'nuxt3-leaflet'
   ],
   build: {
     transpile: ['vuetify']

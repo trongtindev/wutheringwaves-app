@@ -18,16 +18,23 @@ const filterAttribute = ref<string>('All');
 
 // functions
 const loadOwned = () => {
-  database.getInstance().then((db) => {
-    db.characters
-      .find()
-      .exec()
-      .then((result) => {
-        if (result.length > 0) {
-          owned.value = result.reduce((acc, e) => ((acc[e.name] = e), acc), {});
-        }
-      });
-  });
+  database
+    .getInstance()
+    .then((db) => {
+      db.characters
+        .find()
+        .exec()
+        .then((result) => {
+          console.log('characters', result.length);
+          if (result.length > 0) {
+            owned.value = result.reduce(
+              (acc, e) => ((acc[e.name] = e), acc),
+              {}
+            );
+          }
+        });
+    })
+    .catch(console.error);
 };
 
 // computed
@@ -88,8 +95,10 @@ useSeoMeta({
       ]"
     />
 
+    <!-- alert -->
     <alert id="characters" :text="$t('characters.alert')" />
 
+    <!-- page -->
     <v-card>
       <v-card-text>
         <client-only>

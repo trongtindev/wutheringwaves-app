@@ -20,5 +20,6 @@ export default withNuxt({}).append({
     '@typescript-eslint/no-dynamic-delete': 1,
     'prefer-rest-params': 1,
     'vue/no-mutating-props': 1
-  }
+  },
+  ignores: ['**/*.js']
 });
