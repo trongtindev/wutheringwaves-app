@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// uses
+const i18n = useI18n();
+
 // seo meta
 const title = i18n.t('meta.errors.database.corrupted.title');
 
