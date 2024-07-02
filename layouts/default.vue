@@ -5,7 +5,8 @@ import {
   mdiLogout,
   mdiTranslate,
   mdiCogs,
-  mdiSwapVertical
+  mdiSwapVertical,
+  mdiDatabaseSearch
 } from '@mdi/js';
 
 import BackupController from '../controllers/backup.vue';
@@ -13,6 +14,7 @@ import DatabaseController from '../controllers/database.vue';
 import DialogController from '../controllers/dialog.vue';
 import NotificationController from '../controllers/notification.vue';
 import SnackbarController from '../controllers/snackbar.vue';
+import SearchController from '../controllers/search.vue';
 
 // uses
 const app = useApp();
@@ -23,6 +25,7 @@ const { locales } = useI18n();
 const account = useAccount();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
+const search = useSearch();
 
 // states
 const state = ref<'' | 'sign-in' | 'sign-out'>('');
@@ -195,33 +198,47 @@ watch(
         </v-menu>
       </client-only>
 
-      <!-- auth -->
       <template #append>
-        <client-only>
-          <div class="mr-2">
+        <div class="d-flex flex-wrap ga-2">
+          <v-btn variant="outlined" @click="() => (search.active = true)">
+            <v-icon :icon="mdiDatabaseSearch" />
+            <span class="hidden-sm-and-down ml-2">
+              {{ $t('search.title') }}
+            </span>
+          </v-btn>
+
+          <!-- auth -->
+          <client-only>
             <v-btn
               v-if="auth.isLoggedIn"
-              :append-icon="mdiLogout"
-              :text="$t('common.signOut')"
               :disabled="state != ''"
               :loading="state == 'sign-out'"
               color="error"
               variant="outlined"
               @click="onPressedSignOut"
-            />
+            >
+              <v-icon :icon="mdiLogout" />
+              <span class="hidden-sm-and-down ml-2">
+                {{ $t('common.signOut') }}
+              </span>
+            </v-btn>
 
             <v-btn
               v-else
-              :append-icon="mdiLogin"
               :text="$t('common.signIn')"
               :disabled="state != ''"
               :loading="state == 'sign-in'"
               color="primary"
               variant="flat"
               @click="() => onPressedSignIn()"
-            />
-          </div>
-        </client-only>
+            >
+              <v-icon :icon="mdiLogin" />
+              <span class="hidden-sm-and-down ml-2">
+                {{ $t('common.signIn') }}
+              </span>
+            </v-btn>
+          </client-only>
+        </div>
       </template>
     </v-app-bar>
 
@@ -338,6 +355,7 @@ watch(
         <NotificationController />
         <DatabaseController />
         <SnackbarController />
+        <SearchController />
       </client-only>
     </v-main>
   </v-app>

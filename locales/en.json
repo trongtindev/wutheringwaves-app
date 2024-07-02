@@ -324,6 +324,12 @@
   "guides": {
     "title": "Game Guides"
   },
+  "search": {
+    "title": "Global Search",
+    "alert": "You can search everything there is on Astrite.app.",
+    "alertTips": "Press the key combination Ctrl + Space to open the fastest search box!",
+    "placeholder": "Item, echo, trophy, character,..."
+  },
   "common": {
     "name": "Name",
     "time": "Time",

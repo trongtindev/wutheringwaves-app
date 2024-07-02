@@ -296,6 +296,12 @@
     "markAsFound": "Mark as Found"
   },
   "guides": { "title": "Game Guides" },
+  "search": {
+    "title": "Global Search",
+    "alert": "Bạn có thể tìm kiếm tất cả mọi thứ có trên Astrite.app.",
+    "alertTips": "Nhấn tổ hợp phím Ctrl + Space để mở hộp tìm kiếm nhanh nhất!",
+    "placeholder": "Vật phẩm, echo, thành tựu, nhân vật,..."
+  },
   "common": {
     "name": "Tên",
     "time": "Thời gian",
@@ -354,7 +360,7 @@
     "noRecords": "No records found.",
     "yourLastConvene": "Triệu hồi gần đây",
     "guest": "Guest",
-    "guestSubtitle": "Sign in to use Cloud Sync.",
+    "guestSubtitle": "Đăng nhập để đồng bộ.",
     "joinTheDiscord": "Join the Discord",
     "viewOnGithub": "View on GitHub",
     "rarity": "Rarity",

@@ -63,9 +63,17 @@ export const useResources = defineStore('useResources', () => {
     getBanners,
     weapons,
     getWeaponData,
+    /**
+     * @deprecated
+     */
     characters,
+    getCharacters: characters,
     getCharacterData,
+    /**
+     * @deprecated
+     */
     echos,
+    getEchos: echos,
     getEchoData,
     getCodes,
     getItems,

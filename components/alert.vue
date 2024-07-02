@@ -14,7 +14,7 @@ const enabled = useLocalStorage(`alert.${props.id}`, true);
   <client-only>
     <v-alert
       v-model="enabled"
-      class="mb-1"
+      class="mb-2"
       :color="props.color || 'info'"
       :title="props.title"
       :text="props.text"

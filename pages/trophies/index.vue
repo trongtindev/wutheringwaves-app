@@ -99,7 +99,8 @@ useSeoMeta({
           </v-row>
         </client-only>
 
-        <v-row class="mt-4">
+        <!-- list -->
+        <v-row class="mt-2">
           <v-col
             v-for="(element, index) in displayItems"
             :key="index"
