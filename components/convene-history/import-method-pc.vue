@@ -127,7 +127,7 @@ onMounted(() => {
             href="https://raw.githubusercontent.com/trongtindev/astrite-app/main/getGacha.ps1"
             :append-icon="mdiOpenInNew"
           >
-            github/alpharmi/getGacha.ps1
+            getGacha.ps1
           </v-chip>
         </v-alert>
       </div>
