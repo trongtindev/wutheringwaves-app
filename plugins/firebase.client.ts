@@ -1,8 +1,6 @@
 import type { FirebaseApp } from 'firebase/app';
 import type { Auth } from 'firebase/auth';
 import type { Messaging } from 'firebase/messaging';
-import type { Analytics } from 'firebase/analytics';
-import type { FirebasePerformance } from 'firebase/performance';
 
 export default defineNuxtPlugin(async () => {
   // uses
@@ -20,8 +18,6 @@ export default defineNuxtPlugin(async () => {
   let app: FirebaseApp | undefined;
   let auth: Auth | undefined;
   let messaging: Messaging | undefined;
-  let analytics: Analytics | undefined;
-  let performance: FirebasePerformance | undefined;
 
   if (!isCrawler) {
     const { initializeApp } = await import('firebase/app');
@@ -44,16 +40,6 @@ export default defineNuxtPlugin(async () => {
     if (await isSupported()) {
       messaging = getMessaging(app);
     }
-
-    if (!import.meta.dev) {
-      console.debug('getAnalytics');
-      const { getAnalytics } = await import('firebase/analytics');
-      analytics = getAnalytics(app);
-
-      console.debug('getPerformance');
-      const { getPerformance } = await import('firebase/performance');
-      performance = getPerformance(app);
-    }
   } else {
     console.warn('firebasePlugin', 'ignore');
   }
@@ -64,9 +50,7 @@ export default defineNuxtPlugin(async () => {
       firebase: {
         app,
         auth,
-        messaging,
-        analytics,
-        performance
+        messaging
       }
     }
   };

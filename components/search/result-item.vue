@@ -21,7 +21,9 @@ const localePath = useLocalePath();
     </template>
 
     <v-list-item-title>
-      {{ $t(props.data.name) }}
+      <span :class="props.data.rarity ? `text-rarity${props.data.rarity}` : ''">
+        {{ $t(props.data.name) }}
+      </span>
     </v-list-item-title>
   </v-list-item>
 </template>

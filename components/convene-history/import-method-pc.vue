@@ -118,13 +118,13 @@ onMounted(() => {
           :readonly="true"
           :hide-details="true"
           :rows="2"
-          value='[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/alpharmi/ww/main/getGacha.ps1")'
+          value='[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/trongtindev/astrite-app/main/getGacha.ps1")'
         />
         <v-alert color="warning" class="mt-2">
           {{ $t('You can review the script') }}
           <v-chip
             target="_blank"
-            href="https://raw.githubusercontent.com/alpharmi/ww/main/getGacha.ps1"
+            href="https://raw.githubusercontent.com/trongtindev/astrite-app/main/getGacha.ps1"
             :append-icon="mdiOpenInNew"
           >
             github/alpharmi/getGacha.ps1

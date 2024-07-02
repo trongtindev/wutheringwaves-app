@@ -45,7 +45,11 @@ onMounted(initialize);
       <v-row class="mb-2">
         <v-col cols="6">
           <v-card class="fill-height">
-            <v-img v-if="banners[0].thumbnail" :src="banners[0].thumbnail">
+            <v-img
+              v-if="banners[0].thumbnail"
+              :src="banners[0].thumbnail"
+              :alt="banners[0].featuredRare"
+            >
               <div class="d-flex align-center justify-center h-100">
                 <v-chip class="bg-black">0</v-chip>
               </div>
@@ -59,7 +63,11 @@ onMounted(initialize);
 
         <v-col cols="6">
           <v-card class="fill-height">
-            <v-img v-if="banners[1].thumbnail" :src="banners[1].thumbnail">
+            <v-img
+              v-if="banners[1].thumbnail"
+              :src="banners[1].thumbnail"
+              :alt="banners[1].featuredRare"
+            >
               <div class="d-flex align-center justify-center h-100">
                 <v-chip class="bg-black">0</v-chip>
               </div>

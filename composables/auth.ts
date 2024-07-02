@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia';
 import type { User } from 'firebase/auth';
-import { setUser } from '@sentry/vue';
 
 export const useAuth = defineStore('useAuth', () => {
   // uses
   const route = useRoute();
   const nuxtApp = useNuxtApp();
+  const sentry = useSentry();
 
   // states
   const user = ref<User>(null as any);
@@ -87,12 +87,12 @@ export const useAuth = defineStore('useAuth', () => {
       user.value = e as any;
 
       if (user.value) {
-        setUser({
+        sentry.setUser({
           id: user.value.uid,
           email: user.value.email || undefined
         });
       } else {
-        setUser(null);
+        sentry.setUser(null);
       }
     });
 

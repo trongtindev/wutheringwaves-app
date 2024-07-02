@@ -5,6 +5,7 @@ import type { IEcho } from '~/interfaces/echo';
 import type { IItem } from '~/interfaces/item';
 import { SearchResultType, type ISearchResult } from '~/interfaces/search';
 import type { ITrophy } from '~/interfaces/trophy';
+import type { IWeapon } from '~/interfaces/weapon';
 
 // uses
 const search = useSearch();
@@ -15,6 +16,7 @@ const submitDebounce = useDebounceFn(() => submit(), 500);
 // states
 const state = ref<'' | 'submit'>('');
 const characters = ref<ICharacter[]>();
+const weapons = ref<IWeapon[]>();
 const echos = ref<IEcho[]>();
 const items = ref<IItem[]>();
 const trophies = ref<ITrophy[]>();
@@ -43,7 +45,26 @@ const submit = async () => {
           type: SearchResultType.character,
           slug: `/characters/${e.slug}`,
           icon: `/characters/icons/${e.slug}.webp`,
-          name: e.name
+          name: e.name,
+          rarity: e.rarity
+        };
+      })
+    ];
+
+    // echos
+    weapons.value ??= await resources.getWeapons();
+    const matchWeapons = weapons.value.filter((e) => {
+      return e.name.toLowerCase().includes(lowerCase);
+    });
+    results.value = [
+      ...results.value,
+      ...matchWeapons.splice(0, 5).map((e) => {
+        return {
+          type: SearchResultType.weapon,
+          slug: `/weapons/${e.slug}`,
+          icon: `/weapons/icons/${e.slug}.webp`,
+          name: e.name,
+          rarity: e.rarity
         };
       })
     ];
@@ -77,7 +98,8 @@ const submit = async () => {
           type: SearchResultType.item,
           slug: `/items/${e.slug}`,
           icon: `/items/icons/${e.slug}.webp`,
-          name: e.name
+          name: e.name,
+          rarity: e.rarity
         };
       })
     ];

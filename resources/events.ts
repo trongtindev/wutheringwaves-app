@@ -16,7 +16,7 @@ const items = [
       name: 'Version 1.1',
       time: {
         start: '2024-06-28 13:00',
-        end: '2024-07-27 10:00'
+        end: '2024-08-15 10:00'
       },
       color: '#535353'
     }
@@ -37,18 +37,22 @@ const items = [
     {
       name: 'Depths of Illusive Realm - Dreams Ablaze in Darkness',
       time: {
-        start: '2024-05-23 04:00',
+        start: '2024-05-23 10:00',
         end: '2024-06-27 03:59'
       },
       color: '#ef772e'
     },
     {
+      url: 'https://wutheringwaves.kurogames.com/en/main/news/detail/1025',
       name: 'Depths of Illusive Realm - Dreams Ablaze in Darkness',
       time: {
-        start: '2024-07-04 04:00',
+        start: '2024-07-04 10:00',
         end: '2024-08-05 03:59'
       },
-      color: '#ef772e'
+      color: '#ef772e',
+      thumbnail: '/events/covers/depths-of-illusive-realm.webp',
+      description:
+        'Astrite x1000, Malleable Elite Class Echo I x1, Malleable Elite Class Echo II x1, Premium Tuner x360, Premium Sealed Tube x36 and other development materials.'
     }
   ],
   // Pioneer Podcast
@@ -210,7 +214,7 @@ const items = [
       thumbnail: '/cards/T_Card5.png'
     },
     {
-      name: 'Absolute Pulsation – Jinlin - Ages of Harvest',
+      name: 'Absolute Pulsation – Jinhsi - Ages of Harvest',
       time: {
         start: '2024-06-28 13:00',
         end: '2024-07-22 09:59'

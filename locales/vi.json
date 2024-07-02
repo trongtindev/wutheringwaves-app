@@ -127,7 +127,7 @@
     },
     "history": {
       "title": "Lịch sử triệu hồi",
-      "alert": "Import and backup your Wuthering Waves convene history to keep it for more than 6 months. It also automatically tracks your pity and statistics about your convenes!"
+      "alert": "Nhập và sao lưu lịch sử triệu hồi Wuthering Waves của bạn để lưu giữ nó trong hơn 6 tháng. Nó cũng tự động theo dõi pity và số liệu thống kê về các lần triệu hồi của bạn!"
     },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",
     "lifetimePulls": "Tổng số lần",
@@ -359,18 +359,17 @@
     "trophy": "Trophy",
     "noRecords": "No records found.",
     "yourLastConvene": "Triệu hồi gần đây",
-    "guest": "Guest",
+    "guest": "Khách",
     "guestSubtitle": "Đăng nhập để đồng bộ.",
-    "joinTheDiscord": "Join the Discord",
-    "viewOnGithub": "View on GitHub",
-    "rarity": "Rarity",
+    "joinTheDiscord": "Tham gia Discord",
+    "viewOnGithub": "Xem trên GitHub",
+    "rarity": "Phẩm chất",
     "category": "Category",
     "downloadImage": "Download image",
     "upcoming": "Sắp có",
-    "editThisPage": "Edit this page",
+    "editThisPage": "Sửa trang này",
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
     "beta": "Beta"
-  },
-  "other": { "underDevelopment": "This site is under development." }
+  }
 }

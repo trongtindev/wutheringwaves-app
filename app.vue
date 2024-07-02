@@ -55,12 +55,17 @@ useHead({
       type: 'image/x-icon',
       href: `${runtimeConfig.public.SITE_URL}/favicon.png`
     },
-    ...(i18nHead.value.link || [])
+    ...(i18nHead.value.link || []).map((e) => {
+      return {
+        ...e,
+        href: `${runtimeConfig.public.SITE_URL}${e.href || '/'}`
+      };
+    })
   ],
   meta: [...(i18nHead.value.meta || [])],
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang
-  },
+  }
 });
 
 useSeoMeta({

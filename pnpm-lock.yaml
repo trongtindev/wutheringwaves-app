@@ -125,9 +125,6 @@ importers:
       vue-chartjs:
         specifier: ^5.3.1
         version: 5.3.1(chart.js@4.4.3)(vue@3.4.31(typescript@5.5.2))
-      vue-masonry:
-        specifier: ^0.16.0
-        version: 0.16.0(vue@3.4.31(typescript@5.5.2))
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -189,6 +186,9 @@ importers:
       nuxt-schema-org:
         specifier: ^3.3.8
         version: 3.3.8(@nuxt/devtools@1.3.7(rollup@4.18.0)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)(terser@5.31.1)))(@unocss/webpack@0.61.0(rollup@4.18.0)(webpack@5.92.0(esbuild@0.21.5)))(@vue/compiler-core@3.4.31)(axios@1.7.2)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.9)(@upstash/redis@1.31.6)(@vercel/kv@1.0.1)(encoding@0.1.13)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.5.2)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.22(typescript@5.5.2)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)(terser@5.31.1))(vue@3.4.31(typescript@5.5.2))(webpack@5.92.0(esbuild@0.21.5))
+      nuxt-vitalizer:
+        specifier: ^0.10.0
+        version: 0.10.0(magicast@0.3.4)(rollup@4.18.0)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -3097,9 +3097,6 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  desandro-matches-selector@2.0.2:
-    resolution: {integrity: sha512-+1q0nXhdzg1IpIJdMKalUwvvskeKnYyEe3shPRwedNcWtnhEKT3ZxvFjzywHDeGcKViIxTCAoOYQWP1qD7VNyg==}
-
   destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==}
 
@@ -3364,9 +3361,6 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
 
-  ev-emitter@1.1.1:
-    resolution: {integrity: sha512-ipiDYhdQSCZ4hSbX4rMW+XzNKMD1prg/sTvoVmSLkuQ1MVlwjJQQA+sW8tMYR3BLUr9KjodFV4pvzunvRhd33Q==}
-
   event-reduce-js@5.2.7:
     resolution: {integrity: sha512-Vi6aIiAmakzx81JAwhw8L988aSX5a3ZqqVjHyZa9xFU6P4oT1IotoDreWtjNlS+fvEnASvyIQT565nmkOtns/Q==}
     engines: {node: '>=16'}
@@ -3451,9 +3445,6 @@ packages:
 
   firebase@10.12.2:
     resolution: {integrity: sha512-ZxEdtSvP1I9su1yf32D8TIdgxtPgxwr6z3jYAR1TXS/t+fVfpoPc/N1/N2bxOco9mNjUoc+od34v5Fn4GeKs6Q==}
-
-  fizzy-ui-utils@2.0.7:
-    resolution: {integrity: sha512-CZXDVXQ1If3/r8s0T+v+qVeMshhfcuq0rqIFgJnrtd+Bu8GmDmqMjntjUePypVtjHXKJ6V4sw9zeyox34n9aCg==}
 
   flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
@@ -3559,9 +3550,6 @@ packages:
 
   get-port-please@3.1.2:
     resolution: {integrity: sha512-Gxc29eLs1fbn6LQ4jSU4vXjlwyZhF5HsGuMAa7gqBP4Rw4yxxltyDUuF5MBclFzDTXO+ACchGQoeela4DSfzdQ==}
-
-  get-size@2.0.3:
-    resolution: {integrity: sha512-lXNzT/h/dTjTxRbm9BXb+SGxxzkm97h/PCIKtlN/CBCxxmkkIVV21udumMS93MuVTDX583gqc94v3RjuHmI+2Q==}
 
   get-stream@6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
@@ -3797,9 +3785,6 @@ packages:
 
   image-meta@0.2.0:
     resolution: {integrity: sha512-ZBGjl0ZMEMeOC3Ns0wUF/5UdUmr3qQhBSCniT0LxOgGGIRHiNFOkMtIHB7EOznRU47V2AxPgiVP+s+0/UCU0Hg==}
-
-  imagesloaded@4.1.4:
-    resolution: {integrity: sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA==}
 
   immutable@4.3.6:
     resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
@@ -4253,9 +4238,6 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  masonry-layout@4.2.2:
-    resolution: {integrity: sha512-iGtAlrpHNyxaR19CvKC3npnEcAwszXoyJiI8ARV2ePi7fmYhIud25MHK8Zx4P0LCC4d3TNO9+rFa1KoK1OEOaA==}
-
   mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
 
@@ -4559,6 +4541,9 @@ packages:
   nuxt-site-config@2.2.12:
     resolution: {integrity: sha512-a2pmr4NEa1ZgZoD0guKrX+gpVpntOpqBTRBJ6zv+PqAwvltdeau2zRZBGZ2N7kFnGaGolonb2fBN+YzQh3dSDQ==}
 
+  nuxt-vitalizer@0.10.0:
+    resolution: {integrity: sha512-z5leudr8wD2msKl7ETLGUICSOVoXVLMA8bAeRuWN4/UuYl7g7G2k7Idzl1z8ft/VmoYZ9ld3J0/2UZOZuxxzog==}
+
   nuxt3-leaflet@1.0.13:
     resolution: {integrity: sha512-uTcDVixwtSpBzkFD15S/njAPrlAJ48/g5/JfRgf2tsAVbQYCXN1VIlMvvjDMZw8bu2eKuO/1T3GeviS7S6QjcA==}
 
@@ -4627,9 +4612,6 @@ packages:
 
   orderedmap@2.1.1:
     resolution: {integrity: sha512-TvAWxi0nDe1j/rtMcWcIj94+Ffe6n7zhow33h40SKxmsmozs6dz/e+EajymfoFcHd7sxNn8yHM8839uixMOV6g==}
-
-  outlayer@2.1.1:
-    resolution: {integrity: sha512-+GplXsCQ3VrbGujAeHEzP9SXsBmJxzn/YdDSQZL0xqBmAWBmortu2Y9Gwdp9J0bgDQ8/YNIPMoBM13nTwZfAhw==}
 
   p-finally@1.0.0:
     resolution: {integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==}
@@ -5995,17 +5977,6 @@ packages:
       chart.js: ^4.1.1
       vue: ^3.0.0-0 || ^2.7.0
 
-  vue-demi@0.13.11:
-    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
-    engines: {node: '>=12'}
-    hasBin: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-
   vue-demi@0.14.8:
     resolution: {integrity: sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==}
     engines: {node: '>=12'}
@@ -6031,15 +6002,6 @@ packages:
     engines: {node: '>= 16'}
     peerDependencies:
       vue: ^3.0.0
-
-  vue-masonry@0.16.0:
-    resolution: {integrity: sha512-0Wi/BH4iYYRrAAFY/wokczz0lWWPg1vmOvFW4aC2nKybKf6kVqUvFfR9/+izDfzG657/vY+Om0gqOB5YPxPxuQ==}
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^2.0.0 || >=3.0.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
 
   vue-resize@2.0.0-alpha.1:
     resolution: {integrity: sha512-7+iqOueLU7uc9NrMfrzbG8hwMqchfVfSzpVlCMeJQe4pyibqyoifDNbKTZvwxZKDvGkB+PdFeKvnGZMoEb8esg==}
@@ -9860,8 +9822,6 @@ snapshots:
 
   depd@2.0.0: {}
 
-  desandro-matches-selector@2.0.2: {}
-
   destr@2.0.3: {}
 
   destroy@1.2.0: {}
@@ -10227,8 +10187,6 @@ snapshots:
 
   etag@1.8.1: {}
 
-  ev-emitter@1.1.1: {}
-
   event-reduce-js@5.2.7:
     dependencies:
       array-push-at-sort-position: 4.0.1
@@ -10369,10 +10327,6 @@ snapshots:
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
 
-  fizzy-ui-utils@2.0.7:
-    dependencies:
-      desandro-matches-selector: 2.0.2
-
   flat-cache@3.2.0:
     dependencies:
       flatted: 3.3.1
@@ -10479,8 +10433,6 @@ snapshots:
       hasown: 2.0.2
 
   get-port-please@3.1.2: {}
-
-  get-size@2.0.3: {}
 
   get-stream@6.0.1: {}
 
@@ -10722,10 +10674,6 @@ snapshots:
   ignore@5.3.1: {}
 
   image-meta@0.2.0: {}
-
-  imagesloaded@4.1.4:
-    dependencies:
-      ev-emitter: 1.1.1
 
   immutable@4.3.6: {}
 
@@ -11169,11 +11117,6 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  masonry-layout@4.2.2:
-    dependencies:
-      get-size: 2.0.3
-      outlayer: 2.1.1
-
   mdn-data@2.0.28: {}
 
   mdn-data@2.0.30: {}
@@ -11587,6 +11530,16 @@ snapshots:
       - vue
       - webpack
 
+  nuxt-vitalizer@0.10.0(magicast@0.3.4)(rollup@4.18.0):
+    dependencies:
+      '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@4.18.0)
+      defu: 6.1.4
+      knitwork: 1.1.0
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+
   nuxt3-leaflet@1.0.13(typescript@5.5.2):
     dependencies:
       '@types/leaflet': 1.9.12
@@ -11768,12 +11721,6 @@ snapshots:
       word-wrap: 1.2.5
 
   orderedmap@2.1.1: {}
-
-  outlayer@2.1.1:
-    dependencies:
-      ev-emitter: 1.1.1
-      fizzy-ui-utils: 2.0.7
-      get-size: 2.0.3
 
   p-finally@1.0.0: {}
 
@@ -13245,10 +13192,6 @@ snapshots:
       chart.js: 4.4.3
       vue: 3.4.31(typescript@5.5.2)
 
-  vue-demi@0.13.11(vue@3.4.31(typescript@5.5.2)):
-    dependencies:
-      vue: 3.4.31(typescript@5.5.2)
-
   vue-demi@0.14.8(vue@3.4.31(typescript@5.5.2)):
     dependencies:
       vue: 3.4.31(typescript@5.5.2)
@@ -13274,14 +13217,6 @@ snapshots:
       '@intlify/shared': 9.13.1
       '@vue/devtools-api': 6.6.3
       vue: 3.4.31(typescript@5.5.2)
-
-  vue-masonry@0.16.0(vue@3.4.31(typescript@5.5.2)):
-    dependencies:
-      imagesloaded: 4.1.4
-      masonry-layout: 4.2.2
-      mitt: 3.0.1
-      vue: 3.4.31(typescript@5.5.2)
-      vue-demi: 0.13.11(vue@3.4.31(typescript@5.5.2))
 
   vue-resize@2.0.0-alpha.1(vue@3.4.31(typescript@5.5.2)):
     dependencies:

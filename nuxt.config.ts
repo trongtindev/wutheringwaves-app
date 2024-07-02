@@ -41,7 +41,8 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     '@nuxtjs/device',
-    'nuxt3-leaflet'
+    'nuxt3-leaflet',
+    'nuxt-vitalizer'
   ],
   build: {
     transpile: ['vuetify']
@@ -78,6 +79,9 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['./composables', './components']
   },
+  vitalizer: {
+    disableStylesheets: 'entry'
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
     defaultLocale: 'en',
@@ -104,10 +108,13 @@ export default defineNuxtConfig({
       }
     },
     build: {
+      ssr: true,
       terserOptions: {
         compress: {
-          drop_console: false
-        }
+          drop_console: false,
+          keep_classnames: false
+        },
+        ie8: false
       },
       rollupOptions: {
         output: {

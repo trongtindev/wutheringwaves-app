@@ -146,7 +146,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
     <v-card>
       <v-card-text>
-        <div class="mb-4">
+        <div class="mb-2">
           <v-row>
             <v-col cols="12" md="8">
               <v-select
@@ -154,11 +154,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                 :placeholder="$t('Select banner')"
                 :items="banners"
                 :return-object="true"
-                :item-title="
-                  (e) => {
-                    return e.name[i18n.locale.value] || e.name.en;
-                  }
-                "
+                :item-title="(e) => $t(e.name)"
                 :clearable="true"
               />
             </v-col>

@@ -233,7 +233,7 @@ watch(
               @click="() => onPressedSignIn()"
             >
               <v-icon :icon="mdiLogin" />
-              <span class="hidden-sm-and-down ml-2">
+              <span class="ml-2">
                 {{ $t('common.signIn') }}
               </span>
             </v-btn>

@@ -14,4 +14,5 @@ export interface ISearchResult {
   icon?: string;
   name: string;
   nameLocalized?: ILocalized;
+  rarity?: number;
 }
