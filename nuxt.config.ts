@@ -41,7 +41,8 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     '@nuxtjs/device',
-    'nuxt3-leaflet'
+    'nuxt3-leaflet',
+    'nuxt-vitalizer'
   ],
   build: {
     transpile: ['vuetify']
@@ -78,6 +79,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['./composables', './components']
   },
+  // modules config
   vitalizer: {
     disableStylesheets: 'entry'
   },
@@ -97,9 +99,6 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./composables/**']
   },
-  eslint: {
-    // checker: true
-  },
   vite: {
     vue: {
       template: {
@@ -107,13 +106,11 @@ export default defineNuxtConfig({
       }
     },
     build: {
-      ssr: true,
       terserOptions: {
         compress: {
           drop_console: false,
-          keep_classnames: false
-        },
-        ie8: false
+          keep_classnames: false,
+        }
       },
       rollupOptions: {
         output: {
@@ -165,6 +162,7 @@ export default defineNuxtConfig({
   appConfig: {
     buildNumber: Date.now()
   },
+  // environments
   runtimeConfig: {
     public: {
       // app

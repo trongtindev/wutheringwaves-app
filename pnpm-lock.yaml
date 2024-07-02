@@ -186,6 +186,9 @@ importers:
       nuxt-schema-org:
         specifier: ^3.3.8
         version: 3.3.8(@nuxt/devtools@1.3.7(rollup@4.18.0)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)(terser@5.31.1)))(@unocss/webpack@0.61.0(rollup@4.18.0)(webpack@5.92.0(esbuild@0.21.5)))(@vue/compiler-core@3.4.31)(axios@1.7.2)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.9)(@upstash/redis@1.31.6)(@vercel/kv@1.0.1)(encoding@0.1.13)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.24(typescript@5.5.3)))(postcss@8.4.39)(rollup@4.18.0)(vite@5.3.2(@types/node@20.14.9)(sass@1.77.6)(terser@5.31.1))(vue@3.4.31(typescript@5.5.3))(webpack@5.92.0(esbuild@0.21.5))
+      nuxt-vitalizer:
+        specifier: ^0.10.0
+        version: 0.10.0(magicast@0.3.4)(rollup@4.18.0)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -4535,6 +4538,9 @@ packages:
 
   nuxt-site-config@2.2.12:
     resolution: {integrity: sha512-a2pmr4NEa1ZgZoD0guKrX+gpVpntOpqBTRBJ6zv+PqAwvltdeau2zRZBGZ2N7kFnGaGolonb2fBN+YzQh3dSDQ==}
+
+  nuxt-vitalizer@0.10.0:
+    resolution: {integrity: sha512-z5leudr8wD2msKl7ETLGUICSOVoXVLMA8bAeRuWN4/UuYl7g7G2k7Idzl1z8ft/VmoYZ9ld3J0/2UZOZuxxzog==}
 
   nuxt3-leaflet@1.0.13:
     resolution: {integrity: sha512-uTcDVixwtSpBzkFD15S/njAPrlAJ48/g5/JfRgf2tsAVbQYCXN1VIlMvvjDMZw8bu2eKuO/1T3GeviS7S6QjcA==}
@@ -11520,6 +11526,16 @@ snapshots:
       - vite
       - vue
       - webpack
+
+  nuxt-vitalizer@0.10.0(magicast@0.3.4)(rollup@4.18.0):
+    dependencies:
+      '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@4.18.0)
+      defu: 6.1.4
+      knitwork: 1.1.0
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
 
   nuxt3-leaflet@1.0.13(typescript@5.5.3):
     dependencies:
