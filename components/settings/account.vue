@@ -1,4 +1,9 @@
 <script setup lang="ts">
+// define
+const emits = defineEmits<{
+  (e: 'on-updated'): void;
+}>();
+
 // uses
 const i18n = useI18n();
 const dialog = useDialog();
@@ -20,6 +25,9 @@ const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
     });
   }
 };
+
+// lifecycle
+onNuxtReady(() => emits('on-updated'));
 </script>
 
 <template>
@@ -42,7 +50,7 @@ const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
       </v-list>
 
       <v-card-text v-else>
-        <v-alert color="info" :text="$t('settings.accounts.empty')" />
+        {{ $t('settings.accounts.empty') }}
       </v-card-text>
     </v-card>
   </div>

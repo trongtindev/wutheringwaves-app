@@ -29,35 +29,17 @@ useHead({
       ]"
     />
 
-    <v-alert
-      v-if="!auth.isLoggedIn"
-      type="warning"
-      class="mb-4"
-      :text="$t('Sign in to sync settings and data')"
-    />
-
     <client-only>
-      <v-row>
-        <v-col cols="12" sm="6">
+      <masonry>
+        <template #default="masonry">
           <settings-notification />
-        </v-col>
-
-        <v-col cols="12" sm="6">
           <settings-account />
-        </v-col>
-
-        <v-col cols="12" sm="6">
           <settings-cloud-backup />
-        </v-col>
-
-        <v-col cols="12" sm="6">
           <settings-analytics />
-        </v-col>
-
-        <v-col cols="12" sm="6">
+          <settings-export-data @on-updated="masonry.refreshLayout" />
           <settings-erase-data />
-        </v-col>
-      </v-row>
+        </template>
+      </masonry>
     </client-only>
   </div>
 </template>

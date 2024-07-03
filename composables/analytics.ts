@@ -10,16 +10,22 @@ export const useAnalytics = defineStore('useAnalytics', () => {
 
   // states
   const isInitialized = ref(false);
-  const optOut = useLocalStorage('analytics.optOut', false);
+  const optOut = useCookie<boolean>('analytics.optOut');
   const analytics = ref<Analytics>();
   const performance = ref<FirebasePerformance>();
   const firebaseLogEvent = ref();
 
+  // computed
+  const dataCollectionEnabled = computed(() => {
+    return !import.meta.dev && !optOut.value && !device.isCrawler;
+  });
+
   // functions
   const initialize = async () => {
-    if (import.meta.dev) return;
     if (device.isCrawler) return;
     if (isInitialized.value) return;
+    if (!dataCollectionEnabled.value) return;
+    console.debug('useAnalytics', 'initialize');
 
     const { getAnalytics, logEvent: _logEvent } = await import(
       'firebase/analytics'

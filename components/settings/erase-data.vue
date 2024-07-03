@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { mdiTrashCan } from '@mdi/js';
 
+// define
+const emits = defineEmits<{
+  (e: 'on-updated'): void;
+}>();
+
 // uses
 const i18n = useI18n();
 const auth = useAuth();
@@ -43,16 +48,12 @@ const onPressedConfirm = async (isConfirmed?: boolean) => {
   <div>
     <v-card color="error" variant="outlined">
       <v-card-title>
-        {{ $t('Erase All Data') }}
+        {{ $t('settings.data.erase.title') }}
       </v-card-title>
       <v-divider />
 
       <v-card-text>
-        {{
-          $t(
-            'Erase All Data will clear all data and settings in your device and cloud backup. Please confirm that you have backed up important data of your account.'
-          )
-        }}
+        {{ $t('settings.data.erase.message') }}
       </v-card-text>
       <v-divider />
 
@@ -60,7 +61,7 @@ const onPressedConfirm = async (isConfirmed?: boolean) => {
         <v-btn
           :disabled="state != ''"
           :loading="state == 'erase'"
-          :text="$t('Erase Now')"
+          :text="$t('settings.data.erase.button')"
           :prepend-icon="mdiTrashCan"
           color="error"
           variant="outlined"

@@ -43,10 +43,12 @@ export type MyDatabase = RxDatabase<DatabaseCollections>;
 
 export const useDatabase = defineStore('useDatabase', () => {
   let db: MyDatabase;
-  let emitChanged: any;
 
   // uses
   const i18n = useI18n();
+  const onChangedDebounce = useDebounceFn(() => {
+    isChanged.value = randomId();
+  }, 500);
 
   // states
   const state = ref<'' | 'initializing' | 'migration'>('');
@@ -159,31 +161,41 @@ export const useDatabase = defineStore('useDatabase', () => {
           db.convenes.preInsert((plainData) => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
-          db.convenes.postInsert(() => onChanged(), false);
+          db.convenes.postInsert(() => onChangedDebounce(), false);
+          db.convenes.postSave(() => onChangedDebounce(), false);
+          // db.convenes.postRemove(() => onChangedDebounce(), false);
 
           // settings
           db.settings.preInsert((plainData) => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
-          db.settings.postInsert(() => onChanged(), false);
+          db.settings.postInsert(() => onChangedDebounce(), false);
+          db.settings.postSave(() => onChangedDebounce(), false);
+          db.settings.postRemove(() => onChangedDebounce(), false);
 
           // accounts
           db.accounts.preInsert((plainData) => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
-          db.accounts.postInsert(() => onChanged(), false);
+          db.accounts.postInsert(() => onChangedDebounce(), false);
+          db.accounts.postSave(() => onChangedDebounce(), false);
+          // db.accounts.postRemove(() => onChangedDebounce(), false);
 
           // map
           db.markers.preInsert((plainData) => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
-          db.markers.postInsert(() => onChanged(), false);
+          db.markers.postInsert(() => onChangedDebounce(), false);
+          db.markers.postSave(() => onChangedDebounce(), false);
+          db.markers.postRemove(() => onChangedDebounce(), false);
 
           // character
           db.characters.preInsert((plainData) => {
             plainData.createdAt ??= new Date().getTime();
           }, false);
-          db.characters.postInsert(() => onChanged(), false);
+          db.characters.postInsert(() => onChangedDebounce(), false);
+          db.characters.postSave(() => onChangedDebounce(), false);
+          // db.characters.postRemove(() => onChangedDebounce(), false);
 
           state.value = '';
           isInitialized.value = true;
@@ -221,17 +233,6 @@ export const useDatabase = defineStore('useDatabase', () => {
   const eraseAllData = async () => {
     console.warn('eraseAllData', await db.remove());
     console.warn('eraseAllData', await db.destroy());
-  };
-
-  // events
-  const onChanged = (emit?: boolean) => {
-    if (emit) {
-      console.log('database', 'onChanged');
-      isChanged.value = randomId();
-    } else {
-      if (emitChanged) clearTimeout(emitChanged);
-      emitChanged = setTimeout(() => onChanged(true), 250);
-    }
   };
 
   return {

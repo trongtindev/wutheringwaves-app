@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia';
 
 export const useBackup = defineStore('useBackup', () => {
-  let checkSyncQueue: any;
-
   // uses
   const api = useApi();
   const i18n = useI18n();
@@ -10,6 +8,7 @@ export const useBackup = defineStore('useBackup', () => {
   const dialog = useDialog();
   const snackbar = useSnackbar();
   const database = useDatabase();
+  const checkSyncDebounce = useDebounceFn(() => checkSync(), 2500);
 
   // states
   const state = ref<'' | 'syncing' | 'synced' | 'restore'>('');
@@ -185,30 +184,28 @@ export const useBackup = defineStore('useBackup', () => {
   };
 
   // changes
-  if (import.meta.client) {
-    watch(
-      () => auth.isLoggedIn,
-      (value) => {
-        if (value && database.isInitialized) checkSync();
+  watch(
+    () => auth.isLoggedIn,
+    (value) => {
+      if (value && database.isInitialized) checkSync();
+    }
+  );
+
+  watch(
+    () => database.isChanged,
+    () => {
+      lastLocalChanged.value = new Date().getTime();
+      if (auth.isLoggedIn) {
+        checkSyncDebounce();
       }
-    );
+    }
+  );
 
-    watch(
-      () => database.isChanged,
-      () => {
-        lastLocalChanged.value = new Date().getTime();
+  watch(lastLocalChanged, (value) => {
+    localStorage.setItem('lastLocalChanged', value.toString());
+  });
 
-        if (!auth.isLoggedIn) return;
-        if (checkSyncQueue) clearTimeout(checkSyncQueue);
-        checkSyncQueue = setTimeout(() => checkSync(), 5000);
-      }
-    );
-
-    watch(lastLocalChanged, (value) => {
-      localStorage.setItem('lastLocalChanged', value.toString());
-    });
-  }
-
+  // exports
   return {
     state,
     status: state,

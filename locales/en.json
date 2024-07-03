@@ -268,6 +268,18 @@
       "title": "Analytics",
       "optOut": "Opt-out",
       "optOutSubtitle": "You can opt-out of Google Analytics"
+    },
+    "data": {
+      "export": {
+        "title": "Export Data",
+        "message": "You can download your convene data for backup or move it to another site.",
+        "button": "Download"
+      },
+      "erase": {
+        "title": "Erase All Data",
+        "message": "Erase All Data will clear all data and settings in your device and cloud backup. Please confirm that you have backed up important data of your account.",
+        "button": "Erase Now"
+      }
     }
   },
   "comments": {
@@ -332,6 +344,13 @@
     "alert": "You can search everything there is on Astrite.app.",
     "alertTips": "Press the key combination Ctrl + Space to open the fastest search box!",
     "placeholder": "Item, echo, trophy, character,..."
+  },
+  "electron": {
+    "desktopApp": {
+      "title": "Desktop App",
+      "introduce": "The desktop app helps you track echos, chests, quickly view information about in-game items, and more.",
+      "download": "Download"
+    }
   },
   "common": {
     "name": "Name",
@@ -401,6 +420,7 @@
     "editThisPage": "Edit this page",
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
-    "beta": "Beta"
+    "beta": "Beta",
+    "notice": "Notice"
   }
 }

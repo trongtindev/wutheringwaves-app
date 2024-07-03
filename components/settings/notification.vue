@@ -34,7 +34,10 @@ const { isIos } = useDevice();
           :subtitle="$t('settings.notification.enabledSubtitle')"
         >
           <template #append>
-            <v-switch v-model="notification.enabled" :disabled="true" />
+            <v-switch
+              v-model="notification.enabled"
+              :disabled="!notification.isSupported"
+            />
           </template>
         </v-list-item>
       </v-list>

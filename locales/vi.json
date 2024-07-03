@@ -248,6 +248,18 @@
       "title": "Analytics",
       "optOut": "Opt-out",
       "optOutSubtitle": "You can opt-out of Google Analytics"
+    },
+    "data": {
+      "export": {
+        "title": "Export Data",
+        "message": "Bạn có thể tải xuống dữ liệu triệu hồi của mình để lưu trữ hoặc di chuyển sang một trang web khác.",
+        "button": "Download"
+      },
+      "erase": {
+        "title": "Erase All Data",
+        "message": "Erase All Data will clear all data and settings in your device and cloud backup. Please confirm that you have backed up important data of your account.",
+        "button": "Erase Now"
+      }
     }
   },
   "comments": {
@@ -302,6 +314,13 @@
     "alert": "Bạn có thể tìm kiếm tất cả mọi thứ có trên Astrite.app.",
     "alertTips": "Nhấn tổ hợp phím Ctrl + Space để mở hộp tìm kiếm nhanh nhất!",
     "placeholder": "Vật phẩm, echo, thành tựu, nhân vật,..."
+  },
+  "electron": {
+    "desktopApp": {
+      "title": "Desktop App",
+      "introduce": "The desktop app helps you track echos, chests, quickly view information about in-game items, and more.",
+      "download": "Download"
+    }
   },
   "common": {
     "name": "Tên",
@@ -371,6 +390,7 @@
     "editThisPage": "Sửa trang này",
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
-    "beta": "Beta"
+    "beta": "Beta",
+    "notice": "Notice"
   }
 }

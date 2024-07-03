@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiGithub, mdiChevronRight, mdiOpenInNew } from '@mdi/js';
+import { mdiGithub, mdiChevronRight, mdiOpenInNew, mdiDownload } from '@mdi/js';
 
 // uses
 const app = useApp();
@@ -53,6 +53,29 @@ useSeoMeta({
               <h3 class="text-h6">{{ i18n.t('meta.description') }}</h3>
             </div>
           </div>
+        </v-card>
+
+        <!-- desktop app -->
+        <v-card>
+          <v-card-title>
+            {{ $t('electron.desktopApp.title') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>
+            <!-- <v-responsive :aspect-ratio="2 / 1" class="border rounded mb-2" /> -->
+            {{ $t('electron.desktopApp.introduce') }}
+          </v-card-text>
+          <v-divider />
+
+          <v-card-actions class="d-flex justify-end">
+            <v-btn
+              variant="text"
+              :disabled="true"
+              :text="$t('common.upcoming')"
+              :append-icon="mdiDownload"
+            />
+          </v-card-actions>
         </v-card>
 
         <!-- current event -->
