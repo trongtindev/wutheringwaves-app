@@ -2,15 +2,20 @@
 import { type ConveneDocument } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
 
-// uses
-const i18n = useI18n();
-const account = useAccount();
-const database = useDatabase();
-
+// define
 const props = defineProps<{
   title: string;
   type: CardPoolType;
 }>();
+
+const emits = defineEmits<{
+  (e: 'on-updated'): void;
+}>();
+
+// uses
+const i18n = useI18n();
+const account = useAccount();
+const database = useDatabase();
 
 // states
 const convenes = ref<ConveneDocument[]>();
@@ -66,6 +71,10 @@ const initialize = async () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       convenes.value = result as any;
       guaranteedAt.value = 80;
+
+      setTimeout(() => {
+        emits('on-updated');
+      }, 250);
     })
     .catch(console.warn);
 };
@@ -83,7 +92,7 @@ if (import.meta.client) {
 </script>
 
 <template>
-  <v-card class="fill-height">
+  <v-card>
     <v-card-title>
       {{ props.title }}
     </v-card-title>

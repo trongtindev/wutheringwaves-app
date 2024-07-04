@@ -56,7 +56,7 @@ export default defineNuxtConfig({
       '/api/__sitemap__/weapons'
     ]
   },
-  css: ['~/assets/tiptap.scss'],
+  css: ['~/assets/tiptap.scss', '~/assets/vuetify.css'],
   typescript: {
     strict: true
   },

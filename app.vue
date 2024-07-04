@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import '@@/assets/app.css';
-import '@@/assets/vuetify.css';
 import dayjs from 'dayjs';
 import { useLocale } from 'vuetify';
 

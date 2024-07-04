@@ -86,7 +86,11 @@
     "guides": "Hướng dẫn",
     "items": "Vật phẩm",
     "comparison": "So sánh",
-    "database": "Database"
+    "database": "Database",
+    "convene": "Triệu hồi",
+    "conveneShowcase": "Showcase",
+    "conveneGlobalStats": "Thống kê toàn cầu",
+    "conveneImport": "Nhập lịch sử"
   },
   "items": {
     "title": "Vật phẩm",
@@ -128,7 +132,9 @@
     },
     "history": {
       "title": "Lịch sử triệu hồi",
-      "alert": "Nhập và sao lưu lịch sử triệu hồi Wuthering Waves của bạn để lưu giữ nó trong hơn 6 tháng. Nó cũng tự động theo dõi pity và số liệu thống kê về các lần triệu hồi của bạn!"
+      "alert": "Nhập và sao lưu lịch sử triệu hồi Wuthering Waves của bạn để lưu giữ nó trong hơn 6 tháng. Nó cũng tự động theo dõi pity và số liệu thống kê về các lần triệu hồi của bạn!",
+      "pullByDay": "Pull by day",
+      "totalPull": "Total Pull"
     },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",
     "lifetimePulls": "Tổng số lần",
@@ -164,7 +170,10 @@
       "median": "5★ Median",
       "totalUsers": "Total Users",
       "conveneTotal": "Convene Total",
-      "worth": "Worth"
+      "worth": "Worth",
+      "pullByDay": "Pull by day",
+      "totalPull": "Total Pull",
+      "chance": "Chance"
     }
   },
   "showcase": {
@@ -319,7 +328,7 @@
   "electron": {
     "desktopApp": {
       "title": "Desktop App",
-      "introduce": "The desktop app helps you track echos, chests, quickly view information about in-game items, and more.",
+      "introduce": "Với ứng dụng desktop, bạn có thể nhập lịch sử convene một cách tự động, xem bản đồ trực tiếp ngay trong trò chơi, xem thông tin vật phẩm và nhiều hơn thế nữa.",
       "download": "Download"
     }
   },

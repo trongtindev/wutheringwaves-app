@@ -38,7 +38,7 @@ const urlTemplate = computed(() => {
   if (import.meta.dev && route.query.localTiles) {
     return '/map/tiles/{z}/{getX}_{getY}.webp';
   }
-  return `https://files.astrite.app/tiles/{z}/{getX}/{getY}.webp?v=${appConfig.buildNumber}`;
+  return `https://files.astrite.app/tiles/{z}/{getX}_{getY}.webp?v=${appConfig.buildNumber}`;
 });
 
 const displayMarkers = computed(() => {
@@ -126,14 +126,12 @@ const initialize = () => {
 
 // lifecycle
 onNuxtReady(() => {
-  app.fluid = true;
   sidebar.open = false;
 
   setTimeout(initialize, 1000);
 });
 
 onUnmounted(() => {
-  app.fluid = true;
   sidebar.open = true;
 });
 

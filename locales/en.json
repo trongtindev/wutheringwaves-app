@@ -95,7 +95,11 @@
     "guides": "Guides",
     "items": "Items",
     "comparison": "Comparison",
-    "database": "Database"
+    "database": "Database",
+    "convene": "Convene",
+    "conveneShowcase": "Showcase",
+    "conveneGlobalStats": "Global Stats",
+    "conveneImport": "Import history"
   },
   "items": {
     "title": "Items",
@@ -137,7 +141,9 @@
     },
     "history": {
       "title": "Convene History",
-      "alert": "Import and backup your Wuthering Waves convene history to keep it for more than 6 months. It also automatically tracks your pity and statistics about your convenes!"
+      "alert": "Import and backup your Wuthering Waves convene history to keep it for more than 6 months. It also automatically tracks your pity and statistics about your convenes!",
+      "pullByDay": "Pull by day",
+      "totalPull": "Total Pull"
     },
     "guaranteedAt": "Guaranteed at {0}",
     "lifetimePulls": "Lifetime Pulls",
@@ -173,7 +179,10 @@
       "median": "5★ Median",
       "totalUsers": "Total Users",
       "conveneTotal": "Convene Total",
-      "worth": "Worth"
+      "worth": "Worth",
+      "pullByDay": "Pull by day",
+      "totalPull": "Total Pull",
+      "chance": "Chance"
     }
   },
   "showcase": {
@@ -349,7 +358,7 @@
   "electron": {
     "desktopApp": {
       "title": "Desktop App",
-      "introduce": "The desktop app helps you track echos, chests, quickly view information about in-game items, and more.",
+      "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
       "download": "Download"
     }
   },

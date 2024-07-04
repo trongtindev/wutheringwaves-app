@@ -107,6 +107,16 @@ export const useDatabase = defineStore('useDatabase', () => {
                 3: function (oldDoc) {
                   oldDoc.win = false;
                   return oldDoc;
+                },
+                4: function (oldDoc) {
+                  if (oldDoc.resourceType === 'Resonators') {
+                    // Kuro has change Resonators => Resonator
+                    oldDoc.resourceType = 'Resonator';
+                  } else if (oldDoc.resourceType === 'Weapons') {
+                    // Kuro has change Weapons => Weapon
+                    oldDoc.resourceType = 'Weapon';
+                  }
+                  return oldDoc;
                 }
               }
             },

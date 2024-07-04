@@ -43,7 +43,7 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
 };
 
 export const conveneSchema: RxJsonSchema<ConveneDocType> = {
-  version: 3,
+  version: 4,
   keyCompression: false,
   primaryKey: '_id',
   type: 'object',

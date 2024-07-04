@@ -7,7 +7,7 @@ const props = defineProps<{
 
 // computed
 const imageUrl = computed(() => {
-  const path = props.data.resourceType == 'Weapons' ? 'weapons' : 'characters';
+  const path = props.data.resourceType == 'Weapon' ? 'weapons' : 'characters';
   return `/${path}/icons/${props.data.slug}.webp`;
 });
 </script>

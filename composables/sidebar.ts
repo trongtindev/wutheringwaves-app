@@ -17,7 +17,7 @@ import {
 
 export interface IMenu {
   url?: string;
-  icon: string;
+  icon?: string;
   title: string;
   items?: IMenu[];
   beta?: boolean;
@@ -43,9 +43,26 @@ export const useSidebar = defineStore('useSidebar', () => {
       title: 'sidebar.home'
     },
     {
-      url: '/convene-history',
       icon: mdiCounter,
-      title: 'sidebar.conveneHistory'
+      title: 'sidebar.convene',
+      items: [
+        {
+          url: '/convene-history',
+          title: 'sidebar.conveneHistory'
+        },
+        {
+          url: '/convene-history/import',
+          title: 'sidebar.conveneImport'
+        },
+        {
+          url: '/convene-history/global',
+          title: 'sidebar.conveneGlobalStats'
+        },
+        {
+          url: '/showcase/convene',
+          title: 'sidebar.conveneShowcase'
+        }
+      ]
     },
     {
       url: '/timeline',

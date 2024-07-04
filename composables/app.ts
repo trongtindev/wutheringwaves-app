@@ -20,7 +20,7 @@ export const useApp = defineStore('useApp', () => {
   const githubRepo = computed(() => APP_REPO);
 
   // states
-  const fluid = ref(false);
+  const fluid = ref(true);
 
   // computed
   const inDev = computed(() => import.meta.dev);

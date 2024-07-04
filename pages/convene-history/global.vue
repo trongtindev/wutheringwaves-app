@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import urlSlug from 'url-slug';
+import { CardPoolType, type IBanner } from '~/interfaces/banner';
 import { Bar, Line } from 'vue-chartjs';
 import {
   Chart as ChartJS,
@@ -12,8 +13,6 @@ import {
   CategoryScale,
   LinearScale
 } from 'chart.js';
-import { CardPoolType, type IBanner } from '~/interfaces/banner';
-
 ChartJS.register(
   Title,
   Tooltip,
@@ -69,6 +68,48 @@ const bannerType = computed(() => {
     }
   }
   return 'characters';
+});
+
+const pbdRange = computed(() => {
+  return Array.from(Array(14).keys()).map((i) => {
+    return dayjs().subtract(14 - i, 'day');
+  });
+});
+
+const pbdLabels = computed(() => {
+  const format = i18n.locale.value === 'vi' ? 'DD/MM' : 'MM/DD';
+  return pbdRange.value.map((e) => {
+    return e.format(format);
+  });
+});
+
+const pbdDatasets = computed(() => {
+  return pbdRange.value.map((e) => {
+    return 0;
+  });
+});
+
+const rateRange = computed(() => {
+  return Array.from(Array(90).keys()).map((i) => {
+    return i + 1;
+  });
+});
+
+const rateLabels = computed(() => {
+  return rateRange.value;
+});
+
+const rcRange = computed(() => {
+  return Array.from(Array(14).keys()).map((i) => {
+    return dayjs().subtract(14 - i, 'day');
+  });
+});
+
+const rcLabels = computed(() => {
+  const format = i18n.locale.value === 'vi' ? 'DD/MM' : 'MM/DD';
+  return rcRange.value.map((e) => {
+    return e.format(format);
+  });
 });
 
 // functions
@@ -168,12 +209,14 @@ useSeoMeta({
     <!-- thumbnails -->
     <v-row class="mt-2">
       <v-col cols="12" sm="6">
-        <v-responsive :aspect-ratio="16 / 9" class="border rounded bg-image">
-          <v-img
-            v-if="displayBanner && displayBanner.thumbnail"
-            :src="displayBanner.thumbnail"
-          />
-        </v-responsive>
+        <v-card>
+          <v-responsive :aspect-ratio="16 / 9" class="rounded">
+            <v-img
+              v-if="displayBanner && displayBanner.thumbnail"
+              :src="displayBanner.thumbnail"
+            />
+          </v-responsive>
+        </v-card>
       </v-col>
     </v-row>
 
@@ -286,20 +329,39 @@ useSeoMeta({
             maintainAspectRatio: false
           }"
           :data="{
-            labels: [
-              'January',
-              'February',
-              'March',
-              'April',
-              'May',
-              'June',
-              'July'
-            ],
+            labels: pbdLabels,
             datasets: [
               {
                 label: i18n.t('convene.global.pullByDay'),
-                backgroundColor: '#f87979',
-                data: [40, 39, 10, 40, 39, 80, 40]
+                backgroundColor: '#4e7cff',
+                data: pbdDatasets
+              }
+            ]
+          }"
+        />
+      </v-card-text>
+    </v-card>
+
+    <!-- rate -->
+    <v-card class="mt-2">
+      <v-card-text>
+        <bar
+          id="rate"
+          :options="{
+            responsive: true
+          }"
+          :data="{
+            labels: rateLabels,
+            datasets: [
+              {
+                data: [40],
+                label: i18n.t('convene.global.chance'),
+                backgroundColor: '#4e7cff'
+              },
+              {
+                data: [40],
+                label: i18n.t('convene.global.totalPull'),
+                backgroundColor: '#ffb13f'
               }
             ]
           }"
@@ -311,20 +373,69 @@ useSeoMeta({
     <v-card class="mt-2">
       <v-card-text>
         <Bar
-          id="my-chart-id"
+          id="rc"
           :options="{
-            responsive: true
+            responsive: true,
+            scales: {
+              x: {
+                stacked: true
+              },
+              y: {
+                stacked: true
+              }
+            }
           }"
           :data="{
-            labels: ['January', 'February', 'March'],
-            datasets: [{ data: [40, 20, 12] }]
+            labels: rcLabels,
+            datasets: [
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC0',
+                backgroundColor: '#dddddd'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC1',
+                backgroundColor: '#f24a72'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC2',
+                backgroundColor: '#fdaf75'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC3',
+                backgroundColor: '#eaea7f'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC4',
+                backgroundColor: '#6cc4a1'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC5',
+                backgroundColor: '#4d96ff'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: 'RC6',
+                backgroundColor: '#ff6fb5'
+              },
+              {
+                data: [40, 20, 12, 3, 3, 3, 1],
+                label: '> RC6',
+                backgroundColor: '#ab46d2'
+              }
+            ]
           }"
         />
       </v-card-text>
     </v-card>
 
-    <v-row class="mt-4">
-      <v-col>
+    <v-row class="mt-2">
+      <v-col cols="12" md="6">
         <v-card>
           <v-card-title class="text-rarity5">
             {{ $t('convene.global.fiveStar') }}
@@ -332,12 +443,12 @@ useSeoMeta({
           <v-divider />
 
           <v-card-text>
-            <v-alert :text="$t('common.noRecords')" />
+            {{ $t('common.noRecords') }}
           </v-card-text>
         </v-card>
       </v-col>
 
-      <v-col>
+      <v-col cols="12" md="6">
         <v-card>
           <v-card-title class="text-rarity4">
             {{ $t('convene.global.fourStar') }}
@@ -345,7 +456,7 @@ useSeoMeta({
           <v-divider />
 
           <v-card-text>
-            <v-alert :text="$t('common.noRecords')" />
+            {{ $t('common.noRecords') }}
           </v-card-text>
         </v-card>
       </v-col>
