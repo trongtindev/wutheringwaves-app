@@ -13,6 +13,7 @@ import {
   CategoryScale,
   LinearScale
 } from 'chart.js';
+import type { IBannerSummary } from '~/interfaces/convene';
 ChartJS.register(
   Title,
   Tooltip,
@@ -25,11 +26,13 @@ ChartJS.register(
 );
 
 // uses
+const api = useApi();
 const i18n = useI18n();
 const resources = useResources();
 
 // fetch
 const banners = await resources.getBanners();
+const summaryData = ref<IBannerSummary[]>();
 const activeBanners = ref<IBanner[]>([]);
 const displayBanner = ref<IBanner>();
 
@@ -56,6 +59,15 @@ const filterType = ref<number>();
 const filterBanner = ref<string>();
 
 // computed
+const summary = computed(() => {
+  if (displayBanner.value && summaryData.value) {
+    return summaryData.value.find(
+      (e) => e.banner === displayBanner.value!.name
+    );
+  }
+  return undefined;
+});
+
 const bannerType = computed(() => {
   if (displayBanner.value) {
     if (
@@ -77,14 +89,20 @@ const pbdRange = computed(() => {
 });
 
 const pbdLabels = computed(() => {
-  const format = i18n.locale.value === 'vi' ? 'DD/MM' : 'MM/DD';
   return pbdRange.value.map((e) => {
-    return e.format(format);
+    return e.format('YYYY-MM-DD');
   });
 });
 
 const pbdDatasets = computed(() => {
-  return pbdRange.value.map((e) => {
+  return pbdLabels.value.map((label) => {
+    if (summary.value) {
+      const match = summary.value.pullByDay.find((e) => {
+        console.log(e.time, label);
+        return e.time === label;
+      });
+      if (match) return match.total;
+    }
     return 0;
   });
 });
@@ -112,8 +130,41 @@ const rcLabels = computed(() => {
   });
 });
 
+const fiveStarList = computed(() => {
+  if (summary.value) {
+    return summary.value.fiveStarList.map((e) => {
+      const slug = urlSlug(e.item);
+      return {
+        ...e,
+        icon: `/${e.resourceType == 'Weapon' ? 'weapons' : 'characters'}/icons/${slug}.webp`
+      };
+    });
+  }
+  return undefined;
+});
+
+const fourStarList = computed(() => {
+  if (summary.value) {
+    return summary.value.fourStarList.map((e) => {
+      const slug = urlSlug(e.item);
+      return {
+        ...e,
+        icon: `/${e.resourceType == 'Weapon' ? 'weapons' : 'characters'}/icons/${slug}.webp`
+      };
+    });
+  }
+  return undefined;
+});
+
 // functions
 const initialize = () => {
+  api
+    .getInstance()
+    .get<{ items: IBannerSummary[] }>('/convenes/summary')
+    .then((result) => {
+      summaryData.value = result.data.items;
+    });
+
   filterType.value ??= CardPoolType['featured-resonator'];
   displayBanner.value = activeBanners.value.find((e) => {
     return e.name === filterBanner.value;
@@ -173,293 +224,349 @@ useSeoMeta({
       ]"
     />
 
-    <!-- alert -->
-    <alert
-      id="convene.global.alert"
-      class="mb-2"
-      color="info"
-      :text="$t('convene.global.alert', [0])"
-    />
+    <client-only>
+      <!-- alert -->
+      <alert
+        id="convene.global.alert"
+        class="mb-2"
+        color="info"
+        :text="$t('convene.global.alert', [0])"
+      />
 
-    <!-- filter -->
-    <v-row class="mt-1">
-      <v-col cols="12" sm="4">
-        <v-select
-          v-model="filterType"
-          :items="types"
-          :label="$t('Type')"
-          :hide-details="true"
-          item-title="name"
-          item-value="cardPoolType"
-        />
-      </v-col>
+      <!-- filter -->
+      <v-row class="mt-1">
+        <v-col cols="12" sm="4">
+          <v-select
+            v-model="filterType"
+            :items="types"
+            :label="$t('Type')"
+            :hide-details="true"
+            item-title="name"
+            item-value="cardPoolType"
+          />
+        </v-col>
 
-      <v-col cols="12" sm="8">
-        <v-select
-          v-model="filterBanner"
-          :items="activeBanners"
-          :label="$t('Banner')"
-          :hide-details="true"
-          item-title="name"
-          item-value="name"
-        />
-      </v-col>
-    </v-row>
+        <v-col cols="12" sm="8">
+          <v-select
+            v-model="filterBanner"
+            :items="activeBanners"
+            :label="$t('Banner')"
+            :hide-details="true"
+            item-title="name"
+            item-value="name"
+          />
+        </v-col>
+      </v-row>
 
-    <!-- thumbnails -->
-    <v-row class="mt-2">
-      <v-col cols="12" sm="6">
-        <v-card>
-          <v-responsive :aspect-ratio="16 / 9" class="rounded">
-            <v-img
-              v-if="displayBanner && displayBanner.thumbnail"
-              :src="displayBanner.thumbnail"
-            />
-          </v-responsive>
-        </v-card>
-      </v-col>
-    </v-row>
+      <!-- thumbnails -->
+      <v-row class="mt-2">
+        <v-col cols="12" sm="6">
+          <v-card>
+            <v-responsive :aspect-ratio="16 / 9" class="rounded">
+              <v-img
+                v-if="displayBanner && displayBanner.thumbnail"
+                :src="displayBanner.thumbnail"
+              />
+            </v-responsive>
+          </v-card>
+        </v-col>
+      </v-row>
 
-    <!-- summary -->
-    <v-row class="mt-1">
-      <v-col cols="12" sm="9">
-        <v-row>
-          <v-col cols="12" sm="7">
-            <v-card class="fill-height d-flex">
-              <v-card-text>
-                <table>
-                  <tr>
-                    <td class="py-4 pl-4 pr-2 text-center">
-                      <v-avatar :size="128" rounded>
-                        <v-img
-                          v-if="displayBanner && displayBanner.featuredRare"
-                          :src="`/${bannerType}/icons/${urlSlug(displayBanner.featuredRare)}.webp`"
-                        />
-                      </v-avatar>
-                    </td>
+      <!-- summary -->
+      <v-row class="mt-1">
+        <v-col cols="12" sm="9">
+          <v-row>
+            <v-col cols="12" sm="7">
+              <v-card class="fill-height d-flex">
+                <v-card-text>
+                  <table>
+                    <tr>
+                      <td class="py-4 pl-4 pr-2 text-center">
+                        <v-avatar :size="128" rounded>
+                          <v-img
+                            v-if="displayBanner && displayBanner.featuredRare"
+                            :src="`/${bannerType}/icons/${urlSlug(displayBanner.featuredRare)}.webp`"
+                          />
+                        </v-avatar>
+                      </td>
 
-                    <td class="pl-2 pr-2 text-h3" style="width: 50%">
-                      <div class="d-flex justify-end w-100">0</div>
-                    </td>
+                      <td class="pl-2 pr-2 text-h3" style="width: 50%">
+                        <div class="d-flex justify-end w-100">0</div>
+                      </td>
 
-                    <td class="pr-4" style="width: 30%">
-                      <div class="w-100">
-                        <div class="text-h6">
-                          <span v-if="displayBanner">
-                            {{ displayBanner.featuredRare }}
-                          </span>
-                          <span v-else>...</span>
+                      <td class="pr-4" style="width: 30%">
+                        <div class="w-100">
+                          <div class="text-h6">
+                            <span v-if="displayBanner">
+                              {{ displayBanner.featuredRare }}
+                            </span>
+                            <span v-else>...</span>
+                          </div>
+                          <div class="text-gray-400">
+                            {{ $t('common.summoned') }}
+                          </div>
+                          <p class="text-gray-400">0% won 50:50</p>
                         </div>
-                        <div class="text-gray-400">
-                          {{ $t('common.summoned') }}
-                        </div>
-                        <p class="text-gray-400">0% won 50:50</p>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </v-card-text>
-            </v-card>
-          </v-col>
+                      </td>
+                    </tr>
+                  </table>
+                </v-card-text>
+              </v-card>
+            </v-col>
 
-          <v-col cols="12" sm="5">
-            <v-card class="fill-height d-flex align-center">
-              <div class="w-100">
-                <table class="w-100">
+            <v-col cols="12" sm="5">
+              <v-card class="fill-height d-flex align-center">
+                <div class="w-100">
+                  <table class="w-100">
+                    <tr>
+                      <td
+                        style="width: 60%"
+                        class="text-rarity5 py-4 pl-4 pr-2 text-right"
+                      >
+                        <div class="w-100 text-h3">0%</div>
+                      </td>
+
+                      <td style="width: 40%" class="text-rarity5 py-4 pr-4">
+                        <div>★★★★★</div>
+                        <div>Total 0</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td
+                        style="width: 60%"
+                        class="text-rarity4 py-4 pl-4 pr-2 text-right"
+                      >
+                        <div class="w-100 text-h3">0%</div>
+                      </td>
+                      <td style="width: 40%" class="text-rarity4 py-4 pr-4">
+                        <div>★★★★</div>
+                        <div>Total 0</div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+
+        <v-col cols="12" sm="3">
+          <v-card class="fill-height">
+            <v-list>
+              <v-list-item :title="$t('convene.global.median')">
+                <template #append> 0 </template>
+              </v-list-item>
+              <v-list-item :title="$t('convene.global.totalUsers')">
+                <template #append> 0 </template>
+              </v-list-item>
+              <v-list-item :title="$t('convene.global.conveneTotal')">
+                <template #append> 0 </template>
+              </v-list-item>
+              <v-list-item :title="$t('common.astrite')">
+                <template #append> 0 </template>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-col>
+      </v-row>
+
+      <!-- pullByDay -->
+      <v-card class="mt-2">
+        <v-card-text>
+          <Line
+            id="pullByDay"
+            :options="{
+              responsive: true,
+              maintainAspectRatio: false
+            }"
+            :data="{
+              labels: pbdLabels,
+              datasets: [
+                {
+                  label: i18n.t('convene.global.pullByDay'),
+                  backgroundColor: '#4e7cff',
+                  data: pbdDatasets
+                }
+              ]
+            }"
+          />
+        </v-card-text>
+      </v-card>
+
+      <!-- rate -->
+      <v-card class="mt-2">
+        <v-card-text>
+          <bar
+            id="rate"
+            :options="{
+              responsive: true
+            }"
+            :data="{
+              labels: rateLabels,
+              datasets: [
+                {
+                  data: [40],
+                  label: i18n.t('convene.global.chance'),
+                  backgroundColor: '#4e7cff'
+                },
+                {
+                  data: [40],
+                  label: i18n.t('convene.global.totalPull'),
+                  backgroundColor: '#ffb13f'
+                }
+              ]
+            }"
+          />
+        </v-card-text>
+      </v-card>
+
+      <!-- rc -->
+      <v-card class="mt-2">
+        <v-card-text>
+          <Bar
+            id="rc"
+            :options="{
+              responsive: true,
+              scales: {
+                x: {
+                  stacked: true
+                },
+                y: {
+                  stacked: true
+                }
+              }
+            }"
+            :data="{
+              labels: rcLabels,
+              datasets: [
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC0',
+                  backgroundColor: '#dddddd'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC1',
+                  backgroundColor: '#f24a72'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC2',
+                  backgroundColor: '#fdaf75'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC3',
+                  backgroundColor: '#eaea7f'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC4',
+                  backgroundColor: '#6cc4a1'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC5',
+                  backgroundColor: '#4d96ff'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: 'RC6',
+                  backgroundColor: '#ff6fb5'
+                },
+                {
+                  data: [5, 5, 5, 5, 5, 5, 5],
+                  label: '> RC6',
+                  backgroundColor: '#ab46d2'
+                }
+              ]
+            }"
+          />
+        </v-card-text>
+      </v-card>
+
+      <v-row class="mt-2">
+        <v-col cols="12" md="6">
+          <v-card>
+            <v-card-title class="text-rarity5">
+              {{ $t('convene.global.fiveStar') }}
+            </v-card-title>
+            <v-divider />
+
+            <v-card-text v-if="fourStarList">
+              <v-table>
+                <thead>
                   <tr>
-                    <td
-                      style="width: 60%"
-                      class="text-rarity5 py-4 pl-4 pr-2 text-right"
-                    >
-                      <div class="w-100 text-h3">0%</div>
+                    <td style="width: 20%"></td>
+                    <td style="width: 50%">
+                      {{ $t('common.name') }}
                     </td>
-
-                    <td style="width: 40%" class="text-rarity5 py-4 pr-4">
-                      <div>★★★★★</div>
-                      <div>Total 0</div>
+                    <td style="width: 20%">
+                      {{ $t('common.total') }}
+                    </td>
+                    <td style="width: 10%">
+                      {{ $t('common.percentage') }}
                     </td>
                   </tr>
+                </thead>
 
+                <tbody>
+                  <convene-history-global-list-item
+                    v-for="(element, index) of fiveStarList"
+                    :key="index"
+                    :data="element"
+                    :rarity="5"
+                  />
+                </tbody>
+              </v-table>
+            </v-card-text>
+            <v-card-text v-else>
+              {{ $t('common.noRecords') }}
+            </v-card-text>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12" md="6">
+          <v-card>
+            <v-card-title class="text-rarity4">
+              {{ $t('convene.global.fourStar') }}
+            </v-card-title>
+            <v-divider />
+
+            <v-card-text v-if="fourStarList">
+              <v-table>
+                <thead>
                   <tr>
-                    <td
-                      style="width: 60%"
-                      class="text-rarity4 py-4 pl-4 pr-2 text-right"
-                    >
-                      <div class="w-100 text-h3">0%</div>
+                    <td style="width: 20%"></td>
+                    <td style="width: 50%">
+                      {{ $t('common.name') }}
                     </td>
-                    <td style="width: 40%" class="text-rarity4 py-4 pr-4">
-                      <div>★★★★</div>
-                      <div>Total 0</div>
+                    <td style="width: 20%">
+                      {{ $t('common.total') }}
+                    </td>
+                    <td style="width: 10%">
+                      {{ $t('common.percentage') }}
                     </td>
                   </tr>
-                </table>
-              </div>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-col>
+                </thead>
 
-      <v-col cols="12" sm="3">
-        <v-card class="fill-height">
-          <v-list>
-            <v-list-item :title="$t('convene.global.median')">
-              <template #append> 0 </template>
-            </v-list-item>
-            <v-list-item :title="$t('convene.global.totalUsers')">
-              <template #append> 0 </template>
-            </v-list-item>
-            <v-list-item :title="$t('convene.global.conveneTotal')">
-              <template #append> 0 </template>
-            </v-list-item>
-            <v-list-item :title="$t('common.astrite')">
-              <template #append> 0 </template>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- pullByDay -->
-    <v-card class="mt-2">
-      <v-card-text>
-        <Line
-          id="pullByDay"
-          :options="{
-            responsive: true,
-            maintainAspectRatio: false
-          }"
-          :data="{
-            labels: pbdLabels,
-            datasets: [
-              {
-                label: i18n.t('convene.global.pullByDay'),
-                backgroundColor: '#4e7cff',
-                data: pbdDatasets
-              }
-            ]
-          }"
-        />
-      </v-card-text>
-    </v-card>
-
-    <!-- rate -->
-    <v-card class="mt-2">
-      <v-card-text>
-        <bar
-          id="rate"
-          :options="{
-            responsive: true
-          }"
-          :data="{
-            labels: rateLabels,
-            datasets: [
-              {
-                data: [40],
-                label: i18n.t('convene.global.chance'),
-                backgroundColor: '#4e7cff'
-              },
-              {
-                data: [40],
-                label: i18n.t('convene.global.totalPull'),
-                backgroundColor: '#ffb13f'
-              }
-            ]
-          }"
-        />
-      </v-card-text>
-    </v-card>
-
-    <!-- rc -->
-    <v-card class="mt-2">
-      <v-card-text>
-        <Bar
-          id="rc"
-          :options="{
-            responsive: true,
-            scales: {
-              x: {
-                stacked: true
-              },
-              y: {
-                stacked: true
-              }
-            }
-          }"
-          :data="{
-            labels: rcLabels,
-            datasets: [
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC0',
-                backgroundColor: '#dddddd'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC1',
-                backgroundColor: '#f24a72'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC2',
-                backgroundColor: '#fdaf75'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC3',
-                backgroundColor: '#eaea7f'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC4',
-                backgroundColor: '#6cc4a1'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC5',
-                backgroundColor: '#4d96ff'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: 'RC6',
-                backgroundColor: '#ff6fb5'
-              },
-              {
-                data: [40, 20, 12, 3, 3, 3, 1],
-                label: '> RC6',
-                backgroundColor: '#ab46d2'
-              }
-            ]
-          }"
-        />
-      </v-card-text>
-    </v-card>
-
-    <v-row class="mt-2">
-      <v-col cols="12" md="6">
-        <v-card>
-          <v-card-title class="text-rarity5">
-            {{ $t('convene.global.fiveStar') }}
-          </v-card-title>
-          <v-divider />
-
-          <v-card-text>
-            {{ $t('common.noRecords') }}
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <v-col cols="12" md="6">
-        <v-card>
-          <v-card-title class="text-rarity4">
-            {{ $t('convene.global.fourStar') }}
-          </v-card-title>
-          <v-divider />
-
-          <v-card-text>
-            {{ $t('common.noRecords') }}
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+                <tbody>
+                  <convene-history-global-list-item
+                    v-for="(element, index) of fourStarList"
+                    :key="index"
+                    :data="element"
+                    :rarity="4"
+                  />
+                </tbody>
+              </v-table>
+            </v-card-text>
+            <v-card-text v-else>
+              {{ $t('common.noRecords') }}
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </client-only>
   </div>
 </template>

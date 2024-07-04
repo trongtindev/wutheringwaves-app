@@ -431,6 +431,8 @@
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
     "beta": "Beta",
-    "notice": "Notice"
+    "notice": "Notice",
+    "total": "Total",
+    "percentage": "Percentage"
   }
 }

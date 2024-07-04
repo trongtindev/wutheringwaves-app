@@ -77,7 +77,7 @@ const items = [
   // Events
   [
     {
-      name: 'Intensive Training – Limited Time EXP Material Double Drop Event',
+      name: 'Intensive Training - Limited Time EXP Material Double Drop Event',
       time: {
         start: '2024-06-06 04:00',
         end: '2024-06-13 03:59'
@@ -160,7 +160,7 @@ const items = [
   // Battle
   [
     {
-      name: 'Alloy Smelt – Limited Time Battle Event',
+      name: 'Alloy Smelt - Limited Time Battle Event',
       time: {
         start: '2024-06-06 10:00',
         end: '2024-06-27 03:59'
@@ -205,7 +205,7 @@ const items = [
   // Featured Weapon
   [
     {
-      name: 'Absolute Pulsation – Jiyan - Verdant Summit',
+      name: 'Absolute Pulsation - Jiyan - Verdant Summit',
       time: {
         start: '2024-05-23 10:00',
         end: '2024-06-13 09:59'
@@ -214,7 +214,7 @@ const items = [
       thumbnail: '/cards/T_Card5.png'
     },
     {
-      name: 'Absolute Pulsation – Jinhsi - Ages of Harvest',
+      name: 'Absolute Pulsation - Jinhsi - Ages of Harvest',
       time: {
         start: '2024-06-28 13:00',
         end: '2024-07-22 09:59'
@@ -236,7 +236,7 @@ const items = [
   // Featured Resonator
   [
     {
-      name: 'Prevail the Lasting Night – Jiyan',
+      name: 'Prevail the Lasting Night - Jiyan',
       time: {
         start: '2024-05-23 10:00',
         end: '2024-06-13 09:59'
@@ -277,7 +277,7 @@ const items = [
       'During the event, boosted drop rates for 5-star Weapon [Stringmaster], 4-star Weapons [Jinzhou Keeper], [Cadenza], and [Lunar Cutter]!'
   },
   {
-    name: 'When Thunder Pours – Jinlin',
+    name: 'When Thunder Pours - Jinlin',
     time: {
       start: '2024-06-06 10:00',
       end: '2024-06-26 11:59'

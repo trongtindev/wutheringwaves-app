@@ -1,5 +1,6 @@
 [
   {
+    "id": 1102,
     "slug": "sanhua",
     "name": "Sanhua",
     "rarity": 4,
@@ -7,6 +8,7 @@
     "weapon": "Sword"
   },
   {
+    "id": 1103,
     "slug": "baizhi",
     "name": "Baizhi",
     "rarity": 4,
@@ -14,6 +16,7 @@
     "weapon": "Rectifier"
   },
   {
+    "id": 1104,
     "slug": "lingyang",
     "name": "Lingyang",
     "rarity": 5,
@@ -21,6 +24,7 @@
     "weapon": "Gauntlets"
   },
   {
+    "id": 1202,
     "slug": "chixia",
     "name": "Chixia",
     "rarity": 4,
@@ -28,6 +32,7 @@
     "weapon": "Pistols"
   },
   {
+    "id": 1203,
     "slug": "encore",
     "name": "Encore",
     "rarity": 5,
@@ -35,6 +40,7 @@
     "weapon": "Rectifier"
   },
   {
+    "id": 1204,
     "slug": "mortefi",
     "name": "Mortefi",
     "rarity": 4,
@@ -42,6 +48,7 @@
     "weapon": "Pistols"
   },
   {
+    "id": 1205,
     "slug": "changli",
     "name": "Changli",
     "rarity": 5,
@@ -49,6 +56,7 @@
     "weapon": "Sword"
   },
   {
+    "id": 1301,
     "slug": "calcharo",
     "name": "Calcharo",
     "rarity": 5,
@@ -56,6 +64,7 @@
     "weapon": "Broadblade"
   },
   {
+    "id": 1302,
     "slug": "yinlin",
     "name": "Yinlin",
     "rarity": 5,
@@ -63,6 +72,7 @@
     "weapon": "Rectifier"
   },
   {
+    "id": 1303,
     "slug": "yuanwu",
     "name": "Yuanwu",
     "rarity": 4,
@@ -70,6 +80,7 @@
     "weapon": "Gauntlets"
   },
   {
+    "id": 1304,
     "slug": "jinhsi",
     "name": "Jinhsi",
     "rarity": 5,
@@ -77,6 +88,7 @@
     "weapon": "Broadblade"
   },
   {
+    "id": 1402,
     "slug": "yangyang",
     "name": "Yangyang",
     "rarity": 4,
@@ -84,6 +96,7 @@
     "weapon": "Sword"
   },
   {
+    "id": 1403,
     "slug": "aalto",
     "name": "Aalto",
     "rarity": 4,
@@ -91,6 +104,7 @@
     "weapon": "Pistols"
   },
   {
+    "id": 1404,
     "slug": "jiyan",
     "name": "Jiyan",
     "rarity": 5,
@@ -98,6 +112,7 @@
     "weapon": "Broadblade"
   },
   {
+    "id": 1405,
     "slug": "jianxin",
     "name": "Jianxin",
     "rarity": 5,
@@ -105,6 +120,7 @@
     "weapon": "Gauntlets"
   },
   {
+    "id": 1503,
     "slug": "verina",
     "name": "Verina",
     "rarity": 5,
@@ -112,6 +128,7 @@
     "weapon": "Rectifier"
   },
   {
+    "id": 1601,
     "slug": "taoqi",
     "name": "Taoqi",
     "rarity": 4,
@@ -119,6 +136,7 @@
     "weapon": "Broadblade"
   },
   {
+    "id": 1602,
     "slug": "danjin",
     "name": "Danjin",
     "rarity": 4,
