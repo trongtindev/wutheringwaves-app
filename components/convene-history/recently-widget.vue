@@ -66,7 +66,7 @@ onMounted(initialize);
             location="bottom right"
           >
             <v-avatar
-              :image="`/${element.resourceType === 'Resonators' ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
+              :image="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
             />
           </v-badge>
         </template>

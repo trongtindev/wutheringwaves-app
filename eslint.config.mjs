@@ -11,7 +11,6 @@ export default withNuxt({}).append({
     'vue/valid-template-root': 1,
     'vue/no-multiple-template-root': 1,
     'vue/return-in-computed-property': 1,
-    '@typescript-eslint/unified-signatures': 1,
     'no-empty': 1,
     '@typescript-eslint/ban-types': 1,
     'vue/no-side-effects-in-computed-properties': 1,
@@ -19,7 +18,8 @@ export default withNuxt({}).append({
     'vue/no-unused-vars': 1,
     '@typescript-eslint/no-dynamic-delete': 1,
     'prefer-rest-params': 1,
-    'vue/no-mutating-props': 1
+    'vue/no-mutating-props': 1,
+    '@typescript-eslint/unified-signatures': 0
   },
   ignores: ['**/*.js']
 });

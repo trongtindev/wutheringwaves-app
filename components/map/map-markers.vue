@@ -129,15 +129,7 @@ onMounted(() => {
     </div>
 
     <div v-else>
-      <v-card>
-        <v-list-item :title="$t('map.hideFoundMarkers')">
-          <template #append>
-            <v-switch />
-          </template>
-        </v-list-item>
-      </v-card>
-
-      <v-sheet v-for="(group, index) in groups" :key="index" class="mt-2">
+      <v-sheet v-for="(group, index) in groups" :key="index">
         <v-row>
           <v-col class="d-flex align-center">
             {{ $t(group.name) }}

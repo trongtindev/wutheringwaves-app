@@ -40,11 +40,10 @@ export default defineNuxtConfig({
     'nuxt-jsonld',
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
-    '@nuxtjs/device',
-    'nuxt3-leaflet'
+    '@nuxtjs/device'
   ],
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify']
   },
   sitemap: {
     autoLastmod: true,
@@ -64,11 +63,6 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
-    },
-    storage: {
-      db: {
-        driver: 'vercelKV'
-      }
     }
   },
   site: {

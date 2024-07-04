@@ -90,7 +90,7 @@ const downloadImage = async () => {
                   :class="`bg-rarity${element.qualityLevel}`"
                 >
                   <v-img
-                    :src="`/${element.resourceType === 'Resonators' ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
+                    :src="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
                   />
                 </v-avatar>
                 <span :class="`text-rarity${element.qualityLevel}`">

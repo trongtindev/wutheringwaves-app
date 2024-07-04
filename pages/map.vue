@@ -1,51 +1,80 @@
 <script setup lang="ts">
 import type { IMarker } from '~/interfaces/map';
 import { mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
+import type { MapOptions } from 'leaflet';
 
 // uses
 const app = useApp();
 const api = useApi();
 const i18n = useI18n();
+const route = useRoute();
 const router = useRouter();
 const sidebar = useSidebar();
 const database = useDatabase();
 
 // states
+const options: MapOptions = {
+  zoom: 11,
+  minZoom: 11,
+  maxZoom: 15,
+  center: [0, 0],
+  zoomSnap: 0.5,
+  maxBounds: [
+    [1, 1],
+    [-1, -1]
+  ]
+};
 const drawer = ref(true);
 const tab = ref('markers');
+const shows = ref<{ [key: string]: boolean }>({});
 const markers = ref<IMarker[]>();
 const selected = ref<IMarker>();
 const foundMarkers = ref<string[]>(null as any);
-const displayMarkers = ref<IMarker[]>([]);
 const hideFound = ref(false);
 
+// computed
+const displayMarkers = computed(() => {
+  return (markers.value || [])
+    .filter((e) => {
+      if (hideFound.value) {
+        if (foundMarkers.value.includes(e.id.toString())) {
+          return false;
+        }
+      }
+      return shows.value[e.type];
+    })
+    .map((e) => {
+      const icon = (() => {
+        if (['z1', 'z2'].includes(e.type)) {
+          return `/map/icons/${e.type}.webp`;
+        }
+        return `/map/pins/${e.type}.webp`;
+      })();
+      return {
+        latlng: [e.lat, e.lng],
+        icon,
+        title: `${e.id} ${e.type}`,
+        opacity: foundMarkers.value.includes(e.id.toString()) ? 0.25 : 1
+      };
+    });
+});
+
 // events
-const onPressedMarker = (item: IMarker, args: any) => {
-  console.log('onPressedMarker', item, args);
-  selected.value = item;
+const onPressedMarker = (latLng: number[]) => {
+  console.log('onPressedMarker', latLng);
+
+  if (!markers.value) return;
+  selected.value = markers.value.find((e) => {
+    return latLng.toString() == [e.lat, e.lng].toString();
+  });
+
   if (tab.value != 'comments') {
     tab.value = 'comments';
   }
   router.replace({
     query: {
-      id: selected.value.id
+      id: selected.value ? selected.value.id : undefined
     }
-  });
-};
-
-const onActiveChanged = (keys: { [key: string]: boolean }, emit?: boolean) => {
-  if (!markers.value) {
-    setTimeout(() => onActiveChanged(keys), 250);
-    return;
-  }
-
-  if (!emit) {
-    setTimeout(() => onActiveChanged(keys, true), 100);
-    return;
-  }
-
-  displayMarkers.value = markers.value.filter((e) => {
-    return keys[e.type];
   });
 };
 
@@ -60,9 +89,6 @@ const onMarkChanged = (id: number, status: boolean) => {
 
 // functions
 const initialize = () => {
-  app.fluid = true;
-  sidebar.open = false;
-
   // get markers
   api
     .getInstance()
@@ -89,12 +115,18 @@ const initialize = () => {
       .exec()
       .then((documents) => {
         foundMarkers.value = documents.filter((e) => !e.type).map((e) => e.key);
+        console.log('foundMarkers.value', foundMarkers.value);
       });
   });
 };
 
 // lifecycle
-onMounted(initialize);
+onNuxtReady(() => {
+  app.fluid = true;
+  sidebar.open = false;
+
+  setTimeout(initialize, 1000);
+});
 
 onUnmounted(() => {
   app.fluid = true;
@@ -105,7 +137,18 @@ onUnmounted(() => {
 const title = i18n.t('map.title');
 const description = i18n.t('meta.map.description');
 
-useHead({ title });
+useApp().title = i18n.t('map.title');
+useHead({
+  title,
+  meta: route.query.id
+    ? [
+        {
+          name: 'robots',
+          content: 'noindex'
+        }
+      ]
+    : []
+});
 useSeoMeta({
   ogTitle: title,
   description: description,
@@ -147,10 +190,18 @@ useSeoMeta({
         <v-tabs-window v-model="tab">
           <!-- markers -->
           <v-tabs-window-item value="markers" class="pa-2">
+            <v-card class="mb-2">
+              <v-list-item :title="$t('map.hideFoundMarkers')">
+                <template #append>
+                  <v-switch v-model="hideFound" />
+                </template>
+              </v-list-item>
+            </v-card>
+
             <map-markers
               v-if="markers"
               :markers="markers"
-              @on-active-changed="(val) => onActiveChanged(val)"
+              @on-active-changed="(val) => (shows = val)"
             />
 
             <div v-else class="text-center">
@@ -173,37 +224,16 @@ useSeoMeta({
     </v-navigation-drawer>
 
     <v-card>
-      <card-title>
-        <template #title>
-          {{ $t('map.title') }}
-        </template>
-
-        <template #actions>
-          <contribute-button />
-        </template>
-      </card-title>
-
       <v-responsive :aspect-ratio="16 / 9">
-        <client-only>
-          <l-map
-            v-if="foundMarkers"
-            class="w-100 h-100"
-            :zoom="11"
-            :min-zoom="11"
-            :max-zoom="15"
-            :center="[0, 0]"
-            :zoom-snap="0.5"
-            :use-global-leaflet="false"
-            :options="{
-              maxBounds: [
-                [1, 1],
-                [-1, -1]
-              ]
-            }"
-          >
-            <l-tile-layer
-              url="https://files.astrite.app/tiles/{z}/{getX}/{getY}.webp"
-              layer-type="base"
+        <lazy-leaflet-map
+          v-if="foundMarkers"
+          :markers="displayMarkers"
+          :options="options"
+          @on-pressed-marker="(val) => onPressedMarker(val)"
+        >
+          <template #default="{ leaflet }">
+            <lazy-leaflet-tile-layer
+              :leaflet="leaflet"
               :options="{
                 tms: true,
                 noWrap: true,
@@ -216,18 +246,19 @@ useSeoMeta({
                 attribution:
                   '<a href=\'https://genshin-impact-map.appsample.com/wuthering-waves-map/\' target=\'_blank\' rel=\'nofollow\'>appsample</a>'
               }"
+              url-template="https://files.astrite.app/tiles/{z}/{getX}/{getY}.webp"
             />
+          </template>
 
-            <div v-for="(element, index) in displayMarkers" :key="index">
-              <map-marker-item
-                :data="element"
-                :default-value="foundMarkers.includes(`${element.id}`)"
-                @on-pressed="(args) => onPressedMarker(element, args)"
-                @on-mark-changed="(val) => onMarkChanged(element.id, val)"
-              />
-            </div>
-          </l-map>
-        </client-only>
+          <template #popup>
+            <map-popup
+              v-if="selected"
+              :data="selected"
+              :initial-value="foundMarkers.includes(selected.id.toString())"
+              @on-mark-changed="(val) => onMarkChanged(selected!.id, val)"
+            />
+          </template>
+        </lazy-leaflet-map>
       </v-responsive>
     </v-card>
 

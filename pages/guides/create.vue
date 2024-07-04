@@ -38,7 +38,7 @@ useHead({
 
     <v-card>
       <v-card-text>
-        <editor />
+        <lazy-editor />
       </v-card-text>
     </v-card>
   </div>

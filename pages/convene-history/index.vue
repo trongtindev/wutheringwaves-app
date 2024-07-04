@@ -222,7 +222,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                     :class="`bg-rarity${item.qualityLevel}`"
                   >
                     <v-img
-                      :src="`/${item.resourceType === 'Resonators' ? 'characters' : 'weapons'}/icons/${urlSlug(item.name)}.webp`"
+                      :src="`/${item.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(item.name)}.webp`"
                     />
                   </v-avatar>
                   <span :class="`text-rarity${item.qualityLevel}`">
@@ -259,7 +259,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                 class="border"
                 :class="`bg-rarity${element.qualityLevel}`"
                 :size="64"
-                :image="`/${element.resourceType === 'Resonators' ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
+                :image="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
               />
             </v-badge>
           </div>

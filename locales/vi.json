@@ -306,7 +306,8 @@
     },
     "hideFoundMarkers": "Hide found markers",
     "markAsNotFound": "Mark as Not found",
-    "markAsFound": "Mark as Found"
+    "markAsFound": "Mark as Found",
+    "markerLimit": "Some markers have been hidden to improve performance."
   },
   "guides": { "title": "Game Guides" },
   "search": {

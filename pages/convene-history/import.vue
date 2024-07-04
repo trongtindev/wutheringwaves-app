@@ -122,7 +122,7 @@ const onImport = async (url: string) => {
 
     // calc owned
     const resonators = response.data.items.filter((e) => {
-      return e.resourceType === 'Resonators';
+      return e.resourceType.startsWith('R');
     });
     const characterObjects = (() => {
       const output = {};

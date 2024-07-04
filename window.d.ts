@@ -1,13 +1,20 @@
-type Callback = <T>(result: T, error?: string) => void;
+interface ICallback {
+  result: T;
+  error?: string;
+}
+type Handler = <T>(data: T) => Promise<void> | void;
 
 declare global {
   interface Window {
     electron: {
-      on: <T>(channel: string, listener: (data: T) => void) => void;
+      on: <T, T2>(
+        event: string,
+        listener: (data: T, callback?: Handler<ICallback<T2>>) => void
+      ) => void;
       emit: <T1, T2>(
-        channel: string,
+        event: string,
         data?: T1,
-        callback?: (result: T2, error?: string) => void
+        callback?: Handler<ICallback<T2>>
       ) => void;
     };
   }

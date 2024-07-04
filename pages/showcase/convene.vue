@@ -178,7 +178,7 @@ const bestPull = computed(() => {
       return b.rarity - a.rarity && b.chain - a.chain;
     })
     .find((e) => {
-      return e.resourceType == 'Resonators';
+      return e.resourceType.startsWith('R');
     });
   if (match) return match;
 

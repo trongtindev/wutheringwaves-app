@@ -5,7 +5,7 @@ export type ConveneDocType = {
   playerId: string;
   cardPoolType: number;
   qualityLevel: number;
-  resourceType: 'Weapons' | 'Resonators';
+  resourceType: string;
   name: string;
   time: string;
   pity: number;
