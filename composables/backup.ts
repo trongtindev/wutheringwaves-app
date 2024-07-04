@@ -72,10 +72,6 @@ export const useBackup = defineStore('useBackup', () => {
    *
    */
   const restore = async () => {
-    if (import.meta.server) {
-      throw new Error('Cannot run on server-side!');
-    }
-
     if (auth.isLoggedIn === false) {
       throw new Error('not logged in');
     } else if (database.isInitialized === false) {
@@ -91,21 +87,25 @@ export const useBackup = defineStore('useBackup', () => {
         }
       });
 
-    // remove
-    let db = await database.getInstance();
-    await db.remove();
+    try {
+      // remove
+      let db = await database.getInstance();
+      await db.remove();
 
-    // recreate
-    await database.initialize({ override: true });
-    db = await database.getInstance();
+      // recreate
+      await database.initialize({ override: true });
+      db = await database.getInstance();
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    await db.importJSON(response.data.data as any);
-
-    const time = response.data.createdAt.getTime();
-    lastLocalChanged.value = time;
-
-    setTimeout(() => window.location.reload(), 250);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await db.importJSON(response.data.data as any);
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    } finally {
+      const time = response.data.createdAt.getTime();
+      lastLocalChanged.value = time;
+      setTimeout(() => window.location.reload(), 250);
+    }
   };
 
   /**
