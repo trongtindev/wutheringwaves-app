@@ -11,17 +11,31 @@ const props = defineProps<{
   markers: IMarker[];
 }>();
 
+// uses
+const i18n = useI18n();
+
 // states
 const active = ref({
   z1: true,
   z2: true,
-  'resonance-nexus': true,
-  'tacet-field': true
+  z13: true
 });
 const groups = ref([
   {
     name: 'featured',
-    items: ['z1', 'z2', 'z7', 'z3', 'z4', 'z6', 'z10', 'z11', 'z12', 'z13']
+    items: [
+      'z1',
+      'z2',
+      'z7',
+      'z3',
+      'z4',
+      'z6',
+      'z10',
+      'z11',
+      'z12',
+      'z13',
+      'z14'
+    ]
   },
   {
     name: 'battle',
@@ -29,15 +43,26 @@ const groups = ref([
   },
   {
     name: 'material',
-    items: ['z101', 'z102', 'z103', 'z104', 'z105', 'z106', 'z107', 'z108']
+    items: [
+      'z101',
+      'z102',
+      'z103',
+      'z104',
+      'z105',
+      'z106',
+      'z107',
+      'z108',
+      'z162',
+      'z163'
+    ]
   },
   {
-    name: 'mineral',
-    items: ['z401', 'z402', 'z403', 'z404']
+    name: 'ore',
+    items: ['z401', 'z402', 'z403', 'z404', 'z405']
   },
   {
     name: 'echos',
-    items: Array.from(Array(50).keys())
+    items: Array.from(Array(54).keys())
       .map((e) => {
         return `z${e + 201}`;
       })
@@ -51,7 +76,8 @@ const groups = ref([
           'z243',
           'z244',
           'z245',
-          'z248'
+          'z248',
+          'z251'
         ].includes(e);
       })
   },
@@ -62,6 +88,12 @@ const groups = ref([
 ]);
 const items = ref<{ [key: string]: IMarker[] }>();
 const count = ref({});
+
+// computed
+const nameLocalized = computed(() => {
+  // TODO: use i18n here
+  return mapIconNamedDict;
+});
 
 // events
 const onPressedToggle = (type: string) => {
@@ -166,7 +198,10 @@ onMounted(() => {
           <v-row>
             <v-col v-for="(item, j) in group.items" :key="j" cols="12" md="6">
               <v-card @click="() => onPressedToggle(item)">
-                <v-list-item :title="item" :active="active[item]">
+                <v-list-item
+                  :title="nameLocalized[item] || item"
+                  :active="active[item]"
+                >
                   <!-- :src="`/map/icons/${category.slug}.webp`" -->
                   <template #prepend>
                     <v-img

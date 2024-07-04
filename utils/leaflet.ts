@@ -1,14 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const tileBounds = {
-  10: { minX: -2, maxX: 1, minY: -2, maxY: 1 },
   11: { minX: -4, maxX: 2, minY: -4, maxY: 2 },
   12: { minX: -7, maxX: 5, minY: -8, maxY: 5 },
-  13: { minX: -3, maxX: 5, minY: -7, maxY: 6 },
-  14: { minX: -7, maxX: 11, minY: -15, maxY: 11 },
-  15: { minX: -15, maxX: 23, minY: -31, maxY: 25 }
+  13: { minX: -3, maxX: 8, minY: -7, maxY: 6 },
+  14: { minX: -7, maxX: 17, minY: -35, maxY: 11 },
+  15: { minX: -15, maxX: 35, minY: -31, maxY: 25 }
 };
 const k = {
-  10: { minX: -2, maxX: 1, minY: -2, maxY: 1 },
   11: { minX: -4, maxX: 3, minY: -4, maxY: 3 },
   12: { minX: -8, maxX: 7, minY: -8, maxY: 7 },
   13: { minX: -16, maxX: 15, minY: -16, maxY: 15 },

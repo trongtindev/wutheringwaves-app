@@ -11,6 +11,7 @@ const route = useRoute();
 const router = useRouter();
 const sidebar = useSidebar();
 const database = useDatabase();
+const appConfig = useAppConfig();
 
 // states
 const options: MapOptions = {
@@ -33,6 +34,13 @@ const foundMarkers = ref<string[]>(null as any);
 const hideFound = ref(false);
 
 // computed
+const urlTemplate = computed(() => {
+  if (import.meta.dev && route.query.localTiles) {
+    return '/map/tiles/{z}/{getX}_{getY}.webp';
+  }
+  return `https://files.astrite.app/tiles/{z}/{getX}/{getY}.webp?v=${appConfig.buildNumber}`;
+});
+
 const displayMarkers = computed(() => {
   return (markers.value || [])
     .filter((e) => {
@@ -97,13 +105,9 @@ const initialize = () => {
       markers.value = result.data.map((e) => {
         return {
           id: e[0],
-          s: e[1],
-          type: e[2],
-          mid: e[3],
-          level: e[4],
-          lng: e[5],
-          lat: e[6],
-          desc: e[7]
+          type: e[1],
+          lat: e[2],
+          lng: e[3],
         };
       });
     });
@@ -246,7 +250,7 @@ useSeoMeta({
                 attribution:
                   '<a href=\'https://genshin-impact-map.appsample.com/wuthering-waves-map/\' target=\'_blank\' rel=\'nofollow\'>appsample</a>'
               }"
-              url-template="https://files.astrite.app/tiles/{z}/{getX}/{getY}.webp"
+              :url-template="urlTemplate"
             />
           </template>
 
