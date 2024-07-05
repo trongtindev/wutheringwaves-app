@@ -5,11 +5,7 @@ const props = defineProps<{
 }>();
 
 // uses
-const app = useApp();
 const i18n = useI18n();
-const route = useRoute();
-const sidebar = useSidebar();
-const localePath = useLocalePath();
 
 // computed
 const title = computed(() => {
@@ -18,7 +14,7 @@ const title = computed(() => {
 </script>
 
 <template>
-  <v-list-group :value="title">
+  <v-list-group :value="title" :fluid="true">
     <template #activator="group">
       <v-list-item v-bind="group.props" :title="title" class="rounded">
         <template #prepend>
