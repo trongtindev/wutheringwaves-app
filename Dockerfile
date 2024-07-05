@@ -8,8 +8,8 @@ ENV NITRO_PRESET=node-server
 # install pnpm
 RUN npm i pnpm -g
 
-# install deps --prefer-offline --frozen-lockfile
-RUN pnpm i
+# install deps
+RUN pnpm i --prefer-offline
 RUN pnpm run build
 
 ## step2

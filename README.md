@@ -106,7 +106,7 @@ pnpm test:e2e --debug
 
 # License
 
-[MIT](https://github.com/trongtindev/wuthering/blob/main/LICENSE)
+[MIT](https://github.com/trongtindev/astrite-app/blob/main/LICENSE)
 
 This project is not affiliated with Kuro Games.
 Wuthering Waves, game content and materials are trademarks and copyrights of Kuro Games.
