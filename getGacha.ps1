@@ -20,11 +20,11 @@ $localization = @{
 }
 function Get-LocalizedString {
   param (
-    [string]$key,
-    [string]$locale
+    [string]$key
   )
-  if ($localization.ContainsKey($locale) -and $localization[$locale].ContainsKey($key)) {
-    return $localization[$locale][$key]
+  $culture = (Get-Culture).Name
+  if ($localization.ContainsKey($culture) -and $localization[$culture].ContainsKey($key)) {
+    return $localization[$culture][$key]
   } else {
     $defaultCulture = "en"
     return $localization[$defaultCulture][$key]
@@ -36,7 +36,7 @@ Add-Type -AssemblyName System.Web
 $ProgressPreference = 'SilentlyContinue'
 
 ## Find Game
-$findGamePath = Get-LocalizedString -key "findGamePath" -locale $locale
+$findGamePath = Get-LocalizedString -key "findGamePath"
 Write-Output $findGamePath
 
 $64 = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
@@ -49,13 +49,13 @@ if (!$gamePath -or !$gachaLogPathExists) {
   $method = "manual"
 
   Write-Output " "
-  $enterGamePathManually = Get-LocalizedString -key "enterGamePathManually" -locale $locale
+  $enterGamePathManually = Get-LocalizedString -key "enterGamePathManually"
   Write-Output $enterGamePathManually
   Write-Output "Ex. E:\Wuthering Waves"
   Write-Output " "
 
   $path = read-host "Game path: "
-  $invalidGamePath = Get-LocalizedString -key "invalidGamePath" -locale $locale
+  $invalidGamePath = Get-LocalizedString -key "invalidGamePath"
 
   if ($path) {
     if ($path.EndsWith("Wuthering Waves")) {
@@ -99,14 +99,14 @@ if (Test-Path ($gachaLogPath + "\debug.log") -PathType Leaf) {
     }
   }
 
-  $unableToFindUrl = Get-LocalizedString -key "unableToFindUrl" -locale $locale
+  $unableToFindUrl = Get-LocalizedString -key "unableToFindUrl"
   if ($url) {
     Write-Output " "
     Write-Output $url
     Set-Clipboard -Value $url
     Write-Output " "
 
-    $gachaUrlResult = Get-LocalizedString -key "gachaUrlResult" -locale $locale
+    $gachaUrlResult = Get-LocalizedString -key "gachaUrlResult"
     Write-Output $gachaUrlResult
   } else {
     Write-Output " "

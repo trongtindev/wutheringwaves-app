@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ConveneDocument } from '~/collections/convene';
+import dayjs from 'dayjs';
 import { Bar } from 'vue-chartjs';
 import {
   Chart as ChartJS,
@@ -10,6 +10,7 @@ import {
   CategoryScale,
   LinearScale
 } from 'chart.js';
+import type { ConveneDocumentConverted } from '~/interfaces/convene';
 ChartJS.register(
   Title,
   Tooltip,
@@ -20,19 +21,22 @@ ChartJS.register(
 );
 
 const props = defineProps<{
-  convenes?: ConveneDocument[] | undefined;
+  convenes?: ConveneDocumentConverted[] | undefined;
+}>();
+const emits = defineEmits<{
+  (e: 'on-updated'): void;
 }>();
 
 // uses
 const i18n = useI18n();
 
 // states
-const items = ref<ConveneDocument[]>(props.convenes || []);
+const items = ref<ConveneDocumentConverted[]>(props.convenes || []);
 
 // computed
 const range = computed(() => {
   return Array.from(Array(14).keys()).map((i) => {
-    return dayjs().subtract(14 - i, 'day');
+    return dayjs().subtract(13 - i, 'day');
   });
 });
 
@@ -62,8 +66,12 @@ watch(
   (value) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     items.value = (value || []) as any;
+    emits('on-updated');
   }
 );
+
+// lifecycle
+onNuxtReady(() => emits('on-updated'));
 </script>
 
 <template>

@@ -1,4 +1,6 @@
 {
+  "$schema": "./.schema.json",
   "description": "An item acquired by defeating Scar in Somnoire.",
-  "bgDescription": "\"I harbor no desire to become your adversary or bring about any destruction.\nI want to make it clear that annihilation is not my aim. It is not a matter of anyone's desires, but an inevitable conclusion.\nSimply embrace it. You will come to realize that resistance is futile.\""
+  "bgDescription": "\"I harbor no desire to become your adversary or bring about any destruction.\nI want to make it clear that annihilation is not my aim. It is not a matter of anyone's desires, but an inevitable conclusion.\nSimply embrace it. You will come to realize that resistance is futile.\"",
+  "obtainDescription": "An item acquired by defeating Scar in Somnoire."
 }

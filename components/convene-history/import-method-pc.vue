@@ -10,6 +10,7 @@ const emits = defineEmits<{
 }>();
 
 // uses
+const app = useApp();
 const i18n = useI18n();
 
 // states
@@ -44,6 +45,10 @@ const urlError = computed<string>(() => {
 
 const canImport = computed<boolean>(() => {
   return typeof url.value !== 'undefined' && urlError.value.length == 0;
+});
+
+const powershellScript = computed(() => {
+  return `[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; $scriptUrl = "https://raw.githubusercontent.com/trongtindev/astrite-app/${app.inDev ? 'main' : 'main'}/getGacha.ps1"; $locale = "${i18n.locale.value}"; Invoke-Expression (New-Object Net.WebClient).DownloadString($scriptUrl)`;
 });
 
 // changes
@@ -117,14 +122,14 @@ onMounted(() => {
         <v-textarea
           :readonly="true"
           :hide-details="true"
-          :rows="2"
-          value='[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/trongtindev/astrite-app/main/getGacha.ps1")'
+          :rows="3"
+          :value="powershellScript"
         />
         <v-alert color="warning" class="mt-2">
           {{ $t('You can review the script') }}
           <v-chip
             target="_blank"
-            href="https://raw.githubusercontent.com/trongtindev/astrite-app/main/getGacha.ps1"
+            href="https://raw.githubusercontent.com/trongtindev/astrite-app/production/getGacha.ps1"
             :append-icon="mdiOpenInNew"
           >
             getGacha.ps1

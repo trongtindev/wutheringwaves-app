@@ -56,7 +56,7 @@
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
-      "title": "Item List",
+      "title": "All items in Wuthering Waves",
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
       "id": {
         "title": "Item: {name}",

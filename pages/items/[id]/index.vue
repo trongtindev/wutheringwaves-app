@@ -79,7 +79,7 @@ useJsonld({
 </script>
 
 <template>
-  <div v-if="item">
+  <div>
     <!-- breadcrumbs -->
     <breadcrumbs
       :items="[
@@ -94,18 +94,12 @@ useJsonld({
       ]"
     />
 
+    <!-- page -->
     <v-card>
-      <card-title>
-        <template #title>
-          {{ i18n.t(item.name) }}
-        </template>
-
-        <template #actions>
-          <edit-this-page
-            :path="`/tree/main/resources/items/${item.slug}.json`"
-          />
-        </template>
-      </card-title>
+      <v-card-title>
+        {{ i18n.t(item.name) }}
+      </v-card-title>
+      <v-divider />
 
       <v-card-text>
         <v-row>

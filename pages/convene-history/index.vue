@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import type { ConveneDocument } from '@/collections/convene';
 import { CardPoolType, type IBanner } from '@/interfaces/banner';
-import {
-  mdiImport,
-  mdiChevronRight,
-  mdiGrid,
-  mdiViewList
-  // mdiDownload
-} from '@mdi/js';
+import { mdiImport, mdiChevronRight, mdiGrid, mdiViewList } from '@mdi/js';
 import urlSlug from 'url-slug';
+import dayjs from 'dayjs';
+import type { ConveneDocumentConverted } from '~/interfaces/convene';
 
 // uses
 const i18n = useI18n();
@@ -19,17 +14,11 @@ const account = useAccount();
 
 // states
 const banners = await resources.banners();
-const convenes = ref<ConveneDocument[]>([]);
+const convenes = ref<ConveneDocumentConverted[]>([]);
 const filterBanner = ref<IBanner | null>(null);
 const filterRarity = ref<number[]>([5, 4]);
 const displayType = ref<'list' | 'grid'>('list');
-const displayConvenes = ref<ConveneDocument[]>([]);
-const showExportImage = ref(false);
-
-// computed
-const totalPulls = computed(() => {
-  return (convenes.value || []).length;
-});
+const displayConvenes = ref<ConveneDocumentConverted[]>([]);
 
 // functions
 const initialize = () => {
@@ -45,8 +34,12 @@ const initialize = () => {
       })
       .exec()
       .then((result) => {
-        // TODO: fixme
-        convenes.value = result as any;
+        convenes.value = result.map((e) => {
+          const newObject: any = e;
+          newObject.timeConverted = dayjs(e.time).utcOffset(account.timeOffset);
+          return newObject;
+        }) as any;
+
         updateFilter();
       })
       .catch(console.error);
@@ -57,10 +50,14 @@ const updateFilter = () => {
   displayConvenes.value = convenes.value
     .filter((e) => {
       if (filterBanner.value) {
-        return e.cardPoolType === filterBanner.value.type;
+        if (e.cardPoolType !== filterBanner.value.type) {
+          return false;
+        }
       }
       if (filterRarity.value) {
-        return filterRarity.value.includes(e.qualityLevel);
+        if (!filterRarity.value.includes(e.qualityLevel)) {
+          return false;
+        }
       }
       return true;
     })
@@ -73,10 +70,16 @@ const updateFilter = () => {
             CardPoolType['featured-weapon']
           ].includes(e.cardPoolType)
         ) {
-          const time = dayjs(e.time);
+          const timeStart = dayjs(filterBanner.value.time.start)
+            .utcOffset(8)
+            .add(account.timeOffset - 8, 'hours');
+          const timeEnd = dayjs(filterBanner.value.time.end)
+            .utcOffset(8)
+            .add(account.timeOffset - 8, 'hours');
+
           return (
-            time >= dayjs(filterBanner.value.time.start) &&
-            time <= dayjs(filterBanner.value.time.end) &&
+            e.timeConverted >= timeStart &&
+            e.timeConverted <= timeEnd &&
             filterBanner.value.type == e.cardPoolType
           );
         }
@@ -265,16 +268,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           </div>
         </div>
       </v-card-text>
-
-      <!-- <v-divider />
-      <v-card-actions>
-        <v-spacer />
-        <v-btn
-          :text="$t('common.exportAsImage')"
-          :prepend-icon="mdiDownload"
-          @click="() => (showExportImage = true)"
-        />
-      </v-card-actions> -->
     </v-card>
 
     <div class="mt-2">
@@ -306,7 +299,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
           <convene-history-rank-summary />
 
-          <lazy-convene-history-chart-summary :convenes="(convenes as any)" />
+          <lazy-convene-history-chart-summary
+            :convenes="convenes"
+            @on-updated="() => masonry.refreshLayout()"
+          />
 
           <v-card>
             <v-list>
@@ -325,14 +321,5 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         </template>
       </masonry>
     </div>
-
-    <!-- <v-dialog
-      v-model="showExportImage"
-      :width="720"
-      :scrollable="true"
-      :persistent="true"
-    >
-      <convene-history-export-image :items="displayConvenes" />
-    </v-dialog> -->
   </div>
 </template>

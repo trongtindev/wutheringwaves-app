@@ -52,10 +52,10 @@
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
-      "title": "Item List",
+      "title": "Tất cả vật phẩm trong Wuthering Waves",
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
       "id": {
-        "title": { "default": "Item: {name}", "recipe": "Recipe: {name}" },
+        "title": "Vật phẩm: {name}",
         "description": {
           "default": "{name} in Wuthering Waves. Learn where to find {name} and other information in this guide!",
           "recipe": "{name} in Wuthering Waves. Learn where to the recipe for {name} and other information in this guide!"
@@ -94,9 +94,9 @@
   },
   "items": {
     "title": "Vật phẩm",
-    "howToObtain": "How to obtain {0}?",
-    "howToUnlock": "How to unlock {0}?",
-    "cookingIngredients": "Cooking Ingredients",
+    "howToObtain": "Làm sao để có được {0}?",
+    "howToUnlock": "Làm sao để mở khóa {0}?",
+    "cookingIngredients": "Công thức nấu ăn",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {

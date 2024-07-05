@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import dayjs from 'dayjs';
 import urlSlug from 'url-slug';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
 import { Bar, Line } from 'vue-chartjs';

@@ -1,4 +1,4 @@
-import dayjsLib from 'dayjs';
+import dayjs from 'dayjs';
 
 export const timeOffset = {
   Asia: 8,
@@ -15,24 +15,15 @@ export const timeOffsetIds = {
   '6eb2a235b30d05efd77bedb5cf60999e': 1 // Europe
 };
 
-export const dayjs = (
-  date?: string | number | Date | dayjsLib.Dayjs | null | undefined,
-  format?: dayjsLib.OptionType | undefined,
-  strict?: boolean | undefined
-) => {
-  const runtimeConfig = useRuntimeConfig();
-  return dayjsLib(date, format, strict).tz(runtimeConfig.public.DAYJS_TIMEZONE);
-};
-
-export const getTimeDifference = (compareTo?: dayjsLib.Dayjs) => {
-  const now = dayjsLib();
+export const getTimeDifference = (compareTo?: dayjs.Dayjs) => {
+  const now = dayjs();
   const local = now.utcOffset();
   const serverTime = now.utcOffset(timeOffset.Asia).utcOffset();
   return serverTime - (compareTo ? compareTo.utcOffset() : local);
 };
 
 export const dayjsFormat = (
-  date?: string | number | Date | dayjsLib.Dayjs | null | undefined,
+  date?: string | number | Date | dayjs.Dayjs | null | undefined,
   format?: string
 ) => {
   const i18n = useI18n();

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ICode } from '@/interfaces/code';
+import dayjs from 'dayjs';
 
 const props = defineProps<{
   data: ICode;

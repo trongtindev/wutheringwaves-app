@@ -13,6 +13,7 @@ export const useAccount = defineStore('useAccount', () => {
    * This is playerId in-game
    */
   const active = ref<string>(null as any);
+  const timeOffset = ref(8);
 
   // functions
   const initialize = async () => {
@@ -105,6 +106,13 @@ export const useAccount = defineStore('useAccount', () => {
   };
 
   watch(active, (newValue, oldValue) => {
+    if (newValue) {
+      getDocument(newValue).then((result) => {
+        if (!result) return;
+        timeOffset.value = timeOffsetIds[result.serverId];
+      });
+    }
+
     if (newValue && oldValue) {
       snackbar.show({
         content: i18n.t('accounts.successfullySwitched', [newValue])
@@ -115,6 +123,7 @@ export const useAccount = defineStore('useAccount', () => {
   return {
     items,
     active,
+    timeOffset,
     upsert,
     getAccounts,
     getDocument,

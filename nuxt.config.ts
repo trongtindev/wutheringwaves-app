@@ -42,9 +42,11 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/device'
   ],
+
   build: {
     transpile: ['vuetify']
   },
+
   sitemap: {
     autoLastmod: true,
     exclude: ['/settings'],
@@ -56,30 +58,38 @@ export default defineNuxtConfig({
       '/api/__sitemap__/weapons'
     ]
   },
+
   css: [
     '~/assets/tiptap.scss'
     // '~/assets/vuetify.css'
   ],
+
   typescript: {
     strict: true
   },
+
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
     }
   },
+
   site: {
     url: NUXT_PUBLIC_SITE_URL
   },
+
   sourcemap: {
     server: true,
     client: true
   },
+
   devtools: { enabled: true },
   components: ['./components'],
+
   imports: {
     dirs: ['./composables', './components']
   },
+
   // modules config
   i18n: {
     vueI18n: './i18n.config.ts',
@@ -94,9 +104,11 @@ export default defineNuxtConfig({
       { name: 'Vietnamese', code: 'vi', iso: 'vi' }
     ]
   },
+
   pinia: {
     storesDirs: ['./composables/**']
   },
+
   vite: {
     vue: {
       template: {
@@ -156,10 +168,13 @@ export default defineNuxtConfig({
     //   }
     // }
   },
+
   vueuse: { ssrHandlers: true },
+
   appConfig: {
     buildNumber: Date.now()
   },
+
   // environments
   runtimeConfig: {
     public: {
@@ -186,5 +201,7 @@ export default defineNuxtConfig({
       // dayjs
       DAYJS_TIMEZONE: DAYJS_TIMEZONE
     }
-  }
+  },
+
+  compatibilityDate: '2024-07-05'
 });

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import dayjs from 'dayjs';
 import type { IEvent } from '~/interfaces/event';
 
 // define

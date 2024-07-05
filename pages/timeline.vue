@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // Converted from https://github.com/MadeBaruna/paimon-moe/tree/main/src/routes/timeline
-
-import type { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
 import type { IEvent, IEventConverted } from '~/interfaces/event';
 
 // define
@@ -14,7 +13,6 @@ const marginTop = 80;
 // uses
 const i18n = useI18n();
 const resources = useResources();
-const { $dayjs } = useNuxtApp();
 
 // fetch
 const eventsData = await resources.getEvents();
@@ -107,7 +105,7 @@ watch(
 
 // lifecycle
 onMounted(() => {
-  browserTimeZone.value = $dayjs.tz.guess();
+  browserTimeZone.value = dayjs.tz.guess();
   timeDifference.value = getTimeDifference();
 
   events.value = eventsData.map((e, i) => {

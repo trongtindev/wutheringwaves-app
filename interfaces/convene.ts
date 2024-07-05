@@ -1,3 +1,6 @@
+import type dayjs from 'dayjs';
+import type { ConveneDocType } from '~/collections/convene';
+
 export interface IConvene {}
 
 export interface IBannerSummaryListItem {
@@ -24,3 +27,7 @@ export interface IBannerSummary {
   fiveStarList: IBannerSummaryListItem[];
   fourStarList: IBannerSummaryListItem[];
 }
+
+export type ConveneDocumentConverted = ConveneDocType & {
+  timeConverted: dayjs.Dayjs;
+};
