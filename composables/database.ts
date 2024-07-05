@@ -132,11 +132,10 @@ export const useDatabase = defineStore('useDatabase', () => {
               statics: accountCollectionMethods,
               autoMigrate: false,
               migrationStrategies: {
-                // // 1 means, this transforms data from version 0 to version 1
-                // 1: function (oldDoc) {
-                //   oldDoc.newColumn = ''; // set default value new column
-                //   return oldDoc;
-                // },
+                1: function (oldDoc) {
+                  oldDoc.serverId = '86d52186155b148b5c138ceb41be9650';
+                  return oldDoc;
+                }
               }
             },
             markers: {

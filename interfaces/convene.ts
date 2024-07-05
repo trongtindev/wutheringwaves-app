@@ -9,8 +9,17 @@ export interface IBannerSummaryListItem {
 
 export interface IBannerSummary {
   banner: string;
+
   totalPull: number;
   totalUsers: number;
+  avgPity: {
+    chance: number;
+    totalPull: number;
+  }[];
+  avgRc: {
+    item: string;
+    stacks: number[];
+  }[];
   pullByDay: { time: string; total: number }[];
   fiveStarList: IBannerSummaryListItem[];
   fourStarList: IBannerSummaryListItem[];

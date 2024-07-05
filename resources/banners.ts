@@ -32,7 +32,8 @@ const items: IBanner[] = [
       end: '2024-06-13 09:59'
     },
     featuredRare: 'Jiyan',
-    featured: ['Chixia', 'Danjin', 'Mortefi']
+    featured: ['Chixia', 'Danjin', 'Mortefi'],
+    thumbnail: '/events/covers/prevail-the-lasting-night.webp'
   },
   {
     type: CardPoolType['featured-weapon'],
@@ -42,7 +43,8 @@ const items: IBanner[] = [
     },
     name: 'Absolute Pulsation - Jiyan - Verdant Summit',
     featuredRare: 'Verdant Summit',
-    featured: ['Dauntless Evernight', 'Variation', 'Hollow Mirage']
+    featured: ['Dauntless Evernight', 'Variation', 'Hollow Mirage'],
+    thumbnail: '/events/covers/absolute-pulsation-verdant-summit.webp'
   },
   // featured Yinlin
   {
@@ -53,7 +55,8 @@ const items: IBanner[] = [
       end: '2024-06-26 11:59'
     },
     featuredRare: 'Yinlin',
-    featured: ['Aalto', 'Taoqi', 'Yuanwu']
+    featured: ['Aalto', 'Taoqi', 'Yuanwu'],
+    thumbnail: '/events/covers/when-thunder-pours.webp'
   },
   {
     type: CardPoolType['featured-weapon'],
@@ -63,14 +66,15 @@ const items: IBanner[] = [
     },
     name: 'Absolute Pulsation - Yinlin - Stringmaster',
     featuredRare: 'Stringmaster',
-    featured: ['Jinzhou Keeper', 'Cadenza', 'Lunar Cutter']
+    featured: ['Jinzhou Keeper', 'Cadenza', 'Lunar Cutter'],
+    thumbnail: '/events/covers/stringmaster.webp'
   },
   // featured Jinhsi
   {
     type: CardPoolType['featured-resonator'],
     name: 'Thawborn Renewal - Jinhsi',
     time: {
-      start: '2024-06-28 13:00',
+      start: '2024-06-28 12:00',
       end: '2024-07-22 09:59'
     },
     featuredRare: 'Jinhsi',
@@ -80,7 +84,7 @@ const items: IBanner[] = [
   {
     type: CardPoolType['featured-weapon'],
     time: {
-      start: '2024-06-28 13:00',
+      start: '2024-06-28 12:00',
       end: '2024-07-22 09:59'
     },
     name: 'Absolute Pulsation - Jinhsi - Ages of Harvest',

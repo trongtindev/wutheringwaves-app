@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      moment:
+        specifier: ^2.30.1
+        version: 2.30.1
+      moment-timezone:
+        specifier: ^0.5.45
+        version: 0.5.45
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -4355,6 +4362,12 @@ packages:
 
   module-details-from-path@1.0.3:
     resolution: {integrity: sha512-ySViT69/76t8VhE1xXHK6Ch4NcDd26gx0MzKXLO+F7NOtnqH68d9zF94nT8ZWSxXh8ELOERsnJO/sWt1xZYw5A==}
+
+  moment-timezone@0.5.45:
+    resolution: {integrity: sha512-HIWmqA86KcmCAhnMAN0wuDOARV/525R2+lOLotuGFzn4HO+FH+/645z2wx0Dt3iDv6/p61SIvKnDstISainhLQ==}
+
+  moment@2.30.1:
+    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
 
   mongodb-connection-string-url@3.0.1:
     resolution: {integrity: sha512-XqMGwRX0Lgn05TDB4PyG2h2kKO/FfWJyCzYQbIhXUxz7ETt0I/FqHjUeqj37irJ+Dl1ZtU82uYyj14u2XsZKfg==}
@@ -11194,6 +11207,12 @@ snapshots:
       ufo: 1.5.3
 
   module-details-from-path@1.0.3: {}
+
+  moment-timezone@0.5.45:
+    dependencies:
+      moment: 2.30.1
+
+  moment@2.30.1: {}
 
   mongodb-connection-string-url@3.0.1:
     dependencies:

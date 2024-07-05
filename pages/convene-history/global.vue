@@ -83,6 +83,15 @@ const bannerType = computed(() => {
 });
 
 const pbdRange = computed(() => {
+  if (displayBanner.value && displayBanner.value.time) {
+    const timeStart = dayjs(displayBanner.value.time.start);
+    const timeEnd = dayjs(displayBanner.value.time.end);
+    const diff = timeEnd.diff(timeStart, 'days') + 1;
+    return Array.from(Array(diff).keys()).map((i) => {
+      return timeStart.add(i, 'day');
+    });
+  }
+
   return Array.from(Array(14).keys()).map((i) => {
     return dayjs().subtract(14 - i, 'day');
   });
@@ -90,7 +99,7 @@ const pbdRange = computed(() => {
 
 const pbdLabels = computed(() => {
   return pbdRange.value.map((e) => {
-    return e.format('YYYY-MM-DD');
+    return e.format('MM-DD');
   });
 });
 
@@ -98,8 +107,7 @@ const pbdDatasets = computed(() => {
   return pbdLabels.value.map((label) => {
     if (summary.value) {
       const match = summary.value.pullByDay.find((e) => {
-        console.log(e.time, label);
-        return e.time === label;
+        return e.time.endsWith(label);
       });
       if (match) return match.total;
     }
@@ -117,17 +125,41 @@ const rateLabels = computed(() => {
   return rateRange.value;
 });
 
-const rcRange = computed(() => {
-  return Array.from(Array(14).keys()).map((i) => {
-    return dayjs().subtract(14 - i, 'day');
-  });
+const rateDatasets = computed(() => {
+  let chance: number[] = [];
+  let totalPull: number[] = [];
+
+  if (summary.value) {
+    chance = summary.value.avgPity.map((e) => e.chance);
+    totalPull = summary.value.avgPity.map((e) => e.totalPull);
+  }
+
+  return [chance, totalPull];
 });
 
 const rcLabels = computed(() => {
-  const format = i18n.locale.value === 'vi' ? 'DD/MM' : 'MM/DD';
-  return rcRange.value.map((e) => {
-    return e.format(format);
-  });
+  if (summary.value) {
+    return summary.value.avgRc.map((e) => {
+      return e.item;
+    });
+  }
+
+  return [];
+});
+
+const rcDatasets = computed(() => {
+  if (summary.value) {
+    const avgRc = summary.value.avgRc;
+    return Array.from(Array(8).keys()).map((i) => {
+      return avgRc
+        .map((e) => {
+          return e.stacks[i];
+        })
+        .flatMap((e) => e);
+    });
+  }
+
+  return [];
 });
 
 const fiveStarList = computed(() => {
@@ -154,6 +186,20 @@ const fourStarList = computed(() => {
     });
   }
   return undefined;
+});
+
+const totalPull = computed(() => {
+  if (summary.value) {
+    return summary.value.totalPull;
+  }
+  return 0;
+});
+
+const totalUsers = computed(() => {
+  if (summary.value) {
+    return summary.value.totalUsers;
+  }
+  return 0;
 });
 
 // functions
@@ -230,7 +276,7 @@ useSeoMeta({
         id="convene.global.alert"
         class="mb-2"
         color="info"
-        :text="$t('convene.global.alert', [0])"
+        :text="$t('convene.global.alert', [totalUsers])"
       />
 
       <!-- filter -->
@@ -291,7 +337,9 @@ useSeoMeta({
                       </td>
 
                       <td class="pl-2 pr-2 text-h3" style="width: 50%">
-                        <div class="d-flex justify-end w-100">0</div>
+                        <div class="d-flex justify-end w-100">
+                          {{ formatNumber(totalPull) }}
+                        </div>
                       </td>
 
                       <td class="pr-4" style="width: 30%">
@@ -328,7 +376,12 @@ useSeoMeta({
 
                       <td style="width: 40%" class="text-rarity5 py-4 pr-4">
                         <div>★★★★★</div>
-                        <div>Total 0</div>
+                        <div>
+                          Total
+                          {{
+                            fiveStarList ? formatNumber(fiveStarList.length) : 0
+                          }}
+                        </div>
                       </td>
                     </tr>
 
@@ -341,7 +394,12 @@ useSeoMeta({
                       </td>
                       <td style="width: 40%" class="text-rarity4 py-4 pr-4">
                         <div>★★★★</div>
-                        <div>Total 0</div>
+                        <div>
+                          Total
+                          {{
+                            fourStarList ? formatNumber(fourStarList.length) : 0
+                          }}
+                        </div>
                       </td>
                     </tr>
                   </table>
@@ -358,13 +416,19 @@ useSeoMeta({
                 <template #append> 0 </template>
               </v-list-item>
               <v-list-item :title="$t('convene.global.totalUsers')">
-                <template #append> 0 </template>
+                <template #append>
+                  {{ formatNumber(totalUsers) }}
+                </template>
               </v-list-item>
               <v-list-item :title="$t('convene.global.conveneTotal')">
-                <template #append> 0 </template>
+                <template #append>
+                  {{ formatNumber(totalPull) }}
+                </template>
               </v-list-item>
               <v-list-item :title="$t('common.astrite')">
-                <template #append> 0 </template>
+                <template #append>
+                  {{ formatNumber(totalPull * 160) }}
+                </template>
               </v-list-item>
             </v-list>
           </v-card>
@@ -377,8 +441,7 @@ useSeoMeta({
           <Line
             id="pullByDay"
             :options="{
-              responsive: true,
-              maintainAspectRatio: false
+              responsive: true
             }"
             :data="{
               labels: pbdLabels,
@@ -397,21 +460,31 @@ useSeoMeta({
       <!-- rate -->
       <v-card class="mt-2">
         <v-card-text>
-          <bar
+          <Bar
             id="rate"
             :options="{
-              responsive: true
+              responsive: true,
+              scales: {
+                x: {
+                  stacked: true
+                },
+                y: {
+                  stacked: false
+                }
+              }
             }"
             :data="{
               labels: rateLabels,
               datasets: [
                 {
-                  data: [40],
+                  type: 'line' as any,
+                  data: rateDatasets[0],
                   label: i18n.t('convene.global.chance'),
                   backgroundColor: '#4e7cff'
                 },
                 {
-                  data: [40],
+                  type: 'bar',
+                  data: rateDatasets[1],
                   label: i18n.t('convene.global.totalPull'),
                   backgroundColor: '#ffb13f'
                 }
@@ -441,42 +514,42 @@ useSeoMeta({
               labels: rcLabels,
               datasets: [
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[0],
                   label: 'RC0',
                   backgroundColor: '#dddddd'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[1],
                   label: 'RC1',
                   backgroundColor: '#f24a72'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[2],
                   label: 'RC2',
                   backgroundColor: '#fdaf75'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[3],
                   label: 'RC3',
                   backgroundColor: '#eaea7f'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[4],
                   label: 'RC4',
                   backgroundColor: '#6cc4a1'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[5],
                   label: 'RC5',
                   backgroundColor: '#4d96ff'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[6],
                   label: 'RC6',
                   backgroundColor: '#ff6fb5'
                 },
                 {
-                  data: [5, 5, 5, 5, 5, 5, 5],
+                  data: rcDatasets[7],
                   label: '> RC6',
                   backgroundColor: '#ab46d2'
                 }

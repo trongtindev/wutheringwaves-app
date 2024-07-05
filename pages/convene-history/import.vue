@@ -26,6 +26,7 @@ const onImport = async (url: string) => {
 
     const response = await api.getInstance().post<{
       playerId: number;
+      serverId: string;
       items: {
         time: string;
         name: string;
@@ -41,7 +42,7 @@ const onImport = async (url: string) => {
 
     // initial account
     const playerId = response.data.playerId.toString();
-    await account.upsert(playerId);
+    await account.upsert(playerId, response.data.serverId);
     if (account.active != playerId) {
       account.active = playerId;
     }

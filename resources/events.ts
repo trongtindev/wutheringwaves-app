@@ -211,12 +211,12 @@ const items = [
         end: '2024-06-13 09:59'
       },
       color: '#1f5456',
-      thumbnail: '/cards/T_Card5.png'
+      thumbnail: '/events/covers/absolute-pulsation-verdant-summit.webp'
     },
     {
       name: 'Absolute Pulsation - Jinhsi - Ages of Harvest',
       time: {
-        start: '2024-06-28 13:00',
+        start: '2024-06-28 12:00',
         end: '2024-07-22 09:59'
       },
       color: '#143a4f',
@@ -242,12 +242,12 @@ const items = [
         end: '2024-06-13 09:59'
       },
       color: '#1f5456',
-      thumbnail: '/cards/T_Card5.png'
+      thumbnail: '/events/covers/prevail-the-lasting-night.webp'
     },
     {
-      name: 'Thawborn Renewal — Jinhsi',
+      name: 'Thawborn Renewal - Jinhsi',
       time: {
-        start: '2024-06-28 13:00',
+        start: '2024-06-28 12:00',
         end: '2024-07-22 09:59'
       },
       color: '#b59270',

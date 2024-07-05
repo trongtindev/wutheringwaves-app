@@ -32,7 +32,7 @@ export const useAccount = defineStore('useAccount', () => {
     await loadItems();
   };
 
-  const upsert = async (playerId: string) => {
+  const upsert = async (playerId: string, serverId: string) => {
     const db = await database.getInstance();
     const exists = await db.accounts
       .findOne({
@@ -45,7 +45,8 @@ export const useAccount = defineStore('useAccount', () => {
       });
 
       await db.accounts.upsert({
-        playerId
+        playerId,
+        serverId
       });
     }
   };
