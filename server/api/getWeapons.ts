@@ -1,4 +1,4 @@
-import data from '@/resources/weapons'
+import data from '@/resources/weapons';
 export default defineEventHandler(() => {
   return data;
 });

@@ -1,7 +1,6 @@
 import characters from '~/resources/characters';
 
 export default defineSitemapEventHandler(async () => {
-
   return characters
     .map((e) => {
       return asSitemapUrl({

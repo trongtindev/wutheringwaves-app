@@ -73,7 +73,10 @@ export const useSentry = defineStore('useSentry', () => {
   };
 
   // listens
-  watch(() => delayHydration.active, () => initialize());
+  watch(
+    () => delayHydration.active,
+    () => initialize()
+  );
 
   // exports
   return { setUser };

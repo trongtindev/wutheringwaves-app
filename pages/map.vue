@@ -107,7 +107,7 @@ const initialize = () => {
           id: e[0],
           type: e[1],
           lat: e[2],
-          lng: e[3],
+          lng: e[3]
         };
       });
     });

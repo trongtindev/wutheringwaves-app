@@ -1,4 +1,4 @@
-import data from '@/resources/characters'
+import data from '@/resources/characters';
 export default defineEventHandler(() => {
   return data;
 });
