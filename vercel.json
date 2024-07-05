@@ -1,5 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install",
+  "devCommand": "pnpm run dev",
+  "buildCommand": "pnpm run build",
   "rewrites": [
     {
       "source": "/__/auth/(.*)",
