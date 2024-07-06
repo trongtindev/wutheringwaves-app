@@ -19,14 +19,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     defaults: {
       global: {
-        density: 'comfortable',
-        elevation: 0,
-        hideDetails: true,
-        ripple: false
-      },
-      VBtn: {
-        density: 'default',
-        variant: 'flat'
+        hideDetails: true
       },
       VSelect: {
         variant: 'outlined',
@@ -42,40 +35,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       VCombobox: {
         variant: 'outlined'
       },
-      VAutocomplete: {
-        variant: 'outlined'
-      },
-      VSlider: {},
-      VCard: {
-        class: 'border rounded'
-      },
-      VCardTitle: {},
-      VCardText: {},
       VRow: {
         dense: true
       },
-      VTab: {
-        style: 'text-transform: unset !important; color:rgb(144, 144, 144); '
-      },
-      VTooltip: {
-        location: 'top'
-      },
-      VMenu: {
-        transition: 'scale-transition'
-      },
-      VProgressCircular: {
-        color: 'primary'
-      },
-      VExpansionPanel: {
-        class: 'border rounded'
-      },
-      VExpansionPanels: {
-        variant: 'accordion'
-      },
-      VAlert: {
-        variant: 'outlined'
-      },
-      VSwitch: {},
+      // VMenu: {
+      //   transition: 'scale-transition'
+      // },
       VPagination: {
         totalVisible: 4
       },
@@ -104,12 +69,15 @@ export default defineNuxtPlugin((nuxtApp) => {
             // 'on-warning': '#000000',
             success: '#7EE2B8',
             // 'on-success': '#ffffff',
-            error: '#FD9891',
+            error: '#FD9891'
             // 'on-error': '#ffffff'
           }
         },
         light: {
-          dark: false
+          dark: false,
+          colors: {
+            primary: '#579DFF'
+          }
         }
       }
     },

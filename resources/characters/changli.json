@@ -1,7 +1,14 @@
 {
   "$schema": "./.schema.json",
   "slug": "changli",
+  "quote": "Eons of time on this vast land, all encapsulated in a humble game... I am fortunate to have you as my opponent.",
+  "quoteLocalized": {
+    "vi": "Bao niên kỷ trên mảnh đất rộng lớn này, tất cả gói gọn trong một trò chơi khiêm tốn... Tôi thật may mắn khi có được bạn là đối thủ của tôi."
+  },
   "description": "Counselor to the Jinzhou Magistrate and former Secretary-General of the Central Secretariat in the capital.\nShrouded in flames, she's a counselor fated to burn brightly until her final embers. Positioning herself on the chessboard, she's always planning several moves ahead to achieve her ambition.",
+  "descriptionLocalized": {
+    "vi": "Cố vấn cho Thẩm phán Cẩm Châu và nguyên Tổng thư ký Ban Bí thư Trung ương ở thủ đô. Bị bao phủ trong ngọn lửa, cô là một cố vấn có số phận sẽ cháy sáng rực rỡ cho đến khi tàn lửa cuối cùng. Đặt mình trên bàn cờ, cô luôn lên kế hoạch trước nhiều nước đi để đạt được tham vọng của mình."
+  },
   "skills": [
     {
       "slug": "blazing-enlightment",
@@ -236,7 +243,6 @@
       "name": "Crit. Rate+2.80%"
     }
   ],
-  "quote": "None",
   "birthday": "None",
   "birthplace": "None"
 }

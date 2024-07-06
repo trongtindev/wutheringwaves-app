@@ -317,8 +317,10 @@
     "dataSynced": "Data has been synced!"
   },
   "accounts": {
+    "title": "Accounts",
     "newAccountDetected": "New Account Use Detected",
-    "successfullySwitched": "Successfully switch to {0}"
+    "successfullySwitched": "Successfully switch to {0}",
+    "nameNotSet": "Name not set"
   },
   "leaderboards": {
     "title": "Leaderboards"
@@ -435,6 +437,7 @@
     "total": "Total",
     "percentage": "Percentage",
     "summoned": "Summoned",
-    "hidden": "Hidden"
+    "hidden": "Hidden",
+    "manage": "Manage"
   }
 }

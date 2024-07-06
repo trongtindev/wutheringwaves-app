@@ -4,6 +4,7 @@ export type CharacterDocType = {
   name: string;
   resonanceChain: number;
   obtainedAt: number;
+  playerId: string;
   createdAt: number;
 };
 
@@ -38,7 +39,7 @@ export const characterCollectionMethods: CharacterCollectionMethods = {
 };
 
 export const characterSchema: RxJsonSchema<CharacterDocType> = {
-  version: 0,
+  version: 1,
   keyCompression: false,
   primaryKey: 'name',
   type: 'object',
@@ -53,6 +54,10 @@ export const characterSchema: RxJsonSchema<CharacterDocType> = {
     },
     obtainedAt: {
       type: 'number'
+    },
+    playerId: {
+      type: 'string',
+      default: 0
     },
     createdAt: {
       type: 'number'

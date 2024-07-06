@@ -10,6 +10,7 @@ type DisplayItem = ITrophy & {
 const i18n = useI18n();
 const database = useDatabase();
 const resources = useResources();
+const account = useAccount();
 
 // data
 const data = await resources.getTrophyData();
@@ -37,7 +38,11 @@ const refreshStatisticThrottle = useThrottleFn(() => {
 const initialize = () => {
   database.getInstance().then((db) => {
     db.trophies
-      .find()
+      .find({
+        selector: {
+          playerId: account.active
+        }
+      })
       .exec()
       .then((result) => {
         checkedItems.value = result.map((e) => e.slug);
@@ -68,7 +73,7 @@ const onItemChecked = async (slug: string, value: boolean) => {
   const db = await database.getInstance();
   if (value) {
     checkedItems.value.push(slug);
-    await db.trophies.upsert({ slug });
+    await db.trophies.upsert({ slug, playerId: account.active });
   } else {
     const index = checkedItems.value.findIndex((e) => e === slug);
     if (index >= 0) checkedItems.value.splice(index, 1);
@@ -76,7 +81,8 @@ const onItemChecked = async (slug: string, value: boolean) => {
     const doc = await db.trophies
       .findOne({
         selector: {
-          slug
+          slug,
+          playerId: account.active
         }
       })
       .exec();
@@ -89,9 +95,13 @@ const onItemChecked = async (slug: string, value: boolean) => {
 watch(filterText, () => debouncedSearch());
 watch(filterGroup, () => initialize());
 watch(filterCategory, () => initialize());
+watch(
+  () => account.active,
+  () => initialize()
+);
 
 // lifecycle
-onMounted(() => initialize());
+onNuxtReady(() => initialize());
 
 // seo meta
 const title = i18n.t('meta.trophies.title');

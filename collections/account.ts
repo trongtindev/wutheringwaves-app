@@ -1,6 +1,7 @@
 import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
 
 export type AccountDocType = {
+  name?: string;
   playerId: string;
   serverId: string;
   conveneHistoryUrl: string;
@@ -37,11 +38,14 @@ export const accountCollectionMethods: AccountCollectionMethods = {
 };
 
 export const accountSchema: RxJsonSchema<AccountDocType> = {
-  version: 1,
+  version: 2,
   keyCompression: false,
   primaryKey: 'playerId',
   type: 'object',
   properties: {
+    name: {
+      type: 'string'
+    },
     playerId: {
       type: 'string',
       maxLength: 50

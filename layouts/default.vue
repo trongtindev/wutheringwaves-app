@@ -6,8 +6,16 @@ import {
   mdiTranslate,
   mdiCogs,
   mdiSwapVertical,
-  mdiDatabaseSearch
+  mdiDatabaseSearch,
+  mdiMenuClose,
+  mdiMenuOpen,
+  mdiMenuDown,
+  mdiThemeLightDark,
+  mdiAccountSwitch,
+  mdiChevronRight,
+  mdiAccountConvert
 } from '@mdi/js';
+import { useTheme } from 'vuetify';
 
 import BackupController from '../controllers/backup.vue';
 import DatabaseController from '../controllers/database.vue';
@@ -27,6 +35,7 @@ const account = useAccount();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const search = useSearch();
+const theme = useTheme();
 
 // states
 const state = ref<'' | 'sign-in' | 'sign-out'>('');
@@ -67,6 +76,11 @@ const onPressedSignOut = async () => {
   }
 };
 
+const onPressedToggleTheme = () => {
+  theme.global.name.value =
+    theme.global.name.value === 'dark' ? 'light' : 'dark';
+};
+
 // changes
 watch(
   () => auth.state,
@@ -83,34 +97,22 @@ watch(
 <template>
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
-      <v-list>
-        <client-only>
-          <v-list-item
-            :title="
-              auth.user
-                ? auth.user.displayName || 'Anonymous'
-                : $t('common.guest')
-            "
-            :subtitle="
-              auth.user
-                ? auth.user.email || auth.user.uid
-                : $t('common.guestSubtitle')
-            "
-          >
-            <template #prepend>
-              <v-avatar class="border">
-                <v-img
-                  v-if="auth.user && auth.user.photoURL"
-                  :src="auth.user.photoURL"
-                />
-                <span v-else>?</span>
-              </v-avatar>
-            </template>
-          </v-list-item>
-        </client-only>
-      </v-list>
+      <!-- logo -->
+      <v-sheet class="pb-2 pt-2">
+        <v-list-item title="Astrite.app" subtitle="https://astrite.app">
+          <template #prepend>
+            <v-avatar
+              class="border"
+              rounded
+              image="/favicon.png"
+              alt="Astrite.app"
+            />
+          </template>
+        </v-list-item>
+      </v-sheet>
       <v-divider />
 
+      <!-- sidebar -->
       <v-list :nav="true" :lines="false">
         <nav-item
           v-for="(element, index) in sidebar.items"
@@ -159,8 +161,14 @@ watch(
       </template>
     </v-navigation-drawer>
 
-    <v-app-bar class="border-b">
-      <v-app-bar-nav-icon @click="sidebar.open = !sidebar.open" />
+    <!-- app bar -->
+    <v-app-bar class="border-b pl-1 pr-1" :elevation="0">
+      <v-app-bar-nav-icon
+        :icon="sidebar.open ? mdiMenuOpen : mdiMenuClose"
+        @click="sidebar.open = !sidebar.open"
+      />
+
+      <!-- app bar title -->
       <v-app-bar-title>
         <client-only>
           <span v-if="app.title">
@@ -172,59 +180,100 @@ watch(
         </client-only>
       </v-app-bar-title>
 
-      <client-only>
-        <!-- account -->
-        <v-menu v-if="account.items.length > 1" :min-width="200">
-          <template #activator="{ props }">
-            <v-btn variant="outlined" v-bind="props" class="mr-2">
-              <v-icon :icon="mdiSwapVertical" class="hidden-md-and-up" />
-              <span class="hidden-sm-and-down">
-                {{ $t('Account') }} {{ account.active }}
-              </span>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item
-              v-for="(element, index) in account.items"
-              :key="index"
-              :value="index"
-              :active="element.playerId == account.active"
-              :disabled="element.playerId == account.active"
-              @click="() => (account.active = element.playerId)"
-            >
-              <v-list-item-title>
-                {{ $t('Player Id') }}:
-                {{ element.playerId }}
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </client-only>
-
+      <!-- app bar actions -->
       <template #append>
-        <div class="d-flex flex-wrap ga-2">
-          <v-btn variant="outlined" @click="() => (search.active = true)">
-            <v-icon :icon="mdiDatabaseSearch" />
-            <span class="hidden-sm-and-down ml-2">
-              {{ $t('search.title') }}
-            </span>
-          </v-btn>
+        <div class="d-flex align-center mr-2">
+          <div class="d-flex flex-wrap ga-2">
+            <client-only>
+              <!-- switch game account -->
+              <v-menu v-if="account.items.length > 1">
+                <template #activator="{ props }">
+                  <v-btn v-bind="props" :icon="mdiAccountConvert" />
+                </template>
 
-          <!-- auth -->
-          <client-only>
+                <v-card :min-width="300">
+                  <v-card-title>
+                    {{ $t('accounts.title') }}
+                  </v-card-title>
+                  <v-divider />
+
+                  <v-list>
+                    <v-list-item
+                      v-for="(element, index) in account.items"
+                      :key="index"
+                      :value="index"
+                      :active="element.playerId == account.active"
+                      :disabled="element.playerId == account.active"
+                      :title="element.name || $t('accounts.nameNotSet')"
+                      :subtitle="element.playerId"
+                      @click="() => (account.active = element.playerId)"
+                    />
+                  </v-list>
+                  <v-divider />
+
+                  <v-card-actions>
+                    <v-spacer />
+                    <v-btn
+                      :to="localePath('/settings')"
+                      :text="$t('common.manage')"
+                    />
+                  </v-card-actions>
+                </v-card>
+              </v-menu>
+            </client-only>
+
+            <!-- search -->
             <v-btn
-              v-if="auth.isLoggedIn"
-              :disabled="state != ''"
-              :loading="state == 'sign-out'"
-              color="error"
-              variant="outlined"
-              @click="onPressedSignOut"
-            >
-              <v-icon :icon="mdiLogout" />
-              <span class="hidden-sm-and-down ml-2">
-                {{ $t('common.signOut') }}
-              </span>
-            </v-btn>
+              class="hidden-sm-and-down"
+              :icon="mdiDatabaseSearch"
+              @click="() => (search.active = true)"
+            />
+
+            <!-- theme -->
+            <v-btn
+              :icon="mdiThemeLightDark"
+              @click="() => onPressedToggleTheme()"
+            />
+          </div>
+
+          <!-- account -->
+          <v-divider :vertical="true" class="mx-4" />
+          <client-only>
+            <v-menu v-if="auth.isLoggedIn">
+              <template #activator="{ props }">
+                <v-btn :border="true" :icon="true">
+                  <v-avatar v-bind="props">
+                    <v-img
+                      v-if="auth.user.photoURL"
+                      :src="auth.user.photoURL"
+                    />
+                    <span v-else>?</span>
+                  </v-avatar>
+                </v-btn>
+              </template>
+
+              <v-card :min-width="300">
+                <v-card-text class="text-center">
+                  <v-avatar :size="64" class="border">
+                    <v-img
+                      v-if="auth.user.photoURL"
+                      :src="auth.user.photoURL"
+                    />
+                    <span v-else>?</span>
+                  </v-avatar>
+                </v-card-text>
+                <v-card-title class="text-center">
+                  {{ auth.user.displayName || 'Anonymous' }}
+                </v-card-title>
+                <v-divider />
+
+                <v-card-actions>
+                  <v-spacer />
+
+                  <v-btn color="warning" :text="$t('common.signOut')" />
+                </v-card-actions>
+              </v-card>
+            </v-menu>
 
             <v-btn
               v-else
@@ -245,113 +294,14 @@ watch(
       </template>
     </v-app-bar>
 
+    <!-- main -->
     <v-main>
+      <!-- container -->
       <v-container :fluid="app.fluid">
         <slot />
       </v-container>
 
-      <v-divider />
-      <v-footer class="pa-8 d-block">
-        <div>
-          <div>
-            <v-row :no-gutters="true">
-              <v-col cols="12" md="6" class="d-flex align-center">
-                <h2>
-                  {{ app.name }}
-                </h2>
-              </v-col>
-
-              <!-- Developers -->
-              <v-col cols="12" md="2">
-                <div class="font-weight-bold">
-                  {{ $t('Developers') }}
-                </div>
-
-                <div>
-                  <a :href="app.githubRepo" target="_blank" title="Github">
-                    Github
-                  </a>
-                </div>
-                <div>
-                  <a :href="app.discord" target="_blank" title="Discord">
-                    Discord
-                  </a>
-                </div>
-                <div>
-                  <a
-                    :href="`${app.githubRepo}/issues`"
-                    target="_blank"
-                    :title="$t('Report a Bug')"
-                  >
-                    {{ $t('Report a Bug') }}
-                  </a>
-                </div>
-              </v-col>
-
-              <!-- Resources -->
-              <v-col cols="12" md="2">
-                <div class="font-weight-bold">
-                  {{ $t('Resources') }}
-                </div>
-
-                <div>
-                  <a
-                    href="https://wutheringwaves.kurogames.com/"
-                    target="_blank"
-                  >
-                    Wuthering Waves
-                  </a>
-                </div>
-
-                <div>
-                  <a href="https://kurogames.com/" target="_blank">
-                    Kuro Games
-                  </a>
-                </div>
-              </v-col>
-
-              <!-- Legal -->
-              <v-col cols="12" md="2">
-                <div class="font-weight-bold">
-                  {{ $t('Legal') }}
-                </div>
-
-                <div>
-                  <router-link to="/terms-and-conditions">
-                    {{ $t('Terms & Conditions') }}
-                  </router-link>
-                </div>
-
-                <div>
-                  <router-link to="/privacy-policy">
-                    {{ $t('Privacy Policy') }}
-                  </router-link>
-                </div>
-              </v-col>
-            </v-row>
-          </div>
-          <v-divider class="mt-4 mb-4" />
-
-          <div class="d-flex flex-column">
-            <div class="d-flex w-100 align-center">
-              <div>
-                <div>© {{ new Date().getFullYear() }} {{ app.name }}</div>
-                <div>
-                  All game assets and trademarks are the property of their
-                  respective owners.
-                </div>
-              </div>
-
-              <v-spacer />
-
-              <v-btn :icon="mdiGithub" size="small" variant="plain" />
-              <v-btn :icon="mdiGithub" size="small" variant="plain" />
-              <v-btn :icon="mdiGithub" size="small" variant="plain" />
-            </div>
-          </div>
-        </div>
-      </v-footer>
-
+      <!-- TODO: remove soon -->
       <client-only>
         <BackupController />
         <DialogController />

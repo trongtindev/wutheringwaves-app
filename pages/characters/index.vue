@@ -5,6 +5,7 @@ const i18n = useI18n();
 const resources = useResources();
 const localePath = useLocalePath();
 const database = useDatabase();
+const account = useAccount();
 
 // fetch
 const result = await resources.characters();
@@ -22,15 +23,20 @@ const loadOwned = () => {
     .getInstance()
     .then((db) => {
       db.characters
-        .find()
+        .find({
+          selector: {
+            playerId: account.active
+          }
+        })
         .exec()
         .then((result) => {
-          console.log('characters', result.length);
           if (result.length > 0) {
             owned.value = result.reduce(
               (acc, e) => ((acc[e.name] = e), acc),
               {}
             );
+          } else {
+            owned.value = {};
           }
         });
     })
@@ -64,6 +70,14 @@ const items = computed(() => {
     return true;
   });
 });
+
+// changes
+watch(
+  () => account.active,
+  (value) => {
+    if (value) loadOwned();
+  }
+);
 
 // lifecycle
 onMounted(() => loadOwned());

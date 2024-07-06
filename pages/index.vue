@@ -25,7 +25,7 @@ useSeoMeta({
     <!-- grids -->
     <masonry>
       <template #default="masonry">
-        <v-card class="pa-4 rounded border">
+        <v-card class="pa-4">
           <div class="d-flex flex-wrap ga-2 justify-center">
             <v-chip
               :prepend-icon="mdiGithub"
@@ -209,5 +209,99 @@ useSeoMeta({
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
+
+    <v-footer class="pa-8 d-block mt-2">
+      <div>
+        <v-row :no-gutters="true">
+          <v-col cols="12" md="6" class="d-flex align-center">
+            <h2>
+              {{ app.name }}
+            </h2>
+          </v-col>
+
+          <!-- Developers -->
+          <v-col cols="12" md="2">
+            <div class="font-weight-bold">
+              {{ $t('Developers') }}
+            </div>
+
+            <div>
+              <a :href="app.githubRepo" target="_blank" title="Github">
+                Github
+              </a>
+            </div>
+            <div>
+              <a :href="app.discord" target="_blank" title="Discord">
+                Discord
+              </a>
+            </div>
+            <div>
+              <a
+                :href="`${app.githubRepo}/issues`"
+                target="_blank"
+                :title="$t('Report a Bug')"
+              >
+                {{ $t('Report a Bug') }}
+              </a>
+            </div>
+          </v-col>
+
+          <!-- Resources -->
+          <v-col cols="12" md="2">
+            <div class="font-weight-bold">
+              {{ $t('Resources') }}
+            </div>
+
+            <div>
+              <a href="https://wutheringwaves.kurogames.com/" target="_blank">
+                Wuthering Waves
+              </a>
+            </div>
+
+            <div>
+              <a href="https://kurogames.com/" target="_blank"> Kuro Games </a>
+            </div>
+          </v-col>
+
+          <!-- Legal -->
+          <v-col cols="12" md="2">
+            <div class="font-weight-bold">
+              {{ $t('Legal') }}
+            </div>
+
+            <div>
+              <router-link to="/terms-and-conditions">
+                {{ $t('Terms & Conditions') }}
+              </router-link>
+            </div>
+
+            <div>
+              <router-link to="/privacy-policy">
+                {{ $t('Privacy Policy') }}
+              </router-link>
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+      <v-divider class="mt-4 mb-4" />
+
+      <div class="d-flex flex-column">
+        <div class="d-flex w-100 align-center">
+          <div>
+            <div>© {{ new Date().getFullYear() }} {{ app.name }}</div>
+            <div>
+              All game assets and trademarks are the property of their
+              respective owners.
+            </div>
+          </div>
+
+          <v-spacer />
+
+          <v-btn :icon="mdiGithub" size="small" variant="plain" />
+          <v-btn :icon="mdiGithub" size="small" variant="plain" />
+          <v-btn :icon="mdiGithub" size="small" variant="plain" />
+        </div>
+      </div>
+    </v-footer>
   </div>
 </template>

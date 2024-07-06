@@ -139,3 +139,8 @@ a {
     rgba(0, 0, 0, 0) 100%
   );
 }
+
+.quote {
+  border-left: 5px solid;
+  padding: 0px 0px 0px 10px;
+}

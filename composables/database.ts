@@ -142,6 +142,10 @@ export const useDatabase = defineStore('useDatabase', () => {
                 1: function (oldDoc) {
                   oldDoc.serverId = '86d52186155b148b5c138ceb41be9650';
                   return oldDoc;
+                },
+                2: function (oldDoc) {
+                  oldDoc.name = '';
+                  return oldDoc;
                 }
               }
             },
@@ -155,13 +159,25 @@ export const useDatabase = defineStore('useDatabase', () => {
               schema: characterSchema,
               methods: characterDocMethods,
               statics: characterCollectionMethods,
-              autoMigrate: false
+              autoMigrate: false,
+              migrationStrategies: {
+                1: function (oldDoc) {
+                  oldDoc.playerId = '';
+                  return oldDoc;
+                }
+              }
             },
             trophies: {
               schema: trophySchema,
               methods: trophyDocMethods,
               statics: trophyCollectionMethods,
-              autoMigrate: false
+              autoMigrate: false,
+              migrationStrategies: {
+                1: function (oldDoc) {
+                  oldDoc.playerId = '';
+                  return oldDoc;
+                }
+              }
             }
           });
 

@@ -1,1 +1,1443 @@
-[{"slug":"echoes-of-the-past-jinzhou","name":"Echoes of the Past: Jinzhou","group":"Exploration: Huanglong","category":"Exploration","description":"Deliver 30 Sonance Caskets to Chenpi."},{"slug":"echoes-of-the-past-jinzhou","name":"Echoes of the Past: Jinzhou","group":"Exploration: Huanglong","category":"Exploration","description":"Deliver 60 Sonance Caskets to Chenpi."},{"slug":"echoes-of-the-past-jinzhou","name":"Echoes of the Past: Jinzhou","group":"Exploration: Huanglong","category":"Exploration","description":"Deliver 115 Sonance Caskets to Chenpi.","notes":"There are 125 Sonance Caskets as of V1.0. Use a Wuwa map to find them all."},{"slug":"world-travel-jinzhou","name":"World Travel: Jinzhou","group":"Exploration: Huanglong","category":"Exploration","description":"Activate all Resonance Beacons in Jinzhou.","notes":"There are 79 beacons in Jinzhou. Use a Wuwa map to find them all."},{"slug":"power","name":"POWER!","group":"Exploration: Huanglong","category":"Exploration","description":"Sit on the highest chair in Jinzhou.","notes":"The chair is located South West of Shade Ridge, at the highest mountain spot. Image here."},{"slug":"may-the-beacons-guide-us","name":"May the Beacons Guide Us","group":"Exploration: Huanglong","category":"Exploration","description":"Complete \"Silent History\"."},{"slug":"one-way-road-ahead","name":"One-way Road Ahead","group":"Exploration: Huanglong","category":"Exploration","description":"Solve a Magnetic Cube puzzle 1 time."},{"slug":"set-off-the-fireworks","name":"Set off the Fireworks","group":"Exploration: Huanglong","category":"Exploration","description":"Solve an Encryption Block puzzle 1 time."},{"slug":"the-metamorphosis","name":"The Metamorphosis","group":"Exploration: Huanglong","category":"Exploration","description":"Complete 5 Echo Challenges."},{"slug":"fastest-legend","name":"Fastest Legend","group":"Exploration: Huanglong","category":"Exploration","description":"Complete \"Parallel Perception\" for the first time."},{"slug":"perspective-bender","name":"Perspective Bender","group":"Exploration: Huanglong","category":"Exploration","description":"Complete \"Perspective Bender\" for the first time."},{"slug":"trace-on","name":"\"Trace On\"","group":"Exploration: Huanglong","category":"Exploration","description":"Challenge all \"Tactical Hologram: Calamity\" in Jinzhou."},{"slug":"only-reverberation-remains","name":"Only Reverberation Remains","group":"Exploration: Huanglong","category":"Exploration","description":"Challenge all Tacet Fields in Jinzhou."},{"slug":"cremation-tuning-i","name":"Cremation Tuning I","group":"Exploration: Huanglong","category":"Exploration","description":"Obtain 20 Tidal Heritages in Jinzhou."},{"slug":"cremation-tuning-ii","name":"Cremation Tuning II","group":"Exploration: Huanglong","category":"Exploration","description":"Obtain 50 Tidal Heritages in Jinzhou.","dependOn":"Cremation Tuning I"},{"slug":"cremation-tuning-iii","name":"Cremation Tuning III","group":"Exploration: Huanglong","category":"Exploration","description":"Obtain 80 Tidal Heritages in Jinzhou.","dependOn":"Cremation Tuning II"},{"slug":"ride-the-tide-jinzhou","name":"Ride the Tide: Jinzhou","group":"Exploration: Huanglong","category":"Exploration","description":"Activate all markers on the map of Jinzhou.","notes":"There are 10 markers. Use a Wuwa map to find them all."},{"slug":"sound-of-the-return","name":"Sound of the Return","group":"Exploration: Huanglong","category":"Exploration","description":"Collect 20 Mutterflies in Jinzhou."},{"slug":"chest-collector-i","name":"Chest Collector I","group":"Exploration: Huanglong","category":"Exploration","description":"Open 100 Supply Chests in Jinzhou."},{"slug":"chest-collector-ii","name":"Chest Collector II","group":"Exploration: Huanglong","category":"Exploration","description":"Open 200 Supply Chests in Jinzhou.","dependOn":"Chest Collector I"},{"slug":"chest-collector-iii","name":"Chest Collector III","group":"Exploration: Huanglong","category":"Exploration","description":"Open 350 Supply Chests in Jinzhou.","notes":"Unobtainable in V1.0.","dependOn":"Chest Collector II"},{"slug":"pioneer-s-proof-jinzhou","name":"Pioneer's Proof: Jinzhou","group":"Exploration: Huanglong","category":"Exploration","description":"Reach Legendary Pioneer in Jinzhou."},{"slug":"dance-in-the-laser-light","name":"Dance in the Laser Light","group":"Exploration: Huanglong","category":"Exploration","description":"Maneuver the dolls through the laser corridor in \"Solitary Crusade\".","hidden":true},{"slug":"starry-hearts","name":"Starry Hearts","group":"Exploration: Huanglong","category":"Exploration","description":"Solve the puzzle in the bulletin board in online mode.","hidden":true},{"slug":"honor-my-slogan","name":"Honor My Slogan","group":"Huanglong I","category":"Exploration","description":"Complete \"We Promise, We Deliver\"."},{"slug":"remember-me","name":"Remember Me","group":"Huanglong I","category":"Exploration","description":"Complete \"Stygian Lacrimosa\"."},{"slug":"days-gone-by","name":"Days Gone By","group":"Huanglong I","category":"Exploration","description":"Complete \"Shadows of the Past\"."},{"slug":"atom-jungle-s-odyssey","name":"Atom: Jungle's Odyssey","group":"Huanglong I","category":"Exploration","description":"Complete \"When the Forest is No Longer Dim\"."},{"slug":"when-the-forest-is-no-longer-dark","name":"When the Forest is No Longer Dark","group":"Huanglong I","category":"Exploration","description":"Complete \"When Moonlight Shines in the Forest\"."},{"slug":"the-sun-rises-as-usual","name":"The Sun Rises as Usual","group":"Huanglong I","category":"Exploration","description":"Complete \"Radar Reactivation\"."},{"slug":"future-is-here","name":"Future is Here","group":"Huanglong I","category":"Exploration","description":"Complete \"The Past is the Future\"."},{"slug":"a-time-beyond-your-reach","name":"A Time Beyond Your Reach","group":"Huanglong I","category":"Exploration","description":"Complete \"The Eternal Concert\"."},{"slug":"sorry-i-m-a-patroller","name":"Sorry, I'm a Patroller","group":"Huanglong I","category":"Exploration","description":"Complete \"Secret Investigation\"."},{"slug":"a-desperate-gamble","name":"A Desperate Gamble","group":"Huanglong I","category":"Exploration","description":"Complete \"A True Arena Champion\"."},{"slug":"the-brave-wins-when-paths-cross","name":"The Brave Wins When Paths Cross!","group":"Huanglong I","category":"Exploration","description":"Complete \"Camp Raid\"."},{"slug":"nothing-is-free","name":"Nothing is Free","group":"Huanglong I","category":"Exploration","description":"Complete \"A Free Meal?\"."},{"slug":"your-mystery-i-ll-answer","name":"Your Mystery, I'll Answer","group":"Huanglong I","category":"Exploration","description":"Complete \"The Fabled Magnetic Cube Mechanics\"."},{"slug":"swimming-out-till-the-sea-turns-blue","name":"Swimming Out Till the Sea Turns Blue","group":"Huanglong I","category":"Exploration","description":"Complete \"Travel in Jinzhou: Gulpuffs\"."},{"slug":"full-house","name":"Full House","group":"Huanglong I","category":"Exploration","description":"Complete \"Liondancer's Practice\"."},{"slug":"the-master-of-overdashing","name":"The Master of Overdashing","group":"Huanglong I","category":"Exploration","description":"Complete \"Hero of the Leap\"."},{"slug":"skilled-craftsman","name":"Skilled Craftsman","group":"Wilderness Calls","category":"Exploration","description":"Forge any weapon 1 time."},{"slug":"fishing-master-i","name":"Fishing Master I","group":"Wilderness Calls","category":"Exploration","description":"Catch 50 fish."},{"slug":"fishing-master-ii","name":"Fishing Master II","group":"Wilderness Calls","category":"Exploration","description":"Catch 100 fish.","dependOn":"Fishing Master I"},{"slug":"fishing-master-iii","name":"Fishing Master III","group":"Wilderness Calls","category":"Exploration","description":"Catch 200 fish.","dependOn":"Fishing Master II"},{"slug":"hunting-master-i","name":"Hunting Master I","group":"Wilderness Calls","category":"Exploration","description":"Obtain 50 pieces of Poultry."},{"slug":"hunting-master-ii","name":"Hunting Master II","group":"Wilderness Calls","category":"Exploration","description":"Obtain 100 pieces of Poultry.","dependOn":"Hunting Master I"},{"slug":"hunting-master-iii","name":"Hunting Master III","group":"Wilderness Calls","category":"Exploration","description":"Obtain 200 pieces of Poultry.","dependOn":"Hunting Master II"},{"slug":"wild-hunter-i","name":"Wild Hunter I","group":"Wilderness Calls","category":"Exploration","description":"Obtain 50 pieces of Raw Meat."},{"slug":"wild-hunter-ii","name":"Wild Hunter II","group":"Wilderness Calls","category":"Exploration","description":"Obtain 100 pieces of Raw Meat.","dependOn":"Wild Hunter I"},{"slug":"wild-hunter-iii","name":"Wild Hunter III","group":"Wilderness Calls","category":"Exploration","description":"Obtain 200 pieces of Raw Meat.","dependOn":"Wild Hunter II"},{"slug":"winner-winner-chicken-dinner","name":"Winner Winner Chicken Dinner","group":"Wilderness Calls","category":"Exploration","description":"Make 1 Spicy Pulled Chicken."},{"slug":"gold-miner-i","name":"Gold Miner I","group":"Wilderness Calls","category":"Exploration","description":"Collect minerals 50 times."},{"slug":"gold-miner-ii","name":"Gold Miner II","group":"Wilderness Calls","category":"Exploration","description":"Collect minerals 100 times.","dependOn":"Gold Miner I"},{"slug":"gold-miner-iii","name":"Gold Miner III","group":"Wilderness Calls","category":"Exploration","description":"Collect minerals 200 times.","dependOn":"Gold Miner II"},{"slug":"follow-the-map","name":"Follow the Map","group":"Wilderness Calls","category":"Exploration","description":"Use Echo Hunting 50 times."},{"slug":"effective-potion-i","name":"Effective Potion I","group":"Wilderness Calls","category":"Exploration","description":"Use potion 20 times."},{"slug":"effective-potion-ii","name":"Effective Potion II","group":"Wilderness Calls","category":"Exploration","description":"Use potion 50 times.","dependOn":"Effective Potion I"},{"slug":"effective-potion-iii","name":"Effective Potion III","group":"Wilderness Calls","category":"Exploration","description":"Use potion 100 times.","dependOn":"Effective Potion II"},{"slug":"savoring-joy-i","name":"Savoring Joy I","group":"Wilderness Calls","category":"Exploration","description":"Consume Dishes 20 times."},{"slug":"savoring-joy-ii","name":"Savoring Joy II","group":"Wilderness Calls","category":"Exploration","description":"Consume Dishes 50 times.","dependOn":"Savoring Joy I"},{"slug":"savoring-joy-iii","name":"Savoring Joy III","group":"Wilderness Calls","category":"Exploration","description":"Consume Dishes 100 times.","dependOn":"Savoring Joy II"},{"slug":"creative-workshop-i","name":"Creative Workshop I","group":"Wilderness Calls","category":"Exploration","description":"Use the Synthesizer 20 times."},{"slug":"creative-workshop-ii","name":"Creative Workshop II","group":"Wilderness Calls","category":"Exploration","description":"Use the Synthesizer 50 times.","dependOn":"Creative Workshop I"},{"slug":"creative-workshop-iii","name":"Creative Workshop III","group":"Wilderness Calls","category":"Exploration","description":"Use the Synthesizer 100 times.","dependOn":"Creative Workshop II"},{"slug":"mochelin-1-star-chef","name":"Mochelin 1-Star Chef","group":"Wilderness Calls","category":"Exploration","description":"Reach Chef Level 2."},{"slug":"mochelin-2-star-chef","name":"Mochelin 2-Star Chef","group":"Wilderness Calls","category":"Exploration","description":"Reach Chef Level 5."},{"slug":"pharmacist-s-spell-i","name":"Pharmacist's Spell I","group":"Wilderness Calls","category":"Exploration","description":"Reach Synthesis Level 2."},{"slug":"pharmacist-s-spell-ii","name":"Pharmacist's Spell II","group":"Wilderness Calls","category":"Exploration","description":"Reach Synthesis Level 5.","dependOn":"Pharmacist's Spell I"},{"slug":"from-the-new-world","name":"From the New World","group":"Rover's Journey","category":"Journey","description":"Complete Main Quest: Utterance of Marvels."},{"slug":"thus-spoke-the-magistrate-wordless-message","name":"Thus Spoke the Magistrate: Wordless Message","group":"Rover's Journey","category":"Journey","description":"Complete \"First Resonance\"."},{"slug":"thus-spoke-the-magistrate-frontline-calls","name":"Thus Spoke the Magistrate: Frontline Calls","group":"Rover's Journey","category":"Journey","description":"Complete \"Echoing Marche\"."},{"slug":"shepherd-game","name":"Shepherd Game","group":"Rover's Journey","category":"Journey","description":"Complete \"Ominous Star\"."},{"slug":"buried-under-the-peach-blossom-tree","name":"\"Buried under the Peach Blossom Tree...\"","group":"Rover's Journey","category":"Journey","description":"Inspect the peach tree in the Qichi Village."},{"slug":"a-whispering-melody","name":"A Whispering Melody","group":"Rover's Journey","category":"Journey","description":"Complete \"Clashing Blades\"."},{"slug":"the-tuning-master","name":"The Tuning Master","group":"Rover's Journey","category":"Journey","description":"Retrieve all 5 missing Sonodisks."},{"slug":"kitten-first","name":"Kitten First","group":"Rover's Journey","category":"Journey","description":"Complete all quests of \"Save the World? Save the Cat!\".","notes":"This is a series of 7 Daily Quests."},{"slug":"captivating-you-always","name":"Captivating You Always","group":"Rover's Journey","category":"Journey","description":"Capture your first photo in \"Photos of Jinzhou\".","notes":"It's a side quest in Jinzhou, once you take a photograph you get the achievement."},{"slug":"if-the-melody-rings-true","name":"If the Melody Rings True","group":"Rover's Journey","category":"Journey","description":"Complete \"Rewinding Raindrops\"."},{"slug":"candy-spells-riddle","name":"Candy Spells Riddle","group":"Rover's Journey","category":"Journey","description":"Receive the Sugar Pearl from Jinzhou's Magistrate.","notes":"Requires talking to some kids outside the Grand Library. It's an optional thing to do, so we don't know what would happen if you missed it.","hidden":true},{"slug":"participation-is-the-key","name":"Participation is the Key","group":"Moments with You","category":"Journey","description":"Participate in \"Gulpuff Relay\" in \"Daybreak at Last\"."},{"slug":"the-same-sunset","name":"The Same Sunset","group":"Moments with You","category":"Journey","description":"Complete \"Daybreak at Last\"."},{"slug":"jingle-bells","name":"Jingle Bells","group":"Moments with You","category":"Journey","description":"Complete \"Sound Tracing\" in \"Wild Heart's Return\"."},{"slug":"rising-suan-ni","name":"Rising Suan'ni","group":"Moments with You","category":"Journey","description":"Complete \"Wild Heart's Return\"."},{"slug":"crescent-moon-on-the-banyan-tree","name":"Crescent Moon on the Banyan Tree","group":"Moments with You","category":"Journey","description":"Complete \"Under the Moonlit Banyan\".","notes":"After completing Lingyangs Companion Quest, cleansing the Dim Forest, and hanging up the Moon Lanterns, you can pick up this quest from Bei Shi at the Violet Banyan."},{"slug":"keeper-in-the-darkness","name":"Keeper in the Darkness","group":"Moments with You","category":"Journey","description":"Complete \"Solitary Crusade\"."},{"slug":"when-aix-cries","name":"When Aix Cries","group":"Battle Memories","category":"Battles","description":"Defeat the Mourning Aix for the first time."},{"slug":"beringal-we-re-goin-down","name":"Beringal, We're Goin Down","group":"Battle Memories","category":"Battles","description":"Defeat the Feilian Beringal for the first time."},{"slug":"cross-the-boundless-fog","name":"Cross the Boundless Fog","group":"Battle Memories","category":"Battles","description":"Defeat the Lampylumen Myriad for the first time."},{"slug":"ride-the-inferno","name":"Ride the Inferno","group":"Battle Memories","category":"Battles","description":"Defeat the Inferno Rider for the first time.","notes":"Boss encountered during the quest \"We Promise, We Deliver\"."},{"slug":"crown-fallen","name":"Crown Fallen","group":"Battle Memories","category":"Battles","description":"Defeat the Crownless for the first time.","notes":"Usually the player's first ever achievement."},{"slug":"only-the-bell-tolls","name":"Only the Bell Tolls","group":"Battle Memories","category":"Battles","description":"Defeat the Bell-Borne Geochelone for the first time.","notes":"Boss encountered during the quest \"Tacet Discord Hunter\"."},{"slug":"dancing-flash","name":"Dancing Flash","group":"Battle Memories","category":"Battles","description":"Defeat the Tempest Mephis for the first time."},{"slug":"wakey-wakey","name":"Wakey, Wakey!","group":"Battle Memories","category":"Battles","description":"Defeat the Bell-Borne Geochelone 50 times."},{"slug":"no-liz-but-strange-birds","name":"No Liz, But Strange Birds","group":"Battle Memories","category":"Battles","description":"Defeat the Mourning Aix 50 times."},{"slug":"rule-the-forest","name":"Rule the Forest","group":"Battle Memories","category":"Battles","description":"Defeat the Feilian Beringal 50 times."},{"slug":"penetrate-the-fog-with-light","name":"Penetrate the Fog with Light","group":"Battle Memories","category":"Battles","description":"Defeat the Lampylumen Myriad 50 times."},{"slug":"night-voyager","name":"Night Voyager","group":"Battle Memories","category":"Battles","description":"Defeat the Inferno Rider 50 times."},{"slug":"take-the-crown","name":"Take the Crown","group":"Battle Memories","category":"Battles","description":"Defeat the Crownless 50 times."},{"slug":"mephis-kombat","name":"Mephis Kombat","group":"Battle Memories","category":"Battles","description":"Defeat the Tempest Mephis 50 times."},{"slug":"fatal-strike","name":"Fatal Strike","group":"Battle Memories","category":"Battles","description":"Trigger the Intro Skill 20 times."},{"slug":"recoil-bell-borne-geochelone","name":"Recoil: Bell-Borne Geochelone","group":"Battle Memories","category":"Battles","description":"Use the Echo Skill of the Bell-Borne Geochelone to strike a fatal blow on the Bell-Borne Geochelone.","hidden":true},{"slug":"recoil-inferno-rider","name":"Recoil: Inferno Rider","group":"Battle Memories","category":"Battles","description":"Use the Echo Skill of the Inferno Rider to strike a fatal blow on the Inferno Rider.","hidden":true},{"slug":"fading-tempest","name":"Fading Tempest","group":"Battle Memories","category":"Battles","description":"That last roar of thunder... Where does it come from?","notes":"Use Tempest Mephis Echo skill to kill the boss Tempest Mephis.","hidden":true},{"slug":"recoil-mourning-aix","name":"Recoil: Mourning Aix","group":"Battle Memories","category":"Battles","description":"Use the Echo Skill of the Mourning Aix to strike a fatal blow on the Mourning Aix.","hidden":true},{"slug":"recoil-the-crownless","name":"Recoil: The Crownless","group":"Battle Memories","category":"Battles","description":"Use the Echo Skill of the Crownless to strike a fatal blow on the Crownless.","hidden":true},{"slug":"recoil-tempest-mephis","name":"Recoil: Tempest Mephis","group":"Battle Memories","category":"Battles","description":"Use the Echo Skill of the Thundering Mephis to strike a fatal blow on the Thundering Mephis.","hidden":true},{"slug":"silent-burst","name":"Silent Burst","group":"Battle Memories","category":"Battles","description":"Deal 10,000 points of Crit. DMG."},{"slug":"duang","name":"Duang!!!","group":"Battle Memories","category":"Battles","description":"Parry enemy's attack 10 times."},{"slug":"moment-once-more","name":"Moment Once More","group":"Battle Memories","category":"Battles","description":"Use any Revival Item for the first time."},{"slug":"from-evade-to-attack","name":"From Evade to Attack","group":"Battle Memories","category":"Battles","description":"Perform Dodge 50 times."},{"slug":"do-not-go-gentle-into-that-good-night","name":"Do Not Go Gentle into that Good Night","group":"From the Abyssal Tower I","category":"Battles","description":"Unlock \"Tower of Adversity: Hazard Zone\"."},{"slug":"ghost-of-dark-forest-hunter","name":"Ghost of Dark Forest: Hunter","group":"From the Abyssal Tower I","category":"Battles","description":"Complete all stages in \"Tower of Adversity: Hazard Zone\"."},{"slug":"ghost-of-dark-forest-stroller","name":"Ghost of Dark Forest: Stroller","group":"From the Abyssal Tower I","category":"Battles","description":"Obtain all Crests in \"Tower of Adversity: Stable Zone\"."},{"slug":"ghost-of-dark-forest-lurker","name":"Ghost of Dark Forest: Lurker","group":"From the Abyssal Tower I","category":"Battles","description":"Obtain all Crests in \"Tower of Adversity: Experimental Zone\"."},{"slug":"ghost-of-dark-forest-observer","name":"Ghost of Dark Forest: Observer","group":"From the Abyssal Tower I","category":"Battles","description":"Obtain all Crests in \"Tower of Adversity: Hazard Zone\"."},{"slug":"thunder-in-the-burning-sea","name":"Thunder in the Burning Sea","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Tempest Mephis I\"."},{"slug":"strange-bird-in-the-mountain","name":"Strange Bird in the Mountain","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Impermanence Heron I\"."},{"slug":"land-of-the-singing-cicada","name":"Land of the Singing Cicada","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Mourning Aix I\"."},{"slug":"meeting-the-king","name":"Meeting the King","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Feilian Beringal I\"."},{"slug":"thunder-silencer","name":"Thunder Silencer","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Tempest Mephis VI\"."},{"slug":"mine-guard","name":"Mine Guard","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Impermanence Heron VI\"."},{"slug":"dies-the-elegy","name":"Dies the Elegy","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Mourning Aix VI\"."},{"slug":"no-king-in-sight","name":"No King in Sight","group":"From the Abyssal Tower I","category":"Battles","description":"Complete \"Tactical Hologram: Calamity\" - \"Feilian Beringal VI\"."},{"slug":"plants-vs-zombie-roseshroom","name":"Plants vs Zombie Roseshroom?","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Roseshroom Variant\" in Port City of Guixu."},{"slug":"wild-boar-forest-rampage","name":"Wild Boar Forest Rampage","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Sabyrkin\" in Tiger's Maw."},{"slug":"the-ultimate","name":"The \"Ultimate\"","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Viridblaze Saurian: Ultimate\" in Central Plains."},{"slug":"dance-with-the-wolves","name":"Dance with the Wolves","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Wasteland Bellower\" in Wuming Bay."},{"slug":"here-comes-the-bear","name":"Here Comes the Bear","group":"Battle Skills I","category":"Battles","description":"When there's a man and a bear in the wilderness...","notes":"Defeat the Spearback King in Whining Aix's Mire."},{"slug":"just-a-rock","name":"Just A Rock","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Obelisk Guardian\" in Desorock Highland.","notes":"https://i.imgur.com/GpHIy4l.jpeg Defeat the level 85 Obelisk Guard on top of the mountain at Camp Overwatch."},{"slug":"though-i-can-t-fly","name":"Though I Can't Fly","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Twin Heron\" in Whining Aix's Mire."},{"slug":"love-death-abandoned-cars","name":"Love, Death & Abandoned Cars","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Carapace: Engine Zero\" in Central Plains."},{"slug":"not-my-match","name":"Not My Match!","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Young Murmurin\" in Dim Forest."},{"slug":"prism-party","name":"Prism Party","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Prism Heart\" in Dim Forest."},{"slug":"debut-project-of-the-big-three","name":"Debut Project of the Big Three!","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Fractsidus Follower\" in Port City of Guixu.","notes":"https://i.imgur.com/KyOthm6.jpeg\nUse dodges and intro skills to deal percentage based damage. Defeat the three level 85 Factsidus Followers on the platform in the air, you can throw down the first two and they will die from fall damage, but the last one has to be killed manually."},{"slug":"protocol-3-a-attack","name":"Protocol 3. A-attack!","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Autopuppet Scout-01\" in Central Plains."},{"slug":"safety-first","name":"Safety First!","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Illuminator Theater\" in Desorock Highland."},{"slug":"empty-the-nest","name":"Empty the Nest","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Scorpion's Nest\" in Port City of Guixu."},{"slug":"the-true-power","name":"The True Power!","group":"Battle Skills I","category":"Battles","description":"Deal 1,000 damage with one attack to an enemy."},{"slug":"the-grand-master","name":"The Grand Master","group":"Battle Skills I","category":"Battles","description":"Deal 10,000 damage with one attack to an enemy.","notes":"You'll get this easily from progressing through story mission and coming across one where you need to throw \"javelin-like-objects\" at enemies."},{"slug":"master-damage-i","name":"Master Damage I","group":"Battle Skills I","category":"Battles","description":"Deal 10,000 damage in total."},{"slug":"master-damage-ii","name":"Master Damage II","group":"Battle Skills I","category":"Battles","description":"Deal 100,000 damage in total.","dependOn":"Master Damage I"},{"slug":"master-damage-iii","name":"Master Damage III","group":"Battle Skills I","category":"Battles","description":"Deal 1,000,000 damage in total.","dependOn":"Master Damage II"},{"slug":"master-damage-iv","name":"Master Damage IV","group":"Battle Skills I","category":"Battles","description":"Deal 10,000,000 damage in total.","dependOn":"Master Damage I"},{"slug":"i-choose-the-form-of-tacet-discord","name":"\"I choose the form of Tacet Discord!\"","group":"Battle Skills I","category":"Battles","description":"Use Echo Skills to transform into an Echo 10 times."},{"slug":"turtle-breathing","name":"Turtle Breathing","group":"Battle Skills I","category":"Battles","description":"Use the Echo Skill of any small chelonian-type Echo for the first time.","notes":"Works with the turtle echo Hoartoise."},{"slug":"go-fight","name":"Go & Fight!","group":"Battle Skills I","category":"Battles","description":"Use Echo Skills to summon an Echo 10 times."},{"slug":"gorilla-gazer","name":"Gorilla Gazer","group":"Battle Skills I","category":"Battles","description":"Defeat \"Wild Scarlet\" in Dim Forest","notes":"https://i.imgur.com/9SkAjP0.jpeg\nUse dodges and intro skills to deal percentage based damage. Three level 120 Wild Gorillas are down here, try to keep the larger one ranged, and separate one of the smaller ones by pushing it off the edge. Then kill the smaller ones one by one, you can also utilize dodges from the bigger ones ranged attacks."},{"slug":"we-are-the-challenger-my-friend","name":"We Are the Challenger, My Friend","group":"Battle Skills I","category":"Battles","description":"Defeat the \"Chasm Rider\" in the Qichi Village."},{"slug":"handy-pistols-i","name":"Handy Pistols I","group":"Battle Skills II","category":"Battles","description":"Defeat enemies 10 times with Chixia's Heavy Attack from 7m away."},{"slug":"handy-pistols-ii","name":"Handy Pistols II","group":"Battle Skills II","category":"Battles","description":"Defeat enemies 10 times with Chixia's Heavy Attack from 1m away.","dependOn":"Handy Pistols I"},{"slug":"new-places-the-old","name":"New Places the Old","group":"Battle Skills II","category":"Battles","description":"Use the Echo Skill of the Fusion Dreadmane to defeat the Havoc Dreadmane 10 times."},{"slug":"the-dark-knight-rises","name":"The Dark Knight Rises","group":"Battle Skills II","category":"Battles","description":"Defeat 100 Exiles."},{"slug":"goodnight-snip-snaps","name":"Goodnight, Snip Snaps","group":"Battle Skills II","category":"Battles","description":"Defeat 66 Snip Snaps."},{"slug":"lights-out","name":"Lights Out...","group":"Battle Skills II","category":"Battles","description":"Defeat 66 Zig Zags."},{"slug":"sniff-the-whiff","name":"Sniff the Whiff","group":"Battle Skills II","category":"Battles","description":"Defeat 66 Whiff Whaffs."},{"slug":"a-silent-tick","name":"A Silent Tick","group":"Battle Skills II","category":"Battles","description":"Defeat 66 Tick Tacks."},{"slug":"boom-boom","name":"BOOM BOOM!","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by the explosive attacks of the Zig Zags.","notes":"Zig Zags will only perform this attack upon reaching low health."},{"slug":"a-deadly-weight","name":"A Deadly Weight","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by the Excarats' attacks."},{"slug":"unexpected-disaster","name":"Unexpected Disaster","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated after being bumped by the Inferno Rider."},{"slug":"dangerous-creature","name":"DANGEROUS CREATURE","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated after being juggled by the Gulpuffs.","notes":"Gulpuffs will start to spin and unleash a freezing aura around it."},{"slug":"rise-shine","name":"Rise & Shine","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow when HP is above 95%.","notes":"Bring a level 1 unit into battle against the toughest enemy (boss preferably) and get one-shotted."},{"slug":"chilling-frost","name":"Chilling Frost","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow of Glacio DMG when HP is above 50%."},{"slug":"scorching-sun","name":"Scorching Sun","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow of Fusion DMG when HP is above 50%."},{"slug":"bury-the-thunder","name":"Bury the Thunder","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow of Electro DMG when HP is above 50%."},{"slug":"noisy-wind","name":"Noisy Wind","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow of Aero DMG when HP is above 50%."},{"slug":"over-photosynthesis","name":"Over-Photosynthesis","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow of Spectro DMG when HP is above 50%."},{"slug":"close-your-eyes-when-it-s-dark","name":"Close Your Eyes when it's Dark","group":"Unexpected Experience","category":"Battles","description":"A Resonator becomes incapacitated by a fatal blow of Havoc DMG when HP is above 50%."},{"slug":"hero-of-justice","name":"\"Hero of Justice\"","group":"Path of Growth","category":"Voices","description":"Resonator Ascension reaches Rank 6."},{"slug":"all-battles-won-i","name":"All Battles Won I","group":"Path of Growth","category":"Voices","description":"Upgrade Data Bank to Lv.8."},{"slug":"all-battles-won-ii","name":"All Battles Won II","group":"Path of Growth","category":"Voices","description":"Upgrade Data Bank to Lv.15.","dependOn":"All Battles Won I"},{"slug":"all-battles-won-iii","name":"All Battles Won III","group":"Path of Growth","category":"Voices","description":"Upgrade Data Bank to Lv.20.","dependOn":"All Battles Won II"},{"slug":"you-don-t-even-want-to-call-me-big-brother","name":"You Don't Even Want to Call Me Big Brother!","group":"Path of Growth","category":"Voices","description":"Obtain the Echo of the Crownless for the first time.","hidden":true},{"slug":"beginner-pet-raising","name":"Beginner Pet Raising","group":"Path of Growth","category":"Voices","description":"Obtain the Echo of the Bell-Borne Geochelone for the first time.","hidden":true},{"slug":"friendly-neighborhood-i","name":"Friendly Neighborhood I","group":"Path of Growth","category":"Voices","description":"Complete 10 Daily Quests in total."},{"slug":"good-neighbors-of-citizens-ii","name":"Good Neighbors of Citizens II","group":"Path of Growth","category":"Voices","description":"Complete 30 Daily Quests in total."},{"slug":"friendly-neighborhood-ii","name":"Friendly Neighborhood II","group":"Path of Growth","category":"Voices","description":"Complete 50 Daily Quests in total.","notes":"Not obtainable until V1.1.","dependOn":"Friendly Neighborhood I"},{"slug":"first-try","name":"First Try","group":"Path of Growth","category":"Voices","description":"Equip one 4-star or above weapon."},{"slug":"when-the-stars-shine-i","name":"When the Stars Shine I","group":"Path of Growth","category":"Voices","description":"Obtain 3 Resonators in total.","notes":"Requires your first free \"gacha\" unit Baizhi."},{"slug":"when-the-stars-shine-ii","name":"When the Stars Shine II","group":"Path of Growth","category":"Voices","description":"Obtain 6 Resonators in total.","notes":"At the time of launch, only 5 Resonators are \"free\". Rover doesn't count towards this achievement.","dependOn":"When the Stars Shine I"},{"slug":"when-the-stars-shine-iii","name":"When the Stars Shine III","group":"Path of Growth","category":"Voices","description":"Obtain 10 Resonators in total.","notes":"Requires pulling on gacha banner.","dependOn":"When the Stars Shine II"},{"slug":"the-fragile-me-is-already-dead","name":"\"The Fragile Me is Already Dead\"","group":"Path of Growth","category":"Voices","description":"Upgrade all skills of any Resonator to max level."},{"slug":"as-long-as-it-works","name":"As Long as it Works!","group":"Echo Collection","category":"Voices","description":"Absorb a 3-Star Echo"},{"slug":"nice-to-meet-you","name":"Nice to Meet You","group":"Echo Collection","category":"Voices","description":"Absorb a 4-Star Echo"},{"slug":"are-you-my-servant","name":"Are You My Servant?","group":"Echo Collection","category":"Voices","description":"Absorb a 5-Star Echo"},{"slug":"golden-legend-i","name":"Golden Legend I","group":"Echo Collection","category":"Voices","description":"Absorb 10 5-Star Echoes"},{"slug":"golden-legend-ii","name":"Golden Legend II","group":"Echo Collection","category":"Voices","description":"Absorb 20 5-Star Echoes","dependOn":"Golden Legend I"},{"slug":"golden-legend-iii","name":"Golden Legend III","group":"Echo Collection","category":"Voices","description":"Absorb 50 5-Star Echoes","dependOn":"Golden Legend II"},{"slug":"ace-trainer","name":"Ace Trainer","group":"Echo Collection","category":"Voices","description":"Upgrade a 5-Star Echo to max level"},{"slug":"become-an-echo-enthusiast","name":"Become an Echo Enthusiast!","group":"Echo Collection","category":"Voices","description":"Absorb 100 Echoes in total"},{"slug":"become-an-echo-expert","name":"Become an Echo Expert!","group":"Echo Collection","category":"Voices","description":"Absorb 300 Echoes in total"},{"slug":"become-the-echo-master","name":"Become the Echo Master!","group":"Echo Collection","category":"Voices","description":"Absorb 500 Echoes in total"},{"slug":"butterfly-effect-i","name":"Butterfly Effect I","group":"Echo Collection","category":"Voices","description":"Tune Echoes 50 times"},{"slug":"butterfly-effect-ii","name":"Butterfly Effect II","group":"Echo Collection","category":"Voices","description":"Tune Echoes 100 times","dependOn":"Butterfly Effect I"},{"slug":"butterfly-effect-iii","name":"Butterfly Effect III","group":"Echo Collection","category":"Voices","description":"Tune Echoes 200 times","dependOn":"Butterfly Effect II"},{"slug":"nothing-less","name":"Nothing Less","group":"Echo Collection","category":"Voices","description":"Activate one 5-piece Bonus of Sonata Effect for the first time"},{"slug":"do-you-believe-in-light-too","name":"Do you believe in light too?","group":"Echo Collection","category":"Voices","description":"What the hell is a shiny, bright thing ......"}]
+[
+  {
+    "slug": "echoes-of-the-past-jinzhou",
+    "name": "Echoes of the Past: Jinzhou",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Deliver 30 Sonance Caskets to Chenpi."
+  },
+  {
+    "slug": "echoes-of-the-past-jinzhou",
+    "name": "Echoes of the Past: Jinzhou",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Deliver 60 Sonance Caskets to Chenpi."
+  },
+  {
+    "slug": "echoes-of-the-past-jinzhou",
+    "name": "Echoes of the Past: Jinzhou",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Deliver 115 Sonance Caskets to Chenpi.",
+    "notes": "There are 125 Sonance Caskets as of V1.0. Use a Wuwa map to find them all."
+  },
+  {
+    "slug": "world-travel-jinzhou",
+    "name": "World Travel: Jinzhou",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Activate all Resonance Beacons in Jinzhou.",
+    "notes": "There are 79 beacons in Jinzhou. Use a Wuwa map to find them all."
+  },
+  {
+    "slug": "power",
+    "name": "POWER!",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Sit on the highest chair in Jinzhou.",
+    "notes": "The chair is located South West of Shade Ridge, at the highest mountain spot. Image here."
+  },
+  {
+    "slug": "may-the-beacons-guide-us",
+    "name": "May the Beacons Guide Us",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Complete \"Silent History\"."
+  },
+  {
+    "slug": "one-way-road-ahead",
+    "name": "One-way Road Ahead",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Solve a Magnetic Cube puzzle 1 time."
+  },
+  {
+    "slug": "set-off-the-fireworks",
+    "name": "Set off the Fireworks",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Solve an Encryption Block puzzle 1 time."
+  },
+  {
+    "slug": "the-metamorphosis",
+    "name": "The Metamorphosis",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Complete 5 Echo Challenges."
+  },
+  {
+    "slug": "fastest-legend",
+    "name": "Fastest Legend",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Complete \"Parallel Perception\" for the first time."
+  },
+  {
+    "slug": "perspective-bender",
+    "name": "Perspective Bender",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Complete \"Perspective Bender\" for the first time."
+  },
+  {
+    "slug": "trace-on",
+    "name": "\"Trace On\"",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Challenge all \"Tactical Hologram: Calamity\" in Jinzhou."
+  },
+  {
+    "slug": "only-reverberation-remains",
+    "name": "Only Reverberation Remains",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Challenge all Tacet Fields in Jinzhou."
+  },
+  {
+    "slug": "cremation-tuning-i",
+    "name": "Cremation Tuning I",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Obtain 20 Tidal Heritages in Jinzhou."
+  },
+  {
+    "slug": "cremation-tuning-ii",
+    "name": "Cremation Tuning II",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Obtain 50 Tidal Heritages in Jinzhou.",
+    "dependOn": "Cremation Tuning I"
+  },
+  {
+    "slug": "cremation-tuning-iii",
+    "name": "Cremation Tuning III",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Obtain 80 Tidal Heritages in Jinzhou.",
+    "dependOn": "Cremation Tuning II"
+  },
+  {
+    "slug": "ride-the-tide-jinzhou",
+    "name": "Ride the Tide: Jinzhou",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Activate all markers on the map of Jinzhou.",
+    "notes": "There are 10 markers. Use a Wuwa map to find them all."
+  },
+  {
+    "slug": "sound-of-the-return",
+    "name": "Sound of the Return",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Collect 20 Mutterflies in Jinzhou."
+  },
+  {
+    "slug": "chest-collector-i",
+    "name": "Chest Collector I",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Open 100 Supply Chests in Jinzhou."
+  },
+  {
+    "slug": "chest-collector-ii",
+    "name": "Chest Collector II",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Open 200 Supply Chests in Jinzhou.",
+    "dependOn": "Chest Collector I"
+  },
+  {
+    "slug": "chest-collector-iii",
+    "name": "Chest Collector III",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Open 350 Supply Chests in Jinzhou.",
+    "notes": "Unobtainable in V1.0.",
+    "dependOn": "Chest Collector II"
+  },
+  {
+    "slug": "pioneer-s-proof-jinzhou",
+    "name": "Pioneer's Proof: Jinzhou",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Reach Legendary Pioneer in Jinzhou."
+  },
+  {
+    "slug": "dance-in-the-laser-light",
+    "name": "Dance in the Laser Light",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Maneuver the dolls through the laser corridor in \"Solitary Crusade\".",
+    "hidden": true
+  },
+  {
+    "slug": "starry-hearts",
+    "name": "Starry Hearts",
+    "group": "Exploration: Huanglong",
+    "category": "Exploration",
+    "description": "Solve the puzzle in the bulletin board in online mode.",
+    "hidden": true
+  },
+  {
+    "slug": "honor-my-slogan",
+    "name": "Honor My Slogan",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"We Promise, We Deliver\"."
+  },
+  {
+    "slug": "remember-me",
+    "name": "Remember Me",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Stygian Lacrimosa\"."
+  },
+  {
+    "slug": "days-gone-by",
+    "name": "Days Gone By",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Shadows of the Past\"."
+  },
+  {
+    "slug": "atom-jungle-s-odyssey",
+    "name": "Atom: Jungle's Odyssey",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"When the Forest is No Longer Dim\"."
+  },
+  {
+    "slug": "when-the-forest-is-no-longer-dark",
+    "name": "When the Forest is No Longer Dark",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"When Moonlight Shines in the Forest\"."
+  },
+  {
+    "slug": "the-sun-rises-as-usual",
+    "name": "The Sun Rises as Usual",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Radar Reactivation\"."
+  },
+  {
+    "slug": "future-is-here",
+    "name": "Future is Here",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"The Past is the Future\"."
+  },
+  {
+    "slug": "a-time-beyond-your-reach",
+    "name": "A Time Beyond Your Reach",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"The Eternal Concert\"."
+  },
+  {
+    "slug": "sorry-i-m-a-patroller",
+    "name": "Sorry, I'm a Patroller",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Secret Investigation\"."
+  },
+  {
+    "slug": "a-desperate-gamble",
+    "name": "A Desperate Gamble",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"A True Arena Champion\"."
+  },
+  {
+    "slug": "the-brave-wins-when-paths-cross",
+    "name": "The Brave Wins When Paths Cross!",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Camp Raid\"."
+  },
+  {
+    "slug": "nothing-is-free",
+    "name": "Nothing is Free",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"A Free Meal?\"."
+  },
+  {
+    "slug": "your-mystery-i-ll-answer",
+    "name": "Your Mystery, I'll Answer",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"The Fabled Magnetic Cube Mechanics\"."
+  },
+  {
+    "slug": "swimming-out-till-the-sea-turns-blue",
+    "name": "Swimming Out Till the Sea Turns Blue",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Travel in Jinzhou: Gulpuffs\"."
+  },
+  {
+    "slug": "full-house",
+    "name": "Full House",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Liondancer's Practice\"."
+  },
+  {
+    "slug": "the-master-of-overdashing",
+    "name": "The Master of Overdashing",
+    "group": "Huanglong I",
+    "category": "Exploration",
+    "description": "Complete \"Hero of the Leap\"."
+  },
+  {
+    "slug": "skilled-craftsman",
+    "name": "Skilled Craftsman",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Forge any weapon 1 time."
+  },
+  {
+    "slug": "fishing-master-i",
+    "name": "Fishing Master I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Catch 50 fish."
+  },
+  {
+    "slug": "fishing-master-ii",
+    "name": "Fishing Master II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Catch 100 fish.",
+    "dependOn": "Fishing Master I"
+  },
+  {
+    "slug": "fishing-master-iii",
+    "name": "Fishing Master III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Catch 200 fish.",
+    "dependOn": "Fishing Master II"
+  },
+  {
+    "slug": "hunting-master-i",
+    "name": "Hunting Master I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Obtain 50 pieces of Poultry."
+  },
+  {
+    "slug": "hunting-master-ii",
+    "name": "Hunting Master II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Obtain 100 pieces of Poultry.",
+    "dependOn": "Hunting Master I"
+  },
+  {
+    "slug": "hunting-master-iii",
+    "name": "Hunting Master III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Obtain 200 pieces of Poultry.",
+    "dependOn": "Hunting Master II"
+  },
+  {
+    "slug": "wild-hunter-i",
+    "name": "Wild Hunter I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Obtain 50 pieces of Raw Meat."
+  },
+  {
+    "slug": "wild-hunter-ii",
+    "name": "Wild Hunter II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Obtain 100 pieces of Raw Meat.",
+    "dependOn": "Wild Hunter I"
+  },
+  {
+    "slug": "wild-hunter-iii",
+    "name": "Wild Hunter III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Obtain 200 pieces of Raw Meat.",
+    "dependOn": "Wild Hunter II"
+  },
+  {
+    "slug": "winner-winner-chicken-dinner",
+    "name": "Winner Winner Chicken Dinner",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Make 1 Spicy Pulled Chicken."
+  },
+  {
+    "slug": "gold-miner-i",
+    "name": "Gold Miner I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Collect minerals 50 times."
+  },
+  {
+    "slug": "gold-miner-ii",
+    "name": "Gold Miner II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Collect minerals 100 times.",
+    "dependOn": "Gold Miner I"
+  },
+  {
+    "slug": "gold-miner-iii",
+    "name": "Gold Miner III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Collect minerals 200 times.",
+    "dependOn": "Gold Miner II"
+  },
+  {
+    "slug": "follow-the-map",
+    "name": "Follow the Map",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use Echo Hunting 50 times."
+  },
+  {
+    "slug": "effective-potion-i",
+    "name": "Effective Potion I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use potion 20 times."
+  },
+  {
+    "slug": "effective-potion-ii",
+    "name": "Effective Potion II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use potion 50 times.",
+    "dependOn": "Effective Potion I"
+  },
+  {
+    "slug": "effective-potion-iii",
+    "name": "Effective Potion III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use potion 100 times.",
+    "dependOn": "Effective Potion II"
+  },
+  {
+    "slug": "savoring-joy-i",
+    "name": "Savoring Joy I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Consume Dishes 20 times."
+  },
+  {
+    "slug": "savoring-joy-ii",
+    "name": "Savoring Joy II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Consume Dishes 50 times.",
+    "dependOn": "Savoring Joy I"
+  },
+  {
+    "slug": "savoring-joy-iii",
+    "name": "Savoring Joy III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Consume Dishes 100 times.",
+    "dependOn": "Savoring Joy II"
+  },
+  {
+    "slug": "creative-workshop-i",
+    "name": "Creative Workshop I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use the Synthesizer 20 times."
+  },
+  {
+    "slug": "creative-workshop-ii",
+    "name": "Creative Workshop II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use the Synthesizer 50 times.",
+    "dependOn": "Creative Workshop I"
+  },
+  {
+    "slug": "creative-workshop-iii",
+    "name": "Creative Workshop III",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Use the Synthesizer 100 times.",
+    "dependOn": "Creative Workshop II"
+  },
+  {
+    "slug": "mochelin-1-star-chef",
+    "name": "Mochelin 1-Star Chef",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Reach Chef Level 2."
+  },
+  {
+    "slug": "mochelin-2-star-chef",
+    "name": "Mochelin 2-Star Chef",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Reach Chef Level 5."
+  },
+  {
+    "slug": "pharmacist-s-spell-i",
+    "name": "Pharmacist's Spell I",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Reach Synthesis Level 2."
+  },
+  {
+    "slug": "pharmacist-s-spell-ii",
+    "name": "Pharmacist's Spell II",
+    "group": "Wilderness Calls",
+    "category": "Exploration",
+    "description": "Reach Synthesis Level 5.",
+    "dependOn": "Pharmacist's Spell I"
+  },
+  {
+    "slug": "from-the-new-world",
+    "name": "From the New World",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete Main Quest: Utterance of Marvels."
+  },
+  {
+    "slug": "thus-spoke-the-magistrate-wordless-message",
+    "name": "Thus Spoke the Magistrate: Wordless Message",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete \"First Resonance\"."
+  },
+  {
+    "slug": "thus-spoke-the-magistrate-frontline-calls",
+    "name": "Thus Spoke the Magistrate: Frontline Calls",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete \"Echoing Marche\"."
+  },
+  {
+    "slug": "shepherd-game",
+    "name": "Shepherd Game",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete \"Ominous Star\"."
+  },
+  {
+    "slug": "buried-under-the-peach-blossom-tree",
+    "name": "\"Buried under the Peach Blossom Tree...\"",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Inspect the peach tree in the Qichi Village."
+  },
+  {
+    "slug": "a-whispering-melody",
+    "name": "A Whispering Melody",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete \"Clashing Blades\"."
+  },
+  {
+    "slug": "the-tuning-master",
+    "name": "The Tuning Master",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Retrieve all 5 missing Sonodisks."
+  },
+  {
+    "slug": "kitten-first",
+    "name": "Kitten First",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete all quests of \"Save the World? Save the Cat!\".",
+    "notes": "This is a series of 7 Daily Quests."
+  },
+  {
+    "slug": "captivating-you-always",
+    "name": "Captivating You Always",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Capture your first photo in \"Photos of Jinzhou\".",
+    "notes": "It's a side quest in Jinzhou, once you take a photograph you get the achievement."
+  },
+  {
+    "slug": "if-the-melody-rings-true",
+    "name": "If the Melody Rings True",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Complete \"Rewinding Raindrops\"."
+  },
+  {
+    "slug": "candy-spells-riddle",
+    "name": "Candy Spells Riddle",
+    "group": "Rover's Journey",
+    "category": "Journey",
+    "description": "Receive the Sugar Pearl from Jinzhou's Magistrate.",
+    "notes": "Requires talking to some kids outside the Grand Library. It's an optional thing to do, so we don't know what would happen if you missed it.",
+    "hidden": true
+  },
+  {
+    "slug": "participation-is-the-key",
+    "name": "Participation is the Key",
+    "group": "Moments with You",
+    "category": "Journey",
+    "description": "Participate in \"Gulpuff Relay\" in \"Daybreak at Last\"."
+  },
+  {
+    "slug": "the-same-sunset",
+    "name": "The Same Sunset",
+    "group": "Moments with You",
+    "category": "Journey",
+    "description": "Complete \"Daybreak at Last\"."
+  },
+  {
+    "slug": "jingle-bells",
+    "name": "Jingle Bells",
+    "group": "Moments with You",
+    "category": "Journey",
+    "description": "Complete \"Sound Tracing\" in \"Wild Heart's Return\"."
+  },
+  {
+    "slug": "rising-suan-ni",
+    "name": "Rising Suan'ni",
+    "group": "Moments with You",
+    "category": "Journey",
+    "description": "Complete \"Wild Heart's Return\"."
+  },
+  {
+    "slug": "crescent-moon-on-the-banyan-tree",
+    "name": "Crescent Moon on the Banyan Tree",
+    "group": "Moments with You",
+    "category": "Journey",
+    "description": "Complete \"Under the Moonlit Banyan\".",
+    "notes": "After completing Lingyangs Companion Quest, cleansing the Dim Forest, and hanging up the Moon Lanterns, you can pick up this quest from Bei Shi at the Violet Banyan."
+  },
+  {
+    "slug": "keeper-in-the-darkness",
+    "name": "Keeper in the Darkness",
+    "group": "Moments with You",
+    "category": "Journey",
+    "description": "Complete \"Solitary Crusade\"."
+  },
+  {
+    "slug": "when-aix-cries",
+    "name": "When Aix Cries",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Mourning Aix for the first time."
+  },
+  {
+    "slug": "beringal-we-re-goin-down",
+    "name": "Beringal, We're Goin Down",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Feilian Beringal for the first time."
+  },
+  {
+    "slug": "cross-the-boundless-fog",
+    "name": "Cross the Boundless Fog",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Lampylumen Myriad for the first time."
+  },
+  {
+    "slug": "ride-the-inferno",
+    "name": "Ride the Inferno",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Inferno Rider for the first time.",
+    "notes": "Boss encountered during the quest \"We Promise, We Deliver\"."
+  },
+  {
+    "slug": "crown-fallen",
+    "name": "Crown Fallen",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Crownless for the first time.",
+    "notes": "Usually the player's first ever achievement."
+  },
+  {
+    "slug": "only-the-bell-tolls",
+    "name": "Only the Bell Tolls",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Bell-Borne Geochelone for the first time.",
+    "notes": "Boss encountered during the quest \"Tacet Discord Hunter\"."
+  },
+  {
+    "slug": "dancing-flash",
+    "name": "Dancing Flash",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Tempest Mephis for the first time."
+  },
+  {
+    "slug": "wakey-wakey",
+    "name": "Wakey, Wakey!",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Bell-Borne Geochelone 50 times."
+  },
+  {
+    "slug": "no-liz-but-strange-birds",
+    "name": "No Liz, But Strange Birds",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Mourning Aix 50 times."
+  },
+  {
+    "slug": "rule-the-forest",
+    "name": "Rule the Forest",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Feilian Beringal 50 times."
+  },
+  {
+    "slug": "penetrate-the-fog-with-light",
+    "name": "Penetrate the Fog with Light",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Lampylumen Myriad 50 times."
+  },
+  {
+    "slug": "night-voyager",
+    "name": "Night Voyager",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Inferno Rider 50 times."
+  },
+  {
+    "slug": "take-the-crown",
+    "name": "Take the Crown",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Crownless 50 times."
+  },
+  {
+    "slug": "mephis-kombat",
+    "name": "Mephis Kombat",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Defeat the Tempest Mephis 50 times."
+  },
+  {
+    "slug": "fatal-strike",
+    "name": "Fatal Strike",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Trigger the Intro Skill 20 times."
+  },
+  {
+    "slug": "recoil-bell-borne-geochelone",
+    "name": "Recoil: Bell-Borne Geochelone",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Use the Echo Skill of the Bell-Borne Geochelone to strike a fatal blow on the Bell-Borne Geochelone.",
+    "hidden": true
+  },
+  {
+    "slug": "recoil-inferno-rider",
+    "name": "Recoil: Inferno Rider",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Use the Echo Skill of the Inferno Rider to strike a fatal blow on the Inferno Rider.",
+    "hidden": true
+  },
+  {
+    "slug": "fading-tempest",
+    "name": "Fading Tempest",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "That last roar of thunder... Where does it come from?",
+    "notes": "Use Tempest Mephis Echo skill to kill the boss Tempest Mephis.",
+    "hidden": true
+  },
+  {
+    "slug": "recoil-mourning-aix",
+    "name": "Recoil: Mourning Aix",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Use the Echo Skill of the Mourning Aix to strike a fatal blow on the Mourning Aix.",
+    "hidden": true
+  },
+  {
+    "slug": "recoil-the-crownless",
+    "name": "Recoil: The Crownless",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Use the Echo Skill of the Crownless to strike a fatal blow on the Crownless.",
+    "hidden": true
+  },
+  {
+    "slug": "recoil-tempest-mephis",
+    "name": "Recoil: Tempest Mephis",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Use the Echo Skill of the Thundering Mephis to strike a fatal blow on the Thundering Mephis.",
+    "hidden": true
+  },
+  {
+    "slug": "silent-burst",
+    "name": "Silent Burst",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Deal 10,000 points of Crit. DMG."
+  },
+  {
+    "slug": "duang",
+    "name": "Duang!!!",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Parry enemy's attack 10 times."
+  },
+  {
+    "slug": "moment-once-more",
+    "name": "Moment Once More",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Use any Revival Item for the first time."
+  },
+  {
+    "slug": "from-evade-to-attack",
+    "name": "From Evade to Attack",
+    "group": "Battle Memories",
+    "category": "Battles",
+    "description": "Perform Dodge 50 times."
+  },
+  {
+    "slug": "do-not-go-gentle-into-that-good-night",
+    "name": "Do Not Go Gentle into that Good Night",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Unlock \"Tower of Adversity: Hazard Zone\"."
+  },
+  {
+    "slug": "ghost-of-dark-forest-hunter",
+    "name": "Ghost of Dark Forest: Hunter",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete all stages in \"Tower of Adversity: Hazard Zone\"."
+  },
+  {
+    "slug": "ghost-of-dark-forest-stroller",
+    "name": "Ghost of Dark Forest: Stroller",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Obtain all Crests in \"Tower of Adversity: Stable Zone\"."
+  },
+  {
+    "slug": "ghost-of-dark-forest-lurker",
+    "name": "Ghost of Dark Forest: Lurker",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Obtain all Crests in \"Tower of Adversity: Experimental Zone\"."
+  },
+  {
+    "slug": "ghost-of-dark-forest-observer",
+    "name": "Ghost of Dark Forest: Observer",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Obtain all Crests in \"Tower of Adversity: Hazard Zone\"."
+  },
+  {
+    "slug": "thunder-in-the-burning-sea",
+    "name": "Thunder in the Burning Sea",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Tempest Mephis I\"."
+  },
+  {
+    "slug": "strange-bird-in-the-mountain",
+    "name": "Strange Bird in the Mountain",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Impermanence Heron I\"."
+  },
+  {
+    "slug": "land-of-the-singing-cicada",
+    "name": "Land of the Singing Cicada",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Mourning Aix I\"."
+  },
+  {
+    "slug": "meeting-the-king",
+    "name": "Meeting the King",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Feilian Beringal I\"."
+  },
+  {
+    "slug": "thunder-silencer",
+    "name": "Thunder Silencer",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Tempest Mephis VI\"."
+  },
+  {
+    "slug": "mine-guard",
+    "name": "Mine Guard",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Impermanence Heron VI\"."
+  },
+  {
+    "slug": "dies-the-elegy",
+    "name": "Dies the Elegy",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Mourning Aix VI\"."
+  },
+  {
+    "slug": "no-king-in-sight",
+    "name": "No King in Sight",
+    "group": "From the Abyssal Tower I",
+    "category": "Battles",
+    "description": "Complete \"Tactical Hologram: Calamity\" - \"Feilian Beringal VI\"."
+  },
+  {
+    "slug": "plants-vs-zombie-roseshroom",
+    "name": "Plants vs Zombie Roseshroom?",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Roseshroom Variant\" in Port City of Guixu."
+  },
+  {
+    "slug": "wild-boar-forest-rampage",
+    "name": "Wild Boar Forest Rampage",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Sabyrkin\" in Tiger's Maw."
+  },
+  {
+    "slug": "the-ultimate",
+    "name": "The \"Ultimate\"",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Viridblaze Saurian: Ultimate\" in Central Plains."
+  },
+  {
+    "slug": "dance-with-the-wolves",
+    "name": "Dance with the Wolves",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Wasteland Bellower\" in Wuming Bay."
+  },
+  {
+    "slug": "here-comes-the-bear",
+    "name": "Here Comes the Bear",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "When there's a man and a bear in the wilderness...",
+    "notes": "Defeat the Spearback King in Whining Aix's Mire."
+  },
+  {
+    "slug": "just-a-rock",
+    "name": "Just A Rock",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Obelisk Guardian\" in Desorock Highland.",
+    "notes": "https://i.imgur.com/GpHIy4l.jpeg Defeat the level 85 Obelisk Guard on top of the mountain at Camp Overwatch."
+  },
+  {
+    "slug": "though-i-can-t-fly",
+    "name": "Though I Can't Fly",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Twin Heron\" in Whining Aix's Mire."
+  },
+  {
+    "slug": "love-death-abandoned-cars",
+    "name": "Love, Death & Abandoned Cars",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Carapace: Engine Zero\" in Central Plains."
+  },
+  {
+    "slug": "not-my-match",
+    "name": "Not My Match!",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Young Murmurin\" in Dim Forest."
+  },
+  {
+    "slug": "prism-party",
+    "name": "Prism Party",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Prism Heart\" in Dim Forest."
+  },
+  {
+    "slug": "debut-project-of-the-big-three",
+    "name": "Debut Project of the Big Three!",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Fractsidus Follower\" in Port City of Guixu.",
+    "notes": "https://i.imgur.com/KyOthm6.jpeg\nUse dodges and intro skills to deal percentage based damage. Defeat the three level 85 Factsidus Followers on the platform in the air, you can throw down the first two and they will die from fall damage, but the last one has to be killed manually."
+  },
+  {
+    "slug": "protocol-3-a-attack",
+    "name": "Protocol 3. A-attack!",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Autopuppet Scout-01\" in Central Plains."
+  },
+  {
+    "slug": "safety-first",
+    "name": "Safety First!",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Illuminator Theater\" in Desorock Highland."
+  },
+  {
+    "slug": "empty-the-nest",
+    "name": "Empty the Nest",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Scorpion's Nest\" in Port City of Guixu."
+  },
+  {
+    "slug": "the-true-power",
+    "name": "The True Power!",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Deal 1,000 damage with one attack to an enemy."
+  },
+  {
+    "slug": "the-grand-master",
+    "name": "The Grand Master",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Deal 10,000 damage with one attack to an enemy.",
+    "notes": "You'll get this easily from progressing through story mission and coming across one where you need to throw \"javelin-like-objects\" at enemies."
+  },
+  {
+    "slug": "master-damage-i",
+    "name": "Master Damage I",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Deal 10,000 damage in total."
+  },
+  {
+    "slug": "master-damage-ii",
+    "name": "Master Damage II",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Deal 100,000 damage in total.",
+    "dependOn": "Master Damage I"
+  },
+  {
+    "slug": "master-damage-iii",
+    "name": "Master Damage III",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Deal 1,000,000 damage in total.",
+    "dependOn": "Master Damage II"
+  },
+  {
+    "slug": "master-damage-iv",
+    "name": "Master Damage IV",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Deal 10,000,000 damage in total.",
+    "dependOn": "Master Damage I"
+  },
+  {
+    "slug": "i-choose-the-form-of-tacet-discord",
+    "name": "\"I choose the form of Tacet Discord!\"",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Use Echo Skills to transform into an Echo 10 times."
+  },
+  {
+    "slug": "turtle-breathing",
+    "name": "Turtle Breathing",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Use the Echo Skill of any small chelonian-type Echo for the first time.",
+    "notes": "Works with the turtle echo Hoartoise."
+  },
+  {
+    "slug": "go-fight",
+    "name": "Go & Fight!",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Use Echo Skills to summon an Echo 10 times."
+  },
+  {
+    "slug": "gorilla-gazer",
+    "name": "Gorilla Gazer",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat \"Wild Scarlet\" in Dim Forest",
+    "notes": "https://i.imgur.com/9SkAjP0.jpeg\nUse dodges and intro skills to deal percentage based damage. Three level 120 Wild Gorillas are down here, try to keep the larger one ranged, and separate one of the smaller ones by pushing it off the edge. Then kill the smaller ones one by one, you can also utilize dodges from the bigger ones ranged attacks."
+  },
+  {
+    "slug": "we-are-the-challenger-my-friend",
+    "name": "We Are the Challenger, My Friend",
+    "group": "Battle Skills I",
+    "category": "Battles",
+    "description": "Defeat the \"Chasm Rider\" in the Qichi Village."
+  },
+  {
+    "slug": "handy-pistols-i",
+    "name": "Handy Pistols I",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat enemies 10 times with Chixia's Heavy Attack from 7m away."
+  },
+  {
+    "slug": "handy-pistols-ii",
+    "name": "Handy Pistols II",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat enemies 10 times with Chixia's Heavy Attack from 1m away.",
+    "dependOn": "Handy Pistols I"
+  },
+  {
+    "slug": "new-places-the-old",
+    "name": "New Places the Old",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Use the Echo Skill of the Fusion Dreadmane to defeat the Havoc Dreadmane 10 times."
+  },
+  {
+    "slug": "the-dark-knight-rises",
+    "name": "The Dark Knight Rises",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat 100 Exiles."
+  },
+  {
+    "slug": "goodnight-snip-snaps",
+    "name": "Goodnight, Snip Snaps",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat 66 Snip Snaps."
+  },
+  {
+    "slug": "lights-out",
+    "name": "Lights Out...",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat 66 Zig Zags."
+  },
+  {
+    "slug": "sniff-the-whiff",
+    "name": "Sniff the Whiff",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat 66 Whiff Whaffs."
+  },
+  {
+    "slug": "a-silent-tick",
+    "name": "A Silent Tick",
+    "group": "Battle Skills II",
+    "category": "Battles",
+    "description": "Defeat 66 Tick Tacks."
+  },
+  {
+    "slug": "boom-boom",
+    "name": "BOOM BOOM!",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by the explosive attacks of the Zig Zags.",
+    "notes": "Zig Zags will only perform this attack upon reaching low health."
+  },
+  {
+    "slug": "a-deadly-weight",
+    "name": "A Deadly Weight",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by the Excarats' attacks."
+  },
+  {
+    "slug": "unexpected-disaster",
+    "name": "Unexpected Disaster",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated after being bumped by the Inferno Rider."
+  },
+  {
+    "slug": "dangerous-creature",
+    "name": "DANGEROUS CREATURE",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated after being juggled by the Gulpuffs.",
+    "notes": "Gulpuffs will start to spin and unleash a freezing aura around it."
+  },
+  {
+    "slug": "rise-shine",
+    "name": "Rise & Shine",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow when HP is above 95%.",
+    "notes": "Bring a level 1 unit into battle against the toughest enemy (boss preferably) and get one-shotted."
+  },
+  {
+    "slug": "chilling-frost",
+    "name": "Chilling Frost",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow of Glacio DMG when HP is above 50%."
+  },
+  {
+    "slug": "scorching-sun",
+    "name": "Scorching Sun",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow of Fusion DMG when HP is above 50%."
+  },
+  {
+    "slug": "bury-the-thunder",
+    "name": "Bury the Thunder",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow of Electro DMG when HP is above 50%."
+  },
+  {
+    "slug": "noisy-wind",
+    "name": "Noisy Wind",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow of Aero DMG when HP is above 50%."
+  },
+  {
+    "slug": "over-photosynthesis",
+    "name": "Over-Photosynthesis",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow of Spectro DMG when HP is above 50%."
+  },
+  {
+    "slug": "close-your-eyes-when-it-s-dark",
+    "name": "Close Your Eyes when it's Dark",
+    "group": "Unexpected Experience",
+    "category": "Battles",
+    "description": "A Resonator becomes incapacitated by a fatal blow of Havoc DMG when HP is above 50%."
+  },
+  {
+    "slug": "hero-of-justice",
+    "name": "\"Hero of Justice\"",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Resonator Ascension reaches Rank 6."
+  },
+  {
+    "slug": "all-battles-won-i",
+    "name": "All Battles Won I",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Upgrade Data Bank to Lv.8."
+  },
+  {
+    "slug": "all-battles-won-ii",
+    "name": "All Battles Won II",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Upgrade Data Bank to Lv.15.",
+    "dependOn": "All Battles Won I"
+  },
+  {
+    "slug": "all-battles-won-iii",
+    "name": "All Battles Won III",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Upgrade Data Bank to Lv.20.",
+    "dependOn": "All Battles Won II"
+  },
+  {
+    "slug": "you-don-t-even-want-to-call-me-big-brother",
+    "name": "You Don't Even Want to Call Me Big Brother!",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Obtain the Echo of the Crownless for the first time.",
+    "hidden": true
+  },
+  {
+    "slug": "beginner-pet-raising",
+    "name": "Beginner Pet Raising",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Obtain the Echo of the Bell-Borne Geochelone for the first time.",
+    "hidden": true
+  },
+  {
+    "slug": "friendly-neighborhood-i",
+    "name": "Friendly Neighborhood I",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Complete 10 Daily Quests in total."
+  },
+  {
+    "slug": "good-neighbors-of-citizens-ii",
+    "name": "Good Neighbors of Citizens II",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Complete 30 Daily Quests in total."
+  },
+  {
+    "slug": "friendly-neighborhood-ii",
+    "name": "Friendly Neighborhood II",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Complete 50 Daily Quests in total.",
+    "notes": "Not obtainable until V1.1.",
+    "dependOn": "Friendly Neighborhood I"
+  },
+  {
+    "slug": "first-try",
+    "name": "First Try",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Equip one 4-star or above weapon."
+  },
+  {
+    "slug": "when-the-stars-shine-i",
+    "name": "When the Stars Shine I",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Obtain 3 Resonators in total.",
+    "notes": "Requires your first free \"gacha\" unit Baizhi."
+  },
+  {
+    "slug": "when-the-stars-shine-ii",
+    "name": "When the Stars Shine II",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Obtain 6 Resonators in total.",
+    "notes": "At the time of launch, only 5 Resonators are \"free\". Rover doesn't count towards this achievement.",
+    "dependOn": "When the Stars Shine I"
+  },
+  {
+    "slug": "when-the-stars-shine-iii",
+    "name": "When the Stars Shine III",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Obtain 10 Resonators in total.",
+    "notes": "Requires pulling on gacha banner.",
+    "dependOn": "When the Stars Shine II"
+  },
+  {
+    "slug": "the-fragile-me-is-already-dead",
+    "name": "\"The Fragile Me is Already Dead\"",
+    "group": "Path of Growth",
+    "category": "Voices",
+    "description": "Upgrade all skills of any Resonator to max level."
+  },
+  {
+    "slug": "as-long-as-it-works",
+    "name": "As Long as it Works!",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb a 3-Star Echo"
+  },
+  {
+    "slug": "nice-to-meet-you",
+    "name": "Nice to Meet You",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb a 4-Star Echo"
+  },
+  {
+    "slug": "are-you-my-servant",
+    "name": "Are You My Servant?",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb a 5-Star Echo"
+  },
+  {
+    "slug": "golden-legend-i",
+    "name": "Golden Legend I",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb 10 5-Star Echoes"
+  },
+  {
+    "slug": "golden-legend-ii",
+    "name": "Golden Legend II",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb 20 5-Star Echoes",
+    "dependOn": "Golden Legend I"
+  },
+  {
+    "slug": "golden-legend-iii",
+    "name": "Golden Legend III",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb 50 5-Star Echoes",
+    "dependOn": "Golden Legend II"
+  },
+  {
+    "slug": "ace-trainer",
+    "name": "Ace Trainer",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Upgrade a 5-Star Echo to max level"
+  },
+  {
+    "slug": "become-an-echo-enthusiast",
+    "name": "Become an Echo Enthusiast!",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb 100 Echoes in total"
+  },
+  {
+    "slug": "become-an-echo-expert",
+    "name": "Become an Echo Expert!",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb 300 Echoes in total"
+  },
+  {
+    "slug": "become-the-echo-master",
+    "name": "Become the Echo Master!",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Absorb 500 Echoes in total"
+  },
+  {
+    "slug": "butterfly-effect-i",
+    "name": "Butterfly Effect I",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Tune Echoes 50 times"
+  },
+  {
+    "slug": "butterfly-effect-ii",
+    "name": "Butterfly Effect II",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Tune Echoes 100 times",
+    "dependOn": "Butterfly Effect I"
+  },
+  {
+    "slug": "butterfly-effect-iii",
+    "name": "Butterfly Effect III",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Tune Echoes 200 times",
+    "dependOn": "Butterfly Effect II"
+  },
+  {
+    "slug": "nothing-less",
+    "name": "Nothing Less",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "Activate one 5-piece Bonus of Sonata Effect for the first time"
+  },
+  {
+    "slug": "do-you-believe-in-light-too",
+    "name": "Do you believe in light too?",
+    "group": "Echo Collection",
+    "category": "Voices",
+    "description": "What the hell is a shiny, bright thing ......"
+  }
+]

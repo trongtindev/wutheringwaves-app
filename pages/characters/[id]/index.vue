@@ -149,14 +149,15 @@ useJsonld(() => ({
 
             <div
               v-if="quoteLocalized"
-              class="mt-2"
+              class="quote mt-2"
               :innerHTML="quoteLocalized"
-            ></div>
+            />
+
             <div
               v-if="descriptionLocalized"
               class="mt-2"
               :innerHTML="descriptionLocalized"
-            ></div>
+            />
           </v-col>
         </v-row>
       </v-card-text>

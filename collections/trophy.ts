@@ -2,6 +2,7 @@ import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
 
 export type TrophyDocType = {
   slug: string;
+  playerId: string;
   createdAt: number;
 };
 
@@ -33,7 +34,7 @@ export const trophyCollectionMethods: TrophyCollectionMethods = {
 };
 
 export const trophySchema: RxJsonSchema<TrophyDocType> = {
-  version: 0,
+  version: 1,
   keyCompression: false,
   primaryKey: 'slug',
   type: 'object',
@@ -42,9 +43,12 @@ export const trophySchema: RxJsonSchema<TrophyDocType> = {
       type: 'string',
       maxLength: 50
     },
+    playerId: {
+      type: 'string'
+    },
     createdAt: {
       type: 'number'
     }
   },
-  required: ['slug']
+  required: ['slug', 'playerId']
 };

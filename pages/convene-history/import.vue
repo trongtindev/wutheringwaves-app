@@ -55,7 +55,13 @@ const onImport = async (url: string) => {
     const db = await database.getInstance();
 
     // remove previous history
-    const items = await db.convenes.find().exec();
+    const items = await db.convenes
+      .find({
+        selector: {
+          playerId
+        }
+      })
+      .exec();
     await db.convenes.bulkRemove(items.map((e) => e._id));
 
     // data calculator
@@ -104,7 +110,6 @@ const onImport = async (url: string) => {
               return e.featuredRare === response.data.items[i].name;
             }) >= 0;
         }
-        console.debug(response.data.items[i].name, win);
       }
 
       return {
@@ -149,7 +154,10 @@ const onImport = async (url: string) => {
       return output;
     })();
     const characterWrites = Object.keys(characterObjects).flatMap((e) => {
-      return characterObjects[e];
+      return {
+        ...characterObjects[e],
+        playerId: playerId
+      };
     });
     await db.characters.bulkUpsert(characterWrites);
 
