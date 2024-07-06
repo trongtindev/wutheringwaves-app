@@ -31,6 +31,12 @@ import {
   characterSchema,
   type CharacterCollection
 } from '~/collections/character';
+import {
+  trophyCollectionMethods,
+  trophyDocMethods,
+  trophySchema,
+  type TrophyCollection
+} from '~/collections/trophy';
 
 export type DatabaseCollections = {
   convenes: ConveneCollection;
@@ -38,6 +44,7 @@ export type DatabaseCollections = {
   accounts: AccountCollection;
   markers: MarkerCollection;
   characters: CharacterCollection;
+  trophies: TrophyCollection;
 };
 export type MyDatabase = RxDatabase<DatabaseCollections>;
 
@@ -149,6 +156,12 @@ export const useDatabase = defineStore('useDatabase', () => {
               methods: characterDocMethods,
               statics: characterCollectionMethods,
               autoMigrate: false
+            },
+            trophies: {
+              schema: trophySchema,
+              methods: trophyDocMethods,
+              statics: trophyCollectionMethods,
+              autoMigrate: false
             }
           });
 
@@ -205,6 +218,14 @@ export const useDatabase = defineStore('useDatabase', () => {
           db.characters.postInsert(() => onChangedDebounce(), false);
           db.characters.postSave(() => onChangedDebounce(), false);
           // db.characters.postRemove(() => onChangedDebounce(), false);
+
+          // trophies
+          db.trophies.preInsert((plainData) => {
+            plainData.createdAt ??= new Date().getTime();
+          }, false);
+          db.trophies.postInsert(() => onChangedDebounce(), false);
+          db.trophies.postSave(() => onChangedDebounce(), false);
+          db.trophies.postRemove(() => onChangedDebounce(), false);
 
           state.value = '';
           isInitialized.value = true;

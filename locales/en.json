@@ -433,6 +433,8 @@
     "beta": "Beta",
     "notice": "Notice",
     "total": "Total",
-    "percentage": "Percentage"
+    "percentage": "Percentage",
+    "summoned": "Summoned",
+    "hidden": "Hidden"
   }
 }

@@ -403,6 +403,8 @@
     "beta": "Beta",
     "notice": "Notice",
     "total": "Total",
-    "percentage": "Percentage"
+    "percentage": "Percentage",
+    "summoned": "Đã về nhà",
+    "hidden": "Ẩn"
   }
 }

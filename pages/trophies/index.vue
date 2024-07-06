@@ -1,52 +1,97 @@
 <script setup lang="ts">
-import type { ITrophy } from '~/interfaces/trophy';
+import type { ITrophy, ITrophyGroup } from '~/interfaces/trophy';
+
+// define
+type DisplayItem = ITrophy & {
+  items: ITrophy[];
+};
 
 // uses
 const i18n = useI18n();
+const database = useDatabase();
 const resources = useResources();
-const localePath = useLocalePath();
 
 // data
+const data = await resources.getTrophyData();
 const items = await resources.getTrophies();
 
 // states
-const page = ref(1);
-const limit = ref(48);
 const filterText = ref();
-const filterGroup = ref();
+const filterGroup = ref<ITrophyGroup>(data.groups[0]);
 const filterCategory = ref();
 const matchItems = ref<ITrophy[]>([]);
-const displayItems = ref<ITrophy[]>([]);
-const debouncedSearch = useDebounceFn(() => loadData(), 350);
+const displayItems = ref<DisplayItem[]>([]);
+const debouncedSearch = useDebounceFn(() => initialize(), 350);
+const checkedItems = ref<string[]>([]);
+const percentage = ref<{ [key: string]: number }>({});
+const refreshStatisticThrottle = useThrottleFn(() => {
+  data.groups.forEach((group) => {
+    percentage.value[group.slug] = checkedItems.value.filter((slug) => {
+      const item = data.items.find((e) => e.slug === slug);
+      return item && item.group === group.name;
+    }).length;
+  });
+}, 250);
 
 // functions
-const loadData = () => {
+const initialize = () => {
+  database.getInstance().then((db) => {
+    db.trophies
+      .find()
+      .exec()
+      .then((result) => {
+        checkedItems.value = result.map((e) => e.slug);
+        refreshStatisticThrottle();
+      });
+  });
+
   matchItems.value = items.filter((e) => {
     if (filterText.value) {
       // TODO: search in nameLocalized
       return e.name.toLowerCase().includes(filterText.value.toLowerCase());
     }
-    return true;
+    return filterGroup.value.name === e.group && !e.dependOn;
   });
 
-  const offset = limit.value * page.value - limit.value;
-  displayItems.value = matchItems.value.filter((e, i) => {
-    return i >= offset && i < offset + limit.value;
+  displayItems.value = matchItems.value.map((e) => {
+    return {
+      ...e,
+      items: items.filter((item) => item.dependOn && item.dependOn === e.name)
+    };
   });
 };
 
-// computed
-const pages = computed(() => {
-  return Math.ceil(matchItems.value.length / limit.value);
-});
+// events
+const onItemChecked = async (slug: string, value: boolean) => {
+  console.log('onItemChecked', slug, value);
+
+  const db = await database.getInstance();
+  if (value) {
+    checkedItems.value.push(slug);
+    await db.trophies.upsert({ slug });
+  } else {
+    const index = checkedItems.value.findIndex((e) => e === slug);
+    if (index >= 0) checkedItems.value.splice(index, 1);
+
+    const doc = await db.trophies
+      .findOne({
+        selector: {
+          slug
+        }
+      })
+      .exec();
+    if (doc) doc.remove();
+  }
+  refreshStatisticThrottle();
+};
 
 // changes
 watch(filterText, () => debouncedSearch());
-watch(filterGroup, () => loadData());
-watch(filterCategory, () => loadData());
+watch(filterGroup, () => initialize());
+watch(filterCategory, () => initialize());
 
 // lifecycle
-onMounted(() => loadData());
+onMounted(() => initialize());
 
 // seo meta
 const title = i18n.t('meta.trophies.title');
@@ -73,69 +118,56 @@ useSeoMeta({
       ]"
     />
 
-    <v-card>
-      <v-card-text>
-        <client-only>
-          <v-row>
-            <v-col cols="12" md="4">
-              <v-text-field v-model="filterText" :label="$t('common.search')" />
-            </v-col>
+    <v-row>
+      <v-col cols="12" md="4">
+        <v-card>
+          <v-list rounded>
+            <v-list-item
+              v-for="(element, index) in data.groups"
+              :key="index"
+              :class="{ 'mt-2': index > 0 }"
+              :active="element.name === filterGroup.name"
+              @click="() => (filterGroup = element)"
+            >
+              <v-list-item-title>
+                {{ element.name }}
+              </v-list-item-title>
 
-            <v-col cols="6" md="4">
-              <v-select
-                v-model="filterGroup"
-                :label="$t('common.group')"
-                :item-title="(e) => e"
-              />
-            </v-col>
+              <v-list-item-subtitle class="mb-1">
+                {{ percentage[element.slug] || 0 }}/{{ element.total }}
+              </v-list-item-subtitle>
 
-            <v-col cols="6" md="4">
-              <v-select
-                v-model="filterCategory"
-                :label="$t('common.category')"
-                :item-title="(e) => e"
-              />
-            </v-col>
-          </v-row>
-        </client-only>
-
-        <!-- list -->
-        <v-row class="mt-2">
-          <v-col
-            v-for="(element, index) in displayItems"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="2"
-          >
-            <v-card :to="localePath(`/trophies/${element.slug}`)">
-              <v-responsive :aspect-ratio="1 / 1">
-                <v-img
-                  :src="`/trophies/icons/${element.slug}.webp`"
-                  :alt="$t(element.name)"
-                  class="align-end h-100"
-                  cover
+              <template #append>
+                <v-progress-circular
+                  :model-value="
+                    (percentage[element.slug] / element.total) * 100
+                  "
                 />
-              </v-responsive>
+              </template>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
 
-              <v-tooltip :text="$t(element.name)">
-                <template #activator="{ props }">
-                  <v-card-title v-bind="props" class="text-center">
-                    {{ $t(element.name) }}
-                  </v-card-title>
-                </template>
-              </v-tooltip>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-card-text>
-      <v-divider />
-
-      <v-card-actions class="d-flex justify-center">
-        <client-only>
-          <v-pagination v-model="page" :length="pages" />
-        </client-only>
-      </v-card-actions>
-    </v-card>
+      <v-col cols="12" md="8">
+        <div v-for="(element, index) in displayItems" :key="index">
+          <trophy-item-group
+            v-if="element.items.length > 0"
+            :data="element"
+            :items="element.items"
+            :class="{ 'mt-2': index > 0 }"
+            :checked-items="checkedItems"
+            @on-checked="(slug, val) => onItemChecked(slug, val)"
+          />
+          <v-card v-else :class="{ 'mt-2': index > 0 }">
+            <trophy-item
+              :data="element"
+              :checked-items="checkedItems"
+              @on-checked="(val) => onItemChecked(element.slug, val)"
+            />
+          </v-card>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>

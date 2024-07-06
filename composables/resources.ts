@@ -51,6 +51,11 @@ export const useResources = defineStore('useResources', () => {
     return (await import('@/resources/trophies')).default;
   };
 
+  const getTrophyData = async () => {
+    const { items, groups, categories } = await import('@/resources/trophies');
+    return { items, groups, categories };
+  };
+
   const getEvents = async () => {
     return (await import('@/resources/events')).default;
   };
@@ -83,6 +88,7 @@ export const useResources = defineStore('useResources', () => {
     getItems,
     getItemData,
     getTrophies,
+    getTrophyData,
     getEvents
   };
 });

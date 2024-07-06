@@ -203,6 +203,21 @@ const totalUsers = computed(() => {
   return 0;
 });
 
+const totalSummoned = computed(() => {
+  if (
+    displayBanner.value &&
+    displayBanner.value.featuredRare &&
+    summary.value
+  ) {
+    const featuredRare = displayBanner.value.featuredRare;
+    const item = summary.value.fiveStarList.find((e) => {
+      return featuredRare === e.item;
+    });
+    if (item) return item.total;
+  }
+  return 0;
+});
+
 // functions
 const initialize = () => {
   api
@@ -339,7 +354,7 @@ useSeoMeta({
 
                       <td class="pl-2 pr-2 text-h3" style="width: 50%">
                         <div class="d-flex justify-end w-100">
-                          {{ formatNumber(totalPull) }}
+                          {{ formatNumber(totalSummoned) }}
                         </div>
                       </td>
 
