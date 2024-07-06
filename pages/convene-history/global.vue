@@ -465,6 +465,7 @@ useSeoMeta({
                 {
                   label: i18n.t('convene.global.pullByDay'),
                   backgroundColor: '#4e7cff',
+                  borderColor: '#4e7cff',
                   data: pbdDatasets
                 }
               ]
@@ -496,7 +497,8 @@ useSeoMeta({
                   type: 'line' as any,
                   data: rateDatasets[0],
                   label: i18n.t('convene.global.chance'),
-                  backgroundColor: '#4e7cff'
+                  backgroundColor: '#4e7cff',
+                  borderColor: '#4e7cff'
                 },
                 {
                   type: 'bar',

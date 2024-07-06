@@ -66,6 +66,7 @@ onMounted(initialize);
             location="bottom right"
           >
             <v-avatar
+              class="border"
               :image="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
             />
           </v-badge>

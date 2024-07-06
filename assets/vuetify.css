@@ -1,1 +1,27 @@
-/* something */
+/* .v-card {
+  background: rgb(226 232 255 / 1%);
+}
+
+.v-card:after {
+  border-radius: inherit;
+  z-index: 3;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: 0 -28px 84px -24px #e2e8ff1f inset;
+  background: radial-gradient(
+      103.78% 100% at 50% 0%,
+      rgba(118, 146, 255, 0) 80.55%,
+      rgba(122, 150, 255, 0.04) 100%
+    ),
+    radial-gradient(
+      120.05% 100% at 50% 0%,
+      rgba(226, 232, 255, 0) 33.78%,
+      rgba(226, 232, 255, 0.08) 100%
+    ),
+    rgba(226, 232, 255, 0.01);
+} */

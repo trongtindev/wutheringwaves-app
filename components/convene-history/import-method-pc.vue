@@ -12,6 +12,7 @@ const emits = defineEmits<{
 // uses
 const app = useApp();
 const i18n = useI18n();
+const runtimeConfig = useRuntimeConfig();
 
 // states
 const url = ref<string>();
@@ -48,7 +49,7 @@ const canImport = computed<boolean>(() => {
 });
 
 const powershellScript = computed(() => {
-  return `[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; $scriptUrl = "https://raw.githubusercontent.com/trongtindev/astrite-app/${app.inDev ? 'main' : 'main'}/getGacha.ps1"; $locale = "${i18n.locale.value}"; Invoke-Expression (New-Object Net.WebClient).DownloadString($scriptUrl)`;
+  return `iwr -useb "${runtimeConfig.public.SITE_URL}/scripts/get-url.ps1" | iex`;
 });
 
 // changes
@@ -119,21 +120,15 @@ onMounted(() => {
       </v-list-item>
 
       <div class="ml-16 mt-2">
-        <v-textarea
-          :readonly="true"
-          :hide-details="true"
-          :rows="3"
-          :value="powershellScript"
-        />
+        <v-text-field :readonly="true" :value="powershellScript" />
         <v-alert color="warning" class="mt-2">
           {{ $t('You can review the script') }}
           <v-chip
             target="_blank"
-            href="https://raw.githubusercontent.com/trongtindev/astrite-app/production/getGacha.ps1"
+            href="https://raw.githubusercontent.com/trongtindev/astrite-app/production/public/scripts/get-url.ps1"
             :append-icon="mdiOpenInNew"
-          >
-            getGacha.ps1
-          </v-chip>
+            text="get-url.ps1"
+          />
         </v-alert>
       </div>
 

@@ -59,10 +59,7 @@ export default defineNuxtConfig({
     ]
   },
 
-  css: [
-    '~/assets/tiptap.scss'
-    // '~/assets/vuetify.css'
-  ],
+  css: ['~/assets/tiptap.scss', '~/assets/vuetify.css'],
 
   typescript: {
     strict: true
