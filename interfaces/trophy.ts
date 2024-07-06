@@ -4,7 +4,7 @@ export interface ITrophy {
   group: string;
   category: string;
   description: string;
-  hidden?: string;
+  hidden?: boolean;
   dependOn?: string;
 }
 
