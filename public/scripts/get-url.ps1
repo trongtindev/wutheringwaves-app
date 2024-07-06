@@ -1,4 +1,5 @@
 # Original script was inspired by astrite.gg
+# Original script was inspired by https://gist.githubusercontent.com/Luzefiru/19c0759bea1b9e7ef480bb39303b3f6c/raw/a316c642c3874429c751b82b4ae16963511d50ee/get-url.ps1
 # @theREalpha for creating this script
 # @antisocial93 for screening multiple registry entry logic
 # @timas130 for adding CN server support
