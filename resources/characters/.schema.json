@@ -4,6 +4,43 @@
   "title": "Character",
   "description": "A character in the catalog",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "quote": {
+      "type": "string"
+    },
+    "quoteLocalized": {
+      "type": "object"
+    },
+    "description": {
+      "type": "string"
+    },
+    "descriptionLocalized": {
+      "type": "object"
+    },
+    "skills": {
+      "type": "array",
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "enum": ["Basic Attack","Resonance Skill"]
+        },
+        "nameLocalized": {
+          "type": "object"
+        },
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "descriptionLocalized": {
+          "type": "object"
+        }
+      }
+    }
+  },
   "required": []
 }

@@ -27,32 +27,37 @@ export interface ICharacter {
   upcoming?: boolean;
 }
 
+export interface ICharacterSkillData {
+  slug: string;
+  name: string;
+  nameLocalized?: ILocalized;
+  type: CharacterSkill;
+  levels: {
+    cost: {
+      name: string;
+      quantity: number;
+    }[];
+    level: number;
+  }[];
+  description: string;
+  descriptionLocalized?: ILocalized;
+}
+
+export interface ICharacterRCData {
+  idx: string;
+  slug: string;
+  name: string;
+  nameLocalized?: ILocalized;
+  params: string[];
+  description: string;
+  descriptionLocalized?: ILocalized;
+}
+
 export interface ICharacterData {
   description: string;
-  skills: {
-    slug: string;
-    name: string;
-    nameLocalized?: ILocalized;
-    type: CharacterSkill;
-    levels: {
-      cost: {
-        name: string;
-        quantity: number;
-      }[];
-      level: number;
-    }[];
-    description: string;
-    descriptionLocalized?: ILocalized;
-  }[];
-  resonanceChain: {
-    idx: string;
-    slug: string;
-    name: string;
-    nameLocalized?: ILocalized;
-    params: string[];
-    description: string;
-    descriptionLocalized?: ILocalized;
-  }[];
+  descriptionLocalized?: ILocalized;
+  skills: ICharacterSkillData[];
+  resonanceChain: ICharacterRCData[];
   stats: {
     hp: number;
     atk: number;

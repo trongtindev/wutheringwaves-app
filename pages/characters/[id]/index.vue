@@ -4,7 +4,6 @@ import type { IItem } from '~/interfaces/item';
 
 const i18n = useI18n();
 const route = useRoute();
-const router = useRouter();
 const resources = useResources();
 const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
@@ -35,6 +34,23 @@ const nameLocalized = computed(() => {
   //   return data.nameLocalized[i18n.locale.value];
   // }
   return i18n.t(item.name);
+});
+
+const quoteLocalized = computed(() => {
+  if (data.quoteLocalized && data.quoteLocalized[i18n.locale.value]) {
+    return data.quoteLocalized[i18n.locale.value];
+  }
+  return data.quote;
+});
+
+const descriptionLocalized = computed(() => {
+  if (
+    data.descriptionLocalized &&
+    data.descriptionLocalized[i18n.locale.value]
+  ) {
+    return data.descriptionLocalized[i18n.locale.value];
+  }
+  return data.description;
 });
 
 // lifecycle
@@ -131,11 +147,15 @@ useJsonld(() => ({
               <v-chip :text="$t(item.attribute)" />
             </div>
 
-            <div v-if="data.quote" class="mt-2" :innerHTML="data.quote"></div>
             <div
-              v-if="data.description"
+              v-if="quoteLocalized"
               class="mt-2"
-              :innerHTML="data.description"
+              :innerHTML="quoteLocalized"
+            ></div>
+            <div
+              v-if="descriptionLocalized"
+              class="mt-2"
+              :innerHTML="descriptionLocalized"
             ></div>
           </v-col>
         </v-row>
@@ -158,30 +178,7 @@ useJsonld(() => ({
             sm="6"
             md="4"
           >
-            <v-card class="fill-height">
-              <v-sheet class="pt-2">
-                <v-list-item
-                  :title="$t(element.name)"
-                  :subtitle="$t(element.type)"
-                >
-                  <template #prepend>
-                    <v-avatar class="border rounded">
-                      <v-img
-                        :src="`/skills/icons/${element.slug}.webp`"
-                        :alt="element.name"
-                      />
-                    </v-avatar>
-                  </template>
-                </v-list-item>
-              </v-sheet>
-
-              <v-card-text v-if="element.description">
-                <div
-                  :innerHTML="element.description.replaceAll('\n', '<br/>')"
-                />
-              </v-card-text>
-              <v-sheet v-else class="pb-2" />
-            </v-card>
+            <characters-skill-item :data="element" />
           </v-col>
         </v-row>
       </v-card-text>
@@ -202,34 +199,7 @@ useJsonld(() => ({
             cols="12"
             md="6"
           >
-            <v-card class="fill-height">
-              <v-sheet class="pt-2">
-                <v-list-item
-                  :title="$t(element.name)"
-                  :subtitle="$t(element.idx)"
-                >
-                  <template #prepend>
-                    <v-avatar class="border rounded">
-                      <v-img
-                        :src="`/resonance_chain/icons/${element.slug}.webp`"
-                        :alt="element.name"
-                      />
-                    </v-avatar>
-                  </template>
-                </v-list-item>
-              </v-sheet>
-
-              <v-card-text v-if="element.description">
-                <div
-                  :innerHTML="
-                    element.description
-                      .replace(/\{(\d+)\}/g, (_, j) => element.params[j] || '')
-                      .replaceAll('\n', '<br/>')
-                  "
-                />
-              </v-card-text>
-              <v-sheet v-else class="pb-2" />
-            </v-card>
+            <characters-resonance-chain-item :data="element" />
           </v-col>
         </v-row>
       </v-card-text>

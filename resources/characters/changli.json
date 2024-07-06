@@ -1,4 +1,5 @@
 {
+  "$schema": "./.schema.json",
   "slug": "changli",
   "description": "Counselor to the Jinzhou Magistrate and former Secretary-General of the Central Secretariat in the capital.\nShrouded in flames, she's a counselor fated to burn brightly until her final embers. Positioning herself on the chessboard, she's always planning several moves ahead to achieve her ambition.",
   "skills": [

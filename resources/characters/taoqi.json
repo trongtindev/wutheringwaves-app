@@ -1,6 +1,14 @@
 {
+  "$schema": "./.schema.json",
   "slug": "taoqi",
+  "quote": "Phew... All set. Time for a little break.",
+  "quoteLocalized": {
+    "vi": "Phù... Đã xong. Đã đến lúc nghỉ ngơi một chút."
+  },
   "description": "Taoqi is the director of border defense at the Ministry of Development. Despite her seemingly laid-back demeanor, she consistently proves to be a dependable and supportive individual, always lending her hand to those in need. Taoqi is not only a reliable colleague, but also a trustworthy friend that people can confide in.",
+  "descriptionLocalized": {
+    "vi": "Taoqi là giám đốc phòng thủ biên giới của Bộ Phát triển. Mặc dù có thái độ có vẻ thoải mái nhưng cô ấy luôn chứng tỏ mình là một người đáng tin cậy và luôn hỗ trợ, luôn giúp đỡ những người gặp khó khăn. Taoqi không chỉ là một đồng nghiệp đáng tin cậy mà còn là một người bạn đáng tin cậy mà mọi người có thể tâm sự."
+  },
   "skills": [
     {
       "slug": "concealed-edge",
@@ -235,7 +243,7 @@
       "name": "Havoc DMG Bonus+4.20%"
     }
   ],
-  "quote": "Phew... All set. Time for a little break.",
+
   "birthday": "February 25th",
   "birthplace": "Huanglong"
 }
