@@ -59,6 +59,7 @@
     "@tiptap/vue-3": "^2.4.0",
     "@types/file-saver": "^2.0.7",
     "@types/leaflet": "^1.9.12",
+    "@types/node": "^18.0.0",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "axios": "^1.7.2",
@@ -84,6 +85,7 @@
     "sass": "^1.77.6",
     "typescript": "^5.5.3",
     "url-slug": "^4.0.1",
+    "eslint": "^8.57.0",
     "vite-plugin-eslint2": "^4.4.0",
     "vite-plugin-vuetify": "^2.0.3",
     "vue": "^3.4.31",
@@ -97,6 +99,5 @@
   },
   "overrides": {
     "vue": "latest"
-  },
-  "dependencies": {}
+  }
 }
