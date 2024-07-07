@@ -109,7 +109,10 @@ export const useAccount = defineStore('useAccount', () => {
         console.debug('autoImport', account.playerId, 'disabled');
         return;
       }
-      if (account.lastImport && account.lastImport > 60 * 15 * 1000) {
+      if (
+        account.lastImport &&
+        Date.now() - 60 * 15 * 1000 < account.lastImport
+      ) {
         console.debug('autoImport', account.playerId, 'skip');
         return;
       }
