@@ -79,8 +79,6 @@ onMounted(initialize);
           </v-card>
         </v-col>
       </v-row>
-
-      <v-alert color="info" :text="$t('convene.global.alert', [0])" />
     </div>
   </v-card-text>
 </template>

@@ -1,1 +1,26 @@
-[{"slug":"exploration-huanglong","name":"Exploration: Huanglong","total":24},{"slug":"huanglong-i","name":"Huanglong I","total":16},{"slug":"wilderness-calls","name":"Wilderness Calls","total":28},{"slug":"rover-s-journey","name":"Rover's Journey","total":11},{"slug":"moments-with-you","name":"Moments with You","total":6},{"slug":"battle-memories","name":"Battle Memories","total":25},{"slug":"from-the-abyssal-tower-i","name":"From the Abyssal Tower I","total":13},{"slug":"battle-skills-i","name":"Battle Skills I","total":25},{"slug":"battle-skills-ii","name":"Battle Skills II","total":8},{"slug":"unexpected-experience","name":"Unexpected Experience","total":11},{"slug":"path-of-growth","name":"Path of Growth","total":14},{"slug":"echo-collection","name":"Echo Collection","total":15}]
+[
+  {
+    "slug": "exploration-huanglong",
+    "name": "Exploration: Huanglong",
+    "total": 24
+  },
+  { "slug": "huanglong-i", "name": "Huanglong I", "total": 16 },
+  { "slug": "wilderness-calls", "name": "Wilderness Calls", "total": 28 },
+  { "slug": "rover-s-journey", "name": "Rover's Journey", "total": 11 },
+  { "slug": "moments-with-you", "name": "Moments with You", "total": 6 },
+  { "slug": "battle-memories", "name": "Battle Memories", "total": 25 },
+  {
+    "slug": "from-the-abyssal-tower-i",
+    "name": "From the Abyssal Tower I",
+    "total": 13
+  },
+  { "slug": "battle-skills-i", "name": "Battle Skills I", "total": 25 },
+  { "slug": "battle-skills-ii", "name": "Battle Skills II", "total": 8 },
+  {
+    "slug": "unexpected-experience",
+    "name": "Unexpected Experience",
+    "total": 11
+  },
+  { "slug": "path-of-growth", "name": "Path of Growth", "total": 14 },
+  { "slug": "echo-collection", "name": "Echo Collection", "total": 15 }
+]

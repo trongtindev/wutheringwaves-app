@@ -46,6 +46,7 @@ const initialize = () => {
 
 // changes
 watch(() => account.active, initialize);
+watch(() => account.onConveneChanged, initialize);
 
 // lifecycle
 onMounted(initialize);

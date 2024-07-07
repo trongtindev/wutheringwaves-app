@@ -39,14 +39,12 @@ useSeoMeta({
       ]"
     />
 
-    <v-card>
-      <v-list>
-        <codes-item
-          v-for="(element, index) in items"
-          :key="index"
-          :data="element"
-        />
-      </v-list>
+    <v-card
+      v-for="(element, index) in items"
+      :key="index"
+      :class="{ 'mt-2': index > 0 }"
+    >
+      <codes-item :data="element" />
     </v-card>
   </div>
 </template>

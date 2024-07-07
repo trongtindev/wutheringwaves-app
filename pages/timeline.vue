@@ -224,101 +224,99 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
     <v-card>
       <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
-      <v-card-text>
-        <client-only>
+      <client-only>
+        <div
+          ref="timelineContainer"
+          class="w-100 overflow-x-scroll"
+          style="width: min-content"
+          :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + events.length * (eventHeight + eventMargin)}px`"
+          :onwheel="onWheel"
+        >
           <div
-            ref="timelineContainer"
-            class="w-100 overflow-x-scroll"
-            style="width: min-content"
-            :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + events.length * (eventHeight + eventMargin)}px`"
-            :onwheel="onWheel"
+            class="timeline position-relative w-100 h-100 d-flex flex-column"
           >
+            <!-- DATE BAR -->
             <div
-              class="timeline position-relative w-100 h-100 d-flex flex-column"
+              v-for="(date, i) in dates"
+              :key="i"
+              :style="`width: 1px; height: calc(100% - ${eventHeight}px); position: absolute; left: ${i * dayWidth}px; top: ${eventHeight}px;`"
+              class="bg-grey-darken-3"
             >
-              <!-- DATE BAR -->
-              <div
-                v-for="(date, i) in dates"
-                :key="i"
-                :style="`width: 1px; height: calc(100% - ${eventHeight}px); position: absolute; left: ${i * dayWidth}px; top: ${eventHeight}px;`"
-                class="bg-grey-darken-3"
+              <span
+                class="position-absolute text-center pb-1"
+                style="width: 40px; left: -20px"
               >
-                <span
-                  class="position-absolute text-center pb-1"
-                  style="width: 40px; left: -20px"
-                >
-                  {{ date[0] }}
-                </span>
-                <span
-                  class="position-absolute text-grey-darken-1 text-center pb-1"
-                  style="width: 40px; left: -20px; top: -24px"
-                >
-                  {{ date[1] }}
-                </span>
-              </div>
-
-              <!-- MONTH TITLE -->
-              <div
-                v-for="([month, item], i) in monthList"
-                :key="i"
-                class="position-absolute pr-4"
-                :style="`top: 12px; width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
+                {{ date[0] }}
+              </span>
+              <span
+                class="position-absolute text-grey-darken-1 text-center pb-1"
+                style="width: 40px; left: -20px; top: -24px"
               >
-                <span
-                  class="text-orange font-weight-bold position-sticky left-0 month"
-                >
-                  {{ month }}
-                </span>
-              </div>
+                {{ date[1] }}
+              </span>
+            </div>
 
-              <!-- EVENT STRIP -->
-              <div v-for="(event, i) in events" :key="i">
-                <div v-if="Array.isArray(event)">
-                  <timeline-event-item
-                    v-for="(item, j) in event"
-                    :key="j"
-                    :prev="j > 0 ? event[j - 1] : null"
-                    :next="j < event.length - 1 ? event[j + 1] : null"
-                    :now="today"
-                    :event="item"
-                    :day-width="dayWidth"
-                    :margin-top="marginTop"
-                    :event-height="eventHeight"
-                    :event-margin="eventMargin"
-                    :i="i"
-                    @on-pressed="() => onPressedEvent(item)"
-                  />
-                </div>
+            <!-- MONTH TITLE -->
+            <div
+              v-for="([month, item], i) in monthList"
+              :key="i"
+              class="position-absolute pr-4"
+              :style="`top: 12px; width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
+            >
+              <span
+                class="text-orange font-weight-bold position-sticky left-0 month"
+              >
+                {{ month }}
+              </span>
+            </div>
 
+            <!-- EVENT STRIP -->
+            <div v-for="(event, i) in events" :key="i">
+              <div v-if="Array.isArray(event)">
                 <timeline-event-item
-                  v-else
+                  v-for="(item, j) in event"
+                  :key="j"
+                  :prev="j > 0 ? event[j - 1] : null"
+                  :next="j < event.length - 1 ? event[j + 1] : null"
                   :now="today"
-                  :event="event"
+                  :event="item"
                   :day-width="dayWidth"
                   :margin-top="marginTop"
                   :event-height="eventHeight"
                   :event-margin="eventMargin"
                   :i="i"
-                  @on-pressed="() => onPressedEvent(event)"
+                  @on-pressed="() => onPressedEvent(item)"
                 />
               </div>
 
-              <!-- NOW BAR -->
+              <timeline-event-item
+                v-else
+                :now="today"
+                :event="event"
+                :day-width="dayWidth"
+                :margin-top="marginTop"
+                :event-height="eventHeight"
+                :event-margin="eventMargin"
+                :i="i"
+                @on-pressed="() => onPressedEvent(event)"
+              />
+            </div>
+
+            <!-- NOW BAR -->
+            <div
+              class="bg-grey-darken-1 z-20 position-relative opacity-75"
+              :style="`left: ${todayOffset * dayWidth}px; width: 2px; height: calc(100% - 10px); position: absolute; top: 10px;`"
+            >
               <div
-                class="bg-grey-darken-1 z-20 position-relative opacity-75"
-                :style="`left: ${todayOffset * dayWidth}px; width: 2px; height: calc(100% - 10px); position: absolute; top: 10px;`"
+                class="position-absolute rounded-xl top-0 text-center bg-white text-black"
+                style="width: 80px; left: -40px"
               >
-                <div
-                  class="position-absolute rounded-xl top-0 text-center bg-white text-black"
-                  style="width: 80px; left: -40px"
-                >
-                  {{ today.format('HH:mm:ss') }}
-                </div>
+                {{ today.format('HH:mm:ss') }}
               </div>
             </div>
           </div>
-        </client-only>
-      </v-card-text>
+        </div>
+      </client-only>
     </v-card>
 
     <v-dialog v-model="dialog" :width="720" :scrollable="true">

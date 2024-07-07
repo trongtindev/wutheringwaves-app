@@ -237,5 +237,17 @@
   ],
   "quote": "Plants talk in a silent and sincere language. I can translate their talk for you, if you want.",
   "birthday": "May 18th",
-  "birthplace": "New Federation"
+  "birthplace": "New Federation",
+  "quoteLocalized": {
+    "vi": "Thực vật nói chuyện bằng ngôn ngữ im lặng và chân thành. Tôi có thể dịch lời nói của chúng cho bạn, nếu bạn muốn.",
+    "id": "Tumbuhan berbicara dalam bahasa yang hening dan tulus. Aku bisa menerjemahkan ucapan mereka untukmu, jika kau mau.",
+    "th": "พืชพูดด้วยภาษาที่เงียบและจริงใจ ฉันสามารถแปลการพูดของพวกเขาให้คุณได้ ถ้าคุณต้องการ",
+    "ru": "Растения говорят на тихом и искреннем языке. Я могу перевести их речь для вас, если вы хотите."
+  },
+  "descriptionLocalized": {
+    "vi": "Với kiến thức sâu rộng về thực vật học, Verina luôn ân cần, luôn mỉm cười, và luôn mong muốn mọi bông hoa đều được ban phước với phép màu của sự sống.",
+    "id": "Dengan pengetahuan botani yang luas, Verina selalu perhatian, selalu tersenyum, dan selalu berharap agar setiap bunga diberkati dengan keajaiban kehidupan.",
+    "th": "ด้วยความรู้ด้านพฤกษศาสตร์อันกว้างขวาง เวริน่าจึงมักแสดงความห่วงใย มีรอยยิ้มอยู่เสมอ และปรารถนาให้ดอกไม้ทุกดอกได้รับพรแห่งชีวิต",
+    "ru": "Обладая обширными знаниями в ботанике, Верина всегда заботлива, всегда улыбается и всегда желает, чтобы каждый цветок был одарен чудом жизни."
+  }
 }

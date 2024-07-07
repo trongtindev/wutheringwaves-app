@@ -49,6 +49,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       VListSubheader: {
         class: 'font-italic font-weight-bold'
+      },
+      VChip: {
+        density: 'compact'
       }
     },
     theme: {

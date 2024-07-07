@@ -3,11 +3,17 @@
   "slug": "taoqi",
   "quote": "Phew... All set. Time for a little break.",
   "quoteLocalized": {
-    "vi": "Phù... Đã xong. Đã đến lúc nghỉ ngơi một chút."
+    "vi": "Phù... Đã xong. Đã đến lúc nghỉ ngơi một chút.",
+    "id": "Hah... Siap. Saatnya istirahat sebentar.",
+    "th": "Phew... Selesai. Waktu untuk istirahat sebentar.",
+    "ru": "Фух… Все готово. Время для небольшого перерыва."
   },
   "description": "Taoqi is the director of border defense at the Ministry of Development. Despite her seemingly laid-back demeanor, she consistently proves to be a dependable and supportive individual, always lending her hand to those in need. Taoqi is not only a reliable colleague, but also a trustworthy friend that people can confide in.",
   "descriptionLocalized": {
-    "vi": "Taoqi là giám đốc phòng thủ biên giới của Bộ Phát triển. Mặc dù có thái độ có vẻ thoải mái nhưng cô ấy luôn chứng tỏ mình là một người đáng tin cậy và luôn hỗ trợ, luôn giúp đỡ những người gặp khó khăn. Taoqi không chỉ là một đồng nghiệp đáng tin cậy mà còn là một người bạn đáng tin cậy mà mọi người có thể tâm sự."
+    "vi": "Taoqi là giám đốc phòng thủ biên giới của Bộ Phát triển. Mặc dù có thái độ có vẻ thoải mái nhưng cô ấy luôn chứng tỏ mình là một người đáng tin cậy và luôn hỗ trợ, luôn giúp đỡ những người gặp khó khăn. Taoqi không chỉ là một đồng nghiệp đáng tin cậy mà còn là một người bạn đáng tin cậy mà mọi người có thể tâm sự.",
+    "id": "Taoqi adalah direktur pertahanan perbatasan di Kementerian Pengembangan. Terlepas dari sikapnya yang tampak santai, dia secara konsisten membuktikan dirinya sebagai individu yang dapat diandalkan dan mendukung, selalu mengulurkan tangannya kepada mereka yang membutuhkan. Taoqi bukan hanya kolega yang dapat diandalkan, tetapi juga teman yang dapat dipercaya yang dapat dipercaya orang.",
+    "th": "เต้าฉีเป็นผู้อำนวยการฝ่ายป้องกันชายแดนที่กระทรวงพัฒนา แม้เธอจะดูเหมือนเป็นคนขี้เล่น แต่เธอก็พิสูจน์ให้เห็นว่าเป็นคนน่าเชื่อถือและให้การสนับสนุนเสมอ เธอพร้อมจะยื่นมือช่วยเหลือคนที่ต้องการความช่วยเหลือ เต้าฉีไม่เพียงแต่เป็นเพื่อนร่วมงานที่ไว้ใจได้ แต่ยังเป็นเพื่อนที่ไว้ใจได้อีกด้วย ที่คนสามารถไว้ใจได้",
+    "ru": "Таоци – директор пограничной обороны Министерства Развития. Несмотря на свою кажущуюся беззаботность, она всегда доказывает свою надёжность и поддержку, всегда готова протянуть руку помощи нуждающимся. Таоци – не только надёжный коллега, но и верный друг, которому можно доверять."
   },
   "skills": [
     {
@@ -243,7 +249,6 @@
       "name": "Havoc DMG Bonus+4.20%"
     }
   ],
-
   "birthday": "February 25th",
   "birthplace": "Huanglong"
 }

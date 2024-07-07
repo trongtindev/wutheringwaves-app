@@ -237,5 +237,17 @@
   ],
   "quote": "I have never regretted to brave the long night.",
   "birthday": "December 14th",
-  "birthplace": "Huanglong"
+  "birthplace": "Huanglong",
+  "quoteLocalized": {
+    "vi": "Tôi chưa bao giờ hối hận vì đã dũng cảm đối mặt với đêm dài.",
+    "id": "Aku tidak pernah menyesal untuk menghadapi malam yang panjang.",
+    "th": "Aku tidak pernah menyesal untuk menantang malam panjang ini.",
+    "ru": "Я никогда не жалел о том, что осмелился встретиться с длинной ночью."
+  },
+  "descriptionLocalized": {
+    "vi": "Jiyan, thủ lĩnh của Midnight Rangers, hành động với sự chính trực nhanh chóng và kiên quyết. Anh ta sở hữu khả năng đáng gờm để triệu hồi một Qingloong hùng mạnh từ gió, khiến anh ta bất khả chiến bại trên chiến trường.",
+    "id": "Jiyan, pemimpin Midnight Rangers, bertindak dengan keadilan yang cepat dan teguh. Dia memiliki kemampuan yang menakutkan untuk memanggil Qingloong yang kuat dari angin, membuatnya tak terkalahkan di medan perang.",
+    "th": "จียาน ผู้นำของ Midnight Rangers กระทำด้วยความยุติธรรมอันรวดเร็วและแน่วแน่ เขาครอบครองพลังอันน่าเกรงขามในการร่ายมนตร์ Qingloong อันทรงพลังจากสายลม ทำให้เขาไม่อาจเอาชนะได้ในสนามรบ",
+    "ru": "Джиян, лидер Полуночных Рейнджеров, действует с молниеносной решительностью и праведностью. Он обладает невероятной силой призывать могущественного Цинлун из ветра, делая его непобедимым на поле боя."
+  }
 }

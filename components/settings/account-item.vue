@@ -1,9 +1,29 @@
 <script setup lang="ts">
 import type { AccountDocument } from '@/collections/account';
 
+// define
 const props = defineProps<{
   data: AccountDocument;
 }>();
+const emits = defineEmits<{
+  (e: 'on-delete'): void;
+}>();
+
+// uses
+const database = useDatabase();
+
+// states
+const autoImport = ref(props.data.autoImport);
+
+// changes
+watch(
+  () => autoImport.value,
+  (value) => {
+    props.data.patch({
+      autoImport: value
+    });
+  }
+);
 </script>
 
 <template>
@@ -15,18 +35,21 @@ const props = defineProps<{
         </v-col>
 
         <v-col class="d-flex justify-end align-center">
-          <v-chip color="red" :disabled="true" :text="$t('common.delete')" />
+          <v-chip
+            color="red"
+            :text="$t('common.delete')"
+            @click="() => emits('on-delete')"
+          />
         </v-col>
       </v-row>
     </v-sheet>
 
     <v-list-item
-      :disabled="true"
       :title="$t('settings.accounts.autoImportConveneHistory')"
       :subtitle="$t('settings.accounts.autoImportConveneHistorySubtitle')"
     >
       <template #append>
-        <v-switch />
+        <v-switch v-model="autoImport" />
       </template>
     </v-list-item>
   </div>

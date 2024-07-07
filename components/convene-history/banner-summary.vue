@@ -193,12 +193,11 @@ if (import.meta.client) {
 
     <!-- :color="element.win ? 'success' : undefined" -->
     <v-divider v-if="guaranteedAt5List.length > 0" />
-    <v-card-text v-if="guaranteedAt5List.length > 0">
-      <v-chip
-        v-for="(element, index) in guaranteedAt5List"
-        :key="index"
-        :class="index > 0 ? `ml-2` : ``"
-      >
+    <v-card-text
+      v-if="guaranteedAt5List.length > 0"
+      class="pa-2 d-flex flex-wrap ga-2"
+    >
+      <v-chip v-for="(element, index) in guaranteedAt5List" :key="index">
         <span>{{ $t(element.name) }}</span>
         <span
           class="ml-2 font-weight-bold"

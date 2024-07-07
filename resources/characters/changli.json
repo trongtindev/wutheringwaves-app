@@ -3,11 +3,17 @@
   "slug": "changli",
   "quote": "Eons of time on this vast land, all encapsulated in a humble game... I am fortunate to have you as my opponent.",
   "quoteLocalized": {
-    "vi": "Bao niên kỷ trên mảnh đất rộng lớn này, tất cả gói gọn trong một trò chơi khiêm tốn... Tôi thật may mắn khi có được bạn là đối thủ của tôi."
+    "vi": "Bao niên kỷ trên mảnh đất rộng lớn này, tất cả gói gọn trong một trò chơi khiêm tốn... Tôi thật may mắn khi có được bạn là đối thủ của tôi.",
+    "id": "Eons waktu di tanah luas ini, semua terbungkus dalam permainan sederhana... Saya beruntung memiliki Anda sebagai lawan saya.",
+    "th": "Berabad-abad waktu di tanah luas ini, semuanya terbungkus dalam sebuah permainan sederhana... Saya beruntung memiliki Anda sebagai lawan saya.",
+    "ru": "Века, прошедшие на этой обширной земле, заключены в простой игре... Мне повезло, что ты мой противник."
   },
   "description": "Counselor to the Jinzhou Magistrate and former Secretary-General of the Central Secretariat in the capital.\nShrouded in flames, she's a counselor fated to burn brightly until her final embers. Positioning herself on the chessboard, she's always planning several moves ahead to achieve her ambition.",
   "descriptionLocalized": {
-    "vi": "Cố vấn cho Thẩm phán Cẩm Châu và nguyên Tổng thư ký Ban Bí thư Trung ương ở thủ đô. Bị bao phủ trong ngọn lửa, cô là một cố vấn có số phận sẽ cháy sáng rực rỡ cho đến khi tàn lửa cuối cùng. Đặt mình trên bàn cờ, cô luôn lên kế hoạch trước nhiều nước đi để đạt được tham vọng của mình."
+    "vi": "Cố vấn cho Thẩm phán Cẩm Châu và nguyên Tổng thư ký Ban Bí thư Trung ương ở thủ đô. Bị bao phủ trong ngọn lửa, cô là một cố vấn có số phận sẽ cháy sáng rực rỡ cho đến khi tàn lửa cuối cùng. Đặt mình trên bàn cờ, cô luôn lên kế hoạch trước nhiều nước đi để đạt được tham vọng của mình.",
+    "id": "Penasihat Magistrat Jinzhou dan mantan Sekretaris Jenderal Sekretariat Pusat di ibu kota.Terbungkus dalam api, dia adalah penasihat yang ditakdirkan untuk bersinar terang hingga bara terakhirnya. Memposisikan dirinya di papan catur, dia selalu merencanakan beberapa langkah ke depan untuk mencapai ambisinya.",
+    "th": "ที่ปรึกษาของนายอำเภอจินโจว และอดีตเลขาธิการใหญ่ของสำนักงานกลางในเมืองหลวงโอบล้อมด้วยเปลวเพลิง เธอคือที่ปรึกษาที่กำหนดให้ลุกโชนอย่างสดใสจนกระทั่งเถ้าถ่านสุดท้าย เธอวางตัวเองบนกระดานหมากรุก เสมอวางแผนล่วงหน้าหลายขั้นตอนเพื่อให้บรรลุความทะเยอทะยานของเธอ",
+    "ru": "Советник магистрата Цзиньчжоу и бывший генеральный секретарь Центрального секретариата в столице.Овеянная пламенем, она — советник, обреченная гореть ярко до последней искры. Позиционируя себя на шахматной доске, она всегда планирует на несколько ходов вперед, чтобы достичь своих амбиций."
   },
   "skills": [
     {

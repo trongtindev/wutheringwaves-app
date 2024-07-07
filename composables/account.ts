@@ -1,14 +1,20 @@
-// import type { AccountDocument } from '@/collections/account';
 import { defineStore } from 'pinia';
 
 export const useAccount = defineStore('useAccount', () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let interval: any = null;
+
   // uses
   const i18n = useI18n();
   const snackbar = useSnackbar();
   const database = useDatabase();
+  const notification = useNotification();
+  const importConvene = useImportConvene();
+  // const conveneChangedDebounce = useDebounceFn()
 
   // states
   const items = ref<any[]>([]);
+  const onConveneChanged = ref<[string, string]>(['', '']);
   /**
    * This is playerId in-game
    */
@@ -17,10 +23,6 @@ export const useAccount = defineStore('useAccount', () => {
 
   // functions
   const initialize = async () => {
-    if (import.meta.server) {
-      throw new Error('Cannot initialize account on server-side!');
-    }
-
     if (!database.isInitialized) {
       setTimeout(() => initialize(), 250);
       return;
@@ -31,6 +33,7 @@ export const useAccount = defineStore('useAccount', () => {
     db.accounts.postInsert(() => loadItems(), false);
 
     await loadItems();
+    if (items.value.length > 0) onSchedule();
   };
 
   const upsert = async (playerId: string, serverId: string) => {
@@ -69,13 +72,6 @@ export const useAccount = defineStore('useAccount', () => {
     items.value = result as any;
   };
 
-  /**
-   * @deprecated
-   */
-  const getAccounts = <T>() => {
-    return items.value as T;
-  };
-
   const getDocument = async (playerId: string) => {
     const db = await database.getInstance();
     return await db.accounts
@@ -105,6 +101,51 @@ export const useAccount = defineStore('useAccount', () => {
     });
   };
 
+  // events
+  const onSchedule = () => {
+    items.value.forEach(async (account) => {
+      if (!account.conveneHistoryUrl) return;
+      if (!account.autoImport) {
+        console.debug('autoImport', account.playerId, 'disabled');
+        return;
+      }
+      if (account.lastImport && account.lastImport > 60 * 15 * 1000) {
+        console.debug('autoImport', account.playerId, 'skip');
+        return;
+      }
+
+      const nid = await notification.create({
+        title: i18n.t('account.autoImport.notificationTitle'),
+        message: i18n.t('account.autoImport.notificationMessage', [
+          account.playerId
+        ]),
+        persistent: true
+      });
+
+      console.debug('autoImport', account.playerId, 'start');
+      importConvene
+        .start(account.conveneHistoryUrl)
+        .then(() => {
+          console.debug('autoImport', account.playerId, 'done');
+          onConveneChanged.value = [account.playerId, randomId()];
+        })
+        .catch((error) => {
+          console.error(error);
+          console.warn('autoImport', account.playerId, error.message);
+        })
+        .finally(() => {
+          console.debug('autoImport', account.playerId, 'finally');
+
+          getDocument(account.playerId).then((doc) => {
+            if (!doc) return;
+            doc.patch({ lastImport: Date.now() });
+          });
+          notification.remove(nid);
+        });
+    });
+  };
+
+  // changes
   watch(active, (newValue, oldValue) => {
     if (newValue) {
       getDocument(newValue).then((result) => {
@@ -120,12 +161,25 @@ export const useAccount = defineStore('useAccount', () => {
     }
   });
 
+  // lifecycle
+  onNuxtReady(() => {
+    initialize();
+
+    // schedule
+    const timer = 60 * 5 * 1000;
+    interval = setInterval(() => onSchedule, timer);
+  });
+
+  onUnmounted(() => {
+    if (interval) clearInterval(interval);
+  });
+
   return {
     items,
     active,
     timeOffset,
+    onConveneChanged,
     upsert,
-    getAccounts,
     getDocument,
     getConveneHistoryUrl,
     setConveneHistoryUrl,

@@ -12,7 +12,6 @@ const i18nHead = useLocaleHead({
 });
 const app = useApp();
 const auth = useAuth();
-const account = useAccount();
 const backup = useBackup();
 const database = useDatabase();
 const vuetifyLocale = useLocale();
@@ -22,7 +21,6 @@ const runtimeConfig = useRuntimeConfig();
 if (import.meta.client) {
   app.initialize();
   auth.initialize();
-  account.initialize();
   backup.initialize();
   database.initialize();
 }
@@ -61,7 +59,14 @@ useHead({
       };
     })
   ],
-  meta: [...(i18nHead.value.meta || [])],
+  meta: [
+    ...(i18nHead.value.meta || []),
+    {
+      name: 'keywords',
+      content:
+        'astrite, astrite.app, wuthering, wuthering waves, kuro, pity tracker, wuwa tracker, pity counter, wuthering waves character, wuthering waves guide, wuthering waves tier list, wuthering waves trophy, wuthering waves item'
+    }
+  ],
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang
   }

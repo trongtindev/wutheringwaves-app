@@ -237,5 +237,17 @@
   ],
   "quote": "Release the wants, and the mind quiets. Cleanse the thoughts, and the soul clears.",
   "birthday": "April 6th",
-  "birthplace": "Huanglong"
+  "birthplace": "Huanglong",
+  "quoteLocalized": {
+    "vi": "Buông bỏ những ham muốn, tâm trí sẽ thanh thản. Lọc sạch những suy nghĩ, tâm hồn sẽ sáng suốt.",
+    "th": "Lepaskan keinginan, dan pikiran akan tenang. Bersihkan pikiran, dan jiwa akan jernih.",
+    "ru": "Отпусти желание, и ум успокоится. Очисти мысли, и душа станет чиста.",
+    "id": "Lepaskan keinginan, dan pikiran akan tenang. Bersihkan pikiran, dan jiwa akan jernih."
+  },
+  "descriptionLocalized": {
+    "vi": "Jianxin, một nữ tu Đạo giáo và là người kế thừa của Phong Diện Quyền, đã dành cả cuộc đời mình để lĩnh hội nghệ thuật võ thuật tối thượng. Với sức mạnh thu phục và biến đổi Khí trong môi trường, cô có thể tạo ra các lá chắn bảo vệ thanh lọc cả thể xác và tinh thần.",
+    "id": "Jianxin, seorang biarawan Tao dan penerus Fengyiquan, telah mengabdikan hidupnya untuk menguasai seni bela diri pamungkas. Dengan kekuatan untuk memanfaatkan dan mengubah Chi lingkungan, ia dapat menciptakan penghalang pelindung yang memurnikan tubuh dan pikiran.",
+    "th": "เจี้ยนซิน ภิกษุณีเต๋าและทายาทของเฟิงอี้เฉวียน ได้อุทิศชีวิตของเธอเพื่อฝึกฝนศิลปะการต่อสู้ขั้นสูงสุด ด้วยพลังในการควบคุมและเปลี่ยนแปลงชี่จากสิ่งแวดล้อม เธอสามารถสร้างเกราะป้องกันที่ชำระทั้งร่างกายและจิตใจ",
+    "ru": "Цзяньсинь, даосская монахиня и наследница Фэнъицюань, посвятила свою жизнь постижению высшего боевого искусства. Обладая силой использовать и трансформировать окружающую Ци, она может создавать защитные барьеры, очищающие как тело, так и разум."
+  }
 }

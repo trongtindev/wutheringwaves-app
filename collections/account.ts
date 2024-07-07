@@ -1,11 +1,13 @@
 import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
 
 export type AccountDocType = {
-  name?: string;
   playerId: string;
   serverId: string;
   conveneHistoryUrl: string;
   createdAt: number;
+  name?: string;
+  autoImport?: boolean;
+  lastImport?: number;
 };
 
 export type AccountDocMethods = {
@@ -38,14 +40,11 @@ export const accountCollectionMethods: AccountCollectionMethods = {
 };
 
 export const accountSchema: RxJsonSchema<AccountDocType> = {
-  version: 2,
+  version: 4,
   keyCompression: false,
   primaryKey: 'playerId',
   type: 'object',
   properties: {
-    name: {
-      type: 'string'
-    },
     playerId: {
       type: 'string',
       maxLength: 50
@@ -58,6 +57,15 @@ export const accountSchema: RxJsonSchema<AccountDocType> = {
       default: ''
     },
     createdAt: {
+      type: 'number'
+    },
+    name: {
+      type: 'string'
+    },
+    autoImport: {
+      type: 'boolean'
+    },
+    lastImport: {
       type: 'number'
     }
   },

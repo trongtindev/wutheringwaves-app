@@ -237,5 +237,17 @@
   ],
   "quote": "Fine, since you've done this much for me... Go ahead, tell me the wildest inventions you can think of, and watch me make them happen for you.",
   "birthday": "November 6th",
-  "birthplace": "New Federation"
+  "birthplace": "New Federation",
+  "quoteLocalized": {
+    "vi": "Được rồi, vì bạn đã làm được nhiều như vậy cho tôi... Hãy tiếp tục, kể cho tôi nghe những ý tưởng hoang dã nhất mà bạn có thể nghĩ ra, và xem tôi sẽ biến chúng thành hiện thực cho bạn.",
+    "th": "Baiklah, karena kau sudah melakukan semua ini untukku... Lanjutkan, katakan padaku penemuan paling liar yang bisa kau pikirkan, dan saksikan aku mewujudkannya untukmu.",
+    "ru": "Хорошо, раз ты уже столько для меня сделал... Давай, расскажи о самых безумных изобретениях, которые только придут тебе в голову, и смотри, как я воплощу их в жизнь.",
+    "id": "Baiklah, karena kamu sudah melakukan ini untukku... Silahkan, katakan padaku penemuan terliar yang dapat kamu pikirkan, dan saksikan aku mewujudkannya untukmu."
+  },
+  "descriptionLocalized": {
+    "vi": "Mortefi, một chuyên gia lão luyện trong nghiên cứu Tacetite Ứng dụng và là thành viên của Khoa An toàn của Viện Hàn lâm, sở hữu khả năng độc đáo biến đổi sự thất vọng tích tụ của mình thành ngọn lửa rực cháy.Từ cơn thịnh nộ bốc cháy nuốt chửng tất cả, con rồng đỏ sẽ giáng xuống.",
+    "id": "Mortefi, seorang ahli terampil dalam Studi Tacetite Terapan dan anggota Departemen Keamanan Akademi, memiliki kemampuan unik untuk mengubah frustrasinya yang terakumulasi menjadi api yang menyala-nyala.Dari amukan api yang membakar segalanya, naga merah akan turun.",
+    "th": "Mortefi, ผู้เชี่ยวชาญด้านการประยุกต์ใช้ Tacite ในระดับสูง และเป็นสมาชิกของแผนกความปลอดภัยของสถาบัน มีความสามารถพิเศษในการเปลี่ยนความหงุดหงิดที่สะสมไว้ให้กลายเป็นเปลวไฟจากโทสะที่ลุกโชนและเผาผลาญทุกสิ่ง มังกรแดงจะลงมา",
+    "ru": "Мортефи, опытный специалист по прикладной тацетитовой науке и член Департамента безопасности Академии, обладает уникальной способностью трансформировать свою накопленную фрустрацию в пылающее пламя.Из жгучего гнева, поглощающего всё, сойдёт красный дракон."
+  }
 }

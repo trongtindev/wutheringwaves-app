@@ -98,6 +98,7 @@ watch(() => filterRarity.value, updateFilter);
 
 // lifecycle
 onNuxtReady(() => initialize());
+watch(() => account.onConveneChanged, initialize);
 
 // seo meta
 const title = i18n.t('convene.history.title');
@@ -123,13 +124,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       ]"
     />
 
-    <!-- alert -->
-    <alert
-      id="convene.history.alert"
-      color="warning"
-      :text="$t('convene.history.alert')"
-    />
-
     <!-- page -->
     <page-header>
       <template #actions>
@@ -139,8 +133,8 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         </v-btn-toggle>
 
         <v-btn
+          :prepend-icon="mdiImport"
           :text="$t('common.import')"
-          :append-icon="mdiImport"
           :to="localePath('/convene-history/import')"
         />
       </template>

@@ -1,54 +1,97 @@
 {
   "slug": "sanhua",
-  "description": "The bodyguard of Jinzhou’s Magistrate, known for having an icy personality.\nOnce regarded as the Asura of Calamity, Sanhua is now a taciturn guardian. She has learned to maintain inner calmness amidst the chaotic frequencies, and the things that once frightened her now fuel her determination.",
+  "quote": "Please don't stay too far away from me. I am confident to not let you get harmed in the slightest.",
+  "quoteLocalized": {
+    "vi": "Đừng đi quá xa tôi. Tôi tự tin sẽ không để bất kỳ nguy hiểm nào chạm đến em.",
+    "id": "Jangan menjauh dariku. Aku yakin aku bisa melindungimu dari bahaya.",
+    "th": "อย่าห่างจากฉันไปไกลนัก ฉันมั่นใจว่าจะไม่ปล่อยให้คุณได้รับอันตรายแม้แต่น้อย",
+    "ru": "Не отходи слишком далеко от меня. Я уверен, что ничто не причинит тебе вреда."
+  },
+  "description": "The bodyguard of Jinzhou's Magistrate, known for having an icy personality.\nOnce regarded as the Asura of Calamity, Sanhua is now a taciturn guardian. She has learned to maintain inner calmness amidst the chaotic frequencies, and the things that once frightened her now fuel her determination.",
+  "descriptionLocalized": {
+    "vi": "Người bảo vệ của Thị trưởng Jinzhou, nổi tiếng với tính cách băng giá.Từng được biết đến với danh hiệu Asura của Biến cố, Sanhua hiện là một người bảo vệ ít nói. Cô ấy đã học cách giữ bình tĩnh bên trong giữa những tần số hỗn loạn, và những thứ từng khiến cô ấy sợ hãi giờ đây đã thúc đẩy quyết tâm của cô ấy.",
+    "id": "Penjaga dari Magistrat Jinzhou, yang dikenal karena kepribadiannya yang dingin.Dulunya dikenal sebagai Asura Bencana, Sanhua kini adalah penjaga yang pendiam. Dia telah belajar untuk menjaga ketenangan batin di tengah frekuensi yang kacau, dan hal-hal yang pernah membuatnya takut kini menjadi bahan bakar tekadnya.",
+    "th": "องครักษ์ของผู้ว่าราชการเมืองจิ้นโจว รู้จักกันดีในเรื่องบุคลิกที่เย็นชาเคยได้รับการยกย่องให้เป็นอาสุราแห่งภัยพิบัติ แต่ตอนนี้ซานฮวาเป็นเพียงผู้พิทักษ์เงียบๆ เธอเรียนรู้ที่จะรักษาความสงบภายในท่ามกลางคลื่นความถี่ที่วุ่นวาย และสิ่งที่เคยทำให้เธอกลัวตอนนี้เป็นเชื้อเพลิงให้กับความมุ่งมั่นของเธอ",
+    "ru": "Телохранитель магистрата Цзиньчжоу, известная своим холодным характером.Некогда известная как Асура Бедствия, Саньхуа теперь молчаливый страж. Она научилась сохранять внутреннее спокойствие посреди хаотичных частот, и то, что когда-то пугало ее, теперь подпитывает ее решимость."
+  },
   "skills": [
     {
       "slug": "frigid-light",
       "name": "Frigid Light",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nSanhua performs up to 5 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nSanhua consumes STA to launch attacks, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nSanhua consumes STA to perform a Mid-Air Plunging Attack, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nSanhua performs up to 5 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nSanhua consumes STA to launch attacks, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nSanhua consumes STA to perform a Mid-Air Plunging Attack, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.",
+      "descriptionLocalized": {
+        "vi": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nSanhua thực hiện tối đa 5 đòn tấn công liên tiếp, gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nSanhua tiêu hao STA để tung ra các đòn tấn công, gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nSanhua tiêu hao STA để thực hiện một Mid-Air Plunging Attack, gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nSử dụng <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> sau khi <strong style=\"color: var(--color-highlight);\">Dodge</strong> thành công để tấn công mục tiêu, gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."
+      }
     },
     {
       "slug": "eternal-frost",
       "name": "Eternal Frost",
       "type": "Resonance Skill",
-      "description": "Sanhua sends an air blade to create <strong style=\"color: var(--color-attribute-glacio);\">1</strong> \"Ice Prism\" on the ground, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."
+      "description": "Sanhua sends an air blade to create <strong style=\"color: var(--color-attribute-glacio);\">1</strong> \"Ice Prism\" on the ground, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.",
+      "descriptionLocalized": {
+        "vi": "Sanhua tung ra lưỡi kiếm khí tạo ra <strong style=\"color: var(--color-attribute-glacio);\">1</strong> \"Băng Lăng Kính\" trên mặt đất, gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."
+      }
     },
     {
       "slug": "glacial-gaze",
       "name": "Glacial Gaze",
       "type": "Resonance Liberation",
-      "description": "Sanhua deals <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> and creates <strong style=\"color: var(--color-attribute-glacio);\">1</strong> \"Glacier\"."
+      "description": "Sanhua deals <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> and creates <strong style=\"color: var(--color-attribute-glacio);\">1</strong> \"Glacier\".",
+      "descriptionLocalized": {
+        "vi": "Sanhua gây sát thương <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> và tạo ra <strong style=\"color: var(--color-attribute-glacio);\">1</strong> \"Glacier\"."
+      }
     },
     {
       "slug": "condensation",
       "name": "Condensation",
       "type": "Inherent Skill",
-      "description": "Damage dealt by Sanhua's Resonance Skill increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s after casting her Intro Skill."
+      "description": "Damage dealt by Sanhua's Resonance Skill increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s after casting her Intro Skill.",
+      "descriptionLocalized": {
+        "vi": "Sát thương từ Kỹ Năng Cộng Hưởng của Sanhua được tăng <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> trong <strong style=\"color: var(--theme-palette-color-1);\">8</strong> giây sau khi sử dụng Intro Skill."
+      }
     },
     {
       "slug": "avalanche",
       "name": "Avalanche",
       "type": "Inherent Skill",
-      "description": "Damage dealt by Sanhua's Forte Circuit <strong style=\"color: var(--color-highlight);\">Ice Burst</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s after casting <strong style=\"color: var(--color-highlight);\">Basic Attack 5</strong>."
+      "description": "Damage dealt by Sanhua's Forte Circuit <strong style=\"color: var(--color-highlight);\">Ice Burst</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s after casting <strong style=\"color: var(--color-highlight);\">Basic Attack 5</strong>.",
+      "descriptionLocalized": {
+        "vi": "Sát thương từ Lốc xoáy băng giá của Mạch nguyên tố Sanhua được tăng <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> trong <strong style=\"color: var(--theme-palette-color-1);\">8</strong> giây sau khi dùng <strong style=\"color: var(--color-highlight);\">Đòn đánh thường thứ 5</strong>."
+      }
     },
     {
       "slug": "freezing-thorns",
       "name": "Freezing Thorns",
       "type": "Intro Skill",
-      "description": "Sanhua swings her blade downward and creates 1 \"Ice Thorn\", dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>."
+      "description": "Sanhua swings her blade downward and creates 1 \"Ice Thorn\", dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.",
+      "descriptionLocalized": {
+        "vi": "Sanhua vung kiếm xuống, tạo ra 1 \"Ice Thorn\", gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.",
+        "id": "Sanhua mengayunkan pedangnya ke bawah dan menciptakan 1 \"Duri Es\", memberikan <strong style=\"color: var(--color-attribute-glacio);\">Kerusakan Glacio</strong>.",
+        "th": "ซานฮวาฟาดดาบลงและสร้าง \"หนามน้ำแข็ง\" 1 อัน ทำให้เกิดความเสียหาย <strong style=\"color: var(--color-attribute-glacio);\">น้ำแข็ง</strong>",
+        "ru": "Санхуа опускает свой меч вниз, создавая 1 \"Ледяной Шип\", наносящий <strong style=\"color: var(--color-attribute-glacio);\">Ледяной урон</strong>."
+      }
     },
     {
       "slug": "clarity-of-mind",
       "name": "Clarity of Mind",
       "type": "Forte Circuit",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Detonate</strong></size>\nWhen holding <strong style=\"color: var(--color-highlight);\">Basic Attack</strong>, a cursor moves back and forth on the Forte Gauge. Release <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> while cursor falls in the \"Frostbite\" area, to perform Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong>, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> considered as Heavy Attack damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Ice Burst</strong></size>\nSanhua’s Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong> detonates all \"Ice Thorns\", \"Ice Prisms\" and \"Glaciers\" within her attack range, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>. DMG done by Ice Burst is considered as Resonance Skill damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Frostbite Area</strong></size>\nThe \"Frostbite\" area expands with every <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\". \"Clarity\" stacks up to <strong style=\"color: var(--color-attribute-glacio);\">2</strong> times.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\" upon performing <strong style=\"color: var(--color-highlight);\">Basic Attack 5</strong>.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\" upon casting Intro Skill <strong style=\"color: var(--color-highlight);\">Freezing Thorns</strong>.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\" upon casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Eternal Frost</strong>.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">2</strong> stack(s) of \"Clarity\" upon casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Glacial Gaze</strong>.\nUpon casting Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong>, all \"Clarity\" is removed."
+      "description": "<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Detonate</strong></size>\nWhen holding <strong style=\"color: var(--color-highlight);\">Basic Attack</strong>, a cursor moves back and forth on the Forte Gauge. Release <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> while cursor falls in the \"Frostbite\" area, to perform Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong>, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong> considered as Heavy Attack damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Ice Burst</strong></size>\nSanhua’s Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong> detonates all \"Ice Thorns\", \"Ice Prisms\" and \"Glaciers\" within her attack range, dealing <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>. DMG done by Ice Burst is considered as Resonance Skill damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Frostbite Area</strong></size>\nThe \"Frostbite\" area expands with every <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\". \"Clarity\" stacks up to <strong style=\"color: var(--color-attribute-glacio);\">2</strong> times.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\" upon performing <strong style=\"color: var(--color-highlight);\">Basic Attack 5</strong>.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\" upon casting Intro Skill <strong style=\"color: var(--color-highlight);\">Freezing Thorns</strong>.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">1</strong> stack of \"Clarity\" upon casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Eternal Frost</strong>.\nSanhua obtains <strong style=\"color: var(--color-attribute-glacio);\">2</strong> stack(s) of \"Clarity\" upon casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Glacial Gaze</strong>.\nUpon casting Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong>, all \"Clarity\" is removed.",
+      "descriptionLocalized": {
+        "vi": "<size=40><strong style=\"color: var(--color-title);\">Tấn công mạnh: Detonate</strong></size>\nKhi giữ <strong style=\"color: var(--color-highlight);\">Tấn công thường</strong>, con trỏ sẽ di chuyển qua lại trên thanh Forte. Thả <strong style=\"color: var(--color-highlight);\">Tấn công thường</strong> khi con trỏ nằm trong vùng \"Frostbite\", để thực hiện Tấn công mạnh <strong style=\"color: var(--color-highlight);\">Detonate</strong>, gây DMG Glacio được tính là sát thương Tấn công mạnh.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Ice Burst</strong></size>\nTấn công mạnh <strong style=\"color: var(--color-highlight);\">Detonate</strong> của Sanhua kích nổ tất cả \"Ice Thorns\", \"Ice Prisms\" và \"Glaciers\" trong phạm vi tấn công của cô ấy, gây DMG Glacio. DMG gây ra bởi Ice Burst được tính là sát thương Kỹ năng cộng hưởng.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Vùng Frostbite</strong></size>\nVùng \"Frostbite\" mở rộng với mỗi <strong style=\"color: var(--color-attribute-glacio);\">1</strong> điểm cộng dồn \"Clarity\". \"Clarity\" cộng dồn tối đa <strong style=\"color: var(--color-attribute-glacio);\">2</strong> lần.\nSanhua nhận được <strong style=\"color: var(--color-attribute-glacio);\">1</strong> điểm cộng dồn \"Clarity\" khi thực hiện <strong style=\"color: var(--color-highlight);\">Tấn công thường lần thứ 5</strong>.\nSanhua nhận được <strong style=\"color: var(--color-attribute-glacio);\">1</strong> điểm cộng dồn \"Clarity\" khi thi triển Kỹ năng Intro <strong style=\"color: var(--color-highlight);\">Freezing Thorns</strong>.\nSanhua nhận được <strong style=\"color: var(--color-attribute-glacio);\">1</strong> điểm cộng dồn \"Clarity\" khi thi triển Kỹ năng cộng hưởng <strong style=\"color: var(--color-highlight);\">Eternal Frost</strong>.\nSanhua nhận được <strong style=\"color: var(--color-attribute-glacio);\">2</strong> điểm cộng dồn \"Clarity\" khi thi triển Giải phóng cộng hưởng <strong style=\"color: var(--color-highlight);\">Glacial Gaze</strong>.\nKhi thi triển Tấn công mạnh <strong style=\"color: var(--color-highlight);\">Detonate</strong>, tất cả \"Clarity\" sẽ bị loại bỏ."
+      }
     },
     {
       "slug": "skillful-cooking",
       "name": "Skillful Cooking",
       "type": "Inherent Skill",
-      "description": "Has a chance to produce special dishes when cooking"
+      "description": "Has a chance to produce special dishes when cooking",
+      "descriptionLocalized": {
+        "vi": "Có xác suất tạo ra món ăn đặc biệt khi nấu ăn",
+        "id": "Memiliki peluang untuk menghasilkan hidangan spesial saat memasak.",
+        "th": "มีโอกาสสร้างอาหารพิเศษเมื่อทำอาหาร",
+        "ru": "С шансом приготовить особые блюда при готовке."
+      }
     },
     {
       "slug": "silversnow",
@@ -63,42 +106,60 @@
       "slug": "solitude-s-embrace",
       "name": "Solitude's Embrace",
       "params": ["15%", "10"],
-      "description": "<strong style=\"color: var(--color-highlight);\">Basic Attack V</strong> increases Sanhua's Crit. Rate by {0} for {1}s."
+      "description": "<strong style=\"color: var(--color-highlight);\">Basic Attack V</strong> increases Sanhua's Crit. Rate by {0} for {1}s.",
+      "descriptionLocalized": {
+        "vi": "<strong style=\"color: var(--color-highlight);\">Basic Attack V</strong> tăng Crit. Rate của Sanhua thêm {0} trong {1} giây."
+      }
     },
     {
       "idx": "Resonance 2-4",
       "slug": "snowy-clarity",
       "name": "Snowy Clarity",
       "params": ["10", "5"],
-      "description": "Stamina cost of Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong> is reduced by {0}. When Sanhua casts Resonance Skill <strong style=\"color: var(--color-highlight);\">Eternal Frost</strong>, her Anti-interruption is enhanced for {0}s."
+      "description": "Stamina cost of Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong> is reduced by {0}. When Sanhua casts Resonance Skill <strong style=\"color: var(--color-highlight);\">Eternal Frost</strong>, her Anti-interruption is enhanced for {0}s.",
+      "descriptionLocalized": {
+        "vi": "Tốn thể lực của Trọng Kích <strong style=\"color: var(--color-highlight);\">Detonate</strong> giảm {0}. Khi Sanhua sử dụng Kỹ Năng Cộng Hưởng <strong style=\"color: var(--color-highlight);\">Eternal Frost</strong>, khả năng kháng ngắt của cô ấy được tăng cường trong {0} giây."
+      }
     },
     {
       "idx": "Resonance 3-4",
       "slug": "anomalous-vision",
       "name": "Anomalous Vision",
       "params": ["70%", "35%"],
-      "description": "Sanhua's damage dealt is increased by {1} against targets with HP below {0}."
+      "description": "Sanhua's damage dealt is increased by {1} against targets with HP below {0}.",
+      "descriptionLocalized": {
+        "vi": "Sát thương gây ra của Sanhua lên kẻ địch có HP dưới {0} sẽ được tăng thêm {1}."
+      }
     },
     {
       "idx": "Resonance 4-4",
       "slug": "blade-mastery",
       "name": "Blade Mastery",
       "params": ["10", "5", "120%"],
-      "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Glacial Gaze</strong> restores {0} Resonance Energy. \r\nDMG of the next Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong> within {1}s is increased by {2}."
+      "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Glacial Gaze</strong> restores {0} Resonance Energy. \r\nDMG of the next Heavy Attack <strong style=\"color: var(--color-highlight);\">Detonate</strong> within {1}s is increased by {2}.",
+      "descriptionLocalized": {
+        "vi": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Glacial Gaze</strong> khôi phục {0} Năng lượng cộng hưởng. \nDMG của <strong style=\"color: var(--color-highlight);\">Detonate</strong> Heavy Attack tiếp theo trong vòng {1} giây được tăng thêm {2}."
+      }
     },
     {
       "idx": "Resonance 5-4",
       "slug": "unraveling-fate",
       "name": "Unraveling Fate",
       "params": ["100%"],
-      "description": "Crit. DMG of Forte Circuit <strong style=\"color: var(--color-highlight);\">Ice Burst</strong> is increased by {0}. Ice Creations (Ice Thorn, Ice Prism, and Glacier) will explode even if they are not detonated."
+      "description": "Crit. DMG of Forte Circuit <strong style=\"color: var(--color-highlight);\">Ice Burst</strong> is increased by {0}. Ice Creations (Ice Thorn, Ice Prism, and Glacier) will explode even if they are not detonated.",
+      "descriptionLocalized": {
+        "vi": "Crit. DMG của Lõi Thiên Phú <strong style=\"color: var(--color-highlight);\">Ice Burst</strong> được tăng thêm {0}. Các Tinh Thể Băng (Ice Thorn, Ice Prism, và Glacier) sẽ tự động phát nổ cho dù không được kích hoạt."
+      }
     },
     {
       "idx": "Resonance 6-4",
       "slug": "daybreak-radiance",
       "name": "Daybreak Radiance",
       "params": ["10%", "20", "2"],
-      "description": "After an Ice Prism or a Glacier is detonated, all team members' ATK is increased by {0} for {1}s, stacking up to {2} times."
+      "description": "After an Ice Prism or a Glacier is detonated, all team members' ATK is increased by {0} for {1}s, stacking up to {2} times.",
+      "descriptionLocalized": {
+        "vi": "Sau khi Lăng Kính Băng hoặc Băng Tiêu nổ, tấn công của tất cả thành viên trong đội tăng {0} trong {1} giây, cộng dồn tối đa {2} lần."
+      }
     }
   ],
   "stats": { "hp": 805, "def": 77, "atk": 22, "energy": 10000 },
@@ -235,7 +296,6 @@
       "name": "ATK+1.80%"
     }
   ],
-  "quote": "Please don't stay too far away from me. I am confident to not let you get harmed in the slightest.",
   "birthday": "January 20th",
   "birthplace": "Huanglong"
 }

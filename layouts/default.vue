@@ -36,6 +36,7 @@ const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const search = useSearch();
 const theme = useTheme();
+const analytics = useAnalytics();
 
 // states
 const state = ref<'' | 'sign-in' | 'sign-out'>('');
@@ -79,6 +80,14 @@ const onPressedSignOut = async () => {
 const onPressedToggleTheme = () => {
   theme.global.name.value =
     theme.global.name.value === 'dark' ? 'light' : 'dark';
+  analytics.logEvent('feature.theme', {
+    name: theme.global.name.value
+  });
+};
+
+const onPressedSearch = () => {
+  search.active = true;
+  analytics.logEvent('feature.search', {});
 };
 
 // changes
@@ -214,7 +223,7 @@ watch(
                   <v-card-actions>
                     <v-spacer />
                     <v-btn
-                      :to="localePath('/settings')"
+                      :to="localePath('/settings#account')"
                       :text="$t('common.manage')"
                     />
                   </v-card-actions>
@@ -226,7 +235,7 @@ watch(
             <v-btn
               class="hidden-sm-and-down"
               :icon="mdiDatabaseSearch"
-              @click="() => (search.active = true)"
+              @click="onPressedSearch"
             />
 
             <!-- theme -->
@@ -237,7 +246,7 @@ watch(
           </div>
 
           <!-- account -->
-          <v-divider :vertical="true" class="mx-4" />
+          <v-divider :vertical="true" class="mr-4 ml-2" />
           <client-only>
             <v-menu v-if="auth.isLoggedIn">
               <template #activator="{ props }">
@@ -270,7 +279,11 @@ watch(
                 <v-card-actions>
                   <v-spacer />
 
-                  <v-btn color="warning" :text="$t('common.signOut')" />
+                  <v-btn
+                    color="warning"
+                    :text="$t('common.signOut')"
+                    @click="() => onPressedSignOut()"
+                  />
                 </v-card-actions>
               </v-card>
             </v-menu>

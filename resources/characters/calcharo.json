@@ -237,5 +237,17 @@
   ],
   "quote": "They'll make an offer we like. I'll make sure of it.",
   "birthday": "July 8th",
-  "birthplace": "New Federation"
+  "birthplace": "New Federation",
+  "quoteLocalized": {
+    "vi": "Họ sẽ đưa ra một lời đề nghị mà chúng ta thích. Tôi sẽ đảm bảo điều đó.",
+    "id": "Mereka akan memberikan penawaran yang kita sukai. Aku akan pastikan itu.",
+    "th": "Mereka akan memberikan tawaran yang kita sukai. Aku akan pastikan itu.",
+    "ru": "Они сделают нам предложение, которое нам понравится. Я позабочусь об этом."
+  },
+  "descriptionLocalized": {
+    "vi": "Lãnh đạo của \"Bầy Ma\", một nhóm lính đánh thuê quốc tế. Nhẫn tâm, báo thù, không tha thứ. Khách hàng tiềm năng cần lưu ý về cái giá phải trả trước khi đưa ra lời đề nghị cho anh ta.",
+    "id": "Pemimpin \"Ghost Hounds\", kelompok tentara bayaran internasional. Kejam, pendendam, tidak kenal ampun. Klien potensial harus memperhatikan harga yang harus dibayar sebelum memberinya penawaran.",
+    "th": "ผู้นำของ \"ผีหมาป่า\" กลุ่มทหารรับจ้างระหว่างประเทศ โหดเหี้ยม แสวงแก้แค้น ไม่ให้อภัย ลูกค้าที่อาจเป็นไปได้ต้องระมัดระวังในเรื่องค่าใช้จ่ายก่อนที่จะเสนอให้เขา",
+    "ru": "Лидер \"Призрачных Гончих\", международной группы наемников. Безжалостный, мстительный, неумолимый. Потенциальный клиент должен быть готов заплатить цену, прежде чем делать ему предложение."
+  }
 }

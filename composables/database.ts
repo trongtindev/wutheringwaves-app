@@ -146,6 +146,14 @@ export const useDatabase = defineStore('useDatabase', () => {
                 2: function (oldDoc) {
                   oldDoc.name = '';
                   return oldDoc;
+                },
+                3: function (oldDoc) {
+                  oldDoc.autoImport = true;
+                  return oldDoc;
+                },
+                4: function (oldDoc) {
+                  oldDoc.lastImport = 0;
+                  return oldDoc;
                 }
               }
             },
@@ -213,6 +221,7 @@ export const useDatabase = defineStore('useDatabase', () => {
 
           // accounts
           db.accounts.preInsert((plainData) => {
+            plainData.autoImport ??= true;
             plainData.createdAt ??= new Date().getTime();
           }, false);
           db.accounts.postInsert(() => onChangedDebounce(), false);

@@ -287,14 +287,6 @@ useSeoMeta({
     />
 
     <client-only>
-      <!-- alert -->
-      <alert
-        id="convene.global.alert"
-        class="mb-2"
-        color="info"
-        :text="$t('convene.global.alert', [totalUsers])"
-      />
-
       <!-- filter -->
       <v-row class="mt-1">
         <v-col cols="12" sm="4">
@@ -585,18 +577,18 @@ useSeoMeta({
             </v-card-title>
             <v-divider />
 
-            <v-card-text v-if="fourStarList">
+            <v-sheet v-if="fourStarList">
               <v-table>
                 <thead>
                   <tr>
-                    <td style="width: 20%"></td>
-                    <td style="width: 50%">
+                    <td class="border-b" style="width: 20%">#</td>
+                    <td class="border-b" style="width: 50%">
                       {{ $t('common.name') }}
                     </td>
-                    <td style="width: 20%">
+                    <td class="border-b" style="width: 20%">
                       {{ $t('common.total') }}
                     </td>
-                    <td style="width: 10%">
+                    <td class="border-b" style="width: 10%">
                       {{ $t('common.percentage') }}
                     </td>
                   </tr>
@@ -611,7 +603,7 @@ useSeoMeta({
                   />
                 </tbody>
               </v-table>
-            </v-card-text>
+            </v-sheet>
             <v-card-text v-else>
               {{ $t('common.noRecords') }}
             </v-card-text>
@@ -625,18 +617,18 @@ useSeoMeta({
             </v-card-title>
             <v-divider />
 
-            <v-card-text v-if="fourStarList">
+            <v-sheet v-if="fourStarList">
               <v-table>
                 <thead>
                   <tr>
-                    <td style="width: 20%"></td>
-                    <td style="width: 50%">
+                    <td class="border-b" style="width: 20%">#</td>
+                    <td class="border-b" style="width: 50%">
                       {{ $t('common.name') }}
                     </td>
-                    <td style="width: 20%">
+                    <td class="border-b" style="width: 20%">
                       {{ $t('common.total') }}
                     </td>
-                    <td style="width: 10%">
+                    <td class="border-b" style="width: 10%">
                       {{ $t('common.percentage') }}
                     </td>
                   </tr>
@@ -651,7 +643,7 @@ useSeoMeta({
                   />
                 </tbody>
               </v-table>
-            </v-card-text>
+            </v-sheet>
             <v-card-text v-else>
               {{ $t('common.noRecords') }}
             </v-card-text>

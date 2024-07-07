@@ -119,7 +119,6 @@
   "convene": {
     "import": {
       "title": "Import Convenes",
-      "alert": "After entering it for the first time, the data will be saved on your browser or synced to other devices if you use Cloud Sync. From next time, you just need to come back here and click enter history.",
       "success": "",
       "processing": "Processing",
       "invalidLink": "Invalid link, please check it again",
@@ -141,7 +140,6 @@
     },
     "history": {
       "title": "Convene History",
-      "alert": "Import and backup your Wuthering Waves convene history to keep it for more than 6 months. It also automatically tracks your pity and statistics about your convenes!",
       "pullByDay": "Pull by day",
       "totalPull": "Total Pull"
     },
@@ -173,7 +171,6 @@
     },
     "global": {
       "title": "Global Convene Stats",
-      "alert": "Global average pity from {0} users submissions.",
       "fiveStar": "5★ List",
       "fourStar": "4★ List",
       "median": "5★ Median",
@@ -362,6 +359,12 @@
       "title": "Desktop App",
       "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
       "download": "Download"
+    }
+  },
+  "account": {
+    "autoImport": {
+      "notificationTitle": "Importing history...",
+      "notificationMessage": "Fetching history for account {0}."
     }
   },
   "common": {

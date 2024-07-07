@@ -25,7 +25,7 @@
         },
         "name": {
           "type": "string",
-          "enum": ["Basic Attack","Resonance Skill"]
+          "enum": ["Basic Attack", "Resonance Skill"]
         },
         "nameLocalized": {
           "type": "object"

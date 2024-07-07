@@ -237,5 +237,17 @@
   ],
   "quote": "Wherever I go, I swear to vanquish evil, whether it's out in the daylight or hiding in the dark.",
   "birthday": "August 31st",
-  "birthplace": "Huanglong"
+  "birthplace": "Huanglong",
+  "quoteLocalized": {
+    "vi": "Dù đi đâu, tôi thề sẽ tiêu diệt cái ác, dù nó ẩn mình trong bóng tối hay hiện diện dưới ánh sáng ban ngày.",
+    "id": "Ke mana pun aku pergi, aku bersumpah untuk menghancurkan kejahatan, baik di siang hari maupun bersembunyi dalam kegelapan.",
+    "th": "Ke mana pun aku pergi, aku bersumpah untuk mengalahkan kejahatan, baik di siang hari maupun tersembunyi dalam kegelapan.",
+    "ru": "Куда бы я ни шел, клянусь, что истреблю зло, будь то под солнечным светом или скрывающееся в темноте."
+  },
+  "descriptionLocalized": {
+    "vi": "Trong tay cầm thanh kiếm máu đông cứng báo thù, Ranger Danjin săn lùng những kẻ trộm và cướp để trả thù. Cô ấy đi đến những vùng đất xa xôi để theo đuổi công lý.",
+    "id": "Dengan pedang darah kental yang haus balas dendam di tangan, Ranger Danjin memburu pencuri dan bandit untuk pembalasan.Dia melakukan perjalanan ke negeri jauh untuk mengejar keadilan.",
+    "th": "ด้วยดาบเลือดเข้มข้นในมือ รางเกอร์ ดันจิน ล่าโจรและโจรเพื่อการแก้แค้น เธอเดินทางไปยังดินแดนอันไกลโพ้นเพื่อตามหาความยุติธรรม.",
+    "ru": "С мечом мести из сгущенной крови в руке, Ранжер Даньцзин охотится на воров и бандитов, чтобы отомстить. Она путешествует по далеким землям в поисках справедливости."
+  }
 }

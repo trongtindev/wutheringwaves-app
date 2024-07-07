@@ -110,7 +110,6 @@
   "convene": {
     "import": {
       "title": "Nhập lịch sử triệu hồi",
-      "alert": "Sau khi nhập lần đầu tiên, dữ liệu sẽ được lưu lại trên trình duyệt của bạn hoặc đồng bộ các thiết bị khác nếu bạn có sử dụng Cloud Sync. Từ các lần sau, bạn chỉ cần quay lại đây và nhấn nhập lịch sử.",
       "success": "",
       "processing": "Đang xử lý",
       "invalidLink": "Invalid link, please check it again",
@@ -132,7 +131,6 @@
     },
     "history": {
       "title": "Lịch sử triệu hồi",
-      "alert": "Nhập và sao lưu lịch sử triệu hồi Wuthering Waves của bạn để lưu giữ nó trong hơn 6 tháng. Nó cũng tự động theo dõi pity và số liệu thống kê về các lần triệu hồi của bạn!",
       "pullByDay": "Pull by day",
       "totalPull": "Total Pull"
     },
@@ -164,7 +162,6 @@
     },
     "global": {
       "title": "Global Convene Stats",
-      "alert": "Global average pity from {0} users submissions.",
       "fiveStar": "5★ List",
       "fourStar": "4★ List",
       "median": "5★ Median",
@@ -334,6 +331,12 @@
       "download": "Download"
     }
   },
+  "account": {
+    "autoImport": {
+      "notificationTitle": "Đang nhập lịch sử...",
+      "notificationMessage": "Đang lấy dữ liệu cho {0}"
+    }
+  },
   "common": {
     "name": "Tên",
     "time": "Thời gian",
@@ -404,8 +407,8 @@
     "astrite": "Astrite",
     "beta": "Beta",
     "notice": "Notice",
-    "total": "Total",
-    "percentage": "Percentage",
+    "total": "Tổng",
+    "percentage": "Tỉ lệ",
     "summoned": "Đã về nhà",
     "hidden": "Ẩn",
     "manage": "Quản lý"
