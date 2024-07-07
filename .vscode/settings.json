@@ -45,6 +45,7 @@
     "pinia",
     "preinstall",
     "prerender",
+    "purgecss",
     "Regen",
     "rushstack",
     "rxdb",

@@ -29,9 +29,6 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     // initial account
     const playerId = response.data.playerId.toString();
     await account.upsert(playerId, response.data.serverId);
-    if (account.active != playerId) {
-      account.active = playerId;
-    }
 
     // save convene history url
     await account.setConveneHistoryUrl(url);
@@ -145,6 +142,10 @@ export const useImportConvene = defineStore('useImportConvene', () => {
       };
     });
     await db.characters.bulkUpsert(characterWrites);
+
+    return {
+      playerId
+    };
   };
 
   // exports

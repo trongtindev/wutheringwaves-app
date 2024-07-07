@@ -134,6 +134,9 @@ importers:
       chart.js:
         specifier: ^4.4.3
         version: 4.4.3
+      consola:
+        specifier: ^3.0.0
+        version: 3.2.3
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -170,6 +173,9 @@ importers:
       nuxt:
         specifier: ^3.12.3
         version: 3.12.3(@parcel/watcher@2.4.1)(@types/node@18.19.39)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.3(@types/node@18.19.39)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.26(typescript@5.5.3))
+      nuxt-better-optimize-deps:
+        specifier: ^0.1.0
+        version: 0.1.0(magicast@0.3.4)(rollup@4.18.0)
       nuxt-jsonld:
         specifier: ^2.0.8
         version: 2.0.8(typescript@5.5.3)
@@ -4562,6 +4568,9 @@ packages:
     resolution: {integrity: sha512-6vRdiXTw9SajEQOUi6Ze/XaIXzy1q/sD5UqHQSv3yqTu7Pot5S7fEihNXV8LpcgLz+9HzjVt70r7jYe7R99c2w==}
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
+
+  nuxt-better-optimize-deps@0.1.0:
+    resolution: {integrity: sha512-gSj2MmynzVi6KinWR1Hd0vr+FGGfLvSc88EE0qzCgoV03foTDPi1ZSdK5BWbPZqvj0xWWEfr9QRGxPnWEa7Uog==}
 
   nuxt-jsonld@2.0.8:
     resolution: {integrity: sha512-EnrEdh8q5TKqrY1ZaIU9xe9iqHc0bj/QR5b8BEO2ckWXIR6rHV+XxWMfdHMgGbo6fzrZTLTtlWUG2q0L7q45HQ==}
@@ -11454,6 +11463,14 @@ snapshots:
   nuxi@3.12.0:
     optionalDependencies:
       fsevents: 2.3.3
+
+  nuxt-better-optimize-deps@0.1.0(magicast@0.3.4)(rollup@4.18.0):
+    dependencies:
+      '@nuxt/kit': 3.12.3(magicast@0.3.4)(rollup@4.18.0)
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
 
   nuxt-jsonld@2.0.8(typescript@5.5.3):
     dependencies:

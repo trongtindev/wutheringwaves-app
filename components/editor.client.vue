@@ -24,29 +24,6 @@ import {
   mdiTableRowRemove
 } from '@mdi/js';
 import { Editor, EditorContent } from '@tiptap/vue-3';
-import Document from '@tiptap/extension-document';
-import Paragraph from '@tiptap/extension-paragraph';
-import Text from '@tiptap/extension-text';
-import Blockquote from '@tiptap/extension-blockquote';
-import CodeBlock from '@tiptap/extension-code-block';
-import Heading from '@tiptap/extension-heading';
-import Dropcursor from '@tiptap/extension-dropcursor';
-import Image from '@tiptap/extension-image';
-import ListItem from '@tiptap/extension-list-item';
-import BulletList from '@tiptap/extension-bullet-list';
-import OrderedList from '@tiptap/extension-ordered-list';
-import Table from '@tiptap/extension-table';
-import TableCell from '@tiptap/extension-table-cell';
-import TableHeader from '@tiptap/extension-table-header';
-import TableRow from '@tiptap/extension-table-row';
-import Youtube from '@tiptap/extension-youtube';
-import CharacterCount from '@tiptap/extension-character-count';
-import BubbleMenu from '@tiptap/extension-bubble-menu';
-import History from '@tiptap/extension-history';
-import Placeholder from '@tiptap/extension-placeholder';
-import Bold from '@tiptap/extension-bold';
-import Italic from '@tiptap/extension-italic';
-import TextAlign from '@tiptap/extension-text-align';
 
 // define
 const emits = defineEmits<{
@@ -61,7 +38,31 @@ const props = defineProps<{
 const editor = ref<Editor>();
 
 // lifecycle
-onMounted(() => {
+onMounted(async () => {
+  const { Document } = await import('@tiptap/extension-document');
+  const { Paragraph } = await import('@tiptap/extension-paragraph');
+  const { Text } = await import('@tiptap/extension-text');
+  const { Blockquote } = await import('@tiptap/extension-blockquote');
+  const { CodeBlock } = await import('@tiptap/extension-code-block');
+  const { Heading } = await import('@tiptap/extension-heading');
+  const { Dropcursor } = await import('@tiptap/extension-dropcursor');
+  const { Image } = await import('@tiptap/extension-image');
+  const { ListItem } = await import('@tiptap/extension-list-item');
+  const { BulletList } = await import('@tiptap/extension-bullet-list');
+  const { OrderedList } = await import('@tiptap/extension-ordered-list');
+  const { Table } = await import('@tiptap/extension-table');
+  const { TableCell } = await import('@tiptap/extension-table-cell');
+  const { TableHeader } = await import('@tiptap/extension-table-header');
+  const { TableRow } = await import('@tiptap/extension-table-row');
+  const { Youtube } = await import('@tiptap/extension-youtube');
+  const { CharacterCount } = await import('@tiptap/extension-character-count');
+  const { BubbleMenu } = await import('@tiptap/extension-bubble-menu');
+  const { History } = await import('@tiptap/extension-history');
+  const { Placeholder } = await import('@tiptap/extension-placeholder');
+  const { Bold } = await import('@tiptap/extension-bold');
+  const { Italic } = await import('@tiptap/extension-italic');
+  const { TextAlign } = await import('@tiptap/extension-text-align');
+
   editor.value = new Editor({
     extensions: [
       Document.configure({}),
@@ -378,7 +379,7 @@ onUnmounted(() => editor.value?.destroy());
       <v-divider class="mt-2 mb-2" />
 
       <!-- editor -->
-      <editor-content :editor="editor" />
+      <editor-content v-if="editor" :editor="editor" />
 
       <!-- <bubble-menu :editor="editor" :tippy-options="{ duration: 100 }">
         <div class="bubble-menu">

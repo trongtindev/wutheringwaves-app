@@ -33,19 +33,18 @@ export default defineNuxtConfig({
   $production: {},
   $development: {},
   modules: [
+    'nuxt-jsonld',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxt/eslint',
-    'nuxt-jsonld',
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    // dev
+    '@nuxt/eslint',
+    // optimization
+    'nuxt-better-optimize-deps'
   ],
-
-  build: {
-    transpile: ['vuetify']
-  },
 
   sitemap: {
     autoLastmod: true,
@@ -60,6 +59,8 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/tiptap.scss', '~/assets/vuetify.css'],
+
+  app: {},
 
   typescript: {
     strict: true
@@ -76,11 +77,19 @@ export default defineNuxtConfig({
   },
 
   sourcemap: {
-    server: true,
+    server: false,
     client: true
   },
 
-  devtools: { enabled: true },
+  devtools: {
+    enabled: false
+    // timeline: {
+    //   enabled: true
+    // }
+  },
+
+  telemetry: false,
+
   components: ['./components'],
 
   imports: {
@@ -106,6 +115,10 @@ export default defineNuxtConfig({
     storesDirs: ['./composables/**']
   },
 
+  build: {
+    transpile: ['vuetify']
+  },
+
   vite: {
     vue: {
       template: {
@@ -113,43 +126,19 @@ export default defineNuxtConfig({
       }
     },
     build: {
+      cssCodeSplit: true,
       terserOptions: {
         compress: {
           drop_console: false,
           keep_classnames: false
         }
-      },
-      rollupOptions: {
-        output: {
-          manualChunks: (id: string) => {
-            if (id.includes('vuetify')) {
-              return 'vuetify';
-            } else if (id.includes('axios')) {
-              return 'axios';
-            } else if (id.includes('mingo')) {
-              return 'mingo';
-            } else if (id.includes('sentry')) {
-              return 'sentry';
-            } else if (id.includes('rxdb')) {
-              return 'rxdb';
-            } else if (id.includes('rxjs')) {
-              return 'rxjs';
-            } else if (id.includes('@vueuse')) {
-              return 'vueuse';
-            } else if (id.includes('src/collections')) {
-              return 'collections';
-            } else if (id.includes('dayjs')) {
-              return 'dayjs';
-            } else if (id.includes('tiptap')) {
-              return 'tiptap';
-            } else if (id.includes('chartjs')) {
-              return 'chartjs';
-            } else if (id.includes('leaflet')) {
-              return 'leaflet';
-            }
-          }
-        }
       }
+      // rollupOptions: {
+      //   output: {
+      //     experimentalMinChunkSize: 250 * 1024,
+      //     manualChunks: (id: string) => {}
+      //   }
+      // }
     },
     plugins: [vuetify({ autoImport: true })]
     // server: {
@@ -198,6 +187,10 @@ export default defineNuxtConfig({
       // dayjs
       DAYJS_TIMEZONE: DAYJS_TIMEZONE
     }
+  },
+
+  experimental: {
+    viewTransition: true
   },
 
   compatibilityDate: '2024-07-05'

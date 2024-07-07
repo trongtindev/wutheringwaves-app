@@ -1,24 +1,7 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
 import { Bar } from 'vue-chartjs';
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale
-} from 'chart.js';
 import type { ConveneDocumentConverted } from '~/interfaces/convene';
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale
-);
 
 const props = defineProps<{
   convenes?: ConveneDocumentConverted[] | undefined;
@@ -31,6 +14,7 @@ const emits = defineEmits<{
 const i18n = useI18n();
 
 // states
+const chartInitialized = ref();
 const items = ref<ConveneDocumentConverted[]>(props.convenes || []);
 
 // computed
@@ -71,7 +55,29 @@ watch(
 );
 
 // lifecycle
-onNuxtReady(() => emits('on-updated'));
+onNuxtReady(async () => {
+  const {
+    Chart: ChartJS,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement,
+    CategoryScale,
+    LinearScale
+  } = await import('chart.js');
+
+  ChartJS.register(
+    Title,
+    Tooltip,
+    Legend,
+    BarElement,
+    CategoryScale,
+    LinearScale
+  );
+
+  chartInitialized.value = true;
+  setTimeout(() => emits('on-updated'), 500);
+});
 </script>
 
 <template>
@@ -83,6 +89,7 @@ onNuxtReady(() => emits('on-updated'));
 
     <v-card-text>
       <bar
+        v-if="chartInitialized"
         :options="{
           responsive: true
         }"

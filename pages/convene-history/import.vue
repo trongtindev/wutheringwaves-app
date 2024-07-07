@@ -23,7 +23,11 @@ const onImport = (url: string) => {
 
   importConvene
     .start(url)
-    .then(() => {
+    .then((result) => {
+      if (account.active != result.playerId) {
+        account.active = result.playerId;
+      }
+
       sidebar.setNotify('/characters', 1, 'resetOnVisit');
       router.push(localePath('/convene-history'));
     })
