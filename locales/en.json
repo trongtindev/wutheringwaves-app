@@ -122,7 +122,22 @@
       "success": "",
       "processing": "Processing",
       "invalidLink": "Invalid link, please check it again",
-      "guides": {},
+      "guides": {
+        "pc": {
+          "default": {
+            "1": {
+              "title": "Open Your In-game Convene History."
+            },
+            "2": {
+              "title": "Run the following command.",
+              "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
+            },
+            "3": {
+              "title": "Paste the Convene Record URL into the box below."
+            }
+          }
+        }
+      },
       "faqs": {
         "1": {
           "title": "What if I import many different accounts?",
@@ -441,6 +456,8 @@
     "percentage": "Percentage",
     "summoned": "Summoned",
     "hidden": "Hidden",
-    "manage": "Manage"
+    "manage": "Manage",
+    "next": "Next",
+    "previous": "Previous"
   }
 }

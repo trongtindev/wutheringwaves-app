@@ -8,19 +8,20 @@ const props = defineProps<{
 </script>
 
 <template>
-  <tr>
-    <td>
-      <v-avatar class="border" :image="props.data.icon" />
-    </td>
+  <div>
+    <v-list-item>
+      <template #prepend>
+        <v-avatar class="border" :image="props.data.icon" />
+      </template>
 
-    <td :class="`text-rarity${props.rarity}`">
-      {{ props.data.item }}
-    </td>
+      <v-list-item-title :class="`text-rarity${props.rarity}`">
+        {{ props.data.item }}
+      </v-list-item-title>
 
-    <td>
-      {{ formatNumber(props.data.total) }}
-    </td>
-
-    <td>{{ props.data.percentage }}%</td>
-  </tr>
+      <template #append>
+        {{ formatNumber(props.data.total) }} ({{ props.data.percentage }}%)
+      </template>
+    </v-list-item>
+    <v-progress-linear :model-value="props.data.percentage" class="mt-2" />
+  </div>
 </template>

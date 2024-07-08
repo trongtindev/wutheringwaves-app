@@ -22,6 +22,7 @@ const convenes = ref<ConveneDocument[]>();
 const guaranteedAt = ref(0);
 
 // computed
+
 const guaranteedAt4 = computed<number>(() => {
   if (!convenes.value) return 0;
   const last = convenes.value.findIndex((e) => e.qualityLevel >= 4);
@@ -39,11 +40,8 @@ const guaranteedAt5List = computed(() => {
   return convenes.value.filter((e) => e.qualityLevel >= 5);
 });
 
-const skipLuckWinRateOff = computed(() => {
-  return [
-    CardPoolType['standard-resonator'],
-    CardPoolType['standard-weapon']
-  ].includes(props.type);
+const showLuckWinRateOff = computed(() => {
+  return [CardPoolType['featured-resonator']].includes(props.type);
 });
 
 const luckWinRateOff = computed(() => {
@@ -130,7 +128,7 @@ if (import.meta.client) {
 
       <!-- luckWinRateOff -->
       <v-sheet
-        v-if="!skipLuckWinRateOff"
+        v-if="showLuckWinRateOff"
         class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2"
       >
         <v-list-item>
@@ -195,7 +193,7 @@ if (import.meta.client) {
     <v-divider v-if="guaranteedAt5List.length > 0" />
     <v-card-text
       v-if="guaranteedAt5List.length > 0"
-      class="pa-2 d-flex flex-wrap ga-2"
+      class="d-flex flex-wrap ga-2 justify-center"
     >
       <v-chip v-for="(element, index) in guaranteedAt5List" :key="index">
         <span>{{ $t(element.name) }}</span>

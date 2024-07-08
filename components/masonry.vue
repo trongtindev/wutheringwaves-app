@@ -7,7 +7,7 @@ const props = withDefaults(
   }>(),
   {
     gridGap: '0.5em',
-    colWidth: 'minmax(Min(20em, 100%), 1fr)'
+    colWidth: 'minmax(Min(22.5em, 100%), 1fr)'
   }
 );
 

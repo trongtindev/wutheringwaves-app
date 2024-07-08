@@ -107,7 +107,10 @@ export default defineNuxtConfig({
     },
     locales: [
       { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
-      { name: 'Vietnamese', code: 'vi', iso: 'vi' }
+      { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
+      { name: '한국어', code: 'ko', iso: 'ko' },
+      { name: '日本語', code: 'ja', iso: 'ja' },
+      { name: 'ภาษาไทย', code: 'th', iso: 'th' }
     ]
   },
 
@@ -190,7 +193,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    viewTransition: true
+    // viewTransition: true
   },
 
   compatibilityDate: '2024-07-05'

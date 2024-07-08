@@ -195,7 +195,7 @@ useSeoMeta({
                           : 'text-green'
                       "
                     >
-                      RC{{ owned[element.name].resonanceChain }}
+                      S{{ owned[element.name].resonanceChain }}
                     </span>
                   </v-sheet>
                 </v-img>

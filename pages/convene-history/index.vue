@@ -17,7 +17,7 @@ const banners = await resources.banners();
 const convenes = ref<ConveneDocumentConverted[]>([]);
 const filterBanner = ref<IBanner | null>(null);
 const filterRarity = ref<number[]>([5, 4]);
-const displayType = ref<'list' | 'grid'>('list');
+const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);
 
 // functions
@@ -124,23 +124,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       ]"
     />
 
-    <!-- page -->
-    <page-header>
-      <template #actions>
-        <v-btn-toggle v-model="displayType" color="primary" variant="outlined">
-          <v-btn :icon="mdiViewList" value="list" />
-          <v-btn :icon="mdiGrid" value="grid" />
-        </v-btn-toggle>
-
-        <v-btn
-          :prepend-icon="mdiImport"
-          :text="$t('common.import')"
-          :to="localePath('/convene-history/import')"
-        />
-      </template>
-    </page-header>
-    <!-- actions -->
-
     <v-card>
       <v-card-text>
         <div class="mb-2">
@@ -178,20 +161,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             class="border rounded"
             :items="displayConvenes"
             :headers="[
-              {
-                title: $t('Time'),
-                width: '20%'
-              },
-              { title: $t('Pity'), width: '10%' },
-              { title: $t('Name'), width: '30%' },
-              {
-                title: $t('Type'),
-                key: 'resourceType'
-              },
-              {
-                title: $t('Rarity'),
-                key: 'rarity'
-              }
+              { title: $t('Time'), width: '30%' },
+              { title: $t('Name'), width: '40%' },
+              { title: $t('Pity'), width: '15%' },
+              { title: $t('Rarity'), width: '15%' }
             ]"
             item-value="key"
           >
@@ -199,18 +172,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
               <tr :class="`bg-linear-rarity${item.qualityLevel}`">
                 <td>
                   {{ item.time }}
-                </td>
-
-                <td>
-                  <span
-                    v-if="item.qualityLevel >= 4"
-                    :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
-                  >
-                    {{ item.pity }}
-                  </span>
-                  <span v-else>
-                    {{ item.pity }}
-                  </span>
                 </td>
 
                 <td class="d-flex align-center">
@@ -228,8 +189,15 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                 </td>
 
                 <td>
-                  [{{ item.cardPoolType }}]
-                  {{ $t(item.resourceType) }}
+                  <span
+                    v-if="item.qualityLevel >= 4"
+                    :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
+                  >
+                    {{ item.pity }}
+                  </span>
+                  <span v-else>
+                    {{ item.pity }}
+                  </span>
                 </td>
 
                 <td>
@@ -267,6 +235,8 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     <div class="mt-2">
       <masonry>
         <template #default="masonry">
+          <convene-history-rank-summary />
+
           <convene-history-banner-summary
             :title="$t('Featured resonator')"
             :type="CardPoolType['featured-resonator']"
@@ -290,8 +260,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             :type="CardPoolType['standard-weapon']"
             @on-updated="() => masonry.refreshLayout()"
           />
-
-          <convene-history-rank-summary />
 
           <lazy-convene-history-chart-summary
             :convenes="convenes"

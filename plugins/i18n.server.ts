@@ -5,7 +5,7 @@ import { exec } from 'child_process';
 // states
 let listener: fs.FSWatcher;
 let mergeQueued: NodeJS.Timeout;
-const locales = ['vi']; // exclude 'en'
+const locales = ['vi', 'ko', 'ja', 'th']; // exclude 'en'
 const destination = './locales';
 
 // functions

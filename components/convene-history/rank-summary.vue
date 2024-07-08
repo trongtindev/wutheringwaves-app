@@ -1,3 +1,72 @@
+<script setup lang="ts">
+import type { IListResponse } from '~/interfaces/api';
+import { CardPoolType } from '~/interfaces/banner';
+import type { IBannerSummary } from '~/interfaces/convene';
+
+// define
+// const props = defineProps<{}>();
+
+// uses
+const api = useApi();
+
+// states
+const banners = ref<IBannerSummary[]>([]);
+const luckinessFiveStar = ref(0);
+const luckinessFourStar = ref(0);
+
+// functions
+const calculatorLuckiness = (types: CardPoolType[], rarity: number) => {
+  const matchBanners = banners.value
+    .filter((e) => {
+      return types.includes(e.cardPoolType);
+    })
+    .flatMap((e) => {
+      if (rarity >= 5) {
+        return e.fiveStarWinRate;
+      }
+      return e.fourStarWinRate;
+    });
+  const totalPlayers = matchBanners.reduce((previous, e) => {
+    return previous + e[1];
+  }, 0);
+  const expectedValue =
+    matchBanners.reduce((previous, e) => {
+      return previous + e[0] * e[1];
+    }, 0) / totalPlayers;
+  const luckierComparison = matchBanners.map((e) => {
+    const difference = e[0] - expectedValue;
+    return { rate: e[0], difference, count: e[1] };
+  });
+
+  console.log({ totalPlayers, expectedValue, luckierComparison });
+};
+
+// lifecycle
+onNuxtReady(() => {
+  api
+    .getInstance()
+    .get<IListResponse<IBannerSummary>>('/convenes/summary')
+    .then((result) => {
+      banners.value = result.data.items;
+
+      calculatorLuckiness(
+        [
+          CardPoolType['featured-resonator'],
+          CardPoolType['standard-resonator']
+        ],
+        4
+      );
+      calculatorLuckiness(
+        [
+          CardPoolType['featured-resonator'],
+          CardPoolType['standard-resonator']
+        ],
+        5
+      );
+    });
+});
+</script>
+
 <template>
   <v-card>
     <v-card-title>
@@ -22,7 +91,9 @@
               <div class="mr-2">
                 {{ $t('convene.rank.top') }}
               </div>
-              <div class="text-h6 font-weight-bold">0%</div>
+              <div class="text-h6 font-weight-bold">
+                {{ luckinessFiveStar }}%
+              </div>
             </div>
           </template>
         </v-list-item>
@@ -44,7 +115,9 @@
               <div class="mr-2">
                 {{ $t('convene.rank.top') }}
               </div>
-              <div class="text-h6 font-weight-bold">0%</div>
+              <div class="text-h6 font-weight-bold">
+                {{ luckinessFourStar }}%
+              </div>
             </div>
           </template>
         </v-list-item>

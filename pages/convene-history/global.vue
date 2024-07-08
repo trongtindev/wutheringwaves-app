@@ -535,42 +535,42 @@ useSeoMeta({
                 datasets: [
                   {
                     data: rcDatasets[0],
-                    label: 'RC0',
+                    label: 'S0',
                     backgroundColor: '#dddddd'
                   },
                   {
                     data: rcDatasets[1],
-                    label: 'RC1',
+                    label: 'S1',
                     backgroundColor: '#f24a72'
                   },
                   {
                     data: rcDatasets[2],
-                    label: 'RC2',
+                    label: 'S2',
                     backgroundColor: '#fdaf75'
                   },
                   {
                     data: rcDatasets[3],
-                    label: 'RC3',
+                    label: 'S3',
                     backgroundColor: '#eaea7f'
                   },
                   {
                     data: rcDatasets[4],
-                    label: 'RC4',
+                    label: 'S4',
                     backgroundColor: '#6cc4a1'
                   },
                   {
                     data: rcDatasets[5],
-                    label: 'RC5',
+                    label: 'S5',
                     backgroundColor: '#4d96ff'
                   },
                   {
                     data: rcDatasets[6],
-                    label: 'RC6',
+                    label: 'S6',
                     backgroundColor: '#ff6fb5'
                   },
                   {
                     data: rcDatasets[7],
-                    label: '> RC6',
+                    label: '> S6',
                     backgroundColor: '#ab46d2'
                   }
                 ]
@@ -579,7 +579,7 @@ useSeoMeta({
           </v-card-text>
         </v-card>
 
-        <v-row class="mt-2">
+        <v-row class="mt-1">
           <v-col cols="12" md="6">
             <v-card>
               <v-card-title class="text-rarity5">
@@ -588,31 +588,13 @@ useSeoMeta({
               <v-divider />
 
               <v-sheet v-if="fourStarList">
-                <v-table>
-                  <thead>
-                    <tr>
-                      <td class="border-b" style="width: 20%">#</td>
-                      <td class="border-b" style="width: 50%">
-                        {{ $t('common.name') }}
-                      </td>
-                      <td class="border-b" style="width: 20%">
-                        {{ $t('common.total') }}
-                      </td>
-                      <td class="border-b" style="width: 10%">
-                        {{ $t('common.percentage') }}
-                      </td>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <convene-history-global-list-item
-                      v-for="(element, index) of fiveStarList"
-                      :key="index"
-                      :data="element"
-                      :rarity="5"
-                    />
-                  </tbody>
-                </v-table>
+                <convene-history-global-list-item
+                  v-for="(element, index) of fiveStarList"
+                  :key="index"
+                  :data="element"
+                  :rarity="5"
+                  class="mt-2"
+                />
               </v-sheet>
               <v-card-text v-else>
                 {{ $t('common.noRecords') }}
@@ -628,31 +610,13 @@ useSeoMeta({
               <v-divider />
 
               <v-sheet v-if="fourStarList">
-                <v-table>
-                  <thead>
-                    <tr>
-                      <td class="border-b" style="width: 20%">#</td>
-                      <td class="border-b" style="width: 50%">
-                        {{ $t('common.name') }}
-                      </td>
-                      <td class="border-b" style="width: 20%">
-                        {{ $t('common.total') }}
-                      </td>
-                      <td class="border-b" style="width: 10%">
-                        {{ $t('common.percentage') }}
-                      </td>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <convene-history-global-list-item
-                      v-for="(element, index) of fourStarList"
-                      :key="index"
-                      :data="element"
-                      :rarity="4"
-                    />
-                  </tbody>
-                </v-table>
+                <convene-history-global-list-item
+                  v-for="(element, index) of fourStarList"
+                  :key="index"
+                  :data="element"
+                  :rarity="4"
+                  class="mt-2"
+                />
               </v-sheet>
               <v-card-text v-else>
                 {{ $t('common.noRecords') }}

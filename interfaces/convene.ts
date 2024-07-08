@@ -12,7 +12,7 @@ export interface IBannerSummaryListItem {
 
 export interface IBannerSummary {
   banner: string;
-
+  cardPoolType: number;
   totalPull: number;
   totalUsers: number;
   avgPity: {
@@ -25,7 +25,9 @@ export interface IBannerSummary {
   }[];
   pullByDay: { time: string; total: number }[];
   fiveStarList: IBannerSummaryListItem[];
+  fiveStarWinRate: number[];
   fourStarList: IBannerSummaryListItem[];
+  fourStarWinRate: number[];
 }
 
 export type ConveneDocumentConverted = ConveneDocType & {

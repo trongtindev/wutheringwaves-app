@@ -1,18 +1,11 @@
 <script setup lang="ts">
 import {
-  mdiGithub,
   mdiLogin,
-  mdiLogout,
-  mdiTranslate,
   mdiCogs,
-  mdiSwapVertical,
   mdiDatabaseSearch,
   mdiMenuClose,
   mdiMenuOpen,
-  mdiMenuDown,
   mdiThemeLightDark,
-  mdiAccountSwitch,
-  mdiChevronRight,
   mdiAccountConvert
 } from '@mdi/js';
 import { useTheme } from 'vuetify';
@@ -139,14 +132,21 @@ watch(
             <template #activator="{ props }">
               <v-list-item
                 rounded
-                :append-icon="mdiTranslate"
                 :title="$t('common.language')"
                 v-bind="props"
-              />
+              >
+                <template #append>
+                  <v-avatar
+                    class="border"
+                    :size="24"
+                    :image="`/locales/${i18n.locale.value}.svg`"
+                  />
+                </template>
+              </v-list-item>
             </template>
 
             <v-sheet class="border rounded">
-              <v-list>
+              <v-list density="compact">
                 <v-list-item
                   v-for="(element, index) in locales"
                   :key="index"
@@ -155,6 +155,14 @@ watch(
                   :to="switchLocalePath(element.code)"
                 >
                   <v-list-item-title>{{ element.name }}</v-list-item-title>
+
+                  <template #append>
+                    <v-avatar
+                      class="border"
+                      :size="24"
+                      :image="`/locales/${element.code}.svg`"
+                    />
+                  </template>
                 </v-list-item>
               </v-list>
             </v-sheet>
