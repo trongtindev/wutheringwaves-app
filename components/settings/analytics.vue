@@ -19,7 +19,7 @@ const analytics = useAnalytics();
           :subtitle="$t('settings.analytics.optOutSubtitle')"
         >
           <template #append>
-            <v-switch v-model="analytics.optOut" />
+            <v-switch v-model="analytics.optOut" :hide-details="true" />
           </template>
         </v-list-item>
       </v-list>

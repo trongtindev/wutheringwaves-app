@@ -171,19 +171,21 @@ useSeoMeta({
                 >
                   <v-sheet
                     style="left: 5px; top: 5px; position: absolute"
-                    class="pa-1 d-flex op-90"
-                    :class="
-                      owned && owned[element.name]
-                        ? 'rounded-xl'
-                        : 'rounded-circle'
-                    "
+                    class="pa-1 d-flex op-90 align-center rounded-xl"
                   >
                     <v-img
+                      v-if="element.attribute"
                       class="bg-grey-darken-3 rounded-circle"
                       :width="18"
                       :height="18"
                       :src="`/attributes/icons/${element.attribute.toLowerCase()}.png`"
                       :alt="element.attribute"
+                    />
+                    <v-sheet
+                      v-else
+                      :width="18"
+                      class="bg-grey-darken-3 rounded-circle"
+                      :height="18"
                     />
 
                     <span
@@ -196,6 +198,13 @@ useSeoMeta({
                       "
                     >
                       S{{ owned[element.name].resonanceChain }}
+                    </span>
+
+                    <span
+                      v-if="element.upcoming"
+                      class="font-weight-bold ml-1 pr-1"
+                    >
+                      {{ $t('common.upcoming') }}
                     </span>
                   </v-sheet>
                 </v-img>

@@ -328,7 +328,7 @@
     "markAsFound": "Mark as Found",
     "markerLimit": "Some markers have been hidden to improve performance."
   },
-  "guides": { "title": "Game Guides" },
+  "guides": { "title": "Game Guides", "create": { "title": "Add new post" } },
   "search": {
     "title": "Global Search",
     "alert": "Bạn có thể tìm kiếm tất cả mọi thứ có trên Astrite.app.",
@@ -347,6 +347,11 @@
       "notificationTitle": "Đang nhập lịch sử...",
       "notificationMessage": "Đang lấy dữ liệu cho {0}"
     }
+  },
+  "posts": {
+    "featuredImage": "Featured image",
+    "discussion": "Discussion",
+    "allowComments": "Allow comments"
   },
   "common": {
     "name": "Tên",
@@ -424,6 +429,10 @@
     "hidden": "Ẩn",
     "manage": "Quản lý",
     "next": "Tiếp",
-    "previous": "Trước"
+    "previous": "Trước",
+    "categories": "Categories",
+    "publish": "Publish",
+    "saveDraft": "Save draft",
+    "localization": "Localization"
   }
 }

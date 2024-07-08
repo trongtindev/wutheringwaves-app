@@ -361,7 +361,10 @@
     "markerLimit": "Some markers have been hidden to improve performance."
   },
   "guides": {
-    "title": "Game Guides"
+    "title": "Game Guides",
+    "create": {
+      "title": "Add new post"
+    }
   },
   "search": {
     "title": "Global Search",
@@ -381,6 +384,11 @@
       "notificationTitle": "Importing history...",
       "notificationMessage": "Fetching history for account {0}."
     }
+  },
+  "posts": {
+    "featuredImage": "Featured image",
+    "discussion": "Discussion",
+    "allowComments": "Allow comments"
   },
   "common": {
     "name": "Name",
@@ -458,6 +466,10 @@
     "hidden": "Hidden",
     "manage": "Manage",
     "next": "Next",
-    "previous": "Previous"
+    "previous": "Previous",
+    "categories": "Categories",
+    "publish": "Publish",
+    "saveDraft": "Save draft",
+    "localization": "Localization"
   }
 }

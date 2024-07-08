@@ -142,5 +142,26 @@
     "rarity": 4,
     "attribute": "Havoc",
     "weapon": "Sword"
+  },
+  {
+    "id": -1,
+    "slug": "xiangli-yao",
+    "name": "Xiangli Yao",
+    "rarity": 5,
+    "upcoming": true
+  },
+  {
+    "id": -1,
+    "slug": "zhezhi",
+    "name": "Zhezhi",
+    "rarity": 5,
+    "upcoming": true
+  },
+  {
+    "id": -1,
+    "slug": "camellya",
+    "name": "Camellya",
+    "rarity": 5,
+    "upcoming": true
   }
 ]

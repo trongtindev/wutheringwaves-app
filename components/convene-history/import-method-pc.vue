@@ -128,6 +128,7 @@ onMounted(() => {
             :readonly="true"
             :value="powershellScript"
             :max-width="500"
+            :hide-details="true"
           >
             <template #append-inner>
               <v-btn

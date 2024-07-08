@@ -16,12 +16,15 @@ const items = [
     rarity: 5,
     weapon: 'Sword',
     attribute: 'Havoc'
+  },
+  {
+    slug: 'rover-electro',
+    name: 'Rover (Electro)',
+    rarity: 5,
+    weapon: 'Sword',
+    attribute: 'Electro',
+    upcoming: true
   }
-].map((e) => {
-  return {
-    ...e,
-    attribute: e.attribute || 'Spectro'
-  };
-}) as ICharacter[];
+] as ICharacter[];
 
 export default items.sort((a, b) => a.name.localeCompare(b.name));

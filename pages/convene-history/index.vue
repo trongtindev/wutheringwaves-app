@@ -16,7 +16,7 @@ const account = useAccount();
 const banners = await resources.banners();
 const convenes = ref<ConveneDocumentConverted[]>([]);
 const filterBanner = ref<IBanner | null>(null);
-const filterRarity = ref<number[]>([5, 4]);
+const filterRarity = ref<number[]>([5]);
 const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);
 
@@ -156,7 +156,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           :text="$t('You currently have no Convene History.')"
         />
 
-        <div v-else-if="displayType === 'list'" ref="exportElement">
+        <div v-else-if="displayType === 'list'">
           <v-data-table
             class="border rounded"
             :items="displayConvenes"
@@ -209,7 +209,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         </div>
 
         <!-- grid -->
-        <div v-else ref="gridElement" class="d-flex flex-wrap justify-center">
+        <div v-else class="d-flex flex-wrap justify-center">
           <div
             v-for="(element, index) in displayConvenes"
             :key="index"
@@ -235,7 +235,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     <div class="mt-2">
       <masonry>
         <template #default="masonry">
-          <convene-history-rank-summary />
+          <convene-history-rank-summary
+            :convenes="convenes"
+            @on-updated="() => masonry.refreshLayout()"
+          />
 
           <convene-history-banner-summary
             :title="$t('Featured resonator')"

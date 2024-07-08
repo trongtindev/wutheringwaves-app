@@ -21,9 +21,9 @@ export interface ICharacter {
   slug: string;
   name: string;
   nameLocalized?: ILocalized;
-  attribute: CharacterAttribute;
-  weapon: WeaponType;
-  rarity: number;
+  attribute?: CharacterAttribute;
+  weapon?: WeaponType;
+  rarity?: number;
   upcoming?: boolean;
 }
 
@@ -54,24 +54,24 @@ export interface ICharacterRCData {
 }
 
 export interface ICharacterData {
-  description: string;
+  description?: string;
   descriptionLocalized?: ILocalized;
-  skills: ICharacterSkillData[];
-  resonanceChain: ICharacterRCData[];
-  stats: {
+  skills?: ICharacterSkillData[];
+  resonanceChain?: ICharacterRCData[];
+  stats?: {
     hp: number;
     atk: number;
     def: number;
     energy: number;
   };
-  ascensions: {
+  ascensions?: {
     cost: {
       item: number;
       quantity: number;
     }[];
     minLevel: number;
   }[];
-  forte: {
+  forte?: {
     cost: {
       name: string;
       nameLocalized?: ILocalized;
@@ -80,8 +80,8 @@ export interface ICharacterData {
     icon: string;
     name: string;
   }[];
-  quote: string;
+  quote?: string;
   quoteLocalized?: ILocalized;
-  birthday: string;
-  birthplace: string;
+  birthday?: string;
+  birthplace?: string;
 }

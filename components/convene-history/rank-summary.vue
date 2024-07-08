@@ -1,68 +1,70 @@
 <script setup lang="ts">
-import type { IListResponse } from '~/interfaces/api';
+import type { ConveneDocType } from '~/collections/convene';
 import { CardPoolType } from '~/interfaces/banner';
 import type { IBannerSummary } from '~/interfaces/convene';
 
 // define
-// const props = defineProps<{}>();
+const props = defineProps<{
+  convenes: ConveneDocType[];
+}>();
+const emits = defineEmits<{
+  (e: 'on-updated'): void;
+}>();
 
 // uses
 const api = useApi();
 
 // states
 const banners = ref<IBannerSummary[]>([]);
+const pullData = ref<number[][]>([]);
+const luckinessData = ref<number[][]>([]);
 const luckinessFiveStar = ref(0);
 const luckinessFourStar = ref(0);
+const totalPullPercentage = ref(0);
 
 // functions
-const calculatorLuckiness = (types: CardPoolType[], rarity: number) => {
-  const matchBanners = banners.value
-    .filter((e) => {
-      return types.includes(e.cardPoolType);
-    })
-    .flatMap((e) => {
-      if (rarity >= 5) {
-        return e.fiveStarWinRate;
-      }
-      return e.fourStarWinRate;
-    });
-  const totalPlayers = matchBanners.reduce((previous, e) => {
-    return previous + e[1];
-  }, 0);
-  const expectedValue =
-    matchBanners.reduce((previous, e) => {
-      return previous + e[0] * e[1];
-    }, 0) / totalPlayers;
-  const luckierComparison = matchBanners.map((e) => {
-    const difference = e[0] - expectedValue;
-    return { rate: e[0], difference, count: e[1] };
-  });
+const calculatorPulls = () => {
+  let totalPlayers = 0;
+  let playersWithFewerPulls = 0;
+  const currentPulls = props.convenes.length;
 
-  console.log({ totalPlayers, expectedValue, luckierComparison });
+  for (const data of pullData.value) {
+    totalPlayers += data[1];
+    if (data[0] < currentPulls) {
+      playersWithFewerPulls += data[1];
+    }
+  }
+
+  totalPullPercentage.value = (playersWithFewerPulls / totalPlayers) * 100;
+  console.debug({ totalPlayers, currentPulls });
 };
+
+const calculatorLuckiness = () => {};
+
+// changes
+watch(
+  () => props.convenes,
+  () => calculatorPulls()
+);
 
 // lifecycle
 onNuxtReady(() => {
   api
     .getInstance()
-    .get<IListResponse<IBannerSummary>>('/convenes/summary')
+    .get<{
+      items: IBannerSummary[];
+      pullData: number[][];
+      luckinessData: number[][];
+    }>('/convenes/summary')
     .then((result) => {
       banners.value = result.data.items;
+      pullData.value = result.data.pullData;
+      luckinessData.value = result.data.luckinessData;
 
-      calculatorLuckiness(
-        [
-          CardPoolType['featured-resonator'],
-          CardPoolType['standard-resonator']
-        ],
-        4
-      );
-      calculatorLuckiness(
-        [
-          CardPoolType['featured-resonator'],
-          CardPoolType['standard-resonator']
-        ],
-        5
-      );
+      calculatorPulls();
+      calculatorLuckiness();
+
+      emits('on-updated');
     });
 });
 </script>
@@ -83,16 +85,24 @@ onNuxtReady(() => {
           </v-list-item-title>
 
           <v-list-item-subtitle>
-            {{ $t('convene.rank.more', { percentage: 0 }) }}
+            {{
+              $t('convene.rank.more', {
+                percentage: formatNumber(totalPullPercentage)
+              })
+            }}
           </v-list-item-subtitle>
 
           <template #append>
             <div class="d-flex align-center">
               <div class="mr-2">
-                {{ $t('convene.rank.top') }}
+                {{
+                  totalPullPercentage < 50
+                    ? $t('convene.rank.bottom')
+                    : $t('convene.rank.top')
+                }}
               </div>
               <div class="text-h6 font-weight-bold">
-                {{ luckinessFiveStar }}%
+                {{ formatNumber(100 - totalPullPercentage) }}%
               </div>
             </div>
           </template>
@@ -167,16 +177,5 @@ onNuxtReady(() => {
         </v-list-item>
       </v-sheet>
     </v-card-text>
-    <v-divider />
-
-    <v-card-actions class="d-flex align-center justify-center">
-      <div class="d-flex align-center flex-column">
-        <v-btn-toggle variant="outlined" divided>
-          <v-btn :text="$t('Resonator')" />
-          <v-btn :text="$t('Weapon')" />
-          <v-btn :text="$t('Standard')" />
-        </v-btn-toggle>
-      </div>
-    </v-card-actions>
   </v-card>
 </template>

@@ -37,6 +37,7 @@ const { isIos } = useDevice();
             <v-switch
               v-model="notification.enabled"
               :disabled="!notification.isSupported"
+              :hide-details="true"
             />
           </template>
         </v-list-item>

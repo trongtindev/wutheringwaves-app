@@ -53,8 +53,7 @@
     "slug": "ages-of-harvest",
     "name": "Ages of Harvest",
     "type": "Broadblade",
-    "rarity": 5,
-    "upcoming": true
+    "rarity": 5
   },
   {
     "id": 21010034,
@@ -138,8 +137,7 @@
     "slug": "blazing-brilliance",
     "name": "Blazing Brilliance",
     "type": "Sword",
-    "rarity": 5,
-    "upcoming": true
+    "rarity": 5
   },
   {
     "id": 21020023,

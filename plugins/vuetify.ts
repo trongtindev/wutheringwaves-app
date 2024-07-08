@@ -23,9 +23,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       sets: { mdi }
     },
     defaults: {
-      global: {
-        hideDetails: true
-      },
+      global: {},
       VSelect: {
         variant: 'outlined',
         itemValue: 'value',

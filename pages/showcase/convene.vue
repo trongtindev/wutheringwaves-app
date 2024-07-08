@@ -370,14 +370,20 @@ onMounted(initialize);
     <v-expand-transition v-if="showOptions">
       <v-card class="mt-4">
         <v-card-text class="ml-4 mr-4">
-          <v-switch v-model="showUID" :label="$t('showcase.convene.showUID')" />
+          <v-switch
+            v-model="showUID"
+            :label="$t('showcase.convene.showUID')"
+            :hide-details="true"
+          />
           <v-switch
             v-model="show4Star"
             :label="$t('showcase.convene.show4Star')"
+            :hide-details="true"
           />
           <v-switch
             v-model="show5Star"
             :label="$t('showcase.convene.show5Star')"
+            :hide-details="true"
           />
         </v-card-text>
         <v-divider />

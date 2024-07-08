@@ -41,7 +41,7 @@ useSeoMeta({
         <v-btn
           :to="localePath('/guides/create')"
           :prepend-icon="mdiPlus"
-          :text="$t('guides.create.button')"
+          :text="$t('guides.create.title')"
         />
       </template>
     </page-header>

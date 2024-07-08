@@ -380,6 +380,9 @@ onUnmounted(() => editor.value?.destroy());
 
       <!-- editor -->
       <editor-content v-if="editor" :editor="editor" />
+      <div v-else class="text-center">
+        <v-progress-circular :indeterminate="true" />
+      </div>
 
       <!-- <bubble-menu :editor="editor" :tippy-options="{ duration: 100 }">
         <div class="bubble-menu">

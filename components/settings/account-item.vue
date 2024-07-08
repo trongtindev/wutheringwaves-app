@@ -49,7 +49,7 @@ watch(
       :subtitle="$t('settings.accounts.autoImportConveneHistorySubtitle')"
     >
       <template #append>
-        <v-switch v-model="autoImport" />
+        <v-switch v-model="autoImport" :hide-details="true" />
       </template>
     </v-list-item>
   </div>

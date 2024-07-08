@@ -55,12 +55,14 @@ const descriptionLocalized = computed(() => {
 
 // lifecycle
 onMounted(() => {
-  data.ascensions.forEach((e) => {
-    e.cost.forEach((cost) => {
-      const item = items.find((item) => item.id === cost.item);
-      if (item) dictItems.value[cost.item] = item;
+  if (data.ascensions) {
+    data.ascensions.forEach((e) => {
+      e.cost.forEach((cost) => {
+        const item = items.find((item) => item.id === cost.item);
+        if (item) dictItems.value[cost.item] = item;
+      });
     });
-  });
+  }
 });
 
 // seo meta
@@ -110,6 +112,15 @@ useJsonld(() => ({
       ]"
     />
 
+    <!-- upcoming -->
+    <v-alert
+      v-if="item.upcoming"
+      color="warning"
+      class="mb-2"
+      :title="$t('common.upcomingContent')"
+      :text="$t('common.upcomingContentMessage')"
+    />
+
     <v-card>
       <card-title>
         <template #title>
@@ -139,12 +150,21 @@ useJsonld(() => ({
           <v-col cols="12" md="8">
             <div class="d-flex flex-wrap ga-2">
               <v-chip
+                v-if="data.birthplace"
                 :text="$t(data.birthplace)"
                 :prepend-icon="mdiMapMarker"
               />
-              <v-chip :text="data.birthday" :prepend-icon="mdiCake" />
-              <v-chip :text="$t(item.weapon)" :prepend-icon="weaponIcon" />
-              <v-chip :text="$t(item.attribute)" />
+              <v-chip
+                v-if="data.birthday"
+                :text="data.birthday"
+                :prepend-icon="mdiCake"
+              />
+              <v-chip
+                v-if="item.weapon"
+                :text="$t(item.weapon)"
+                :prepend-icon="weaponIcon"
+              />
+              <v-chip v-if="item.attribute" :text="$t(item.attribute)" />
             </div>
 
             <div
@@ -164,7 +184,7 @@ useJsonld(() => ({
     </v-card>
 
     <!-- Skills -->
-    <v-card class="mt-4">
+    <v-card v-if="data.skills" class="mt-4">
       <v-card-title>
         {{ $t('characters.skills') }}
       </v-card-title>
@@ -186,7 +206,7 @@ useJsonld(() => ({
     </v-card>
 
     <!-- Resonance Chain -->
-    <v-card class="mt-4">
+    <v-card v-if="data.resonanceChain" class="mt-4">
       <v-card-title>
         {{ $t('characters.resonanceChain') }}
       </v-card-title>
@@ -207,7 +227,7 @@ useJsonld(() => ({
     </v-card>
 
     <!-- Ascension Material -->
-    <v-card class="mt-4">
+    <v-card v-if="data.ascensions" class="mt-4">
       <v-card-title>
         {{ $t('common.ascensionMaterial') }}
       </v-card-title>

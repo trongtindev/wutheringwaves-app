@@ -195,7 +195,7 @@ useSeoMeta({
             <v-card class="mb-2">
               <v-list-item :title="$t('map.hideFoundMarkers')">
                 <template #append>
-                  <v-switch v-model="hideFound" />
+                  <v-switch v-model="hideFound" :hide-details="true" />
                 </template>
               </v-list-item>
             </v-card>
