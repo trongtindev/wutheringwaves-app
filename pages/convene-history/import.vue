@@ -104,20 +104,6 @@ if (device.isCrawler) throw createError({ statusCode: 404 });
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/convene-history',
-          title: i18n.t('convene.history.title')
-        },
-        {
-          to: '/convene-history/import',
-          title: i18n.t('common.import')
-        }
-      ]"
-    />
-
     <v-card>
       <client-only>
         <v-tabs v-model="method">

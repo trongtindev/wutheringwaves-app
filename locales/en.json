@@ -126,10 +126,10 @@
         "pc": {
           "default": {
             "1": {
-              "title": "Open Your In-game Convene History."
+              "title": "Open Wuthering Waves in this PC then open the convene history in the game and wait it to load."
             },
             "2": {
-              "title": "Run the following command.",
+              "title": "Press START on your keyboard, then search for Powershell",
               "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
             },
             "3": {

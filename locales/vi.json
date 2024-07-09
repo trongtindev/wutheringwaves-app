@@ -116,7 +116,9 @@
       "guides": {
         "pc": {
           "default": {
-            "1": { "title": "Mở lịch sử triệu hồi trong game." },
+            "1": {
+              "title": "Mở Wuthering Waves trên PC này và sau đó mở lịch sử triệu hồi trong game."
+            },
             "2": {
               "title": "Chạy đoạn mã bên dưới.",
               "content": "Mở {windowsPowerShell} sau đó dán đoạn mã bên dưới và chạy nó (Dán đường dẫn của game nếu được hỏi)."

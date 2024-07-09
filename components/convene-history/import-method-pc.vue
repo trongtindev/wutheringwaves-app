@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiOpenInNew, mdiImport, mdiContentCopy } from '@mdi/js';
+import { mdiOpenInNew, mdiImport, mdiContentCopy, mdiCheck } from '@mdi/js';
 
 const props = defineProps<{
   conveneHistoryUrl?: string;
@@ -10,16 +10,20 @@ const emits = defineEmits<{
 }>();
 
 // uses
-const app = useApp();
 const i18n = useI18n();
 const clipboard = useClipboard();
 const runtimeConfig = useRuntimeConfig();
 
 // states
 const url = ref<string>();
+const isCopied = ref(false);
 
 // events
 const onPressedCopyScript = () => {
+  isCopied.value = true;
+  setTimeout(() => {
+    isCopied.value = false;
+  }, 3000);
   clipboard.copy(powershellScript.value);
 };
 
@@ -54,7 +58,7 @@ const canImport = computed<boolean>(() => {
 });
 
 const powershellScript = computed(() => {
-  return `iwr -useb "${runtimeConfig.public.SITE_URL}/scripts/get-url.ps1" | iex`;
+  return `[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("${runtimeConfig.public.SITE_URL}/scripts/get-url.ps1")`;
 });
 
 // changes
@@ -128,17 +132,28 @@ onMounted(() => {
             :readonly="true"
             :value="powershellScript"
             :max-width="500"
-            :hide-details="true"
+            onclick="this.select()"
           >
             <template #append-inner>
               <v-btn
                 size="small"
                 variant="text"
-                :icon="mdiContentCopy"
+                :icon="isCopied ? mdiCheck : mdiContentCopy"
                 @click="onPressedCopyScript"
               />
             </template>
           </v-text-field>
+
+          <div>
+            You can review the script
+            <a
+              href="https://github.com/trongtindev/astrite-app/blob/main/public/scripts/get-url.ps1"
+              target="_blank"
+              class="font-weight-bold"
+            >
+              here
+            </a>
+          </div>
 
           <template #next="{ next }">
             <v-btn color="primary" :text="$t('common.next')" @click="next" />

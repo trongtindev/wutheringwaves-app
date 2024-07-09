@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     autoLastmod: true,
-    exclude: ['/settings'],
+    exclude: ['/settings', '/convene-history/import'],
     sources: [
       '/api/__sitemap__/characters',
       '/api/__sitemap__/echos',
