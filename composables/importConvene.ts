@@ -28,23 +28,20 @@ export const useImportConvene = defineStore('useImportConvene', () => {
 
     // initial account
     const playerId = response.data.playerId.toString();
-    await account.upsert(playerId, response.data.serverId);
-
-    // save convene history url
-    await account.setConveneHistoryUrl(url);
+    await account.upsert(playerId, response.data.serverId, url);
 
     // get database instance
     const db = await database.getInstance();
 
     // remove previous history
-    const items = await db.convenes
+    const conveneDeletes = await db.convenes
       .find({
         selector: {
           playerId
         }
       })
       .exec();
-    await db.convenes.bulkRemove(items.map((e) => e._id));
+    await db.convenes.bulkRemove(conveneDeletes.map((e) => e._id));
 
     // data calculator
     const banners = await resources.getBanners();
@@ -144,7 +141,8 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     await db.characters.bulkUpsert(characterWrites);
 
     return {
-      playerId
+      playerId,
+      changes: conveneWrites.length - conveneDeletes.length
     };
   };
 

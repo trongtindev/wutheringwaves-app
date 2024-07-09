@@ -9,6 +9,7 @@ const account = useAccount();
 const { isIos, isAndroid } = useDevice();
 const sidebar = useSidebar();
 const importConvene = useImportConvene();
+const device = useDevice();
 
 // states
 const state = ref<'' | 'import'>('');
@@ -82,12 +83,23 @@ const title = i18n.t('convene.import.title');
 const description = i18n.t('meta.convene.history.description');
 
 useApp().title = i18n.t('convene.import.title');
-useHead({ title });
+useHead({
+  title,
+  meta: [
+    {
+      name: 'robots',
+      content: 'noindex'
+    }
+  ]
+});
 useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description
 });
+
+// block crawler
+if (device.isCrawler) throw createError({ statusCode: 404 });
 </script>
 
 <template>

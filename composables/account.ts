@@ -10,7 +10,9 @@ export const useAccount = defineStore('useAccount', () => {
   const database = useDatabase();
   const notification = useNotification();
   const importConvene = useImportConvene();
-  // const conveneChangedDebounce = useDebounceFn()
+  const conveneChangedDebounce = useDebounceFn((playerId) => {
+    onConveneChanged.value = [playerId, randomId()];
+  }, 1500);
 
   // states
   const items = ref<any[]>([]);
@@ -36,23 +38,17 @@ export const useAccount = defineStore('useAccount', () => {
     if (items.value.length > 0) onSchedule();
   };
 
-  const upsert = async (playerId: string, serverId: string) => {
+  const upsert = async (
+    playerId: string,
+    serverId: string,
+    conveneHistoryUrl: string
+  ) => {
     const db = await database.getInstance();
-    const exists = await db.accounts
-      .findOne({
-        selector: { playerId }
-      })
-      .exec();
-    if (!exists) {
-      snackbar.show({
-        content: i18n.t('accounts.newAccountDetected')
-      });
-
-      await db.accounts.upsert({
-        playerId,
-        serverId
-      });
-    }
+    await db.accounts.upsert({
+      playerId,
+      serverId,
+      conveneHistoryUrl
+    });
   };
 
   const loadItems = async () => {
@@ -91,16 +87,6 @@ export const useAccount = defineStore('useAccount', () => {
     }
   };
 
-  const setConveneHistoryUrl = async (url: string, playerId?: string) => {
-    playerId ??= active.value;
-    const document = await getDocument(playerId);
-    await document?.update({
-      $set: {
-        conveneHistoryUrl: url
-      }
-    });
-  };
-
   // events
   const onSchedule = () => {
     items.value.forEach(async (account) => {
@@ -128,9 +114,9 @@ export const useAccount = defineStore('useAccount', () => {
       console.debug('autoImport', account.playerId, 'start');
       importConvene
         .start(account.conveneHistoryUrl)
-        .then(() => {
-          console.debug('autoImport', account.playerId, 'done');
-          onConveneChanged.value = [account.playerId, randomId()];
+        .then((result) => {
+          console.debug('autoImport', account.playerId, 'done', result);
+          conveneChangedDebounce(account.playerId);
         })
         .catch((error) => {
           console.error(error);
@@ -185,7 +171,6 @@ export const useAccount = defineStore('useAccount', () => {
     upsert,
     getDocument,
     getConveneHistoryUrl,
-    setConveneHistoryUrl,
     initialize
   };
 });

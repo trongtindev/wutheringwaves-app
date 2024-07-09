@@ -154,7 +154,7 @@
       "level": "Your Total Pulls Rank",
       "based": "Based on Global Convene Stats",
       "current": "Current {banner} median is {median} pulls",
-      "more": "Bạn có nhiều pull hơn {percentage}% người dùng astrite.app",
+      "more": "Bạn có nhiều lượt hơn {percentage}% người dùng astrite.app",
       "less": "Bạn có ít pull hơn {percentage}% người dùng astrite.app",
       "currentLuck": "Current {banner} median is {median}%",
       "totalPull": "Tổng số lần",

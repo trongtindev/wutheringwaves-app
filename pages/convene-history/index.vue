@@ -98,7 +98,10 @@ watch(() => filterRarity.value, updateFilter);
 
 // lifecycle
 onNuxtReady(() => initialize());
-watch(() => account.onConveneChanged, initialize);
+watch(
+  () => account.onConveneChanged,
+  () => initialize()
+);
 
 // seo meta
 const title = i18n.t('convene.history.title');
