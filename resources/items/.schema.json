@@ -1,33 +1,25 @@
 {
+  "publishedTime": "2024-06-29T12:47:08.442Z",
+  "modifiedTime": "2024-07-09T15:18:53.246Z",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://astrite.app/item.schema.json",
   "title": "Item",
   "description": "A item in the catalog",
   "type": "object",
   "properties": {
-    "description": {
-      "type": "string"
-    },
-    "descriptionLocalized": {
-      "type": "object"
-    },
-    "bgDescription": {
-      "type": "string"
-    },
+    "description": { "type": "string" },
+    "descriptionLocalized": { "type": "object" },
+    "bgDescription": { "type": "string" },
     "bgDescriptionLocalized": {
       "type": "object",
       "additionalProperties": { "type": "string" }
     },
-    "obtainDescription": {
-      "type": "string"
-    },
+    "obtainDescription": { "type": "string" },
     "obtainDescriptionLocalized": {
       "type": "object",
       "additionalProperties": { "type": "string" }
     },
-    "unlockDescription": {
-      "type": "string"
-    },
+    "unlockDescription": { "type": "string" },
     "unlockDescriptionLocalized": {
       "type": "object",
       "additionalProperties": { "type": "string" }
@@ -35,12 +27,8 @@
     "cookingIngredients": {
       "type": "array",
       "properties": {
-        "item": {
-          "type": "string"
-        },
-        "quantity": {
-          "type": "integer"
-        }
+        "item": { "type": "string" },
+        "quantity": { "type": "integer" }
       }
     }
   },

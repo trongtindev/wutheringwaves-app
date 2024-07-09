@@ -1,23 +1,13 @@
 {
+  "publishedTime": "2024-06-28T15:43:22.017Z",
+  "modifiedTime": "2024-07-09T15:18:54.323Z",
   "description": "Increase the ATK of all Resonators in the team by 135 points and 12% Crit. Rate for 30 minutes. In multiplayer games, it only affects your own characters.",
   "bgDescription": "One of the must-have dishes at the Huanglong New Year's feast. Because of its sour, sweet, and crispy taste, it is popular with children and is also known as \"Kid's Delight\" by the people. Perhaps the heartfelt smile of happiness on the children’s faces when they taste the sweetness of this dish is more satisfactory the dish itself.",
   "unlockDescription": "You need [\"item=Sweet & Sour Pork Recipe\"] to unlock it.",
   "cookingIngredients": [
-    {
-      "item": "Sweet and Sour Sauce",
-      "quantity": 1
-    },
-    {
-      "item": "Raw Meat",
-      "quantity": 4
-    },
-    {
-      "item": "Flour",
-      "quantity": 4
-    },
-    {
-      "item": "Premium Gold Incense Oil",
-      "quantity": 1
-    }
+    { "item": "Sweet and Sour Sauce", "quantity": 1 },
+    { "item": "Raw Meat", "quantity": 4 },
+    { "item": "Flour", "quantity": 4 },
+    { "item": "Premium Gold Incense Oil", "quantity": 1 }
   ]
 }

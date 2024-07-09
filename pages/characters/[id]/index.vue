@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { mdiPlus, mdiCake, mdiMapMarker, mdiSword, mdiPistol } from '@mdi/js';
 import type { IItem } from '~/interfaces/item';
-import fs from 'fs';
 
 const i18n = useI18n();
 const route = useRoute();
@@ -74,14 +73,6 @@ const description = i18n.t('meta.characters.id.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
 
-let articlePublishedTime: string | undefined = undefined;
-let articleModifiedTime: string | undefined = undefined;
-if (import.meta.server) {
-  const stats = fs.statSync(`./resources/characters/${item.slug}.json`);
-  articlePublishedTime = stats.birthtime.toISOString();
-  articleModifiedTime = stats.atime.toISOString();
-}
-
 useApp().title = i18n.t('characters.title');
 useHead({ title });
 useSeoMeta({
@@ -89,8 +80,8 @@ useSeoMeta({
   ogImage: ogImage,
   description,
   ogDescription: description,
-  articlePublishedTime: articlePublishedTime,
-  articleModifiedTime: articleModifiedTime
+  articlePublishedTime: data.publishedTime,
+  articleModifiedTime: data.modifiedTime
 });
 useJsonld(() => ({
   '@context': 'https://schema.org',

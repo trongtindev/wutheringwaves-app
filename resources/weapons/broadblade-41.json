@@ -1,4 +1,6 @@
 {
+  "publishedTime": "2024-06-28T15:43:22.050Z",
+  "modifiedTime": "2024-07-09T15:18:08.453Z",
   "slug": "broadblade-41",
   "skill": {
     "params": [
@@ -10,118 +12,56 @@
     ],
     "description": "When the Resonator's HP is above {0}, increases ATK by {1}. When the Resonator's HP is below {2}, restores their HP by {3} for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered {5} time(s) every {4}s."
   },
-  "stats": {
-    "atk": 33,
-    "energy": 720
-  },
+  "stats": { "atk": 33, "energy": 720 },
   "ascensions": [
     {
       "cost": [
-        {
-          "item": 41100011,
-          "quantity": 5
-        },
-        {
-          "item": 2,
-          "quantity": 8000
-        }
+        { "item": 41100011, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
       ],
       "minLevel": 20
     },
     {
       "cost": [
-        {
-          "item": 43020041,
-          "quantity": 5
-        },
-        {
-          "item": 41100012,
-          "quantity": 5
-        },
-        {
-          "item": 2,
-          "quantity": 16000
-        }
+        { "item": 43020041, "quantity": 5 },
+        { "item": 41100012, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
-        {
-          "item": 43020042,
-          "quantity": 7
-        },
-        {
-          "item": 41100013,
-          "quantity": 4
-        },
-        {
-          "item": 2,
-          "quantity": 32000
-        }
+        { "item": 43020042, "quantity": 7 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
-        {
-          "item": 43020043,
-          "quantity": 5
-        },
-        {
-          "item": 41100013,
-          "quantity": 5
-        },
-        {
-          "item": 2,
-          "quantity": 48000
-        }
+        { "item": 43020043, "quantity": 5 },
+        { "item": 41100013, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
-        {
-          "item": 43020044,
-          "quantity": 7
-        },
-        {
-          "item": 41100014,
-          "quantity": 4
-        },
-        {
-          "item": 2,
-          "quantity": 64000
-        }
+        { "item": 43020044, "quantity": 7 },
+        { "item": 41100014, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
-        {
-          "item": 43020044,
-          "quantity": 10
-        },
-        {
-          "item": 41100014,
-          "quantity": 7
-        },
-        {
-          "item": 2,
-          "quantity": 96000
-        }
+        { "item": 43020044, "quantity": 10 },
+        { "item": 41100014, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
       ],
       "minLevel": 80
     },
-    {
-      "cost": [
-        {
-          "item": 2,
-          "quantity": 0
-        }
-      ],
-      "minLevel": 90
-    }
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "Improved version of a mass-produced broadblade model developed in Huanglong. With its formidable performance and innovative technologies, this broadblade carries a weight only to be wielded by seasoned warriors.",
   "ranks": [

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import fs from 'fs';
-
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
@@ -57,14 +55,6 @@ const obtainDescriptionLocalized = computed(() => {
 // seo meta
 const ogImage = `${runtimeConfig.public.SITE_URL}/items/icons/${item.slug}.webp`;
 
-let articlePublishedTime: string | undefined = undefined;
-let articleModifiedTime: string | undefined = undefined;
-if (import.meta.server) {
-  const stats = fs.statSync(`./resources/items/${item.slug}.json`);
-  articlePublishedTime = stats.birthtime.toISOString();
-  articleModifiedTime = stats.atime.toISOString();
-}
-
 useApp().title = i18n.t('items.title');
 useHead({ title: title.value });
 useSeoMeta({
@@ -72,8 +62,8 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
-  articlePublishedTime: articlePublishedTime,
-  articleModifiedTime: articleModifiedTime
+  articlePublishedTime: data.publishedTime,
+  articleModifiedTime: data.modifiedTime
 });
 useJsonld({
   '@context': 'https://schema.org',

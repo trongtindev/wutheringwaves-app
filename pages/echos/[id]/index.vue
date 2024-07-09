@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import fs from 'fs';
-
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
@@ -35,14 +33,6 @@ const description = i18n.t('meta.echos.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.webp`;
 
-let articlePublishedTime: string | undefined = undefined;
-let articleModifiedTime: string | undefined = undefined;
-if (import.meta.server) {
-  const stats = fs.statSync(`./resources/echos/${item.slug}.json`);
-  articlePublishedTime = stats.birthtime.toISOString();
-  articleModifiedTime = stats.atime.toISOString();
-}
-
 useApp().title = i18n.t('echos.title');
 useHead({ title });
 useSeoMeta({
@@ -50,8 +40,8 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
-  articlePublishedTime: articlePublishedTime,
-  articleModifiedTime: articleModifiedTime
+  articlePublishedTime: data.publishedTime,
+  articleModifiedTime: data.modifiedTime
 });
 useJsonld({
   '@context': 'https://schema.org',
