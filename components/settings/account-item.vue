@@ -19,8 +19,15 @@ const autoImport = ref(props.data.autoImport);
 watch(
   () => autoImport.value,
   (value) => {
-    props.data.patch({
-      autoImport: value
+    database.getInstance().then((result) => {
+      result.accounts.updateOne(
+        {
+          playerId: props.data.playerId
+        },
+        {
+          autoImport: value
+        }
+      );
     });
   }
 );

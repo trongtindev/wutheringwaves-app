@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /assets
-Disallow: /settings
-Disallow: /donation
-
-Sitemap: https://astrite.app/sitemap.xml

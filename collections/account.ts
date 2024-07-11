@@ -1,4 +1,9 @@
-import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
+import type {
+  RxDocument,
+  RxCollection,
+  RxJsonSchema,
+  MangoQuerySelector
+} from 'rxdb';
 
 export type AccountDocType = {
   playerId: string;
@@ -18,6 +23,10 @@ export type AccountDocument = RxDocument<AccountDocType, AccountDocMethods>;
 
 export type AccountCollectionMethods = {
   countAllDocuments: () => Promise<number>;
+  updateOne: (
+    selector: MangoQuerySelector<AccountDocType>,
+    patch: Partial<AccountDocType>
+  ) => Promise<void>;
 };
 
 export type AccountCollection = RxCollection<
@@ -36,6 +45,18 @@ export const accountCollectionMethods: AccountCollectionMethods = {
   countAllDocuments: async function (this: AccountCollection) {
     const allDocs = await this.find().exec();
     return allDocs.length;
+  },
+  updateOne: async function (
+    this: AccountCollection,
+    selector: MangoQuerySelector<AccountDocType>,
+    patch: Partial<AccountDocType>
+  ) {
+    const doc = await this.findOne({
+      selector
+    }).exec();
+    if (doc) {
+      await doc.patch(patch);
+    }
   }
 };
 

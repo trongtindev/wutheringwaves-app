@@ -40,15 +40,41 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
     '@nuxtjs/device',
+    'nuxt-simple-robots',
     // dev
     '@nuxt/eslint',
     // optimization
-    'nuxt-better-optimize-deps'
+    'nuxt-better-optimize-deps',
+    '@nuxtjs/fontaine'
   ],
+
+  routeRules: {
+    '/': {
+      prerender: true
+    },
+    '/settings': {
+      robots: false
+    },
+    '/convene-history/import': {
+      robots: false
+    },
+    '/license': {
+      robots: false
+    },
+    '/donation': {
+      robots: false
+    }
+  },
 
   sitemap: {
     autoLastmod: true,
-    exclude: ['/settings', '/convene-history/import'],
+    exclude: [
+      '/settings',
+      '/convene-history/import',
+      '/privacy-policy',
+      '/license',
+      '/donation'
+    ],
     sources: [
       '/api/__sitemap__/characters',
       '/api/__sitemap__/echos',

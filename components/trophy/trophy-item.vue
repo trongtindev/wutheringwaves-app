@@ -60,7 +60,7 @@ watch(
         color="info"
       />
 
-      <v-checkbox v-model="checked" />
+      <v-checkbox v-model="checked" :hide-details="true" />
 
       <v-btn
         variant="text"

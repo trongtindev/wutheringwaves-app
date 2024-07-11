@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { mdiDownload } from '@mdi/js';
 import dayjs from 'dayjs';
-import { mkConfig, generateCsv, download } from 'export-to-csv';
 
 // define
 const emits = defineEmits<{
@@ -20,6 +19,9 @@ const state = ref<'' | 'export'>('');
 const startExports = async () => {
   try {
     state.value = 'export';
+
+    // load libs
+    const { mkConfig, generateCsv, download } = await import('export-to-csv');
 
     const db = await database.getInstance();
     const convenes = await db.convenes.find().exec();
