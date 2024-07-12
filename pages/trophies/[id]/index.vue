@@ -22,6 +22,7 @@ const ogImage = `${runtimeConfig.public.SITE_URL}/trophies/icons/${item.slug}.we
 useApp().title = i18n.t('trophies.title');
 useHead({ title });
 useSeoMeta({
+  ogType: 'article',
   ogTitle: title,
   description,
   ogDescription: description,
@@ -33,31 +34,30 @@ useJsonld({
   contentUrl: ogImage,
   license: `${runtimeConfig.public.SITE_URL}/license`,
   acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
-  creditText: 'Wuthering Waves',
+  creditText: 'Astrite.app',
   creator: {
     '@type': 'Organization',
     name: 'Wuthering Waves'
   },
   copyrightNotice: 'trongtindev'
 });
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: useRuntimeConfig().public.SITE_URL
+    },
+    { '@type': 'ListItem', position: 2, name: i18n.t('trophies.title') }
+  ]
+});
 </script>
 
 <template>
-  <div v-if="item">
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/trophies',
-          title: i18n.t('trophies.title')
-        },
-        {
-          to: `/trophies/${item.slug}`,
-          title: i18n.t(item.name)
-        }
-      ]"
-    />
-
+  <div>
     <v-card>
       <card-title>
         <template #title>

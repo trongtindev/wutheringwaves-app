@@ -13,6 +13,7 @@ const props = defineProps<{
 }>();
 
 const emits = defineEmits<{
+  (e: 'on-initialized', instance: Map): void;
   (e: 'on-drag', latLng: number[]): void;
   (e: 'on-pressed-marker', latLng: number[]): void;
 }>();
@@ -87,6 +88,7 @@ const initialize = async () => {
     emits('on-drag', [latLng.lat, latLng.lng]);
   });
 
+  emits('on-initialized', leaflet.value);
   renderMarkerDebounce();
 };
 

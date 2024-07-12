@@ -99,16 +99,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/characters',
-          title: i18n.t('characters.title')
-        }
-      ]"
-    />
-
     <!-- alert -->
     <alert id="characters" :text="$t('characters.alert')" />
 

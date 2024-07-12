@@ -58,6 +58,7 @@ const ogImage = `${runtimeConfig.public.SITE_URL}/items/icons/${item.slug}.webp`
 useApp().title = i18n.t('items.title');
 useHead({ title: title.value });
 useSeoMeta({
+  ogType: 'article',
   ogTitle: title.value,
   description,
   ogDescription: description,
@@ -71,31 +72,30 @@ useJsonld({
   contentUrl: ogImage,
   license: `${runtimeConfig.public.SITE_URL}/license`,
   acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
-  creditText: 'Wuthering Waves',
+  creditText: 'Astrite.app',
   creator: {
     '@type': 'Organization',
     name: 'Wuthering Waves'
   },
   copyrightNotice: 'trongtindev'
 });
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: useRuntimeConfig().public.SITE_URL
+    },
+    { '@type': 'ListItem', position: 2, name: i18n.t('items.title') }
+  ]
+});
 </script>
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/items',
-          title: i18n.t('items.title')
-        },
-        {
-          to: `/items/${item.slug}`,
-          title: i18n.t(item.name)
-        }
-      ]"
-    />
-
     <!-- page -->
     <v-card>
       <v-card-title>

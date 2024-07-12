@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import type { IMarker } from '~/interfaces/map';
 import { mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
-import type { MapOptions } from 'leaflet';
+import type { Map, MapOptions } from 'leaflet';
+import {
+  DesktopAppGameTypes,
+  type IDesktopAppActor
+} from '~/interfaces/desktopApp';
 
 // uses
 const app = useApp();
@@ -12,8 +16,12 @@ const router = useRouter();
 const sidebar = useSidebar();
 const database = useDatabase();
 const appConfig = useAppConfig();
+const desktopApp = useDesktopApp();
 
 // states
+const leaflet = ref<Map>();
+const player = ref<IDesktopAppActor>();
+const objects = ref<IDesktopAppActor[]>([]);
 const options: MapOptions = {
   zoom: 11,
   minZoom: 11,
@@ -32,6 +40,7 @@ const markers = ref<IMarker[]>();
 const selected = ref<IMarker>();
 const foundMarkers = ref<string[]>(null as any);
 const hideFound = ref(false);
+const inGameScaleFactor = ref(1000);
 
 // computed
 const urlTemplate = computed(() => {
@@ -124,9 +133,29 @@ const initialize = () => {
   });
 };
 
+// events
+watch(
+  () => player.value,
+  (value) => {
+    if (!value) return;
+    if (!leaflet.value) return;
+
+    const x = value.x;
+    const y = value.y;
+    console.log({ x, y });
+  }
+);
+
 // lifecycle
 onNuxtReady(() => {
   sidebar.open = false;
+
+  desktopApp.on<IDesktopAppActor>(DesktopAppGameTypes.playerInfo, (data) => {
+    player.value = data;
+  });
+  desktopApp.on<IDesktopAppActor[]>(DesktopAppGameTypes.objectList, (data) => {
+    objects.value = data;
+  });
 
   setTimeout(initialize, 1000);
 });
@@ -160,16 +189,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/map',
-          title: i18n.t('map.title')
-        }
-      ]"
-    />
-
     <!-- drawer -->
     <v-navigation-drawer v-model="drawer" :width="400">
       <!-- client only -->
@@ -231,6 +250,7 @@ useSeoMeta({
           v-if="foundMarkers"
           :markers="displayMarkers"
           :options="options"
+          @on-initialized="(val) => (leaflet = val)"
           @on-pressed-marker="(val) => onPressedMarker(val)"
         >
           <template #default="{ leaflet }">

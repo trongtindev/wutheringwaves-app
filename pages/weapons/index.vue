@@ -58,16 +58,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: 'weapons',
-          title: i18n.t('weapons.title')
-        }
-      ]"
-    />
-
     <!-- alert -->
     <!-- <alert id="weapons" :text="$t('weapons.alert')" /> -->
 

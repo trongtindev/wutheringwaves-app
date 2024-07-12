@@ -36,6 +36,7 @@ const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.webp`
 useApp().title = i18n.t('echos.title');
 useHead({ title });
 useSeoMeta({
+  ogType: 'article',
   ogTitle: title,
   description,
   ogDescription: description,
@@ -47,30 +48,29 @@ useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
   contentUrl: ogImage,
-  creditText: 'Wuthering Waves',
+  creditText: 'Astrite.app',
   creator: {
     '@type': 'Organization',
     name: 'Wuthering Waves'
   }
 });
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: useRuntimeConfig().public.SITE_URL
+    },
+    { '@type': 'ListItem', position: 2, name: i18n.t('echos.title') }
+  ]
+});
 </script>
 
 <template>
   <div v-if="item">
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/echos',
-          title: i18n.t('echos.title')
-        },
-        {
-          to: `/echos/${item.slug}`,
-          title: i18n.t(item.name)
-        }
-      ]"
-    />
-
     <v-card>
       <card-title>
         <template #title>

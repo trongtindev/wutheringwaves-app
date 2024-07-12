@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia';
+import { DesktopAppEventType } from '~/interfaces/desktopApp';
 import type { INotification } from '~/interfaces/notification';
 
 export const useNotification = defineStore('useNotification', () => {
   // uses
   const nuxtApp = useNuxtApp();
+  const desktopApp = useDesktopApp();
 
   // states
   const enabled = useCookie<boolean>('notification.enabled');
@@ -77,13 +79,23 @@ export const useNotification = defineStore('useNotification', () => {
   );
 
   // lifecycle
-  onMounted(() => {
-    if (!('Notification' in window)) return;
-    isPermissionGranted.value = Notification.permission == 'granted';
-    if (enabled.value && !isPermissionGranted.value) {
-      enabled.value = false;
-    }
-  });
+  if (import.meta.client) {
+    onMounted(() => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      desktopApp.on<any>(
+        DesktopAppEventType.notificationCreate,
+        (args, callback) => {
+          callback(create(args));
+        }
+      );
+
+      if (!('Notification' in window)) return;
+      isPermissionGranted.value = Notification.permission == 'granted';
+      if (enabled.value && !isPermissionGranted.value) {
+        enabled.value = false;
+      }
+    });
+  }
 
   // exports
   return {

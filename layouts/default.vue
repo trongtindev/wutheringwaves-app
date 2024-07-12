@@ -16,7 +16,6 @@ import DialogController from '../controllers/dialog.vue';
 import NotificationController from '../controllers/notification.vue';
 import SnackbarController from '../controllers/snackbar.vue';
 import SearchController from '../controllers/search.vue';
-import ElectronController from '../controllers/electron.vue';
 
 // uses
 const app = useApp();
@@ -330,7 +329,6 @@ watch(
         <DatabaseController />
         <SnackbarController />
         <SearchController />
-        <ElectronController />
       </client-only>
     </v-main>
   </v-app>

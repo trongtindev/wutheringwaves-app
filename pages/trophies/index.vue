@@ -118,16 +118,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/trophies',
-          title: i18n.t('trophies.title')
-        }
-      ]"
-    />
-
     <v-row>
       <v-col cols="12" md="4">
         <v-card>

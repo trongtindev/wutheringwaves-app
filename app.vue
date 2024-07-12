@@ -43,7 +43,7 @@ onMounted(() => {
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk
-      ? `${titleChunk} - ${i18n.t('meta.title')}`
+      ? `${titleChunk} | ${i18n.t('meta.title')}`
       : i18n.t('meta.title');
   },
   link: [
@@ -65,16 +65,22 @@ useHead({
       name: 'keywords',
       content:
         'astrite, astrite.app, wuthering, wuthering waves, kuro, pity tracker, wuwa tracker, pity counter, wuthering waves character, wuthering waves guide, wuthering waves tier list, wuthering waves trophy, wuthering waves item'
-    }
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {}
   ],
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang
   }
 });
-
 useSeoMeta({
   ogSiteName: 'Astrite.app',
   ogImage: `${runtimeConfig.public.SITE_URL}/cover.webp`,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ogImageType: 'image/webp' as any,
   ogType: 'website',
   description: i18n.t('meta.description'),
   ogDescription: i18n.t('meta.description')
