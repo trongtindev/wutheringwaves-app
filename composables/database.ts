@@ -172,6 +172,13 @@ export const useDatabase = defineStore('useDatabase', () => {
                 1: function (oldDoc) {
                   oldDoc.playerId = '';
                   return oldDoc;
+                },
+                2: function (oldDoc) {
+                  oldDoc.key = `${oldDoc.name}${oldDoc.playerId}`;
+                  return oldDoc;
+                },
+                3: function (oldDoc) {
+                  return oldDoc;
                 }
               }
             },

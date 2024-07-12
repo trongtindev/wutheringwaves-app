@@ -135,9 +135,12 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     const characterWrites = Object.keys(characterObjects).flatMap((e) => {
       return {
         ...characterObjects[e],
-        playerId: playerId
+        playerId: playerId,
+        key: `${characterObjects[e].name}${playerId}`
       };
     });
+
+    await db.characters.deleteMany({ playerId });
     await db.characters.bulkUpsert(characterWrites);
 
     return {

@@ -27,6 +27,7 @@ export type AccountCollectionMethods = {
     selector: MangoQuerySelector<AccountDocType>,
     patch: Partial<AccountDocType>
   ) => Promise<void>;
+  deleteOne: (selector: MangoQuerySelector<AccountDocType>) => Promise<void>;
 };
 
 export type AccountCollection = RxCollection<
@@ -54,9 +55,16 @@ export const accountCollectionMethods: AccountCollectionMethods = {
     const doc = await this.findOne({
       selector
     }).exec();
-    if (doc) {
-      await doc.patch(patch);
-    }
+    if (doc) await doc.patch(patch);
+  },
+  deleteOne: async function (
+    this: AccountCollection,
+    selector: MangoQuerySelector<AccountDocType>
+  ) {
+    const doc = await this.findOne({
+      selector
+    }).exec();
+    if (doc) await doc.remove();
   }
 };
 

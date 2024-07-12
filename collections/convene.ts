@@ -1,4 +1,9 @@
-import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
+import type {
+  RxDocument,
+  RxCollection,
+  RxJsonSchema,
+  MangoQuerySelector
+} from 'rxdb';
 
 export type ConveneDocType = {
   _id: string;
@@ -21,6 +26,7 @@ export type ConveneDocument = RxDocument<ConveneDocType, ConveneDocMethods>;
 
 export type ConveneCollectionMethods = {
   countAllDocuments: () => Promise<number>;
+  deleteMany: (selector: MangoQuerySelector<ConveneDocType>) => Promise<void>;
 };
 
 export type ConveneCollection = RxCollection<
@@ -39,6 +45,19 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
   countAllDocuments: async function (this: ConveneCollection) {
     const allDocs = await this.find().exec();
     return allDocs.length;
+  },
+  deleteMany: async function (
+    this: ConveneCollection,
+    selector: MangoQuerySelector<ConveneDocType>
+  ) {
+    const docs = await this.find({
+      selector
+    }).exec();
+    await Promise.all(
+      docs.map((e) => {
+        return e.remove();
+      })
+    );
   }
 };
 

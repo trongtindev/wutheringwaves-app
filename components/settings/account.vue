@@ -16,12 +16,16 @@ const state = ref<'' | 'erase'>('');
 // events
 const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
   if (isConfirmed) {
-    // TODO: <3
+    const db = await database.getInstance();
+    await db.accounts.deleteOne({ playerId });
+    await db.convenes.deleteMany({ playerId });
   } else {
     dialog.show({
       color: 'error',
-      title: i18n.t('settings.accounts.eraseAllData'),
-      content: i18n.t('settings.accounts.eraseAllDataConfirm')
+      title: i18n.t('settings.accounts.deleteConfirm'),
+      content: i18n.t('settings.accounts.deleteConfirmMessage'),
+      onConfirm: () => onPressedDelete(playerId, true),
+      confirmButtonText: i18n.t('common.delete')
     });
   }
 };
@@ -46,6 +50,7 @@ onNuxtReady(() => emits('on-updated'));
           :class="{
             'mt-2': index > 0
           }"
+          @on-delete="() => onPressedDelete(element.playerId)"
         />
       </v-list>
 

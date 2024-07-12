@@ -6,6 +6,7 @@ export const useAccount = defineStore('useAccount', () => {
 
   // uses
   const i18n = useI18n();
+  const route = useRoute();
   const snackbar = useSnackbar();
   const database = useDatabase();
   const notification = useNotification();
@@ -33,6 +34,7 @@ export const useAccount = defineStore('useAccount', () => {
     // register hook
     const db = await database.getInstance();
     db.accounts.postInsert(() => loadItems(), false);
+    db.accounts.postRemove(() => loadItems(), false);
 
     await loadItems();
     if (items.value.length > 0) onSchedule();
@@ -44,11 +46,28 @@ export const useAccount = defineStore('useAccount', () => {
     conveneHistoryUrl: string
   ) => {
     const db = await database.getInstance();
-    await db.accounts.upsert({
-      playerId,
-      serverId,
-      conveneHistoryUrl
-    });
+    const doc = await db.accounts
+      .findOne({
+        selector: {
+          playerId
+        }
+      })
+      .exec();
+
+    if (doc) {
+      await doc.patch({
+        conveneHistoryUrl,
+        lastImport: Date.now()
+      });
+    } else {
+      await db.accounts.upsert({
+        playerId,
+        serverId,
+        conveneHistoryUrl,
+        autoImport: true,
+        lastImport: Date.now()
+      });
+    }
   };
 
   const loadItems = async () => {
@@ -91,16 +110,19 @@ export const useAccount = defineStore('useAccount', () => {
   const onSchedule = () => {
     items.value.forEach(async (account) => {
       if (!account.conveneHistoryUrl) return;
-      if (!account.autoImport) {
-        console.debug('autoImport', account.playerId, 'disabled');
-        return;
-      }
-      if (
-        account.lastImport &&
-        Date.now() - 60 * 15 * 1000 < account.lastImport
-      ) {
-        console.debug('autoImport', account.playerId, 'skip');
-        return;
+
+      if (typeof route.query.forceAutoImport === 'undefined') {
+        if (!account.autoImport) {
+          console.debug('autoImport', account.playerId, 'disabled');
+          return;
+        }
+        if (
+          account.lastImport &&
+          Date.now() - 60 * 15 * 1000 < account.lastImport
+        ) {
+          console.debug('autoImport', account.playerId, 'skip');
+          return;
+        }
       }
 
       const nid = await notification.create({
@@ -124,11 +146,6 @@ export const useAccount = defineStore('useAccount', () => {
         })
         .finally(() => {
           console.debug('autoImport', account.playerId, 'finally');
-
-          getDocument(account.playerId).then((doc) => {
-            if (!doc) return;
-            doc.patch({ lastImport: Date.now() });
-          });
           notification.remove(nid);
         });
     });
@@ -151,17 +168,19 @@ export const useAccount = defineStore('useAccount', () => {
   });
 
   // lifecycle
-  onNuxtReady(() => {
-    initialize();
+  if (import.meta.client) {
+    onNuxtReady(() => {
+      initialize();
 
-    // schedule
-    const timer = 60 * 5 * 1000;
-    interval = setInterval(() => onSchedule, timer);
-  });
+      // schedule
+      const timer = 60 * 5 * 1000;
+      interval = setInterval(() => onSchedule, timer);
+    });
 
-  onUnmounted(() => {
-    if (interval) clearInterval(interval);
-  });
+    onUnmounted(() => {
+      if (interval) clearInterval(interval);
+    });
+  }
 
   return {
     items,
