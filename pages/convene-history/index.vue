@@ -104,7 +104,7 @@ watch(
 );
 
 // seo meta
-const title = i18n.t('convene.history.title');
+const title = i18n.t('meta.convene.history.title');
 const description = i18n.t('meta.convene.history.description');
 
 useApp().title = i18n.t('convene.history.title');

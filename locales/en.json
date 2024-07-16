@@ -35,10 +35,11 @@
         "title": "Convene Card Generator"
       },
       "history": {
+        "title": "Wuthering Waves Pity Tracker",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
-        "title": "Global Convene Stats",
+        "title": "Wuthering Waves Global Convene Stats",
         "description": "Wuthering Waves Convene Global average pity percentage from astrite.app users."
       }
     },
@@ -70,8 +71,7 @@
       "title": "Settings"
     },
     "guides": {
-      "title": "Game Guides",
-      "description": ""
+      "title": "Game Guides"
     },
     "leaderboards": {
       "title": "Leaderboards",

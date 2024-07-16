@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { IMarker } from '~/interfaces/map';
 import { mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
-import type { Map, MapOptions } from 'leaflet';
+import type { Map, MapOptions, TileLayerOptions } from 'leaflet';
 import {
-  DesktopAppGameTypes,
+  DesktopAppGameType,
   type IDesktopAppActor
 } from '~/interfaces/desktopApp';
 
@@ -20,18 +20,30 @@ const desktopApp = useDesktopApp();
 
 // states
 const leaflet = ref<Map>();
-const player = ref<IDesktopAppActor>();
-const objects = ref<IDesktopAppActor[]>([]);
 const options: MapOptions = {
   zoom: 11,
+  center: [0, 0],
   minZoom: 11,
   maxZoom: 15,
-  center: [0, 0],
-  zoomSnap: 0.5,
-  maxBounds: [
-    [1, 1],
-    [-1, -1]
-  ]
+  markerZoomAnimation: true,
+  attributionControl: false,
+  preferCanvas: true
+};
+const tileLayerOptions: TileLayerOptions & { getX: any; getY: any } = {
+  // minNativeZoom: 0,
+  // maxNativeZoom: 4,
+  // bounds: [
+  //   [-68e4, -68e4],
+  //   [68e4, 68e4]
+  // ],
+  tms: true,
+  noWrap: true,
+  bounds: [
+    [-1, -1],
+    [1, 1]
+  ],
+  getX: leafletGetX,
+  getY: leafletGetY
 };
 const drawer = ref(true);
 const tab = ref('markers');
@@ -40,14 +52,13 @@ const markers = ref<IMarker[]>();
 const selected = ref<IMarker>();
 const foundMarkers = ref<string[]>(null as any);
 const hideFound = ref(false);
-const inGameScaleFactor = ref(1000);
 
 // computed
 const urlTemplate = computed(() => {
-  if (import.meta.dev && route.query.localTiles) {
-    return '/map/tiles/{z}/{getX}_{getY}.webp';
-  }
-  return `https://files.astrite.app/tiles/{z}/{getX}_{getY}.webp?v=${appConfig.buildNumber}`;
+  // if (import.meta.dev && route.query.localTiles) {
+  return '/map/tiles/{z}/{getX}_{getY}.webp';
+  // }
+  // return `https://files.astrite.app/tiles/{z}/{getX}_{getY}.webp`;
 });
 
 const displayMarkers = computed(() => {
@@ -135,28 +146,26 @@ const initialize = () => {
 
 // events
 watch(
-  () => player.value,
+  () => desktopApp.player,
   (value) => {
     if (!value) return;
     if (!leaflet.value) return;
 
-    const x = value.x;
-    const y = value.y;
-    console.log({ x, y });
+    // const bounds = [
+    //   [-68e4, -68e4],
+    //   [68e4, 68e4]
+    // ];
+    // const x = value.x / 1000000;
+    // const z = value.z / 1000000;
+    // console.log({ x, z });
+
+    // leaflet.value.panTo([x, z]);
   }
 );
 
 // lifecycle
-onNuxtReady(() => {
+onMounted(() => {
   sidebar.open = false;
-
-  desktopApp.on<IDesktopAppActor>(DesktopAppGameTypes.playerInfo, (data) => {
-    player.value = data;
-  });
-  desktopApp.on<IDesktopAppActor[]>(DesktopAppGameTypes.objectList, (data) => {
-    objects.value = data;
-  });
-
   setTimeout(initialize, 1000);
 });
 
@@ -189,11 +198,9 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- drawer -->
-    <v-navigation-drawer v-model="drawer" :width="400">
-      <!-- client only -->
+    <div v-if="leaflet">{{ leaflet.getCenter() }}</div>
+    <!-- <v-navigation-drawer v-model="drawer" :width="400">
       <client-only>
-        <!-- tabs -->
         <v-tabs v-model="tab" :fixed-tabs="true">
           <v-tab value="markers">
             <v-icon :icon="mdiMapMarker" />
@@ -207,9 +214,7 @@ useSeoMeta({
         </v-tabs>
         <v-divider />
 
-        <!-- tabs content -->
         <v-tabs-window v-model="tab">
-          <!-- markers -->
           <v-tabs-window-item value="markers" class="pa-2">
             <v-card class="mb-2">
               <v-list-item :title="$t('map.hideFoundMarkers')">
@@ -229,59 +234,51 @@ useSeoMeta({
               <v-progress-circular :indeterminate="true" />
             </div>
           </v-tabs-window-item>
-          <!-- end markers -->
 
-          <!-- comments -->
           <v-tabs-window-item value="comments">
             <map-comments :selected="selected" />
           </v-tabs-window-item>
-          <!-- end comments -->
-
-          <!-- end tabs content -->
         </v-tabs-window>
-        <!-- end client only -->
       </client-only>
-      <!-- end drawer -->
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
     <v-card>
-      <v-responsive :aspect-ratio="16 / 9">
-        <lazy-leaflet-map
-          v-if="foundMarkers"
-          :markers="displayMarkers"
-          :options="options"
-          @on-initialized="(val) => (leaflet = val)"
-          @on-pressed-marker="(val) => onPressedMarker(val)"
-        >
-          <template #default="{ leaflet }">
-            <lazy-leaflet-tile-layer
-              :leaflet="leaflet"
-              :options="{
-                tms: true,
-                noWrap: true,
-                bounds: [
-                  [-1, -1],
-                  [1, 1]
-                ],
-                getX: leafletGetX,
-                getY: leafletGetY,
-                attribution:
-                  '<a href=\'https://genshin-impact-map.appsample.com/wuthering-waves-map/\' target=\'_blank\' rel=\'nofollow\'>appsample</a>'
-              }"
-              :url-template="urlTemplate"
-            />
-          </template>
+      <client-only>
+        <v-responsive :aspect-ratio="16 / 9">
+          <lazy-leaflet-map
+            :compass="
+              desktopApp.player
+                ? [
+                    desktopApp.player.x,
+                    desktopApp.player.y,
+                    desktopApp.player.z,
+                    desktopApp.player.r
+                  ]
+                : undefined
+            "
+            :options="options"
+            @on-initialized="(val) => (leaflet = val)"
+            @on-pressed-marker="(val) => onPressedMarker(val)"
+          >
+            <template #default="{ leaflet }">
+              <lazy-leaflet-tile-layer
+                :leaflet="leaflet"
+                :options="tileLayerOptions"
+                :url-template="urlTemplate"
+              />
+            </template>
 
-          <template #popup>
+            <!-- <template #popup>
             <map-popup
               v-if="selected"
               :data="selected"
               :initial-value="foundMarkers.includes(selected.id.toString())"
               @on-mark-changed="(val) => onMarkChanged(selected!.id, val)"
             />
-          </template>
-        </lazy-leaflet-map>
-      </v-responsive>
+          </template> -->
+          </lazy-leaflet-map>
+        </v-responsive>
+      </client-only>
     </v-card>
 
     <!-- <v-btn class="position-fixed" text="OK" @click="() => (drawer = !drawer)" /> -->

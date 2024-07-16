@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import { DesktopAppEventType } from '~/interfaces/desktopApp';
 import type { INotification } from '~/interfaces/notification';
 
 export const useNotification = defineStore('useNotification', () => {
@@ -81,14 +80,6 @@ export const useNotification = defineStore('useNotification', () => {
   // lifecycle
   if (import.meta.client) {
     onMounted(() => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      desktopApp.on<any>(
-        DesktopAppEventType.notificationCreate,
-        (args, callback) => {
-          callback(create(args));
-        }
-      );
-
       if (!('Notification' in window)) return;
       isPermissionGranted.value = Notification.permission == 'granted';
       if (enabled.value && !isPermissionGranted.value) {

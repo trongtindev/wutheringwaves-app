@@ -31,6 +31,7 @@
     "convene": {
       "cardGenerator": { "title": "Convene Card Generator" },
       "history": {
+        "title": "Wuthering Waves Pity Tracker",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
@@ -62,49 +63,49 @@
         }
       }
     },
-    "settings": { "title": "Settings" },
-    "guides": { "title": "Game Guides", "description": "" },
+    "settings": { "title": "設定" },
+    "guides": { "title": "Game Guides" },
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
     }
   },
   "sidebar": {
-    "home": "Home",
-    "timeline": "Timeline",
-    "characters": "Characters",
-    "weapons": "Weapons",
+    "home": "ホーム",
+    "timeline": "タイムライン",
+    "characters": "キャラクター",
+    "weapons": "武器",
     "echos": "Echos",
     "conveneHistory": "Convene History",
     "tierList": "Tier list",
-    "todoList": "Todo list",
+    "todoList": "Todoリスト",
     "trophies": "Trophies",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
     "map": "Map",
     "guides": "Guides",
-    "items": "Items",
+    "items": "アイテム",
     "comparison": "Comparison",
-    "database": "Database",
+    "database": "データベース",
     "convene": "Convene",
     "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Global Stats",
     "conveneImport": "Import history"
   },
   "items": {
-    "title": "Items",
+    "title": "アイテム",
     "howToObtain": "How to obtain {0}?",
     "howToUnlock": "How to unlock {0}?",
     "cookingIngredients": "Cooking Ingredients",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {
-    "title": "Timeline",
+    "title": "タイムライン",
     "startsIn": "Starts {0}",
     "endsIn": "Ends {0}",
-    "current": "Current",
-    "upcoming": "Upcoming",
+    "current": "開催中のイベント",
+    "upcoming": "今後のイベント",
     "summary": "Timeline Summary"
   },
   "convene": {
@@ -196,14 +197,14 @@
     "character": {}
   },
   "characters": {
-    "title": "Characters",
+    "title": "キャラクター",
     "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills",
     "alert": "Import convene history to see already owned characters."
   },
   "weapons": {
-    "title": "Weapons",
+    "title": "武器",
     "ranks": "Ranks",
     "alert": "Import convene history to see already owned weapons."
   },
@@ -213,7 +214,7 @@
     "liveVoting": "Live Voting",
     "save": "Save"
   },
-  "todoList": { "title": "Todo list" },
+  "todoList": { "title": "Todoリスト" },
   "trophies": { "title": "Trophies" },
   "teams": { "title": "Teams" },
   "echos": {
@@ -245,7 +246,7 @@
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "設定",
     "eraseAllData": "Erase All Data",
     "accounts": {
       "title": "Accounts",
@@ -356,7 +357,7 @@
   "common": {
     "name": "Name",
     "time": "Time",
-    "home": "Home",
+    "home": "ホーム",
     "delete": "Delete",
     "timeout": "Connection timeout, please wait a moment and try again later",
     "invalidLink": "Invalid link, please check it again",
@@ -382,7 +383,7 @@
     "saveChanges": "Save changes",
     "saveAndPublish": "Save and Publish",
     "weapon": "Weapon",
-    "character": "Character",
+    "character": "キャラクター",
     "noData": "No data!",
     "type": "Type",
     "sort": "Sort",
@@ -396,7 +397,7 @@
     "notEnoughData": "Not enough data!",
     "download": "Download",
     "language": "Language",
-    "items": "Items",
+    "items": "アイテム",
     "item": "Item",
     "ascensionMaterial": "Ascension Material",
     "successfully": "Successfully!",

@@ -21,7 +21,7 @@
       "id": {
         "description": "{name} is a {type} weapon in Wuthering Waves that can be obtained via the game's Convene system."
       },
-      "title": "Weapons",
+      "title": "무기",
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
     },
     "codes": {
@@ -31,6 +31,7 @@
     "convene": {
       "cardGenerator": { "title": "Convene Card Generator" },
       "history": {
+        "title": "Wuthering Waves Pity Tracker",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
@@ -45,7 +46,7 @@
       "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
-      "title": "Trophies",
+      "title": "업적",
       "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
@@ -63,48 +64,48 @@
       }
     },
     "settings": { "title": "Settings" },
-    "guides": { "title": "Game Guides", "description": "" },
+    "guides": { "title": "Game Guides" },
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
     }
   },
   "sidebar": {
-    "home": "Home",
-    "timeline": "Timeline",
-    "characters": "Characters",
-    "weapons": "Weapons",
+    "home": "홈",
+    "timeline": "타임라인",
+    "characters": "캐릭터",
+    "weapons": "무기",
     "echos": "Echos",
     "conveneHistory": "Convene History",
     "tierList": "Tier list",
-    "todoList": "Todo list",
-    "trophies": "Trophies",
+    "todoList": "할 일 목록",
+    "trophies": "업적",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
     "map": "Map",
     "guides": "Guides",
-    "items": "Items",
+    "items": "아이템",
     "comparison": "Comparison",
-    "database": "Database",
+    "database": "데이터베이스",
     "convene": "Convene",
     "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Global Stats",
     "conveneImport": "Import history"
   },
   "items": {
-    "title": "Items",
+    "title": "아이템",
     "howToObtain": "How to obtain {0}?",
     "howToUnlock": "How to unlock {0}?",
     "cookingIngredients": "Cooking Ingredients",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {
-    "title": "Timeline",
+    "title": "타임라인",
     "startsIn": "Starts {0}",
     "endsIn": "Ends {0}",
-    "current": "Current",
-    "upcoming": "Upcoming",
+    "current": "현재 이벤트",
+    "upcoming": "예정 중인 이벤트",
     "summary": "Timeline Summary"
   },
   "convene": {
@@ -147,7 +148,7 @@
     },
     "guaranteedAt": "Guaranteed at {0}",
     "lifetimePulls": "Lifetime Pulls",
-    "pity": "Pity",
+    "pity": "천장",
     "summary": {},
     "rank": {
       "title": "Your Global Rank",
@@ -213,8 +214,8 @@
     "liveVoting": "Live Voting",
     "save": "Save"
   },
-  "todoList": { "title": "Todo list" },
-  "trophies": { "title": "Trophies" },
+  "todoList": { "title": "할 일 목록" },
+  "trophies": { "title": "업적" },
   "teams": { "title": "Teams" },
   "echos": {
     "title": "Echos",
@@ -355,9 +356,9 @@
   },
   "common": {
     "name": "Name",
-    "time": "Time",
-    "home": "Home",
-    "delete": "Delete",
+    "time": "시간",
+    "home": "홈",
+    "delete": "삭제",
     "timeout": "Connection timeout, please wait a moment and try again later",
     "invalidLink": "Invalid link, please check it again",
     "invalidData": "Invalid data returned from API, try again later",
@@ -365,7 +366,7 @@
     "signOut": "Sign out",
     "back": "Back",
     "cancel": "Cancel",
-    "import": "Import",
+    "import": "제출",
     "development": "Development",
     "search": "Search",
     "all": "All",
@@ -382,7 +383,7 @@
     "saveChanges": "Save changes",
     "saveAndPublish": "Save and Publish",
     "weapon": "Weapon",
-    "character": "Character",
+    "character": "캐릭터",
     "noData": "No data!",
     "type": "Type",
     "sort": "Sort",

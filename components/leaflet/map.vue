@@ -3,6 +3,7 @@ import type { Map, MapOptions, Marker, LatLng, Popup } from 'leaflet';
 
 // define
 const props = defineProps<{
+  compass?: number[];
   markers?: {
     latlng: number[];
     icon?: string | undefined;
@@ -37,6 +38,7 @@ const container = ref();
 const selectedMarker = ref<LatLng>();
 const markerInstances = ref<{ [key: string]: Marker }>({});
 const popupInstance = ref<Popup>();
+const playerCompass = ref<Marker>();
 
 // computed
 const markerLimitCount = computed(() => {
@@ -50,10 +52,25 @@ const initialize = async () => {
     return;
   }
 
-  const { map } = await import('leaflet');
+  const { map, CRS, Transformation, extend, marker, divIcon } = await import(
+    'leaflet'
+  );
   await import('leaflet/dist/leaflet.css');
+  const transformation = [
+    0.00037647058823529414, 160, 0.00037647058823529414, 160
+  ];
 
-  leaflet.value = map(container.value, props.options);
+  leaflet.value = map(container.value, {
+    ...props.options
+    // crs: extend(CRS.Simple, {
+    //   transformation: new Transformation(
+    //     transformation[0],
+    //     transformation[1],
+    //     transformation[2],
+    //     transformation[3]
+    //   )
+    // })
+  });
   leaflet.value.on('click', (e) => {
     if (!leaflet.value) return;
 
@@ -87,6 +104,8 @@ const initialize = async () => {
     center.value = [latLng.lat, latLng.lng];
     emits('on-drag', [latLng.lat, latLng.lng]);
   });
+
+  playerCompass.value = marker([0, 0], { opacity: 0 }).addTo(leaflet.value);
 
   emits('on-initialized', leaflet.value);
   renderMarkerDebounce();
@@ -189,6 +208,33 @@ watch(
     } else if (popupInstance.value) {
       popupInstance.value.closePopup();
     }
+  }
+);
+
+watch(
+  () => props.compass,
+  async (value) => {
+    if (!value) return;
+    if (!leaflet.value) return;
+    if (!playerCompass.value) return;
+
+    const { divIcon } = await import('leaflet');
+    const rotation = value[3];
+    const x = value[0] / 1000000;
+    const z = value[1] / 1000000;
+    // const [x, y, z, r] = value;
+
+    playerCompass.value.setOpacity(1);
+    playerCompass.value.setIcon(
+      divIcon({
+        html: `<img src="/map/compass.png" style="transform: rotate(${rotation}deg);" />`,
+        iconSize: [28, 28]
+      })
+    );
+    playerCompass.value.setLatLng([x, z]);
+    leaflet.value.panTo([x, z]);
+
+    console.log([x, z]);
   }
 );
 

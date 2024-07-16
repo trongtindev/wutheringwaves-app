@@ -87,7 +87,7 @@ const initialize = () => {
 };
 
 // lifecycle
-onMounted(() => {
+onNuxtReady(() => {
   initialize();
   window.addEventListener('resize', refreshLayoutDebounce, false);
 });

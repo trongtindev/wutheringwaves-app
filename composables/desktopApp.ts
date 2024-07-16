@@ -1,4 +1,8 @@
 import {
+  DesktopAppGameType,
+  type IDesktopAppActor
+} from '~/interfaces/desktopApp';
+import {
   ElectronEventType,
   ElectronInvokeType
 } from '~/interfaces/electron.types';
@@ -6,112 +10,47 @@ import {
 export const useDesktopApp = defineStore('useDesktopApp', () => {
   // states
   const state = ref<'' | 'starting'>('');
-  const listeners = ref<
-    {
-      id: string;
-      eventName: string;
-      handler: any;
-    }[]
-  >([]);
-  const callbacks = ref<
-    {
-      id: string;
-      handler: (data: any) => Promise<void> | void;
-    }[]
-  >([]);
-
-  // events
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const onMessage = (event: any) => {
-    if (typeof event.data !== 'object') return;
-    if (!event.data.EventName) return;
-
-    const eventName = event.data.EventName;
-    const data = JSON.parse(event.data.Data);
-
-    listeners.value
-      .filter((listener) => listener.eventName === eventName)
-      .forEach((listener) => {
-        listener.handler(data);
-      });
-  };
+  const player = ref<IDesktopAppActor>();
+  const objects = ref<IDesktopAppActor[]>([]);
 
   // computed
   const enabled = computed(() => {
-    return typeof window.chrome.webview != 'undefined';
+    return typeof window.electron != 'undefined';
   });
 
   // functions
   const on = <T>(
     eventName: string,
-    handler: (data: T, callback?: any) => Promise<void> | void
+    listener: (data: T, callback?: () => Promise<void> | void) => void
   ) => {
-    // register listener
-    listeners.value.push({
-      id: randomId(),
-      eventName,
-      handler
-    });
+    if (!window.electron) return;
+    window.electron.on(eventName, listener);
   };
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const emit = (eventName: string, data: any) => {
-    window.chrome.webview.postMessage(
-      JSON.stringify({
-        eventName,
-        data: JSON.stringify(data)
-      })
-    );
-  };
-
-  const emitWithAck = (
+  const emit = <T1, T2>(
     eventName: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    handler: (data: any) => Promise<void> | void,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any
+    data: T1,
+    callback?: (result: T2, error?: string) => void
   ) => {
-    const id = randomId();
-    callbacks.value.push({ id, handler });
-    window.chrome.webview.postMessage(
-      JSON.stringify({
-        id,
-        eventName,
-        data: JSON.stringify(data)
-      })
-    );
+    if (!window.electron) return;
+    window.electron.emit<T1, T2>(eventName, data, callback);
   };
 
   // lifecycle
   if (import.meta.client && enabled.value) {
     onMounted(() => {
-      window.chrome.webview.addEventListener('message', (e) => onMessage(e));
-
-      on(ElectronEventType.ready, (data) => {
-        console.log('on ElectronEventType.ready', data);
+      on<IDesktopAppActor>(DesktopAppGameType.playerInfo, (data) => {
+        player.value = data;
       });
-
-      emit(ElectronInvokeType.ready, { foo: 'emit' });
-      emitWithAck(
-        ElectronInvokeType.ready,
-        (data) => {
-          console.log('callback ElectronInvokeType.ready', data);
-        },
-        { foo: 'emitWithAck' }
-      );
     });
-
-    // onUnmounted(() => {
-    //   window.chrome.webview.removeEventListener('message', onMessage);
-    // });
   }
 
   // exports
   return {
     state,
+    player,
+    objects,
     enabled,
     on,
-    emit,
-    emitWithAck
+    emit
   };
 });

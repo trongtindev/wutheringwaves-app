@@ -31,6 +31,7 @@
     "convene": {
       "cardGenerator": { "title": "Convene Card Generator" },
       "history": {
+        "title": "Wuthering Waves Pity Tracker",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
@@ -62,31 +63,31 @@
         }
       }
     },
-    "settings": { "title": "Settings" },
-    "guides": { "title": "Game Guides", "description": "" },
+    "settings": { "title": "การตั้งค่า" },
+    "guides": { "title": "Game Guides" },
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
     }
   },
   "sidebar": {
-    "home": "Home",
+    "home": "หน้าแรก",
     "timeline": "Timeline",
-    "characters": "Characters",
-    "weapons": "Weapons",
+    "characters": "ตัวละคร",
+    "weapons": "อาวุธ",
     "echos": "Echos",
     "conveneHistory": "Convene History",
     "tierList": "Tier list",
-    "todoList": "Todo list",
-    "trophies": "Trophies",
+    "todoList": "รายการที่ต้องทำ",
+    "trophies": "ความสำเร็จ",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
     "map": "Map",
     "guides": "Guides",
-    "items": "Items",
+    "items": "ไอเทม",
     "comparison": "Comparison",
-    "database": "Database",
+    "database": "ฐานข้อมูล",
     "convene": "Convene",
     "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Global Stats",
@@ -103,8 +104,8 @@
     "title": "Timeline",
     "startsIn": "Starts {0}",
     "endsIn": "Ends {0}",
-    "current": "Current",
-    "upcoming": "Upcoming",
+    "current": "กิจกรรมปัจจุบัน",
+    "upcoming": "กิจกรรมที่กำลังจะมาถึง",
     "summary": "Timeline Summary"
   },
   "convene": {
@@ -196,7 +197,7 @@
     "character": {}
   },
   "characters": {
-    "title": "Characters",
+    "title": "ตัวละคร",
     "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills",
@@ -245,7 +246,7 @@
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "การตั้งค่า",
     "eraseAllData": "Erase All Data",
     "accounts": {
       "title": "Accounts",
@@ -354,9 +355,9 @@
     "allowComments": "Allow comments"
   },
   "common": {
-    "name": "Name",
-    "time": "Time",
-    "home": "Home",
+    "name": "ชื่อ",
+    "time": "เวลา",
+    "home": "หน้าแรก",
     "delete": "Delete",
     "timeout": "Connection timeout, please wait a moment and try again later",
     "invalidLink": "Invalid link, please check it again",
@@ -364,8 +365,8 @@
     "signIn": "Sign in",
     "signOut": "Sign out",
     "back": "Back",
-    "cancel": "Cancel",
-    "import": "Import",
+    "cancel": "ยกเลิก",
+    "import": "นำเข้า",
     "development": "Development",
     "search": "Search",
     "all": "All",
@@ -382,7 +383,7 @@
     "saveChanges": "Save changes",
     "saveAndPublish": "Save and Publish",
     "weapon": "Weapon",
-    "character": "Character",
+    "character": "ตัวละคร",
     "noData": "No data!",
     "type": "Type",
     "sort": "Sort",
