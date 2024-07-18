@@ -39,12 +39,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
+    '@nuxtjs/robots',
     '@nuxtjs/device',
-    'nuxt-simple-robots',
     // dev
     '@nuxt/eslint',
     // optimization
-    'nuxt-better-optimize-deps',
     '@nuxtjs/fontaine'
   ],
 

@@ -13,6 +13,7 @@
     },
     "characters": {
       "id": {
+        "title": "{name} Guide and Build | Wuthering Waves",
         "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves."
       },
       "description": "Resonators are obtainable units in Wuthering Waves. Individuals with the ability to resonate with certain objects and manipulate their frequencies are known as Resonators."
@@ -193,15 +194,15 @@
       "emptyCard": "Please import convene history to fill the card.",
       "show4Star": "Show 4 star",
       "show5Star": "Show 5 star"
-    },
-    "character": {}
+    }
   },
   "characters": {
     "title": "ตัวละคร",
-    "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills",
-    "alert": "Import convene history to see already owned characters."
+    "alert": "Import convene history to see already owned characters.",
+    "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
+    "lastUpdatedOn": "{name} profile has been last updated on {time}."
   },
   "weapons": {
     "title": "Weapons",
@@ -434,6 +435,10 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization"
+    "localization": "Localization",
+    "profile": "Profile",
+    "build": "Build",
+    "gameplayAndTeams": "Gameplay and Teams",
+    "calculations": "Calculations"
   }
 }

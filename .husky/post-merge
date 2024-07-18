@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
 IFS=$'\n'
 # regex supports mono-repos with a pnpm-lock.pnpm-lock at root-level and at package-level

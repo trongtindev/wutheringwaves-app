@@ -13,6 +13,7 @@
     },
     "characters": {
       "id": {
+        "title": "{name} hướng dẫn build và chơi| Wuthering Waves",
         "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves."
       },
       "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves."
@@ -195,15 +196,15 @@
       "emptyCard": "Please import convene history to fill the card.",
       "show4Star": "Show 4 star",
       "show5Star": "Show 5 star"
-    },
-    "character": {}
+    }
   },
   "characters": {
     "title": "Nhân vật",
-    "introduction": "Introduction",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills",
-    "alert": "Nhập lịch sử triệu hồi để xem các nhân vật đã sở hữu."
+    "alert": "Nhập lịch sử triệu hồi để xem các nhân vật đã sở hữu.",
+    "introduction": "Trong Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> là nhân vật <span class='text-rarity{rarity}'>{rarity}★</span> sao có thuộc tính {attribute} sử dụng vũ khí loại {weaponType}.",
+    "lastUpdatedOn": "Hồ sơ {name} đã được cập nhật lần cuối lúc {time}."
   },
   "weapons": {
     "title": "Vũ khí",
@@ -436,6 +437,10 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization"
+    "localization": "Localization",
+    "profile": "Hồ sơ",
+    "build": "Xây dựng",
+    "gameplayAndTeams": "Lối chơi & Đội hình",
+    "calculations": "Tính toán"
   }
 }
