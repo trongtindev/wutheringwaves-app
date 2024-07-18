@@ -84,7 +84,7 @@
     "nuxt-schema-org": "^3.3.8",
     "nuxt-simple-robots": "4.0.1",
     "pinia": "^2.1.7",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "rxdb": "^15.28.0",
     "rxjs": "^7.8.1",
     "sass": "^1.77.7",
