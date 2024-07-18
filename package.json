@@ -60,7 +60,7 @@
     "@tiptap/vue-3": "^2.4.0",
     "@types/file-saver": "^2.0.7",
     "@types/leaflet": "^1.9.12",
-    "@types/node": "^18.0.0",
+    "@types/node": "^20.14.11",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "axios": "^1.7.2",
