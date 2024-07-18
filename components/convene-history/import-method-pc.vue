@@ -16,9 +16,18 @@ const runtimeConfig = useRuntimeConfig();
 
 // states
 const url = ref<string>();
+const step = ref(1);
 const isCopied = ref(false);
 
 // events
+const next = () => {
+  step.value += 1;
+};
+
+const prev = () => {
+  step.value -= 1;
+};
+
 const onPressedCopyScript = () => {
   isCopied.value = true;
   setTimeout(() => {
@@ -80,13 +89,13 @@ onMounted(() => {
 
 <template>
   <div>
-    <v-stepper-vertical>
-      <template #default="{ step }">
+    <v-stepper-vertical v-model="step">
+      <template #default>
         <!-- step1 -->
         <v-stepper-vertical-item
           :complete="step > 1"
           :title="$t('convene.import.guides.pc.default.1.title')"
-          value="1"
+          :value="1"
         >
           <v-responsive
             class="border rounded"
@@ -96,7 +105,7 @@ onMounted(() => {
             <v-img src="/screenshots/in-game-convene-history.webp" />
           </v-responsive>
 
-          <template #next="{ next }">
+          <template #next>
             <v-btn color="primary" :text="$t('common.next')" @click="next" />
           </template>
           <template #prev></template>
@@ -106,7 +115,7 @@ onMounted(() => {
         <v-stepper-vertical-item
           :complete="step > 2"
           :title="$t('convene.import.guides.pc.default.2.title')"
-          value="2"
+          :value="2"
         >
           <i18n-t
             keypath="convene.import.guides.pc.default.2.content"
@@ -155,11 +164,11 @@ onMounted(() => {
             </a>
           </div>
 
-          <template #next="{ next }">
+          <template #next>
             <v-btn color="primary" :text="$t('common.next')" @click="next" />
           </template>
 
-          <template #prev="{ prev }">
+          <template #prev>
             <v-btn
               variant="plain"
               :text="$t('common.previous')"
@@ -171,7 +180,7 @@ onMounted(() => {
         <!-- step3 -->
         <v-stepper-vertical-item
           :title="$t('convene.import.guides.pc.default.3.title')"
-          value="3"
+          :value="3"
           @click:next="onPressedImport"
         >
           <v-responsive
@@ -201,7 +210,7 @@ onMounted(() => {
             />
           </template>
 
-          <template #prev="{ prev }">
+          <template #prev>
             <v-btn
               variant="plain"
               :text="$t('common.previous')"
