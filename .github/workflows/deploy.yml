@@ -21,7 +21,7 @@ jobs:
       #     access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       #     secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       #     account_id: ${{ secrets.AWS_ACCOUNT_ID }}
-      #     repo: astrite-app
+      #     repo: wutheringwaves-app
       #     region: ap-southeast-1
       #     tags: latest,${{ github.sha }}
       #     create_repo: true
@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build . -t ghcr.io/${{ github.repository_owner }}/astrite-app:latest
+        run: docker build . -t ghcr.io/${{ github.repository_owner }}/wutheringwaves-app:latest
 
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner }}/astrite-app:latest
+        run: docker push ghcr.io/${{ github.repository_owner }}/wutheringwaves-app:latest

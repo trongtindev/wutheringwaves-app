@@ -1,8 +1,8 @@
-# Astrite.app
+# WutheringWaves.app
 
 In-development site for Wuthering Waves.
 
-![home.png](./.github/screenshots/home.png 'astrite.app')
+![home.png](./.github/screenshots/home.png 'wutheringwaves.app')
 
 <center>A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!</center>
 
@@ -60,7 +60,7 @@ locales
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 If you're interested in the API, it's
-here [https://github.com/trongtindev/astrite-app-api](https://github.com/trongtindev/astrite-app-api)
+here [https://github.com/trongtindev/wutheringwaves-app-api](https://github.com/trongtindev/wutheringwaves-app-api)
 
 ### Recommended IDE Setup
 
@@ -106,7 +106,7 @@ pnpm test:e2e --debug
 
 # License
 
-[MIT](https://github.com/trongtindev/astrite-app/blob/main/LICENSE)
+[MIT](https://github.com/trongtindev/wutheringwaves-app/blob/main/LICENSE)
 
 This project is not affiliated with Kuro Games.
 Wuthering Waves, game content and materials are trademarks and copyrights of Kuro Games.

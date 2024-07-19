@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Astrite.app",
+    "title": "WutheringWaves.app",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
     "index": { "title": "Wuthering Waves Utilities" },
     "timeline": {
@@ -37,7 +37,7 @@
       },
       "global": {
         "title": "Global Convene Stats",
-        "description": "Wuthering Waves Convene Global average pity percentage from astrite.app users."
+        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       }
     },
     "todoList": {
@@ -156,8 +156,8 @@
       "level": "Your Total Pulls Rank",
       "based": "Based on Global Convene Stats",
       "current": "Current {banner} median is {median} pulls",
-      "more": "You have more pull than {percentage}% of astrite.app users",
-      "less": "You have less pull than {percentage}% of astrite.app users",
+      "more": "You have more pull than {percentage}% of wutheringwaves.app users",
+      "less": "You have less pull than {percentage}% of wutheringwaves.app users",
       "currentLuck": "Current {banner} median is {median}%",
       "totalPull": "Total Pull",
       "luck5": "Luckiness 5★",
@@ -166,10 +166,10 @@
       "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% of astrite.app users",
-      "lessTotal": "Less pulls than {percentage}% of astrite.app users",
-      "moreLuck": "Luckier than {percentage}% of astrite.app users",
-      "lessLuck": "Less lucky than {percentage}% of astrite.app users",
+      "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
+      "lessTotal": "Less pulls than {percentage}% of wutheringwaves.app users",
+      "moreLuck": "Luckier than {percentage}% of wutheringwaves.app users",
+      "lessLuck": "Less lucky than {percentage}% of wutheringwaves.app users",
       "top": "TOP",
       "bottom": "BOTTOM"
     },
@@ -333,7 +333,7 @@
   "guides": { "title": "Game Guides", "create": { "title": "Add new post" } },
   "search": {
     "title": "Global Search",
-    "alert": "You can search everything there is on Astrite.app.",
+    "alert": "You can search everything there is on WutheringWaves.app.",
     "alertTips": "Press the key combination Ctrl + Space to open the fastest search box!",
     "placeholder": "Item, echo, trophy, character,..."
   },

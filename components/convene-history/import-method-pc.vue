@@ -66,8 +66,12 @@ const canImport = computed<boolean>(() => {
   return typeof url.value !== 'undefined' && urlError.value.length == 0;
 });
 
+const powershellUrl = computed(() => {
+  return 'https://raw.githubusercontent.com/trongtindev/wutheringwaves-app/production/get-url.ps1';
+});
+
 const powershellScript = computed(() => {
-  return `[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("${runtimeConfig.public.SITE_URL}/scripts/get-url.ps1")`;
+  return `[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("${powershellUrl.value}")`;
 });
 
 // changes
@@ -156,7 +160,8 @@ onMounted(() => {
           <div>
             You can review the script
             <a
-              href="https://github.com/trongtindev/astrite-app/blob/main/public/scripts/get-url.ps1"
+              ref="nofollow"
+              :href="powershellUrl"
               target="_blank"
               class="font-weight-bold"
             >

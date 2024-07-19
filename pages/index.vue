@@ -44,7 +44,7 @@ useSeoMeta({
 
           <div class="text-center mt-4">
             <div>
-              <h1 class="text-h4">Astrite.app</h1>
+              <h1 class="text-h4">WutheringWaves.app</h1>
             </div>
             <div class="mt-1">
               <h2 class="text-h5">{{ i18n.t('meta.title') }}</h2>

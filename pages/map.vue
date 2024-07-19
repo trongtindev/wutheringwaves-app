@@ -58,7 +58,7 @@ const urlTemplate = computed(() => {
   // if (import.meta.dev && route.query.localTiles) {
   return '/map/tiles/{z}/{getX}_{getY}.webp';
   // }
-  // return `https://files.astrite.app/tiles/{z}/{getX}_{getY}.webp`;
+  // return `https://files.wutheringwaves.app/tiles/{z}/{getX}_{getY}.webp`;
 });
 
 const displayMarkers = computed(() => {

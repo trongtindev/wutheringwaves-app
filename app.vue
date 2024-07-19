@@ -64,7 +64,7 @@ useHead({
     {
       name: 'keywords',
       content:
-        'astrite, astrite.app, wuthering, wuthering waves, kuro, pity tracker, wuwa tracker, pity counter, wuthering waves character, wuthering waves guide, wuthering waves tier list, wuthering waves trophy, wuthering waves item'
+        'wutheringwaves, wutheringwaves.app, wuthering, wuthering waves, kuro, pity tracker, wuwa tracker, pity counter, wuthering waves character, wuthering waves guide, wuthering waves tier list, wuthering waves trophy, wuthering waves item'
     },
     {
       name: 'twitter:card',
@@ -77,7 +77,7 @@ useHead({
   }
 });
 useSeoMeta({
-  ogSiteName: 'Astrite.app',
+  ogSiteName: 'WutheringWaves.app',
   ogImage: `${runtimeConfig.public.SITE_URL}/cover.webp`,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ogImageType: 'image/webp' as any,

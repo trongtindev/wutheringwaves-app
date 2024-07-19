@@ -15,14 +15,14 @@ $localization = @{
     "findGamePath"          = "Attempting to find game path automatically..."
     "enterGamePathManually" = "Couldn't automatically find game path. Please enter game path manually."
     "invalidGamePath" = "Invalid game path. Please try again."
-    "unableToFindUrl" = "Unable to find Gacha Url. Please open Convene Records in game, or report here https://github.com/trongtindev/astrite-app/issues."
+    "unableToFindUrl" = "Unable to find Gacha Url. Please open Convene Records in game, or report here https://github.com/trongtindev/wutheringwaves-app/issues."
     "gachaUrlResult" = "Gacha Url has been saved to clipboard."
   }
   "vi" = @{
     "findGamePath"          = "Đang tự động tìm thư mục chứa Wuthering Waves..."
     "enterGamePathManually" = "Không thể tìm thấy thư mục chứa Wuthering Waves. Vui lòng nhập đường dẫn tới Wuthering Waves thủ công."
     "invalidGamePath" = "Thư mục chứa Wuthering Waves không đúng. Vui lòng thử lại."
-    "unableToFindUrl" = "Không tìm thấy Gacha URL. Vui lòng mở lịch sử trong game lên trước hoặc báo lỗi tại https://github.com/trongtindev/astrite-app/issues."
+    "unableToFindUrl" = "Không tìm thấy Gacha URL. Vui lòng mở lịch sử trong game lên trước hoặc báo lỗi tại https://github.com/trongtindev/wutheringwaves-app/issues."
     "gachaUrlResult" = "Gacha URL đã được sao chép vào bộ nhớ. Hoặc bạn có thể sao chép thủ công."
   }
 }

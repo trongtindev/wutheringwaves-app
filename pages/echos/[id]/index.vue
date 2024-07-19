@@ -48,7 +48,7 @@ useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
   contentUrl: ogImage,
-  creditText: 'Astrite.app',
+  creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
     name: 'Wuthering Waves'

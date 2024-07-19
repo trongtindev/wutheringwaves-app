@@ -42,9 +42,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/device',
     // dev
-    '@nuxt/eslint',
-    // optimization
-    '@nuxtjs/fontaine'
+    '@nuxt/eslint'
   ],
 
   routeRules: {
@@ -194,8 +192,8 @@ export default defineNuxtConfig({
     public: {
       // app
       SITE_URL: NUXT_PUBLIC_SITE_URL,
-      APP_NAME: 'Astrite.app',
-      APP_REPO: 'https://github.com/trongtindev/astrite-app',
+      APP_NAME: 'WutheringWaves.app',
+      APP_REPO: 'https://github.com/trongtindev/wutheringwaves-app',
       APP_DISCORD: 'https://discord.gg/MxxYyUJEfT',
       APP_VERSION: NUXT_PUBLIC_APP_VERSION,
       // api

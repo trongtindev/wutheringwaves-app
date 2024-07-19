@@ -2,7 +2,7 @@
   "publishedTime": "2024-06-29T13:26:35.363Z",
   "modifiedTime": "2024-07-09T15:18:52.801Z",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://astrite.app/character.schema.json",
+  "$id": "https://wutheringwaves.app/character.schema.json",
   "title": "Character",
   "description": "A character in the catalog",
   "type": "object",

@@ -34,7 +34,7 @@ useJsonld({
   contentUrl: ogImage,
   license: `${runtimeConfig.public.SITE_URL}/license`,
   acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
-  creditText: 'Astrite.app',
+  creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
     name: 'Wuthering Waves'

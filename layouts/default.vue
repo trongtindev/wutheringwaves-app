@@ -100,13 +100,13 @@ watch(
     <v-navigation-drawer v-model="sidebar.open">
       <!-- logo -->
       <v-sheet class="pb-2 pt-2">
-        <v-list-item title="Astrite.app" subtitle="https://astrite.app">
+        <v-list-item title="wutheringwaves.app" subtitle="wutheringwaves.app">
           <template #prepend>
             <v-avatar
               class="border"
               rounded
               image="/favicon.png"
-              alt="Astrite.app"
+              alt="WutheringWaves.app"
             />
           </template>
         </v-list-item>

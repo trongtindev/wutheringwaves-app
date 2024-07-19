@@ -44,7 +44,7 @@ const startExports = async () => {
 
     const csvConfig = mkConfig({
       useKeysAsHeaders: true,
-      filename: `astrite.app-${dayjs().toISOString()}`
+      filename: `wutheringwaves.app-${dayjs().toISOString()}`
     });
     const csv = generateCsv(csvConfig)(convenesData);
     download(csvConfig)(csv);
