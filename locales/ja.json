@@ -211,7 +211,10 @@
   "weapons": {
     "title": "武器",
     "ranks": "Ranks",
-    "alert": "Import convene history to see already owned weapons."
+    "alert": "Import convene history to see already owned weapons.",
+    "lastUpdatedOn": "{name} weapon has been last updated on {time}.",
+    "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> weapon.",
+    "skill": "{name} Skill"
   },
   "tierList": {
     "title": "Tier list",
@@ -315,11 +318,16 @@
   },
   "leaderboards": { "title": "Leaderboards" },
   "codes": {
-    "title": "Gift codes",
+    "title": "Gift Codes",
     "expiry": "Expiry",
     "code": "Code",
     "rewards": "Rewards",
-    "expired": "Expired"
+    "expired": "Expired",
+    "howToRedeem": "How to Redeem Wuthering Waves Codes",
+    "howToRedeemGuide": "In-game menu, click the settings icon in the bottom right corner. Select the \"Other Settings\" tab with the spanner symbol. Hit the \"Redeem\" button next to the \"Redemption Code\" under Account.",
+    "redeemRequirement": "How to unlock Redemption",
+    "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
+    "redemptionStep": "Redemption Step"
   },
   "map": {
     "title": "Interactive Map",
@@ -445,6 +453,11 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization"
+    "localization": "Localization",
+    "critRate": "Crit Rate",
+    "critDMG": "Crit DMG",
+    "atk": "ATK",
+    "def": "DEF",
+    "hp": "HP"
   }
 }

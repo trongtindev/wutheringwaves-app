@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import dayjs from 'dayjs';
 import { mdiPlus } from '@mdi/js';
 import type { IItem } from '~/interfaces/item';
 
@@ -102,46 +103,43 @@ useJsonld({
     />
 
     <v-card>
-      <card-title>
-        <template #title>
-          <h1 class="text-h6">{{ nameLocalized }}</h1>
-        </template>
-
-        <template #actions>
-          <edit-this-page
-            :path="`/tree/main/resources/weapons/${item.slug}.json`"
-          />
-        </template>
-      </card-title>
+      <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
+        {{ nameLocalized }}
+      </v-card-title>
+      <v-divider />
 
       <v-card-text>
         <v-row>
           <v-col cols="12" md="4">
-            <v-sheet class="border rounded hidden-sm-and-down">
-              <v-responsive :aspect-ratio="1">
-                <v-img
-                  :src="`/weapons/icons/${item.slug}.webp`"
-                  :alt="item.name"
-                />
-              </v-responsive>
-            </v-sheet>
-
-            <div class="hidden-md-and-up">
+            <v-sheet class="d-flex align-center justify-center">
               <v-img
-                class="border rounded"
                 :src="`/weapons/icons/${item.slug}.webp`"
-                :alt="item.name"
-                :width="128"
-                :height="128"
+                :alt="nameLocalized"
+                :width="256"
+                :height="256"
               />
-            </div>
+            </v-sheet>
           </v-col>
 
           <v-col cols="12" md="8">
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip :text="item.type" />
+            <!-- introduction -->
+            <div>
+              <h2
+                class="text-body-2"
+                :innerHTML="
+                  $t('weapons.introduction', {
+                    name: nameLocalized,
+                    rarity: item.rarity
+                  })
+                "
+              />
             </div>
 
+            <div v-if="data.description" class="mt-2">
+              {{ data.description }}
+            </div>
+
+            <!-- stats -->
             <div>
               <v-sheet v-if="data.stats.atk" class="border rounded mt-2 pa-2">
                 <v-row>
@@ -194,22 +192,38 @@ useJsonld({
                 </v-row>
               </v-sheet>
             </div>
-
-            <div v-if="data.skill" class="mt-2">
-              {{ skillDescription }}
-            </div>
-
-            <div v-if="data.description" class="mt-2">
-              {{ data.description }}
-            </div>
           </v-col>
         </v-row>
+      </v-card-text>
+
+      <v-divider v-if="data.modifiedTime" />
+      <v-card-actions v-if="data.modifiedTime">
+        <h2 class="text-center text-body-2 w-100">
+          {{
+            $t('weapons.lastUpdatedOn', {
+              name: nameLocalized,
+              time: dayjs(data.modifiedTime)
+            })
+          }}
+        </h2>
+      </v-card-actions>
+    </v-card>
+
+    <!-- Skill -->
+    <v-card v-if="data.skill" class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('weapons.skill', { name: nameLocalized }) }}
+      </v-card-title>
+      <v-divider />
+
+      <v-card-text>
+        <div :innerHTML="skillDescription" />
       </v-card-text>
     </v-card>
 
     <!-- Ascension Material -->
     <v-card class="mt-2">
-      <v-card-title>
+      <v-card-title tag="h2">
         {{ $t('common.ascensionMaterial') }}
       </v-card-title>
       <v-divider />

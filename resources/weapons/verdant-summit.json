@@ -1,8 +1,9 @@
 {
+  "$schema": "./.schema.json",
   "publishedTime": "2024-06-28T15:43:22.068Z",
   "modifiedTime": "2024-07-09T15:18:08.553Z",
-  "slug": "verdant-summit",
   "skill": {
+    "name": "Swordsworn",
     "params": [
       ["12%", "24%", "2", "14"],
       ["15%", "30%", "2", "14"],
@@ -12,7 +13,7 @@
     ],
     "description": "Increases the DMG Bonus of all Resonance Attributes by {0}. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by {1}, stacking up to {2} time(s). This effect lasts for {3}s."
   },
-  "stats": { "atk": 47, "critDMG": 1080 },
+  "stats": { "atk": 587.5, "critDMG": 48.6 },
   "ascensions": [
     {
       "cost": [
@@ -60,15 +61,7 @@
         { "item": 2, "quantity": 120000 }
       ],
       "minLevel": 80
-    },
-    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+    }
   ],
-  "description": "A thousand-year-old mountain forms the spine, and the river of ten thousand years forms the blade. The heavens and the earth naturally form this weapon. The blade is unsheathed, the dragon's roar breaks the sky, and in an instant, the white waves are like mountains, the sea water is shaken, the sound is like ghosts and gods, and it is awe-inspiring for thousands of miles.",
-  "ranks": [
-    "Increases the DMG Bonus of all Resonance Attributes by 12%. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by 24%, stacking up to 2 time(s). This effect lasts for 14s.",
-    "Increases the DMG Bonus of all Resonance Attributes by 15%. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by 30%, stacking up to 2 time(s). This effect lasts for 14s.",
-    "Increases the DMG Bonus of all Resonance Attributes by 18%. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by 36%, stacking up to 2 time(s). This effect lasts for 14s.",
-    "Increases the DMG Bonus of all Resonance Attributes by 21%. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by 42%, stacking up to 2 time(s). This effect lasts for 14s.",
-    "Increases the DMG Bonus of all Resonance Attributes by 24%. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by 48%, stacking up to 2 time(s). This effect lasts for 14s."
-  ]
+  "description": "A thousand-year-old mountain forms the spine, and the river of ten thousand years forms the blade. The heavens and the earth naturally form this weapon. The blade is unsheathed, the dragon's roar breaks the sky, and in an instant, the white waves are like mountains, the sea water is shaken, the sound is like ghosts and gods, and it is awe-inspiring for thousands of miles."
 }

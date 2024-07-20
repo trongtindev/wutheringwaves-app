@@ -15,11 +15,7 @@ const state = ref<'' | 'copied'>('');
 // events
 const onPressedCopy = async () => {
   await clipboard.copy(props.data.code);
-
   state.value = 'copied';
-  setTimeout(() => {
-    state.value = '';
-  }, 1500);
 };
 
 // computed

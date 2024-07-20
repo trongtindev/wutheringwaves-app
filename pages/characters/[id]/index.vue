@@ -28,6 +28,33 @@ if (!data) throw createError({ statusCode: 404 });
 const tab = ref(0);
 
 // computed
+const stats = computed(() => {
+  if (!data.stats) return [];
+
+  return [
+    {
+      label: 'atk',
+      value: data.stats.atk
+    },
+    {
+      label: 'def',
+      value: data.stats.def
+    },
+    {
+      label: 'hp',
+      value: data.stats.hp
+    },
+    {
+      label: 'critRate',
+      value: 5
+    },
+    {
+      label: 'critDMG',
+      value: 150
+    }
+  ];
+});
+
 const weaponIcon = computed(() => {
   switch (item.weapon) {
     case 'Pistols':
@@ -119,19 +146,10 @@ useJsonld({
     />
 
     <v-card>
-      <card-title>
-        <template #title>
-          <div :class="`text-rarity${item.rarity}`">
-            <h1 class="text-h6">{{ title }}</h1>
-          </div>
-        </template>
-
-        <template #actions>
-          <edit-this-page
-            :path="`/tree/main/resources/characters/${item.slug}.json`"
-          />
-        </template>
-      </card-title>
+      <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
+        {{ title }}
+      </v-card-title>
+      <v-divider />
 
       <v-card-text>
         <v-row>
@@ -170,25 +188,19 @@ useJsonld({
               :innerHTML="descriptionLocalized"
             />
 
-            <div v-if="data.stats" class="mt-2">
-              <v-sheet class="pa-2 border rounded">
+            <!-- stats -->
+            <div v-if="stats.length > 0" class="mt-2">
+              <v-sheet
+                v-for="(element, index) in stats"
+                :key="index"
+                :class="{ 'mt-2': index > 0 }"
+                class="pa-2 border rounded"
+              >
                 <v-row>
-                  <v-col cols="3"> HP </v-col>
-                  <v-col> {{ data.stats.hp }} </v-col>
-                </v-row>
-              </v-sheet>
-
-              <v-sheet v-if="data.stats.def" class="pa-2 border rounded mt-2">
-                <v-row>
-                  <v-col cols="3"> DEF </v-col>
-                  <v-col> {{ data.stats.def }} </v-col>
-                </v-row>
-              </v-sheet>
-
-              <v-sheet v-if="data.stats.def" class="pa-2 border rounded mt-2">
-                <v-row>
-                  <v-col cols="3"> ATK </v-col>
-                  <v-col> {{ data.stats.atk }} </v-col>
+                  <v-col cols="3">
+                    {{ $t(`common.${element.label}`) }}
+                  </v-col>
+                  <v-col> {{ formatNumber(element.value) }} </v-col>
                 </v-row>
               </v-sheet>
             </div>
@@ -218,7 +230,7 @@ useJsonld({
 
       <v-divider v-if="data.modifiedTime" />
       <v-card-actions v-if="data.modifiedTime">
-        <h2 class="text-center text-caption w-100">
+        <h2 class="text-center text-body-2 w-100">
           {{
             $t('characters.lastUpdatedOn', {
               name: nameLocalized,

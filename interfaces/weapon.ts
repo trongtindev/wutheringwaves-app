@@ -52,6 +52,4 @@ export interface IWeaponData {
     }[];
     minLevel: number;
   }[];
-  ranks?: string;
-  ranksLocalized?: ILocalized;
 }

@@ -13,13 +13,14 @@ const items = (await resources.getCodes()).sort((a, b) => {
 });
 
 // seo meta
+const title = i18n.t('meta.codes.title', {
+  time: `${new Date().getMonth() + 1}/${new Date().getFullYear()}`
+});
 const description = i18n.t('meta.codes.description');
 
 useApp().title = i18n.t('codes.title');
 useHead({
-  title: i18n.t('meta.codes.title', {
-    time: `${new Date().getMonth() + 1}/${new Date().getFullYear()}`
-  }),
+  title,
   meta: [
     {
       name: 'keywords',
@@ -32,12 +33,35 @@ useSeoMeta({
   description,
   ogDescription: description
 });
+useJsonld(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: i18n.t('codes.redeemRequirement'),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: i18n.t('codes.redeemRequirementGuide')
+      }
+    },
+    {
+      '@type': 'Question',
+      name: i18n.t('codes.howToRedeem'),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: i18n.t('codes.howToRedeemGuide')
+      }
+    }
+  ]
+}));
 </script>
 
 <template>
+  <!-- list -->
   <v-card>
     <v-card-title tag="h1">
-      {{ $t('codes.title') }}
+      {{ title }}
     </v-card-title>
     <v-divider />
 
@@ -65,6 +89,30 @@ useSeoMeta({
           </tr>
         </tbody>
       </v-table>
+    </v-card-text>
+  </v-card>
+
+  <!-- How to Redeem -->
+  <v-card class="mt-2">
+    <v-card-title tag="h1">
+      {{ $t('codes.howToRedeem') }}
+    </v-card-title>
+    <v-divider />
+
+    <v-card-text>
+      {{ $t('codes.howToRedeemGuide') }}
+    </v-card-text>
+  </v-card>
+
+  <!-- Redeem Requirement -->
+  <v-card class="mt-2">
+    <v-card-title tag="h1">
+      {{ $t('codes.redeemRequirement') }}
+    </v-card-title>
+    <v-divider />
+
+    <v-card-text>
+      {{ $t('codes.redeemRequirementGuide') }}
     </v-card-text>
   </v-card>
 

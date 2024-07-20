@@ -1,7 +1,7 @@
 {
+  "$schema": "./.schema.json",
   "publishedTime": "2024-06-28T15:43:22.062Z",
-  "modifiedTime": "2024-07-09T15:18:08.528Z",
-  "slug": "stringmaster",
+  "modifiedTime": "2024-07-20T15:18:08.528Z",
   "skill": {
     "params": [
       ["12%", "12%", "2", "5", "12%"],
@@ -12,7 +12,7 @@
     ],
     "description": "Increases the DMG Bonus of all Resonance Attributes by {0}. When Resonance Skill hits a target, increases ATK by {1}, stacking up to {2}. This effect lasts for {3}s. When the equipped character is not on the field, increases their ATK by an additional {4}."
   },
-  "stats": { "atk": 40, "critRate": 800 },
+  "stats": { "atk": 500.00, "critRate": 36.00 },
   "ascensions": [
     {
       "cost": [
@@ -60,15 +60,7 @@
         { "item": 2, "quantity": 120000 }
       ],
       "minLevel": 80
-    },
-    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+    }
   ],
-  "description": "Stonard opens, the rope triggers, the sky is condensed, the enemy will be oppressed by the invisible momentum and unable to move, the Scar caused by the thousands of rapid electricity will never be able to heal.",
-  "ranks": [
-    "Increases the DMG Bonus by 12%. When dealing Resonance Skill DMG, increases ATK by 12%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 12%.",
-    "Increases the DMG Bonus by 15%. When dealing Resonance Skill DMG, increases ATK by 15%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 15%.",
-    "Increases the DMG Bonus by 18%. When dealing Resonance Skill DMG, increases ATK by 18%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 18%.",
-    "Increases the DMG Bonus by 21%. When dealing Resonance Skill DMG, increases ATK by 21%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 21%.",
-    "Increases the DMG Bonus by 24%. When dealing Resonance Skill DMG, increases ATK by 24%. This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 24%."
-  ]
+  "description": "Stonard opens, the rope triggers, the sky is condensed, the enemy will be oppressed by the invisible momentum and unable to move, the Scar caused by the thousands of rapid electricity will never be able to heal."
 }

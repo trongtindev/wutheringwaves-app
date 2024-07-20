@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wutheringwaves.app/weapon.schema.json",
+  "title": "Weapon",
+  "description": "A weapon in the catalog",
+  "type": "object",
+  "properties": {
+    "stats": {
+      "type": "object",
+      "properties": {
+        "atk": {
+          "type": "number"
+        },
+        "atkRate": {
+          "type": "number"
+        },
+        "critRate": {
+          "type": "number"
+        },
+        "critDMG": {
+          "type": "number"
+        }
+      }
+    },
+    "description": { "type": "string" },
+    "descriptionLocalized": { "type": "object" },
+    "skill": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "descriptionLocalized": { "type": "object" }
+      }
+    },
+    "ascensions": {
+      "type": "array",
+      "properties": {
+        "cost": {
+          "type": "array",
+          "properties": {
+            "item": { "type": "string" },
+            "quantity": { "type": "integer" }
+          }
+        },
+        "minLevel": { "type": "integer" }
+      }
+    }
+  }
+}

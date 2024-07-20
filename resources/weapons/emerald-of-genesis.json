@@ -1,7 +1,7 @@
 {
+  "$schema": "./.schema.json",
   "publishedTime": "2024-06-28T15:43:22.052Z",
-  "modifiedTime": "2024-07-09T15:18:08.474Z",
-  "slug": "emerald-of-genesis",
+  "modifiedTime": "2024-07-20T15:18:08.474Z",
   "skill": {
     "params": [
       ["12.8%", "6%", "2", "10"],
@@ -12,7 +12,7 @@
     ],
     "description": "Increases Energy Regen by {0}. When Resonance Skill is released, increases ATK by {1}, stacking up to {2} time(s). This effect lasts for {3}s."
   },
-  "stats": { "atk": 47, "critRate": 540 },
+  "stats": { "atk": 587.5, "critRate": 24.3 },
   "ascensions": [
     {
       "cost": [
@@ -60,15 +60,7 @@
         { "item": 2, "quantity": 120000 }
       ],
       "minLevel": 80
-    },
-    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+    }
   ],
-  "description": "Pay heed: the frigid blade reveals an icy current that amalgamates into a whirlpool of thoughts. Use this powerful sequence to crush your enemies with ease using the Sword.",
-  "ranks": [
-    "Increases Energy Regen by 12.8%. When Resonance Skill is released, increases ATK by 6%, stacking up to 2 time(s). This effect lasts for 10s.",
-    "Increases Energy Regen by 16%. When Resonance Skill is released, increases ATK by 7.5%, stacking up to 2 time(s). This effect lasts for 10s.",
-    "Increases Energy Regen by 19.2%. When Resonance Skill is released, increases ATK by 9%, stacking up to 2 time(s). This effect lasts for 10s.",
-    "Increases Energy Regen by 22.4%. When Resonance Skill is released, increases ATK by 10.5%, stacking up to 2 time(s). This effect lasts for 10s.",
-    "Increases Energy Regen by 25.6%. When Resonance Skill is released, increases ATK by 12%, stacking up to 2 time(s). This effect lasts for 10s."
-  ]
+  "description": "Pay heed: the frigid blade reveals an icy current that amalgamates into a whirlpool of thoughts. Use this powerful sequence to crush your enemies with ease using the Sword."
 }

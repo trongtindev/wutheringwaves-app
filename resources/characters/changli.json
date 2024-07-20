@@ -1,8 +1,7 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.814Z",
-  "modifiedTime": "2024-07-09T15:18:52.837Z",
   "$schema": "./.schema.json",
-  "slug": "changli",
+  "publishedTime": "2024-06-28T15:43:21.814Z",
+  "modifiedTime": "2024-07-20T15:18:52.837Z",
   "quote": "Eons of time on this vast land, all encapsulated in a humble game... I am fortunate to have you as my opponent.",
   "quoteLocalized": {
     "vi": "Bao niên kỷ trên mảnh đất rộng lớn này, tất cả gói gọn trong một trò chơi khiêm tốn... Tôi thật may mắn khi có được bạn là đối thủ của tôi.",
@@ -117,7 +116,7 @@
       "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Tripartite Flames</strong>, Heavy Attack <strong style=\"color: var(--color-highlight);\">Flaming Vow</strong>, and Resonance Liberation <strong style=\"color: var(--color-highlight);\">Radiance of Fealty</strong> ignore an additional {0} of the target's DEF when dealing damage."
     }
   ],
-  "stats": { "hp": 831, "def": 90, "atk": 37, "energy": 15000 },
+  "stats": { "hp": 10387, "def": 1099, "atk": 462 },
   "ascensions": [
     { "cost": [], "minLevel": 0 },
     {
@@ -251,6 +250,6 @@
       "name": "Crit. Rate+2.80%"
     }
   ],
-  "birthday": "None",
+  "birthday": "June 6th",
   "birthplace": "None"
 }
