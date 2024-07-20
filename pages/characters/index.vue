@@ -148,67 +148,7 @@ useSeoMeta({
             md="3"
             lg="2"
           >
-            <v-card :to="localePath(`/characters/${element.slug}`)">
-              <v-responsive
-                :aspect-ratio="1"
-                :style="`background-color: var(--color-background-rarity${element.rarity});`"
-              >
-                <v-img
-                  :src="`/characters/icons/${element.slug}.webp`"
-                  :alt="$t(element.name)"
-                  class="align-end h-100"
-                  cover
-                >
-                  <v-sheet
-                    style="left: 5px; top: 5px; position: absolute"
-                    class="pa-1 d-flex op-90 align-center rounded-xl"
-                  >
-                    <v-img
-                      v-if="element.attribute"
-                      class="bg-grey-darken-3 rounded-circle"
-                      :width="18"
-                      :height="18"
-                      :src="`/attributes/icons/${element.attribute.toLowerCase()}.png`"
-                      :alt="element.attribute"
-                    />
-                    <v-sheet
-                      v-else
-                      :width="18"
-                      class="bg-grey-darken-3 rounded-circle"
-                      :height="18"
-                    />
-
-                    <span
-                      v-if="owned && owned[element.name]"
-                      class="font-weight-bold ml-1 pr-1"
-                      :class="
-                        owned[element.name].resonanceChain > 6
-                          ? 'text-red'
-                          : 'text-green'
-                      "
-                    >
-                      S{{ owned[element.name].resonanceChain }}
-                    </span>
-
-                    <span
-                      v-if="element.upcoming"
-                      class="font-weight-bold ml-1 pr-1"
-                    >
-                      {{ $t('common.upcoming') }}
-                    </span>
-                  </v-sheet>
-                </v-img>
-              </v-responsive>
-              <v-divider />
-
-              <v-card-title
-                tag="h2"
-                class="text-center"
-                :class="`text-rarity${element.rarity}`"
-              >
-                {{ $t(element.name) }}
-              </v-card-title>
-            </v-card>
+            <character-card :data="element" />
           </v-col>
         </v-row>
       </v-card-text>

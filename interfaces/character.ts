@@ -25,6 +25,8 @@ export interface ICharacter {
   weapon?: WeaponType;
   rarity?: number;
   upcoming?: boolean;
+  version?: number;
+  suggestedEchos?: string[];
 }
 
 export interface ICharacterSkillData {

@@ -120,20 +120,7 @@ useSeoMeta({
             md="3"
             lg="2"
           >
-            <v-card :to="localePath(`/echos/${element.slug}`)">
-              <v-responsive :aspect-ratio="1">
-                <v-img
-                  :src="`/echos/icons/${element.slug}.webp`"
-                  class="align-end h-100"
-                  cover
-                />
-              </v-responsive>
-              <v-divider />
-
-              <v-card-title class="text-center" tag="h2">
-                {{ $t(element.name) }}
-              </v-card-title>
-            </v-card>
+            <echo-card :item="element" />
           </v-col>
         </v-row>
       </v-card-text>

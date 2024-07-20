@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Echo",
+  "type": "object",
+  "properties": {
+    "publishedTime": {
+      "type": "string"
+    },
+    "modifiedTime": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "cd": {
+            "type": "integer"
+          },
+          "params": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "description": { "type": "string" },
+          "descriptionLocalized": { "type": "object" }
+        },
+        "required": ["id", "cd", "name", "description"]
+      }
+    }
+  },
+  "required": ["publishedTime", "modifiedTime"]
+}

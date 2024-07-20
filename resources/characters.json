@@ -1,167 +1,173 @@
-[
-  {
-    "id": 1102,
-    "slug": "sanhua",
-    "name": "Sanhua",
-    "rarity": 4,
-    "attribute": "Glacio",
-    "weapon": "Sword"
-  },
-  {
-    "id": 1103,
-    "slug": "baizhi",
-    "name": "Baizhi",
-    "rarity": 4,
-    "attribute": "Glacio",
-    "weapon": "Rectifier"
-  },
-  {
-    "id": 1104,
-    "slug": "lingyang",
-    "name": "Lingyang",
-    "rarity": 5,
-    "attribute": "Glacio",
-    "weapon": "Gauntlets"
-  },
-  {
-    "id": 1202,
-    "slug": "chixia",
-    "name": "Chixia",
-    "rarity": 4,
-    "attribute": "Fusion",
-    "weapon": "Pistols"
-  },
-  {
-    "id": 1203,
-    "slug": "encore",
-    "name": "Encore",
-    "rarity": 5,
-    "attribute": "Fusion",
-    "weapon": "Rectifier"
-  },
-  {
-    "id": 1204,
-    "slug": "mortefi",
-    "name": "Mortefi",
-    "rarity": 4,
-    "attribute": "Fusion",
-    "weapon": "Pistols"
-  },
-  {
-    "id": 1205,
-    "slug": "changli",
-    "name": "Changli",
-    "rarity": 5,
-    "attribute": "Fusion",
-    "weapon": "Sword"
-  },
-  {
-    "id": 1301,
-    "slug": "calcharo",
-    "name": "Calcharo",
-    "rarity": 5,
-    "attribute": "Electro",
-    "weapon": "Broadblade"
-  },
-  {
-    "id": 1302,
-    "slug": "yinlin",
-    "name": "Yinlin",
-    "rarity": 5,
-    "attribute": "Electro",
-    "weapon": "Rectifier"
-  },
-  {
-    "id": 1303,
-    "slug": "yuanwu",
-    "name": "Yuanwu",
-    "rarity": 4,
-    "attribute": "Electro",
-    "weapon": "Gauntlets"
-  },
-  {
-    "id": 1304,
-    "slug": "jinhsi",
-    "name": "Jinhsi",
-    "rarity": 5,
-    "attribute": "Spectro",
-    "weapon": "Broadblade"
-  },
-  {
-    "id": 1402,
-    "slug": "yangyang",
-    "name": "Yangyang",
-    "rarity": 4,
-    "attribute": "Aero",
-    "weapon": "Sword"
-  },
-  {
-    "id": 1403,
-    "slug": "aalto",
-    "name": "Aalto",
-    "rarity": 4,
-    "attribute": "Aero",
-    "weapon": "Pistols"
-  },
-  {
-    "id": 1404,
-    "slug": "jiyan",
-    "name": "Jiyan",
-    "rarity": 5,
-    "attribute": "Aero",
-    "weapon": "Broadblade"
-  },
-  {
-    "id": 1405,
-    "slug": "jianxin",
-    "name": "Jianxin",
-    "rarity": 5,
-    "attribute": "Aero",
-    "weapon": "Gauntlets"
-  },
-  {
-    "id": 1503,
-    "slug": "verina",
-    "name": "Verina",
-    "rarity": 5,
-    "attribute": "Spectro",
-    "weapon": "Rectifier"
-  },
-  {
-    "id": 1601,
-    "slug": "taoqi",
-    "name": "Taoqi",
-    "rarity": 4,
-    "attribute": "Havoc",
-    "weapon": "Broadblade"
-  },
-  {
-    "id": 1602,
-    "slug": "danjin",
-    "name": "Danjin",
-    "rarity": 4,
-    "attribute": "Havoc",
-    "weapon": "Sword"
-  },
-  {
-    "id": -1,
-    "slug": "xiangli-yao",
-    "name": "Xiangli Yao",
-    "rarity": 5,
-    "upcoming": true
-  },
-  {
-    "id": -1,
-    "slug": "zhezhi",
-    "name": "Zhezhi",
-    "rarity": 5,
-    "upcoming": true
-  },
-  {
-    "id": -1,
-    "slug": "camellya",
-    "name": "Camellya",
-    "rarity": 5,
-    "upcoming": true
-  }
-]
+{
+  "$schema": "../public/schema/characters.schema.json",
+  "items": [
+    {
+      "id": 1102,
+      "slug": "sanhua",
+      "name": "Sanhua",
+      "rarity": 4,
+      "attribute": "Glacio",
+      "weapon": "Sword"
+    },
+    {
+      "id": 1103,
+      "slug": "baizhi",
+      "name": "Baizhi",
+      "rarity": 4,
+      "attribute": "Glacio",
+      "weapon": "Rectifier"
+    },
+    {
+      "id": 1104,
+      "slug": "lingyang",
+      "name": "Lingyang",
+      "rarity": 5,
+      "attribute": "Glacio",
+      "weapon": "Gauntlets"
+    },
+    {
+      "id": 1202,
+      "slug": "chixia",
+      "name": "Chixia",
+      "rarity": 4,
+      "attribute": "Fusion",
+      "weapon": "Pistols"
+    },
+    {
+      "id": 1203,
+      "slug": "encore",
+      "name": "Encore",
+      "rarity": 5,
+      "attribute": "Fusion",
+      "weapon": "Rectifier"
+    },
+    {
+      "id": 1204,
+      "slug": "mortefi",
+      "name": "Mortefi",
+      "rarity": 4,
+      "attribute": "Fusion",
+      "weapon": "Pistols"
+    },
+    {
+      "id": 1205,
+      "slug": "changli",
+      "name": "Changli",
+      "rarity": 5,
+      "attribute": "Fusion",
+      "weapon": "Sword"
+    },
+    {
+      "id": 1301,
+      "slug": "calcharo",
+      "name": "Calcharo",
+      "rarity": 5,
+      "attribute": "Electro",
+      "weapon": "Broadblade"
+    },
+    {
+      "id": 1302,
+      "slug": "yinlin",
+      "name": "Yinlin",
+      "rarity": 5,
+      "attribute": "Electro",
+      "weapon": "Rectifier"
+    },
+    {
+      "id": 1303,
+      "slug": "yuanwu",
+      "name": "Yuanwu",
+      "rarity": 4,
+      "attribute": "Electro",
+      "weapon": "Gauntlets"
+    },
+    {
+      "id": 1304,
+      "slug": "jinhsi",
+      "name": "Jinhsi",
+      "rarity": 5,
+      "attribute": "Spectro",
+      "weapon": "Broadblade",
+      "version": 1.1
+    },
+    {
+      "id": 1402,
+      "slug": "yangyang",
+      "name": "Yangyang",
+      "rarity": 4,
+      "attribute": "Aero",
+      "weapon": "Sword"
+    },
+    {
+      "id": 1403,
+      "slug": "aalto",
+      "name": "Aalto",
+      "rarity": 4,
+      "attribute": "Aero",
+      "weapon": "Pistols"
+    },
+    {
+      "id": 1404,
+      "slug": "jiyan",
+      "name": "Jiyan",
+      "rarity": 5,
+      "attribute": "Aero",
+      "weapon": "Broadblade"
+    },
+    {
+      "id": 1405,
+      "slug": "jianxin",
+      "name": "Jianxin",
+      "rarity": 5,
+      "attribute": "Aero",
+      "weapon": "Gauntlets"
+    },
+    {
+      "id": 1503,
+      "slug": "verina",
+      "name": "Verina",
+      "rarity": 5,
+      "attribute": "Spectro",
+      "weapon": "Rectifier"
+    },
+    {
+      "id": 1601,
+      "slug": "taoqi",
+      "name": "Taoqi",
+      "rarity": 4,
+      "attribute": "Havoc",
+      "weapon": "Broadblade"
+    },
+    {
+      "id": 1602,
+      "slug": "danjin",
+      "name": "Danjin",
+      "rarity": 4,
+      "attribute": "Havoc",
+      "weapon": "Sword"
+    },
+    {
+      "id": -1,
+      "slug": "xiangli-yao",
+      "name": "Xiangli Yao",
+      "rarity": 5,
+      "upcoming": true,
+      "version": 1.2
+    },
+    {
+      "id": -1,
+      "slug": "zhezhi",
+      "name": "Zhezhi",
+      "rarity": 5,
+      "upcoming": true,
+      "version": 1.2
+    },
+    {
+      "id": -1,
+      "slug": "camellya",
+      "name": "Camellya",
+      "rarity": 5,
+      "upcoming": true
+    }
+  ]
+}

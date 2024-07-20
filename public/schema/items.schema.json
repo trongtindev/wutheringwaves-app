@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Items",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "slug": { "type": "string" },
+          "rarity": { "type": "integer" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Currency",
+              "Development Materials",
+              "Valuables",
+              "Quests",
+              "Supplies",
+              "Resources",
+              "Weapons"
+            ]
+          },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" }
+        },
+        "required": ["id", "slug", "rarity", "category", "name"]
+      }
+    }
+  },
+  "required": ["items"]
+}

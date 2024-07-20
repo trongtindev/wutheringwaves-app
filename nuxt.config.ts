@@ -139,7 +139,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify']
   },
-
+  watch: ['resources/**/*'],
   vite: {
     vue: {
       template: {

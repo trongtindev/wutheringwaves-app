@@ -1,8 +1,5 @@
 {
-  "publishedTime": "2024-06-29T12:47:08.442Z",
-  "modifiedTime": "2024-07-09T15:18:53.246Z",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://wutheringwaves.app/item.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Item",
   "description": "A item in the catalog",
   "type": "object",
@@ -26,9 +23,12 @@
     },
     "cookingIngredients": {
       "type": "array",
-      "properties": {
-        "item": { "type": "string" },
-        "quantity": { "type": "integer" }
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": { "type": "string" },
+          "quantity": { "type": "integer" }
+        }
       }
     }
   },

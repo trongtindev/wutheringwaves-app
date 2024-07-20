@@ -5,6 +5,7 @@ export interface IEcho {
   class: string;
   attribute: string;
   sonataEffects: string[];
+  suggestedCharacters?: string[];
 }
 
 export interface IEchoData {

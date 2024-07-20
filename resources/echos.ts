@@ -1,5 +1,5 @@
 import type { IEcho } from '@/interfaces/echo';
 import json from './echos.json';
 
-const items = json as IEcho[];
+const items = json.items as IEcho[];
 export default items;

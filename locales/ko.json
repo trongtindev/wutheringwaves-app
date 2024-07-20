@@ -206,7 +206,8 @@
     "build": "{name} Build",
     "calculations": "{name} Calculations",
     "profile": "Profile",
-    "gameplayAndTeams": "Gameplay and Teams"
+    "gameplayAndTeams": "Gameplay and Teams",
+    "suggestedEchos": "Suggested Echos for {name}"
   },
   "weapons": {
     "title": "Weapons",
@@ -229,7 +230,8 @@
     "title": "Echos",
     "cost": "Cost",
     "sonataEffect": "Sonata effect",
-    "sameElementCharacters": "Same Element Characters"
+    "sameElementCharacters": "Same Element Characters",
+    "suggestedCharacters": "Suggested characters for {name}"
   },
   "faqs": {
     "0": {

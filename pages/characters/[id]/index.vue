@@ -280,6 +280,9 @@ useJsonld({
     <div :class="{ hidden: tab != 0 }">
       <characters-profile :item="item" :data="data" />
     </div>
+    <div :class="{ hidden: tab != 1 }">
+      <characters-build :item="item" :data="data" />
+    </div>
 
     <div class="mt-4">
       <comments :channel="route.path" />

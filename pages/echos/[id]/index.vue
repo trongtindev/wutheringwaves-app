@@ -1,8 +1,13 @@
 <script setup lang="ts">
+// uses
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
+
+// fetch
+const characters = await resources.getCharacters();
+const characterDict = Object.fromEntries(characters.map((e) => [e.slug, e]));
 
 // states
 const echos = await resources.echos();
@@ -23,6 +28,15 @@ const skillDescription = computed(() => {
   //   /\{(\d+)\}/g,
   //   (_, index) => params[index]
   // );
+});
+
+const suggestedCharacters = computed(() => {
+  if (item.suggestedCharacters) {
+    return item.suggestedCharacters.map((slug) => {
+      return characterDict[slug];
+    });
+  }
+  return [];
 });
 
 // seo meta
@@ -72,17 +86,10 @@ useJsonld({
 <template>
   <div v-if="item">
     <v-card>
-      <card-title>
-        <template #title>
-          <h1 class="text-h6">{{ nameLocalized }}</h1>
-        </template>
-
-        <template #actions>
-          <edit-this-page
-            :path="`/tree/main/resources/echos/${item.slug}.json`"
-          />
-        </template>
-      </card-title>
+      <v-card-title tag="h1">
+        {{ nameLocalized }}
+      </v-card-title>
+      <v-divider />
 
       <v-card-text>
         <v-row>
@@ -114,6 +121,32 @@ useJsonld({
 
       <v-card-text>
         {{ item.sonataEffects }}
+      </v-card-text>
+    </v-card>
+
+    <!-- Suggested Characters -->
+    <v-card class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('echos.suggestedCharacters', { name: nameLocalized }) }}
+      </v-card-title>
+      <v-divider />
+
+      <v-card-text>
+        <v-row>
+          <v-col
+            v-for="(element, index) in suggestedCharacters"
+            :key="index"
+            cols="6"
+            sm="4"
+            md="3"
+            lg="2"
+          >
+            <character-card
+              :data="element"
+              :custom-name="`${element.name} Build`"
+            />
+          </v-col>
+        </v-row>
       </v-card-text>
     </v-card>
 

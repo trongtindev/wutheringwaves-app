@@ -1,457 +1,460 @@
-[
-  {
-    "id": 21010011,
-    "slug": "training-broadblade",
-    "name": "Training Broadblade",
-    "type": "Broadblade",
-    "rarity": 1
-  },
-  {
-    "id": 21010012,
-    "slug": "tyro-broadblade",
-    "name": "Tyro Broadblade",
-    "type": "Broadblade",
-    "rarity": 2
-  },
-  {
-    "id": 21010013,
-    "slug": "broadblade-of-night",
-    "name": "Broadblade of Night",
-    "type": "Broadblade",
-    "rarity": 3
-  },
-  {
-    "id": 21010015,
-    "slug": "lustrous-razor",
-    "name": "Lustrous Razor",
-    "type": "Broadblade",
-    "rarity": 5
-  },
-  {
-    "id": 21010016,
-    "slug": "verdant-summit",
-    "name": "Verdant Summit",
-    "type": "Broadblade",
-    "rarity": 5
-  },
-  {
-    "id": 21010023,
-    "slug": "originite-type-i",
-    "name": "Originite: Type I",
-    "type": "Broadblade",
-    "rarity": 3
-  },
-  {
-    "id": 21010024,
-    "slug": "discord",
-    "name": "Discord",
-    "type": "Broadblade",
-    "rarity": 4
-  },
-  {
-    "id": 21010026,
-    "slug": "ages-of-harvest",
-    "name": "Ages of Harvest",
-    "type": "Broadblade",
-    "rarity": 5
-  },
-  {
-    "id": 21010034,
-    "slug": "broadblade-41",
-    "name": "Broadblade#41",
-    "type": "Broadblade",
-    "rarity": 4
-  },
-  {
-    "id": 21010043,
-    "slug": "broadblade-of-voyager",
-    "name": "Broadblade of Voyager",
-    "type": "Broadblade",
-    "rarity": 3
-  },
-  {
-    "id": 21010044,
-    "slug": "dauntless-evernight",
-    "name": "Dauntless Evernight",
-    "type": "Broadblade",
-    "rarity": 4
-  },
-  {
-    "id": 21010053,
-    "slug": "guardian-broadblade",
-    "name": "Guardian Broadblade",
-    "type": "Broadblade",
-    "rarity": 3
-  },
-  {
-    "id": 21010063,
-    "slug": "beguiling-melody",
-    "name": "Beguiling Melody",
-    "type": "Broadblade",
-    "rarity": 3
-  },
-  {
-    "id": 21010064,
-    "slug": "helios-cleaver",
-    "name": "Helios Cleaver",
-    "type": "Broadblade",
-    "rarity": 4
-  },
-  {
-    "id": 21010074,
-    "slug": "autumntrace",
-    "name": "Autumntrace",
-    "type": "Broadblade",
-    "rarity": 4
-  },
-  {
-    "id": 21020011,
-    "slug": "training-sword",
-    "name": "Training Sword",
-    "type": "Sword",
-    "rarity": 1
-  },
-  {
-    "id": 21020012,
-    "slug": "tyro-sword",
-    "name": "Tyro Sword",
-    "type": "Sword",
-    "rarity": 2
-  },
-  {
-    "id": 21020013,
-    "slug": "sword-of-night",
-    "name": "Sword of Night",
-    "type": "Sword",
-    "rarity": 3
-  },
-  {
-    "id": 21020015,
-    "slug": "emerald-of-genesis",
-    "name": "Emerald of Genesis",
-    "type": "Sword",
-    "rarity": 5
-  },
-  {
-    "id": 21020016,
-    "slug": "blazing-brilliance",
-    "name": "Blazing Brilliance",
-    "type": "Sword",
-    "rarity": 5
-  },
-  {
-    "id": 21020023,
-    "slug": "originite-type-ii",
-    "name": "Originite: Type II",
-    "type": "Sword",
-    "rarity": 3
-  },
-  {
-    "id": 21020024,
-    "slug": "scale-slasher",
-    "name": "Scale: Slasher",
-    "type": "Sword",
-    "rarity": 4
-  },
-  {
-    "id": 21020034,
-    "slug": "sword-18",
-    "name": "Sword#18",
-    "type": "Sword",
-    "rarity": 4
-  },
-  {
-    "id": 21020043,
-    "slug": "sword-of-voyager",
-    "name": "Sword of Voyager",
-    "type": "Sword",
-    "rarity": 3
-  },
-  {
-    "id": 21020044,
-    "slug": "commando-of-conviction",
-    "name": "Commando of Conviction",
-    "type": "Sword",
-    "rarity": 4
-  },
-  {
-    "id": 21020053,
-    "slug": "guardian-sword",
-    "name": "Guardian Sword",
-    "type": "Sword",
-    "rarity": 3
-  },
-  {
-    "id": 21020064,
-    "slug": "lunar-cutter",
-    "name": "Lunar Cutter",
-    "type": "Sword",
-    "rarity": 4
-  },
-  {
-    "id": 21020074,
-    "slug": "lumingloss",
-    "name": "Lumingloss",
-    "type": "Sword",
-    "rarity": 4
-  },
-  {
-    "id": 21030011,
-    "slug": "training-pistols",
-    "name": "Training Pistols",
-    "type": "Pistols",
-    "rarity": 1
-  },
-  {
-    "id": 21030012,
-    "slug": "tyro-pistols",
-    "name": "Tyro Pistols",
-    "type": "Pistols",
-    "rarity": 2
-  },
-  {
-    "id": 21030013,
-    "slug": "pistols-of-night",
-    "name": "Pistols of Night",
-    "type": "Pistols",
-    "rarity": 3
-  },
-  {
-    "id": 21030015,
-    "slug": "static-mist",
-    "name": "Static Mist",
-    "type": "Pistols",
-    "rarity": 5
-  },
-  {
-    "id": 21030023,
-    "slug": "originite-type-iii",
-    "name": "Originite: Type III",
-    "type": "Pistols",
-    "rarity": 3
-  },
-  {
-    "id": 21030024,
-    "slug": "cadenza",
-    "name": "Cadenza",
-    "type": "Pistols",
-    "rarity": 4
-  },
-  {
-    "id": 21030034,
-    "slug": "pistols-26",
-    "name": "Pistols#26",
-    "type": "Pistols",
-    "rarity": 4
-  },
-  {
-    "id": 21030043,
-    "slug": "pistols-of-voyager",
-    "name": "Pistols of Voyager",
-    "type": "Pistols",
-    "rarity": 3
-  },
-  {
-    "id": 21030044,
-    "slug": "undying-flame",
-    "name": "Undying Flame",
-    "type": "Pistols",
-    "rarity": 4
-  },
-  {
-    "id": 21030053,
-    "slug": "guardian-pistols",
-    "name": "Guardian Pistols",
-    "type": "Pistols",
-    "rarity": 3
-  },
-  {
-    "id": 21030064,
-    "slug": "novaburst",
-    "name": "Novaburst",
-    "type": "Pistols",
-    "rarity": 4
-  },
-  {
-    "id": 21030074,
-    "slug": "thunderbolt",
-    "name": "Thunderbolt",
-    "type": "Pistols",
-    "rarity": 4
-  },
-  {
-    "id": 21040011,
-    "slug": "training-gauntlets",
-    "name": "Training Gauntlets",
-    "type": "Gauntlets",
-    "rarity": 1
-  },
-  {
-    "id": 21040012,
-    "slug": "tyro-gauntlets",
-    "name": "Tyro Gauntlets",
-    "type": "Gauntlets",
-    "rarity": 2
-  },
-  {
-    "id": 21040013,
-    "slug": "gauntlets-of-night",
-    "name": "Gauntlets of Night",
-    "type": "Gauntlets",
-    "rarity": 3
-  },
-  {
-    "id": 21040015,
-    "slug": "abyss-surges",
-    "name": "Abyss Surges",
-    "type": "Gauntlets",
-    "rarity": 5
-  },
-  {
-    "id": 21040023,
-    "slug": "originite-type-iv",
-    "name": "Originite: Type IV",
-    "type": "Gauntlets",
-    "rarity": 3
-  },
-  {
-    "id": 21040024,
-    "slug": "marcato",
-    "name": "Marcato",
-    "type": "Gauntlets",
-    "rarity": 4
-  },
-  {
-    "id": 21040034,
-    "slug": "gauntlets-21d",
-    "name": "Gauntlets#21D",
-    "type": "Gauntlets",
-    "rarity": 4
-  },
-  {
-    "id": 21040043,
-    "slug": "gauntlets-of-voyager",
-    "name": "Gauntlets of Voyager",
-    "type": "Gauntlets",
-    "rarity": 3
-  },
-  {
-    "id": 21040044,
-    "slug": "amity-accord",
-    "name": "Amity Accord",
-    "type": "Gauntlets",
-    "rarity": 4
-  },
-  {
-    "id": 21040053,
-    "slug": "guardian-gauntlets",
-    "name": "Guardian Gauntlets",
-    "type": "Gauntlets",
-    "rarity": 3
-  },
-  {
-    "id": 21040064,
-    "slug": "hollow-mirage",
-    "name": "Hollow Mirage",
-    "type": "Gauntlets",
-    "rarity": 4
-  },
-  {
-    "id": 21040074,
-    "slug": "stonard",
-    "name": "Stonard",
-    "type": "Gauntlets",
-    "rarity": 4
-  },
-  {
-    "id": 21050011,
-    "slug": "training-rectifier",
-    "name": "Training Rectifier",
-    "type": "Rectifier",
-    "rarity": 1
-  },
-  {
-    "id": 21050012,
-    "slug": "tyro-rectifier",
-    "name": "Tyro Rectifier",
-    "type": "Rectifier",
-    "rarity": 2
-  },
-  {
-    "id": 21050013,
-    "slug": "rectifier-of-night",
-    "name": "Rectifier of Night",
-    "type": "Rectifier",
-    "rarity": 3
-  },
-  {
-    "id": 21050015,
-    "slug": "cosmic-ripples",
-    "name": "Cosmic Ripples",
-    "type": "Rectifier",
-    "rarity": 5
-  },
-  {
-    "id": 21050016,
-    "slug": "stringmaster",
-    "name": "Stringmaster",
-    "type": "Rectifier",
-    "rarity": 5
-  },
-  {
-    "id": 21050023,
-    "slug": "originite-type-v",
-    "name": "Originite: Type V",
-    "type": "Rectifier",
-    "rarity": 3
-  },
-  {
-    "id": 21050024,
-    "slug": "variation",
-    "name": "Variation",
-    "type": "Rectifier",
-    "rarity": 4
-  },
-  {
-    "id": 21050034,
-    "slug": "rectifier-25",
-    "name": "Rectifier#25",
-    "type": "Rectifier",
-    "rarity": 4
-  },
-  {
-    "id": 21050043,
-    "slug": "rectifier-of-voyager",
-    "name": "Rectifier of Voyager",
-    "type": "Rectifier",
-    "rarity": 3
-  },
-  {
-    "id": 21050044,
-    "slug": "jinzhou-keeper",
-    "name": "Jinzhou Keeper",
-    "type": "Rectifier",
-    "rarity": 4
-  },
-  {
-    "id": 21050053,
-    "slug": "guardian-rectifier",
-    "name": "Guardian Rectifier",
-    "type": "Rectifier",
-    "rarity": 3
-  },
-  {
-    "id": 21050064,
-    "slug": "comet-flare",
-    "name": "Comet Flare",
-    "type": "Rectifier",
-    "rarity": 4
-  },
-  {
-    "id": 21050074,
-    "slug": "augment",
-    "name": "Augment",
-    "type": "Rectifier",
-    "rarity": 4
-  }
-]
+{
+  "$schema": "../public/schema/weapons.schema.json",
+  "items": [
+    {
+      "id": 21010011,
+      "slug": "training-broadblade",
+      "name": "Training Broadblade",
+      "type": "Broadblade",
+      "rarity": 1
+    },
+    {
+      "id": 21010012,
+      "slug": "tyro-broadblade",
+      "name": "Tyro Broadblade",
+      "type": "Broadblade",
+      "rarity": 2
+    },
+    {
+      "id": 21010013,
+      "slug": "broadblade-of-night",
+      "name": "Broadblade of Night",
+      "type": "Broadblade",
+      "rarity": 3
+    },
+    {
+      "id": 21010015,
+      "slug": "lustrous-razor",
+      "name": "Lustrous Razor",
+      "type": "Broadblade",
+      "rarity": 5
+    },
+    {
+      "id": 21010016,
+      "slug": "verdant-summit",
+      "name": "Verdant Summit",
+      "type": "Broadblade",
+      "rarity": 5
+    },
+    {
+      "id": 21010023,
+      "slug": "originite-type-i",
+      "name": "Originite: Type I",
+      "type": "Broadblade",
+      "rarity": 3
+    },
+    {
+      "id": 21010024,
+      "slug": "discord",
+      "name": "Discord",
+      "type": "Broadblade",
+      "rarity": 4
+    },
+    {
+      "id": 21010026,
+      "slug": "ages-of-harvest",
+      "name": "Ages of Harvest",
+      "type": "Broadblade",
+      "rarity": 5
+    },
+    {
+      "id": 21010034,
+      "slug": "broadblade-41",
+      "name": "Broadblade#41",
+      "type": "Broadblade",
+      "rarity": 4
+    },
+    {
+      "id": 21010043,
+      "slug": "broadblade-of-voyager",
+      "name": "Broadblade of Voyager",
+      "type": "Broadblade",
+      "rarity": 3
+    },
+    {
+      "id": 21010044,
+      "slug": "dauntless-evernight",
+      "name": "Dauntless Evernight",
+      "type": "Broadblade",
+      "rarity": 4
+    },
+    {
+      "id": 21010053,
+      "slug": "guardian-broadblade",
+      "name": "Guardian Broadblade",
+      "type": "Broadblade",
+      "rarity": 3
+    },
+    {
+      "id": 21010063,
+      "slug": "beguiling-melody",
+      "name": "Beguiling Melody",
+      "type": "Broadblade",
+      "rarity": 3
+    },
+    {
+      "id": 21010064,
+      "slug": "helios-cleaver",
+      "name": "Helios Cleaver",
+      "type": "Broadblade",
+      "rarity": 4
+    },
+    {
+      "id": 21010074,
+      "slug": "autumntrace",
+      "name": "Autumntrace",
+      "type": "Broadblade",
+      "rarity": 4
+    },
+    {
+      "id": 21020011,
+      "slug": "training-sword",
+      "name": "Training Sword",
+      "type": "Sword",
+      "rarity": 1
+    },
+    {
+      "id": 21020012,
+      "slug": "tyro-sword",
+      "name": "Tyro Sword",
+      "type": "Sword",
+      "rarity": 2
+    },
+    {
+      "id": 21020013,
+      "slug": "sword-of-night",
+      "name": "Sword of Night",
+      "type": "Sword",
+      "rarity": 3
+    },
+    {
+      "id": 21020015,
+      "slug": "emerald-of-genesis",
+      "name": "Emerald of Genesis",
+      "type": "Sword",
+      "rarity": 5
+    },
+    {
+      "id": 21020016,
+      "slug": "blazing-brilliance",
+      "name": "Blazing Brilliance",
+      "type": "Sword",
+      "rarity": 5
+    },
+    {
+      "id": 21020023,
+      "slug": "originite-type-ii",
+      "name": "Originite: Type II",
+      "type": "Sword",
+      "rarity": 3
+    },
+    {
+      "id": 21020024,
+      "slug": "scale-slasher",
+      "name": "Scale: Slasher",
+      "type": "Sword",
+      "rarity": 4
+    },
+    {
+      "id": 21020034,
+      "slug": "sword-18",
+      "name": "Sword#18",
+      "type": "Sword",
+      "rarity": 4
+    },
+    {
+      "id": 21020043,
+      "slug": "sword-of-voyager",
+      "name": "Sword of Voyager",
+      "type": "Sword",
+      "rarity": 3
+    },
+    {
+      "id": 21020044,
+      "slug": "commando-of-conviction",
+      "name": "Commando of Conviction",
+      "type": "Sword",
+      "rarity": 4
+    },
+    {
+      "id": 21020053,
+      "slug": "guardian-sword",
+      "name": "Guardian Sword",
+      "type": "Sword",
+      "rarity": 3
+    },
+    {
+      "id": 21020064,
+      "slug": "lunar-cutter",
+      "name": "Lunar Cutter",
+      "type": "Sword",
+      "rarity": 4
+    },
+    {
+      "id": 21020074,
+      "slug": "lumingloss",
+      "name": "Lumingloss",
+      "type": "Sword",
+      "rarity": 4
+    },
+    {
+      "id": 21030011,
+      "slug": "training-pistols",
+      "name": "Training Pistols",
+      "type": "Pistols",
+      "rarity": 1
+    },
+    {
+      "id": 21030012,
+      "slug": "tyro-pistols",
+      "name": "Tyro Pistols",
+      "type": "Pistols",
+      "rarity": 2
+    },
+    {
+      "id": 21030013,
+      "slug": "pistols-of-night",
+      "name": "Pistols of Night",
+      "type": "Pistols",
+      "rarity": 3
+    },
+    {
+      "id": 21030015,
+      "slug": "static-mist",
+      "name": "Static Mist",
+      "type": "Pistols",
+      "rarity": 5
+    },
+    {
+      "id": 21030023,
+      "slug": "originite-type-iii",
+      "name": "Originite: Type III",
+      "type": "Pistols",
+      "rarity": 3
+    },
+    {
+      "id": 21030024,
+      "slug": "cadenza",
+      "name": "Cadenza",
+      "type": "Pistols",
+      "rarity": 4
+    },
+    {
+      "id": 21030034,
+      "slug": "pistols-26",
+      "name": "Pistols#26",
+      "type": "Pistols",
+      "rarity": 4
+    },
+    {
+      "id": 21030043,
+      "slug": "pistols-of-voyager",
+      "name": "Pistols of Voyager",
+      "type": "Pistols",
+      "rarity": 3
+    },
+    {
+      "id": 21030044,
+      "slug": "undying-flame",
+      "name": "Undying Flame",
+      "type": "Pistols",
+      "rarity": 4
+    },
+    {
+      "id": 21030053,
+      "slug": "guardian-pistols",
+      "name": "Guardian Pistols",
+      "type": "Pistols",
+      "rarity": 3
+    },
+    {
+      "id": 21030064,
+      "slug": "novaburst",
+      "name": "Novaburst",
+      "type": "Pistols",
+      "rarity": 4
+    },
+    {
+      "id": 21030074,
+      "slug": "thunderbolt",
+      "name": "Thunderbolt",
+      "type": "Pistols",
+      "rarity": 4
+    },
+    {
+      "id": 21040011,
+      "slug": "training-gauntlets",
+      "name": "Training Gauntlets",
+      "type": "Gauntlets",
+      "rarity": 1
+    },
+    {
+      "id": 21040012,
+      "slug": "tyro-gauntlets",
+      "name": "Tyro Gauntlets",
+      "type": "Gauntlets",
+      "rarity": 2
+    },
+    {
+      "id": 21040013,
+      "slug": "gauntlets-of-night",
+      "name": "Gauntlets of Night",
+      "type": "Gauntlets",
+      "rarity": 3
+    },
+    {
+      "id": 21040015,
+      "slug": "abyss-surges",
+      "name": "Abyss Surges",
+      "type": "Gauntlets",
+      "rarity": 5
+    },
+    {
+      "id": 21040023,
+      "slug": "originite-type-iv",
+      "name": "Originite: Type IV",
+      "type": "Gauntlets",
+      "rarity": 3
+    },
+    {
+      "id": 21040024,
+      "slug": "marcato",
+      "name": "Marcato",
+      "type": "Gauntlets",
+      "rarity": 4
+    },
+    {
+      "id": 21040034,
+      "slug": "gauntlets-21d",
+      "name": "Gauntlets#21D",
+      "type": "Gauntlets",
+      "rarity": 4
+    },
+    {
+      "id": 21040043,
+      "slug": "gauntlets-of-voyager",
+      "name": "Gauntlets of Voyager",
+      "type": "Gauntlets",
+      "rarity": 3
+    },
+    {
+      "id": 21040044,
+      "slug": "amity-accord",
+      "name": "Amity Accord",
+      "type": "Gauntlets",
+      "rarity": 4
+    },
+    {
+      "id": 21040053,
+      "slug": "guardian-gauntlets",
+      "name": "Guardian Gauntlets",
+      "type": "Gauntlets",
+      "rarity": 3
+    },
+    {
+      "id": 21040064,
+      "slug": "hollow-mirage",
+      "name": "Hollow Mirage",
+      "type": "Gauntlets",
+      "rarity": 4
+    },
+    {
+      "id": 21040074,
+      "slug": "stonard",
+      "name": "Stonard",
+      "type": "Gauntlets",
+      "rarity": 4
+    },
+    {
+      "id": 21050011,
+      "slug": "training-rectifier",
+      "name": "Training Rectifier",
+      "type": "Rectifier",
+      "rarity": 1
+    },
+    {
+      "id": 21050012,
+      "slug": "tyro-rectifier",
+      "name": "Tyro Rectifier",
+      "type": "Rectifier",
+      "rarity": 2
+    },
+    {
+      "id": 21050013,
+      "slug": "rectifier-of-night",
+      "name": "Rectifier of Night",
+      "type": "Rectifier",
+      "rarity": 3
+    },
+    {
+      "id": 21050015,
+      "slug": "cosmic-ripples",
+      "name": "Cosmic Ripples",
+      "type": "Rectifier",
+      "rarity": 5
+    },
+    {
+      "id": 21050016,
+      "slug": "stringmaster",
+      "name": "Stringmaster",
+      "type": "Rectifier",
+      "rarity": 5
+    },
+    {
+      "id": 21050023,
+      "slug": "originite-type-v",
+      "name": "Originite: Type V",
+      "type": "Rectifier",
+      "rarity": 3
+    },
+    {
+      "id": 21050024,
+      "slug": "variation",
+      "name": "Variation",
+      "type": "Rectifier",
+      "rarity": 4
+    },
+    {
+      "id": 21050034,
+      "slug": "rectifier-25",
+      "name": "Rectifier#25",
+      "type": "Rectifier",
+      "rarity": 4
+    },
+    {
+      "id": 21050043,
+      "slug": "rectifier-of-voyager",
+      "name": "Rectifier of Voyager",
+      "type": "Rectifier",
+      "rarity": 3
+    },
+    {
+      "id": 21050044,
+      "slug": "jinzhou-keeper",
+      "name": "Jinzhou Keeper",
+      "type": "Rectifier",
+      "rarity": 4
+    },
+    {
+      "id": 21050053,
+      "slug": "guardian-rectifier",
+      "name": "Guardian Rectifier",
+      "type": "Rectifier",
+      "rarity": 3
+    },
+    {
+      "id": 21050064,
+      "slug": "comet-flare",
+      "name": "Comet Flare",
+      "type": "Rectifier",
+      "rarity": 4
+    },
+    {
+      "id": 21050074,
+      "slug": "augment",
+      "name": "Augment",
+      "type": "Rectifier",
+      "rarity": 4
+    }
+  ]
+}

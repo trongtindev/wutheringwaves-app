@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Character",
+  "type": "object",
+  "properties": {
+    "publishedTime": {
+      "type": "string"
+    },
+    "modifiedTime": {
+      "type": "string"
+    },
+    "birthday": { "type": "string" },
+    "birthplace": { "type": "string" },
+    "quote": { "type": "string" },
+    "quoteLocalized": { "type": "object" },
+    "description": { "type": "string" },
+    "descriptionLocalized": { "type": "object" },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Basic Attack",
+              "Resonance Skill",
+              "Resonance Liberation",
+              "Inherent Skill",
+              "Intro Skill",
+              "Outro Skill",
+              "Forte Circuit"
+            ]
+          },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" },
+          "description": { "type": "string" },
+          "descriptionLocalized": { "type": "object" }
+        },
+        "required": ["slug", "type", "name", "description"]
+      }
+    },
+    "ascensions": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "cost": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "type": "integer"
+                },
+                "quantity": {
+                  "type": "integer"
+                }
+              },
+              "required": ["item", "quantity"]
+            }
+          },
+          "minLevel": {
+            "type": "integer"
+          }
+        },
+        "required": ["cost", "minLevel"]
+      }
+    }
+  },
+  "required": ["publishedTime", "modifiedTime"]
+}

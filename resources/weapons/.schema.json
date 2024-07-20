@@ -1,8 +1,6 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://wutheringwaves.app/weapon.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Weapon",
-  "description": "A weapon in the catalog",
   "type": "object",
   "properties": {
     "stats": {
@@ -34,15 +32,18 @@
     },
     "ascensions": {
       "type": "array",
-      "properties": {
-        "cost": {
-          "type": "array",
-          "properties": {
-            "item": { "type": "string" },
-            "quantity": { "type": "integer" }
-          }
-        },
-        "minLevel": { "type": "integer" }
+      "items": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "array",
+            "properties": {
+              "item": { "type": "string" },
+              "quantity": { "type": "integer" }
+            }
+          },
+          "minLevel": { "type": "integer" }
+        }
       }
     }
   }

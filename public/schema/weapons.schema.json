@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Weapons",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "slug": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["Sword", "Rectifier", "Broadblade", "Gauntlets", "Pistols"]
+          },
+          "rarity": { "type": "integer" },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" }
+        },
+        "required": ["id", "slug", "name", "rarity", "type"]
+      }
+    }
+  },
+  "required": ["items"]
+}

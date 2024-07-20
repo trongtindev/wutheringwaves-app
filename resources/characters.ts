@@ -2,7 +2,7 @@ import type { ICharacter } from '@/interfaces/character';
 import json from './characters.json';
 
 const items = [
-  ...json,
+  ...json.items,
   {
     slug: 'rover',
     name: 'Rover',

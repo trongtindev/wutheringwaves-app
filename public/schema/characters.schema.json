@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Characters",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" },
+          "rarity": { "type": "integer" },
+          "weapon": {
+            "type": "string",
+            "enum": ["Sword", "Rectifier", "Broadblade", "Gauntlets", "Pistols"]
+          },
+          "attribute": {
+            "type": "string",
+            "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
+          },
+          "version": { "type": "number" },
+          "suggestedEchos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["id", "slug", "name", "rarity"]
+      }
+    }
+  },
+  "required": ["items"],
+  "components": {
+    "schemas": {
+      "characterSlug": {
+        "type": "string",
+        "enum": [
+          "sanhua",
+          "baizhi",
+          "lingyang",
+          "chixia",
+          "encore",
+          "mortefi",
+          "changli",
+          "calcharo",
+          "yinlin",
+          "yuanwu",
+          "jinhsi",
+          "yangyang",
+          "aalto",
+          "jiyan",
+          "jianxin",
+          "verina",
+          "taoqi",
+          "danjin",
+          "xiangli-yao",
+          "zhezhi",
+          "camellya",
+          "rover-havoc"
+        ]
+      }
+    }
+  }
+}
