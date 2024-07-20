@@ -7,7 +7,6 @@ import {
   VStepperVerticalItem,
   VStepperVerticalActions
 } from 'vuetify/labs/VStepperVertical';
-import 'vuetify/styles';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({

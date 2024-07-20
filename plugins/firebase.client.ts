@@ -2,7 +2,12 @@ import type { FirebaseApp } from 'firebase/app';
 import type { Auth } from 'firebase/auth';
 import type { Messaging } from 'firebase/messaging';
 
+/**
+ * @deprecated
+ */
 export default defineNuxtPlugin(async () => {
+  console.log('firebasePlugin');
+
   // uses
   const { isCrawler } = useDevice();
   const runtimeConfig = useRuntimeConfig();
@@ -31,17 +36,15 @@ export default defineNuxtPlugin(async () => {
       measurementId: 'G-TJSX2XNTR9'
     });
 
-    console.debug('getAuth');
     const { getAuth } = await import('firebase/auth');
     auth = getAuth(app);
 
-    console.debug('getMessaging');
     const { getMessaging, isSupported } = await import('firebase/messaging');
     if (await isSupported()) {
       messaging = getMessaging(app);
     }
   } else {
-    console.warn('firebasePlugin', 'ignore');
+    console.log('firebasePlugin', 'ignore');
   }
 
   // exports

@@ -13,7 +13,6 @@ const i18nHead = useLocaleHead({
 const app = useApp();
 const auth = useAuth();
 const backup = useBackup();
-const database = useDatabase();
 const vuetifyLocale = useLocale();
 const runtimeConfig = useRuntimeConfig();
 
@@ -22,7 +21,6 @@ if (import.meta.client) {
   app.initialize();
   auth.initialize();
   backup.initialize();
-  database.initialize();
 }
 
 // lifecycle

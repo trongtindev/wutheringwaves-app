@@ -15,7 +15,7 @@
     "format": "prettier --write ./",
     "preview": "nuxt preview",
     "cleanup": "nuxi cleanup",
-    "analyze": "nuxt build --analyze",
+    "analyze": "nuxi analyze",
     "typecheck": "nuxt typecheck",
     "upgrade": "nuxt upgrade",
     "generate": "nuxt generate",
@@ -85,6 +85,7 @@
     "rxdb": "^15.28.0",
     "rxjs": "^7.8.1",
     "sass": "^1.77.8",
+    "sass-loader": "^14.2.1",
     "typescript": "^5.5.3",
     "url-slug": "^4.0.1",
     "vite-plugin-eslint2": "^4.4.0",
@@ -99,3 +100,4 @@
     "*.{ts,mjs}": "pnpm run lint"
   }
 }
+

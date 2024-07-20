@@ -81,7 +81,7 @@ export default defineNuxtConfig({
     ]
   },
 
-  css: ['~/assets/tiptap.scss', '~/assets/vuetify.css'],
+  css: ['~/assets/main.scss', '~/assets/tiptap.scss'],
 
   app: {},
 
@@ -104,12 +104,7 @@ export default defineNuxtConfig({
     client: true
   },
 
-  devtools: {
-    enabled: true
-    // timeline: {
-    //   enabled: true
-    // }
-  },
+  devtools: { enabled: false },
 
   telemetry: false,
 
@@ -158,27 +153,25 @@ export default defineNuxtConfig({
           drop_console: false,
           keep_classnames: false
         }
+      },
+      rollupOptions: {
+        output: {
+          experimentalMinChunkSize: 250 * 1024,
+          manualChunks: (id: string) => {
+            if (id.includes('css') && id.includes('/V')) {
+              return 'vuetify';
+            } else if (id.includes('leaflet')) {
+              return 'leaflet';
+            }
+          }
+        }
       }
-      // rollupOptions: {
-      //   output: {
-      //     experimentalMinChunkSize: 250 * 1024,
-      //     manualChunks: (id: string) => {}
-      //   }
-      // }
     },
-    plugins: [vuetify({ autoImport: true })]
-    // server: {
-    //   proxy: {
-    //     '/__/auth': {
-    //       changeOrigin: true,
-    //       target: `https://${NUXT_PUBLIC_FIREBASE_PROJECT_ID}.firebaseapp.com`
-    //     },
-    //     '/__/firebase': {
-    //       changeOrigin: true,
-    //       target: `https://${NUXT_PUBLIC_FIREBASE_PROJECT_ID}.firebaseapp.com`
-    //     }
-    //   }
-    // }
+    plugins: [
+      vuetify({
+        autoImport: true
+      })
+    ]
   },
 
   vueuse: { ssrHandlers: true },

@@ -6,6 +6,9 @@ declare module '#app' {
   interface NuxtApp {
     $firebase: {
       app: FirebaseApp;
+      /**
+       * @deprecated
+       */
       auth: Auth;
       messaging: Messaging;
     };

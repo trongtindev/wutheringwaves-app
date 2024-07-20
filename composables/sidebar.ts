@@ -26,7 +26,6 @@ export interface IMenu {
 
 export const useSidebar = defineStore('useSidebar', () => {
   // uses
-  const device = useDevice();
   const analytics = useAnalytics();
 
   // states
@@ -36,7 +35,7 @@ export const useSidebar = defineStore('useSidebar', () => {
       policy?: 'default' | 'resetOnVisit';
     };
   }>({});
-  const open = ref(device.isDesktop);
+  const open = ref();
   const items = ref<IMenu[]>([
     {
       url: '/',

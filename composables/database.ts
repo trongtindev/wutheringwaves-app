@@ -1,3 +1,5 @@
+import type { RxDatabase } from 'rxdb';
+
 import {
   accountCollectionMethods,
   accountDocMethods,
@@ -16,9 +18,7 @@ import {
   settingSchema,
   type SettingCollection
 } from '@/collections/setting';
-import { defineStore } from 'pinia';
-import type { RxDatabase } from 'rxdb';
-import { getRxStorageDexie } from 'rxdb/plugins/storage-dexie';
+
 import {
   markerSchema,
   markerDocMethods,
@@ -53,6 +53,7 @@ export const useDatabase = defineStore('useDatabase', () => {
 
   // uses
   const i18n = useI18n();
+  const device = useDevice();
   const onChangedDebounce = useDebounceFn(() => {
     isChanged.value = randomId();
   }, 500);
@@ -64,13 +65,12 @@ export const useDatabase = defineStore('useDatabase', () => {
 
   // functions
   const initialize = async (options?: { override?: boolean }) => {
-    console.log('database', 'initialize');
-    options ??= {};
-
-    if (import.meta.server) {
-      throw new Error('Cannot initialize database on server side!');
+    if (device.isCrawler) {
+      console.log('useDatabase', 'ignore', { isCrawler: device.isCrawler });
+      return;
     }
 
+    options ??= {};
     if (!options.override) {
       if (db || state.value != '') {
         return;
@@ -78,17 +78,18 @@ export const useDatabase = defineStore('useDatabase', () => {
     }
 
     state.value = 'initializing';
-    const { createRxDatabase } = await import('rxdb');
 
+    // dynamic imports
+    const { createRxDatabase } = await import('rxdb');
+    const { getRxStorageDexie } = await import('rxdb/plugins/storage-dexie');
+
+    // create database
     return new Promise((resolve, reject) => {
       // LINK: https://rxdb.info/migration-schema.html
       createRxDatabase<DatabaseCollections>({
         name: 'default',
         storage: getRxStorageDexie(),
-        multiInstance: false,
-        cleanupPolicy: {
-          minimumDeletedTime: 1000 * 60 * 60 * 24 * 7
-        }
+        multiInstance: false
       })
         .then(async (result) => {
           db = result;
@@ -297,11 +298,13 @@ export const useDatabase = defineStore('useDatabase', () => {
     console.warn('eraseAllData', await db.destroy());
   };
 
+  // lifecycle
+  onMounted(() => initialize());
+
   return {
     state,
     isInitialized,
     isChanged,
-    initialize,
     getInstance,
     eraseAllData
   };

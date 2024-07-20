@@ -25,7 +25,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     if (device.isCrawler) return;
     if (isInitialized.value) return;
     if (!dataCollectionEnabled.value) return;
-    console.debug('useAnalytics', 'initialize');
+    if (import.meta.dev) return;
 
     const { getAnalytics, logEvent: _logEvent } = await import(
       'firebase/analytics'
