@@ -32,37 +32,32 @@ const isExpired = computed(() => {
   }
   return false;
 });
-
-// changes
 </script>
 
 <template>
-  <div>
-    <v-list-item :disabled="isExpired">
-      <template #title>
-        <span class="mr-2">
-          {{ props.data.code }}
-        </span>
+  <td>
+    <span class="mr-2">
+      {{ props.data.code }}
+    </span>
 
-        <v-chip v-if="isExpired" type="warning" :text="$t('codes.expired')" />
-        <v-chip
-          v-else
-          color="success"
-          :text="state == 'copied' ? $t('common.copied') : $t('common.copy')"
-          @click="onPressedCopy"
-        />
-      </template>
-    </v-list-item>
-    <div v-if="props.data.rewards" class="pl-4 pb-4">
-      <v-card>
-        <v-card-text>
-          <ul class="pl-4">
-            <li v-for="(element, index) in props.data.rewards" :key="index">
-              {{ element.quantity }} {{ element.item }}
-            </li>
-          </ul>
-        </v-card-text>
-      </v-card>
-    </div>
-  </div>
+    <v-chip v-if="isExpired" type="warning" :text="$t('codes.expired')" />
+    <v-chip
+      v-else
+      color="success"
+      :text="state == 'copied' ? $t('common.copied') : $t('common.copy')"
+      @click="onPressedCopy"
+    />
+  </td>
+
+  <td>
+    <ul class="pl-4">
+      <li v-for="(element, index) in props.data.rewards" :key="index">
+        {{ element.quantity }} {{ element.item }}
+      </li>
+    </ul>
+  </td>
+
+  <td>
+    {{ props.data.expiredAt ? dayjs(props.data.expiredAt).fromNow() : '' }}
+  </td>
 </template>

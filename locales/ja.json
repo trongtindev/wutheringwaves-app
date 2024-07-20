@@ -202,7 +202,11 @@
     "skills": "Skills",
     "alert": "Import convene history to see already owned characters.",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
-    "lastUpdatedOn": "{name} profile has been last updated on {time}."
+    "lastUpdatedOn": "{name} profile has been last updated on {time}.",
+    "build": "{name} Build",
+    "calculations": "{name} Calculations",
+    "profile": "Profile",
+    "gameplayAndTeams": "Gameplay and Teams"
   },
   "weapons": {
     "title": "武器",
@@ -310,7 +314,13 @@
     "nameNotSet": "Name not set"
   },
   "leaderboards": { "title": "Leaderboards" },
-  "codes": { "title": "Gift codes", "expired": "Expired" },
+  "codes": {
+    "title": "Gift codes",
+    "expiry": "Expiry",
+    "code": "Code",
+    "rewards": "Rewards",
+    "expired": "Expired"
+  },
   "map": {
     "title": "Interactive Map",
     "locations": "Locations",
@@ -435,10 +445,6 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization",
-    "profile": "Profile",
-    "build": "Build",
-    "gameplayAndTeams": "Gameplay and Teams",
-    "calculations": "Calculations"
+    "localization": "Localization"
   }
 }

@@ -120,6 +120,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
               <v-divider />
 
               <v-card-title
+                tag="h2"
                 class="text-center"
                 :class="`text-rarity${element.rarity}`"
               >

@@ -122,8 +122,7 @@ useJsonld({
       <card-title>
         <template #title>
           <div :class="`text-rarity${item.rarity}`">
-            <span> {{ i18n.t(item.name) }}</span>
-            <span class="ml-2"> {{ item.rarity }} ★ </span>
+            <h1 class="text-h6">{{ title }}</h1>
           </div>
         </template>
 
@@ -139,14 +138,15 @@ useJsonld({
           <v-col cols="12" md="4" class="d-flex justify-center align-center">
             <v-img
               :src="`/characters/portraits/${item.slug}.webp`"
-              :alt="i18n.t(item.name)"
+              :alt="nameLocalized"
               :height="256"
             />
           </v-col>
 
           <v-col cols="12" md="8">
             <div>
-              <span
+              <h2
+                class="text-body-2"
                 :innerHTML="
                   $t('characters.introduction', {
                     name: nameLocalized,
@@ -218,14 +218,14 @@ useJsonld({
 
       <v-divider v-if="data.modifiedTime" />
       <v-card-actions v-if="data.modifiedTime">
-        <div class="text-center text-subtitle-2 w-100">
+        <h2 class="text-center text-caption w-100">
           {{
             $t('characters.lastUpdatedOn', {
               name: nameLocalized,
               time: dayjs(data.modifiedTime)
             })
           }}
-        </div>
+        </h2>
       </v-card-actions>
     </v-card>
 
@@ -235,22 +235,30 @@ useJsonld({
         <v-tabs v-model="tab" :stacked="true" :grow="true">
           <v-tab>
             <v-icon :icon="mdiInformationSlabCircle" :size="32" />
-            <span>{{ $t('common.profile') }}</span>
+            <h2 class="text-h6">
+              {{ $t('characters.profile') }}
+            </h2>
           </v-tab>
 
           <v-tab>
             <v-icon :icon="mdiMapMarkerPath" :size="32" />
-            <span>{{ $t('common.build') }}</span>
+            <h2 class="text-h6">
+              {{ $t('characters.build', { name: nameLocalized }) }}
+            </h2>
           </v-tab>
 
           <v-tab>
             <v-icon :icon="mdiAccountGroupOutline" :size="32" />
-            <span>{{ $t('common.gameplayAndTeams') }}</span>
+            <h2 class="text-h6">
+              {{ $t('characters.gameplayAndTeams') }}
+            </h2>
           </v-tab>
 
           <v-tab>
             <v-icon :icon="mdiChartBellCurve" :size="32" />
-            <span>{{ $t('common.calculations') }}</span>
+            <h2 class="text-h6">
+              {{ $t('characters.calculations', { name: nameLocalized }) }}
+            </h2>
           </v-tab>
         </v-tabs>
       </client-only>

@@ -61,7 +61,7 @@ useJsonld({
     <v-card>
       <card-title>
         <template #title>
-          {{ i18n.t(item.name) }}
+          <h1 class="text-h6">{{ i18n.t(item.name) }}</h1>
         </template>
 
         <template #actions>

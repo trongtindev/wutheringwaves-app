@@ -130,7 +130,7 @@ useSeoMeta({
               </v-responsive>
               <v-divider />
 
-              <v-card-title class="text-center">
+              <v-card-title class="text-center" tag="h2">
                 {{ $t(element.name) }}
               </v-card-title>
             </v-card>

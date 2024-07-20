@@ -104,7 +104,7 @@ useJsonld({
     <v-card>
       <card-title>
         <template #title>
-          {{ i18n.t(item.name) }}
+          <h1 class="text-h6">{{ nameLocalized }}</h1>
         </template>
 
         <template #actions>

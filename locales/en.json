@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "WutheringWaves.app",
+    "title": "Wuthering Waves Wiki",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
     "index": {
       "title": "Wuthering Waves Utilities"
@@ -214,7 +214,11 @@
     "skills": "Skills",
     "alert": "Import convene history to see already owned characters.",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
-    "lastUpdatedOn": "{name} profile has been last updated on {time}."
+    "lastUpdatedOn": "{name} profile has been last updated on {time}.",
+    "build": "{name} Build",
+    "calculations": "{name} Calculations",
+    "profile": "Profile",
+    "gameplayAndTeams": "Gameplay and Teams"
   },
   "weapons": {
     "title": "Weapons",
@@ -339,7 +343,10 @@
     "title": "Leaderboards"
   },
   "codes": {
-    "title": "Gift codes",
+    "title": "Gift Codes",
+    "expiry": "Expiry",
+    "code": "Code",
+    "rewards": "Rewards",
     "expired": "Expired"
   },
   "map": {
@@ -471,10 +478,6 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization",
-    "profile": "Profile",
-    "build": "Build",
-    "gameplayAndTeams": "Gameplay and Teams",
-    "calculations": "Calculations"
+    "localization": "Localization"
   }
 }

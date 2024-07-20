@@ -204,7 +204,11 @@
     "skills": "Skills",
     "alert": "Nhập lịch sử triệu hồi để xem các nhân vật đã sở hữu.",
     "introduction": "Trong Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> là nhân vật <span class='text-rarity{rarity}'>{rarity}★</span> sao có thuộc tính {attribute} sử dụng vũ khí loại {weaponType}.",
-    "lastUpdatedOn": "Hồ sơ {name} đã được cập nhật lần cuối lúc {time}."
+    "lastUpdatedOn": "Hồ sơ {name} đã được cập nhật lần cuối lúc {time}.",
+    "build": "{name} Build",
+    "calculations": "{name} Calculations",
+    "profile": "Profile",
+    "gameplayAndTeams": "Gameplay and Teams"
   },
   "weapons": {
     "title": "Vũ khí",
@@ -312,7 +316,13 @@
     "nameNotSet": "Chưa đặt tên"
   },
   "leaderboards": { "title": "Leaderboards" },
-  "codes": { "title": "Wuthering Waves Codes", "expired": "Đã hết hạn" },
+  "codes": {
+    "title": "Wuthering Waves Codes",
+    "expiry": "Expiry",
+    "code": "Code",
+    "rewards": "Rewards",
+    "expired": "Expired"
+  },
   "map": {
     "title": "Interactive Map",
     "locations": "Locations",
@@ -437,10 +447,6 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization",
-    "profile": "Hồ sơ",
-    "build": "Xây dựng",
-    "gameplayAndTeams": "Lối chơi & Đội hình",
-    "calculations": "Tính toán"
+    "localization": "Localization"
   }
 }

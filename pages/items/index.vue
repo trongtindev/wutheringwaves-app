@@ -125,7 +125,7 @@ useSeoMeta({
 
               <v-tooltip :text="$t(element.name)">
                 <template #activator="{ props }">
-                  <v-card-title v-bind="props" class="text-center">
+                  <v-card-title v-bind="props" class="text-center" tag="h2">
                     {{ $t(element.name) }}
                   </v-card-title>
                 </template>

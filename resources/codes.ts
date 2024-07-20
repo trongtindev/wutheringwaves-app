@@ -70,6 +70,24 @@ const items: ICode[] = [
       }
     ],
     expiredAt: undefined
+  },
+  {
+    code: 'PTTMYZSOM',
+    rewards: [
+      {
+        item: 'Medium Resonance Potion',
+        quantity: 5
+      },
+      {
+        item: 'Medium Energy Core',
+        quantity: 5
+      },
+      {
+        item: 'Shell Credit',
+        quantity: 5000
+      }
+    ],
+    expiredAt: undefined
   }
 ];
 export default items;

@@ -32,8 +32,8 @@ if (props.data.ascensions) {
 <template>
   <!-- Resonance Chain -->
   <v-card v-if="data.resonanceChain" class="mt-4">
-    <v-card-title>
-      {{ $t('characters.resonanceChain') }}
+    <v-card-title tag="h2">
+      {{ props.item.name }} {{ $t('characters.resonanceChain') }}
     </v-card-title>
     <v-divider />
 
@@ -51,10 +51,32 @@ if (props.data.ascensions) {
     </v-card-text>
   </v-card>
 
+  <!-- Skills -->
+  <v-card v-if="data.skills" class="mt-2">
+    <v-card-title tag="h2">
+      {{ props.item.name }} {{ $t('characters.skills') }}
+    </v-card-title>
+    <v-divider />
+
+    <v-card-text>
+      <v-row>
+        <v-col
+          v-for="(element, index) in data.skills"
+          :key="index"
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <characters-skill-item :data="element" />
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
+
   <!-- Ascension Material -->
   <v-card v-if="data.ascensions" class="mt-4">
-    <v-card-title>
-      {{ $t('common.ascensionMaterial') }}
+    <v-card-title tag="h2">
+      {{ props.item.name }} {{ $t('common.ascensionMaterial') }}
     </v-card-title>
     <v-divider />
 
@@ -117,28 +139,6 @@ if (props.data.ascensions) {
         rel="nofollow"
       />
     </v-card-actions>
-  </v-card>
-
-  <!-- Skills -->
-  <v-card v-if="data.skills" class="mt-2">
-    <v-card-title>
-      {{ $t('characters.skills') }}
-    </v-card-title>
-    <v-divider />
-
-    <v-card-text>
-      <v-row>
-        <v-col
-          v-for="(element, index) in data.skills"
-          :key="index"
-          cols="12"
-          sm="6"
-          md="4"
-        >
-          <characters-skill-item :data="element" />
-        </v-col>
-      </v-row>
-    </v-card-text>
   </v-card>
 
   <!-- Recommended Weapons -->
