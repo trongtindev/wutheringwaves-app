@@ -305,6 +305,7 @@ export const useDatabase = defineStore('useDatabase', () => {
     state,
     isInitialized,
     isChanged,
+    initialize,
     getInstance,
     eraseAllData
   };
