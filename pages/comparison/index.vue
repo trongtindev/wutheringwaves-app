@@ -24,17 +24,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/comparison',
-          title: i18n.t('comparison.title')
-        }
-      ]"
-    />
-
-    <coming-soon :title="i18n.t('comparison.title')" />
-  </div>
+  <coming-soon :title="i18n.t('comparison.title')" />
 </template>

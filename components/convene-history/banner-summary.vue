@@ -13,7 +13,6 @@ const emits = defineEmits<{
 }>();
 
 // uses
-const i18n = useI18n();
 const account = useAccount();
 const database = useDatabase();
 

@@ -25,16 +25,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/donation',
-          title: i18n.t('donation.title')
-        }
-      ]"
-    />
-
     <coming-soon :title="i18n.t('donation.title')" />
   </div>
 </template>

@@ -105,7 +105,7 @@ watch(
             <v-avatar
               class="border"
               rounded
-              image="/favicon.png"
+              image="/favicon.webp"
               alt="WutheringWaves.app"
             />
           </template>

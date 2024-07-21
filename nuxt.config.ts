@@ -45,7 +45,8 @@ export default defineNuxtConfig({
     // performance
     '@nuxtjs/fontaine',
     // dev
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    "@nuxt/image"
   ],
 
   routeRules: {
@@ -66,6 +67,9 @@ export default defineNuxtConfig({
     },
     '/donation': {
       robots: false
+    },
+    '/characters': {
+      prerender: true
     }
   },
 

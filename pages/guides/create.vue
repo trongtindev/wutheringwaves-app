@@ -39,98 +39,87 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: 'guides',
-          title: i18n.t('guides.create.title')
-        }
-      ]"
-    />
+  <v-row>
+    <v-col cols="12" md="8">
+      <v-card>
+        <v-card-text>
+          <v-text-field v-model="title" :label="$t('common.title')" />
+          <editor />
+        </v-card-text>
+      </v-card>
+    </v-col>
 
-    <v-row>
-      <v-col cols="12" md="8">
-        <v-card>
-          <v-card-text>
-            <v-text-field v-model="title" :label="$t('common.title')" />
-            <editor />
-          </v-card-text>
-        </v-card>
-      </v-col>
+    <v-col cols="12" md="4">
+      <!-- publish -->
+      <v-card>
+        <v-card-title>
+          {{ $t('common.publish') }}
+        </v-card-title>
+        <v-divider />
 
-      <v-col cols="12" md="4">
-        <!-- publish -->
-        <v-card>
-          <v-card-title>
-            {{ $t('common.publish') }}
-          </v-card-title>
-          <v-divider />
+        <v-card-text>
+          <v-text-field v-model="slug" label="URL" />
+        </v-card-text>
+        <v-divider />
 
-          <v-card-text>
-            <v-text-field v-model="slug" label="URL" />
-          </v-card-text>
-          <v-divider />
+        <v-card-actions>
+          <v-btn :text="$t('common.saveDraft')" />
+          <v-spacer />
+          <v-btn
+            variant="flat"
+            :prepend-icon="mdiPublish"
+            :text="$t('common.publish')"
+          />
+        </v-card-actions>
+      </v-card>
 
-          <v-card-actions>
-            <v-btn :text="$t('common.saveDraft')" />
-            <v-spacer />
-            <v-btn
-              variant="flat"
-              :prepend-icon="mdiPublish"
-              :text="$t('common.publish')"
-            />
-          </v-card-actions>
-        </v-card>
+      <!-- categories -->
+      <v-card class="mt-2">
+        <v-card-title>
+          {{ $t('common.categories') }}
+        </v-card-title>
+        <v-divider />
 
-        <!-- categories -->
-        <v-card class="mt-2">
-          <v-card-title>
-            {{ $t('common.categories') }}
-          </v-card-title>
-          <v-divider />
+        <v-card-text class="text-center">
+          <v-progress-circular :indeterminate="true" />
+        </v-card-text>
+        <v-divider />
+      </v-card>
 
-          <v-card-text class="text-center">
-            <v-progress-circular :indeterminate="true" />
-          </v-card-text>
-          <v-divider />
-        </v-card>
+      <!-- featured image -->
+      <v-card class="mt-2">
+        <v-card-title>
+          {{ $t('posts.featuredImage') }}
+        </v-card-title>
+        <v-divider />
 
-        <!-- featured image -->
-        <v-card class="mt-2">
-          <v-card-title>
-            {{ $t('posts.featuredImage') }}
-          </v-card-title>
-          <v-divider />
+        <v-card-text>
+          <v-responsive :aspect-ratio="18 / 9" class="border rounded" />
+        </v-card-text>
+        <v-divider />
+      </v-card>
 
-          <v-card-text>
-            <v-responsive :aspect-ratio="18 / 9" class="border rounded" />
-          </v-card-text>
-          <v-divider />
-        </v-card>
+      <!-- localization -->
+      <v-card class="mt-2">
+        <v-card-title>
+          {{ $t('common.localization') }}
+        </v-card-title>
+        <v-divider />
 
-        <!-- localization -->
-        <v-card class="mt-2">
-          <v-card-title>
-            {{ $t('common.localization') }}
-          </v-card-title>
-          <v-divider />
+        <v-card-text class="text-center">
+          <v-select
+            v-model="language"
+            :items="i18n.locales.value"
+            item-title="name"
+            item-value="code"
+            :hide-details="true"
+          />
+        </v-card-text>
+        <v-divider />
+      </v-card>
 
-          <v-card-text class="text-center">
-            <v-select
-              v-model="language"
-              :items="i18n.locales.value"
-              item-title="name"
-              item-value="code"
-              :hide-details="true"
-            />
-          </v-card-text>
-          <v-divider />
-        </v-card>
-
-        <!-- discussion -->
-        <!-- <v-card class="mt-2">
+      <!-- discussion -->
+      <!-- <v-card class="mt-2">
           <v-card-title>
             {{ $t('posts.discussion') }}
           </v-card-title>
@@ -145,7 +134,6 @@ useHead({
           </v-list>
           <v-divider />
         </v-card> -->
-      </v-col>
-    </v-row>
-  </div>
+    </v-col>
+  </v-row>
 </template>

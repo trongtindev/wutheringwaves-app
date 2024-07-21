@@ -12,7 +12,7 @@ const account = useAccount();
 const database = useDatabase();
 
 // states
-const items = ref<ConveneDocument[]>(null);
+const items = ref<ConveneDocument[]>();
 
 // functions
 const initialize = () => {

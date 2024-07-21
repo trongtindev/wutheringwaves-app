@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CardPoolType, type IBanner } from '~/interfaces/banner';
+import { CardPoolType } from '~/interfaces/banner';
 
 // define
 const emits = defineEmits<{
@@ -34,15 +34,12 @@ const activeBanners = banners
     <div v-else>
       <v-card>
         <v-responsive :aspect-ratio="16 / 9">
-          <v-img
+          <nuxt-img
             v-if="activeBanners[0].thumbnail"
             :src="activeBanners[0].thumbnail"
             :alt="activeBanners[0].featuredRare"
-          >
-            <div class="d-flex align-center justify-center h-100">
-              <v-chip class="bg-black">0</v-chip>
-            </div>
-          </v-img>
+            class="w-100"
+          />
         </v-responsive>
 
         <v-card-title class="text-center">
@@ -52,15 +49,12 @@ const activeBanners = banners
 
       <v-card class="mt-2">
         <v-responsive :aspect-ratio="16 / 9">
-          <v-img
+          <nuxt-img
             v-if="activeBanners[1].thumbnail"
             :src="activeBanners[1].thumbnail"
             :alt="activeBanners[1].featuredRare"
-          >
-            <div class="d-flex align-center justify-center h-100">
-              <v-chip class="bg-black">0</v-chip>
-            </div>
-          </v-img>
+            class="w-100"
+          />
         </v-responsive>
 
         <v-card-title class="text-center">
