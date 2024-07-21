@@ -18,6 +18,7 @@ export type CharacterSkill =
   | 'Outro Skill';
 
 export interface ICharacter {
+  id: number;
   slug: string;
   name: string;
   nameLocalized?: ILocalized;
@@ -68,13 +69,13 @@ export interface ICharacterData {
   modifiedTime?: string;
   description?: string;
   descriptionLocalized?: ILocalized;
+  skillPriority?: CharacterSkill[];
   skills?: ICharacterSkillData[];
   resonanceChain?: ICharacterRCData[];
   stats?: {
     hp: number;
     atk: number;
     def: number;
-    energy: number;
   };
   ascensions?: {
     cost: {
@@ -96,4 +97,28 @@ export interface ICharacterData {
   quoteLocalized?: ILocalized;
   birthday?: string;
   birthplace?: string;
+  bestWeapons?: {
+    item: string;
+    rank: number;
+    different: number;
+  }[];
+  bestEchoSets?: {
+    items: string[];
+    different: number;
+  }[];
+  bestMainEchoes?: string[];
+  bestEchoStats?: {
+    type: string;
+    items: {
+      cost: number;
+      stats: string;
+    }[];
+  }[];
+  bestTeams?: {
+    name: string;
+    items: {
+      role: string;
+      items: string[];
+    }[];
+  }[];
 }

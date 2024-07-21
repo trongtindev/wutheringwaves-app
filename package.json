@@ -28,6 +28,7 @@
     "@mdi/js": "^7.4.47",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/device": "^3.1.1",
+    "@nuxtjs/fontaine": "^0.4.3",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/robots": "4.0.1",
     "@nuxtjs/sitemap": "^5.3.5",
@@ -75,6 +76,7 @@
     "firebase": "^10.12.2",
     "html-to-image": "^1.11.11",
     "husky": "^9.1.0",
+    "jsonschema": "^1.4.1",
     "leaflet": "^1.9.4",
     "lint-staged": "^15.2.7",
     "nuxt": "^3.12.3",
@@ -86,6 +88,7 @@
     "rxjs": "^7.8.1",
     "sass": "^1.77.8",
     "sass-loader": "^14.2.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
     "url-slug": "^4.0.1",
     "vite-plugin-eslint2": "^4.4.0",
@@ -100,4 +103,3 @@
     "*.{ts,mjs}": "pnpm run lint"
   }
 }
-

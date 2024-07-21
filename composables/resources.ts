@@ -1,88 +1,83 @@
-import type { ICharacterData } from '@/interfaces/character';
+import type { ICharacter, ICharacterData } from '@/interfaces/character';
 import type { ICode } from '@/interfaces/code';
-import type { IWeaponData } from '@/interfaces/weapon';
-import { defineStore } from 'pinia';
-import type { IItemData } from '~/interfaces/item';
-import type { IEchoData } from '~/interfaces/echo';
+import type { IWeapon, IWeaponData } from '@/interfaces/weapon';
+import type { IItem, IItemData } from '~/interfaces/item';
+import type { IEcho, IEchoData } from '~/interfaces/echo';
+import type { ITrophy } from '~/interfaces/trophy';
 
 export const useResources = defineStore('useResources', () => {
-  // functions
   const getBanners = async () => {
-    return (await import('@/resources/banners')).default;
+    return (await import('~/resources/banners')).default;
   };
 
-  const weapons = async () => {
-    return (await import('@/resources/weapons')).default;
+  const weapons = async (): Promise<IWeapon[]> => {
+    const data = await import('~/resources/weapons.json');
+    return data.default.items as IWeapon[];
   };
 
   const getWeaponData = async (slug: string): Promise<IWeaponData> => {
-    return (await import(`@/resources/weapons/${slug}.json`)).default;
+    const data = await import(`~/resources/weapons/${slug}.json`);
+    return data.default;
   };
 
-  const characters = async () => {
-    return (await import('@/resources/characters')).default;
+  const getCharacters = async (): Promise<ICharacter[]> => {
+    const data = await import('~/resources/characters.json');
+    return data.default.items as ICharacter[];
   };
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {
-    return (await import(`@/resources/characters/${slug}.json`)).default;
+    const data = await import(`~/resources/characters/${slug}.json`);
+    return data.default;
   };
 
-  const echos = async () => {
-    return (await import('@/resources/echos')).default;
+  const getEchoes = async (): Promise<IEcho[]> => {
+    const data = await import('~/resources/echos.json');
+    return data.default.items;
   };
 
   const getEchoData = async (slug: string): Promise<IEchoData> => {
-    return (await import(`@/resources/echos/${slug}.json`)).default;
+    const data = await import(`~/resources/echos/${slug}.json`);
+    return data.default;
   };
 
   const getCodes = async (): Promise<ICode[]> => {
-    return (await import('@/resources/codes')).default;
+    const data = await import('~/resources/codes.json');
+    return data.default.items;
   };
 
-  const getItems = async () => {
-    return (await import('@/resources/items')).default;
+  const getItems = async (): Promise<IItem[]> => {
+    const data = await import('~/resources/items.json');
+    return data.default.items as IItem[];
   };
 
   const getItemData = async (slug: string): Promise<IItemData> => {
-    return (await import(`@/resources/items/${slug}.json`)).default;
+    const data = await import(`~/resources/items/${slug}.json`);
+    return data.default as IItemData;
   };
 
-  const getTrophies = async () => {
-    return (await import('@/resources/trophies')).default;
+  const getTrophies = async (): Promise<ITrophy[]> => {
+    const data = await import('~/resources/trophy_items.json');
+    return data.default.items;
   };
 
   const getTrophyData = async () => {
-    const { items, groups, categories } = await import('@/resources/trophies');
-    return { items, groups, categories };
+    const { groups, categories } = await import('@/resources/trophies');
+    return { groups, categories };
   };
 
   const getEvents = async () => {
-    return (await import('@/resources/events')).default;
+    return (await import('~/resources/events')).default;
   };
 
   return {
-    /**
-     * @deprecated
-     */
     banners: getBanners,
     getBanners,
-    /**
-     * @deprecated
-     */
     weapons,
     getWeapons: weapons,
     getWeaponData,
-    /**
-     * @deprecated
-     */
-    characters,
-    getCharacters: characters,
+    getCharacters,
     getCharacterData,
-    /**
-     * @deprecated
-     */
-    echos,
-    getEchos: echos,
+    getEchoes,
     getEchoData,
     getCodes,
     getItems,

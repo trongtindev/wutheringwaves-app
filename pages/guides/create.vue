@@ -50,13 +50,6 @@ useHead({
       ]"
     />
 
-    <!-- header -->
-    <page-header>
-      <template #actions>
-        <back-button to="guides" />
-      </template>
-    </page-header>
-
     <v-row>
       <v-col cols="12" md="8">
         <v-card>

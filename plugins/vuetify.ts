@@ -1,6 +1,6 @@
 import { createVuetify } from 'vuetify';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
-import { en, vi } from 'vuetify/locale';
+import { en, ja, ko, th, vi } from 'vuetify/locale';
 import { md2 } from 'vuetify/blueprints';
 import {
   VStepperVertical,
@@ -14,7 +14,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     locale: {
       locale: 'en',
       fallback: 'en',
-      messages: { en, vi }
+      messages: { en, ja, ko, th, vi }
     },
     icons: {
       defaultSet: 'mdi',
@@ -54,6 +54,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       VChip: {
         density: 'compact'
+      },
+      VBtn: {
+        class: 'text-body-2'
+      },
+      VAlert: {
+        class: 'pa-3 pt-1 pb-1'
       }
     },
     theme: {

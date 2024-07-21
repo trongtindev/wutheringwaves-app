@@ -60,7 +60,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
   <div>
     <!-- alert -->
     <!-- <alert id="weapons" :text="$t('weapons.alert')" /> -->
-
+    <!-- {{ JSON.stringify(items.map((e) => e.slug)) }} -->
     <v-card>
       <v-card-text>
         <client-only>
@@ -99,34 +99,14 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
         <v-row class="mt-2">
           <v-col
-            v-for="(element, index) in items"
+            v-for="(item, index) in items"
             :key="index"
             cols="6"
             sm="4"
             md="3"
             lg="2"
           >
-            <v-card :to="localePath(`/weapons/${element.slug}`)">
-              <v-responsive
-                :aspect-ratio="1"
-                :style="`background-color: var(--color-background-rarity${element.rarity});`"
-              >
-                <v-img
-                  class="align-end h-100"
-                  :src="`/weapons/icons/${element.slug}.webp`"
-                  :cover="true"
-                />
-              </v-responsive>
-              <v-divider />
-
-              <v-card-title
-                tag="h2"
-                class="text-center"
-                :class="`text-rarity${element.rarity}`"
-              >
-                {{ $t(element.name) }}
-              </v-card-title>
-            </v-card>
+            <weapon-card :item="item" />
           </v-col>
         </v-row>
       </v-card-text>

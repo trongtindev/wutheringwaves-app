@@ -70,7 +70,7 @@ const submit = async () => {
     ];
 
     // echos
-    echos.value ??= await resources.getEchos();
+    echos.value ??= await resources.getEchoes();
     const matchEchos = echos.value.filter((e) => {
       return e.name.toLowerCase().includes(lowerCase);
     });

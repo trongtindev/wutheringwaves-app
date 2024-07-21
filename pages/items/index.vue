@@ -19,10 +19,12 @@ const displayItems = ref<IItem[]>([]);
 const filterText = ref(route.query.q ? route.query.q.toString() : undefined);
 const filterCategory = ref();
 const filterRarity = ref(0);
-const debouncedSearch = useDebounceFn(() => loadData(), 350);
+const debouncedSearch = useDebounceFn(() => initialize(), 350);
 
 // functions
-const loadData = () => {
+const initialize = () => {
+  // console.log(JSON.stringify(items.map((e) => e.slug)));
+
   router.replace({
     query: {
       q: filterText.value || undefined
@@ -53,11 +55,11 @@ const pages = computed(() => {
 
 // changes
 watch(filterText, () => debouncedSearch());
-watch(filterCategory, () => loadData());
-watch(filterRarity, () => loadData());
+watch(filterCategory, () => initialize());
+watch(filterRarity, () => initialize());
 
 // lifecycle
-onMounted(() => loadData());
+onMounted(() => initialize());
 
 // seo meta
 const title = i18n.t('meta.items.title');
@@ -123,13 +125,9 @@ useSeoMeta({
                 />
               </v-responsive>
 
-              <v-tooltip :text="$t(element.name)">
-                <template #activator="{ props }">
-                  <v-card-title v-bind="props" class="text-center" tag="h2">
-                    {{ $t(element.name) }}
-                  </v-card-title>
-                </template>
-              </v-tooltip>
+              <v-card-title class="text-center" tag="h2">
+                {{ $t(element.name) }}
+              </v-card-title>
             </v-card>
           </v-col>
         </v-row>

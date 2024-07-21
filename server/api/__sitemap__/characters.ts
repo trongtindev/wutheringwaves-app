@@ -1,7 +1,6 @@
-import characters from '~/resources/characters';
-
 export default defineSitemapEventHandler(async () => {
-  return characters
+  const data = await import('~/resources/characters.json');
+  return data.items
     .map((e) => {
       return asSitemapUrl({
         loc: `/characters/${e.slug}`,

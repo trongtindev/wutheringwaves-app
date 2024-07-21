@@ -21,10 +21,21 @@
             "type": "string",
             "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
           },
-          "suggestedCharacters": {
+          "sonataEffects": {
             "type": "array",
             "items": {
-              "$ref": "./characters.schema.json#/components/schemas/characterSlug"
+              "type": "string",
+              "enum": [
+                "Lingering Tunes",
+                "Rejuvenating Glow",
+                "Sierra Gale",
+                "Celestial Light",
+                "Void Thunder",
+                "Freezing Frost",
+                "Molten Rift",
+                "Moonlit Clouds",
+                "Sun-sinking Eclipse"
+              ]
             }
           }
         },
@@ -105,6 +116,20 @@
           "phantom-hoartoise",
           "phantom-rocksteady-guardian",
           "phantom-thundering-mephis"
+        ]
+      },
+      "sonataEffect": {
+        "type": "string",
+        "enum": [
+          "Lingering Tunes",
+          "Rejuvenating Glow",
+          "Sierra Gale",
+          "Celestial Light",
+          "Void Thunder",
+          "Freezing Frost",
+          "Molten Rift",
+          "Moonlit Clouds",
+          "Sun-sinking Eclipse"
         ]
       }
     }

@@ -12,7 +12,7 @@ const account = useAccount();
 const database = useDatabase();
 
 // states
-const items = ref<ConveneDocument[]>([]);
+const items = ref<ConveneDocument[]>(null);
 
 // functions
 const initialize = () => {
@@ -54,7 +54,7 @@ onMounted(initialize);
 
 <template>
   <client-only>
-    <v-card-text v-if="items.length === 0">
+    <v-card-text v-if="!items || items.length === 0">
       {{ $t('common.noRecordsFound') }}
     </v-card-text>
 

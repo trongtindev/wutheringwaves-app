@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.817Z",
-  "modifiedTime": "2024-07-09T15:18:52.914Z",
-  "slug": "rover-havoc",
+  "modifiedTime": "2024-07-21T00:18:52.914Z",
   "description": "A mysterious Resonator with the power to absorb all sounds. Currently journeying to find their lost memories.",
   "skills": [
     {
@@ -103,9 +103,8 @@
       "description": "In the <strong style=\"color: var(--color-highlight);\">Dark Surge</strong> state, Rover's Crit. Rate is increased by {0}."
     }
   ],
-  "stats": { "hp": 866, "def": 103, "atk": 33, "energy": 12500 },
+  "stats": { "hp": 10825, "def": 1259, "atk": 413, "energy": 125 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
         { "item": 41100011, "quantity": 4 },
@@ -239,5 +238,123 @@
   ],
   "quote": "Is this the beginning of a new journey? Brimming with novel sounds, and untold stories...",
   "birthday": "Player's Choice",
-  "birthplace": "Unknown"
+  "birthplace": "Unknown",
+  "bestWeapons": [
+    {
+      "item": "emerald-of-genesis",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "commando-of-conviction",
+      "rank": 1,
+      "different": 82.4
+    },
+    {
+      "item": "lumingloss",
+      "rank": 1,
+      "different": 80
+    },
+    {
+      "item": "lunar-cutter",
+      "rank": 1,
+      "different": 79.5
+    },
+    {
+      "item": "sword-18",
+      "rank": 1,
+      "different": 77.9
+    },
+    {
+      "item": "sword-of-night",
+      "rank": 1,
+      "different": 71.6
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Sun-sinking Eclipse"]
+    },
+    {
+      "different": 91.3,
+      "items": ["Sun-sinking Eclipse", "Lingering Tunes"]
+    },
+    {
+      "different": 87.8,
+      "items": ["Sun-sinking Eclipse", "Moonlit Clouds"]
+    }
+  ],
+  "bestMainEchoes": ["dreamless"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Havoc DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Havoc DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate"]
+        },
+        {
+          "cost": 4,
+          "stats": ["Crit DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["rover-havoc"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["sanhua", "danjin"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina", "baizhi"]
+        }
+      ]
+    }
+  ]
 }

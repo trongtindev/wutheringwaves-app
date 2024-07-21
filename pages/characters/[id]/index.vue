@@ -1,31 +1,25 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
-import {
-  mdiCake,
-  mdiMapMarker,
-  mdiSword,
-  mdiPistol,
-  mdiAccountGroupOutline,
-  mdiInformationSlabCircle,
-  mdiChartBellCurve,
-  mdiMapMarkerPath
-} from '@mdi/js';
+import { mdiCake, mdiMapMarker, mdiSword, mdiPistol } from '@mdi/js';
+import { useGoTo } from 'vuetify';
 
+// uses
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
+const goTo = useGoTo({ offset: -72, duration: 500 });
 
 // fetch
-const characters = await resources.characters();
-const item = characters.find((e) => e.slug === route.params.id);
-if (!item) throw createError({ statusCode: 404 });
+const characters = await resources.getCharacters();
+const item = characters.find((e) => e.slug === route.params.id)!;
+if (!item) throw createError({ message: '1', statusCode: 404 });
 
 const data = await resources.getCharacterData(item.slug);
-if (!data) throw createError({ statusCode: 404 });
+if (!data) throw createError({ message: '2', statusCode: 404 });
 
 // states
-const tab = ref(0);
+const tab = ref('overview');
 
 // computed
 const stats = computed(() => {
@@ -87,6 +81,18 @@ const descriptionLocalized = computed(() => {
   return data.description;
 });
 
+const moreBuildGuides = computed(() => {
+  return characters.filter((e) => e.attribute && e.attribute == item.attribute);
+});
+
+// changes
+watch(
+  () => tab.value,
+  (elementId) => {
+    goTo(`#${elementId}`);
+  }
+);
+
 // seo meta
 const title = i18n.t('meta.characters.id.title', { name: nameLocalized.value });
 const description = i18n.t('meta.characters.id.description', {
@@ -135,157 +141,166 @@ useJsonld({
 </script>
 
 <template>
-  <div v-if="item && data">
-    <!-- upcoming -->
-    <v-alert
-      v-if="item.upcoming"
-      color="warning"
-      class="mb-2"
-      :title="$t('common.upcomingContent')"
-      :text="$t('common.upcomingContentMessage')"
-    />
+  <!-- upcoming -->
+  <v-alert
+    v-if="item.upcoming"
+    color="warning"
+    class="mb-2"
+    :title="$t('common.upcomingContent')"
+    :text="$t('common.upcomingContentMessage')"
+  />
 
-    <v-card>
-      <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
-        {{ title }}
-      </v-card-title>
-      <v-divider />
+  <!-- page -->
+  <v-card>
+    <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
+      {{ title }}
+    </v-card-title>
+    <v-divider />
 
-      <v-card-text>
-        <v-row>
-          <v-col cols="12" md="4" class="d-flex justify-center align-center">
-            <v-img
-              :src="`/characters/portraits/${item.slug}.webp`"
-              :alt="nameLocalized"
-              :height="256"
+    <v-card-text>
+      <v-row>
+        <v-col cols="12" md="4" class="d-flex justify-center align-center">
+          <v-img
+            :src="`/characters/portraits/${item.slug}.webp`"
+            :alt="nameLocalized"
+            :height="256"
+          />
+        </v-col>
+
+        <v-col cols="12" md="8">
+          <div>
+            <h2
+              class="text-body-2"
+              :innerHTML="
+                $t('characters.introduction', {
+                  name: nameLocalized,
+                  rarity: item.rarity,
+                  attribute: item.attribute,
+                  weaponType: item.weapon
+                })
+              "
             />
-          </v-col>
+          </div>
 
-          <v-col cols="12" md="8">
-            <div>
-              <h2
-                class="text-body-2"
-                :innerHTML="
-                  $t('characters.introduction', {
-                    name: nameLocalized,
-                    rarity: item.rarity,
-                    attribute: item.attribute,
-                    weaponType: item.weapon
-                  })
-                "
-              />
-            </div>
+          <div
+            v-if="quoteLocalized"
+            class="quote mt-2"
+            :innerHTML="quoteLocalized"
+          />
 
-            <div
-              v-if="quoteLocalized"
-              class="quote mt-2"
-              :innerHTML="quoteLocalized"
+          <div
+            v-if="descriptionLocalized"
+            class="mt-2"
+            :innerHTML="descriptionLocalized"
+          />
+
+          <!-- stats -->
+          <div v-if="stats.length > 0" class="mt-2">
+            <v-sheet
+              v-for="(element, index) in stats"
+              :key="index"
+              :class="{ 'mt-2': index > 0 }"
+              class="pa-2 border rounded"
+            >
+              <v-row>
+                <v-col cols="3">
+                  {{ $t(`common.${element.label}`) }}
+                </v-col>
+                <v-col> {{ formatNumber(element.value) }} </v-col>
+              </v-row>
+            </v-sheet>
+          </div>
+
+          <!-- summary -->
+          <div class="d-flex flex-wrap ga-2 mt-2">
+            <v-chip
+              v-if="data.birthplace"
+              :text="$t(data.birthplace)"
+              :prepend-icon="mdiMapMarker"
             />
-
-            <div
-              v-if="descriptionLocalized"
-              class="mt-2"
-              :innerHTML="descriptionLocalized"
+            <v-chip
+              v-if="data.birthday"
+              :text="data.birthday"
+              :prepend-icon="mdiCake"
             />
+            <v-chip
+              v-if="item.weapon"
+              :text="$t(item.weapon)"
+              :prepend-icon="weaponIcon"
+            />
+            <v-chip v-if="item.attribute" :text="$t(item.attribute)" />
+          </div>
+        </v-col>
+      </v-row>
+    </v-card-text>
 
-            <!-- stats -->
-            <div v-if="stats.length > 0" class="mt-2">
-              <v-sheet
-                v-for="(element, index) in stats"
-                :key="index"
-                :class="{ 'mt-2': index > 0 }"
-                class="pa-2 border rounded"
-              >
-                <v-row>
-                  <v-col cols="3">
-                    {{ $t(`common.${element.label}`) }}
-                  </v-col>
-                  <v-col> {{ formatNumber(element.value) }} </v-col>
-                </v-row>
-              </v-sheet>
-            </div>
+    <v-divider v-if="data.modifiedTime" />
+    <v-card-actions v-if="data.modifiedTime">
+      <h2 class="text-center text-body-2 w-100">
+        {{
+          $t('characters.lastUpdatedOn', {
+            name: nameLocalized,
+            time: dayjs(data.modifiedTime)
+          })
+        }}
+      </h2>
+    </v-card-actions>
+  </v-card>
 
-            <!-- summary -->
-            <div class="d-flex flex-wrap ga-2 mt-2">
-              <v-chip
-                v-if="data.birthplace"
-                :text="$t(data.birthplace)"
-                :prepend-icon="mdiMapMarker"
-              />
-              <v-chip
-                v-if="data.birthday"
-                :text="data.birthday"
-                :prepend-icon="mdiCake"
-              />
-              <v-chip
-                v-if="item.weapon"
-                :text="$t(item.weapon)"
-                :prepend-icon="weaponIcon"
-              />
-              <v-chip v-if="item.attribute" :text="$t(item.attribute)" />
-            </div>
-          </v-col>
-        </v-row>
-      </v-card-text>
-
-      <v-divider v-if="data.modifiedTime" />
-      <v-card-actions v-if="data.modifiedTime">
-        <h2 class="text-center text-body-2 w-100">
-          {{
-            $t('characters.lastUpdatedOn', {
-              name: nameLocalized,
-              time: dayjs(data.modifiedTime)
-            })
-          }}
-        </h2>
-      </v-card-actions>
-    </v-card>
-
-    <!-- Tabs -->
-    <div class="mt-2">
-      <client-only>
-        <v-tabs v-model="tab" :stacked="true" :grow="true">
-          <v-tab>
-            <v-icon :icon="mdiInformationSlabCircle" :size="32" />
-            <h2 class="text-h6">
-              {{ $t('characters.profile') }}
-            </h2>
-          </v-tab>
-
-          <v-tab>
-            <v-icon :icon="mdiMapMarkerPath" :size="32" />
-            <h2 class="text-h6">
-              {{ $t('characters.build', { name: nameLocalized }) }}
-            </h2>
-          </v-tab>
-
-          <v-tab>
-            <v-icon :icon="mdiAccountGroupOutline" :size="32" />
-            <h2 class="text-h6">
-              {{ $t('characters.gameplayAndTeams') }}
-            </h2>
-          </v-tab>
-
-          <v-tab>
-            <v-icon :icon="mdiChartBellCurve" :size="32" />
-            <h2 class="text-h6">
-              {{ $t('characters.calculations', { name: nameLocalized }) }}
-            </h2>
-          </v-tab>
-        </v-tabs>
-      </client-only>
-    </div>
-
-    <!-- Tab views -->
-    <div :class="{ hidden: tab != 0 }">
-      <characters-profile :item="item" :data="data" />
-    </div>
-    <div :class="{ hidden: tab != 1 }">
-      <characters-build :item="item" :data="data" />
-    </div>
-
-    <div class="mt-4">
-      <comments :channel="route.path" />
-    </div>
+  <!-- Tab views -->
+  <div id="overview">
+    <characters-profile :item="item" :data="data" />
   </div>
+  <div id="build">
+    <characters-build :item="item" :data="data" />
+  </div>
+  <div id="teams">
+    <characters-teams
+      :item="item"
+      :data="data"
+      :name-localized="nameLocalized"
+    />
+  </div>
+  <characters-ascension :item="item" :data="data" />
+
+  <!-- moreBuildGuides -->
+  <v-card class="mt-2">
+    <v-card-title>
+      {{ $t('characters.moreBuildGuides') }}
+    </v-card-title>
+    <v-divider />
+
+    <v-card-text>
+      <v-row>
+        <v-col
+          v-for="(element, index) in moreBuildGuides"
+          :key="index"
+          cols="6"
+          sm="4"
+          md="2"
+        >
+          <character-card
+            :item="element"
+            :custom-name="`${element.name} Build`"
+          />
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
+
+  <!-- comments -->
+  <div class="mt-2">
+    <comments :channel="`character.${item.slug}`" />
+  </div>
+
+  <!-- navigation -->
+  <v-bottom-navigation v-model="tab" :grow="true">
+    <v-btn value="overview" :text="$t('characters.overview')" />
+    <v-btn
+      value="build"
+      :text="$t('characters.build', { name: nameLocalized })"
+    />
+    <v-btn value="teams" :text="$t('characters.teams')" />
+    <v-btn value="calculations" :text="$t('characters.calculations')" />
+  </v-bottom-navigation>
 </template>

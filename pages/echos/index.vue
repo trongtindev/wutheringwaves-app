@@ -2,11 +2,10 @@
 import type { IEcho } from '~/interfaces/echo';
 
 const i18n = useI18n();
-const localePath = useLocalePath();
 const resources = useResources();
 
 // states
-const echos = await resources.echos();
+const echos = await resources.getEchoes();
 const filterText = ref<string>();
 const filterCost = ref<number>(0);
 const filterSonataEffect = ref<string>('All');

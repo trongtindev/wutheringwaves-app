@@ -328,23 +328,3 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     </v-dialog>
   </div>
 </template>
-
-<style>
-.month:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: inline-block;
-  padding: 0 50px;
-  position: absolute;
-  left: calc(50% - 50px);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgb(83, 100, 212) 10%,
-    rgb(37, 41, 74, 100) 90%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-</style>

@@ -1,6 +1,6 @@
-<style lang="ts" setup>
+<script lang="ts" setup>
 import { mdiPlus } from '@mdi/js';
-</style>
+</script>
 
 <template>
   <v-chip />

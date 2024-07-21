@@ -66,7 +66,7 @@ const initialize = () => {
 
   switch (type.value) {
     case 'character':
-      resources.characters().then((result) => {
+      resources.getCharacters().then((result) => {
         characters.value = result;
       });
       break;
@@ -78,7 +78,7 @@ const initialize = () => {
       break;
 
     case 'echo':
-      resources.echos().then((result) => {
+      resources.getEchoes().then((result) => {
         echos.value = result;
       });
       break;

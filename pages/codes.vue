@@ -94,7 +94,7 @@ useJsonld(() => ({
 
   <!-- How to Redeem -->
   <v-card class="mt-2">
-    <v-card-title tag="h1">
+    <v-card-title tag="h2">
       {{ $t('codes.howToRedeem') }}
     </v-card-title>
     <v-divider />
@@ -106,7 +106,7 @@ useJsonld(() => ({
 
   <!-- Redeem Requirement -->
   <v-card class="mt-2">
-    <v-card-title tag="h1">
+    <v-card-title tag="h2">
       {{ $t('codes.redeemRequirement') }}
     </v-card-title>
     <v-divider />

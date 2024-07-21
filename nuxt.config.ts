@@ -1,5 +1,6 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
+import { cpSync } from 'node:fs';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -30,8 +31,8 @@ const {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  $production: {},
-  $development: {},
+  $development: { debug: true },
+
   modules: [
     'nuxt-jsonld',
     '@nuxtjs/i18n',
@@ -41,12 +42,17 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/robots',
     '@nuxtjs/device',
+    // performance
+    '@nuxtjs/fontaine',
     // dev
     '@nuxt/eslint'
   ],
 
   routeRules: {
     '/': {
+      prerender: true
+    },
+    '/**': {
       prerender: true
     },
     '/settings': {
@@ -83,16 +89,20 @@ export default defineNuxtConfig({
 
   css: ['~/assets/main.scss', '~/assets/tiptap.scss'],
 
-  app: {},
-
-  typescript: {
-    strict: true
+  features: {
+    inlineStyles: false
   },
 
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
-    }
+    },
+    serverAssets: [
+      {
+        baseName: 'resources',
+        dir: './resources'
+      }
+    ]
   },
 
   site: {
@@ -139,7 +149,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify']
   },
+
   watch: ['resources/**/*'],
+
   vite: {
     vue: {
       template: {
@@ -147,23 +159,10 @@ export default defineNuxtConfig({
       }
     },
     build: {
-      cssCodeSplit: true,
-      terserOptions: {
-        compress: {
-          drop_console: false,
-          keep_classnames: false
-        }
-      },
+      cssCodeSplit: false,
       rollupOptions: {
         output: {
-          experimentalMinChunkSize: 250 * 1024,
-          manualChunks: (id: string) => {
-            if (id.includes('css') && id.includes('/V')) {
-              return 'vuetify';
-            } else if (id.includes('leaflet')) {
-              return 'leaflet';
-            }
-          }
+          experimentalMinChunkSize: 250 * 1024
         }
       }
     },
@@ -207,6 +206,13 @@ export default defineNuxtConfig({
       DAYJS_TIMEZONE: DAYJS_TIMEZONE
     }
   },
+
+  // hooks: {
+  //   'build:done': () => {
+  //     console.log('build:done');
+  //     cpSync('./resources', './.output/server/resources', { recursive: true });
+  //   }
+  // },
 
   experimental: {
     viewTransition: true

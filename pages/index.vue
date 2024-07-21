@@ -4,7 +4,15 @@ import { mdiGithub, mdiChevronRight, mdiOpenInNew, mdiDownload } from '@mdi/js';
 // uses
 const app = useApp();
 const i18n = useI18n();
+const resources = useResources();
 const localePath = useLocalePath();
+
+// fetch
+const weapons = await resources.getWeapons();
+const characters = await resources.getCharacters();
+
+const upcomingWeapons = weapons.filter((e) => e.upcoming);
+const upcomingCharacters = characters.filter((e) => e.upcoming);
 
 // states
 const faqs = ref<number[]>([0, 1, 2, 3, 4]);
@@ -80,7 +88,7 @@ useSeoMeta({
 
         <!-- current event -->
         <v-card @on-done="masonry.refreshLayout">
-          <v-card-title>
+          <v-card-title tag="h2">
             {{ $t('timeline.summary') }}
           </v-card-title>
           <v-divider />
@@ -99,22 +107,24 @@ useSeoMeta({
         </v-card>
 
         <!-- yourLastConvene -->
-        <v-card @on-done="masonry.refreshLayout">
+        <v-card>
           <v-card-title>
             {{ $t('common.yourLastConvene') }}
           </v-card-title>
           <v-divider />
 
-          <convene-history-recently-widget />
+          <convene-history-recently-widget @on-done="masonry.refreshLayout" />
           <v-divider />
 
           <v-card-actions class="d-flex justify-end">
             <v-btn
+              tag="h2"
               :to="localePath('/convene-history')"
               variant="text"
-              :text="$t('convene.history.title')"
               :append-icon="mdiChevronRight"
-            />
+            >
+              <h2 class="text-body-2">{{ $t('convene.history.title') }}</h2>
+            </v-btn>
           </v-card-actions>
         </v-card>
 
@@ -137,56 +147,98 @@ useSeoMeta({
             />
           </v-card-actions>
         </v-card>
+
+        <!-- upcomingWeapons -->
+        <v-card v-if="upcomingWeapons.length > 0">
+          <v-card-title tag="h3">
+            {{ $t('common.upcomingWeapons') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>
+            <v-row>
+              <v-col
+                v-for="(item, index) in upcomingWeapons"
+                :key="index"
+                cols="6"
+                sm="4"
+              >
+                <weapon-card :item="item" />
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+
+        <!-- upcomingCharacters -->
+        <v-card v-if="upcomingCharacters.length > 0">
+          <v-card-title tag="h3">
+            {{ $t('common.upcomingCharacters') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-card-text>
+            <v-row>
+              <v-col
+                v-for="(item, index) in upcomingCharacters"
+                :key="index"
+                cols="6"
+                sm="4"
+              >
+                <character-card :item="item" />
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+
+        <!-- shortcuts -->
+        <v-card>
+          <v-card-title>
+            {{ $t('common.shortcuts') }}
+          </v-card-title>
+          <v-divider />
+
+          <v-list>
+            <v-row :no-gutters="true">
+              <v-col cols="12" md="6">
+                <v-list-item
+                  :to="localePath('/showcase/convene')"
+                  :title="$t('showcase.convene.title')"
+                  :append-icon="mdiChevronRight"
+                />
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-list-item
+                  :to="localePath('/todo-list')"
+                  :title="$t('todoList.title')"
+                  :append-icon="mdiChevronRight"
+                />
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-list-item
+                  :to="localePath('/echos')"
+                  :title="$t('echos.title')"
+                  :append-icon="mdiChevronRight"
+                />
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-list-item
+                  :to="localePath('/weapons')"
+                  :title="$t('weapons.title')"
+                  :append-icon="mdiChevronRight"
+                />
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-list-item
+                  :to="localePath('/characters')"
+                  :title="$t('characters.title')"
+                  :append-icon="mdiChevronRight"
+                />
+              </v-col>
+            </v-row>
+          </v-list>
+        </v-card>
       </template>
     </masonry>
-
-    <!-- shortcuts -->
-    <v-card class="mt-2">
-      <v-card-title>
-        {{ $t('common.shortcuts') }}
-      </v-card-title>
-      <v-divider />
-
-      <v-list>
-        <v-row :no-gutters="true">
-          <v-col cols="12" md="6">
-            <v-list-item
-              :to="localePath('/showcase/convene')"
-              :title="$t('showcase.convene.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-list-item
-              :to="localePath('/todo-list')"
-              :title="$t('todoList.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-list-item
-              :to="localePath('/echos')"
-              :title="$t('echos.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-list-item
-              :to="localePath('/weapons')"
-              :title="$t('weapons.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-list-item
-              :to="localePath('/characters')"
-              :title="$t('characters.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-col>
-        </v-row>
-      </v-list>
-    </v-card>
 
     <!-- faqs -->
     <div class="mt-2">

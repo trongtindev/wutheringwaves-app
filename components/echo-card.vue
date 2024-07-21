@@ -16,10 +16,7 @@ const nameLocalized = computed(() => {
 </script>
 
 <template>
-  <v-card
-    :to="localePath(`/echos/${props.item.slug}`)"
-    :title.attr="nameLocalized"
-  >
+  <v-card :to="localePath(`/echos/${props.item.slug}`)">
     <v-responsive :aspect-ratio="1">
       <v-img
         :src="`/echos/icons/${props.item.slug}.webp`"

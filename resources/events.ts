@@ -230,7 +230,8 @@ const items = [
         start: '2024-07-22 10:00',
         end: '2024-08-14 11:59'
       },
-      color: '#f8835a'
+      color: '#f8835a',
+      thumbnail: '/events/covers/blazing-brilliance.webp'
     }
   ],
   // Featured Resonator
@@ -256,12 +257,13 @@ const items = [
         'During the event, boosted drop rates for 5-Star Resonator: Jinhsi, 4-Star Resonators: Sanhua, Danjin, and Yangyang!'
     },
     {
-      name: 'Stellar Plummage - Changli',
+      name: "Vermillion's Ploy - Changli",
       time: {
         start: '2024-07-22 10:00',
         end: '2024-08-14 11:59'
       },
-      color: '#892b27'
+      color: '#892b27',
+      thumbnail: '/events/covers/vermillion-ploy.webp'
     }
   ],
   // jinlin

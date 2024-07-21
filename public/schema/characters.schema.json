@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Characters",
   "properties": {
     "items": {
       "type": "array",
@@ -62,6 +61,10 @@
           "camellya",
           "rover-havoc"
         ]
+      },
+      "characterRole": {
+        "type": "string",
+        "enum": ["Main DPS", "Sub DPS", "Healer"]
       }
     }
   }

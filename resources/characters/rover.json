@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.818Z",
-  "modifiedTime": "2024-07-09T15:18:52.921Z",
-  "slug": "rover",
+  "modifiedTime": "2024-07-21T15:18:52.921Z",
   "description": "A mysterious Resonator with the power to absorb all sounds. Currently journeying to find their lost memories.",
   "skills": [
     {
@@ -103,9 +103,8 @@
       "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Slashes</strong> and Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Spin</strong> reduces the target's Spectro DMG RES by {0} on hit for {1}s."
     }
   ],
-  "stats": { "hp": 912, "def": 112, "atk": 30, "energy": 12500 },
+  "stats": { "hp": 11400, "def": 1369, "atk": 375, "energy": 125 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
         { "item": 41100011, "quantity": 4 },
@@ -239,5 +238,109 @@
   ],
   "quote": "Is this the beginning of a new journey? Brimming with novel sounds, and untold stories...",
   "birthday": "Player's Choice",
-  "birthplace": "Unknown"
+  "birthplace": "Unknown",
+  "skillPriority": [
+    "Resonance Liberation",
+    "Forte Circuit",
+    "Resonance Skill",
+    "Basic Attack",
+    "Intro Skill"
+  ],
+  "bestWeapons": [
+    {
+      "item": "emerald-of-genesis",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "commando-of-conviction",
+      "rank": 1,
+      "different": 80.5
+    },
+    {
+      "item": "lunar-cutter",
+      "rank": 1,
+      "different": 78.7
+    },
+    {
+      "item": "lumingloss",
+      "rank": 1,
+      "different": 76.1
+    },
+    {
+      "item": "sword-18",
+      "rank": 1,
+      "different": 76.1
+    },
+    {
+      "item": "sword-of-night",
+      "rank": 5,
+      "different": 71.9
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Celestial Light"]
+    },
+    {
+      "different": 92.1,
+      "items": ["Celestial Light", "Lingering Tunes"]
+    },
+    {
+      "different": 88.6,
+      "items": ["Celestial Light", "Moonlit Clouds"]
+    },
+    {
+      "different": 88.1,
+      "items": ["Lingering Tunes", "Moonlit Clouds"]
+    }
+  ],
+  "bestMainEchoes": ["mourning-aix", "mech-abomination"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate", "Crit DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Spectro DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Spectro DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": []
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["rover-havoc"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina"]
+        }
+      ]
+    }
+  ]
 }

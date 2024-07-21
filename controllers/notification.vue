@@ -16,12 +16,3 @@ const notification = useNotification();
     </div>
   </client-only>
 </template>
-
-<style>
-.float-notifications {
-  z-index: 999;
-  position: fixed;
-  right: 10px;
-  top: 72px;
-}
-</style>

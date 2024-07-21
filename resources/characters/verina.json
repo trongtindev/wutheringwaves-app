@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.819Z",
   "modifiedTime": "2024-07-09T15:18:52.945Z",
-  "slug": "verina",
   "description": "With an extensive knowledge of botany, Verina is always solicitous, always smiling, and always wishing for every flower to be blessed with the miracle of life.",
   "skills": [
     {
@@ -103,58 +103,57 @@
       "description": "Heavy Attack <strong style=\"color: var(--color-highlight);\">Starflower Blooms</strong> and Mid-Air Attack <strong style=\"color: var(--color-highlight);\">Starflower Blooms</strong> deal {0} more damage. They will trigger Coordinated Attack {1} time and heal all characters nearby. The DMG of this Coordinated Attack and the Healing are equal to those of the Resonance Liberation's <strong style=\"color: var(--color-highlight);\">Photosynthesis Mark</strong>."
     }
   ],
-  "stats": { "hp": 1139, "def": 90, "atk": 27, "energy": 17500 },
+  "stats": { "hp": 14238, "def": 1100, "atk": 338, "energy": 175 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
-        { "item": 41100021, "quantity": 4 },
-        { "item": 2, "quantity": 5000 }
+        { "item": 2, "quantity": 5000 },
+        { "item": 41100021, "quantity": 4 }
       ],
       "minLevel": 20
     },
     {
       "cost": [
+        { "item": 2, "quantity": 10000 },
         { "item": 41400034, "quantity": 3 },
         { "item": 42300070, "quantity": 4 },
-        { "item": 41100022, "quantity": 4 },
-        { "item": 2, "quantity": 10000 }
+        { "item": 41100022, "quantity": 4 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
+        { "item": 2, "quantity": 15000 },
         { "item": 41400034, "quantity": 6 },
         { "item": 42300070, "quantity": 8 },
-        { "item": 41100022, "quantity": 8 },
-        { "item": 2, "quantity": 15000 }
+        { "item": 41100022, "quantity": 8 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
+        { "item": 2, "quantity": 20000 },
         { "item": 41400034, "quantity": 9 },
         { "item": 42300070, "quantity": 12 },
-        { "item": 41100023, "quantity": 4 },
-        { "item": 2, "quantity": 20000 }
+        { "item": 41100023, "quantity": 4 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
+        { "item": 2, "quantity": 40000 },
         { "item": 41400034, "quantity": 12 },
         { "item": 42300070, "quantity": 16 },
-        { "item": 41100023, "quantity": 8 },
-        { "item": 2, "quantity": 40000 }
+        { "item": 41100023, "quantity": 8 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
+        { "item": 2, "quantity": 80000 },
         { "item": 41400034, "quantity": 16 },
         { "item": 42300070, "quantity": 20 },
-        { "item": 41100024, "quantity": 4 },
-        { "item": 2, "quantity": 80000 }
+        { "item": 41100024, "quantity": 4 }
       ],
       "minLevel": 80
     }
@@ -251,5 +250,63 @@
     "id": "Dengan pengetahuan botani yang luas, Verina selalu perhatian, selalu tersenyum, dan selalu berharap agar setiap bunga diberkati dengan keajaiban kehidupan.",
     "th": "ด้วยความรู้ด้านพฤกษศาสตร์อันกว้างขวาง เวริน่าจึงมักแสดงความห่วงใย มีรอยยิ้มอยู่เสมอ และปรารถนาให้ดอกไม้ทุกดอกได้รับพรแห่งชีวิต",
     "ru": "Обладая обширными знаниями в ботанике, Верина всегда заботлива, всегда улыбается и всегда желает, чтобы каждый цветок был одарен чудом жизни."
-  }
+  },
+  "skillPriority": [
+    "Forte Circuit",
+    "Resonance Liberation",
+    "Resonance Skill",
+    "Basic Attack",
+    "Intro Skill"
+  ],
+  "bestWeapons": [
+    {
+      "item": "variation",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "rectifier-of-voyager",
+      "rank": 5,
+      "different": 100
+    },
+    {
+      "item": "rectifier-25",
+      "rank": 1,
+      "different": 100
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Rejuvenating Glow"]
+    }
+  ],
+  "bestMainEchoes": ["bell-borne-geochelone"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Healing Bonus", "ATK%"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Energy Regen"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Energy Regen"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ]
 }

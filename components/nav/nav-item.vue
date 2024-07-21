@@ -48,14 +48,16 @@ const localePath = useLocalePath();
       </template>
 
       <template #append>
-        <v-badge
-          v-if="sidebar.notify[props.data.url]"
-          :content="sidebar.notify[props.data.url].value"
-          color="red"
-          inline
-        />
+        <client-only>
+          <v-badge
+            v-if="sidebar.notify[props.data.url]"
+            :content="sidebar.notify[props.data.url].value"
+            color="red"
+            inline
+          />
+        </client-only>
 
-        <v-chip v-else-if="props.data.beta && !props.submenu" color="info">
+        <v-chip v-if="props.data.beta && !props.submenu" color="info">
           {{ $t('common.beta') }}
         </v-chip>
         <v-chip

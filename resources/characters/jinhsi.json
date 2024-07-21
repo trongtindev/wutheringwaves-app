@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.816Z",
-  "modifiedTime": "2024-07-09T15:18:52.878Z",
-  "$schema": "./.schema.json",
+  "modifiedTime": "2024-07-21T15:18:52.878Z",
   "slug": "jinhsi",
   "quote": "There's still much to be done. Please rest assured, I am here to guide you through it.",
   "quoteLocalized": {
@@ -17,6 +17,13 @@
     "th": "จินซี ผู้พิพากษาแห่งจินโจว ส่องแสงแห่งความหวังให้กับประชาชนของเธอ ดุจดั่งรังสีของดวงอาทิตย์ในฤดูหนาวในฐานะผู้ได้รับการแต่งตั้งจากเซนติเนลที่เคารพนับถือ เธอแสดงความอ่อนน้อมถ่อมตน และทุ่มเทอย่างเต็มที่ในการนำพาประชาชนของเธอไปสู่อนาคตอันสดใส",
     "ru": "Джинши, магистрат Цзиньчжоу, мягко озаряет надежды своего народа, как лучи зимнего солнца. Как назначенный Резонатор почитаемого Стража, она демонстрирует смирение и всецело посвящает себя тому, чтобы вести свой народ к светлому будущему."
   },
+  "skillPriority": [
+    "Forte Circuit",
+    "Resonance Liberation",
+    "Resonance Skill",
+    "Intro Skill",
+    "Basic Attack"
+  ],
   "skills": [
     {
       "slug": "slash-of-breaking-dawn",
@@ -132,58 +139,57 @@
       "description": "DMG Multiplier percentage for Resonance Skill <strong style=\"color: var(--color-highlight);\">Illuminous Epiphany</strong> is increased by {0}. The multiplier increase brought by Incandescence is additionally increased by {1}."
     }
   ],
-  "stats": { "hp": 866, "def": 103, "atk": 33, "energy": 15000 },
+  "stats": { "hp": 10825, "def": 1259, "atk": 413 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
-        { "item": 41100021, "quantity": 4 },
-        { "item": 2, "quantity": 5000 }
+        { "item": 2, "quantity": 5000 },
+        { "item": 41100021, "quantity": 4 }
       ],
       "minLevel": 20
     },
     {
       "cost": [
-        { "item": 41400034, "quantity": 3 },
-        { "item": 42310210, "quantity": 4 },
+        { "item": 2, "quantity": 10000 },
         { "item": 41100022, "quantity": 4 },
-        { "item": 2, "quantity": 10000 }
+        { "item": 42310190, "quantity": 4 },
+        { "item": 41400034, "quantity": 3 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
-        { "item": 41400034, "quantity": 6 },
-        { "item": 42310210, "quantity": 8 },
+        { "item": 2, "quantity": 15000 },
         { "item": 41100022, "quantity": 8 },
-        { "item": 2, "quantity": 15000 }
+        { "item": 42310190, "quantity": 8 },
+        { "item": 41400034, "quantity": 6 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
-        { "item": 41400034, "quantity": 9 },
-        { "item": 42310210, "quantity": 12 },
+        { "item": 2, "quantity": 20000 },
         { "item": 41100023, "quantity": 4 },
-        { "item": 2, "quantity": 20000 }
+        { "item": 42310190, "quantity": 12 },
+        { "item": 41400034, "quantity": 9 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
-        { "item": 41400034, "quantity": 12 },
-        { "item": 42310210, "quantity": 16 },
+        { "item": 2, "quantity": 40000 },
         { "item": 41100023, "quantity": 8 },
-        { "item": 2, "quantity": 40000 }
+        { "item": 42310190, "quantity": 16 },
+        { "item": 41400034, "quantity": 12 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
-        { "item": 41400034, "quantity": 16 },
-        { "item": 42310210, "quantity": 20 },
+        { "item": 2, "quantity": 80000 },
         { "item": 41100024, "quantity": 4 },
-        { "item": 2, "quantity": 80000 }
+        { "item": 42310190, "quantity": 20 },
+        { "item": 41400034, "quantity": 16 }
       ],
       "minLevel": 80
     }
@@ -267,5 +273,138 @@
     }
   ],
   "birthday": "None",
-  "birthplace": "Huanglong"
+  "birthplace": "Huanglong",
+  "bestWeapons": [
+    {
+      "item": "ages-of-harvest",
+      "rank": 1,
+      "different": 118.1
+    },
+    {
+      "item": "verdant-summit",
+      "rank": 1,
+      "different": 101.3
+    },
+    {
+      "item": "lustrous-razor",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "broadblade-41",
+      "rank": 1,
+      "different": 85.8
+    },
+    {
+      "item": "helios-cleaver",
+      "rank": 1,
+      "different": 82
+    },
+    {
+      "item": "broadblade-41",
+      "rank": 1,
+      "different": 81.9
+    },
+    {
+      "item": "autumntrace",
+      "rank": 1,
+      "different": 79.8
+    },
+    {
+      "item": "broadblade-of-night",
+      "rank": 5,
+      "different": 75.3
+    },
+    {
+      "item": "guardian-broadblade",
+      "rank": 5,
+      "different": 70.3
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "items": ["Celestial Light"],
+      "different": 100
+    },
+    {
+      "items": ["Celestial Light", "Lingering Tunes"],
+      "different": 91.2
+    },
+    {
+      "items": ["Celestial Light", "Moonlit Clouds"],
+      "different": 90.8
+    }
+  ],
+  "bestMainEchoes": ["jue", "mourning-aix", "mech-abomination"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Spectro DMG", "ATK%"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Spectro DMG", "ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate"]
+        },
+        {
+          "cost": 4,
+          "stats": ["Crit DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["jinhsi"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["yinlin", "mortefi", "yuanwu"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina"]
+        }
+      ]
+    }
+  ]
 }

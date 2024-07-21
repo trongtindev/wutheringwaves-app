@@ -10,7 +10,7 @@ const characters = await resources.getCharacters();
 const characterDict = Object.fromEntries(characters.map((e) => [e.slug, e]));
 
 // states
-const echos = await resources.echos();
+const echos = await resources.getEchoes();
 const item = echos.find((e) => e.slug === route.params.id)!;
 if (!item) throw createError({ statusCode: 404 });
 const data = await resources.getEchoData(item.slug);
@@ -30,13 +30,10 @@ const skillDescription = computed(() => {
   // );
 });
 
-const suggestedCharacters = computed(() => {
-  if (item.suggestedCharacters) {
-    return item.suggestedCharacters.map((slug) => {
-      return characterDict[slug];
-    });
-  }
-  return [];
+const relatedEchos = computed(() => {
+  return echos.filter((e) => {
+    return e.attribute == item.attribute && e.name != item.name;
+  });
 });
 
 // seo meta
@@ -84,74 +81,69 @@ useJsonld({
 </script>
 
 <template>
-  <div v-if="item">
-    <v-card>
-      <v-card-title tag="h1">
-        {{ nameLocalized }}
-      </v-card-title>
-      <v-divider />
+  <v-card>
+    <v-card-title tag="h1">
+      {{ nameLocalized }}
+    </v-card-title>
+    <v-divider />
 
-      <v-card-text>
-        <v-row>
-          <v-col cols="4">
-            <v-img :src="`/echos/icons/${item.slug}.webp`" :height="256" />
-          </v-col>
+    <v-card-text>
+      <v-row>
+        <v-col cols="4">
+          <v-img :src="`/echos/icons/${item.slug}.webp`" :height="256" />
+        </v-col>
 
-          <v-col>
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip :text="`${item.cost} ${$t('echos.cost')}`" />
-              <v-chip :text="$t(item.class)" />
-              <v-chip :text="$t(item.attribute)" />
-            </div>
+        <v-col>
+          <div class="d-flex flex-wrap ga-2">
+            <v-chip :text="`${item.cost} ${$t('echos.cost')}`" />
+            <v-chip :text="$t(item.class)" />
+            <v-chip :text="$t(item.attribute)" />
+          </div>
 
-            <div class="mt-2">
-              <div :innerHTML="skillDescription"></div>
-            </div>
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+          <div class="mt-2">
+            <div :innerHTML="skillDescription"></div>
+          </div>
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
 
-    <!-- Sonata Effect -->
-    <v-card class="mt-2">
-      <v-card-title>
-        {{ $t('echos.sonataEffect') }}
-      </v-card-title>
-      <v-divider />
+  <!-- Sonata Effect -->
+  <v-card class="mt-2">
+    <v-card-title>
+      {{ $t('echos.sonataEffect') }}
+    </v-card-title>
+    <v-divider />
 
-      <v-card-text>
-        {{ item.sonataEffects }}
-      </v-card-text>
-    </v-card>
+    <v-card-text>
+      {{ item.sonataEffects }}
+    </v-card-text>
+  </v-card>
 
-    <!-- Suggested Characters -->
-    <v-card class="mt-2">
-      <v-card-title tag="h2">
-        {{ $t('echos.suggestedCharacters', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+  <!-- related -->
+  <v-card v-if="relatedEchos.length > 0" class="mt-2">
+    <v-card-title tag="h2">
+      {{ $t('echos.related', { name: nameLocalized }) }}
+    </v-card-title>
+    <v-divider />
 
-      <v-card-text>
-        <v-row>
-          <v-col
-            v-for="(element, index) in suggestedCharacters"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="3"
-            lg="2"
-          >
-            <character-card
-              :data="element"
-              :custom-name="`${element.name} Build`"
-            />
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+    <v-card-text>
+      <v-row>
+        <v-col
+          v-for="(element, index) in relatedEchos"
+          :key="index"
+          cols="6"
+          sm="4"
+          md="2"
+        >
+          <echo-card :item="element" />
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
 
-    <div class="mt-2">
-      <comments :channel="route.path" />
-    </div>
+  <!-- comments -->
+  <div class="mt-2">
+    <comments :channel="`echo.${item.slug}`" />
   </div>
 </template>

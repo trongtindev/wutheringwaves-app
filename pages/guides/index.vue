@@ -35,17 +35,6 @@ useSeoMeta({
       ]"
     />
 
-    <!-- header -->
-    <page-header>
-      <template #actions>
-        <v-btn
-          :to="localePath('/guides/create')"
-          :prepend-icon="mdiPlus"
-          :text="$t('guides.create.title')"
-        />
-      </template>
-    </page-header>
-
     <!-- list -->
     <div>
       <v-row>

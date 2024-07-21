@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.814Z",
-  "modifiedTime": "2024-07-09T15:18:52.825Z",
-  "slug": "calcharo",
+  "modifiedTime": "2024-07-21T15:18:52.825Z",
   "description": "Leader of the \"Ghost Hounds\", an international mercenary group. Ruthless, vengeful, unforgiving. A potential client must be mindful of the price to pay before making him an offer.",
   "skills": [
     {
@@ -103,58 +103,57 @@
       "description": "When casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">\"Death Messenger\"</strong>, Calcharo will summon {0} <strong style=\"color: var(--color-highlight);\">Phantoms</strong> to perform Coordinated Attacks. Each <strong style=\"color: var(--color-highlight);\">Phantom</strong> deals <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong> equal to {1} of Calcharo's ATK, which is considered Resonance Liberation damage."
     }
   ],
-  "stats": { "hp": 840, "def": 97, "atk": 35, "energy": 12500 },
+  "stats": { "hp": 10500, "def": 1186, "atk": 438 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
-        { "item": 41100031, "quantity": 4 },
-        { "item": 2, "quantity": 5000 }
+        { "item": 2, "quantity": 5000 },
+        { "item": 41100031, "quantity": 4 }
       ],
       "minLevel": 20
     },
     {
       "cost": [
+        { "item": 2, "quantity": 10000 },
         { "item": 41400024, "quantity": 3 },
         { "item": 42300030, "quantity": 4 },
-        { "item": 41100032, "quantity": 4 },
-        { "item": 2, "quantity": 10000 }
+        { "item": 41100032, "quantity": 4 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
+        { "item": 2, "quantity": 15000 },
         { "item": 41400024, "quantity": 6 },
         { "item": 42300030, "quantity": 8 },
-        { "item": 41100032, "quantity": 8 },
-        { "item": 2, "quantity": 15000 }
+        { "item": 41100032, "quantity": 8 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
+        { "item": 2, "quantity": 20000 },
         { "item": 41400024, "quantity": 9 },
         { "item": 42300030, "quantity": 12 },
-        { "item": 41100033, "quantity": 4 },
-        { "item": 2, "quantity": 20000 }
+        { "item": 41100033, "quantity": 4 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
+        { "item": 2, "quantity": 40000 },
         { "item": 41400024, "quantity": 12 },
         { "item": 42300030, "quantity": 16 },
-        { "item": 41100033, "quantity": 8 },
-        { "item": 2, "quantity": 40000 }
+        { "item": 41100033, "quantity": 8 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
+        { "item": 2, "quantity": 80000 },
         { "item": 41400024, "quantity": 16 },
         { "item": 42300030, "quantity": 20 },
-        { "item": 41100034, "quantity": 4 },
-        { "item": 2, "quantity": 80000 }
+        { "item": 41100034, "quantity": 4 }
       ],
       "minLevel": 80
     }
@@ -251,5 +250,123 @@
     "id": "Pemimpin \"Ghost Hounds\", kelompok tentara bayaran internasional. Kejam, pendendam, tidak kenal ampun. Klien potensial harus memperhatikan harga yang harus dibayar sebelum memberinya penawaran.",
     "th": "ผู้นำของ \"ผีหมาป่า\" กลุ่มทหารรับจ้างระหว่างประเทศ โหดเหี้ยม แสวงแก้แค้น ไม่ให้อภัย ลูกค้าที่อาจเป็นไปได้ต้องระมัดระวังในเรื่องค่าใช้จ่ายก่อนที่จะเสนอให้เขา",
     "ru": "Лидер \"Призрачных Гончих\", международной группы наемников. Безжалостный, мстительный, неумолимый. Потенциальный клиент должен быть готов заплатить цену, прежде чем делать ему предложение."
-  }
+  },
+  "bestWeapons": [
+    {
+      "item": "lustrous-razor",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "verdant-summit",
+      "rank": 1,
+      "different": 96.6
+    },
+    {
+      "item": "autumntrace",
+      "rank": 1,
+      "different": 82.8
+    },
+    {
+      "item": "helios-cleaver",
+      "rank": 1,
+      "different": 78.7
+    },
+    {
+      "item": "broadblade-41",
+      "rank": 1,
+      "different": 76.5
+    },
+    {
+      "item": "broadblade-of-night",
+      "rank": 5,
+      "different": 71.8
+    },
+    {
+      "item": "guardian-broadblade",
+      "rank": 5,
+      "different": 70.2
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Void Thunder"]
+    },
+    {
+      "different": 95,
+      "items": ["Void Thunder", "Lingering Tunes"]
+    },
+    {
+      "different": 95,
+      "items": ["Lingering Tunes"]
+    },
+    {
+      "different": 94.5,
+      "items": ["Void Thunder", "Moonlit Clouds"]
+    },
+    {
+      "different": 93,
+      "items": ["Lingering Tunes", "Moonlit Clouds"]
+    }
+  ],
+  "bestMainEchoes": [
+    "tempest-mephis",
+    "thundering-mephis",
+    "flautist",
+    "mech-abomination"
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate", "Crit DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Electro DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Electro DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "skillPriority": [
+    "Forte Circuit",
+    "Resonance Liberation",
+    "Resonance Skill",
+    "Intro Skill",
+    "Basic Attack"
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["calcharo"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["yinlin", "sanhua", "jianxin"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina", "baizhi"]
+        }
+      ]
+    }
+  ]
 }

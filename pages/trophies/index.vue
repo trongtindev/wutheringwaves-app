@@ -28,7 +28,7 @@ const percentage = ref<{ [key: string]: number }>({});
 const refreshStatisticThrottle = useThrottleFn(() => {
   data.groups.forEach((group) => {
     percentage.value[group.slug] = checkedItems.value.filter((slug) => {
-      const item = data.items.find((e) => e.slug === slug);
+      const item = items.find((e) => e.slug === slug);
       return item && item.group === group.name;
     }).length;
   });

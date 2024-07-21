@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.819Z",
-  "modifiedTime": "2024-07-09T15:18:52.962Z",
-  "slug": "yinlin",
+  "modifiedTime": "2024-07-21T00:18:52.962Z",
   "description": "Yinlin is a skilled Patroller and powerful Natural Resonator. After being suspended from her duties at the Public Security Bureau, she must now pursue hidden evils in secrecy.",
   "skills": [
     {
@@ -251,5 +251,128 @@
     "th": "ชื่ออินหลิน นะ ส่วนว่าทำอะไรอยู่น่ะ... เงียบๆ ไว้ก่อน เรื่องแบบนี้ไม่ควรพูดกันในที่สาธารณะ",
     "ru": "Меня зовут Иньлинь. Что касается того, чем я занимаюсь... Тсс, мы не говорим об этом на людях.",
     "vi": "Tên tôi là Yinlin. Còn việc tôi làm gì... Shhh, chúng ta không nói về điều đó ở nơi công cộng."
-  }
+  },
+  "bestWeapons": [
+    {
+      "item": "stringmaster",
+      "rank": 1,
+      "different": 117.2
+    },
+    {
+      "item": "cosmic-ripples",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "augment",
+      "rank": 1,
+      "different": 84.5
+    },
+    {
+      "item": "jinzhou-keeper",
+      "rank": 1,
+      "different": 83.3
+    },
+    {
+      "item": "rectifier-of-night",
+      "rank": 5,
+      "different": 75.8
+    },
+    {
+      "item": "guardian-rectifier",
+      "rank": 5,
+      "different": 73.6
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Void Thunder"]
+    },
+    {
+      "different": 88.7,
+      "items": ["Void Thunder", "Lingering Tunes"]
+    },
+    {
+      "different": 88.4,
+      "items": ["Void Thunder", "Moonlit Clouds"]
+    }
+  ],
+  "bestMainEchoes": [
+    "impermanence-heron",
+    "tempest-mephis",
+    "thundering-mephis",
+    "flautist"
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Electro DMG", "ATK%"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Electro DMG", "ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate"]
+        },
+        {
+          "cost": 4,
+          "stats": ["Crit DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["calcharo", "encore"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["yinlin"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina", "baizhi"]
+        }
+      ]
+    }
+  ]
 }

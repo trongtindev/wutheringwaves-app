@@ -84,10 +84,11 @@ const initialize = () => {
     return;
   }
   calcGrid([masonryElement.value]);
+  refreshLayout();
 };
 
 // lifecycle
-onNuxtReady(() => {
+onMounted(() => {
   initialize();
   window.addEventListener('resize', refreshLayoutDebounce, false);
 });
@@ -106,21 +107,3 @@ onUnmounted(() => {
     <slot :refresh-layout="refreshLayout" />
   </div>
 </template>
-
-<style>
-.masonry {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, var(--col-width));
-  grid-template-rows: masonry;
-  justify-content: center;
-  grid-gap: var(--grid-gap);
-}
-
-.masonry > * {
-  align-self: start;
-}
-
-.masonry.stretch-first > *:first-child {
-  grid-column: 1/ -1;
-}
-</style>

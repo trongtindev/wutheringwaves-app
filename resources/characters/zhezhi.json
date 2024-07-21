@@ -1,7 +1,7 @@
 {
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-07-08T11:49:39.662Z",
-  "modifiedTime": "2024-07-09T15:18:52.978Z",
-  "$schema": "./.schema.json",
+  "modifiedTime": "2024-07-21T15:18:52.978Z",
   "quote": "What I wanted to say is, the sunlight on you right now is so beautiful. Can I ... paint you?",
   "quoteLocalized": {
     "vi": "Điều tôi muốn nói là, ánh nắng trên bạn lúc này thật đẹp. Tôi có thể... vẽ bạn chứ?"
@@ -9,5 +9,61 @@
   "description": "Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft. She's not very eloquent, but her persistence and love for painting speak volumes.",
   "descriptionLocalized": {
     "vi": "Zhezhi là một họa sĩ được ủy thác, im lặng và nhút nhát với sự cống hiến cho đồ nghề của mình. Cô ấy không hùng biện lắm, nhưng sự kiên trì và yêu thích hội họa của cô ấy đã nói lên nhiều."
-  }
+  },
+  "stats": {
+    "atk": 375,
+    "def": 1198,
+    "hp": 12250
+  },
+  "ascensions": [
+    {
+      "cost": [{ "item": 2, "quantity": 5000 }],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 10000 },
+        { "item": 41300005, "quantity": 1 },
+        { "item": 42300050, "quantity": 4 },
+        { "item": 41400074, "quantity": 3 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 15000 },
+        { "item": 41300005, "quantity": 1 },
+        { "item": 42300050, "quantity": 8 },
+        { "item": 41400074, "quantity": 6 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 20000 },
+        { "item": 41300005, "quantity": 1 },
+        { "item": 42300050, "quantity": 12 },
+        { "item": 41400074, "quantity": 9 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 40000 },
+        { "item": 41300005, "quantity": 1 },
+        { "item": 42300050, "quantity": 16 },
+        { "item": 41400074, "quantity": 12 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 80000 },
+        { "item": 41300005, "quantity": 1 },
+        { "item": 42300050, "quantity": 20 },
+        { "item": 41400074, "quantity": 16 }
+      ],
+      "minLevel": 80
+    }
+  ]
 }

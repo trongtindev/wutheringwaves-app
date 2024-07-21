@@ -3,12 +3,11 @@ import type { CharacterDocument } from '~/collections/character';
 
 const i18n = useI18n();
 const resources = useResources();
-const localePath = useLocalePath();
 const database = useDatabase();
 const account = useAccount();
 
 // fetch
-const result = await resources.characters();
+const result = await resources.getCharacters();
 const characters = result.sort((a, b) => a.name.localeCompare(b.name));
 
 // states
@@ -148,7 +147,14 @@ useSeoMeta({
             md="3"
             lg="2"
           >
-            <character-card :data="element" />
+            <character-card
+              :item="element"
+              :sequences="
+                owned && owned[element.name]
+                  ? owned[element.name].resonanceChain
+                  : undefined
+              "
+            />
           </v-col>
         </v-row>
       </v-card-text>

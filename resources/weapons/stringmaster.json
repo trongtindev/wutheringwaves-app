@@ -12,7 +12,7 @@
     ],
     "description": "Increases the DMG Bonus of all Resonance Attributes by {0}. When Resonance Skill hits a target, increases ATK by {1}, stacking up to {2}. This effect lasts for {3}s. When the equipped character is not on the field, increases their ATK by an additional {4}."
   },
-  "stats": { "atk": 500.00, "critRate": 36.00 },
+  "stats": { "atk": 500.0, "critRate": 36.0 },
   "ascensions": [
     {
       "cost": [

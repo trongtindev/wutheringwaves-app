@@ -217,13 +217,7 @@ const initialize = () => {
 watch(
   () => filterType.value,
   (value) => {
-    const now = dayjs();
     activeBanners.value = banners.filter((e) => {
-      if (e.time) {
-        if (dayjs(e.time.start) > now) {
-          return false;
-        }
-      }
       return e.type === value;
     });
     if (activeBanners.value.length > 0) {

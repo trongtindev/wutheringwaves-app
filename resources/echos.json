@@ -17,8 +17,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Electro",
-      "sonataEffects": ["Void Thunder"],
-      "suggestedCharacters": ["calcharo", "yuanwu", "yinlin"]
+      "sonataEffects": ["Void Thunder"]
     },
     {
       "id": 6000040,
@@ -45,8 +44,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Havoc",
-      "sonataEffects": ["Sun-sinking Eclipse"],
-      "suggestedCharacters": ["danjin"]
+      "sonataEffects": ["Sun-sinking Eclipse"]
     },
     {
       "id": 6000043,
@@ -55,8 +53,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Aero",
-      "sonataEffects": ["Sierra Gale"],
-      "suggestedCharacters": ["jiyan", "jianxin", "yangyang", "aalto"]
+      "sonataEffects": ["Sierra Gale"]
     },
     {
       "id": 6000044,
@@ -65,8 +62,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Glacio",
-      "sonataEffects": ["Freezing Frost"],
-      "suggestedCharacters": ["lingyang", "sanhua"]
+      "sonataEffects": ["Freezing Frost"]
     },
     {
       "id": 6000045,
@@ -138,18 +134,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Havoc",
-      "sonataEffects": ["Moonlit Clouds"],
-      "suggestedCharacters": [
-        "changli",
-        "jianxin",
-        "yuanwu",
-        "taoqi",
-        "sanhua",
-        "mortefi",
-        "yinlin",
-        "yangyang",
-        "aalto"
-      ]
+      "sonataEffects": ["Moonlit Clouds"]
     },
     {
       "id": 6000053,
@@ -158,8 +143,7 @@
       "cost": 4,
       "class": "Calamity",
       "attribute": "Havoc",
-      "sonataEffects": ["Sun-sinking Eclipse"],
-      "suggestedCharacters": ["rover-havoc"]
+      "sonataEffects": ["Sun-sinking Eclipse"]
     },
     {
       "id": 6000054,
@@ -213,8 +197,7 @@
       "cost": 4,
       "class": "Calamity",
       "attribute": "Spectro",
-      "sonataEffects": ["Celestial Light"],
-      "suggestedCharacters": ["jinhsi"]
+      "sonataEffects": ["Celestial Light"]
     },
     {
       "id": 6000145,
@@ -581,8 +564,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Electro",
-      "sonataEffects": ["Void Thunder"],
-      "suggestedCharacters": ["calcharo", "yuanwu", "yinlin"]
+      "sonataEffects": ["Void Thunder"]
     },
     {
       "id": 390080005,
@@ -591,8 +573,7 @@
       "cost": 4,
       "class": "Calamity",
       "attribute": "Glacio",
-      "sonataEffects": ["Moonlit Clouds", "Rejuvenating Glow"],
-      "suggestedCharacters": ["taoqi", "baizhi", "verina"]
+      "sonataEffects": ["Moonlit Clouds", "Rejuvenating Glow"]
     },
     {
       "id": 390080007,
@@ -601,8 +582,7 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Fusion",
-      "sonataEffects": ["Molten Rift"],
-      "suggestedCharacters": ["changli", "mortefi", "chixia", "encore"]
+      "sonataEffects": ["Molten Rift"]
     },
     {
       "id": 390180010,

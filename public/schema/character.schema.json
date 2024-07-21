@@ -15,6 +15,20 @@
     "quoteLocalized": { "type": "object" },
     "description": { "type": "string" },
     "descriptionLocalized": { "type": "object" },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "atk": {
+          "type": "number"
+        },
+        "def": {
+          "type": "number"
+        },
+        "hp": {
+          "type": "number"
+        }
+      }
+    },
     "skills": {
       "type": "array",
       "items": {
@@ -68,6 +82,141 @@
         },
         "required": ["cost", "minLevel"]
       }
+    },
+    "bestWeapons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "./weapons.components.json#/components/schemas/slug"
+          },
+          "rank": {
+            "type": "integer"
+          },
+          "different": {
+            "type": "number"
+          }
+        },
+        "required": ["item", "rank", "different"]
+      }
+    },
+    "bestEchoSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "./echos.schema.json#/components/schemas/sonataEffect"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "different": {
+            "type": "number"
+          }
+        },
+        "required": ["items", "different"]
+      },
+      "minItems": 1
+    },
+    "bestMainEchoes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "$ref": "./echos.schema.json#/components/schemas/echoSlug"
+      }
+    },
+    "bestEchoStats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["4-3-3-1-1", "4-4-1-1-1"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "cost": {
+                  "type": "integer",
+                  "maximum": 4,
+                  "minimum": 1
+                },
+                "stats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "$ref": "./echo.component.json#/components/schemas/echoMainStat"
+                  }
+                }
+              },
+              "required": ["cost", "stats"]
+            },
+            "minItems": 1,
+            "maxItems": 5
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "skillPriority": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Basic Attack",
+          "Resonance Skill",
+          "Resonance Liberation",
+          "Inherent Skill",
+          "Intro Skill",
+          "Outro Skill",
+          "Forte Circuit"
+        ]
+      }
+    },
+    "bestTeams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "$ref": "./characters.schema.json#/components/schemas/characterRole"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "$ref": "./characters.schema.json#/components/schemas/characterSlug"
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": ["role", "items"]
+            }
+          }
+        },
+        "required": ["items"]
+      },
+      "minItems": 1
     }
   },
   "required": ["publishedTime", "modifiedTime"]

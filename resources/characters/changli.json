@@ -1,7 +1,7 @@
 {
-  "$schema": "./.schema.json",
+  "$schema": "../../public/schema/character.schema.json",
   "publishedTime": "2024-06-28T15:43:21.814Z",
-  "modifiedTime": "2024-07-20T15:18:52.837Z",
+  "modifiedTime": "2024-07-21T15:18:52.837Z",
   "quote": "Eons of time on this vast land, all encapsulated in a humble game... I am fortunate to have you as my opponent.",
   "quoteLocalized": {
     "vi": "Bao niên kỷ trên mảnh đất rộng lớn này, tất cả gói gọn trong một trò chơi khiêm tốn... Tôi thật may mắn khi có được bạn là đối thủ của tôi.",
@@ -116,58 +116,57 @@
       "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Tripartite Flames</strong>, Heavy Attack <strong style=\"color: var(--color-highlight);\">Flaming Vow</strong>, and Resonance Liberation <strong style=\"color: var(--color-highlight);\">Radiance of Fealty</strong> ignore an additional {0} of the target's DEF when dealing damage."
     }
   ],
-  "stats": { "hp": 10387, "def": 1099, "atk": 462 },
+  "stats": { "hp": 10388, "def": 1100, "atk": 463 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
-        { "item": 41100031, "quantity": 4 },
-        { "item": 2, "quantity": 5000 }
+        { "item": 2, "quantity": 5000 },
+        { "item": 41100031, "quantity": 4 }
       ],
       "minLevel": 20
     },
     {
       "cost": [
-        { "item": 41400044, "quantity": 3 },
-        { "item": 42310200, "quantity": 4 },
+        { "item": 2, "quantity": 10000 },
         { "item": 41100032, "quantity": 4 },
-        { "item": 2, "quantity": 10000 }
+        { "item": 41400044, "quantity": 3 },
+        { "item": 42310200, "quantity": 4 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
-        { "item": 41400044, "quantity": 6 },
-        { "item": 42310200, "quantity": 8 },
+        { "item": 2, "quantity": 15000 },
         { "item": 41100032, "quantity": 8 },
-        { "item": 2, "quantity": 15000 }
+        { "item": 41400044, "quantity": 6 },
+        { "item": 42310200, "quantity": 8 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
-        { "item": 41400044, "quantity": 9 },
-        { "item": 42310200, "quantity": 12 },
+        { "item": 2, "quantity": 20000 },
         { "item": 41100033, "quantity": 4 },
-        { "item": 2, "quantity": 20000 }
+        { "item": 41400044, "quantity": 9 },
+        { "item": 42310200, "quantity": 12 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
-        { "item": 41400044, "quantity": 12 },
-        { "item": 42310200, "quantity": 16 },
+        { "item": 2, "quantity": 40000 },
         { "item": 41100033, "quantity": 8 },
-        { "item": 2, "quantity": 40000 }
+        { "item": 41400044, "quantity": 12 },
+        { "item": 42310200, "quantity": 16 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
-        { "item": 41400044, "quantity": 16 },
-        { "item": 42310200, "quantity": 20 },
+        { "item": 2, "quantity": 80000 },
         { "item": 41100034, "quantity": 4 },
-        { "item": 2, "quantity": 80000 }
+        { "item": 41400044, "quantity": 16 },
+        { "item": 42310200, "quantity": 20 }
       ],
       "minLevel": 80
     }
@@ -250,6 +249,5 @@
       "name": "Crit. Rate+2.80%"
     }
   ],
-  "birthday": "June 6th",
-  "birthplace": "None"
+  "birthday": "June 6th"
 }

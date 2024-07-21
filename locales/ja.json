@@ -204,10 +204,17 @@
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
     "lastUpdatedOn": "{name} profile has been last updated on {time}.",
     "build": "{name} Build",
-    "calculations": "{name} Calculations",
-    "profile": "Profile",
-    "gameplayAndTeams": "Gameplay and Teams",
-    "suggestedEchos": "Suggested Echos for {name}"
+    "calculations": "Calculations",
+    "overview": "Overview",
+    "teams": "Teams",
+    "bestMainEchoes": "Best Main Echoes {name}",
+    "moreBuildGuides": "More Build Guides",
+    "bestWeapons": "Best Weapons",
+    "bestEchoSets": "Best Echo Sets",
+    "bestEchoStats": "Best Echo Stats",
+    "bestTeams": "{name} Best Teams",
+    "ascensionMaterialsMap": "Ascension Materials Map",
+    "skillPriority": "{name} Skill Priority"
   },
   "weapons": {
     "title": "武器",
@@ -231,7 +238,7 @@
     "cost": "Cost",
     "sonataEffect": "Sonata effect",
     "sameElementCharacters": "Same Element Characters",
-    "suggestedCharacters": "Suggested characters for {name}"
+    "related": "Related Echos {name}"
   },
   "faqs": {
     "0": {
@@ -460,6 +467,9 @@
     "critDMG": "Crit DMG",
     "atk": "ATK",
     "def": "DEF",
-    "hp": "HP"
+    "hp": "HP",
+    "cost": "Cost",
+    "upcomingWeapons": "Upcoming Weapons",
+    "upcomingCharacters": "Upcoming Characters"
   }
 }

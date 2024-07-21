@@ -22,7 +22,6 @@
 ::-webkit-scrollbar {
   background-color: rgb(var(--v-theme-surface));
   width: 6px;
-  height: 68px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -85,14 +84,14 @@ a {
   border-style: solid;
   border-width: thin;
   border-color: var(--color-rarity5) !important;
-  box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important;
+  /* box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important; */
 }
 
 .border-rarity4 {
   border-style: solid;
   border-width: thin;
   border-color: var(--color-rarity4) !important;
-  box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important;
+  /* box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important; */
 }
 
 .bg-rarity5 {
@@ -144,4 +143,65 @@ a {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 1264px) {
+  main {
+    padding-left: 256px !important;
+  }
+}
+
+.float-notifications {
+  z-index: 999;
+  position: fixed;
+  right: 10px;
+  top: 72px;
+}
+
+/* masonry */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--col-width));
+  grid-template-rows: masonry;
+  justify-content: center;
+  grid-gap: var(--grid-gap);
+}
+
+.masonry > * {
+  align-self: start;
+}
+
+.masonry.stretch-first > *:first-child {
+  grid-column: 1/ -1;
+}
+
+/* timeline */
+div.event-item {
+  position: absolute;
+  opacity: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.month:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: inline-block;
+  padding: 0 50px;
+  position: absolute;
+  left: calc(50% - 50px);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(83, 100, 212) 10%,
+    rgb(37, 41, 74, 100) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }

@@ -91,6 +91,29 @@ const items: IBanner[] = [
     featuredRare: 'Ages of Harvest',
     featured: ['Discord', 'Commando of Conviction', 'Amity Accord'],
     thumbnail: '/events/covers/ages-of-harvest.webp'
+  },
+  // featured Changli
+  {
+    type: CardPoolType['featured-resonator'],
+    name: "Vermillion's Ploy - Changli",
+    time: {
+      start: '2024-07-22 10:00',
+      end: '2024-08-14 11:59'
+    },
+    featuredRare: 'Changli',
+    featured: ['Sanhua', 'Taoqi', 'Mortefi'],
+    thumbnail: '/events/covers/vermillion-ploy.webp'
+  },
+  {
+    type: CardPoolType['featured-weapon'],
+    time: {
+      start: '2024-07-22 10:00',
+      end: '2024-08-14 11:59'
+    },
+    name: 'Absolute Pulsation - Changli - Blazing Brilliance',
+    featuredRare: 'Blazing Brilliance',
+    featured: ['Comet Flare', 'Scale: Slasher', 'Undying Flame'],
+    thumbnail: '/events/covers/blazing-brilliance.webp'
   }
 ];
 export default items;
