@@ -5,10 +5,6 @@ const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
 
-// fetch
-const characters = await resources.getCharacters();
-const characterDict = Object.fromEntries(characters.map((e) => [e.slug, e]));
-
 // states
 const echos = await resources.getEchoes();
 const item = echos.find((e) => e.slug === route.params.id)!;
@@ -52,8 +48,8 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
-  articlePublishedTime: data.publishedTime,
-  articleModifiedTime: data.modifiedTime
+  articlePublishedTime: item.publishedTime,
+  articleModifiedTime: item.modifiedTime
 });
 useJsonld({
   '@context': 'https://schema.org',

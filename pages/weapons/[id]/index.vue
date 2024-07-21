@@ -60,8 +60,8 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
-  articlePublishedTime: data.publishedTime,
-  articleModifiedTime: data.modifiedTime
+  articlePublishedTime: item.publishedTime,
+  articleModifiedTime: item.modifiedTime
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -196,13 +196,13 @@ useJsonld({
         </v-row>
       </v-card-text>
 
-      <v-divider v-if="data.modifiedTime" />
-      <v-card-actions v-if="data.modifiedTime">
+      <v-divider v-if="item.modifiedTime" />
+      <v-card-actions v-if="item.modifiedTime">
         <h2 class="text-center text-body-2 w-100">
           {{
             $t('weapons.lastUpdatedOn', {
               name: nameLocalized,
-              time: dayjs(data.modifiedTime)
+              time: dayjs(item.modifiedTime)
             })
           }}
         </h2>

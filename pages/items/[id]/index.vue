@@ -63,8 +63,8 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
-  articlePublishedTime: data.publishedTime,
-  articleModifiedTime: data.modifiedTime
+  articlePublishedTime: item.publishedTime,
+  articleModifiedTime: item.modifiedTime
 });
 useJsonld({
   '@context': 'https://schema.org',

@@ -7,19 +7,11 @@ export interface IItem {
   nameLocalized?: ILocalized;
   rarity: number;
   category: string;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
 export interface IItemData {
-  /**
-   * When the data was first published.
-   * @example '1970-01-01T00:00:00.000Z'
-   */
-  publishedTime?: string;
-  /**
-   * When the data was last changed.
-   * @example '1970-01-01T00:00:00.000Z'
-   */
-  modifiedTime?: string;
   description: string;
   descriptionLocalized?: ILocalized;
   bgDescription?: string;
