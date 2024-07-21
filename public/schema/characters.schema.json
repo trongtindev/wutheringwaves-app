@@ -26,9 +26,22 @@
             "items": {
               "type": "string"
             }
+          },
+          "publishedTime": {
+            "type": "string"
+          },
+          "modifiedTime": {
+            "type": "string"
           }
         },
-        "required": ["id", "slug", "name", "rarity"]
+        "required": [
+          "id",
+          "slug",
+          "name",
+          "rarity",
+          "publishedTime",
+          "modifiedTime"
+        ]
       }
     }
   },

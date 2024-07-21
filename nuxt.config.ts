@@ -154,7 +154,7 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
 
-  watch: ['resources/**/*'],
+  // watch: ['resources/**/*'],
 
   vite: {
     vue: {

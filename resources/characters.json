@@ -7,7 +7,9 @@
       "name": "Sanhua",
       "rarity": 4,
       "attribute": "Glacio",
-      "weapon": "Sword"
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.818Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1103,
@@ -15,7 +17,9 @@
       "name": "Baizhi",
       "rarity": 4,
       "attribute": "Glacio",
-      "weapon": "Rectifier"
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.813Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1104,
@@ -23,7 +27,9 @@
       "name": "Lingyang",
       "rarity": 5,
       "attribute": "Glacio",
-      "weapon": "Gauntlets"
+      "weapon": "Gauntlets",
+      "publishedTime": "2024-06-28T15:43:21.817Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1202,
@@ -31,7 +37,9 @@
       "name": "Chixia",
       "rarity": 4,
       "attribute": "Fusion",
-      "weapon": "Pistols"
+      "weapon": "Pistols",
+      "publishedTime": "2024-06-28T15:43:21.814Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1203,
@@ -39,7 +47,9 @@
       "name": "Encore",
       "rarity": 5,
       "attribute": "Fusion",
-      "weapon": "Rectifier"
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.815Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1204,
@@ -47,7 +57,9 @@
       "name": "Mortefi",
       "rarity": 4,
       "attribute": "Fusion",
-      "weapon": "Pistols"
+      "weapon": "Pistols",
+      "publishedTime": "2024-06-28T15:43:21.817Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1205,
@@ -55,7 +67,9 @@
       "name": "Changli",
       "rarity": 5,
       "attribute": "Fusion",
-      "weapon": "Sword"
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.814Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1301,
@@ -63,7 +77,9 @@
       "name": "Calcharo",
       "rarity": 5,
       "attribute": "Electro",
-      "weapon": "Broadblade"
+      "weapon": "Broadblade",
+      "publishedTime": "2024-06-28T15:43:21.814Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1302,
@@ -71,7 +87,9 @@
       "name": "Yinlin",
       "rarity": 5,
       "attribute": "Electro",
-      "weapon": "Rectifier"
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.819Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1303,
@@ -79,7 +97,9 @@
       "name": "Yuanwu",
       "rarity": 4,
       "attribute": "Electro",
-      "weapon": "Gauntlets"
+      "weapon": "Gauntlets",
+      "publishedTime": "2024-06-28T15:43:21.820Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1304,
@@ -88,7 +108,9 @@
       "rarity": 5,
       "attribute": "Spectro",
       "weapon": "Broadblade",
-      "version": 1.1
+      "version": 1.1,
+      "publishedTime": "2024-06-28T15:43:21.816Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1402,
@@ -96,7 +118,9 @@
       "name": "Yangyang",
       "rarity": 4,
       "attribute": "Aero",
-      "weapon": "Sword"
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.819Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1403,
@@ -104,7 +128,9 @@
       "name": "Aalto",
       "rarity": 4,
       "attribute": "Aero",
-      "weapon": "Pistols"
+      "weapon": "Pistols",
+      "publishedTime": "2024-06-28T15:43:21.813Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1404,
@@ -112,7 +138,9 @@
       "name": "Jiyan",
       "rarity": 5,
       "attribute": "Aero",
-      "weapon": "Broadblade"
+      "weapon": "Broadblade",
+      "publishedTime": "2024-06-28T15:43:21.816Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1405,
@@ -120,7 +148,9 @@
       "name": "Jianxin",
       "rarity": 5,
       "attribute": "Aero",
-      "weapon": "Gauntlets"
+      "weapon": "Gauntlets",
+      "publishedTime": "2024-06-28T15:43:21.816Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1503,
@@ -128,7 +158,9 @@
       "name": "Verina",
       "rarity": 5,
       "attribute": "Spectro",
-      "weapon": "Rectifier"
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.819Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1601,
@@ -136,7 +168,9 @@
       "name": "Taoqi",
       "rarity": 4,
       "attribute": "Havoc",
-      "weapon": "Broadblade"
+      "weapon": "Broadblade",
+      "publishedTime": "2024-06-28T15:43:21.818Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 1602,
@@ -144,7 +178,9 @@
       "name": "Danjin",
       "rarity": 4,
       "attribute": "Havoc",
-      "weapon": "Sword"
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.815Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": -1,
@@ -152,7 +188,9 @@
       "name": "Xiangli Yao",
       "rarity": 5,
       "upcoming": true,
-      "version": 1.2
+      "version": 1.2,
+      "publishedTime": "2024-07-08T11:43:02.856Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": -1,
@@ -160,14 +198,18 @@
       "name": "Zhezhi",
       "rarity": 5,
       "upcoming": true,
-      "version": 1.2
+      "version": 1.2,
+      "publishedTime": "2024-07-08T11:49:39.662Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": -1,
       "slug": "camellya",
       "name": "Camellya",
       "rarity": 5,
-      "upcoming": true
+      "upcoming": true,
+      "publishedTime": "2024-07-08T11:44:36.125Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 0,
@@ -175,7 +217,9 @@
       "name": "Rover",
       "weapon": "Sword",
       "rarity": 5,
-      "attribute": "Spectro"
+      "attribute": "Spectro",
+      "publishedTime": "2024-06-28T15:43:21.818Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 0,
@@ -183,7 +227,9 @@
       "name": "Rover (Havoc)",
       "rarity": 5,
       "weapon": "Sword",
-      "attribute": "Havoc"
+      "attribute": "Havoc",
+      "modifiedTime": "2024-07-21T17:01:43.981Z",
+      "publishedTime": "2024-05-23T00:00"
     },
     {
       "id": 0,
@@ -192,7 +238,9 @@
       "rarity": 5,
       "weapon": "Sword",
       "attribute": "Electro",
-      "upcoming": true
+      "upcoming": true,
+      "publishedTime": "2024-07-08T12:10:50.660Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     }
   ]
 }

@@ -54,6 +54,14 @@ onMounted(initialize);
 
 <template>
   <client-only>
+    <template #fallback>
+      <v-skeleton-loader
+        v-for="index in 5"
+        :key="index"
+        type="list-item-avatar-two-line"
+      />
+    </template>
+
     <v-card-text v-if="!items || items.length === 0">
       {{ $t('common.noRecordsFound') }}
     </v-card-text>

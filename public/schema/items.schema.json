@@ -23,9 +23,23 @@
             ]
           },
           "name": { "type": "string" },
-          "nameLocalized": { "type": "object" }
+          "nameLocalized": { "type": "object" },
+          "publishedTime": {
+            "type": "string"
+          },
+          "modifiedTime": {
+            "type": "string"
+          }
         },
-        "required": ["id", "slug", "rarity", "category", "name"]
+        "required": [
+          "id",
+          "slug",
+          "rarity",
+          "category",
+          "name",
+          "publishedTime",
+          "modifiedTime"
+        ]
       }
     }
   },

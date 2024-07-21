@@ -8,7 +8,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Aero",
-      "sonataEffects": ["Lingering Tunes", "Sierra Gale"]
+      "sonataEffects": ["Lingering Tunes", "Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.831Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000039,
@@ -17,7 +19,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Electro",
-      "sonataEffects": ["Void Thunder"]
+      "sonataEffects": ["Void Thunder"],
+      "publishedTime": "2024-06-28T15:43:21.838Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000040,
@@ -26,7 +30,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Aero",
-      "sonataEffects": ["Rejuvenating Glow", "Sierra Gale"]
+      "sonataEffects": ["Rejuvenating Glow", "Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.831Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000041,
@@ -35,7 +41,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "0",
-      "sonataEffects": ["Moonlit Clouds", "Lingering Tunes"]
+      "sonataEffects": ["Moonlit Clouds", "Lingering Tunes"],
+      "publishedTime": "2024-06-28T15:43:21.825Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000042,
@@ -44,7 +52,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Havoc",
-      "sonataEffects": ["Sun-sinking Eclipse"]
+      "sonataEffects": ["Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.824Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000043,
@@ -53,7 +63,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Aero",
-      "sonataEffects": ["Sierra Gale"]
+      "sonataEffects": ["Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.826Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000044,
@@ -62,7 +74,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Glacio",
-      "sonataEffects": ["Freezing Frost"]
+      "sonataEffects": ["Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.833Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000045,
@@ -71,7 +85,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Spectro",
-      "sonataEffects": ["Celestial Light"]
+      "sonataEffects": ["Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.834Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000046,
@@ -80,7 +96,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Aero",
-      "sonataEffects": ["Moonlit Clouds", "Sierra Gale"]
+      "sonataEffects": ["Moonlit Clouds", "Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.823Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000047,
@@ -89,7 +107,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Aero",
-      "sonataEffects": ["Sun-sinking Eclipse", "Sierra Gale"]
+      "sonataEffects": ["Sun-sinking Eclipse", "Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.824Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000048,
@@ -98,7 +118,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Electro",
-      "sonataEffects": ["Lingering Tunes"]
+      "sonataEffects": ["Lingering Tunes"],
+      "publishedTime": "2024-06-28T15:43:21.833Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000049,
@@ -107,7 +129,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.822Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000050,
@@ -116,7 +140,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "0",
-      "sonataEffects": ["Void Thunder", "Sierra Gale", "Molten Rift"]
+      "sonataEffects": ["Void Thunder", "Sierra Gale", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.839Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000051,
@@ -125,7 +151,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.824Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000052,
@@ -134,7 +162,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Havoc",
-      "sonataEffects": ["Moonlit Clouds"]
+      "sonataEffects": ["Moonlit Clouds"],
+      "publishedTime": "2024-06-28T15:43:21.832Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000053,
@@ -143,7 +173,9 @@
       "cost": 4,
       "class": "Calamity",
       "attribute": "Havoc",
-      "sonataEffects": ["Sun-sinking Eclipse"]
+      "sonataEffects": ["Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.825Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000054,
@@ -152,7 +184,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
-      "sonataEffects": ["Lingering Tunes", "Molten Rift"]
+      "sonataEffects": ["Lingering Tunes", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.827Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000055,
@@ -161,7 +195,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "0",
-      "sonataEffects": ["Sierra Gale", "Rejuvenating Glow"]
+      "sonataEffects": ["Sierra Gale", "Rejuvenating Glow"],
+      "publishedTime": "2024-06-28T15:43:21.825Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000056,
@@ -170,7 +206,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Glacio",
-      "sonataEffects": ["Moonlit Clouds", "Freezing Frost"]
+      "sonataEffects": ["Moonlit Clouds", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.829Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000057,
@@ -179,7 +217,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Glacio",
-      "sonataEffects": ["Void Thunder", "Freezing Frost"]
+      "sonataEffects": ["Void Thunder", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.833Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000058,
@@ -188,7 +228,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Spectro",
-      "sonataEffects": ["Celestial Light"]
+      "sonataEffects": ["Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.833Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000059,
@@ -197,7 +239,9 @@
       "cost": 4,
       "class": "Calamity",
       "attribute": "Spectro",
-      "sonataEffects": ["Celestial Light"]
+      "sonataEffects": ["Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.832Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6000145,
@@ -206,7 +250,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Spectro",
-      "sonataEffects": ["Celestial Light"]
+      "sonataEffects": ["Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.835Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6010051,
@@ -215,7 +261,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.822Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6010052,
@@ -224,7 +272,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Havoc",
-      "sonataEffects": ["Moonlit Clouds"]
+      "sonataEffects": ["Moonlit Clouds"],
+      "publishedTime": "2024-06-28T15:43:21.835Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 6010058,
@@ -233,7 +283,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Spectro",
-      "sonataEffects": ["Sun-sinking Eclipse"]
+      "sonataEffects": ["Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.822Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070051,
@@ -242,7 +294,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "0",
-      "sonataEffects": ["Rejuvenating Glow", "Void Thunder", "Lingering Tunes"]
+      "sonataEffects": ["Rejuvenating Glow", "Void Thunder", "Lingering Tunes"],
+      "publishedTime": "2024-06-28T15:43:21.839Z",
+      "modifiedTime": "2024-07-21T17:01:43.982Z"
     },
     {
       "id": 390070052,
@@ -251,7 +305,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "0",
-      "sonataEffects": ["Moonlit Clouds", "Void Thunder", "Rejuvenating Glow"]
+      "sonataEffects": ["Moonlit Clouds", "Void Thunder", "Rejuvenating Glow"],
+      "publishedTime": "2024-06-28T15:43:21.827Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070053,
@@ -260,7 +316,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Electro",
-      "sonataEffects": ["Molten Rift", "Void Thunder"]
+      "sonataEffects": ["Molten Rift", "Void Thunder"],
+      "publishedTime": "2024-06-28T15:43:21.826Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070064,
@@ -269,7 +327,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
-      "sonataEffects": ["Sierra Gale", "Void Thunder", "Molten Rift"]
+      "sonataEffects": ["Sierra Gale", "Void Thunder", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.828Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070065,
@@ -278,7 +338,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Havoc",
-      "sonataEffects": ["Celestial Light", "Sun-sinking Eclipse"]
+      "sonataEffects": ["Celestial Light", "Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.830Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070066,
@@ -287,7 +349,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
-      "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow", "Molten Rift"]
+      "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.837Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070067,
@@ -296,7 +360,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Spectro",
-      "sonataEffects": ["Moonlit Clouds", "Lingering Tunes", "Celestial Light"]
+      "sonataEffects": ["Moonlit Clouds", "Lingering Tunes", "Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.841Z",
+      "modifiedTime": "2024-07-21T17:01:43.982Z"
     },
     {
       "id": 390070068,
@@ -305,7 +371,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Aero",
-      "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds", "Sierra Gale"]
+      "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds", "Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.840Z",
+      "modifiedTime": "2024-07-21T17:01:43.982Z"
     },
     {
       "id": 390070069,
@@ -318,7 +386,9 @@
         "Lingering Tunes",
         "Rejuvenating Glow",
         "Sun-sinking Eclipse"
-      ]
+      ],
+      "publishedTime": "2024-06-28T15:43:21.839Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070070,
@@ -327,7 +397,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.829Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070071,
@@ -336,7 +408,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Aero",
-      "sonataEffects": ["Void Thunder", "Sierra Gale"]
+      "sonataEffects": ["Void Thunder", "Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.821Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070074,
@@ -349,7 +423,9 @@
         "Rejuvenating Glow",
         "Moonlit Clouds",
         "Celestial Light"
-      ]
+      ],
+      "publishedTime": "2024-06-28T15:43:21.824Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070075,
@@ -358,7 +434,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "0",
-      "sonataEffects": ["Moonlit Clouds", "Sierra Gale", "Freezing Frost"]
+      "sonataEffects": ["Moonlit Clouds", "Sierra Gale", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.836Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070076,
@@ -367,7 +445,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.829Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070077,
@@ -376,7 +456,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Havoc",
-      "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"]
+      "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.826Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070078,
@@ -385,7 +467,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
-      "sonataEffects": ["Lingering Tunes", "Void Thunder", "Molten Rift"]
+      "sonataEffects": ["Lingering Tunes", "Void Thunder", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.840Z",
+      "modifiedTime": "2024-07-21T17:01:43.982Z"
     },
     {
       "id": 390070079,
@@ -394,7 +478,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Havoc",
-      "sonataEffects": ["Sierra Gale", "Sun-sinking Eclipse"]
+      "sonataEffects": ["Sierra Gale", "Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.840Z",
+      "modifiedTime": "2024-07-21T17:01:43.982Z"
     },
     {
       "id": 390070100,
@@ -403,7 +489,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
-      "sonataEffects": ["Rejuvenating Glow", "Molten Rift"]
+      "sonataEffects": ["Rejuvenating Glow", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.827Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390070105,
@@ -412,7 +500,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.830Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077004,
@@ -421,7 +511,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Electro",
-      "sonataEffects": ["Molten Rift", "Void Thunder"]
+      "sonataEffects": ["Molten Rift", "Void Thunder"],
+      "publishedTime": "2024-06-28T15:43:21.840Z",
+      "modifiedTime": "2024-07-21T17:01:43.982Z"
     },
     {
       "id": 390077005,
@@ -430,7 +522,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Aero",
-      "sonataEffects": ["Sierra Gale", "Celestial Light"]
+      "sonataEffects": ["Sierra Gale", "Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.825Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077012,
@@ -439,7 +533,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
-      "sonataEffects": ["Freezing Frost", "Lingering Tunes", "Molten Rift"]
+      "sonataEffects": ["Freezing Frost", "Lingering Tunes", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.828Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077013,
@@ -452,7 +548,9 @@
         "Sun-sinking Eclipse",
         "Moonlit Clouds",
         "Freezing Frost"
-      ]
+      ],
+      "publishedTime": "2024-06-28T15:43:21.829Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077016,
@@ -461,7 +559,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Spectro",
-      "sonataEffects": ["Molten Rift", "Void Thunder", "Celestial Light"]
+      "sonataEffects": ["Molten Rift", "Void Thunder", "Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.837Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077017,
@@ -474,7 +574,9 @@
         "Void Thunder",
         "Celestial Light",
         "Sun-sinking Eclipse"
-      ]
+      ],
+      "publishedTime": "2024-06-28T15:43:21.830Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077021,
@@ -483,7 +585,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "0",
-      "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds"]
+      "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds"],
+      "publishedTime": "2024-06-28T15:43:21.838Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077022,
@@ -492,7 +596,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Electro",
-      "sonataEffects": ["Lingering Tunes", "Void Thunder"]
+      "sonataEffects": ["Lingering Tunes", "Void Thunder"],
+      "publishedTime": "2024-06-28T15:43:21.827Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077023,
@@ -501,7 +607,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Havoc",
-      "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"]
+      "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.838Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077024,
@@ -510,7 +618,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Spectro",
-      "sonataEffects": ["Rejuvenating Glow", "Celestial Light"]
+      "sonataEffects": ["Rejuvenating Glow", "Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.836Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077025,
@@ -519,7 +629,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Havoc",
-      "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow"]
+      "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow"],
+      "publishedTime": "2024-06-28T15:43:21.823Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077028,
@@ -528,7 +640,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Fusion",
-      "sonataEffects": ["Moonlit Clouds", "Molten Rift"]
+      "sonataEffects": ["Moonlit Clouds", "Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.828Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077029,
@@ -537,7 +651,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Havoc",
-      "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"]
+      "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.836Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077033,
@@ -546,7 +662,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Havoc",
-      "sonataEffects": ["Molten Rift", "Sun-sinking Eclipse"]
+      "sonataEffects": ["Molten Rift", "Sun-sinking Eclipse"],
+      "publishedTime": "2024-06-28T15:43:21.830Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390077038,
@@ -555,7 +673,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "0",
-      "sonataEffects": ["Lingering Tunes", "Moonlit Clouds"]
+      "sonataEffects": ["Lingering Tunes", "Moonlit Clouds"],
+      "publishedTime": "2024-06-28T15:43:21.837Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390080003,
@@ -564,7 +684,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Electro",
-      "sonataEffects": ["Void Thunder"]
+      "sonataEffects": ["Void Thunder"],
+      "publishedTime": "2024-06-28T15:43:21.838Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390080005,
@@ -573,7 +695,9 @@
       "cost": 4,
       "class": "Calamity",
       "attribute": "Glacio",
-      "sonataEffects": ["Moonlit Clouds", "Rejuvenating Glow"]
+      "sonataEffects": ["Moonlit Clouds", "Rejuvenating Glow"],
+      "publishedTime": "2024-06-28T15:43:21.823Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390080007,
@@ -582,7 +706,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Fusion",
-      "sonataEffects": ["Molten Rift"]
+      "sonataEffects": ["Molten Rift"],
+      "publishedTime": "2024-06-28T15:43:21.832Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 390180010,
@@ -591,7 +717,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Aero",
-      "sonataEffects": ["Sierra Gale"]
+      "sonataEffects": ["Sierra Gale"],
+      "publishedTime": "2024-06-28T15:43:21.834Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 391070105,
@@ -600,7 +728,9 @@
       "cost": 1,
       "class": "Common",
       "attribute": "Glacio",
-      "sonataEffects": ["Celestial Light", "Freezing Frost"]
+      "sonataEffects": ["Celestial Light", "Freezing Frost"],
+      "publishedTime": "2024-06-28T15:43:21.834Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 391077024,
@@ -609,7 +739,9 @@
       "cost": 3,
       "class": "Elite",
       "attribute": "Spectro",
-      "sonataEffects": ["Rejuvenating Glow", "Celestial Light"]
+      "sonataEffects": ["Rejuvenating Glow", "Celestial Light"],
+      "publishedTime": "2024-06-28T15:43:21.835Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     },
     {
       "id": 391080003,
@@ -618,7 +750,9 @@
       "cost": 4,
       "class": "Overlord",
       "attribute": "Electro",
-      "sonataEffects": ["Void Thunder"]
+      "sonataEffects": ["Void Thunder"],
+      "publishedTime": "2024-06-28T15:43:21.836Z",
+      "modifiedTime": "2024-07-21T17:01:43.981Z"
     }
   ]
 }

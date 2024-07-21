@@ -20,7 +20,8 @@
     "upgrade": "nuxt upgrade",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
-    "prepare": "husky"
+    "prepare": "husky",
+    "update-modified": "npx ts-node scripts/update-modified.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

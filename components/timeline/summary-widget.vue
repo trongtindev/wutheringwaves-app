@@ -84,6 +84,7 @@ await initialize();
 
       <v-list-item-subtitle>
         <client-only>
+          <template #fallback>...</template>
           {{ $t('timeline.endsIn', [dayjs(element.time.end).fromNow()]) }}
         </client-only>
       </v-list-item-subtitle>
@@ -108,6 +109,7 @@ await initialize();
 
       <v-list-item-subtitle>
         <client-only>
+          <template #fallback>...</template>
           {{ $t('timeline.startsIn', [dayjs(element.time.start).fromNow()]) }}
         </client-only>
       </v-list-item-subtitle>

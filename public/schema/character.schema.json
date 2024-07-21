@@ -3,12 +3,6 @@
   "title": "Character",
   "type": "object",
   "properties": {
-    "publishedTime": {
-      "type": "string"
-    },
-    "modifiedTime": {
-      "type": "string"
-    },
     "birthday": { "type": "string" },
     "birthplace": { "type": "string" },
     "quote": { "type": "string" },
@@ -156,7 +150,7 @@
                   "type": "array",
                   "items": {
                     "type": "string",
-                    "$ref": "./echo.component.json#/components/schemas/echoMainStat"
+                    "$ref": "./echo.components.json#/components/schemas/echoMainStat"
                   }
                 }
               },
@@ -218,6 +212,5 @@
       },
       "minItems": 1
     }
-  },
-  "required": ["publishedTime", "modifiedTime"]
+  }
 }

@@ -37,9 +37,24 @@
                 "Sun-sinking Eclipse"
               ]
             }
+          },
+          "publishedTime": {
+            "type": "string"
+          },
+          "modifiedTime": {
+            "type": "string"
           }
         },
-        "required": ["id", "slug", "cost", "name", "class", "attribute"]
+        "required": [
+          "id",
+          "slug",
+          "cost",
+          "name",
+          "class",
+          "attribute",
+          "publishedTime",
+          "modifiedTime"
+        ]
       }
     }
   },

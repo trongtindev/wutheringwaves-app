@@ -34,11 +34,10 @@ const activeBanners = banners
     <div v-else>
       <v-card>
         <v-responsive :aspect-ratio="16 / 9">
-          <nuxt-img
+          <v-img
             v-if="activeBanners[0].thumbnail"
             :src="activeBanners[0].thumbnail"
             :alt="activeBanners[0].featuredRare"
-            class="w-100"
           />
         </v-responsive>
 
@@ -49,11 +48,10 @@ const activeBanners = banners
 
       <v-card class="mt-2">
         <v-responsive :aspect-ratio="16 / 9">
-          <nuxt-img
+          <v-img
             v-if="activeBanners[1].thumbnail"
             :src="activeBanners[1].thumbnail"
             :alt="activeBanners[1].featuredRare"
-            class="w-100"
           />
         </v-responsive>
 

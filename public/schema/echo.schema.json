@@ -3,12 +3,6 @@
   "title": "Echo",
   "type": "object",
   "properties": {
-    "publishedTime": {
-      "type": "string"
-    },
-    "modifiedTime": {
-      "type": "string"
-    },
     "skills": {
       "type": "array",
       "items": {
@@ -35,6 +29,5 @@
         "required": ["id", "cd", "name", "description"]
       }
     }
-  },
-  "required": ["publishedTime", "modifiedTime"]
+  }
 }
