@@ -20,7 +20,7 @@ const updateTime = (type: string) => {
   data.items.forEach((e: any) => {
     const stat = fs.statSync(path.resolve(rootDir, `${type}/${e.slug}.json`));
     if (!e.publishedTime) e.publishedTime = stat.birthtime.toISOString();
-    e.modifiedTime = stat.atime.toISOString();
+    e.modifiedTime = stat.mtime.toISOString();
   });
 
   fs.writeFileSync(file, JSON.stringify(data));

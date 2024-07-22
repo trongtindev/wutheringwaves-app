@@ -63,8 +63,7 @@ useHead({
     {
       name: 'twitter:card',
       content: 'summary_large_image'
-    },
-    {}
+    }
   ],
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang
@@ -78,11 +77,6 @@ useSeoMeta({
   ogType: 'website',
   description: i18n.t('meta.description'),
   ogDescription: i18n.t('meta.description')
-});
-
-// lifecycle
-onMounted(() => {
-  dayjs.tz.setDefault(runtimeConfig.public.DAYJS_TIMEZONE);
 });
 
 onNuxtReady(() => {

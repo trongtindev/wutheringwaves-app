@@ -289,13 +289,6 @@
     "backup": {
       "title": "Cloud Backup"
     },
-    "notification": {
-      "title": "Notification",
-      "enabled": "Enabled",
-      "enabledSubtitle": "Receive notifications from items you're interested in.",
-      "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
-      "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
-    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
@@ -316,7 +309,6 @@
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
-    "policy": "comments.policy",
     "submit": "Post comment",
     "replies": "Replies"
   },
@@ -472,8 +464,6 @@
     "trophy": "Trophy",
     "noRecords": "No records found.",
     "yourLastConvene": "Your Last Convene",
-    "guest": "Guest",
-    "guestSubtitle": "Sign in to use Cloud Sync.",
     "joinTheDiscord": "Join the Discord",
     "viewOnGithub": "View on GitHub",
     "rarity": "Rarity",

@@ -2,13 +2,17 @@
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
 
+// late
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let interval: any;
+
+// define
 const props = defineProps<{
   title?: string;
   utcOffset?: number;
 }>();
 
 // states
-let interval: any;
 const time = ref<Dayjs>();
 const timeName = ref();
 const offset = ref<number>();

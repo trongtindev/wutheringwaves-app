@@ -4,6 +4,6 @@ export interface INotification {
   message?: string;
   icon?: string;
   color?: string;
-  progress?: boolean;
+  progress?: number;
   persistent?: boolean;
 }

@@ -44,7 +44,6 @@ onMounted(async () => {
   const { Text } = await import('@tiptap/extension-text');
   const { Blockquote } = await import('@tiptap/extension-blockquote');
   const { CodeBlock } = await import('@tiptap/extension-code-block');
-  const { Heading } = await import('@tiptap/extension-heading');
   const { Dropcursor } = await import('@tiptap/extension-dropcursor');
   const { Image } = await import('@tiptap/extension-image');
   const { ListItem } = await import('@tiptap/extension-list-item');
@@ -70,7 +69,6 @@ onMounted(async () => {
       Text.configure(),
       Blockquote.configure(),
       CodeBlock.configure(),
-      Heading.configure(),
       Image.configure({
         inline: true
       }),

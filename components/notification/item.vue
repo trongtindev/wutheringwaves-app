@@ -21,7 +21,7 @@ const onPressed = () => notification.remove(props.data.id);
         <v-icon v-if="props.data.icon" :icon="props.data.icon" />
         <v-avatar v-else-if="props.data.persistent">
           <v-progress-circular
-            v-model="props.data.progress"
+            :model-value="props.data.progress"
             :indeterminate="true"
           />
         </v-avatar>

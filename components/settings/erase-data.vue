@@ -42,32 +42,33 @@ const onPressedConfirm = async (isConfirmed?: boolean) => {
     });
   }
 };
+
+// lifecycle
+onNuxtReady(() => emits('on-updated'));
 </script>
 
 <template>
-  <div>
-    <v-card color="error" variant="outlined">
-      <v-card-title>
-        {{ $t('settings.data.erase.title') }}
-      </v-card-title>
-      <v-divider />
+  <v-card color="error" variant="outlined">
+    <v-card-title>
+      {{ $t('settings.data.erase.title') }}
+    </v-card-title>
+    <v-divider />
 
-      <v-card-text>
-        {{ $t('settings.data.erase.message') }}
-      </v-card-text>
-      <v-divider />
+    <v-card-text>
+      {{ $t('settings.data.erase.message') }}
+    </v-card-text>
+    <v-divider />
 
-      <v-card-actions class="d-flex justify-end">
-        <v-btn
-          :disabled="state != ''"
-          :loading="state == 'erase'"
-          :text="$t('settings.data.erase.button')"
-          :prepend-icon="mdiTrashCan"
-          color="error"
-          variant="outlined"
-          @click="() => onPressedConfirm()"
-        />
-      </v-card-actions>
-    </v-card>
-  </div>
+    <v-card-actions class="d-flex justify-end">
+      <v-btn
+        :disabled="state != ''"
+        :loading="state == 'erase'"
+        :text="$t('settings.data.erase.button')"
+        :prepend-icon="mdiTrashCan"
+        color="error"
+        variant="outlined"
+        @click="() => onPressedConfirm()"
+      />
+    </v-card-actions>
+  </v-card>
 </template>

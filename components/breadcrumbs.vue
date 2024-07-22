@@ -9,7 +9,7 @@ const props = defineProps<{
 }>();
 
 // uses
-const i18n = useI18n();
+// const i18n = useI18n();
 const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
 

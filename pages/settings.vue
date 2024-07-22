@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // uses
 const i18n = useI18n();
-const auth = useAuth();
 
 // seo meta
 const title = i18n.t('meta.settings.title');
@@ -21,7 +20,6 @@ useHead({
   <client-only>
     <v-row>
       <v-col cols="12" md="7">
-        <settings-notification />
         <settings-account class="mt-2" />
         <settings-cloud-backup class="mt-2" />
         <settings-analytics class="mt-2" />

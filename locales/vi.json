@@ -266,13 +266,6 @@
       "empty": "Để thêm tài khoản, bạn chỉ cần nhập lịch sử triệu hồi."
     },
     "backup": { "title": "Sao lưu dữ liệu" },
-    "notification": {
-      "title": "Notification",
-      "enabled": "Enabled",
-      "enabledSubtitle": "Nhận các thông báo từ các mục bạn đã quan tâm.",
-      "deviceNotSupported": "This browser doesn't support the API's required to use the Firebase SDK.",
-      "iosNotSupported": "This browser doesn't support the API's required to use the Firebase SDK. Safari on iOS is the worst browser in the world, buy an Android!"
-    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
@@ -293,7 +286,6 @@
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
-    "policy": "comments.policy",
     "submit": "Post comment",
     "replies": "Replies"
   },
@@ -439,8 +431,6 @@
     "trophy": "Trophy",
     "noRecords": "No records found.",
     "yourLastConvene": "Triệu hồi gần đây",
-    "guest": "Khách",
-    "guestSubtitle": "Đăng nhập để đồng bộ.",
     "joinTheDiscord": "Tham gia Discord",
     "viewOnGithub": "Xem trên GitHub",
     "rarity": "Phẩm chất",

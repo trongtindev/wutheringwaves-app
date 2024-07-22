@@ -61,8 +61,8 @@ export const useApp = defineStore('useApp', () => {
         }
       });
       clearInterval(interval);
-    } catch (error: any) {
-      console.error(error);
+    } catch (error) {
+      console.warn(error);
     }
   };
 

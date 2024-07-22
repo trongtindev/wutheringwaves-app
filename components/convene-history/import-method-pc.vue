@@ -12,7 +12,6 @@ const emits = defineEmits<{
 // uses
 const i18n = useI18n();
 const clipboard = useClipboard();
-const runtimeConfig = useRuntimeConfig();
 
 // states
 const url = ref<string>();

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import type { AccountDocType } from '~/collections/account';
 
 export const useAccount = defineStore('useAccount', () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,11 +17,12 @@ export const useAccount = defineStore('useAccount', () => {
   }, 1500);
 
   // states
-  const items = ref<any[]>([]);
+  const items = ref<AccountDocType[]>([]);
   const onConveneChanged = ref<[string, string]>(['', '']);
   /**
    * This is playerId in-game
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const active = ref<string>(null as any);
   const timeOffset = ref(8);
 
@@ -84,7 +86,7 @@ export const useAccount = defineStore('useAccount', () => {
       active.value = result[0].playerId;
     }
 
-    items.value = result as any;
+    items.value = result;
   };
 
   const getDocument = async (playerId: string) => {

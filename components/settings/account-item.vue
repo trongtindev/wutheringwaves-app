@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { AccountDocument } from '@/collections/account';
+import type { AccountDocType } from '@/collections/account';
 
 // define
 const props = defineProps<{
-  data: AccountDocument;
+  data: AccountDocType;
 }>();
 const emits = defineEmits<{
   (e: 'on-delete'): void;

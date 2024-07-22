@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { CardPoolType, type IBanner } from '@/interfaces/banner';
-import { mdiImport, mdiChevronRight, mdiGrid, mdiViewList } from '@mdi/js';
+import { mdiChevronRight } from '@mdi/js';
 import urlSlug from 'url-slug';
 import dayjs from 'dayjs';
 import type { ConveneDocumentConverted } from '~/interfaces/convene';

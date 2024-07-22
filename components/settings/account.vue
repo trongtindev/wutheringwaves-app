@@ -10,9 +10,6 @@ const dialog = useDialog();
 const account = useAccount();
 const database = useDatabase();
 
-// states
-const state = ref<'' | 'erase'>('');
-
 // events
 const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
   if (isConfirmed) {

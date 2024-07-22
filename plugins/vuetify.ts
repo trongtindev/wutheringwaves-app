@@ -55,7 +55,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         class: 'pa-2'
       },
       VListSubheader: {
-        class: 'font-italic font-weight-bold'
+        class: 'font-weight-bold'
       },
       VChip: {
         density: 'compact'
@@ -64,7 +64,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         class: 'text-body-2',
         density: 'default'
       },
-      VAlert: {}
+      VAlert: {
+        density: 'compact'
+      }
     },
     theme: {
       defaultTheme: 'dark',

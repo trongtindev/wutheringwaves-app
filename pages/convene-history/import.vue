@@ -103,45 +103,49 @@ if (device.isCrawler) throw createError({ statusCode: 404 });
 </script>
 
 <template>
-  <div>
-    <v-card>
-      <client-only>
-        <v-tabs v-model="method">
-          <v-tab value="pc">{{ $t('PC') }}</v-tab>
-          <v-tab value="android">{{ $t('Android') }}</v-tab>
-          <v-tab value="ios">{{ $t('iOS') }}</v-tab>
-        </v-tabs>
-        <v-divider />
+  <v-row>
+    <v-col cols="12" md="8">
+      <v-card>
+        <client-only>
+          <v-tabs v-model="method">
+            <v-tab value="pc">{{ $t('PC') }}</v-tab>
+            <v-tab value="android">{{ $t('Android') }}</v-tab>
+            <v-tab value="ios">{{ $t('iOS') }}</v-tab>
+          </v-tabs>
+          <v-divider />
 
-        <convene-history-import-method-pc
-          v-if="method == 'pc'"
-          :convene-history-url="conveneHistoryUrl"
-          @on-import="onImport"
-        />
-        <convene-history-import-method-android
-          v-if="method == 'android'"
-          :convene-history-url="conveneHistoryUrl"
-          @on-import="onImport"
-        />
-        <convene-history-import-method-ios
-          v-if="method == 'ios'"
-          :convene-history-url="conveneHistoryUrl"
-          @on-import="onImport"
-        />
-      </client-only>
-    </v-card>
+          <convene-history-import-method-pc
+            v-if="method == 'pc'"
+            :convene-history-url="conveneHistoryUrl"
+            @on-import="onImport"
+          />
+          <convene-history-import-method-android
+            v-if="method == 'android'"
+            :convene-history-url="conveneHistoryUrl"
+            @on-import="onImport"
+          />
+          <convene-history-import-method-ios
+            v-if="method == 'ios'"
+            :convene-history-url="conveneHistoryUrl"
+            @on-import="onImport"
+          />
+        </client-only>
+      </v-card>
+    </v-col>
 
-    <v-expansion-panels class="mt-2">
-      <v-expansion-panel v-for="index in 3" :key="index">
-        <v-expansion-panel-title>
-          {{ $t(`convene.import.faqs.${index}.title`) }}
-        </v-expansion-panel-title>
+    <v-col cols="12" md="4">
+      <v-expansion-panels>
+        <v-expansion-panel v-for="index in 3" :key="index">
+          <v-expansion-panel-title>
+            {{ $t(`convene.import.faqs.${index}.title`) }}
+          </v-expansion-panel-title>
 
-        <v-expansion-panel-text>
-          {{ $t(`convene.import.faqs.${index}.content`) }}
-        </v-expansion-panel-text>
-      </v-expansion-panel>
-    </v-expansion-panels>
+          <v-expansion-panel-text>
+            {{ $t(`convene.import.faqs.${index}.content`) }}
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </v-col>
 
     <v-overlay
       v-model="overlay"
@@ -164,5 +168,5 @@ if (device.isCrawler) throw createError({ statusCode: 404 });
         />
       </v-sheet>
     </v-overlay>
-  </div>
+  </v-row>
 </template>

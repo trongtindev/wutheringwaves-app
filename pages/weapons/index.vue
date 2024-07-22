@@ -2,7 +2,6 @@
 import type { IWeapon } from '@/interfaces/weapon';
 
 const i18n = useI18n();
-const localePath = useLocalePath();
 const resources = useResources();
 
 // states

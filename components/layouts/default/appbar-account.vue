@@ -10,9 +10,10 @@ const onPressedSignIn = async () => {
 
   try {
     await auth.signIn();
-  } catch (error: any) {
-    // TODO: handle this
+  } catch (error) {
     console.error(error);
+
+    // TODO: handle this
     alert(error);
   } finally {
     auth.state = '';
@@ -21,11 +22,11 @@ const onPressedSignIn = async () => {
 
 const onPressedSignOut = async () => {
   try {
-    const result = await auth.signOut();
-    console.log('result', result);
+    await auth.signOut();
   } catch (error) {
+    console.error('error', error);
+
     // TODO: handle this
-    console.warn('error', error);
     alert(error);
   }
 };

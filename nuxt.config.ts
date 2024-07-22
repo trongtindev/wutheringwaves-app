@@ -18,16 +18,9 @@ const {
   // adsense
   GOOGLE_ADSENSE_TEST_MODE,
   GOOGLE_ADSENSE_ID,
-  // firebase
-  NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  NUXT_PUBLIC_FIREBASE_API_KEY,
-  NUXT_PUBLIC_FIREBASE_PROJECT_ID,
-  NUXT_PUBLIC_FIREBASE_APP_ID,
   // sentry
   NUXT_PUBLIC_SENTRY_DEBUG,
-  NUXT_PUBLIC_SENTRY_DNS,
-  // dayjs
-  DAYJS_TIMEZONE
+  NUXT_PUBLIC_SENTRY_DNS
 } = process.env;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -45,9 +38,9 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     // performance
     '@nuxtjs/fontaine',
+    'nuxt-gtag',
     // dev
-    '@nuxt/eslint',
-    '@nuxt/image'
+    '@nuxt/eslint'
   ],
 
   routeRules: {
@@ -68,9 +61,6 @@ export default defineNuxtConfig({
     },
     '/donation': {
       robots: false
-    },
-    '/characters': {
-      prerender: true
     }
   },
 
@@ -155,8 +145,6 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
 
-  // watch: ['resources/**/*'],
-
   vite: {
     vue: {
       template: {
@@ -196,11 +184,6 @@ export default defineNuxtConfig({
       // api
       API_URL: NUXT_PUBLIC_API_URL,
       API_TIMEOUT: 15000,
-      // firebase
-      FIREBASE_API_KEY: NUXT_PUBLIC_FIREBASE_API_KEY,
-      FIREBASE_PROJECT_ID: NUXT_PUBLIC_FIREBASE_PROJECT_ID,
-      FIREBASE_AUTH_DOMAIN: NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-      FIREBASE_APP_ID: NUXT_PUBLIC_FIREBASE_APP_ID,
       // sentry
       SENTRY_DNS: NUXT_PUBLIC_SENTRY_DNS,
       SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',
@@ -208,18 +191,9 @@ export default defineNuxtConfig({
       GOOGLE_CLIENT_ID: GOOGLE_CLIENT_ID,
       // Adsense
       GOOGLE_ADSENSE_ID: GOOGLE_ADSENSE_ID,
-      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',
-      // dayjs
-      DAYJS_TIMEZONE: DAYJS_TIMEZONE
+      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true'
     }
   },
-
-  // hooks: {
-  //   'build:done': () => {
-  //     console.log('build:done');
-  //     cpSync('./resources', './.output/server/resources', { recursive: true });
-  //   }
-  // },
 
   experimental: {
     viewTransition: true
