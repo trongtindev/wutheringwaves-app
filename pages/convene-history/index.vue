@@ -164,7 +164,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
               { title: $t('Time'), width: '30%' },
               { title: $t('Name'), width: '40%' },
               { title: $t('Pity'), width: '15%' },
-              { title: $t('Rarity'), width: '15%' }
+              { title: $t('common.rarity'), width: '15%' }
             ]"
             item-value="key"
           >
@@ -241,25 +241,25 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           />
 
           <convene-history-banner-summary
-            :title="$t('Featured resonator')"
+            :title="$t('banner.featuredResonator')"
             :type="CardPoolType['featured-resonator']"
             @on-updated="() => masonry.refreshLayout()"
           />
 
           <convene-history-banner-summary
-            :title="$t('Featured weapon')"
+            :title="$t('banner.featuredWeapon')"
             :type="CardPoolType['featured-weapon']"
             @on-updated="() => masonry.refreshLayout()"
           />
 
           <convene-history-banner-summary
-            :title="$t('Standard resonator')"
+            :title="$t('banner.standardResonator')"
             :type="CardPoolType['standard-resonator']"
             @on-updated="() => masonry.refreshLayout()"
           />
 
           <convene-history-banner-summary
-            :title="$t('Standard weapon')"
+            :title="$t('banner.standardWeapon')"
             :type="CardPoolType['standard-weapon']"
             @on-updated="() => masonry.refreshLayout()"
           />

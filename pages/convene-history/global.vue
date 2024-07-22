@@ -450,7 +450,7 @@ useSeoMeta({
               labels: pbdLabels,
               datasets: [
                 {
-                  label: i18n.t('convene.global.pullByDay'),
+                  label: i18n.t('common.pullByDay'),
                   backgroundColor: '#4e7cff',
                   borderColor: '#4e7cff',
                   data: pbdDatasets

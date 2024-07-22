@@ -62,7 +62,15 @@ onMounted(initialize);
       />
     </template>
 
-    <v-card-text v-if="!items || items.length === 0">
+    <div v-if="!items">
+      <v-skeleton-loader
+        v-for="index in 5"
+        :key="index"
+        type="list-item-avatar-two-line"
+      />
+    </div>
+
+    <v-card-text v-else-if="items.length === 0">
       {{ $t('common.noRecordsFound') }}
     </v-card-text>
 

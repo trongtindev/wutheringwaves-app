@@ -14,6 +14,7 @@ const props = defineProps<{
 const api = useApi();
 const auth = useAuth();
 const i18n = useI18n();
+const device = useDevice();
 const fileChoose = useFileDialog({
   accept: 'image/png, image/jpg, image/webp, image/jpeg'
 });
@@ -202,6 +203,7 @@ onMounted(() => loadData());
 
 <template>
   <v-card
+    v-if="!device.isCrawler"
     :class="{
       'border-none': props.flat
     }"
@@ -325,14 +327,10 @@ onMounted(() => loadData());
 
     <client-only>
       <v-list v-if="!data">
-        <v-skeleton-loader
-          v-for="index in 5"
-          :key="index"
-          type="list-item-avatar-two-line"
-        />
+        <v-skeleton-loader type="list-item-avatar-two-line" />
       </v-list>
       <v-card-text v-else-if="data.total === 0">
-        <v-alert color="info" :text="$t('comments.empty')" />
+        {{ $t('comments.empty') }}
       </v-card-text>
 
       <v-card-text v-else>

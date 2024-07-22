@@ -268,7 +268,7 @@ onMounted(initialize);
                 <div>
                   <v-row>
                     <v-col cols="6">
-                      {{ $t('convene.rank.totalPull') }}
+                      {{ $t('common.totalPull') }}
                     </v-col>
                     <v-col cols="3" class="d-flex justify-center">
                       {{ totalPull }}

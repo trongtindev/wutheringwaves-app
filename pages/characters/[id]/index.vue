@@ -125,19 +125,6 @@ useJsonld(() => ({
   },
   copyrightNotice: 'trongtindev'
 }));
-useJsonld({
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: useRuntimeConfig().public.SITE_URL
-    },
-    { '@type': 'ListItem', position: 2, name: i18n.t('characters.title') }
-  ]
-});
 </script>
 
 <template>
@@ -148,6 +135,16 @@ useJsonld({
     class="mb-2"
     :title="$t('common.upcomingContent')"
     :text="$t('common.upcomingContentMessage')"
+  />
+
+  <!-- breadcrumbs -->
+  <breadcrumbs
+    :items="[
+      {
+        to: '/characters',
+        title: i18n.t('characters.title')
+      }
+    ]"
   />
 
   <!-- page -->

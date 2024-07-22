@@ -135,10 +135,6 @@ if (import.meta.client) {
             {{ $t('convene.rank.luckWinRateOff') }}
           </v-list-item-title>
 
-          <v-list-item-subtitle>
-            {{ $t('convene.rank.luckWinRateOffSubtitle') }}
-          </v-list-item-subtitle>
-
           <template #append>
             <span class="text-h6 text-legendary font-weight-bold">
               {{ luckWinRateOff }}%

@@ -22,7 +22,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       sets: { mdi }
     },
     defaults: {
-      global: {},
+      global: {
+        density: 'comfortable'
+      },
+      VAppBar: {
+        density: 'default'
+      },
       VSelect: {
         variant: 'outlined',
         itemValue: 'value',
@@ -56,11 +61,10 @@ export default defineNuxtPlugin((nuxtApp) => {
         density: 'compact'
       },
       VBtn: {
-        class: 'text-body-2'
+        class: 'text-body-2',
+        density: 'default'
       },
-      VAlert: {
-        class: 'pa-3 pt-1 pb-1'
-      }
+      VAlert: {}
     },
     theme: {
       defaultTheme: 'dark',

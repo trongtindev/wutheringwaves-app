@@ -6,7 +6,6 @@ export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
   const device = useDevice();
   const nuxtApp = useNuxtApp();
-  const delayHydration = useDelayHydration();
 
   // states
   const isInitialized = ref(false);
@@ -47,10 +46,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
   };
 
   // listens
-  watch(
-    () => delayHydration.active,
-    () => initialize()
-  );
+  onMounted(() => initialize());
 
   // exports
   return { optOut, initialize, logEvent };

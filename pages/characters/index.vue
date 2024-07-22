@@ -127,7 +127,7 @@ useSeoMeta({
             <v-col cols="6" md="4">
               <v-select
                 v-model="filterRarity"
-                :label="$t('Rarity')"
+                :label="$t('common.rarity')"
                 :items="[0, 4, 5]"
                 :item-title="
                   (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)

@@ -5,6 +5,7 @@ import axiosRetry from 'axios-retry';
 export const useApi = defineStore('useApi', () => {
   // uses
   const auth = useAuth();
+  const route = useRoute();
   const runtimeConfig = useRuntimeConfig();
 
   // config
@@ -23,9 +24,12 @@ export const useApi = defineStore('useApi', () => {
     if (import.meta.client && auth.isLoggedIn) {
       if (
         config.url &&
+        !config.url.startsWith('auth') &&
         (!config.url.startsWith('http') || config.url.startsWith(API_URL))
       ) {
-        const accessToken = await auth.getAccessToken();
+        const forceRefreshToken =
+          typeof route.query.forceRefreshToken != 'undefined';
+        const accessToken = await auth.getAccessToken(forceRefreshToken);
         config.headers.Authorization = `Bearer ${accessToken}`;
       }
     }

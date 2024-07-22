@@ -142,11 +142,7 @@
         }
       }
     },
-    "history": {
-      "title": "Convene History",
-      "pullByDay": "Pull by day",
-      "totalPull": "Total Pull"
-    },
+    "history": { "title": "Convene History" },
     "guaranteedAt": "Guaranteed at {0}",
     "lifetimePulls": "Lifetime Pulls",
     "pity": "Pity",
@@ -156,20 +152,18 @@
       "level": "Your Total Pulls Rank",
       "based": "Based on Global Convene Stats",
       "current": "Current {banner} median is {median} pulls",
-      "more": "You have more pull than {percentage}% of wutheringwaves.app users",
-      "less": "You have less pull than {percentage}% of wutheringwaves.app users",
+      "more": "You have more pull than {percentage}% users",
+      "less": "You have less pull than {percentage}% users",
       "currentLuck": "Current {banner} median is {median}%",
-      "totalPull": "Total Pull",
       "luck5": "Luckiness 5★",
       "luck4": "Luckiness 4★",
       "luckWinRateOff": "Luckiness Win 50:50",
-      "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
-      "lessTotal": "Less pulls than {percentage}% of wutheringwaves.app users",
-      "moreLuck": "Luckier than {percentage}% of wutheringwaves.app users",
-      "lessLuck": "Less lucky than {percentage}% of wutheringwaves.app users",
+      "moreTotal": "More pulls than {percentage}% users",
+      "lessTotal": "Less pulls than {percentage}% users",
+      "moreLuck": "Luckier than {percentage}% users",
+      "lessLuck": "Less lucky than {percentage}% users",
       "top": "TOP",
       "bottom": "BOTTOM"
     },
@@ -181,8 +175,6 @@
       "totalUsers": "Total Users",
       "conveneTotal": "Convene Total",
       "worth": "Worth",
-      "pullByDay": "Pull by day",
-      "totalPull": "Total Pull",
       "chance": "Chance"
     }
   },
@@ -382,6 +374,12 @@
     "discussion": "Discussion",
     "allowComments": "Allow comments"
   },
+  "banner": {
+    "featuredResonator": "Featured resonator",
+    "featuredWeapon": "Featured weapon",
+    "standardResonator": "Standard resonator",
+    "standardWeapon": "Standard weapon"
+  },
   "common": {
     "name": "ชื่อ",
     "time": "เวลา",
@@ -470,6 +468,11 @@
     "hp": "HP",
     "cost": "Cost",
     "upcomingWeapons": "Upcoming Weapons",
-    "upcomingCharacters": "Upcoming Characters"
+    "upcomingCharacters": "Upcoming Characters",
+    "close": "Close",
+    "loading": "Loading",
+    "serverTime": "Server time",
+    "pullByDay": "Pull by day",
+    "totalPull": "Total Pull"
   }
 }

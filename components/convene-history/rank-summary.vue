@@ -81,7 +81,7 @@ onNuxtReady(() => {
       <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2">
         <v-list-item>
           <v-list-item-title>
-            {{ $t('convene.rank.totalPull') }}
+            {{ $t('common.totalPull') }}
           </v-list-item-title>
 
           <v-list-item-subtitle>

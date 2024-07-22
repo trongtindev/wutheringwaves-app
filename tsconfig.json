@@ -2,7 +2,12 @@
   "extends": "./.nuxt/tsconfig.json",
   "exclude": ["scripts/**/*.ts"],
   "compilerOptions": {
-    "types": ["@pinia/nuxt", "@nuxtjs/sitemap", "@nuxtjs/i18n"],
+    "types": [
+      "@pinia/nuxt",
+      "@nuxtjs/sitemap",
+      "@nuxtjs/i18n",
+      "@types/google.accounts"
+    ],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "noImplicitAny": false

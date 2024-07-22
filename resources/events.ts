@@ -30,6 +30,14 @@ const items = [
         end: '2024-07-07 09:59'
       },
       color: '#8c4987'
+    },
+    {
+      name: 'Tower of Adversity - Hazard Zone',
+      time: {
+        start: '2024-07-08 11:00',
+        end: '2024-07-22 10:59'
+      },
+      color: '#8c4987'
     }
   ],
   // Depths of Illusive Realm

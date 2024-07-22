@@ -11,16 +11,12 @@ const i18nHead = useLocaleHead({
   identifierAttribute: 'default'
 });
 const app = useApp();
-const auth = useAuth();
-const backup = useBackup();
 const vuetifyLocale = useLocale();
 const runtimeConfig = useRuntimeConfig();
 
 // initialize
 if (import.meta.client) {
   app.initialize();
-  auth.initialize();
-  backup.initialize();
 }
 
 // lifecycle

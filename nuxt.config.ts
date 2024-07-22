@@ -1,6 +1,5 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
-import { cpSync } from 'node:fs';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -14,6 +13,8 @@ const {
   NUXT_PUBLIC_SITE_URL,
   NUXT_PUBLIC_API_URL,
   NUXT_PUBLIC_APP_VERSION,
+  // google
+  GOOGLE_CLIENT_ID,
   // adsense
   GOOGLE_ADSENSE_TEST_MODE,
   GOOGLE_ADSENSE_ID,
@@ -31,7 +32,7 @@ const {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  $development: { debug: true },
+  // $development: { debug: true },
 
   modules: [
     'nuxt-jsonld',
@@ -46,7 +47,7 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     // dev
     '@nuxt/eslint',
-    "@nuxt/image"
+    '@nuxt/image'
   ],
 
   routeRules: {
@@ -186,7 +187,7 @@ export default defineNuxtConfig({
   // environments
   runtimeConfig: {
     public: {
-      // app
+      // general
       SITE_URL: NUXT_PUBLIC_SITE_URL,
       APP_NAME: 'WutheringWaves.app',
       APP_REPO: 'https://github.com/trongtindev/wutheringwaves-app',
@@ -203,6 +204,8 @@ export default defineNuxtConfig({
       // sentry
       SENTRY_DNS: NUXT_PUBLIC_SENTRY_DNS,
       SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',
+      // google
+      GOOGLE_CLIENT_ID: GOOGLE_CLIENT_ID,
       // Adsense
       GOOGLE_ADSENSE_ID: GOOGLE_ADSENSE_ID,
       GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',

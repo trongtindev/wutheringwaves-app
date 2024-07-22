@@ -1,5 +1,6 @@
 declare global {
   interface Window {
+    // electron
     electron: {
       on: <T>(
         eventName: string,

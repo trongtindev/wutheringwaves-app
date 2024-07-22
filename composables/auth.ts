@@ -1,123 +1,162 @@
 import { defineStore } from 'pinia';
-import type { User } from 'firebase/auth';
+import type { IUser } from '~/interfaces/user';
+import { jwtDecode } from 'jwt-decode';
 
 export const useAuth = defineStore('useAuth', () => {
   // uses
-  const route = useRoute();
-  const nuxtApp = useNuxtApp();
+  const api = useApi();
   const sentry = useSentry();
+  const runtimeConfig = useRuntimeConfig();
 
   // states
-  const user = ref<User>(null as any);
+  const user = useCookie<IUser>('user');
   const state = ref<'' | 'sign-in'>('');
+  const gState = useCookie('g_state');
+  const accessToken = useCookie('accessToken');
+  const refreshToken = useCookie('refreshToken');
+  const isScriptLoaded = ref(false);
 
   // functions
+  const initialize = async () => {
+    if (isSignedIn.value) {
+      refreshProfile();
+    }
+    console.log('gState', gState.value);
+  };
+
   const signIn = async (options?: { signInWithRedirect?: boolean }) => {
     options ??= {};
 
-    const {
-      signInWithPopup,
-      signInWithRedirect,
-      signInAnonymously,
-      GoogleAuthProvider
-    } = await import('firebase/auth');
+    gState.value = null;
+    if (!isScriptLoaded.value) {
+      const element = document.createElement('script');
+      element.src = 'https://accounts.google.com/gsi/client';
+      document.body.appendChild(element);
 
-    return new Promise((resolve, reject) => {
-      if (!nuxtApp.$firebase.auth) {
-        throw new Error('firebase_not_initialized');
+      while (typeof window.google === 'undefined') {
+        await new Promise((resolve) => {
+          setTimeout(resolve, 25);
+        });
       }
+      isScriptLoaded.value = true;
+    }
 
-      if (import.meta.dev) {
-        // https://github.com/firebase/firebase-js-sdk/issues/7342
-        signInAnonymously(nuxtApp.$firebase.auth).then(resolve).catch(reject);
-        return;
-      }
-
-      const provider = new GoogleAuthProvider();
-      if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        ) ||
-        navigator.cookieEnabled === false ||
-        route.query.signInWithRedirect ||
-        options.signInWithRedirect
-      ) {
-        localStorage.setItem('signInWithRedirect', 'true');
-        signInWithRedirect(nuxtApp.$firebase.auth, provider)
-          .then(resolve)
-          .catch(reject);
-      } else {
-        signInWithPopup(nuxtApp.$firebase.auth, provider)
-          .then(resolve)
-          .catch(reject);
-      }
+    console.debug('google.accounts.id.initialize');
+    const credential = await new Promise<string | null>((resolve, reject) => {
+      window.google.accounts.id.initialize({
+        client_id: runtimeConfig.public.GOOGLE_CLIENT_ID,
+        context: 'signin',
+        callback: (result) => {
+          console.debug('google.accounts.id.initialize', 'callback', result);
+          resolve(result.credential);
+        },
+        auto_select: true,
+        cancel_on_tap_outside: false
+      });
+      window.google.accounts.id.prompt((result) => {
+        console.debug('google.accounts.id.prompt', result);
+        if (result.isNotDisplayed()) {
+          reject('isNotDisplayed');
+        } else if (result.isSkippedMoment()) {
+          resolve(null);
+        }
+      });
     });
+    if (!credential) return;
+    console.debug('google.accounts.id.initialize', credential);
+
+    const signInResult = await api.getInstance().post<{
+      accessToken: string;
+      refreshToken: string;
+    }>('auth/signin', {
+      credential
+    });
+    accessToken.value = signInResult.data.accessToken;
+    refreshToken.value = signInResult.data.refreshToken;
+
+    await refreshProfile();
   };
 
   const signOut = async () => {
-    const { signOut: firebaseSignOut } = await import('firebase/auth');
-
-    return new Promise((resolve, reject) => {
-      firebaseSignOut(nuxtApp.$firebase.auth!).then(resolve).catch(reject);
-    });
+    accessToken.value = null;
+    refreshToken.value = null;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    user.value = null as any;
   };
 
-  const getAccessToken = async () => {
-    return await nuxtApp.$firebase.auth!.currentUser?.getIdToken();
+  const getAccessToken = async (forceRefresh?: boolean) => {
+    if (!accessToken.value) {
+      console.warn('accessToken == null');
+      return null;
+    }
+
+    const isExpired = (() => {
+      const decoded = jwtDecode(accessToken.value);
+      if (!decoded.exp || decoded.exp < new Date().getTime()) {
+        return false;
+      }
+      return true;
+    })();
+
+    if (isExpired || forceRefresh) {
+      console.debug('getAccessToken()', 'refresh');
+      const result = await api
+        .getInstance()
+        .post<{ accessToken: string }>('auth/refresh', {
+          refreshToken: refreshToken.value
+        });
+      accessToken.value = result.data.accessToken;
+    }
+
+    return accessToken.value;
+  };
+
+  const refreshProfile = async () => {
+    try {
+      console.debug('refreshProfile');
+      const result = await api.getInstance().get<IUser>('users/me');
+      user.value = result.data;
+      console.debug('refreshProfile', user.value);
+    } catch (error) {
+      console.warn(error);
+      signOut();
+    }
   };
 
   // computed
   const isLoggedIn = computed(() => {
+    return refreshToken.value != null;
+  });
+
+  const isSignedIn = computed(() => {
     return user.value != null;
   });
 
-  // lifecycle
-  const initialize = async () => {
-    if (import.meta.server) {
-      throw new Error('Cannot initialize auth on server-side!');
-    }
-
-    if (!nuxtApp.$firebase.auth) {
-      console.log('reinit');
-      setTimeout(() => initialize(), 250);
-      return;
-    }
-
-    nuxtApp.$firebase.auth.onAuthStateChanged((e) => {
-      user.value = e as any;
-
+  // changes
+  watch(
+    () => user.value,
+    () => {
       if (user.value) {
         sentry.setUser({
-          id: user.value.uid,
-          email: user.value.email || undefined
+          id: user.value.id,
+          email: user.value.email
         });
       } else {
         sentry.setUser(null);
       }
-    });
-
-    if (localStorage.getItem('signInWithRedirect')) {
-      localStorage.removeItem('signInWithRedirect');
-
-      state.value = 'sign-in';
-      const { getRedirectResult } = await import('firebase/auth');
-
-      getRedirectResult(nuxtApp.$firebase.auth)
-        .then(() => {})
-        .catch(console.warn)
-        .finally(() => {
-          state.value = '';
-        });
     }
-  };
+  );
+
+  // lifecycle
+  onMounted(() => initialize());
 
   return {
     state,
     user,
     isLoggedIn,
+    isSignedIn,
     signIn,
     signOut,
-    getAccessToken,
-    initialize
+    getAccessToken
   };
 });

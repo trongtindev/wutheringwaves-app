@@ -107,6 +107,7 @@ watch(
 onMounted(() => {
   browserTimeZone.value = dayjs.tz.guess();
   timeDifference.value = getTimeDifference();
+  console.log('timeDifference', timeDifference.value);
 
   events.value = eventsData.map((e, i) => {
     if (Array.isArray(e)) {
@@ -305,6 +306,17 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </div>
     </client-only>
   </v-card>
+
+  <!-- timezone -->
+  <!-- <v-row class="mt-1">
+    <v-col>
+      <timezone-card />
+    </v-col>
+
+    <v-col>
+      <timezone-card :utc-offset="8" :title="$t('common.serverTime')" />
+    </v-col>
+  </v-row> -->
 
   <v-dialog v-model="dialog" :width="720" :scrollable="true">
     <timeline-dialog

@@ -1,5 +1,4 @@
 import type { FirebaseApp } from 'firebase/app';
-import type { Auth } from 'firebase/auth';
 import type { Messaging } from 'firebase/messaging';
 
 /**
@@ -21,7 +20,6 @@ export default defineNuxtPlugin(async () => {
   } = runtimeConfig.public;
 
   let app: FirebaseApp | undefined;
-  let auth: Auth | undefined;
   let messaging: Messaging | undefined;
 
   if (!isCrawler) {
@@ -36,9 +34,6 @@ export default defineNuxtPlugin(async () => {
       measurementId: 'G-TJSX2XNTR9'
     });
 
-    const { getAuth } = await import('firebase/auth');
-    auth = getAuth(app);
-
     const { getMessaging, isSupported } = await import('firebase/messaging');
     if (await isSupported()) {
       messaging = getMessaging(app);
@@ -52,7 +47,6 @@ export default defineNuxtPlugin(async () => {
     provide: {
       firebase: {
         app,
-        auth,
         messaging
       }
     }

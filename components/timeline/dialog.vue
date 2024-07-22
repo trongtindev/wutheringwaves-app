@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { IEvent } from '~/interfaces/event';
-import { mdiClose } from '@mdi/js';
 // import dayjs from 'dayjs';
 
 // define
@@ -25,26 +24,13 @@ const descriptionLocalized = computed(() => {
 <template>
   <v-card>
     <v-card-title>
-      <v-row>
-        <v-col class="d-flex align-center">
-          {{ nameLocalized }}
-        </v-col>
-
-        <v-col class="d-flex align-center justify-end">
-          <v-btn
-            variant="text"
-            size="x-small"
-            :icon="mdiClose"
-            @click="() => emits('on-close')"
-          />
-        </v-col>
-      </v-row>
+      {{ nameLocalized }}
     </v-card-title>
     <v-divider />
 
     <v-card-text>
       <!-- thumbnail -->
-      <div v-if="props.data.thumbnail" class="mb-2">
+      <div v-if="props.data.thumbnail">
         <v-img :src="props.data.thumbnail" class="border rounded" />
       </div>
 
@@ -76,5 +62,11 @@ const descriptionLocalized = computed(() => {
         </a>
       </div>
     </v-card-text>
+    <v-divider />
+
+    <v-card-actions>
+      <v-spacer />
+      <v-btn :text="$t('common.close')" @click="() => emits('on-close')" />
+    </v-card-actions>
   </v-card>
 </template>

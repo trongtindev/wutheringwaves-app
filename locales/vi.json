@@ -144,11 +144,7 @@
         }
       }
     },
-    "history": {
-      "title": "Lịch sử triệu hồi",
-      "pullByDay": "Pull by day",
-      "totalPull": "Total Pull"
-    },
+    "history": { "title": "Lịch sử triệu hồi" },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",
     "lifetimePulls": "Tổng số lần",
     "pity": "Pity",
@@ -157,21 +153,19 @@
       "title": "Xếp hạng toàn cầu của bạn",
       "level": "Your Total Pulls Rank",
       "based": "Based on Global Convene Stats",
-      "current": "Current {banner} median is {median} pulls",
-      "more": "Bạn có nhiều lượt hơn {percentage}% người dùng wutheringwaves.app",
-      "less": "Bạn có ít pull hơn {percentage}% người dùng wutheringwaves.app",
+      "current": "Current {banner} median is {median} lượt",
+      "more": "Bạn có nhiều lượt hơn {percentage}% người dùng",
+      "less": "Bạn có {percentage}% người dùng",
       "currentLuck": "Current {banner} median is {median}%",
-      "totalPull": "Tổng số lần",
-      "luck5": "Luckiness 5★",
-      "luck4": "Luckiness 4★",
+      "luck5": "Tỉ lệ thắng 5★",
+      "luck4": "Tỉ lệ thắng 4★",
       "luckWinRateOff": "Tỉ lệ thắng 50:50",
-      "luckWinRateOffSubtitle": "luckWinRateOffSubtitle",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% of wutheringwaves.app users",
-      "lessTotal": "Less pulls than {percentage}% of wutheringwaves.app users",
-      "moreLuck": "Luckier than {percentage}% of wutheringwaves.app users",
-      "lessLuck": "Less lucky than {percentage}% of wutheringwaves.app users",
+      "moreTotal": "More pulls than {percentage}% người dùng",
+      "lessTotal": "Less pulls than {percentage}% người dùng",
+      "moreLuck": "May mắn hơn {percentage}% người dùng",
+      "lessLuck": "Kém may mắn hơn {percentage}% người dùng",
       "top": "TOP",
       "bottom": "BOTTOM"
     },
@@ -183,9 +177,7 @@
       "totalUsers": "Total Users",
       "conveneTotal": "Convene Total",
       "worth": "Worth",
-      "pullByDay": "Pull by day",
-      "totalPull": "Total Pull",
-      "chance": "Chance"
+      "chance": "Tỉ lệ"
     }
   },
   "showcase": {
@@ -384,6 +376,12 @@
     "discussion": "Discussion",
     "allowComments": "Allow comments"
   },
+  "banner": {
+    "featuredResonator": "Nhân vật giới hạn",
+    "featuredWeapon": "Vũ khí giới hạn",
+    "standardResonator": "Nhân vật thường",
+    "standardWeapon": "Vũ khí thường"
+  },
   "common": {
     "name": "Tên",
     "time": "Thời gian",
@@ -472,6 +470,11 @@
     "hp": "HP",
     "cost": "Cost",
     "upcomingWeapons": "Upcoming Weapons",
-    "upcomingCharacters": "Upcoming Characters"
+    "upcomingCharacters": "Upcoming Characters",
+    "close": "Close",
+    "loading": "Loading",
+    "serverTime": "Server time",
+    "pullByDay": "Pull by day",
+    "totalPull": "Total Pull"
   }
 }

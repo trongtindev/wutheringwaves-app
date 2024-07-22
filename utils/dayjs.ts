@@ -15,11 +15,10 @@ export const timeOffsetIds = {
   '6eb2a235b30d05efd77bedb5cf60999e': 1 // Europe
 };
 
-export const getTimeDifference = (compareTo?: dayjs.Dayjs) => {
+export const getTimeDifference = () => {
   const now = dayjs();
-  const local = now.utcOffset();
-  const serverTime = now.utcOffset(timeOffset.Asia).utcOffset();
-  return serverTime - (compareTo ? compareTo.utcOffset() : local);
+  const serverTime = getServerTime();
+  return serverTime.diff(now, 'minutes');
 };
 
 export const dayjsFormat = (
@@ -34,4 +33,8 @@ export const dayjsFormat = (
   }
 
   return dayjs(date).format(format);
+};
+
+export const getServerTime = () => {
+  return dayjs().utcOffset(8);
 };

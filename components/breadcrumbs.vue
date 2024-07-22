@@ -1,9 +1,5 @@
 <script setup lang="ts">
-// uses
-const i18n = useI18n();
-const localePath = useLocalePath();
-const runtimeConfig = useRuntimeConfig();
-
+// define
 const props = defineProps<{
   items: {
     title: string;
@@ -12,49 +8,30 @@ const props = defineProps<{
   }[];
 }>();
 
-// states
-const tempHTMLScriptElement = ref<Element[]>([]);
+// uses
+const i18n = useI18n();
+const localePath = useLocalePath();
+const runtimeConfig = useRuntimeConfig();
 
-// functions
-
-// lifecycle
-onMounted(() => {
-  const json = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: props.items.map((e, i) => {
-      return {
-        '@type': 'ListItem',
-        position: i + 1,
-        name: e.title,
-        item: `${runtimeConfig.public.SITE_URL}${e.to ? localePath(e.to) : ''}`
-      };
-    })
-  };
-
-  let element = document.querySelector('#BreadcrumbList');
-  if (!element) {
-    element = document.createElement('script');
-    element.id = '#BreadcrumbList';
-    element.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(element);
-    tempHTMLScriptElement.value.push(element);
-  }
-
-  element.textContent = JSON.stringify(json);
-});
-
-onUnmounted(() => {
-  tempHTMLScriptElement.value.forEach((e) => e.remove());
+// seo meta
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: props.items.map((e, i) => {
+    return {
+      '@type': 'ListItem',
+      position: i + 1,
+      name: e.title,
+      item: `${runtimeConfig.public.SITE_URL}${e.to ? localePath(e.to) : ''}`
+    };
+  })
 });
 </script>
 
 <template>
-  <div>
-    <!-- something -->
-  </div>
+  <div></div>
   <!-- <v-breadcrumbs
-    class="pt-0"
+    class="pt-1"
     :items="[
       {
         title: i18n.t('common.home'),

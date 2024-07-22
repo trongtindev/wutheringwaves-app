@@ -172,14 +172,10 @@ export const useBackup = defineStore('useBackup', () => {
 
   // functions
   const initialize = () => {
-    if (import.meta.server) {
-      throw new Error('Cannot initialize backup on server-side!');
-    }
-
     lastLocalChanged.value = parseInt(
       localStorage.getItem('lastLocalChanged') || '0'
     );
-
+    if (auth.isLoggedIn) checkSync();
     isInitialized.value = true;
   };
 
@@ -205,6 +201,9 @@ export const useBackup = defineStore('useBackup', () => {
     localStorage.setItem('lastLocalChanged', value.toString());
   });
 
+  // lifecycle
+  onMounted(() => initialize());
+
   // exports
   return {
     state,
@@ -214,7 +213,6 @@ export const useBackup = defineStore('useBackup', () => {
     info,
     backup,
     restore,
-    eraseAll,
-    initialize
+    eraseAll
   };
 });

@@ -83,7 +83,7 @@ onNuxtReady(async () => {
 <template>
   <v-card>
     <v-card-title>
-      {{ $t('convene.history.pullByDay') }}
+      {{ $t('common.pullByDay') }}
     </v-card-title>
     <v-divider />
 
@@ -98,7 +98,7 @@ onNuxtReady(async () => {
           datasets: [
             {
               data: datasets,
-              label: $t('convene.history.totalPull'),
+              label: $t('common.totalPull'),
               backgroundColor: 'green'
             }
           ]

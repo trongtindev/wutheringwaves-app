@@ -19,7 +19,7 @@
 }
 
 /* scrollbar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   background-color: rgb(var(--v-theme-surface));
   width: 6px;
 }
@@ -27,7 +27,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: rgb(var(--v-theme-on-surface));
   border-radius: 0px;
-}
+} */
 
 /* @media only screen and (max-width: 600px) {
   .v-container {
@@ -204,4 +204,9 @@ div.event-item {
     rgb(37, 41, 74, 100) 90%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+
+/* gsi */
+#credential_picker_container iframe {
+  border-radius: 8px;
 }
