@@ -104,6 +104,9 @@
     "vuetify": "^3.6.13"
   },
   "lint-staged": {
-    "*.{ts,mjs}": "pnpm run lint"
+    "*.{ts,vue}": [
+      "pnpm run lint",
+      "pnpm run typecheck"
+    ]
   }
 }
