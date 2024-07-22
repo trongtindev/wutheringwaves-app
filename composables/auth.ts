@@ -12,6 +12,7 @@ export const useAuth = defineStore('useAuth', () => {
   const user = useCookie<IUser>('user');
   const state = ref<'' | 'sign-in'>('');
   const gState = useCookie('g_state');
+  const device = useDevice();
   const accessToken = useCookie('accessToken');
   const refreshToken = useCookie('refreshToken');
   const isScriptLoaded = ref(false);
@@ -24,8 +25,13 @@ export const useAuth = defineStore('useAuth', () => {
     console.log('gState', gState.value);
   };
 
-  const signIn = async (options?: { signInWithRedirect?: boolean }) => {
+  const signIn = async (options?: { useFedCM?: boolean }) => {
     options ??= {};
+    /**
+     * Chrome third-party cookie deprecation starts Q1 2024.
+     * https://developers.google.com/identity/gsi/web/guides/fedcm-migration
+     */
+    options.useFedCM ??= device.isMobile;
 
     gState.value = null;
     if (!isScriptLoaded.value) {
@@ -51,9 +57,10 @@ export const useAuth = defineStore('useAuth', () => {
           resolve(result.credential);
         },
         auto_select: true,
-        cancel_on_tap_outside: false
+        cancel_on_tap_outside: false,
+        use_fedcm_for_prompt: options.useFedCM
       });
-      window.google.accounts.id.prompt((result) => {
+      window.google.accounts.id.prompt(async (result) => {
         console.debug('google.accounts.id.prompt', result);
         if (result.isNotDisplayed()) {
           reject('isNotDisplayed');
@@ -62,8 +69,8 @@ export const useAuth = defineStore('useAuth', () => {
         }
       });
     });
-    if (!credential) return;
     console.debug('google.accounts.id.initialize', credential);
+    if (!credential) return;
 
     const signInResult = await api.getInstance().post<{
       accessToken: string;

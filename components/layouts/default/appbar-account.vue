@@ -5,19 +5,12 @@ import { mdiLogin } from '@mdi/js';
 const auth = useAuth();
 
 // events
-const onPressedSignIn = async (options?: { signInWithRedirect?: boolean }) => {
+const onPressedSignIn = async () => {
   auth.state = 'sign-in';
 
   try {
-    options ??= {};
-    await auth.signIn({
-      signInWithRedirect: options.signInWithRedirect
-    });
+    await auth.signIn();
   } catch (error: any) {
-    if (error.code === 'auth/popup-blocked') {
-      return onPressedSignIn({ signInWithRedirect: true });
-    }
-
     // TODO: handle this
     console.error(error);
     alert(error);
