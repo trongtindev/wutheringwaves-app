@@ -17,7 +17,7 @@
               "properties": {
                 "item": {
                   "type": "string",
-                  "$ref": "./items.components.json#/components/schemas/slug"
+                  "$ref": "./item.components.json#/components/schemas/slug"
                 },
                 "quantity": {
                   "type": "integer",

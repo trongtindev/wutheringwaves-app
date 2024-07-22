@@ -1,7 +1,5 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.816Z",
-  "modifiedTime": "2024-07-09T15:18:52.870Z",
-  "slug": "jianxin",
+  "$schema": "../../public/schema/character.schema.json",
   "description": "Jianxin, a Taoist monk and successor of Fengyiquan, has dedicated her life to mastering the ultimate martial art. With the power to harness and transform environmental Chi, she can create protective barriers that purify both body and mind.",
   "skills": [
     {
@@ -251,5 +249,58 @@
     "id": "Jianxin, seorang biarawan Tao dan penerus Fengyiquan, telah mengabdikan hidupnya untuk menguasai seni bela diri pamungkas. Dengan kekuatan untuk memanfaatkan dan mengubah Chi lingkungan, ia dapat menciptakan penghalang pelindung yang memurnikan tubuh dan pikiran.",
     "th": "เจี้ยนซิน ภิกษุณีเต๋าและทายาทของเฟิงอี้เฉวียน ได้อุทิศชีวิตของเธอเพื่อฝึกฝนศิลปะการต่อสู้ขั้นสูงสุด ด้วยพลังในการควบคุมและเปลี่ยนแปลงชี่จากสิ่งแวดล้อม เธอสามารถสร้างเกราะป้องกันที่ชำระทั้งร่างกายและจิตใจ",
     "ru": "Цзяньсинь, даосская монахиня и наследница Фэнъицюань, посвятила свою жизнь постижению высшего боевого искусства. Обладая силой использовать и трансформировать окружающую Ци, она может создавать защитные барьеры, очищающие как тело, так и разум."
-  }
+  },
+  "bestWeapons": [
+    {
+      "different": 100,
+      "item": "marcato",
+      "rank": 1
+    },
+    {
+      "different": 100,
+      "item": "originite-type-iv",
+      "rank": 5
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Rejuvenating Glow"]
+    }
+  ],
+  "bestMainEchoes": ["bell-borne-geochelone"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate", "Crit DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Aero DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Aero DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "skillPriority": [
+    "Resonance Liberation",
+    "Resonance Skill",
+    "Basic Attack",
+    "Forte Circuit",
+    "Intro Skill"
+  ]
 }

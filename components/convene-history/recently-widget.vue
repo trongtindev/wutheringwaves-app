@@ -17,7 +17,7 @@ const items = ref<ConveneDocument[]>();
 // functions
 const initialize = () => {
   if (!account.active) {
-    // no account or not initialized
+    // items.value = [];
     return;
   }
 

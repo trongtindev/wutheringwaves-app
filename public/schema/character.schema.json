@@ -20,8 +20,12 @@
         },
         "hp": {
           "type": "number"
+        },
+        "energy": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["atk", "def", "hp", "energy"]
     },
     "skills": {
       "type": "array",
@@ -61,7 +65,8 @@
               "type": "object",
               "properties": {
                 "item": {
-                  "type": "integer"
+                  "type": "string",
+                  "$ref": "./item.components.json#/components/schemas/slug"
                 },
                 "quantity": {
                   "type": "integer"

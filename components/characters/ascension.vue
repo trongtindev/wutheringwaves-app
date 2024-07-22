@@ -21,7 +21,12 @@ const dictItems = ref<{ [key: number]: IItem }>({});
 if (props.data.ascensions) {
   props.data.ascensions.forEach((e) => {
     e.cost.forEach((cost) => {
-      const item = items.find((item) => item.id === cost.item);
+      const item = items.find((item) => {
+        if (typeof cost.item === 'string') {
+          return item.slug === cost.item;
+        }
+        return item.id === cost.item;
+      });
       if (item) dictItems.value[cost.item] = item;
     });
   });

@@ -41,6 +41,9 @@ export const useDesktopApp = defineStore('useDesktopApp', () => {
       on<IDesktopAppActor>(DesktopAppGameType.playerInfo, (data) => {
         player.value = data;
       });
+      on<IDesktopAppActor[]>(DesktopAppGameType.objectList, (data) => {
+        objects.value = data;
+      });
     });
   }
 

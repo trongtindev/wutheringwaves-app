@@ -37,6 +37,7 @@ const onPressedSignOut = async () => {
       <v-btn
         :text="$t('common.signIn')"
         :disabled="true"
+        :loading="true"
         color="primary"
         variant="flat"
       >

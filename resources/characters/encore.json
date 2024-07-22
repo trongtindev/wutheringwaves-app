@@ -1,7 +1,5 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.815Z",
-  "modifiedTime": "2024-07-09T15:18:52.862Z",
-  "slug": "encore",
+  "$schema": "../../public/schema/character.schema.json",
   "description": "A girl accompanied by one black and one white Wooly plushies. Encore, consultant from the Black Shores, is longing to create happy stories with candies, fairy tales, and her imagination.",
   "skills": [
     {
@@ -103,9 +101,8 @@
       "description": "During Resonance Liberation <strong style=\"color: var(--color-highlight);\">Cosmos Rave</strong>, Encore gains {0} stack(s) of \"Lost Lamb\" every time she deals damage, each stack increasing her ATK by {1} for {2}s, stacking up to {3} time(s)."
     }
   ],
-  "stats": { "hp": 841, "def": 102, "atk": 34, "energy": 12500 },
+  "stats": { "hp": 10513, "def": 1247, "atk": 425, "energy": 125 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
         { "item": 41100011, "quantity": 4 },
@@ -251,5 +248,82 @@
     "id": "Seorang gadis yang ditemani oleh dua boneka bulu, satu hitam dan satu putih. Encore, seorang konsultan dari Black Shores, mendambakan untuk menciptakan cerita bahagia dengan permen, dongeng, dan imajinasinya.",
     "th": "เด็กสาวคนหนึ่งที่พกตุ๊กตาขนแกะสีดำและสีขาวติดตัวไปด้วย เอนคอร์ ที่ปรึกษาจากชายฝั่งดำ มุ่งมั่นที่จะสร้างเรื่องราวดีๆ ด้วยขนม นวนิยาย และจินตนาการของเธอ",
     "ru": "Девочка, сопровождаемая одним чёрным и одним белым плюшевым волкодавом. Анкор, консультант с Чёрных Берегов, мечтает создавать счастливые истории с помощью конфет, сказок и своего воображения."
-  }
+  },
+  "skillPriority": [
+    "Resonance Liberation",
+    "Forte Circuit",
+    "Resonance Skill",
+    "Basic Attack",
+    "Outro Skill"
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Molten Rift"]
+    },
+    {
+      "different": 100,
+      "items": ["Molten Rift", "Lingering Tunes"]
+    }
+  ],
+  "bestMainEchoes": ["inferno-rider", "mech-abomination"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate", "Aero DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Fusion DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Fusion DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    {
+      "item": "stringmaster",
+      "different": 114.5,
+      "rank": 1
+    },
+    {
+      "item": "cosmic-ripples",
+      "different": 100,
+      "rank": 1
+    },
+    {
+      "item": "augment",
+      "different": 88.6,
+      "rank": 1
+    },
+    {
+      "item": "jinzhou-keeper",
+      "different": 84.9,
+      "rank": 1
+    },
+    {
+      "item": "rectifier-of-night",
+      "different": 77.2,
+      "rank": 5
+    },
+    {
+      "item": "guardian-rectifier",
+      "different": 76.8,
+      "rank": 5
+    }
+  ]
 }

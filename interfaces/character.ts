@@ -71,7 +71,7 @@ export interface ICharacterData {
   };
   ascensions?: {
     cost: {
-      item: number;
+      item: number | string;
       quantity: number;
     }[];
     minLevel: number;
