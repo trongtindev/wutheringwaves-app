@@ -85,6 +85,7 @@
     "typescript": "^5.5.3",
     "url-slug": "^4.0.1",
     "vite-plugin-eslint2": "^4.4.0",
+    "vite-plugin-vuetify": "^2.0.3",
     "vue": "^3.4.33",
     "vue-chartjs": "^5.3.1",
     "vue-router": "^4.4.0",
