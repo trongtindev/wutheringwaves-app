@@ -41,7 +41,7 @@ export const useAuth = defineStore('useAuth', () => {
       return;
     }
 
-    if (isSignedIn.value) {
+    if (isLoggedIn.value) {
       refreshProfile();
       return;
     }
