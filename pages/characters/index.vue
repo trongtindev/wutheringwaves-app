@@ -97,67 +97,60 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <!-- alert -->
-    <alert id="characters" :text="$t('characters.alert')" />
+  <!-- alert -->
+  <alert id="characters" :text="$t('characters.alert')" />
 
-    <!-- page -->
-    <v-card>
-      <v-card-text>
-        <client-only>
-          <v-row>
-            <v-col cols="12" md="4">
-              <v-text-field
-                v-model="filterText"
-                :label="$t('Search')"
-                :hide-details="true"
-              />
-            </v-col>
+  <!-- filter -->
+  <v-row>
+    <v-col cols="12" md="4">
+      <v-text-field
+        v-model="filterText"
+        :label="$t('Search')"
+        :hide-details="true"
+      />
+    </v-col>
 
-            <v-col cols="6" md="4">
-              <v-select
-                v-model="filterAttribute"
-                :label="$t('Attribute')"
-                :items="['All', 'Aero', 'Glacio', 'Electro', 'Fusion', 'Havoc']"
-                :item-title="(e) => e"
-                :hide-details="true"
-              />
-            </v-col>
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterAttribute"
+        :label="$t('Attribute')"
+        :items="['All', 'Aero', 'Glacio', 'Electro', 'Fusion', 'Havoc']"
+        :item-title="(e) => e"
+        :hide-details="true"
+      />
+    </v-col>
 
-            <v-col cols="6" md="4">
-              <v-select
-                v-model="filterRarity"
-                :label="$t('common.rarity')"
-                :items="[0, 4, 5]"
-                :item-title="
-                  (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
-                "
-                :hide-details="true"
-              />
-            </v-col>
-          </v-row>
-        </client-only>
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterRarity"
+        :label="$t('common.rarity')"
+        :items="[0, 4, 5]"
+        :item-title="
+          (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
+        "
+        :hide-details="true"
+      />
+    </v-col>
+  </v-row>
 
-        <v-row class="mt-2">
-          <v-col
-            v-for="(element, index) in items"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="3"
-            lg="2"
-          >
-            <character-card
-              :item="element"
-              :sequences="
-                owned && owned[element.name]
-                  ? owned[element.name].resonanceChain
-                  : undefined
-              "
-            />
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
-  </div>
+  <!-- list -->
+  <v-row class="mt-1">
+    <v-col
+      v-for="(element, index) in items"
+      :key="index"
+      cols="6"
+      sm="4"
+      md="3"
+      lg="2"
+    >
+      <character-card
+        :item="element"
+        :sequences="
+          owned && owned[element.name]
+            ? owned[element.name].resonanceChain
+            : undefined
+        "
+      />
+    </v-col>
+  </v-row>
 </template>

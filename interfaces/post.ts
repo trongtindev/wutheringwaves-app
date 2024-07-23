@@ -1,4 +1,5 @@
 import type { IFile } from './file';
+import type { IUser } from './user';
 
 export interface IPostCategory {
   id: string;
@@ -9,7 +10,7 @@ export interface IPostCategory {
 
 export interface IPost {
   id: string;
-  user: string;
+  user: IUser;
   slug: string;
   locale: string;
   title: string;
@@ -18,9 +19,10 @@ export interface IPost {
   descriptionLocalized: { [key: string]: string };
   content: string;
   contentLocalized: { [key: string]: string };
-  thumbnail?: IFile;
+  thumbnail: IFile;
   attachments?: IFile[];
   views: number;
-  updatedAt: string;
-  createdAt: string;
+  updatedAt: Date;
+  createdAt: Date;
+  categories: IPostCategory[];
 }

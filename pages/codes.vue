@@ -58,6 +58,9 @@ useJsonld(() => ({
 </script>
 
 <template>
+  <!-- chips -->
+  <header-chips class="mb-2" :github="`/tree/main/resources/codes.json`" />
+
   <!-- list -->
   <v-card>
     <v-card-title tag="h1">

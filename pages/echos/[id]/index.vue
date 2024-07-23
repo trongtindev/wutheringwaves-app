@@ -53,6 +53,14 @@ useSeoMeta({
 });
 useJsonld({
   '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  thumbnailUrl: ogImage,
+  dateCreated: item.publishedTime,
+  datePublished: item.modifiedTime
+});
+useJsonld({
+  '@context': 'https://schema.org',
   '@type': 'ImageObject',
   contentUrl: ogImage,
   creditText: 'WutheringWaves.app',
@@ -77,6 +85,13 @@ useJsonld({
 </script>
 
 <template>
+  <!-- chips -->
+  <header-chips
+    class="mb-2"
+    :github="`/tree/main/resources/echos/${item.slug}.json`"
+  />
+
+  <!-- page -->
   <v-card>
     <v-card-title tag="h1">
       {{ nameLocalized }}

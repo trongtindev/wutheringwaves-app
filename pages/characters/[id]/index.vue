@@ -112,6 +112,15 @@ useSeoMeta({
   articlePublishedTime: item.publishedTime,
   articleModifiedTime: item.modifiedTime
 });
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  thumbnailUrl: ogImage,
+  dateCreated: item.publishedTime,
+  datePublished: item.publishedTime,
+  dateModified: item.modifiedTime
+});
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
@@ -128,6 +137,12 @@ useJsonld(() => ({
 </script>
 
 <template>
+  <!-- chips -->
+  <header-chips
+    class="mb-2"
+    :github="`/tree/main/resources/characters/${item.slug}.json`"
+  />
+
   <!-- upcoming -->
   <v-alert
     v-if="item.upcoming"

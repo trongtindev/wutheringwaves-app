@@ -18,9 +18,10 @@ useHead({
 
 <template>
   <client-only>
+    <template #fallback></template>
     <v-row>
       <v-col cols="12" md="7">
-        <settings-account class="mt-2" />
+        <settings-account />
         <settings-cloud-backup class="mt-2" />
         <settings-analytics class="mt-2" />
         <settings-export-data class="mt-2" />

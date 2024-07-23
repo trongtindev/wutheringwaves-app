@@ -31,7 +31,12 @@ const descriptionLocalized = computed(() => {
     <v-card-text>
       <!-- thumbnail -->
       <div v-if="props.data.thumbnail">
-        <v-img :src="props.data.thumbnail" class="border rounded" />
+        <v-img
+          :src="props.data.thumbnail"
+          :aspect-ratio="16 / 9"
+          class="border rounded"
+          :cover="true"
+        />
       </div>
 
       <!-- description -->

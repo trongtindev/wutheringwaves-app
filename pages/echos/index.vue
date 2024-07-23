@@ -77,52 +77,48 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <v-card>
-      <v-card-text>
-        <v-row>
-          <v-col cols="12" sm="4">
-            <v-text-field
-              v-model="filterText"
-              :label="$t('common.search')"
-              :hide-details="true"
-            />
-          </v-col>
+  <!-- filter -->
+  <v-row>
+    <v-col cols="12" sm="4">
+      <v-text-field
+        v-model="filterText"
+        :label="$t('common.search')"
+        :hide-details="true"
+      />
+    </v-col>
 
-          <v-col cols="6" sm="4">
-            <v-select
-              v-model="filterCost"
-              :label="$t('echos.cost')"
-              :items="[0, 1, 3, 4]"
-              :item-title="(e: number) => (e === 0 ? i18n.t('common.all') : e)"
-              :hide-details="true"
-            />
-          </v-col>
+    <v-col cols="6" sm="4">
+      <v-select
+        v-model="filterCost"
+        :label="$t('echos.cost')"
+        :items="[0, 1, 3, 4]"
+        :item-title="(e: number) => (e === 0 ? i18n.t('common.all') : e)"
+        :hide-details="true"
+      />
+    </v-col>
 
-          <v-col cols="6" sm="4">
-            <v-select
-              v-model="filterSonataEffect"
-              :label="$t('echos.sonataEffect')"
-              :items="['All', ...sonataEffects]"
-              :item-title="(e: number) => i18n.t(e)"
-              :hide-details="true"
-            />
-          </v-col>
-        </v-row>
+    <v-col cols="6" sm="4">
+      <v-select
+        v-model="filterSonataEffect"
+        :label="$t('echos.sonataEffect')"
+        :items="['All', ...sonataEffects]"
+        :item-title="(e: number) => i18n.t(e)"
+        :hide-details="true"
+      />
+    </v-col>
+  </v-row>
 
-        <v-row class="mt-4">
-          <v-col
-            v-for="(element, index) in items"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="3"
-            lg="2"
-          >
-            <echo-card :item="element" />
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
-  </div>
+  <!-- list -->
+  <v-row class="mt-1">
+    <v-col
+      v-for="(element, index) in items"
+      :key="index"
+      cols="6"
+      sm="4"
+      md="3"
+      lg="2"
+    >
+      <echo-card :item="element" />
+    </v-col>
+  </v-row>
 </template>

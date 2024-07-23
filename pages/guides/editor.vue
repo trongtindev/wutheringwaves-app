@@ -4,8 +4,7 @@ import { mdiPublish } from '@mdi/js';
 import urlSlug from 'url-slug';
 import type { IListResponse } from '~/interfaces/api';
 import type { IFile } from '~/interfaces/file';
-import type { IGuide } from '~/interfaces/guide';
-import type { IPostCategory } from '~/interfaces/post';
+import type { IPost, IPostCategory } from '~/interfaces/post';
 import { AxiosError } from 'axios';
 
 // uses
@@ -16,16 +15,15 @@ const route = useRoute();
 const router = useRouter();
 const dialog = useDialog();
 const localePath = useLocalePath();
-const { API_URL } = useRuntimeConfig().public;
 
 // fetch
 const id = typeof route.query.id === 'string' ? route.query.id : undefined;
 const item = id
-  ? await api.getInstance().get<IListResponse<IGuide>>(`guides/${id}`)
+  ? await api.getInstance().get<IListResponse<IPost>>(`posts/${id}`)
   : undefined;
 const allCategories = await api
   .getInstance()
-  .get<IListResponse<IPostCategory>>('guides/categories');
+  .get<IListResponse<IPostCategory>>('posts/categories');
 
 // states
 const editor = ref<Editor>();
@@ -58,7 +56,7 @@ const updateOrPublish = () => {
 
   api
     .getInstance()
-    .post<IGuide>('guides', {
+    .post<IPost>('posts', {
       title: titleLocalized.value[locale.value],
       titleLocalized: titleLocalized.value,
       description: descriptionLocalized.value[locale.value],

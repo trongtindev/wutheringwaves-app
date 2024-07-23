@@ -162,7 +162,9 @@ const items = [
       },
       color: '#141427',
       description:
-        'Complete tasks in [Lollo Campaign] to earn Lollo Stamps. Lollo Stamps can be used in the roulette of "Lollo Helper" to get random rewards.'
+        'Complete tasks in [Lollo Campaign] to earn Lollo Stamps. Lollo Stamps can be used in the roulette of "Lollo Helper" to get random rewards.',
+      thumbnail: '/events/covers/lollo-campaign.webp',
+      url: 'https://wutheringwaves.kurogames.com/en/main/news/detail/1080'
     }
   ],
   // Battle

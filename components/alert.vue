@@ -7,13 +7,15 @@ const props = defineProps<{
 }>();
 
 // states
-const enabled = useLocalStorage(`alert.${props.id}`, true);
+const isIgnored = useCookie<boolean>(`alert.${props.id}`);
 </script>
 
 <template>
   <client-only>
+    <template #fallback></template>
     <v-alert
-      v-model="enabled"
+      v-if="!isIgnored"
+      v-model="isIgnored"
       class="mb-2"
       :color="props.color || 'info'"
       :title="props.title"

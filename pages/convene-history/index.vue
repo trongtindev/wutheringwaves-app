@@ -113,178 +113,177 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>
 
 <template>
-  <div>
-    <!-- breadcrumbs -->
-    <breadcrumbs
-      :items="[
-        {
-          to: '/convene-history',
-          title: i18n.t('convene.history.title')
-        }
-      ]"
-    />
+  <!-- breadcrumbs -->
+  <breadcrumbs
+    :items="[
+      {
+        to: '/convene-history',
+        title: i18n.t('convene.history.title')
+      }
+    ]"
+  />
 
-    <v-card>
-      <v-card-text>
-        <div class="mb-2">
-          <v-row>
-            <v-col cols="12" md="8">
-              <v-select
-                v-model="filterBanner"
-                :placeholder="$t('Select banner')"
-                :items="banners"
-                :return-object="true"
-                :item-title="(e) => $t(e.name)"
-                :clearable="true"
-              />
-            </v-col>
+  <!-- filter -->
+  <v-row class="mb-1">
+    <v-col cols="12" md="8">
+      <v-select
+        v-model="filterBanner"
+        :placeholder="$t('Select banner')"
+        :items="banners"
+        :return-object="true"
+        :item-title="(e) => $t(e.name)"
+        :clearable="true"
+        :hide-details="true"
+      />
+    </v-col>
 
-            <v-col cols="12" md="4">
-              <v-select
-                v-model="filterRarity"
-                :label="$t('common.rarity')"
-                :items="[5, 4, 3]"
-                :multiple="true"
-              />
-            </v-col>
-          </v-row>
+    <v-col cols="12" md="4">
+      <v-select
+        v-model="filterRarity"
+        :label="$t('common.rarity')"
+        :items="[5, 4, 3]"
+        :multiple="true"
+        :hide-details="true"
+      />
+    </v-col>
+  </v-row>
+
+  <v-card>
+    <v-card-text>
+      <v-alert
+        v-if="convenes.length === 0"
+        color="info"
+        :text="$t('You currently have no Convene History.')"
+      />
+
+      <div v-else-if="displayType === 'list'">
+        <v-data-table
+          class="border rounded"
+          :items="displayConvenes"
+          :headers="[
+            { title: $t('Time'), width: '30%' },
+            { title: $t('Name'), width: '40%' },
+            { title: $t('Pity'), width: '15%' },
+            { title: $t('common.rarity'), width: '15%' }
+          ]"
+          item-value="key"
+        >
+          <template #item="{ item }">
+            <tr :class="`bg-linear-rarity${item.qualityLevel}`">
+              <td>
+                {{ item.time }}
+              </td>
+
+              <td class="d-flex align-center">
+                <v-avatar
+                  class="border mr-2"
+                  :class="`bg-rarity${item.qualityLevel}`"
+                >
+                  <v-img
+                    :src="`/${item.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(item.name)}.webp`"
+                  />
+                </v-avatar>
+                <span :class="`text-rarity${item.qualityLevel}`">
+                  {{ $t(item.name) }}
+                </span>
+              </td>
+
+              <td>
+                <span
+                  v-if="item.qualityLevel >= 4"
+                  :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
+                >
+                  {{ item.pity }}
+                </span>
+                <span v-else>
+                  {{ item.pity }}
+                </span>
+              </td>
+
+              <td>
+                {{ item.qualityLevel }}
+              </td>
+            </tr>
+          </template>
+        </v-data-table>
+      </div>
+
+      <!-- grid -->
+      <div v-else class="d-flex flex-wrap justify-center">
+        <div
+          v-for="(element, index) in displayConvenes"
+          :key="index"
+          class="pa-2 d-flex position-relative"
+        >
+          <v-badge
+            :color="`hsl(${100 - (element.pity / (element.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%)`"
+            :content="element.pity"
+            location="bottom right"
+          >
+            <v-avatar
+              class="border"
+              :class="`bg-rarity${element.qualityLevel}`"
+              :size="64"
+              :image="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
+            />
+          </v-badge>
         </div>
+      </div>
+    </v-card-text>
+  </v-card>
 
-        <v-alert
-          v-if="convenes.length === 0"
-          type="info"
-          :text="$t('You currently have no Convene History.')"
+  <div class="mt-2">
+    <masonry>
+      <template #default="masonry">
+        <convene-history-rank-summary
+          :convenes="convenes"
+          @on-updated="() => masonry.refreshLayout()"
         />
 
-        <div v-else-if="displayType === 'list'">
-          <v-data-table
-            class="border rounded"
-            :items="displayConvenes"
-            :headers="[
-              { title: $t('Time'), width: '30%' },
-              { title: $t('Name'), width: '40%' },
-              { title: $t('Pity'), width: '15%' },
-              { title: $t('common.rarity'), width: '15%' }
-            ]"
-            item-value="key"
-          >
-            <template #item="{ item }">
-              <tr :class="`bg-linear-rarity${item.qualityLevel}`">
-                <td>
-                  {{ item.time }}
-                </td>
+        <convene-history-banner-summary
+          :title="$t('banner.featuredResonator')"
+          :type="CardPoolType['featured-resonator']"
+          @on-updated="() => masonry.refreshLayout()"
+        />
 
-                <td class="d-flex align-center">
-                  <v-avatar
-                    class="border mr-2"
-                    :class="`bg-rarity${item.qualityLevel}`"
-                  >
-                    <v-img
-                      :src="`/${item.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(item.name)}.webp`"
-                    />
-                  </v-avatar>
-                  <span :class="`text-rarity${item.qualityLevel}`">
-                    {{ $t(item.name) }}
-                  </span>
-                </td>
+        <convene-history-banner-summary
+          :title="$t('banner.featuredWeapon')"
+          :type="CardPoolType['featured-weapon']"
+          @on-updated="() => masonry.refreshLayout()"
+        />
 
-                <td>
-                  <span
-                    v-if="item.qualityLevel >= 4"
-                    :style="`color: hsl(${100 - (item.pity / (item.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%);`"
-                  >
-                    {{ item.pity }}
-                  </span>
-                  <span v-else>
-                    {{ item.pity }}
-                  </span>
-                </td>
+        <convene-history-banner-summary
+          :title="$t('banner.standardResonator')"
+          :type="CardPoolType['standard-resonator']"
+          @on-updated="() => masonry.refreshLayout()"
+        />
 
-                <td>
-                  {{ item.qualityLevel }}
-                </td>
-              </tr>
-            </template>
-          </v-data-table>
-        </div>
+        <convene-history-banner-summary
+          :title="$t('banner.standardWeapon')"
+          :type="CardPoolType['standard-weapon']"
+          @on-updated="() => masonry.refreshLayout()"
+        />
 
-        <!-- grid -->
-        <div v-else class="d-flex flex-wrap justify-center">
-          <div
-            v-for="(element, index) in displayConvenes"
-            :key="index"
-            class="pa-2 d-flex position-relative"
-          >
-            <v-badge
-              :color="`hsl(${100 - (element.pity / (element.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%)`"
-              :content="element.pity"
-              location="bottom right"
-            >
-              <v-avatar
-                class="border"
-                :class="`bg-rarity${element.qualityLevel}`"
-                :size="64"
-                :image="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
-              />
-            </v-badge>
-          </div>
-        </div>
-      </v-card-text>
-    </v-card>
+        <lazy-convene-history-chart-summary
+          :convenes="convenes"
+          @on-updated="() => masonry.refreshLayout()"
+        />
 
-    <div class="mt-2">
-      <masonry>
-        <template #default="masonry">
-          <convene-history-rank-summary
-            :convenes="convenes"
-            @on-updated="() => masonry.refreshLayout()"
-          />
-
-          <convene-history-banner-summary
-            :title="$t('banner.featuredResonator')"
-            :type="CardPoolType['featured-resonator']"
-            @on-updated="() => masonry.refreshLayout()"
-          />
-
-          <convene-history-banner-summary
-            :title="$t('banner.featuredWeapon')"
-            :type="CardPoolType['featured-weapon']"
-            @on-updated="() => masonry.refreshLayout()"
-          />
-
-          <convene-history-banner-summary
-            :title="$t('banner.standardResonator')"
-            :type="CardPoolType['standard-resonator']"
-            @on-updated="() => masonry.refreshLayout()"
-          />
-
-          <convene-history-banner-summary
-            :title="$t('banner.standardWeapon')"
-            :type="CardPoolType['standard-weapon']"
-            @on-updated="() => masonry.refreshLayout()"
-          />
-
-          <lazy-convene-history-chart-summary
-            :convenes="convenes"
-            @on-updated="() => masonry.refreshLayout()"
-          />
-
-          <v-card>
-            <v-list>
-              <v-list-item
-                :to="localePath('/convene-history/global')"
-                :title="$t('convene.global.title')"
-                :append-icon="mdiChevronRight"
-              />
-              <v-list-item
-                :to="localePath('/showcase/convene')"
-                :title="$t('showcase.convene.title')"
-                :append-icon="mdiChevronRight"
-              />
-            </v-list>
-          </v-card>
-        </template>
-      </masonry>
-    </div>
+        <v-card>
+          <v-list>
+            <v-list-item
+              :to="localePath('/convene-history/global')"
+              :title="$t('convene.global.title')"
+              :append-icon="mdiChevronRight"
+            />
+            <v-list-item
+              :to="localePath('/showcase/convene')"
+              :title="$t('showcase.convene.title')"
+              :append-icon="mdiChevronRight"
+            />
+          </v-list>
+        </v-card>
+      </template>
+    </masonry>
   </div>
 </template>

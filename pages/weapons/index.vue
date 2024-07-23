@@ -56,59 +56,50 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>
 
 <template>
-  <div>
-    <!-- alert -->
-    <!-- <alert id="weapons" :text="$t('weapons.alert')" /> -->
-    <!-- {{ JSON.stringify(items.map((e) => e.slug)) }} -->
-    <v-card>
-      <v-card-text>
-        <client-only>
-          <v-row>
-            <v-col cols="12" md="4">
-              <v-text-field
-                v-model="filterText"
-                :label="$t('Search')"
-                :hide-details="true"
-              />
-            </v-col>
+   <!-- filter -->
+  <v-row>
+    <v-col cols="12" md="4">
+      <v-text-field
+        v-model="filterText"
+        :label="$t('common.search')"
+        :hide-details="true"
+      />
+    </v-col>
 
-            <v-col cols="6" md="4">
-              <v-select
-                v-model="filterType"
-                :label="$t('Type')"
-                :items="['All', ...categories]"
-                :item-title="(e) => i18n.t(e)"
-                :hide-details="true"
-              />
-            </v-col>
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterType"
+        :label="$t('Type')"
+        :items="['All', ...categories]"
+        :item-title="(e) => i18n.t(e)"
+        :hide-details="true"
+      />
+    </v-col>
 
-            <v-col cols="6" md="4">
-              <v-select
-                v-model="filterRarity"
-                :label="$t('common.rarity')"
-                :items="[0, 1, 2, 3, 4, 5]"
-                :item-title="
-                  (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
-                "
-                :hide-details="true"
-              />
-            </v-col>
-          </v-row>
-        </client-only>
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterRarity"
+        :label="$t('common.rarity')"
+        :items="[0, 1, 2, 3, 4, 5]"
+        :item-title="
+          (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
+        "
+        :hide-details="true"
+      />
+    </v-col>
+  </v-row>
 
-        <v-row class="mt-2">
-          <v-col
-            v-for="(item, index) in items"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="3"
-            lg="2"
-          >
-            <weapon-card :item="item" />
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
-  </div>
+  <!-- list -->
+  <v-row class="mt-1">
+    <v-col
+      v-for="(item, index) in items"
+      :key="index"
+      cols="6"
+      sm="4"
+      md="3"
+      lg="2"
+    >
+      <weapon-card :item="item" />
+    </v-col>
+  </v-row>
 </template>

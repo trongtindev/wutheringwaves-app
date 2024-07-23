@@ -6,7 +6,6 @@ const i18n = useI18n();
 const route = useRoute();
 const router = useRouter();
 const resources = useResources();
-const localePath = useLocalePath();
 
 // data
 const items = await resources.getItems();
@@ -75,70 +74,53 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <v-card>
-      <v-card-text>
-        <v-row>
-          <v-col cols="12" md="4">
-            <v-text-field v-model="filterText" :label="$t('common.search')" />
-          </v-col>
+  <!-- filter -->
+  <v-row>
+    <v-col cols="12" md="4">
+      <v-text-field
+        v-model="filterText"
+        :label="$t('common.search')"
+        :hide-details="true"
+      />
+    </v-col>
 
-          <v-col cols="6" md="4">
-            <v-select
-              v-model="filterCategory"
-              :label="$t('common.category')"
-              :item-title="(e) => e"
-            />
-          </v-col>
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterCategory"
+        :label="$t('common.category')"
+        :item-title="(e) => e"
+        :hide-details="true"
+      />
+    </v-col>
 
-          <v-col cols="6" md="4">
-            <v-select
-              v-model="filterRarity"
-              :label="$t('common.rarity')"
-              :items="[0, 1, 2, 3, 4, 5]"
-              :item-title="
-                (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
-              "
-              :item-value="(e) => e"
-            />
-          </v-col>
-        </v-row>
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterRarity"
+        :label="$t('common.rarity')"
+        :items="[0, 1, 2, 3, 4, 5]"
+        :item-title="
+          (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
+        "
+        :item-value="(e) => e"
+        :hide-details="true"
+      />
+    </v-col>
+  </v-row>
 
-        <v-row class="mt-4">
-          <v-col
-            v-for="(element, index) in displayItems"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="2"
-          >
-            <v-card :to="localePath(`/items/${element.slug}`)">
-              <v-responsive
-                :aspect-ratio="1 / 1"
-                :style="`background-color: var(${element.rarity === 4 ? '--rarity-purple' : '--rarity-yellow'});`"
-              >
-                <v-img
-                  :src="`/items/icons/${element.slug}.webp`"
-                  :alt="$t(element.name)"
-                  class="align-end h-100"
-                  cover
-                />
-              </v-responsive>
+  <!-- list -->
+  <v-row>
+    <v-col
+      v-for="(item, index) in displayItems"
+      :key="index"
+      cols="6"
+      sm="4"
+      md="2"
+    >
+      <item-card :item="item" />
+    </v-col>
+  </v-row>
 
-              <v-card-title class="text-center" tag="h2">
-                {{ $t(element.name) }}
-              </v-card-title>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-card-text>
-      <v-divider />
-
-      <v-card-actions class="d-flex justify-center">
-        <client-only>
-          <v-pagination v-model="page" :length="pages" />
-        </client-only>
-      </v-card-actions>
-    </v-card>
-  </div>
+  <client-only>
+    <v-pagination v-model="page" :length="pages" />
+  </client-only>
 </template>

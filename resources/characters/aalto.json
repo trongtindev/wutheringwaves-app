@@ -1,7 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "publishedTime": "2024-06-28T15:43:21.813Z",
-  "modifiedTime": "2024-07-09T15:18:52.804Z",
   "description": "Aalto is an enigmatic Information Broker, known for his elusive nature and welcoming smile. Rumor has it he'll provide any information at the right price.",
   "skills": [
     {

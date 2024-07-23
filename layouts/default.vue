@@ -47,7 +47,7 @@ const onPressedSearch = () => {
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
       <!-- logo -->
-      <v-sheet class="pb-1 pt-1">
+      <v-sheet class="pb-2 pt-2">
         <v-list-item title="wutheringwaves.app" subtitle="wutheringwaves.app">
           <template #prepend>
             <v-avatar

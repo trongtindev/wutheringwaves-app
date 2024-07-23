@@ -490,7 +490,7 @@ useSeoMeta({
                 {
                   type: 'bar',
                   data: rateDatasets[1],
-                  label: i18n.t('convene.global.totalPull'),
+                  label: i18n.t('common.totalPull'),
                   backgroundColor: '#ffb13f'
                 }
               ]

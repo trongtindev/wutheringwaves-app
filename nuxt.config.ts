@@ -221,9 +221,22 @@ export default defineNuxtConfig({
   hooks: {
     'builder:watch': async (e, path) => {
       if (e != 'change') return;
-      if (!path.startsWith('locales')) return;
-      if (!path.startsWith('locales/en')) return;
-      await startMerge();
+
+      // update locales
+      if (path.startsWith('locales/en')) {
+        console.log('changed', path);
+        await startMerge();
+      }
+
+      // update resources
+      if (
+        path.startsWith('resources/characters') ||
+        path.startsWith('resources/echos') ||
+        path.startsWith('resources/items') ||
+        path.startsWith('resources/weapons')
+      ) {
+        console.log('changed', path);
+      }
     }
   },
 

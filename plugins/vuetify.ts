@@ -22,23 +22,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       sets: { mdi }
     },
     defaults: {
-      global: {
-        density: 'comfortable'
-      },
-      VSelect: {
-        variant: 'outlined',
-        itemValue: 'value',
-        itemTitle: 'title'
-      },
-      VTextarea: {
-        variant: 'outlined'
-      },
-      VTextField: {
-        variant: 'outlined'
-      },
-      VCombobox: {
-        variant: 'outlined'
-      },
       VRow: {
         dense: true
       },
@@ -55,11 +38,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         density: 'compact'
       },
       VBtn: {
-        class: 'text-body-2',
-        density: 'default'
+        class: 'text-body-2'
       },
       VAlert: {
-        density: 'compact'
+        density: 'compact',
+        variant: 'tonal',
+        class: 'text-center text-subtitle-2'
+      },
+      VAlertTitle: {
+        class: 'justify-center text-body-1'
       }
     },
     theme: {
@@ -68,7 +55,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark: {
           dark: true,
           colors: {
-            primary: '#579DFF',
+            // primary: '#579DFF',
             // 'on-primary': '#FFFFFF',
             // secondary: '#625B71',
             // 'on-secondary': '#FFFFFF',
@@ -87,7 +74,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         light: {
           dark: false,
           colors: {
-            primary: '#579DFF'
+            // primary: '#579DFF'
           }
         }
       }

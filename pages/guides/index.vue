@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { mdiPlus } from '@mdi/js';
 import type { IListResponse } from '~/interfaces/api';
-import type { IGuide } from '~/interfaces/guide';
 import type { IPost, IPostCategory } from '~/interfaces/post';
 
 // uses
@@ -14,10 +13,10 @@ const initializeDebounce = useDebounceFn(() => initialize(), 1000);
 // fetch
 const categories = await api
   .getInstance()
-  .get<IListResponse<IPostCategory>>('guides/categories');
+  .get<IListResponse<IPostCategory>>('posts/categories');
 
 // states
-const data = ref<IListResponse<IGuide>>();
+const data = ref<IListResponse<IPost>>();
 const filterTitle = ref();
 const filterCategories = ref<string[]>([]);
 
@@ -25,7 +24,7 @@ const filterCategories = ref<string[]>([]);
 const initialize = () => {
   api
     .getInstance()
-    .get<IListResponse<IGuide>>(`${API_URL}/posts`)
+    .get<IListResponse<IPost>>(`${API_URL}/posts`)
     .then((result) => {
       data.value = result.data;
     })
@@ -101,7 +100,7 @@ useSeoMeta({
 
   <!-- list -->
   <v-row v-if="!data">
-    <v-col v-for="index in 9" :key="index" cols="12" sm="6" md="4">
+    <v-col v-for="index in 9" :key="index" cols="12" sm="4" md="3">
       <v-skeleton-loader type="card" />
     </v-col>
   </v-row>
@@ -112,24 +111,9 @@ useSeoMeta({
       cols="12"
       sm="6"
       md="4"
+      lg="3"
     >
-      <v-card :to="localePath(`/guides/${item.slug}`)">
-        <v-img
-          :aspect-ratio="1.91 / 1"
-          :src="item.thumbnail ? item.thumbnail.url : undefined"
-          :cover="true"
-        >
-          <template #placeholder>
-            <div class="d-flex align-center justify-center h-100">
-              <v-progress-circular :indeterminate="true" />
-            </div>
-          </template>
-        </v-img>
-
-        <v-card-title tag="h2">
-          {{ item.title }}
-        </v-card-title>
-      </v-card>
+      <post-card :item="item" />
     </v-col>
   </v-row>
 

@@ -14,7 +14,8 @@
           "Fusion DMG",
           "Aero DMG",
           "Energy Regen",
-          "Healing Bonus"
+          "Healing Bonus",
+          "HP%"
         ]
       }
     }

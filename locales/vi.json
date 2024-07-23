@@ -67,10 +67,10 @@
     "settings": { "title": "Settings" },
     "guides": {
       "title": "Game Guides",
-      "relatedGuides": "Related Guides",
-      "latestGuides": "Latest Guides",
-      "previousGuide": "Previous guide",
-      "nextGuide": "Next guide"
+      "related": "Related Guides",
+      "recently": "Recently Guides",
+      "previous": "Previous guide",
+      "next": "Next guide"
     },
     "leaderboards": {
       "title": "Leaderboards",
@@ -470,10 +470,11 @@
     "cost": "Cost",
     "upcomingWeapons": "Upcoming Weapons",
     "upcomingCharacters": "Upcoming Characters",
-    "close": "Close",
-    "loading": "Loading",
+    "close": "Đóng",
+    "loading": "Đang tải",
     "serverTime": "Server time",
-    "pullByDay": "Pull by day",
-    "totalPull": "Total Pull"
+    "pullByDay": "Lượt theo ngày",
+    "totalPull": "Tổng số lượt",
+    "openIssues": "Báo cáo lỗi"
   }
 }

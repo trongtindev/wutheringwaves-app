@@ -67,10 +67,10 @@
     "settings": { "title": "การตั้งค่า" },
     "guides": {
       "title": "Game Guides",
-      "relatedGuides": "Related Guides",
-      "latestGuides": "Latest Guides",
-      "previousGuide": "Previous guide",
-      "nextGuide": "Next guide"
+      "related": "Related Guides",
+      "recently": "Recently Guides",
+      "previous": "Previous guide",
+      "next": "Next guide"
     },
     "leaderboards": {
       "title": "Leaderboards",
@@ -472,6 +472,7 @@
     "loading": "Loading",
     "serverTime": "Server time",
     "pullByDay": "Pull by day",
-    "totalPull": "Total Pull"
+    "totalPull": "Total Pull",
+    "openIssues": "Open Issues"
   }
 }
