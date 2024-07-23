@@ -21,34 +21,117 @@ import {
   mdiTableRowPlusAfter,
   mdiTableRowPlusBefore,
   mdiTableColumnRemove,
-  mdiTableRowRemove
+  mdiTableRowRemove,
+  mdiImageText,
+  mdiYoutube
 } from '@mdi/js';
-import { Editor, EditorContent } from '@tiptap/vue-3';
+import { Editor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/vue-3';
+import Bottleneck from 'bottleneck';
+import type { IFile } from '~/interfaces/file';
 
 // define
 const emits = defineEmits<{
   (e: 'on-updated', html: string);
+  (e: 'on-initialized', editor: Editor);
 }>();
 
 const props = defineProps<{
   readonly?: boolean;
+  defaultContent?: string;
 }>();
+
+// uses
+const api = useApi();
+const i18n = useI18n();
+const notification = useNotification();
 
 // states
 const editor = ref<Editor>();
+const fileDialog = useFileDialog({
+  accept: 'image/png,image/jpg,image/jpeg,image/webp',
+  multiple: true
+});
+
+// functions
+const toggleFigure = () => {
+  if (editor.value!.can().imageToFigure()) {
+    editor.value!.chain().focus().imageToFigure().run();
+  } else if (editor.value!.can().figureToImage()) {
+    editor.value!.chain().focus().figureToImage().run();
+    editor.value!.chain().insertContent('\n').run();
+  }
+};
+
+const addYoutube = () => {
+  const src = window.prompt('Enter URL');
+  if (!src) return;
+  editor.value!.chain().focus().setYoutubeVideo({ src }).run();
+};
+
+const uploadFiles = async (files: File[]) => {
+  const worker = new Bottleneck({ maxConcurrent: 2 });
+  const tasks = files.map((file) => {
+    return worker.schedule(async () => {
+      const nid = await notification.create({
+        title: i18n.t('common.uploading'),
+        message: file.name,
+        persistent: true
+      });
+      const result = await api.getInstance().post<IFile>(
+        'files',
+        {
+          file
+        },
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          },
+          onUploadProgress: (e) => {
+            notification.update(nid, {
+              progress: e.progress ? e.progress * 100 : undefined
+            });
+          }
+        }
+      );
+      notification.remove(nid);
+
+      editor
+        .value!.chain()
+        .focus()
+        .setFigure({
+          fid: result.data.id,
+          src: result.data.url,
+          caption: file.name
+        })
+        .run();
+    });
+  });
+  Promise.all(tasks);
+};
+
+// changes
+watch(
+  () => fileDialog.files.value,
+  (newValue) => {
+    if (!newValue) return;
+    const files = Array.from(Array(newValue.length).keys()).map((index) => {
+      return newValue.item(index)!;
+    });
+    if (files.length <= 0) return;
+    uploadFiles(files);
+  }
+);
+
+// watch(
+//   () => props.readonly,
+//   (newValue) => {
+//     if (!editor.value) return;
+//   }
+// );
 
 // lifecycle
 onMounted(async () => {
-  const { Document } = await import('@tiptap/extension-document');
-  const { Paragraph } = await import('@tiptap/extension-paragraph');
-  const { Text } = await import('@tiptap/extension-text');
-  const { Blockquote } = await import('@tiptap/extension-blockquote');
-  const { CodeBlock } = await import('@tiptap/extension-code-block');
-  const { Dropcursor } = await import('@tiptap/extension-dropcursor');
-  const { Image } = await import('@tiptap/extension-image');
-  const { ListItem } = await import('@tiptap/extension-list-item');
-  const { BulletList } = await import('@tiptap/extension-bullet-list');
-  const { OrderedList } = await import('@tiptap/extension-ordered-list');
+  const { StarterKit } = await import('@tiptap/starter-kit');
   const { Table } = await import('@tiptap/extension-table');
   const { TableCell } = await import('@tiptap/extension-table-cell');
   const { TableHeader } = await import('@tiptap/extension-table-header');
@@ -56,26 +139,17 @@ onMounted(async () => {
   const { Youtube } = await import('@tiptap/extension-youtube');
   const { CharacterCount } = await import('@tiptap/extension-character-count');
   const { BubbleMenu } = await import('@tiptap/extension-bubble-menu');
-  const { History } = await import('@tiptap/extension-history');
-  const { Placeholder } = await import('@tiptap/extension-placeholder');
-  const { Bold } = await import('@tiptap/extension-bold');
-  const { Italic } = await import('@tiptap/extension-italic');
   const { TextAlign } = await import('@tiptap/extension-text-align');
+  const { Image } = await import('@tiptap/extension-image');
+  const { Figure } = await import('~/tiptap/figure');
 
   editor.value = new Editor({
     extensions: [
-      Document.configure({}),
-      Paragraph.configure(),
-      Text.configure(),
-      Blockquote.configure(),
-      CodeBlock.configure(),
-      Image.configure({
-        inline: true
+      StarterKit.configure({
+        dropcursor: {
+          color: '#ffffff'
+        }
       }),
-      Dropcursor.configure(),
-      ListItem.configure(),
-      BulletList.configure(),
-      OrderedList.configure(),
       Table.configure({ resizable: true }),
       TableCell.configure(),
       TableHeader.configure(),
@@ -88,31 +162,18 @@ onMounted(async () => {
         element: document.querySelector('.menu') as HTMLElement
       }),
       CharacterCount.configure({}),
-      History.configure({
-        depth: 10
-      }),
-      Placeholder.configure({
-        placeholder: ({ node }) => {
-          if (node.type.name === 'heading') {
-            return 'What’s the title?';
-          }
-
-          return 'Can you add some further context?';
-        }
-      }),
-      Bold.configure(),
-      Italic.configure(),
       TextAlign.configure({
         types: ['heading', 'paragraph']
-      })
+      }),
+      Image.configure({ inline: true }),
+      Figure.configure()
     ],
-    content: `<p>The Document extension is required. Though, you can write your own implementation, e. g. to give it custom name.</p>  <h2>Heading</h2>
-        <p style="text-align: center">first paragraph</p>
-        <p style="text-align: right">second paragraph</p>`,
+    content: props.defaultContent || '',
     onUpdate: ({ editor }) => {
       emits('on-updated', editor.getHTML());
     }
   });
+  editor.value.on('create', () => emits('on-initialized', editor.value!));
 });
 
 onUnmounted(() => editor.value?.destroy());
@@ -120,6 +181,12 @@ onUnmounted(() => editor.value?.destroy());
 
 <template>
   <client-only>
+    <template #fallback>
+      <div class="text-center">
+        <v-progress-circular :indeterminate="true" />
+      </div>
+    </template>
+
     <div v-if="editor">
       <!-- toolbar -->
       <div class="d-flex flex-wrap ga-2">
@@ -156,6 +223,29 @@ onUnmounted(() => editor.value?.destroy());
           color="white"
           size="x-small"
           :icon="mdiImage"
+          @click="() => fileDialog.open({ reset: true })"
+        />
+        <v-btn
+          variant="text"
+          class="border rounded"
+          color="white"
+          size="x-small"
+          :icon="mdiImageText"
+          :disabled="
+            !editor.can().imageToFigure() && !editor.can().figureToImage()
+          "
+          @click="() => toggleFigure()"
+        />
+
+        <v-divider vertical />
+        <!-- youtube -->
+        <v-btn
+          variant="text"
+          class="border rounded"
+          color="white"
+          size="x-small"
+          :icon="mdiYoutube"
+          @click="() => addYoutube()"
         />
 
         <!-- link -->
@@ -382,28 +472,36 @@ onUnmounted(() => editor.value?.destroy());
         <v-progress-circular :indeterminate="true" />
       </div>
 
-      <!-- <bubble-menu :editor="editor" :tippy-options="{ duration: 100 }">
-        <div class="bubble-menu">
-          <button
-            @click="editor.chain().focus().toggleBold().run()"
-            :class="{ 'is-active': editor.isActive('bold') }"
-          >
-            Bold
-          </button>
-          <button
-            @click="editor.chain().focus().toggleItalic().run()"
-            :class="{ 'is-active': editor.isActive('italic') }"
-          >
-            Italic
-          </button>
-          <button
-            @click="editor.chain().focus().toggleStrike().run()"
-            :class="{ 'is-active': editor.isActive('strike') }"
-          >
-            Strike
-          </button>
-        </div>
-      </bubble-menu> -->
+      <bubble-menu :editor="editor" :tippy-options="{ duration: 100 }">
+        <v-card :elevation="3">
+          <v-card-text class="d-flex ga-2 pa-2">
+            <!-- bold -->
+            <v-btn
+              variant="text"
+              class="border rounded"
+              color="white"
+              size="x-small"
+              :icon="mdiFormatBold"
+              :active="editor.isActive('bold')"
+              @click="editor.chain().focus().toggleBold().run()"
+            />
+
+            <!-- italic -->
+            <v-btn
+              variant="text"
+              class="border rounded"
+              color="white"
+              size="x-small"
+              :icon="mdiFormatItalic"
+              :active="editor.isActive('italic')"
+              @click="editor.chain().focus().toggleItalic().run()"
+            />
+          </v-card-text>
+        </v-card>
+      </bubble-menu>
+    </div>
+    <div v-else class="text-center">
+      <v-progress-circular :indeterminate="true" />
     </div>
   </client-only>
 </template>

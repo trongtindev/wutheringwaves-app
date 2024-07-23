@@ -12,7 +12,7 @@ const i18nHead = useLocaleHead({
 });
 const app = useApp();
 const vuetifyLocale = useLocale();
-const runtimeConfig = useRuntimeConfig();
+const { SITE_URL } = useRuntimeConfig().public;
 
 // initialize
 if (import.meta.client) {
@@ -44,12 +44,22 @@ useHead({
     {
       rel: 'icon',
       type: 'image/x-icon',
-      href: `${runtimeConfig.public.SITE_URL}/favicon.png`
+      href: `${SITE_URL}/favicon.png`
+    },
+    {
+      rel: 'alternate',
+      type: 'application/rss+xml',
+      href: `${SITE_URL}/guides/rss`
+    },
+    {
+      rel: 'alternate',
+      type: 'application/rss+xml',
+      href: `${SITE_URL}/characters/rss`
     },
     ...(i18nHead.value.link || []).map((e) => {
       return {
         ...e,
-        href: `${runtimeConfig.public.SITE_URL}${e.href || '/'}`
+        href: `${SITE_URL}${e.href || '/'}`
       };
     })
   ],
@@ -71,7 +81,7 @@ useHead({
 });
 useSeoMeta({
   ogSiteName: 'WutheringWaves.app',
-  ogImage: `${runtimeConfig.public.SITE_URL}/cover.webp`,
+  ogImage: `${SITE_URL}/cover.webp`,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ogImageType: 'image/webp' as any,
   ogType: 'website',

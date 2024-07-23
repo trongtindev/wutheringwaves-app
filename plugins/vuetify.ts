@@ -25,9 +25,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       global: {
         density: 'comfortable'
       },
-      VAppBar: {
-        density: 'default'
-      },
       VSelect: {
         variant: 'outlined',
         itemValue: 'value',
@@ -45,9 +42,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       VRow: {
         dense: true
       },
-      // VMenu: {
-      //   transition: 'scale-transition'
-      // },
       VPagination: {
         totalVisible: 4
       },

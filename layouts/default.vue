@@ -47,7 +47,7 @@ const onPressedSearch = () => {
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
       <!-- logo -->
-      <v-sheet class="pb-2 pt-2">
+      <v-sheet class="pb-1 pt-1">
         <v-list-item title="wutheringwaves.app" subtitle="wutheringwaves.app">
           <template #prepend>
             <v-avatar
@@ -93,7 +93,7 @@ const onPressedSearch = () => {
             </template>
 
             <v-sheet class="border rounded">
-              <v-list density="compact">
+              <v-list>
                 <v-list-item
                   v-for="(element, index) in locales"
                   :key="index"
@@ -126,7 +126,7 @@ const onPressedSearch = () => {
     </v-navigation-drawer>
 
     <!-- app bar -->
-    <v-app-bar class="border-b pl-1 pr-1" :elevation="0">
+    <v-app-bar class="border-b pl-1" :elevation="0">
       <v-app-bar-nav-icon
         :icon="sidebar.open ? mdiMenuOpen : mdiMenuClose"
         @click="sidebar.open = !sidebar.open"

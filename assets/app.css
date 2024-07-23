@@ -210,3 +210,9 @@ div.event-item {
 #credential_picker_container iframe {
   border-radius: 8px;
 }
+
+/* vuetify */
+.v-dialog > .v-overlay__content > .v-card > .v-card-text,
+.v-dialog > .v-overlay__content > form > .v-card > .v-card-text {
+  padding: 16px 16px 16px !important;
+}

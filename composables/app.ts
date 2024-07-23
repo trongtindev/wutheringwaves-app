@@ -1,13 +1,14 @@
 import { defineStore } from 'pinia';
 
 export const useApp = defineStore('useApp', () => {
-  let interval: any;
+  let interval: NodeJS.Timeout;
 
   // uses
   const i18n = useI18n();
   const dialog = useDialog();
   const appConfig = useAppConfig();
   const runtimeConfig = useRuntimeConfig();
+  const device = useDevice();
 
   // config
   const { APP_NAME, APP_DISCORD, APP_VERSION, APP_REPO } = runtimeConfig.public;
@@ -29,14 +30,11 @@ export const useApp = defineStore('useApp', () => {
 
   // functions
   const initialize = () => {
-    if (import.meta.server) {
-      throw new Error('Cannot run app.initialize on server-side!');
-    }
+    if (import.meta.dev) return;
+    if (device.isCrawler) return;
 
-    if (!import.meta.dev) {
-      checkForUpdates();
-      interval = setInterval(checkForUpdates, 60 * 5 * 1000);
-    }
+    checkForUpdates();
+    interval = setInterval(checkForUpdates, 60 * 5 * 1000);
   };
 
   const checkForUpdates = async () => {

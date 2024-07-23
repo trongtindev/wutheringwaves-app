@@ -209,7 +209,6 @@ onMounted(() => {
               :disabled="!canImport"
               :prepend-icon="mdiImport"
               :text="$t('convene.import.title')"
-              variant="flat"
               @click="onPressedImport"
             />
           </template>

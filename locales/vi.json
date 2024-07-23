@@ -65,7 +65,13 @@
       }
     },
     "settings": { "title": "Settings" },
-    "guides": { "title": "Game Guides" },
+    "guides": {
+      "title": "Game Guides",
+      "relatedGuides": "Related Guides",
+      "latestGuides": "Latest Guides",
+      "previousGuide": "Previous guide",
+      "nextGuide": "Next guide"
+    },
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
@@ -343,7 +349,17 @@
     "markAsFound": "Mark as Found",
     "markerLimit": "Some markers have been hidden to improve performance."
   },
-  "guides": { "title": "Game Guides", "create": { "title": "Add new post" } },
+  "guides": {
+    "title": "Game Guides",
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": { "title": "Localization", "primary": "Primary" }
+    }
+  },
   "search": {
     "title": "Global Search",
     "alert": "Bạn có thể tìm kiếm tất cả mọi thứ có trên WutheringWaves.app.",
@@ -362,11 +378,6 @@
       "notificationTitle": "Đang nhập lịch sử...",
       "notificationMessage": "Đang lấy dữ liệu cho {0}"
     }
-  },
-  "posts": {
-    "featuredImage": "Featured image",
-    "discussion": "Discussion",
-    "allowComments": "Allow comments"
   },
   "banner": {
     "featuredResonator": "Nhân vật giới hạn",
@@ -401,7 +412,6 @@
     "signInRequiredMessage": "Please sign in to perform this action.",
     "comingSoon": "Sắp ra mắt!",
     "saveChanges": "Save changes",
-    "saveAndPublish": "Lưu và đăng",
     "weapon": "Vũ khí",
     "character": "Nhân vật",
     "noData": "Chưa có dữ liệu!",
@@ -452,7 +462,6 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization",
     "critRate": "Crit Rate",
     "critDMG": "Crit DMG",
     "atk": "ATK",

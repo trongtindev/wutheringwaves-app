@@ -65,7 +65,13 @@
       }
     },
     "settings": { "title": "การตั้งค่า" },
-    "guides": { "title": "Game Guides" },
+    "guides": {
+      "title": "Game Guides",
+      "relatedGuides": "Related Guides",
+      "latestGuides": "Latest Guides",
+      "previousGuide": "Previous guide",
+      "nextGuide": "Next guide"
+    },
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
@@ -341,7 +347,17 @@
     "markAsFound": "Mark as Found",
     "markerLimit": "Some markers have been hidden to improve performance."
   },
-  "guides": { "title": "Game Guides", "create": { "title": "Add new post" } },
+  "guides": {
+    "title": "Game Guides",
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": { "title": "Localization", "primary": "Primary" }
+    }
+  },
   "search": {
     "title": "Global Search",
     "alert": "You can search everything there is on WutheringWaves.app.",
@@ -360,11 +376,6 @@
       "notificationTitle": "Importing history...",
       "notificationMessage": "Fetching history for account {0}."
     }
-  },
-  "posts": {
-    "featuredImage": "Featured image",
-    "discussion": "Discussion",
-    "allowComments": "Allow comments"
   },
   "banner": {
     "featuredResonator": "Featured resonator",
@@ -399,7 +410,6 @@
     "signInRequiredMessage": "Please sign in to perform this action.",
     "comingSoon": "Coming soon!",
     "saveChanges": "Save changes",
-    "saveAndPublish": "Save and Publish",
     "weapon": "Weapon",
     "character": "ตัวละคร",
     "noData": "No data!",
@@ -450,7 +460,6 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization",
     "critRate": "Crit Rate",
     "critDMG": "Crit DMG",
     "atk": "ATK",

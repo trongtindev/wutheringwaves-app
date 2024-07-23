@@ -33,7 +33,7 @@ In-development site for Wuthering Waves.
 | Interactive map                   | ...                                  | In progress |
 | Trophies                          | ...                                  | ✅          |
 | Timeline                          | ...                                  | ✅          |
-| Functions > Global search         | Search any thing                     | None        |
+| Functions > Global search         | Search any thing                     | In progress |
 | Functions > Notifications         | Web push notification functions      | None        |
 
 ## Contributing

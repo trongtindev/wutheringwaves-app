@@ -20,6 +20,16 @@ export const useNotification = defineStore('useNotification', () => {
     return data.id as string;
   };
 
+  const update = (id: string, args: Partial<INotification>) => {
+    const index = floatItems.value.findIndex((e) => e.id === id);
+    if (index < 0) return;
+
+    floatItems.value[index] = {
+      ...floatItems.value[index],
+      ...args
+    };
+  };
+
   const remove = (
     id: string,
     options?: {
@@ -42,6 +52,7 @@ export const useNotification = defineStore('useNotification', () => {
     items,
     floatItems,
     create,
+    update,
     remove
   };
 });

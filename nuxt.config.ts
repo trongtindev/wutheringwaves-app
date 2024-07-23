@@ -1,5 +1,6 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
+import { startMerge } from './i18n.utils';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -25,7 +26,12 @@ const {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // $development: { debug: true },
+  $development: {
+    // debug: true,
+    gtag: {
+      enabled: false
+    }
+  },
 
   modules: [
     'nuxt-jsonld',
@@ -61,6 +67,16 @@ export default defineNuxtConfig({
     },
     '/donation': {
       robots: false
+    },
+    '/guides/create': {
+      robots: false,
+      prerender: false
+    },
+    '/guides/rss': {
+      proxy: '/api/rss/guides'
+    },
+    '/characters/rss': {
+      proxy: '/api/rss/characters'
     }
   },
 
@@ -133,17 +149,18 @@ export default defineNuxtConfig({
       { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
       { name: '한국어', code: 'ko', iso: 'ko' },
       { name: '日本語', code: 'ja', iso: 'ja' },
-      { name: 'ภาษาไทย', code: 'th', iso: 'th' }
-    ]
+      { name: 'ภาษาไทย', code: 'th', iso: 'th', rtl: true }
+    ],
+    experimental: {
+      localeDetector: './i18n.detector.ts'
+    }
   },
 
   pinia: {
     storesDirs: ['./composables/**']
   },
 
-  build: {
-    transpile: ['vuetify']
-  },
+  vueuse: { ssrHandlers: true },
 
   vite: {
     vue: {
@@ -166,7 +183,9 @@ export default defineNuxtConfig({
     ]
   },
 
-  vueuse: { ssrHandlers: true },
+  build: {
+    transpile: ['vuetify']
+  },
 
   appConfig: {
     buildNumber: Date.now()
@@ -197,6 +216,15 @@ export default defineNuxtConfig({
 
   experimental: {
     viewTransition: true
+  },
+
+  hooks: {
+    'builder:watch': async (e, path) => {
+      if (e != 'change') return;
+      if (!path.startsWith('locales')) return;
+      if (!path.startsWith('locales/en')) return;
+      await startMerge();
+    }
   },
 
   compatibilityDate: '2024-07-05'

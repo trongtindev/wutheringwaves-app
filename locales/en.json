@@ -72,7 +72,11 @@
       "title": "Settings"
     },
     "guides": {
-      "title": "Game Guides"
+      "title": "Game Guides",
+      "relatedGuides": "Related Guides",
+      "latestGuides": "Latest Guides",
+      "previousGuide": "Previous guide",
+      "nextGuide": "Next guide"
     },
     "leaderboards": {
       "title": "Leaderboards",
@@ -373,8 +377,16 @@
   },
   "guides": {
     "title": "Game Guides",
-    "create": {
-      "title": "Add new post"
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary"
+      }
     }
   },
   "search": {
@@ -395,11 +407,6 @@
       "notificationTitle": "Importing history...",
       "notificationMessage": "Fetching history for account {0}."
     }
-  },
-  "posts": {
-    "featuredImage": "Featured image",
-    "discussion": "Discussion",
-    "allowComments": "Allow comments"
   },
   "banner": {
     "featuredResonator": "Featured resonator",
@@ -434,7 +441,6 @@
     "signInRequiredMessage": "Please sign in to perform this action.",
     "comingSoon": "Coming soon!",
     "saveChanges": "Save changes",
-    "saveAndPublish": "Save and Publish",
     "weapon": "Weapon",
     "character": "Character",
     "noData": "No data!",
@@ -485,7 +491,6 @@
     "categories": "Categories",
     "publish": "Publish",
     "saveDraft": "Save draft",
-    "localization": "Localization",
     "critRate": "Crit Rate",
     "critDMG": "Crit DMG",
     "atk": "ATK",
