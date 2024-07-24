@@ -122,8 +122,8 @@
   "convene": {
     "import": {
       "title": "Nhập lịch sử triệu hồi",
-      "success": "",
-      "processing": "Đang xử lý",
+      "success": "Import successfully!",
+      "processing": "Processing...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
         "pc": {
@@ -233,13 +233,7 @@
     "skill": "{name} Skill"
   },
   "tierList": {
-    "title": "Tier list",
-    "create": {
-      "title": "Create new Tier list",
-      "liveVoting": "Live Voting"
-    },
-    "liveVoting": "Live Voting",
-    "save": "Save"
+    "title": "Tier list"
   },
   "todoList": {
     "title": "Todo list"
@@ -257,28 +251,6 @@
     "sameElementCharacters": "Same Element Characters",
     "related": "Related Echo {name}"
   },
-  "faqs": [
-    {
-      "title": "Dữ liệu của tôi được lưu trữ ở đâu khi tôi nhập?",
-      "content": "URL của bạn chỉ được lưu vào trình duyệt web của bạn. Xóa dữ liệu trình duyệt của bạn trên trang web này sẽ xóa dữ liệu được lưu trữ của bạn. Nếu muốn kiểm tra lịch sử của mình, bạn sẽ cần nhập lại lịch sử đó.\n\nBạn cũng có tùy chọn sao lưu URL một cách an toàn bằng tài khoản Google của mình bên trong trang Cài đặt."
-    },
-    {
-      "title": "Làm sao tôi biết trang web này sẽ không lấy cắp dữ liệu của tôi?",
-      "content": "Hãy yên tâm, chúng tôi cũng là những người chơi giống như bạn và muốn giúp Wuthering Waves phát triển bằng cách xây dựng các công cụ hữu ích cho tất cả các Rover trên thế giới."
-    },
-    {
-      "title": "Lịch sử của tôi không tự động cập nhật, có chuyện gì vậy?",
-      "content": "Giống như trong trò chơi, lịch sử của bạn không cập nhật ngay lập tức. Hãy thử kiểm tra lại sau để xem lịch sử của bạn đã được cập nhật chưa, nếu không đó có thể là lỗi."
-    },
-    {
-      "title": "Làm cách nào để đưa ra báo cáo lỗi hoặc đề xuất một tính năng?",
-      "content": "Bạn có thể tạo sự cố trong <a href='{repo}' target='_blank'><b>Kho lưu trữ GitHub</b></a> của chúng tôi bằng cách sử dụng mẫu thích hợp để chúng tôi có thể giải quyết mối lo ngại của bạn sớm nhất có thể . Đóng góp của bạn sẽ giúp chúng tôi tạo ra trải nghiệm tốt hơn cho người dùng, vì vậy chúng tôi đánh giá rất cao điều đó!"
-    },
-    {
-      "title": "Làm thế nào tôi có thể hỗ trợ trang web này?",
-      "content": "Cảm ơn bạn đã sử dụng trang web này. Khi bạn tiếp tục sử dụng nó, bạn cũng truyền cảm hứng để chúng tôi tiếp tục cải thiện nó. \n\nNếu bạn muốn hỗ trợ tài chính cho chúng tôi, chúng tôi có <a href='{donationPage}' target='_blank'><b>Trang quyên góp </b></a> để chấp nhận bất kỳ khoản quyên góp nào để duy trì hoạt động của trang web!"
-    }
-  ],
   "settings": {
     "title": "Cài đặt",
     "eraseAllData": "Erase All Data",
@@ -311,27 +283,28 @@
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
-    "submit": "Post comment",
+    "form": {
+      "submit": "Post comment"
+    },
     "replies": "Replies"
   },
-  "dialog": {
-    "close": "Đóng",
-    "confirm": "Xác nhận"
-  },
-  "backup": {
-    "conflictTitle": "Cần hành động",
-    "conflictMessage": "Dữ liệu cục bộ của bạn trong trình duyệt này xung đột với dữ liệu được lưu trữ trên đám mây!",
-    "cloudData": "Cloud Data",
-    "localData": "Local Browser Data",
-    "older": "OLDER",
-    "newer": "NEWER",
-    "useCloudData": "Use Cloud Data",
-    "useLocalData": "Use Local Data",
-    "lastModified": "Last modified",
-    "or": "OR",
-    "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-    "lastCloudChanged": "Last changed: {0}",
-    "dataSynced": "Dữ liệu đã được đồng bộ hóa!"
+  "sync": {
+    "title": "Cloud Sync",
+    "conflict": {
+      "title": "Your Data Conflict",
+      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
+      "cloudData": "Cloud Data",
+      "localData": "Local Browser Data",
+      "older": "OLDER",
+      "newer": "NEWER",
+      "useCloudData": "Use Cloud Data",
+      "useLocalData": "Use Local Data",
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
+      "lastCloudChanged": "Last changed: {0}"
+    },
+    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
+    "dataSynced": "Data has been synced!",
+    "lastModified": "Last modified"
   },
   "accounts": {
     "title": "Danh sách tài khoản",
@@ -371,10 +344,7 @@
     }
   },
   "search": {
-    "title": "Global Search",
-    "alert": "Bạn có thể tìm kiếm tất cả mọi thứ có trên WutheringWaves.app.",
-    "alertTips": "Nhấn tổ hợp phím Ctrl + Space để mở hộp tìm kiếm nhanh nhất!",
-    "placeholder": "Vật phẩm, echo, thành tựu, nhân vật,..."
+    "title": "Global Search"
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -404,7 +374,6 @@
     "back": "Quay lại",
     "cancel": "Hủy bỏ",
     "import": "Nhập",
-    "development": "Development",
     "search": "Tìm kiếm",
     "all": "Tất cả",
     "echo": "Echo",
@@ -414,13 +383,9 @@
     "save": "Save",
     "copyLink": "Copy link",
     "exportAsImage": "Export as Image",
-    "signInRequired": "Đăng nhập là bắt buộc!",
-    "signInRequiredMessage": "Please sign in to perform this action.",
-    "comingSoon": "Sắp ra mắt!",
     "saveChanges": "Save changes",
     "weapon": "Vũ khí",
     "character": "Nhân vật",
-    "noData": "Chưa có dữ liệu!",
     "type": "Loại",
     "sort": "Sort",
     "title": "Title",
