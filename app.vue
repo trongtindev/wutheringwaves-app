@@ -51,11 +51,11 @@ useHead({
     //   type: 'application/rss+xml',
     //   href: `${SITE_URL}/guides/rss`
     // },
-    // {
-    //   rel: 'alternate',
-    //   type: 'application/rss+xml',
-    //   href: `${SITE_URL}/characters/rss`
-    // },
+    {
+      rel: 'alternate',
+      type: 'application/rss+xml',
+      href: `${SITE_URL}/characters/rss`
+    },
     ...(i18nHead.value.link || []).map((e) => {
       return {
         ...e,
@@ -89,10 +89,7 @@ useSeoMeta({
   ogDescription: i18n.t('meta.description')
 });
 
-onNuxtReady(() => {
-  console.log('onNuxtReady');
-  window.postMessage('onNuxtReady');
-});
+onNuxtReady(() => window.postMessage('onNuxtReady'));
 </script>
 
 <template>

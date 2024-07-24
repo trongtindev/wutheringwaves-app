@@ -11,7 +11,7 @@ const runtimeConfig = useRuntimeConfig();
 const goTo = useGoTo({ offset: -72, duration: 500 });
 
 // fetch
-const characters = await resources.getCharacters();
+const characters = await resources.getCharacters({ ignoreHidden: true });
 const item = characters.find((e) => e.slug === route.params.id)!;
 if (!item) throw createError({ message: '1', statusCode: 404 });
 
@@ -140,7 +140,7 @@ useJsonld(() => ({
   <!-- chips -->
   <header-chips
     class="mb-2"
-    :github="`/tree/main/resources/characters/${item.slug}.json`"
+    :github="`tree/main/resources/characters/${item.slug}.json`"
   />
 
   <!-- upcoming -->

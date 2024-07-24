@@ -1,7 +1,5 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.817Z",
-  "modifiedTime": "2024-07-09T15:18:52.896Z",
-  "slug": "lingyang",
+  "$schema": "../../public/schema/character.schema.json",
   "description": "Lingyang is talented and friendly member of the Liondance Troupe in Jinzhou. His passion and courage are evident as he engages with humans, showcasing his impressive physical abilities. With his unique style, he embodies the spirit of Liondancing.",
   "skills": [
     {
@@ -243,13 +241,11 @@
   "quoteLocalized": {
     "vi": "Awoo - Sư tử lên! Chiến thắng thuộc về ta trong giải đấu Lượm Cỏ năm nay!",
     "id": "Awoo - Singa maju! Kemenangan milikku di Turnamen Pemetik Hijau tahun ini!",
-    "th": "Awoo - Singa, bersiap! Kemenangan akan menjadi milikku di Turnamen Pemetik Rumput Hijau tahun ini!",
-    "ru": "А-ау! Лёв, вперёд! Победа в этом году на Турнире Зелёного Сбора будет моей!"
+    "th": "Awoo - Singa, bersiap! Kemenangan akan menjadi milikku di Turnamen Pemetik Rumput Hijau tahun ini!"
   },
   "descriptionLocalized": {
     "vi": "Lingyang là một thành viên tài năng và thân thiện của Đoàn múa lân ở Tấn Châu. Niềm đam mê và lòng dũng cảm của anh ta thể hiện rõ ràng khi anh ta giao lưu với con người, thể hiện khả năng thể chất ấn tượng của mình. Với phong cách độc đáo của mình, anh ta thể hiện tinh thần của múa lân.",
     "id": "Lingyang adalah anggota berbakat dan ramah dari Troupe Liondance di Jinzhou. Gairah dan keberaniannya terlihat jelas saat dia berinteraksi dengan manusia, menunjukkan kemampuan fisiknya yang mengesankan. Dengan gayanya yang unik, dia mewujudkan semangat Liondance.",
-    "th": "ลิงหยางเป็นสมาชิกที่มีความสามารถและเป็นมิตรของคณะนักแสดงสิงโตในจินโจว ความหลงใหลและความกล้าหาญของเขาปรากฏชัดเมื่อเขาสื่อสารกับมนุษย์ แสดงให้เห็นถึงความสามารถทางกายภาพที่น่าประทับใจของเขา ด้วยสไตล์ที่เป็นเอกลักษณ์ของเขา เขาเป็นตัวแทนของจิตวิญญาณของการเต้นสิงโต",
-    "ru": "Линъян — талантливый и дружелюбный член труппы Львиного Танца в Цзиньчжоу. Его страсть и смелость проявляются в его взаимодействии с людьми, демонстрируя его впечатляющие физические способности. Своим уникальным стилем он воплощает дух Львиного Танца."
+    "th": "ลิงหยางเป็นสมาชิกที่มีความสามารถและเป็นมิตรของคณะนักแสดงสิงโตในจินโจว ความหลงใหลและความกล้าหาญของเขาปรากฏชัดเมื่อเขาสื่อสารกับมนุษย์ แสดงให้เห็นถึงความสามารถทางกายภาพที่น่าประทับใจของเขา ด้วยสไตล์ที่เป็นเอกลักษณ์ของเขา เขาเป็นตัวแทนของจิตวิญญาณของการเต้นสิงโต"
   }
 }

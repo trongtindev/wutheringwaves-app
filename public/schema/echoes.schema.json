@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "title": "Echos",
   "properties": {
     "items": {
       "type": "array",
@@ -9,22 +10,32 @@
         "properties": {
           "id": { "type": "integer" },
           "slug": { "type": "string" },
+          "cost": { "type": "integer" },
           "name": { "type": "string" },
           "nameLocalized": { "type": "object" },
-          "rarity": { "type": "integer" },
-          "weapon": {
+          "class": {
             "type": "string",
-            "enum": ["Sword", "Rectifier", "Broadblade", "Gauntlets", "Pistols"]
+            "enum": ["Common", "Elite", "Overlord", "Calamity"]
           },
           "attribute": {
             "type": "string",
             "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
           },
-          "version": { "type": "number" },
-          "suggestedEchos": {
+          "sonataEffects": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "enum": [
+                "Lingering Tunes",
+                "Rejuvenating Glow",
+                "Sierra Gale",
+                "Celestial Light",
+                "Void Thunder",
+                "Freezing Frost",
+                "Molten Rift",
+                "Moonlit Clouds",
+                "Sun-sinking Eclipse"
+              ]
             }
           },
           "hidden": {
@@ -40,48 +51,15 @@
         "required": [
           "id",
           "slug",
+          "cost",
           "name",
-          "rarity",
+          "class",
+          "attribute",
           "publishedTime",
           "modifiedTime"
         ]
       }
     }
   },
-  "required": ["items"],
-  "components": {
-    "schemas": {
-      "characterSlug": {
-        "type": "string",
-        "enum": [
-          "sanhua",
-          "baizhi",
-          "lingyang",
-          "chixia",
-          "encore",
-          "mortefi",
-          "changli",
-          "calcharo",
-          "yinlin",
-          "yuanwu",
-          "jinhsi",
-          "yangyang",
-          "aalto",
-          "jiyan",
-          "jianxin",
-          "verina",
-          "taoqi",
-          "danjin",
-          "xiangli-yao",
-          "zhezhi",
-          "camellya",
-          "rover-havoc"
-        ]
-      },
-      "characterRole": {
-        "type": "string",
-        "enum": ["Main DPS", "Sub DPS", "Healer"]
-      }
-    }
-  }
+  "required": ["items"]
 }

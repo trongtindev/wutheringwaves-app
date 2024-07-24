@@ -6,8 +6,8 @@ const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
 
 // states
-const echos = await resources.getEchoes();
-const item = echos.find((e) => e.slug === route.params.id)!;
+const echoes = await resources.getEchoes();
+const item = echoes.find((e) => e.slug === route.params.id)!;
 if (!item) throw createError({ statusCode: 404 });
 const data = await resources.getEchoData(item.slug);
 if (!data) throw createError({ statusCode: 404 });
@@ -26,21 +26,21 @@ const skillDescription = computed(() => {
   // );
 });
 
-const relatedEchos = computed(() => {
-  return echos.filter((e) => {
+const relatedEchoes = computed(() => {
+  return echoes.filter((e) => {
     return e.attribute == item.attribute && e.name != item.name;
   });
 });
 
 // seo meta
 const title = `${i18n.t('common.echo')}: ${nameLocalized.value}`;
-const description = i18n.t('meta.echos.description', {
+const description = i18n.t('meta.echoes.description', {
   name: nameLocalized.value,
   rarity: item.class
 });
-const ogImage = `${runtimeConfig.public.SITE_URL}/echos/icons/${item.slug}.webp`;
+const ogImage = `${runtimeConfig.public.SITE_URL}/echoes/icons/${item.slug}.webp`;
 
-useApp().title = i18n.t('echos.title');
+useApp().title = i18n.t('echoes.title');
 useHead({ title });
 useSeoMeta({
   ogType: 'article',
@@ -79,7 +79,7 @@ useJsonld({
       name: 'Home',
       item: useRuntimeConfig().public.SITE_URL
     },
-    { '@type': 'ListItem', position: 2, name: i18n.t('echos.title') }
+    { '@type': 'ListItem', position: 2, name: i18n.t('echoes.title') }
   ]
 });
 </script>
@@ -88,7 +88,7 @@ useJsonld({
   <!-- chips -->
   <header-chips
     class="mb-2"
-    :github="`/tree/main/resources/echos/${item.slug}.json`"
+    :github="`tree/main/resources/echoes/${item.slug}.json`"
   />
 
   <!-- page -->
@@ -101,12 +101,12 @@ useJsonld({
     <v-card-text>
       <v-row>
         <v-col cols="4">
-          <v-img :src="`/echos/icons/${item.slug}.webp`" :height="256" />
+          <v-img :src="`/echoes/icons/${item.slug}.webp`" :height="256" />
         </v-col>
 
         <v-col>
           <div class="d-flex flex-wrap ga-2">
-            <v-chip :text="`${item.cost} ${$t('echos.cost')}`" />
+            <v-chip :text="`${item.cost} ${$t('echoes.cost')}`" />
             <v-chip :text="$t(item.class)" />
             <v-chip :text="$t(item.attribute)" />
           </div>
@@ -122,7 +122,7 @@ useJsonld({
   <!-- Sonata Effect -->
   <v-card class="mt-2">
     <v-card-title>
-      {{ $t('echos.sonataEffect') }}
+      {{ $t('echoes.sonataEffect') }}
     </v-card-title>
     <v-divider />
 
@@ -132,16 +132,16 @@ useJsonld({
   </v-card>
 
   <!-- related -->
-  <v-card v-if="relatedEchos.length > 0" class="mt-2">
+  <v-card v-if="relatedEchoes.length > 0" class="mt-2">
     <v-card-title tag="h2">
-      {{ $t('echos.related', { name: nameLocalized }) }}
+      {{ $t('echoes.related', { name: nameLocalized }) }}
     </v-card-title>
     <v-divider />
 
     <v-card-text>
       <v-row>
         <v-col
-          v-for="(element, index) in relatedEchos"
+          v-for="(element, index) in relatedEchoes"
           :key="index"
           cols="6"
           sm="4"

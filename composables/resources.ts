@@ -20,9 +20,18 @@ export const useResources = defineStore('useResources', () => {
     return data.default;
   };
 
-  const getCharacters = async (): Promise<ICharacter[]> => {
+  const getCharacters = async (options?: {
+    ignoreHidden?: boolean;
+  }): Promise<ICharacter[]> => {
+    options ??= {};
+
     const data = await import('~/resources/characters.json');
-    return data.default.items as ICharacter[];
+    return data.default.items.filter((e) => {
+      if (!options.ignoreHidden && e.hidden) {
+        return false;
+      }
+      return true;
+    }) as ICharacter[];
   };
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {
@@ -30,13 +39,24 @@ export const useResources = defineStore('useResources', () => {
     return data.default;
   };
 
-  const getEchoes = async (): Promise<IEcho[]> => {
-    const data = await import('~/resources/echos.json');
-    return data.default.items;
+  const getEchoes = async (options?: {
+    ignoreHidden?: boolean;
+  }): Promise<IEcho[]> => {
+    options ??= {};
+
+    const data: { default: { items: IEcho[] } } = await import(
+      '~/resources/echoes.json'
+    );
+    return data.default.items.filter((e) => {
+      if (!options.ignoreHidden && e.hidden) {
+        return false;
+      }
+      return true;
+    });
   };
 
   const getEchoData = async (slug: string): Promise<IEchoData> => {
-    const data = await import(`~/resources/echos/${slug}.json`);
+    const data = await import(`~/resources/echoes/${slug}.json`);
     return data.default;
   };
 

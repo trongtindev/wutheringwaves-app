@@ -1,20 +1,16 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.818Z",
-  "modifiedTime": "2024-07-09T15:18:52.927Z",
-  "slug": "sanhua",
+  "$schema": "../../public/schema/character.schema.json",
   "quote": "Please don't stay too far away from me. I am confident to not let you get harmed in the slightest.",
   "quoteLocalized": {
     "vi": "Đừng đi quá xa tôi. Tôi tự tin sẽ không để bất kỳ nguy hiểm nào chạm đến em.",
     "id": "Jangan menjauh dariku. Aku yakin aku bisa melindungimu dari bahaya.",
-    "th": "อย่าห่างจากฉันไปไกลนัก ฉันมั่นใจว่าจะไม่ปล่อยให้คุณได้รับอันตรายแม้แต่น้อย",
-    "ru": "Не отходи слишком далеко от меня. Я уверен, что ничто не причинит тебе вреда."
+    "th": "อย่าห่างจากฉันไปไกลนัก ฉันมั่นใจว่าจะไม่ปล่อยให้คุณได้รับอันตรายแม้แต่น้อย"
   },
   "description": "The bodyguard of Jinzhou's Magistrate, known for having an icy personality.\nOnce regarded as the Asura of Calamity, Sanhua is now a taciturn guardian. She has learned to maintain inner calmness amidst the chaotic frequencies, and the things that once frightened her now fuel her determination.",
   "descriptionLocalized": {
     "vi": "Người bảo vệ của Thị trưởng Jinzhou, nổi tiếng với tính cách băng giá.Từng được biết đến với danh hiệu Asura của Biến cố, Sanhua hiện là một người bảo vệ ít nói. Cô ấy đã học cách giữ bình tĩnh bên trong giữa những tần số hỗn loạn, và những thứ từng khiến cô ấy sợ hãi giờ đây đã thúc đẩy quyết tâm của cô ấy.",
     "id": "Penjaga dari Magistrat Jinzhou, yang dikenal karena kepribadiannya yang dingin.Dulunya dikenal sebagai Asura Bencana, Sanhua kini adalah penjaga yang pendiam. Dia telah belajar untuk menjaga ketenangan batin di tengah frekuensi yang kacau, dan hal-hal yang pernah membuatnya takut kini menjadi bahan bakar tekadnya.",
-    "th": "องครักษ์ของผู้ว่าราชการเมืองจิ้นโจว รู้จักกันดีในเรื่องบุคลิกที่เย็นชาเคยได้รับการยกย่องให้เป็นอาสุราแห่งภัยพิบัติ แต่ตอนนี้ซานฮวาเป็นเพียงผู้พิทักษ์เงียบๆ เธอเรียนรู้ที่จะรักษาความสงบภายในท่ามกลางคลื่นความถี่ที่วุ่นวาย และสิ่งที่เคยทำให้เธอกลัวตอนนี้เป็นเชื้อเพลิงให้กับความมุ่งมั่นของเธอ",
-    "ru": "Телохранитель магистрата Цзиньчжоу, известная своим холодным характером.Некогда известная как Асура Бедствия, Саньхуа теперь молчаливый страж. Она научилась сохранять внутреннее спокойствие посреди хаотичных частот, и то, что когда-то пугало ее, теперь подпитывает ее решимость."
+    "th": "องครักษ์ของผู้ว่าราชการเมืองจิ้นโจว รู้จักกันดีในเรื่องบุคลิกที่เย็นชาเคยได้รับการยกย่องให้เป็นอาสุราแห่งภัยพิบัติ แต่ตอนนี้ซานฮวาเป็นเพียงผู้พิทักษ์เงียบๆ เธอเรียนรู้ที่จะรักษาความสงบภายในท่ามกลางคลื่นความถี่ที่วุ่นวาย และสิ่งที่เคยทำให้เธอกลัวตอนนี้เป็นเชื้อเพลิงให้กับความมุ่งมั่นของเธอ"
   },
   "skills": [
     {
@@ -70,8 +66,7 @@
       "descriptionLocalized": {
         "vi": "Sanhua vung kiếm xuống, tạo ra 1 \"Ice Thorn\", gây <strong style=\"color: var(--color-attribute-glacio);\">Glacio DMG</strong>.",
         "id": "Sanhua mengayunkan pedangnya ke bawah dan menciptakan 1 \"Duri Es\", memberikan <strong style=\"color: var(--color-attribute-glacio);\">Kerusakan Glacio</strong>.",
-        "th": "ซานฮวาฟาดดาบลงและสร้าง \"หนามน้ำแข็ง\" 1 อัน ทำให้เกิดความเสียหาย <strong style=\"color: var(--color-attribute-glacio);\">น้ำแข็ง</strong>",
-        "ru": "Санхуа опускает свой меч вниз, создавая 1 \"Ледяной Шип\", наносящий <strong style=\"color: var(--color-attribute-glacio);\">Ледяной урон</strong>."
+        "th": "ซานฮวาฟาดดาบลงและสร้าง \"หนามน้ำแข็ง\" 1 อัน ทำให้เกิดความเสียหาย <strong style=\"color: var(--color-attribute-glacio);\">น้ำแข็ง</strong>"
       }
     },
     {
@@ -91,8 +86,7 @@
       "descriptionLocalized": {
         "vi": "Có xác suất tạo ra món ăn đặc biệt khi nấu ăn",
         "id": "Memiliki peluang untuk menghasilkan hidangan spesial saat memasak.",
-        "th": "มีโอกาสสร้างอาหารพิเศษเมื่อทำอาหาร",
-        "ru": "С шансом приготовить особые блюда при готовке."
+        "th": "มีโอกาสสร้างอาหารพิเศษเมื่อทำอาหาร"
       }
     },
     {

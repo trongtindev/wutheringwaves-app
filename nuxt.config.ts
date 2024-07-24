@@ -1,6 +1,8 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
 import { startMerge } from './i18n.utils';
+import { localesMetadata } from './utils/metadata';
+import { updateModified } from './runtime/update-modified';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -77,6 +79,10 @@ export default defineNuxtConfig({
     },
     '/characters/rss': {
       proxy: '/api/rss/characters'
+    },
+    // TODO: remove soon
+    '/echos/**': {
+      redirect: '/echoes/**'
     }
   },
 
@@ -91,7 +97,7 @@ export default defineNuxtConfig({
     ],
     sources: [
       '/api/__sitemap__/characters',
-      '/api/__sitemap__/echos',
+      '/api/__sitemap__/echoes',
       '/api/__sitemap__/items',
       '/api/__sitemap__/trophies',
       '/api/__sitemap__/weapons'
@@ -144,13 +150,7 @@ export default defineNuxtConfig({
       useCookie: true,
       redirectOn: 'root'
     },
-    locales: [
-      { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
-      { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
-      { name: '한국어', code: 'ko', iso: 'ko' },
-      { name: '日本語', code: 'ja', iso: 'ja' },
-      { name: 'ภาษาไทย', code: 'th', iso: 'th', rtl: true }
-    ],
+    locales: localesMetadata,
     experimental: {
       localeDetector: './i18n.detector.ts'
     }
@@ -224,18 +224,34 @@ export default defineNuxtConfig({
 
       // update locales
       if (path.startsWith('locales/en')) {
-        console.log('changed', path);
-        await startMerge();
+        await startMerge(
+          localesMetadata.filter((e) => e.code != 'en').map((e) => e.code)
+        );
       }
 
       // update resources
-      if (
-        path.startsWith('resources/characters') ||
-        path.startsWith('resources/echos') ||
-        path.startsWith('resources/items') ||
-        path.startsWith('resources/weapons')
-      ) {
-        console.log('changed', path);
+      if (path.startsWith('resources')) {
+        if (
+          path.startsWith('resources/characters') &&
+          !path.endsWith('characters.json')
+        ) {
+          await updateModified('characters');
+        } else if (
+          path.startsWith('resources/echoes') &&
+          !path.endsWith('echoes.json')
+        ) {
+          await updateModified('echoes');
+        } else if (
+          path.startsWith('resources/items') &&
+          !path.endsWith('items.json')
+        ) {
+          await updateModified('items');
+        } else if (
+          path.startsWith('resources/weapons') &&
+          !path.endsWith('weapons.json')
+        ) {
+          await updateModified('weapons');
+        }
       }
     }
   },

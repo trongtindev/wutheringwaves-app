@@ -61,7 +61,7 @@ const groups = ref([
     items: ['z401', 'z402', 'z403', 'z404', 'z405']
   },
   {
-    name: 'echos',
+    name: 'echoes',
     items: Array.from(Array(54).keys())
       .map((e) => {
         return `z${e + 201}`;

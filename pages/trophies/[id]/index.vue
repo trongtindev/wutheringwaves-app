@@ -66,7 +66,7 @@ useJsonld({
 
         <template #actions>
           <edit-this-page
-            :path="`/tree/main/resources/trophies/${item.slug}.json`"
+            :path="`tree/main/resources/trophies/${item.slug}.json`"
           />
         </template>
       </card-title>

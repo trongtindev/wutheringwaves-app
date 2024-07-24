@@ -578,7 +578,6 @@ useSeoMeta({
                 :key="index"
                 :data="element"
                 :rarity="5"
-                class="mt-2"
               />
             </v-sheet>
             <v-card-text v-else>

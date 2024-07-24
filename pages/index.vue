@@ -65,13 +65,13 @@ useSeoMeta({
       <!-- desktop app -->
       <v-card>
         <v-card-title>
-          {{ $t('electron.desktopApp.title') }}
+          {{ $t('desktopApp.title') }}
         </v-card-title>
         <v-divider />
 
         <v-card-text>
           <!-- <v-responsive :aspect-ratio="2 / 1" class="border rounded mb-2" /> -->
-          {{ $t('electron.desktopApp.introduce') }}
+          {{ $t('desktopApp.introduce') }}
         </v-card-text>
         <v-divider />
 
@@ -210,8 +210,8 @@ useSeoMeta({
             /> -->
 
           <v-list-item
-            :to="localePath('/echos')"
-            :title="$t('echos.title')"
+            :to="localePath('/echoes')"
+            :title="$t('echoes.title')"
             :append-icon="mdiChevronRight"
           />
 

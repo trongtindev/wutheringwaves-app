@@ -1,7 +1,5 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.814Z",
-  "modifiedTime": "2024-07-09T15:18:52.846Z",
-  "slug": "chixia",
+  "$schema": "../../public/schema/character.schema.json",
   "description": "Chixia is a spirited young Patroller who lights up the streets of Jinzhou. She’s always ready to be the hero someone needs.",
   "skills": [
     {
@@ -243,13 +241,11 @@
   "quoteLocalized": {
     "vi": "Lính tuần tra Jinzhou, Chixia. Cứ gọi tôi bất cứ khi nào bạn gặp khó khăn!",
     "id": "Patroli Jinzhou, Chixia. Kamu selalu bisa memanggilku jika kamu berada dalam kesulitan!",
-    "th": "Jinzhou Patroller, Chixia. Kapan pun kau dalam kesulitan, kau selalu bisa memanggilku!",
-    "ru": "Патрульный Цзиньчжоу, Чися.  Можешь всегда рассчитывать на меня, если окажешься в беде!"
+    "th": "Jinzhou Patroller, Chixia. Kapan pun kau dalam kesulitan, kau selalu bisa memanggilku!"
   },
   "descriptionLocalized": {
     "vi": "Chixia là một Patroller trẻ tuổi đầy nhiệt huyết, mang ánh sáng rực rỡ đến các con phố của Jinzhou. Cô ấy luôn sẵn sàng trở thành anh hùng mà ai đó cần.",
     "id": "Chixia adalah seorang Patroller muda yang bersemangat yang menerangi jalanan Jinzhou. Dia selalu siap menjadi pahlawan yang dibutuhkan seseorang.",
-    "th": "ชิเซีย เป็นนักลาดตระเวนสาวร่าเริงที่ส่องแสงสว่างไปทั่วถนนของจินโจว เธอพร้อมเสมอที่จะเป็นฮีโร่ที่ใครบางคนต้องการ",
-    "ru": "Чися - энергичная молодая Патрульная, которая освещает улицы Цзиньчжоу. Она всегда готова быть героем, в котором кто-то нуждается."
+    "th": "ชิเซีย เป็นนักลาดตระเวนสาวร่าเริงที่ส่องแสงสว่างไปทั่วถนนของจินโจว เธอพร้อมเสมอที่จะเป็นฮีโร่ที่ใครบางคนต้องการ"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "../public/schema/echos.schema.json",
+  "$schema": "../public/schema/echoes.schema.json",
   "items": [
     {
       "id": 6000038,

@@ -1,7 +1,5 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.820Z",
-  "modifiedTime": "2024-07-09T15:18:52.971Z",
-  "slug": "yuanwu",
+  "$schema": "../../public/schema/character.schema.json",
   "description": "Yuanwu owns a boxing gym where he teaches martial arts and health management. He is well-respected in the community for his cordial demeanor and pleasant temperament.",
   "skills": [
     {
@@ -243,13 +241,11 @@
   "quoteLocalized": {
     "vi": "Nếu tôi đã suy nghĩ kỹ lưỡng về quyết định của mình và hành động một cách chính trực, tôi hài lòng.",
     "id": "Jika saya telah memikirkan keputusan saya dengan matang dan bertindak dengan integritas, saya merasa puas.",
-    "th": "ถ้าฉันคิดไตร่ตรองการตัดสินใจของตัวเองอย่างถี่ถ้วนและกระทำด้วยความซื่อสัตย์ ฉันก็พอใจแล้ว",
-    "ru": "Если я тщательно обдумал свои решения и действовал честно, то я спокоен."
+    "th": "ถ้าฉันคิดไตร่ตรองการตัดสินใจของตัวเองอย่างถี่ถ้วนและกระทำด้วยความซื่อสัตย์ ฉันก็พอใจแล้ว"
   },
   "descriptionLocalized": {
     "vi": "Yuanwu sở hữu một phòng tập boxing nơi anh dạy võ thuật và quản lý sức khỏe. Anh được cộng đồng tôn trọng vì phong thái lịch thiệp và tính cách dễ chịu.",
     "id": "Yuanwu memiliki sasana tinju tempat dia mengajarkan seni bela diri dan manajemen kesehatan. Dia sangat dihormati di masyarakat karena sikapnya yang ramah dan temperamennya yang menyenangkan.",
-    "th": "หยวนอู่เป็นเจ้าของยิมมวยที่เขาสอนศิลปะการต่อสู้และการจัดการสุขภาพ เขามีชื่อเสียงในชุมชนด้วยบุคลิกที่เป็นมิตรและอัธยาศัยดี",
-    "ru": "Юаньву владеет боксерским залом, где обучает боевым искусствам и управлению здоровьем. Он пользуется уважением в обществе за свой дружелюбный характер и приятный нрав."
+    "th": "หยวนอู่เป็นเจ้าของยิมมวยที่เขาสอนศิลปะการต่อสู้และการจัดการสุขภาพ เขามีชื่อเสียงในชุมชนด้วยบุคลิกที่เป็นมิตรและอัธยาศัยดี"
   }
 }

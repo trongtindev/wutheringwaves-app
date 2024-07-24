@@ -104,7 +104,7 @@ useJsonld({
   <!-- chips -->
   <header-chips
     class="mb-2"
-    :github="`/tree/main/resources/weapons.json`"
+    :github="`tree/main/resources/weapons.json`"
   />
 
   <!-- upcoming -->

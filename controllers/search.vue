@@ -17,7 +17,7 @@ const submitDebounce = useDebounceFn(() => submit(), 500);
 const state = ref<'' | 'submit'>('');
 const characters = ref<ICharacter[]>();
 const weapons = ref<IWeapon[]>();
-const echos = ref<IEcho[]>();
+const echoes = ref<IEcho[]>();
 const items = ref<IItem[]>();
 const trophies = ref<ITrophy[]>();
 const keyword = ref<string>();
@@ -51,7 +51,7 @@ const submit = async () => {
       })
     ];
 
-    // echos
+    // echoes
     weapons.value ??= await resources.getWeapons();
     const matchWeapons = weapons.value.filter((e) => {
       return e.name.toLowerCase().includes(lowerCase);
@@ -69,9 +69,9 @@ const submit = async () => {
       })
     ];
 
-    // echos
-    echos.value ??= await resources.getEchoes();
-    const matchEchos = echos.value.filter((e) => {
+    // echoes
+    echoes.value ??= await resources.getEchoes();
+    const matchEchos = echoes.value.filter((e) => {
       return e.name.toLowerCase().includes(lowerCase);
     });
     results.value = [
@@ -79,8 +79,8 @@ const submit = async () => {
       ...matchEchos.splice(0, 5).map((e) => {
         return {
           type: SearchResultType.echo,
-          slug: `/echos/${e.slug}`,
-          icon: `/echos/icons/${e.slug}.webp`,
+          slug: `/echoes/${e.slug}`,
+          icon: `/echoes/icons/${e.slug}.webp`,
           name: e.name
         };
       })

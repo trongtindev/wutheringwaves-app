@@ -240,14 +240,12 @@
   "quoteLocalized": {
     "vi": "Rất lâu rồi... Vũ Trụ đã kể cho Encore nghe về một địa điểm vui nhộn! Nào! Cùng đi xem nào!",
     "id": "Dahulu kala... Cosmos memberi tahu Encore tentang tempat yang menyenangkan! Ayo! Mari kita periksa!",
-    "th": "Dahulu kala... Cosmos memberi tahu Encore tentang tempat yang menyenangkan! Ayo! Mari kita periksa!",
-    "ru": "Давным-давно... Космос рассказал Энкуру о забавном месте! Пойдём, посмотрим!"
+    "th": "Dahulu kala... Cosmos memberi tahu Encore tentang tempat yang menyenangkan! Ayo! Mari kita periksa!"
   },
   "descriptionLocalized": {
     "vi": "Một cô gái đi cùng hai chú thú bông Wooly, một đen và một trắng. Encore, cố vấn từ Bờ Biển Đen, khao khát tạo nên những câu chuyện vui vẻ với kẹo ngọt, truyện cổ tích và trí tưởng tượng của mình.",
     "id": "Seorang gadis yang ditemani oleh dua boneka bulu, satu hitam dan satu putih. Encore, seorang konsultan dari Black Shores, mendambakan untuk menciptakan cerita bahagia dengan permen, dongeng, dan imajinasinya.",
-    "th": "เด็กสาวคนหนึ่งที่พกตุ๊กตาขนแกะสีดำและสีขาวติดตัวไปด้วย เอนคอร์ ที่ปรึกษาจากชายฝั่งดำ มุ่งมั่นที่จะสร้างเรื่องราวดีๆ ด้วยขนม นวนิยาย และจินตนาการของเธอ",
-    "ru": "Девочка, сопровождаемая одним чёрным и одним белым плюшевым волкодавом. Анкор, консультант с Чёрных Берегов, мечтает создавать счастливые истории с помощью конфет, сказок и своего воображения."
+    "th": "เด็กสาวคนหนึ่งที่พกตุ๊กตาขนแกะสีดำและสีขาวติดตัวไปด้วย เอนคอร์ ที่ปรึกษาจากชายฝั่งดำ มุ่งมั่นที่จะสร้างเรื่องราวดีๆ ด้วยขนม นวนิยาย และจินตนาการของเธอ"
   },
   "skillPriority": [
     "Resonance Liberation",

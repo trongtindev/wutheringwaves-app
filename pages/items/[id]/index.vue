@@ -107,7 +107,7 @@ useJsonld({
   <!-- chips -->
   <header-chips
     class="mb-2"
-    :github="`/tree/main/resources/items/${item.slug}.json`"
+    :github="`tree/main/resources/items/${item.slug}.json`"
   />
 
   <!-- page -->

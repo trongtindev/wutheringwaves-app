@@ -213,7 +213,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
 <template>
   <!-- chips -->
-  <header-chips class="mb-2" :github="`/tree/main/resources/timeline.json`" />
+  <header-chips class="mb-2" :github="`tree/main/resources/timeline.json`" />
 
   <v-card>
     <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->

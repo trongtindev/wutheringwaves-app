@@ -1,6 +1,4 @@
 {
-  "publishedTime": "2024-07-08T11:44:36.125Z",
-  "modifiedTime": "2024-07-09T15:18:52.835Z",
-  "$schema": "./.schema.json",
+  "$schema": "../../public/schema/character.schema.json",
   "description": "Camellya is an upcoming Resonator in Wuthering Waves. She was a playable character during the Closed Beta test.‍"
 }

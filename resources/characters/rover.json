@@ -1,7 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "publishedTime": "2024-06-28T15:43:21.818Z",
-  "modifiedTime": "2024-07-21T15:18:52.921Z",
   "description": "A mysterious Resonator with the power to absorb all sounds. Currently journeying to find their lost memories.",
   "skills": [
     {

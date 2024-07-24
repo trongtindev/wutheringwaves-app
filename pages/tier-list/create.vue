@@ -26,7 +26,7 @@ const state = ref<'' | 'submit' | 'live-voting'>('');
 const type = ref<TierListType>('character');
 const characters = ref<ICharacter[]>([]);
 const weapons = ref<IWeapon[]>([]);
-const echos = ref<IEcho[]>([]);
+const echoes = ref<IEcho[]>([]);
 const rows = ref<ITierListRow[]>([]);
 const dragItem = ref<TierListItem>(null as any);
 const dragPreviousRow = ref<ITierListRow | null>();
@@ -79,7 +79,7 @@ const initialize = () => {
 
     case 'echo':
       resources.getEchoes().then((result) => {
-        echos.value = result;
+        echoes.value = result;
       });
       break;
   }
@@ -190,7 +190,7 @@ const excludeAddedItems = computed<TierListItem[]>(() => {
         return weapons.value;
 
       case 'echo':
-        return echos.value;
+        return echoes.value;
     }
   })();
   return data.filter((e) => {

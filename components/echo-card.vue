@@ -17,12 +17,12 @@ const nameLocalized = computed(() => {
 
 <template>
   <v-card
-    :to="localePath(`/echos/${props.item.slug}`)"
+    :to="localePath(`/echoes/${props.item.slug}`)"
     :title.attr="props.item.name"
   >
     <v-responsive :aspect-ratio="1">
       <v-img
-        :src="`/echos/icons/${props.item.slug}.webp`"
+        :src="`/echoes/icons/${props.item.slug}.webp`"
         class="align-end h-100"
         cover
       />

@@ -136,9 +136,9 @@ export const useSidebar = defineStore('useSidebar', () => {
           title: 'sidebar.trophies'
         },
         {
-          url: '/echos',
+          url: '/echoes',
           icon: '/icons/echo.png',
-          title: 'sidebar.echos'
+          title: 'sidebar.echoes'
         },
         {
           url: '/weapons',

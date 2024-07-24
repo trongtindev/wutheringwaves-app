@@ -2,8 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
 
-// states
-const locales = ['vi', 'ko', 'ja', 'th']; // exclude 'en'
+// define
 const destination = './locales';
 
 // functions
@@ -31,7 +30,7 @@ const deepMerge = (obj1: object, obj2: object) => {
   return result;
 };
 
-export const startMerge = async () => {
+export const startMerge = async (locales: string[]) => {
   const base = await loadJson('en');
   await Promise.all(
     locales.map(async (locale) => {

@@ -5,7 +5,7 @@ const i18n = useI18n();
 const resources = useResources();
 
 // states
-const echos = await resources.getEchoes();
+const echoes = await resources.getEchoes();
 const filterText = ref<string>();
 const filterCost = ref<number>(0);
 const filterSonataEffect = ref<string>('All');
@@ -15,7 +15,7 @@ const sonataEffects = ref<string[]>([]);
 // functions
 const initialize = () => {
   const effects: string[] = [];
-  echos.forEach((e) => {
+  echoes.forEach((e) => {
     e.sonataEffects.forEach((effect) => {
       if (effects.includes(effect) === false) {
         effects.push(effect);
@@ -28,7 +28,7 @@ const initialize = () => {
 };
 
 const loadData = () => {
-  items.value = echos.filter((e) => {
+  items.value = echoes.filter((e) => {
     if (filterText.value && filterText.value.length > 0) {
       if (
         e.name.toLowerCase().includes(filterText.value.toLowerCase()) == false
@@ -63,10 +63,10 @@ watch(filterSonataEffect, loadData);
 onMounted(() => initialize());
 
 // seo meta
-const title = i18n.t('meta.echos.title');
-const description = i18n.t('meta.echos.description');
+const title = i18n.t('meta.echoes.title');
+const description = i18n.t('meta.echoes.description');
 
-useApp().title = i18n.t('echos.title');
+useApp().title = i18n.t('echoes.title');
 useHead({ title });
 useSeoMeta({
   title,
@@ -90,7 +90,7 @@ useSeoMeta({
     <v-col cols="6" sm="4">
       <v-select
         v-model="filterCost"
-        :label="$t('echos.cost')"
+        :label="$t('echoes.cost')"
         :items="[0, 1, 3, 4]"
         :item-title="(e: number) => (e === 0 ? i18n.t('common.all') : e)"
         :hide-details="true"
@@ -100,7 +100,7 @@ useSeoMeta({
     <v-col cols="6" sm="4">
       <v-select
         v-model="filterSonataEffect"
-        :label="$t('echos.sonataEffect')"
+        :label="$t('echoes.sonataEffect')"
         :items="['All', ...sonataEffects]"
         :item-title="(e: number) => i18n.t(e)"
         :hide-details="true"

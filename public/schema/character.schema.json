@@ -109,7 +109,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "$ref": "./echos.schema.json#/components/schemas/sonataEffect"
+              "$ref": "./echo.components.json#/components/schemas/sonataEffect"
             },
             "minItems": 1,
             "maxItems": 2
@@ -126,7 +126,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "$ref": "./echos.schema.json#/components/schemas/echoSlug"
+        "$ref": "./echo.components.json#/components/schemas/slug"
       }
     },
     "bestEchoStats": {

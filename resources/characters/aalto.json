@@ -240,13 +240,11 @@
   "quoteLocalized": {
     "vi": "Ồ, nếu không phải là người bảo trợ trung thành của tôi! Hôm nay ngài muốn hỏi gì vậy?",
     "id": "Wah, kalau bukan pelindungku yang setia! Apa yang ingin kau tanyakan hari ini?",
-    "th": "ดีแล้วนี่นา คุณผู้มีพระคุณที่รัก! วันนี้คุณอยากถามอะไร?",
-    "ru": "Ну, если это не мой верный покровитель! Что вы хотите узнать сегодня?"
+    "th": "ดีแล้วนี่นา คุณผู้มีพระคุณที่รัก! วันนี้คุณอยากถามอะไร?"
   },
   "descriptionLocalized": {
     "vi": "Aalto là một người môi giới thông tin bí ẩn, nổi tiếng với tính cách khó nắm bắt và nụ cười thân thiện. Lời đồn cho rằng anh ta sẽ cung cấp bất kỳ thông tin nào với giá phù hợp.",
     "id": "Aalto adalah seorang Broker Informasi yang misterius, terkenal karena sifatnya yang sulit ditangkap dan senyumnya yang ramah. Desas-desus mengatakan bahwa dia akan memberikan informasi apa pun dengan harga yang tepat.",
-    "th": "Aalto เป็นนายหน้าข้อมูลลึกลับ รู้จักกันในเรื่องบุคลิกภาพที่ลึกลับและรอยยิ้มที่เป็นมิตร คำบอกเล่ากล่าวขานกันว่าเขาจะให้ข้อมูลใดๆ ตราบใดที่ราคาถูกต้อง",
-    "ru": "Аалто — загадочный информатор, известный своей неуловимостью и приветливой улыбкой. Говорят, что он предоставит любую информацию за правильную цену."
+    "th": "Aalto เป็นนายหน้าข้อมูลลึกลับ รู้จักกันในเรื่องบุคลิกภาพที่ลึกลับและรอยยิ้มที่เป็นมิตร คำบอกเล่ากล่าวขานกันว่าเขาจะให้ข้อมูลใดๆ ตราบใดที่ราคาถูกต้อง"
   }
 }

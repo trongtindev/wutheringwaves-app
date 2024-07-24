@@ -45,6 +45,7 @@ We'd love your help in improving the website with features, bug reports, and pat
 We need more translators to help us translate the rest of the pages.
 
 ```
+utils/metadata.ts
 locales
 ```
 

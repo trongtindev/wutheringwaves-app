@@ -2,13 +2,13 @@
   "meta": {
     "title": "WutheringWaves.app",
     "description": "Theo dõi Pity, danh sách việc cần làm, cơ sở dữ liệu, phân tích và hơn thế nữa cho Wuthering Waves!",
-    "index": { "title": "Tiện ích Wuthering Waves" },
+    "index": { "title": "Wuthering Waves Wiki" },
     "timeline": {
       "title": "Lịch sự kiện",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
     },
-    "echos": {
-      "title": "Echos",
+    "echoes": {
+      "title": "Echoes",
       "description": "{name} is a {rarity} Class Echo. in Wuthering Waves."
     },
     "characters": {
@@ -30,7 +30,6 @@
       "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
-      "cardGenerator": { "title": "Convene Card Generator" },
       "history": {
         "title": "Wuthering Waves Pity Tracker",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
@@ -51,6 +50,7 @@
       "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
+      "title": "Interactive Map",
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
@@ -82,7 +82,7 @@
     "timeline": "Hoạt động",
     "characters": "Nhân vật",
     "weapons": "Vũ khí",
-    "echos": "Echos",
+    "echoes": "Echoes",
     "conveneHistory": "Lịch sử triệu hồi",
     "tierList": "Tier list",
     "todoList": "Việc cần làm",
@@ -233,12 +233,12 @@
   "todoList": { "title": "Todo list" },
   "trophies": { "title": "Thành tựu" },
   "teams": { "title": "Đội hình" },
-  "echos": {
-    "title": "Echos",
+  "echoes": {
+    "title": "Echoes",
     "cost": "Cost",
     "sonataEffect": "Sonata effect",
     "sameElementCharacters": "Same Element Characters",
-    "related": "Related Echos {name}"
+    "related": "Related Echo {name}"
   },
   "faqs": {
     "0": {
@@ -330,25 +330,7 @@
     "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
     "redemptionStep": "Redemption Step"
   },
-  "map": {
-    "title": "Interactive Map",
-    "locations": "Locations",
-    "exploration": "Exploration",
-    "ascension": "Ascension",
-    "puzzles": "Puzzles",
-    "echosCost3": "Echos Cost 3",
-    "echosCost1": "Echos Cost 1",
-    "ore": "Ore",
-    "animals": "Animals",
-    "collection": "Collection",
-    "comments": {
-      "pleaseSelectMarker": "Please select a marker on the map to enable comments."
-    },
-    "hideFoundMarkers": "Hide found markers",
-    "markAsNotFound": "Mark as Not found",
-    "markAsFound": "Mark as Found",
-    "markerLimit": "Some markers have been hidden to improve performance."
-  },
+  "map": { "title": "Interactive Map" },
   "guides": {
     "title": "Game Guides",
     "editor": {
@@ -366,18 +348,14 @@
     "alertTips": "Nhấn tổ hợp phím Ctrl + Space để mở hộp tìm kiếm nhanh nhất!",
     "placeholder": "Vật phẩm, echo, thành tựu, nhân vật,..."
   },
-  "electron": {
-    "desktopApp": {
-      "title": "Desktop App",
-      "introduce": "Với ứng dụng desktop, bạn có thể nhập lịch sử convene một cách tự động, xem bản đồ trực tiếp ngay trong trò chơi, xem thông tin vật phẩm và nhiều hơn thế nữa.",
-      "download": "Download"
-    }
+  "desktopApp": {
+    "title": "Desktop App",
+    "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
+    "download": "Download"
   },
-  "account": {
-    "autoImport": {
-      "notificationTitle": "Đang nhập lịch sử...",
-      "notificationMessage": "Đang lấy dữ liệu cho {0}"
-    }
+  "autoImport": {
+    "notificationTitle": "Importing history...",
+    "notificationMessage": "Fetching history for account {0}."
   },
   "banner": {
     "featuredResonator": "Nhân vật giới hạn",
@@ -420,7 +398,6 @@
     "title": "Title",
     "draft": "Draft",
     "level": "Level",
-    "contribute": "Đóng góp",
     "shortcuts": "Lối tắt",
     "copy": "Sao chép",
     "copied": "Đã sao chép",
@@ -434,8 +411,11 @@
     "checkAll": "Check all",
     "clear": "Clear",
     "retry": "Retry",
+    "upcoming": "Upcoming",
     "upcomingContent": "This page is about upcoming content.",
     "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
+    "upcomingWeapons": "Upcoming Weapons",
+    "upcomingCharacters": "Upcoming Characters",
     "energy": "Energy",
     "options": "Options",
     "trophy": "Trophy",
@@ -445,8 +425,6 @@
     "viewOnGithub": "Xem trên GitHub",
     "rarity": "Phẩm chất",
     "category": "Category",
-    "downloadImage": "Download image",
-    "upcoming": "Sắp có",
     "editThisPage": "Sửa trang này",
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
@@ -459,17 +437,12 @@
     "manage": "Quản lý",
     "next": "Tiếp",
     "previous": "Trước",
-    "categories": "Categories",
-    "publish": "Publish",
-    "saveDraft": "Save draft",
     "critRate": "Crit Rate",
     "critDMG": "Crit DMG",
     "atk": "ATK",
     "def": "DEF",
     "hp": "HP",
     "cost": "Cost",
-    "upcomingWeapons": "Upcoming Weapons",
-    "upcomingCharacters": "Upcoming Characters",
     "close": "Đóng",
     "loading": "Đang tải",
     "serverTime": "Server time",

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const rootDir = path.resolve('./resources');
-const formatCode = (file: string) => {
+const formatCode = async (file: string) => {
   return new Promise((resolve, reject) => {
     const process = exec(`npx prettier ${file} --write`, {
       cwd: path.resolve(__dirname, '../')
@@ -13,7 +13,7 @@ const formatCode = (file: string) => {
   });
 };
 
-const updateTime = (type: string) => {
+export const updateModified = async (type: string) => {
   const file = path.resolve(rootDir, `${type}.json`);
   const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
 
@@ -24,10 +24,5 @@ const updateTime = (type: string) => {
   });
 
   fs.writeFileSync(file, JSON.stringify(data));
-  formatCode(file);
+  await formatCode(file);
 };
-
-updateTime('characters');
-updateTime('weapons');
-updateTime('echos');
-updateTime('items');

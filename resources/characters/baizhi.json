@@ -241,14 +241,12 @@
   "quoteLocalized": {
     "vi": "Không, tôi không thể đặt niềm tin vào nó, nhưng sự háo hức của tôi xuất phát chính từ sự ngờ vực này. Một lời khẳng định luôn có thể được xác minh trước khi nó bị bác bỏ hoàn toàn.",
     "id": "Tidak, aku tidak bisa mempercayainya, tetapi antisipasiku berasal dari ketidakpercayaan ini. Klaim selalu dapat diverifikasi sebelum benar-benar didiskreditkan.",
-    "th": "Tidak, aku tidak bisa menaruh kepercayaanku padanya, tapi antisipasi ku muncul justru dari ketidakpercayaan ini. Klaim selalu dapat diverifikasi sebelum sepenuhnya didiskreditkan.",
-    "ru": "Нет, я не могу в это поверить, но моё предвкушение происходит именно из этого недоверия. Любое утверждение всегда можно проверить, прежде чем оно будет полностью дискредитировано."
+    "th": "Tidak, aku tidak bisa menaruh kepercayaanku padanya, tapi antisipasi ku muncul justru dari ketidakpercayaan ini. Klaim selalu dapat diverifikasi sebelum sepenuhnya didiskreditkan."
   },
   "descriptionLocalized": {
     "vi": "Bạch Chỉ là một nhà nghiên cứu tại Viện Sinh thái học Remnant.Ước mơ dang dở của Bạch Chỉ giờ đây đã trở thành người bạn đồng hành trung thành của cô. Sinh vật Remnant You'tan là nguồn gốc của sức mạnh chữa bệnh của cô, và cũng là tâm điểm nghiên cứu suốt đời của cô.",
     "id": "Baizhi adalah seorang peneliti di Ekokustik Sisa.Keinginan Baizhi yang dulunya tak terpenuhi kini telah menjadi kenyataan sebagai teman setianya. Makhluk Sisa You'tan adalah sumber kekuatan penyembuhannya, dan fokus penelitian seumur hidupnya.",
-    "th": "ไบจือ เป็นนักวิจัยด้านนิเวศวิทยาเสียงใน Remnantความปรารถนาที่ครั้งหนึ่งไม่สำเร็จของไบจือได้กลายเป็นเพื่อนคู่ใจของเธอแล้ว สัตว์ประหลาดจาก Remnant คุณตัน เป็นแหล่งที่มาของพลังรักษาของเธอ และเป็นหัวข้อการวิจัยตลอดชีวิตของเธอ",
-    "ru": "Байчжи - исследователь в области Экоакустики Осколков. Ее когда-то несбыточная мечта теперь воплотилась в верного спутника. Существо Осколка Юйтан - источник ее целебных сил и объект ее многолетних исследований."
+    "th": "ไบจือ เป็นนักวิจัยด้านนิเวศวิทยาเสียงใน Remnantความปรารถนาที่ครั้งหนึ่งไม่สำเร็จของไบจือได้กลายเป็นเพื่อนคู่ใจของเธอแล้ว สัตว์ประหลาดจาก Remnant คุณตัน เป็นแหล่งที่มาของพลังรักษาของเธอ และเป็นหัวข้อการวิจัยตลอดชีวิตของเธอ"
   },
   "bestWeapons": [
     {

@@ -1,29 +1,39 @@
 // en
 import en from './locales/en.json';
-import characterEn from './locales/characters.en.json';
 
-// vi
-import vi from './locales/vi.json';
-import characterVi from './locales/characters.vi.json';
-
-// ko
-import ko from './locales/ko.json';
+// id
+import id from './locales/id.json';
 
 // ja
 import ja from './locales/ja.json';
 
+// ko
+import ko from './locales/ko.json';
+
 // th
 import th from './locales/th.json';
+
+// tr
+import tr from './locales/tr.json';
+
+// vi
+import vi from './locales/vi.json';
+
+// uk
+import uk from './locales/uk.json';
 
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: 'en',
   messages: {
-    en: { ...en, ...characterEn },
-    vi: { ...vi, ...characterVi },
-    ko: { ...ko },
+    en: { ...en },
+    id: { ...id },
     ja: { ...ja },
-    th: { ...th }
+    ko: { ...ko },
+    th: { ...th },
+    tr: { ...tr },
+    vi: { ...vi },
+    uk: { ...uk }
   },
   missingWarn: false,
   warnHtmlInMessage: false,

@@ -9,7 +9,7 @@
       "attribute": "Glacio",
       "weapon": "Sword",
       "publishedTime": "2024-06-28T15:43:21.818Z",
-      "modifiedTime": "2024-07-21T15:28:24.628Z"
+      "modifiedTime": "2024-07-24T04:49:24.110Z"
     },
     {
       "id": 1103,
@@ -19,7 +19,7 @@
       "attribute": "Glacio",
       "weapon": "Rectifier",
       "publishedTime": "2024-06-28T15:43:21.813Z",
-      "modifiedTime": "2024-07-23T16:16:13.133Z"
+      "modifiedTime": "2024-07-24T04:47:26.615Z"
     },
     {
       "id": 1104,
@@ -29,7 +29,7 @@
       "attribute": "Glacio",
       "weapon": "Gauntlets",
       "publishedTime": "2024-06-28T15:43:21.817Z",
-      "modifiedTime": "2024-07-21T15:28:24.592Z"
+      "modifiedTime": "2024-07-24T04:48:54.886Z"
     },
     {
       "id": 1202,
@@ -39,7 +39,7 @@
       "attribute": "Fusion",
       "weapon": "Pistols",
       "publishedTime": "2024-06-28T15:43:21.814Z",
-      "modifiedTime": "2024-07-21T15:28:24.544Z"
+      "modifiedTime": "2024-07-24T04:47:42.710Z"
     },
     {
       "id": 1203,
@@ -49,7 +49,7 @@
       "attribute": "Fusion",
       "weapon": "Rectifier",
       "publishedTime": "2024-06-28T15:43:21.815Z",
-      "modifiedTime": "2024-07-22T14:31:35.092Z"
+      "modifiedTime": "2024-07-24T04:47:57.179Z"
     },
     {
       "id": 1204,
@@ -59,7 +59,7 @@
       "attribute": "Fusion",
       "weapon": "Pistols",
       "publishedTime": "2024-06-28T15:43:21.817Z",
-      "modifiedTime": "2024-07-21T15:28:24.606Z"
+      "modifiedTime": "2024-07-24T04:49:03.086Z"
     },
     {
       "id": 1205,
@@ -69,7 +69,7 @@
       "attribute": "Fusion",
       "weapon": "Sword",
       "publishedTime": "2024-06-28T15:43:21.814Z",
-      "modifiedTime": "2024-07-21T16:11:27.446Z"
+      "modifiedTime": "2024-07-24T04:04:17.595Z"
     },
     {
       "id": 1301,
@@ -79,7 +79,7 @@
       "attribute": "Electro",
       "weapon": "Broadblade",
       "publishedTime": "2024-06-28T15:43:21.814Z",
-      "modifiedTime": "2024-07-21T16:11:27.445Z"
+      "modifiedTime": "2024-07-24T04:47:34.209Z"
     },
     {
       "id": 1302,
@@ -89,7 +89,7 @@
       "attribute": "Electro",
       "weapon": "Rectifier",
       "publishedTime": "2024-06-28T15:43:21.819Z",
-      "modifiedTime": "2024-07-21T16:11:27.450Z"
+      "modifiedTime": "2024-07-24T04:06:20.863Z"
     },
     {
       "id": 1303,
@@ -99,7 +99,7 @@
       "attribute": "Electro",
       "weapon": "Gauntlets",
       "publishedTime": "2024-06-28T15:43:21.820Z",
-      "modifiedTime": "2024-07-21T15:28:24.678Z"
+      "modifiedTime": "2024-07-24T04:06:36.613Z"
     },
     {
       "id": 1304,
@@ -110,7 +110,7 @@
       "weapon": "Broadblade",
       "version": 1.1,
       "publishedTime": "2024-06-28T15:43:21.816Z",
-      "modifiedTime": "2024-07-21T16:11:27.447Z"
+      "modifiedTime": "2024-07-24T04:48:39.621Z"
     },
     {
       "id": 1402,
@@ -120,7 +120,7 @@
       "attribute": "Aero",
       "weapon": "Sword",
       "publishedTime": "2024-06-28T15:43:21.819Z",
-      "modifiedTime": "2024-07-21T15:28:24.661Z"
+      "modifiedTime": "2024-07-24T04:49:34.104Z"
     },
     {
       "id": 1403,
@@ -130,7 +130,7 @@
       "attribute": "Aero",
       "weapon": "Pistols",
       "publishedTime": "2024-06-28T15:43:21.813Z",
-      "modifiedTime": "2024-07-23T16:18:59.105Z"
+      "modifiedTime": "2024-07-24T04:47:16.232Z"
     },
     {
       "id": 1404,
@@ -140,7 +140,7 @@
       "attribute": "Aero",
       "weapon": "Broadblade",
       "publishedTime": "2024-06-28T15:43:21.816Z",
-      "modifiedTime": "2024-07-21T16:11:27.447Z"
+      "modifiedTime": "2024-07-24T04:48:46.176Z"
     },
     {
       "id": 1405,
@@ -150,7 +150,7 @@
       "attribute": "Aero",
       "weapon": "Gauntlets",
       "publishedTime": "2024-06-28T15:43:21.816Z",
-      "modifiedTime": "2024-07-22T14:31:35.092Z"
+      "modifiedTime": "2024-07-24T04:48:08.311Z"
     },
     {
       "id": 1503,
@@ -160,7 +160,7 @@
       "attribute": "Spectro",
       "weapon": "Rectifier",
       "publishedTime": "2024-06-28T15:43:21.819Z",
-      "modifiedTime": "2024-07-21T16:11:27.449Z"
+      "modifiedTime": "2024-07-24T04:05:45.713Z"
     },
     {
       "id": 1601,
@@ -170,7 +170,7 @@
       "attribute": "Havoc",
       "weapon": "Broadblade",
       "publishedTime": "2024-06-28T15:43:21.818Z",
-      "modifiedTime": "2024-07-21T15:28:24.643Z"
+      "modifiedTime": "2024-07-24T04:05:27.499Z"
     },
     {
       "id": 1602,
@@ -180,7 +180,7 @@
       "attribute": "Havoc",
       "weapon": "Sword",
       "publishedTime": "2024-06-28T15:43:21.815Z",
-      "modifiedTime": "2024-07-21T15:28:24.547Z"
+      "modifiedTime": "2024-07-24T04:47:50.309Z"
     },
     {
       "id": -1,
@@ -191,7 +191,7 @@
       "version": 1.2,
       "attribute": "Electro",
       "publishedTime": "2024-07-08T11:43:02.856Z",
-      "modifiedTime": "2024-07-22T14:31:35.092Z"
+      "modifiedTime": "2024-07-24T04:05:53.262Z"
     },
     {
       "id": -1,
@@ -210,8 +210,9 @@
       "name": "Camellya",
       "rarity": 5,
       "upcoming": true,
+      "hidden": true,
       "publishedTime": "2024-07-08T11:44:36.125Z",
-      "modifiedTime": "2024-07-21T15:28:24.526Z"
+      "modifiedTime": "2024-07-24T03:57:36.893Z"
     },
     {
       "id": 0,
@@ -221,7 +222,7 @@
       "rarity": 5,
       "attribute": "Spectro",
       "publishedTime": "2024-06-28T15:43:21.818Z",
-      "modifiedTime": "2024-07-21T16:11:27.448Z"
+      "modifiedTime": "2024-07-24T04:05:10.495Z"
     },
     {
       "id": 0,
@@ -230,7 +231,7 @@
       "rarity": 5,
       "weapon": "Sword",
       "attribute": "Havoc",
-      "modifiedTime": "2024-07-21T16:11:27.448Z",
+      "modifiedTime": "2024-07-24T04:05:06.849Z",
       "publishedTime": "2024-05-23T00:00"
     },
     {
@@ -242,7 +243,7 @@
       "attribute": "Electro",
       "upcoming": true,
       "publishedTime": "2024-07-08T12:10:50.660Z",
-      "modifiedTime": "2024-07-21T15:28:24.609Z"
+      "modifiedTime": "2024-07-24T04:05:02.325Z"
     }
   ]
 }

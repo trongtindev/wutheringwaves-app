@@ -7,7 +7,7 @@ const emits = defineEmits<{
 <template>
   <div>
     <v-card-text>
-      {{ $t('electron.desktopApp.introduce') }}
+      {{ $t('desktopApp.introduce') }}
     </v-card-text>
   </div>
 </template>

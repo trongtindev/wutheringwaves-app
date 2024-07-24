@@ -1,21 +1,16 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "publishedTime": "2024-06-28T15:43:21.816Z",
-  "modifiedTime": "2024-07-21T15:18:52.878Z",
-  "slug": "jinhsi",
   "quote": "There's still much to be done. Please rest assured, I am here to guide you through it.",
   "quoteLocalized": {
     "vi": "Vẫn còn nhiều việc phải làm. Hãy yên tâm, tôi ở đây để hướng dẫn bạn thực hiện điều đó.",
     "id": "Masih banyak yang harus dilakukan. Tenang, aku akan membantumu melewati semuanya.",
-    "th": "ยังมีอีกมากที่ต้องทำ โปรดมั่นใจว่าฉันจะนำทางคุณผ่านมันไป",
-    "ru": "Делать еще много. Будьте уверены, я буду направлять вас."
+    "th": "ยังมีอีกมากที่ต้องทำ โปรดมั่นใจว่าฉันจะนำทางคุณผ่านมันไป"
   },
   "description": "Jinhsi, Magistrate of Jinzhou, gently brightens the hopes of her people, like rays of winter sunlight. \nAs the revered Sentinel's Appointed Resonator, she displays humility and wholeheartedly commits herself to guiding her people towards a brilliant future.",
   "descriptionLocalized": {
     "vi": "Jinhsi, Thẩm phán Cẩm Châu, nhẹ nhàng thắp sáng niềm hy vọng của người dân, như những tia nắng mùa đông. \nVới tư cách là Người cộng hưởng được chỉ định của Sentinel đáng kính, cô ấy thể hiện sự khiêm tốn và hết lòng cam kết hướng dẫn mọi người của mình hướng tới một tương lai tươi sáng.",
     "id": "Jinhsi, Hakim Jinzhou, memancarkan harapan bagi rakyatnya dengan lembut, seperti sinar matahari musim dingin. Sebagai Resonator Terpilih dari Sentinel yang dihormati, dia menunjukkan kerendahan hati dan dengan sepenuh hati mengabdikan dirinya untuk membimbing rakyatnya menuju masa depan yang cerah.",
-    "th": "จินซี ผู้พิพากษาแห่งจินโจว ส่องแสงแห่งความหวังให้กับประชาชนของเธอ ดุจดั่งรังสีของดวงอาทิตย์ในฤดูหนาวในฐานะผู้ได้รับการแต่งตั้งจากเซนติเนลที่เคารพนับถือ เธอแสดงความอ่อนน้อมถ่อมตน และทุ่มเทอย่างเต็มที่ในการนำพาประชาชนของเธอไปสู่อนาคตอันสดใส",
-    "ru": "Джинши, магистрат Цзиньчжоу, мягко озаряет надежды своего народа, как лучи зимнего солнца. Как назначенный Резонатор почитаемого Стража, она демонстрирует смирение и всецело посвящает себя тому, чтобы вести свой народ к светлому будущему."
+    "th": "จินซี ผู้พิพากษาแห่งจินโจว ส่องแสงแห่งความหวังให้กับประชาชนของเธอ ดุจดั่งรังสีของดวงอาทิตย์ในฤดูหนาวในฐานะผู้ได้รับการแต่งตั้งจากเซนติเนลที่เคารพนับถือ เธอแสดงความอ่อนน้อมถ่อมตน และทุ่มเทอย่างเต็มที่ในการนำพาประชาชนของเธอไปสู่อนาคตอันสดใส"
   },
   "skillPriority": [
     "Forte Circuit",
