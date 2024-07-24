@@ -49,7 +49,7 @@ const onPressedSignOut = async () => {
       </v-btn>
     </template>
 
-    <v-menu v-if="auth.isSignedIn">
+    <v-menu v-if="auth.user">
       <template #activator="{ props }">
         <v-btn :border="true" :icon="true">
           <v-avatar v-bind="props">

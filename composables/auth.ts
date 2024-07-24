@@ -12,16 +12,20 @@ export const useAuth = defineStore('useAuth', () => {
   const runtimeConfig = useRuntimeConfig();
 
   // states
-  const user = useCookie<IUser>('user');
+  const user = ref<IUser>();
   const state = ref<'' | 'sign-in'>('');
   const gState = useCookie('g_state');
   const device = useDevice();
-  const accessToken = useCookie('accessToken');
-  const refreshToken = useCookie('refreshToken');
+  const accessToken = ref();
+  const refreshToken = ref();
   const isScriptLoaded = ref(false);
 
   // functions
   const initialize = async () => {
+    user.value = useCookie<IUser | undefined>('user').value;
+    accessToken.value = useCookie<string>('accessToken').value;
+    refreshToken.value = useCookie<string>('refreshToken').value;
+
     if (route.query.code) {
       state.value = 'sign-in';
       signIn({ code: route.query.code.toString() })
@@ -185,6 +189,27 @@ export const useAuth = defineStore('useAuth', () => {
       } else {
         sentry.setUser(null);
       }
+    }
+  );
+
+  watch(
+    () => user.value,
+    (value) => {
+      useCookie<IUser | undefined>('user').value = value;
+    }
+  );
+
+  watch(
+    () => accessToken.value,
+    (value) => {
+      useCookie<string>('accessToken').value = value;
+    }
+  );
+
+  watch(
+    () => refreshToken.value,
+    (value) => {
+      useCookie<string>('refreshToken').value = value;
     }
   );
 
