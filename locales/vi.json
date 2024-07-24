@@ -2,7 +2,9 @@
   "meta": {
     "title": "WutheringWaves.app",
     "description": "Theo dõi Pity, danh sách việc cần làm, cơ sở dữ liệu, phân tích và hơn thế nữa cho Wuthering Waves!",
-    "index": { "title": "Wuthering Waves Wiki" },
+    "index": {
+      "title": "Wuthering Waves Wiki"
+    },
     "timeline": {
       "title": "Lịch sự kiện",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
@@ -64,7 +66,9 @@
         }
       }
     },
-    "settings": { "title": "Settings" },
+    "settings": {
+      "title": "Settings"
+    },
     "guides": {
       "title": "Game Guides",
       "related": "Related Guides",
@@ -131,7 +135,9 @@
               "title": "Chạy đoạn mã bên dưới.",
               "content": "Mở {windowsPowerShell} sau đó dán đoạn mã bên dưới và chạy nó (Dán đường dẫn của game nếu được hỏi)."
             },
-            "3": { "title": "Dán Convene Record URL vào ô bên dưới." }
+            "3": {
+              "title": "Dán Convene Record URL vào ô bên dưới."
+            }
           }
         }
       },
@@ -150,7 +156,9 @@
         }
       }
     },
-    "history": { "title": "Lịch sử triệu hồi" },
+    "history": {
+      "title": "Lịch sử triệu hồi"
+    },
     "guaranteedAt": "Chắc chắn nhận ở lần thứ {0}",
     "lifetimePulls": "Tổng số lần",
     "pity": "Pity",
@@ -226,13 +234,22 @@
   },
   "tierList": {
     "title": "Tier list",
-    "create": { "title": "Create new Tier list", "liveVoting": "Live Voting" },
+    "create": {
+      "title": "Create new Tier list",
+      "liveVoting": "Live Voting"
+    },
     "liveVoting": "Live Voting",
     "save": "Save"
   },
-  "todoList": { "title": "Todo list" },
-  "trophies": { "title": "Thành tựu" },
-  "teams": { "title": "Đội hình" },
+  "todoList": {
+    "title": "Todo list"
+  },
+  "trophies": {
+    "title": "Thành tựu"
+  },
+  "teams": {
+    "title": "Đội hình"
+  },
   "echoes": {
     "title": "Echoes",
     "cost": "Cost",
@@ -240,28 +257,28 @@
     "sameElementCharacters": "Same Element Characters",
     "related": "Related Echo {name}"
   },
-  "faqs": {
-    "0": {
+  "faqs": [
+    {
       "title": "Dữ liệu của tôi được lưu trữ ở đâu khi tôi nhập?",
       "content": "URL của bạn chỉ được lưu vào trình duyệt web của bạn. Xóa dữ liệu trình duyệt của bạn trên trang web này sẽ xóa dữ liệu được lưu trữ của bạn. Nếu muốn kiểm tra lịch sử của mình, bạn sẽ cần nhập lại lịch sử đó.\n\nBạn cũng có tùy chọn sao lưu URL một cách an toàn bằng tài khoản Google của mình bên trong trang Cài đặt."
     },
-    "1": {
+    {
       "title": "Làm sao tôi biết trang web này sẽ không lấy cắp dữ liệu của tôi?",
       "content": "Hãy yên tâm, chúng tôi cũng là những người chơi giống như bạn và muốn giúp Wuthering Waves phát triển bằng cách xây dựng các công cụ hữu ích cho tất cả các Rover trên thế giới."
     },
-    "2": {
+    {
       "title": "Lịch sử của tôi không tự động cập nhật, có chuyện gì vậy?",
       "content": "Giống như trong trò chơi, lịch sử của bạn không cập nhật ngay lập tức. Hãy thử kiểm tra lại sau để xem lịch sử của bạn đã được cập nhật chưa, nếu không đó có thể là lỗi."
     },
-    "3": {
+    {
       "title": "Làm cách nào để đưa ra báo cáo lỗi hoặc đề xuất một tính năng?",
       "content": "Bạn có thể tạo sự cố trong <a href='{repo}' target='_blank'><b>Kho lưu trữ GitHub</b></a> của chúng tôi bằng cách sử dụng mẫu thích hợp để chúng tôi có thể giải quyết mối lo ngại của bạn sớm nhất có thể . Đóng góp của bạn sẽ giúp chúng tôi tạo ra trải nghiệm tốt hơn cho người dùng, vì vậy chúng tôi đánh giá rất cao điều đó!"
     },
-    "4": {
+    {
       "title": "Làm thế nào tôi có thể hỗ trợ trang web này?",
       "content": "Cảm ơn bạn đã sử dụng trang web này. Khi bạn tiếp tục sử dụng nó, bạn cũng truyền cảm hứng để chúng tôi tiếp tục cải thiện nó. \n\nNếu bạn muốn hỗ trợ tài chính cho chúng tôi, chúng tôi có <a href='{donationPage}' target='_blank'><b>Trang quyên góp </b></a> để chấp nhận bất kỳ khoản quyên góp nào để duy trì hoạt động của trang web!"
     }
-  },
+  ],
   "settings": {
     "title": "Cài đặt",
     "eraseAllData": "Erase All Data",
@@ -271,7 +288,9 @@
       "autoImportConveneHistorySubtitle": "Lịch sử sẽ tự động nhập khi bạn truy cập website.",
       "empty": "Để thêm tài khoản, bạn chỉ cần nhập lịch sử triệu hồi."
     },
-    "backup": { "title": "Sao lưu dữ liệu" },
+    "backup": {
+      "title": "Sao lưu dữ liệu"
+    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
@@ -295,7 +314,10 @@
     "submit": "Post comment",
     "replies": "Replies"
   },
-  "dialog": { "close": "Đóng", "confirm": "Xác nhận" },
+  "dialog": {
+    "close": "Đóng",
+    "confirm": "Xác nhận"
+  },
   "backup": {
     "conflictTitle": "Cần hành động",
     "conflictMessage": "Dữ liệu cục bộ của bạn trong trình duyệt này xung đột với dữ liệu được lưu trữ trên đám mây!",
@@ -316,7 +338,9 @@
     "newAccountDetected": "Đã phát hiện tài khoản mới",
     "successfullySwitched": "Successfully switch to {0}"
   },
-  "leaderboards": { "title": "Leaderboards" },
+  "leaderboards": {
+    "title": "Leaderboards"
+  },
   "codes": {
     "title": "Gift Codes",
     "expiry": "Expiry",
@@ -329,7 +353,9 @@
     "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
     "redemptionStep": "Redemption Step"
   },
-  "map": { "title": "Interactive Map" },
+  "map": {
+    "title": "Interactive Map"
+  },
   "guides": {
     "title": "Game Guides",
     "editor": {
@@ -338,7 +364,10 @@
         "title": "Thumbnail",
         "placeholder": "Recommended size: 1,200x628px."
       },
-      "localization": { "title": "Localization", "primary": "Primary" }
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary"
+      }
     }
   },
   "search": {
