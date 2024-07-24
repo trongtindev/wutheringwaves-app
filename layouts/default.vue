@@ -86,14 +86,15 @@ const onPressedSearch = () => {
                   <v-avatar
                     class="border"
                     :size="24"
-                    :image="`/locales/${i18n.locale.value}.svg`"
+                    :image="`/locales/${i18n.locale.value}.webp`"
+                    :cover="true"
                   />
                 </template>
               </v-list-item>
             </template>
 
             <v-sheet class="border rounded">
-              <v-list>
+              <v-list density="compact">
                 <v-list-item
                   v-for="(element, index) in locales"
                   :key="index"
@@ -107,7 +108,8 @@ const onPressedSearch = () => {
                     <v-avatar
                       class="border"
                       :size="24"
-                      :image="`/locales/${element.code}.svg`"
+                      :image="`/locales/${element.code}.webp`"
+                      :cover="true"
                     />
                   </template>
                 </v-list-item>
