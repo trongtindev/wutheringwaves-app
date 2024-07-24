@@ -52,13 +52,13 @@ const onPressedRestore = () => {
   <v-card>
     <card-title>
       <template #title>
-        {{ $t('settings.backup.title') }}
+        {{ $t('sync.title') }}
       </template>
     </card-title>
 
     <v-card-text>
-      {{ app.name }} uses the Google Cloud Storage to save and sync your data.
-      We can only read and write files that this site created.
+      We uses the Google Cloud Storage to save and sync your data. We can only
+      read and write files that this site created.
     </v-card-text>
     <v-divider />
 

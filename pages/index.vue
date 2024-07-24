@@ -14,9 +14,6 @@ const characters = await resources.getCharacters();
 const upcomingWeapons = weapons.filter((e) => e.upcoming);
 const upcomingCharacters = characters.filter((e) => e.upcoming);
 
-// states
-const faqs = ref<number[]>([0, 1, 2, 3, 4]);
-
 // seo meta
 const title = i18n.t('meta.index.title');
 
@@ -230,26 +227,6 @@ useSeoMeta({
       </v-card>
     </template>
   </masonry>
-
-  <!-- faqs -->
-  <v-expansion-panels class="mt-2">
-    <v-expansion-panel v-for="index in faqs" :key="index">
-      <v-expansion-panel-title>
-        {{ $t(`faqs.${index}.title`) }}
-      </v-expansion-panel-title>
-
-      <v-expansion-panel-text>
-        <div
-          :innerHTML="
-            $t(`faqs.${index}.content`, {
-              repo: app.githubRepo,
-              donationPage: localePath('/donation')
-            }).replaceAll('\n', '<br/>')
-          "
-        />
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
 
   <v-footer class="pa-4 d-block mt-2">
     <v-row :no-gutters="true">

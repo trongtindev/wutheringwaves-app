@@ -1,10 +1,10 @@
 # WutheringWaves.app
-
-In-development site for Wuthering Waves.
-
 ![home.png](./.github/screenshots/home.png 'wutheringwaves.app')
 
 <center>A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!</center>
+<center>
+[![Crowdin](https://badges.crowdin.net/wutheringwaves_app/localized.svg)](https://crowdin.com/project/wutheringwaves_app)
+</center>
 
 ## Roadmap
 

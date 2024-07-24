@@ -222,13 +222,6 @@ export default defineNuxtConfig({
     'builder:watch': async (e, path) => {
       if (e != 'change') return;
 
-      // update locales
-      if (path.startsWith('locales/en')) {
-        await startMerge(
-          localesMetadata.filter((e) => e.code != 'en').map((e) => e.code)
-        );
-      }
-
       // update resources
       if (path.startsWith('resources')) {
         if (
