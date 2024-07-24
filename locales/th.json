@@ -122,8 +122,8 @@
   "convene": {
     "import": {
       "title": "Import Convenes",
-      "success": "",
-      "processing": "Processing",
+      "success": "Import successfully!",
+      "processing": "Processing...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
         "pc": {
@@ -233,13 +233,7 @@
     "skill": "{name} Skill"
   },
   "tierList": {
-    "title": "Tier list",
-    "create": {
-      "title": "Create new Tier list",
-      "liveVoting": "Live Voting"
-    },
-    "liveVoting": "Live Voting",
-    "save": "Save"
+    "title": "Tier list"
   },
   "todoList": {
     "title": "Todo list"
@@ -257,28 +251,6 @@
     "sameElementCharacters": "Same Element Characters",
     "related": "Related Echo {name}"
   },
-  "faqs": [
-    {
-      "title": "Where is my data being stored when I import?",
-      "content": "Your URL is only saved to your web browser. Clearing your browser data on this website will delete your stored data. If you want to check your history, you'll need to import it again.\n\nYou also have to option to safely backup your URL using your Google Account inside the Settings page."
-    },
-    {
-      "title": "How do I know this website won't steal my data?",
-      "content": "Rest assured, we are players just like you and want to help Wuthering Waves grow by building useful tools for the all the Rovers in the world."
-    },
-    {
-      "title": "My history is not automatically updating, what's wrong?",
-      "content": "Just like in-game, your history does not instantly update. Try checking again later to see if your history is updated, otherwise it could be a bug."
-    },
-    {
-      "title": "How do I raise a bug report or suggest a feature?",
-      "content": "You can create an issue in our <a href='{repo}' target='_blank'><b>GitHub repository</b></a> using the proper template so that we can address your concern as soon as possible. Your contribution will help us create a better experience for our users, so we would greatly appreciate it!"
-    },
-    {
-      "title": "How can I support this website?",
-      "content": "Thank you for using this website. As you continue to use it, you also inspire us to keep improving it. Don't forget to leave a star on Github! \n\nIf you want to support us financially, we have a <a href='{donationPage}' target='_blank'><b>Donation page</b></a> to accept any donations to keep the website running!"
-    }
-  ],
   "settings": {
     "title": "การตั้งค่า",
     "eraseAllData": "Erase All Data",
@@ -311,27 +283,28 @@
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
-    "submit": "Post comment",
+    "form": {
+      "submit": "Post comment"
+    },
     "replies": "Replies"
   },
-  "dialog": {
-    "close": "Close",
-    "confirm": "Confirm"
-  },
-  "backup": {
-    "conflictTitle": "Action required",
-    "conflictMessage": "Your local data in this browser is conflicting with the one stored in Cloud!",
-    "cloudData": "Cloud Data",
-    "localData": "Local Browser Data",
-    "older": "OLDER",
-    "newer": "NEWER",
-    "useCloudData": "Use Cloud Data",
-    "useLocalData": "Use Local Data",
-    "lastModified": "Last modified",
-    "or": "OR",
-    "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-    "lastCloudChanged": "Last changed: {0}",
-    "dataSynced": "Data has been synced!"
+  "sync": {
+    "title": "Cloud Sync",
+    "conflict": {
+      "title": "Your Data Conflict",
+      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
+      "cloudData": "Cloud Data",
+      "localData": "Local Browser Data",
+      "older": "OLDER",
+      "newer": "NEWER",
+      "useCloudData": "Use Cloud Data",
+      "useLocalData": "Use Local Data",
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
+      "lastCloudChanged": "Last changed: {0}"
+    },
+    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
+    "dataSynced": "Data has been synced!",
+    "lastModified": "Last modified"
   },
   "accounts": {
     "title": "Accounts",
@@ -371,10 +344,7 @@
     }
   },
   "search": {
-    "title": "Global Search",
-    "alert": "You can search everything there is on WutheringWaves.app.",
-    "alertTips": "Press the key combination Ctrl + Space to open the fastest search box!",
-    "placeholder": "Item, echo, trophy, character,..."
+    "title": "Global Search"
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -404,7 +374,6 @@
     "back": "Back",
     "cancel": "ยกเลิก",
     "import": "นำเข้า",
-    "development": "Development",
     "search": "Search",
     "all": "All",
     "echo": "Echo",
@@ -414,13 +383,9 @@
     "save": "Save",
     "copyLink": "Copy link",
     "exportAsImage": "Export as Image",
-    "signInRequired": "Sign in required",
-    "signInRequiredMessage": "Please sign in to perform this action.",
-    "comingSoon": "Coming soon!",
     "saveChanges": "Save changes",
     "weapon": "Weapon",
     "character": "ตัวละคร",
-    "noData": "No data!",
     "type": "Type",
     "sort": "Sort",
     "title": "Title",
