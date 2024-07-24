@@ -281,14 +281,16 @@ useSeoMeta({
   />
 
   <client-only>
+    <template #fallback> </template>
+
     <div v-if="chartInitialized">
       <!-- filter -->
-      <v-row class="mt-1">
+      <v-row>
         <v-col cols="12" sm="4">
           <v-select
             v-model="filterType"
             :items="types"
-            :label="$t('Type')"
+            :label="$t('common.type')"
             :hide-details="true"
             item-title="name"
             item-value="cardPoolType"
@@ -299,7 +301,7 @@ useSeoMeta({
           <v-select
             v-model="filterBanner"
             :items="activeBanners"
-            :label="$t('Banner')"
+            :label="$t('common.banner')"
             :hide-details="true"
             item-title="name"
             item-value="name"
@@ -308,15 +310,14 @@ useSeoMeta({
       </v-row>
 
       <!-- thumbnails -->
-      <v-row class="mt-2">
+      <v-row v-if="displayBanner && displayBanner.thumbnail" class="mt-2">
         <v-col cols="12" sm="6">
           <v-card>
-            <v-responsive :aspect-ratio="16 / 9" class="rounded">
-              <v-img
-                v-if="displayBanner && displayBanner.thumbnail"
-                :src="displayBanner.thumbnail"
-              />
-            </v-responsive>
+            <base-image
+              :src="displayBanner.thumbnail"
+              :aspect-ratio="16 / 9"
+              :cover="true"
+            />
           </v-card>
         </v-col>
       </v-row>

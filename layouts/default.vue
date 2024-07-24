@@ -135,6 +135,10 @@ const onPressedSearch = () => {
       <!-- app bar title -->
       <v-app-bar-title>
         <client-only>
+          <template #fallback>
+            {{ $t('common.loading') }}
+          </template>
+
           <span v-if="app.title">
             {{ app.title }}
           </span>

@@ -6,43 +6,43 @@
       "slug": "vibration-manifestation",
       "name": "Vibration Manifestation",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nRover performs up to 4 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nRover consumes STA to attack the target, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Resonance</strong></size>\nAfter <strong style=\"color: var(--color-highlight);\">Basic Attack 3</strong> or <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong>, press the <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> button at the right time to perform Heavy Attack <strong style=\"color: var(--color-highlight);\">Resonance</strong>, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Aftertune</strong></size>\nAfter Heavy Attack <strong style=\"color: var(--color-highlight);\">Resonance</strong> or <strong style=\"color: var(--color-highlight);\">Dodge Counter</strong> hits a target, press the <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> button to perform Heavy Attack <strong style=\"color: var(--color-highlight);\">Aftertune</strong>, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nRover consumes STA to perform a Mid-Air Plunging Attack, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>."
+      "description": "<strong>Basic Attack</strong>\nRover performs up to 4 consecutive attacks, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nRover consumes STA to attack the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Heavy Attack: Resonance</strong>\nAfter <strong>Basic Attack 3</strong> or <strong>Heavy Attack</strong>, press the <strong>Basic Attack</strong> button at the right time to perform Heavy Attack <strong>Resonance</strong>, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Heavy Attack: Aftertune</strong>\nAfter Heavy Attack <strong>Resonance</strong> or <strong>Dodge Counter</strong> hits a target, press the <strong>Basic Attack</strong> button to perform Heavy Attack <strong>Aftertune</strong>, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nRover consumes STA to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
     },
     {
       "slug": "resonating-slashes",
       "name": "Resonating Slashes",
       "type": "Resonance Skill",
-      "description": "Rover launches an attack forward, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>."
+      "description": "Rover launches an attack forward, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
     },
     {
       "slug": "echoing-orchestra",
       "name": "Echoing Orchestra",
       "type": "Resonance Liberation",
-      "description": "Rover converges Spectro energy to assail the target area, detonating it after a short delay and dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>."
+      "description": "Rover converges Spectro energy to assail the target area, detonating it after a short delay and dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
     },
     {
       "slug": "reticence",
       "name": "Reticence",
       "type": "Inherent Skill",
-      "description": "Damage dealt by Rover's Basic Attack <strong style=\"color: var(--color-highlight);\">Resonating Echoes</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">60%</strong>."
+      "description": "Damage dealt by Rover's Basic Attack <strong>Resonating Echoes</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">60%</strong>."
     },
     {
       "slug": "silent-listener",
       "name": "Silent Listener",
       "type": "Inherent Skill",
-      "description": "Rover gains <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> ATK increase for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s upon casting Heavy Attack <strong style=\"color: var(--color-highlight);\">Resonance</strong>."
+      "description": "Rover gains <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> ATK increase for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s upon casting Heavy Attack <strong>Resonance</strong>."
     },
     {
       "slug": "waveshock",
       "name": "Waveshock",
       "type": "Intro Skill",
-      "description": "Rover attacks the target, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>."
+      "description": "Rover attacks the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
     },
     {
       "slug": "world-in-a-grain-of-sand",
       "name": "World in a Grain of Sand",
       "type": "Forte Circuit",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Resonance Skill: Resonating Spin</strong></size>\nIf \"Diminutive Sound\" exceeds <strong style=\"color: var(--color-attribute-spectro);\">50</strong> when <strong style=\"color: var(--color-highlight);\">Resonance Skill</strong> is used, Rover consumes <strong style=\"color: var(--color-attribute-spectro);\">50</strong> \"Diminutive Sound\" to cast <strong style=\"color: var(--color-highlight);\">Resonating Spin</strong>, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>, considered as Resonance Skill damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Basic Attack: Resonating Echoes</strong></size>\nAfter Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Spin</strong> ends, Rover performs <strong style=\"color: var(--color-highlight);\">Resonating Echoes</strong> upon pressing the Basic Attack button.\nLaunch attacks forward, dealing <strong style=\"color: var(--color-attribute-spectro);\">Spectro DMG</strong>, considered as Resonance Skill DMG.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Diminutive Sound</strong></size>\nRover can hold up to <strong style=\"color: var(--color-attribute-spectro);\">100</strong> \"Diminutive Sounds\".\nRover obtains \"Diminutive Sound\" for every Normal Attack <strong style=\"color: var(--color-highlight);\">Vibration Manifestation</strong> on hit.\nRover obtains \"Diminutive Sound\" for every Heavy Attack <strong style=\"color: var(--color-highlight);\"> Aftertune</strong> on hit.\nRover obtains \"Diminutive Sound\" upon casting Intro Skill <strong style=\"color: var(--color-highlight);\">Waveshock</strong>."
+      "description": "<strong>Resonance Skill: Resonating Spin</strong>\nIf \"Diminutive Sound\" exceeds <strong class=\"color-spectro\">50</strong> when <strong>Resonance Skill</strong> is used, Rover consumes <strong class=\"color-spectro\">50</strong> \"Diminutive Sound\" to cast <strong>Resonating Spin</strong>, dealing <strong class=\"color-spectro\">Spectro DMG</strong>, considered as Resonance Skill damage.\n \n<strong>Basic Attack: Resonating Echoes</strong>\nAfter Resonance Skill <strong>Resonating Spin</strong> ends, Rover performs <strong>Resonating Echoes</strong> upon pressing the Basic Attack button.\nLaunch attacks forward, dealing <strong class=\"color-spectro\">Spectro DMG</strong>, considered as Resonance Skill DMG.\n \n<strong>Diminutive Sound</strong>\nRover can hold up to <strong class=\"color-spectro\">100</strong> \"Diminutive Sounds\".\nRover obtains \"Diminutive Sound\" for every Normal Attack <strong>Vibration Manifestation</strong> on hit.\nRover obtains \"Diminutive Sound\" for every Heavy Attack <strong> Aftertune</strong> on hit.\nRover obtains \"Diminutive Sound\" upon casting Intro Skill <strong>Waveshock</strong>."
     },
     {
       "slug": "solaris-voyager",
@@ -63,7 +63,7 @@
       "slug": "odyssey-of-beginnings",
       "name": "Odyssey of Beginnings",
       "params": ["15%", "7"],
-      "description": "Rover's Crit. Rate is increased by {0} for {1}s when casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Slashes</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Spin</strong>."
+      "description": "Rover's Crit. Rate is increased by {0} for {1}s when casting Resonance Skill <strong>Resonating Slashes</strong> or Resonance Skill <strong>Resonating Spin</strong>."
     },
     {
       "idx": "Resonance II-IV",
@@ -84,7 +84,7 @@
       "slug": "resonating-lamella",
       "name": "Resonating Lamella",
       "params": ["20%", "5"],
-      "description": "When casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Echoing Resonance</strong>, Rover continuously restores HP for all team members: HP equal to {0} of Rover's ATK will be restored every second for {1}s."
+      "description": "When casting Resonance Liberation <strong>Echoing Resonance</strong>, Rover continuously restores HP for all team members: HP equal to {0} of Rover's ATK will be restored every second for {1}s."
     },
     {
       "idx": "Resonance V-IV",
@@ -98,7 +98,7 @@
       "slug": "echoes-of-wanderlust",
       "name": "Echoes of Wanderlust",
       "params": ["10%", "20"],
-      "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Slashes</strong> and Resonance Skill <strong style=\"color: var(--color-highlight);\">Resonating Spin</strong> reduces the target's Spectro DMG RES by {0} on hit for {1}s."
+      "description": "Resonance Skill <strong>Resonating Slashes</strong> and Resonance Skill <strong>Resonating Spin</strong> reduces the target's Spectro DMG RES by {0} on hit for {1}s."
     }
   ],
   "stats": { "hp": 11400, "def": 1369, "atk": 375, "energy": 125 },

@@ -23,6 +23,26 @@
   --color-highlight: orange;
 }
 
+.color-electro {
+  color: var(--color-attribute-electro);
+}
+
+.color-spectro {
+  color: var(--color-attribute-spectro);
+}
+
+.color-aero {
+  color: var(--color-attribute-aero);
+}
+
+.color-glacio {
+  color: var(--color-attribute-glacio);
+}
+
+.color-fusion {
+  color: var(--color-attribute-fusion);
+}
+
 /* scrollbar */
 /* ::-webkit-scrollbar {
   background-color: rgb(var(--v-theme-surface));
@@ -180,7 +200,6 @@ a {
   grid-column: 1/ -1;
 }
 
-/* timeline */
 div.event-item {
   position: absolute;
   opacity: 1;

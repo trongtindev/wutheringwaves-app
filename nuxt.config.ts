@@ -1,8 +1,8 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
-import { startMerge } from './i18n.utils';
-import { localesMetadata } from './utils/metadata';
 import { updateModified } from './runtime/update-modified';
+import type { LocaleObject } from '@nuxtjs/i18n';
+import { updateTranslations } from './runtime/update-translations';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -25,6 +25,17 @@ const {
   NUXT_PUBLIC_SENTRY_DEBUG,
   NUXT_PUBLIC_SENTRY_DNS
 } = process.env;
+
+const localesMetadata: LocaleObject[] = [
+  { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
+  { name: 'Indonesia', code: 'id', iso: 'id' },
+  { name: '日本語', code: 'ja', iso: 'ja' },
+  { name: '한국어', code: 'ko', iso: 'ko' },
+  { name: 'ภาษาไทย', code: 'th', iso: 'th', rtl: true },
+  { name: 'Türkçe', code: 'tr', iso: 'tr' },
+  { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
+  { name: 'Ukrainian', code: 'uk', iso: 'uk' }
+];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -219,6 +230,9 @@ export default defineNuxtConfig({
   },
 
   hooks: {
+    'modules:before': () => {
+      return updateTranslations(localesMetadata);
+    },
     'builder:watch': async (e, path) => {
       if (e != 'change') return;
 
@@ -229,6 +243,7 @@ export default defineNuxtConfig({
           !path.endsWith('characters.json')
         ) {
           await updateModified('characters');
+          return updateTranslations(localesMetadata, true);
         } else if (
           path.startsWith('resources/echoes') &&
           !path.endsWith('echoes.json')

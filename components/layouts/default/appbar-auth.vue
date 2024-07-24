@@ -38,7 +38,6 @@ const onPressedSignOut = async () => {
       <v-btn
         :text="$t('common.signIn')"
         :disabled="true"
-        :loading="true"
         color="primary"
         variant="flat"
       >
@@ -101,11 +100,11 @@ const onPressedSignOut = async () => {
 
     <v-btn
       v-else
+      color="primary"
+      variant="flat"
       :text="$t('common.signIn')"
       :disabled="auth.state != ''"
       :loading="auth.state == 'sign-in'"
-      color="primary"
-      variant="flat"
       @click="() => onPressedSignIn()"
     >
       <v-icon :icon="mdiLogin" />

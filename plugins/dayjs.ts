@@ -1,9 +1,13 @@
 import dayjs from 'dayjs';
 import 'dayjs/locale/en';
-import 'dayjs/locale/vi';
-import 'dayjs/locale/th';
+import 'dayjs/locale/id';
 import 'dayjs/locale/ja';
 import 'dayjs/locale/ko';
+import 'dayjs/locale/th';
+import 'dayjs/locale/tr';
+import 'dayjs/locale/uk';
+import 'dayjs/locale/vi';
+
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import relativeTime from 'dayjs/plugin/relativeTime';

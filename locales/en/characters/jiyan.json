@@ -1,0 +1,43 @@
+{
+  "name": "Jiyan",
+  "quote": "I have never regretted to brave the long night.",
+  "description": "Jiyan, leader of the Midnight Rangers, acts with swift and resolute righteousness. He possesses the formidable ability to conjure a powerful Qingloong from the winds, making him invincible on the battlefield.",
+  "skills": {
+    "lone-lance": {
+      "name": "Lone Lance",
+      "description": "<strong>Basic Attack</strong>\nJiyan performs up to 5 consecutive attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack</strong>\nJiyan consumes Stamina to thrust forward, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack: Windborne Strike</strong>\nHold the <strong>Basic Attack</strong> during <strong>Heavy Attack</strong> to cast <strong>Windborne Strike</strong> after the <strong>Heavy Attack</strong> ends, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack: Abyssal Slash</strong>\nRelease the <strong>Basic Attack</strong> during the <strong>Heavy Attack</strong> to cast <strong>Abyssal Slash</strong> after the <strong>Heavy Attack</strong> ends, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nJiyan consumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nAfter the <strong>Plunging Attack</strong>, use <strong>Basic Attack</strong> to perform a follow-up attack, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack: Banner of Triumph</strong>\nAfter casting the Heavy Attack <strong>Windborne Strike</strong> or the Resonance Skill <strong>Windqueller</strong> in the air, Jiyan can perform a mid-air attack, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse a <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+    },
+    "windqueller": {
+      "name": "Windqueller",
+      "description": "Dash forward a certain distance, dealing <strong class=\"color-aero\">Aero DMG</strong>.\r\n \r\nCan be cast in the air."
+    },
+    "emerald-storm-prelude": {
+      "name": "Emerald Storm: Prelude",
+      "description": "After releasing Emerald Storm: Prelude, Jiyan enters <strong>Qingloong Mode</strong>.\r\n \r\n<strong>Qingloong Mode</strong>\r\nJiyan has increased Anti-interruption;\r\n<strong>Basic Attack</strong>, <strong>Heavy Attack</strong> and <strong>Dodge Counter</strong> are replaced with Heavy Attack <strong>Lance of Qingloong</strong>.\r\n \r\n<strong>Heavy Attack: Lance of Qingloong</strong>\r\nPerform up to 3 continuous attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>, considered as Heavy Attack damage."
+    },
+    "heavenly-balance": {
+      "name": "Heavenly Balance",
+      "description": "After casting the Intro Skill <strong>Tactical Strike</strong>, Jiyan's ATK is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s."
+    },
+    "tempest-taming": {
+      "name": "Tempest Taming",
+      "description": "When Jiyan's attacks hit a target, Jiyan's Crit. DMG is increased by <strong style=\"color: var(--theme-palette-color-1);\">12%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s."
+    },
+    "tactical-strike": {
+      "name": "Tactical Strike",
+      "description": "Jiyan pierces the target in mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+    },
+    "qingloong-at-war": {
+      "name": "Qingloong at War",
+      "description": "When casting Resonance Skill <strong>Windqueller</strong>, if Jiyan has <strong class=\"color-aero\">30</strong> or more \"Resolve\", he consumes <strong class=\"color-aero\">30</strong> \"Resolve\" to increase the damage of this Resonance Skill <strong>Windqueller</strong> by <strong class=\"color-aero\">20%</strong>.\nWhen Jiyan is in <strong>Qingloong Mode</strong>, DMG of Resonance Skill <strong>Windqueller</strong> is increased by <strong class=\"color-aero\">20%</strong> and no longer consumes \"Resolve\".\n \n<strong>Resonance Liberation: Emerald Storm: Finale</strong>\nWhen casting Resonance Liberation <strong>Emerald Storm: Prelude</strong>, if Jiyan has <strong class=\"color-aero\">30</strong> \"Resolve\" or more, he will consume <strong class=\"color-aero\">30</strong> \"Resolve\" to cast Emerald Storm: Finale, dealing <strong class=\"color-aero\">Aero DMG</strong>, considered as Heavy Attack damage.\nEmerald Storm: Finale can be cast in mid-air at low altitude.\n \n<strong>Resolve</strong>\nJiyan can hold up to <strong class=\"color-aero\">60</strong> Resolve.\nJiyan gains \"Resolve\" when his Normal Attack <strong>Lone Lance</strong> hits the target.\nJiyan gains \"Resolve\" when the Intro Skill <strong>Tactical Strike</strong> hits the target.\nIf Jiyan does not hit a target within <strong class=\"color-aero\">15</strong>s, his \"Resolve\" will gradually decrease."
+    },
+    "skillful-cooking": {
+      "name": "Skillful Cooking",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    "discipline": {
+      "name": "Discipline",
+      "description": "When the next character's Heavy Attack hits a target, Jiyan will summon Qingloong to launch a Coordinated Attack, dealing <strong class=\"color-aero\">Aero DMG</strong> equal to <strong class=\"color-aero\">313.40%</strong> of Jiyan's ATK. This attack lasts for <strong class=\"color-aero\">8</strong>s, and can be triggered once every <strong class=\"color-aero\">1</strong>s, up to 2 times."
+    }
+  }
+}

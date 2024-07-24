@@ -6,25 +6,25 @@
       "slug": "lone-lance",
       "name": "Lone Lance",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nJiyan performs up to 5 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nJiyan consumes Stamina to thrust forward, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Windborne Strike</strong></size>\nHold the <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> during <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> to cast <strong style=\"color: var(--color-highlight);\">Windborne Strike</strong> after the <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> ends, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Abyssal Slash</strong></size>\nRelease the <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> during the <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> to cast <strong style=\"color: var(--color-highlight);\">Abyssal Slash</strong> after the <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> ends, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nJiyan consumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\nAfter the <strong style=\"color: var(--color-highlight);\">Plunging Attack</strong>, use <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> to perform a follow-up attack, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack: Banner of Triumph</strong></size>\nAfter casting the Heavy Attack <strong style=\"color: var(--color-highlight);\">Windborne Strike</strong> or the Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong> in the air, Jiyan can perform a mid-air attack, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse a <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>."
+      "description": "<strong>Basic Attack</strong>\nJiyan performs up to 5 consecutive attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack</strong>\nJiyan consumes Stamina to thrust forward, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack: Windborne Strike</strong>\nHold the <strong>Basic Attack</strong> during <strong>Heavy Attack</strong> to cast <strong>Windborne Strike</strong> after the <strong>Heavy Attack</strong> ends, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack: Abyssal Slash</strong>\nRelease the <strong>Basic Attack</strong> during the <strong>Heavy Attack</strong> to cast <strong>Abyssal Slash</strong> after the <strong>Heavy Attack</strong> ends, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nJiyan consumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nAfter the <strong>Plunging Attack</strong>, use <strong>Basic Attack</strong> to perform a follow-up attack, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack: Banner of Triumph</strong>\nAfter casting the Heavy Attack <strong>Windborne Strike</strong> or the Resonance Skill <strong>Windqueller</strong> in the air, Jiyan can perform a mid-air attack, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse a <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>."
     },
     {
       "slug": "windqueller",
       "name": "Windqueller",
       "type": "Resonance Skill",
-      "description": "Dash forward a certain distance, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\r\n<size=10> </size>\r\nCan be cast in the air."
+      "description": "Dash forward a certain distance, dealing <strong class=\"color-aero\">Aero DMG</strong>.\r\n \r\nCan be cast in the air."
     },
     {
       "slug": "emerald-storm-prelude",
       "name": "Emerald Storm: Prelude",
       "type": "Resonance Liberation",
-      "description": "After releasing Emerald Storm: Prelude, Jiyan enters <strong style=\"color: var(--color-highlight);\">Qingloong Mode</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Qingloong Mode</strong></size>\r\nJiyan has increased Anti-interruption;\r\n<strong style=\"color: var(--color-highlight);\">Basic Attack</strong>, <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> and <strong style=\"color: var(--color-highlight);\">Dodge Counter</strong> are replaced with Heavy Attack <strong style=\"color: var(--color-highlight);\">Lance of Qingloong</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Lance of Qingloong</strong></size>\r\nPerform up to 3 continuous attacks, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>, considered as Heavy Attack damage."
+      "description": "After releasing Emerald Storm: Prelude, Jiyan enters <strong>Qingloong Mode</strong>.\r\n \r\n<strong>Qingloong Mode</strong>\r\nJiyan has increased Anti-interruption;\r\n<strong>Basic Attack</strong>, <strong>Heavy Attack</strong> and <strong>Dodge Counter</strong> are replaced with Heavy Attack <strong>Lance of Qingloong</strong>.\r\n \r\n<strong>Heavy Attack: Lance of Qingloong</strong>\r\nPerform up to 3 continuous attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>, considered as Heavy Attack damage."
     },
     {
       "slug": "heavenly-balance",
       "name": "Heavenly Balance",
       "type": "Inherent Skill",
-      "description": "After casting the Intro Skill <strong style=\"color: var(--color-highlight);\">Tactical Strike</strong>, Jiyan's ATK is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s."
+      "description": "After casting the Intro Skill <strong>Tactical Strike</strong>, Jiyan's ATK is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s."
     },
     {
       "slug": "tempest-taming",
@@ -36,13 +36,13 @@
       "slug": "tactical-strike",
       "name": "Tactical Strike",
       "type": "Intro Skill",
-      "description": "Jiyan pierces the target in mid-air, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>."
+      "description": "Jiyan pierces the target in mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>."
     },
     {
       "slug": "qingloong-at-war",
       "name": "Qingloong at War",
       "type": "Forte Circuit",
-      "description": "When casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong>, if Jiyan has <strong style=\"color: var(--color-attribute-aero);\">30</strong> or more \"Resolve\", he consumes <strong style=\"color: var(--color-attribute-aero);\">30</strong> \"Resolve\" to increase the damage of this Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong> by <strong style=\"color: var(--color-attribute-aero);\">20%</strong>.\nWhen Jiyan is in <strong style=\"color: var(--color-highlight);\">Qingloong Mode</strong>, DMG of Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong> is increased by <strong style=\"color: var(--color-attribute-aero);\">20%</strong> and no longer consumes \"Resolve\".\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Resonance Liberation: Emerald Storm: Finale</strong></size>\nWhen casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Emerald Storm: Prelude</strong>, if Jiyan has <strong style=\"color: var(--color-attribute-aero);\">30</strong> \"Resolve\" or more, he will consume <strong style=\"color: var(--color-attribute-aero);\">30</strong> \"Resolve\" to cast Emerald Storm: Finale, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>, considered as Heavy Attack damage.\nEmerald Storm: Finale can be cast in mid-air at low altitude.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Resolve</strong></size>\nJiyan can hold up to <strong style=\"color: var(--color-attribute-aero);\">60</strong> Resolve.\nJiyan gains \"Resolve\" when his Normal Attack <strong style=\"color: var(--color-highlight);\">Lone Lance</strong> hits the target.\nJiyan gains \"Resolve\" when the Intro Skill <strong style=\"color: var(--color-highlight);\">Tactical Strike</strong> hits the target.\nIf Jiyan does not hit a target within <strong style=\"color: var(--color-attribute-aero);\">15</strong>s, his \"Resolve\" will gradually decrease."
+      "description": "When casting Resonance Skill <strong>Windqueller</strong>, if Jiyan has <strong class=\"color-aero\">30</strong> or more \"Resolve\", he consumes <strong class=\"color-aero\">30</strong> \"Resolve\" to increase the damage of this Resonance Skill <strong>Windqueller</strong> by <strong class=\"color-aero\">20%</strong>.\nWhen Jiyan is in <strong>Qingloong Mode</strong>, DMG of Resonance Skill <strong>Windqueller</strong> is increased by <strong class=\"color-aero\">20%</strong> and no longer consumes \"Resolve\".\n \n<strong>Resonance Liberation: Emerald Storm: Finale</strong>\nWhen casting Resonance Liberation <strong>Emerald Storm: Prelude</strong>, if Jiyan has <strong class=\"color-aero\">30</strong> \"Resolve\" or more, he will consume <strong class=\"color-aero\">30</strong> \"Resolve\" to cast Emerald Storm: Finale, dealing <strong class=\"color-aero\">Aero DMG</strong>, considered as Heavy Attack damage.\nEmerald Storm: Finale can be cast in mid-air at low altitude.\n \n<strong>Resolve</strong>\nJiyan can hold up to <strong class=\"color-aero\">60</strong> Resolve.\nJiyan gains \"Resolve\" when his Normal Attack <strong>Lone Lance</strong> hits the target.\nJiyan gains \"Resolve\" when the Intro Skill <strong>Tactical Strike</strong> hits the target.\nIf Jiyan does not hit a target within <strong class=\"color-aero\">15</strong>s, his \"Resolve\" will gradually decrease."
     },
     {
       "slug": "skillful-cooking",
@@ -54,7 +54,7 @@
       "slug": "discipline",
       "name": "Discipline",
       "type": "Outro Skill",
-      "description": "When the next character's Heavy Attack hits a target, Jiyan will summon Qingloong to launch a Coordinated Attack, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong> equal to <strong style=\"color: var(--color-attribute-aero);\">313.40%</strong> of Jiyan's ATK. This attack lasts for <strong style=\"color: var(--color-attribute-aero);\">8</strong>s, and can be triggered once every <strong style=\"color: var(--color-attribute-aero);\">1</strong>s, up to 2 times."
+      "description": "When the next character's Heavy Attack hits a target, Jiyan will summon Qingloong to launch a Coordinated Attack, dealing <strong class=\"color-aero\">Aero DMG</strong> equal to <strong class=\"color-aero\">313.40%</strong> of Jiyan's ATK. This attack lasts for <strong class=\"color-aero\">8</strong>s, and can be triggered once every <strong class=\"color-aero\">1</strong>s, up to 2 times."
     }
   ],
   "resonanceChain": [
@@ -63,42 +63,42 @@
       "slug": "benevolence",
       "name": "Benevolence",
       "params": ["1", "15"],
-      "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong> can be used 1 more time.\r\nWhen casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong>, the \"Resolve\" cost is decreased by {1}."
+      "description": "Resonance Skill <strong>Windqueller</strong> can be used 1 more time.\r\nWhen casting Resonance Skill <strong>Windqueller</strong>, the \"Resolve\" cost is decreased by {1}."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "versatility",
       "name": "Versatility",
       "params": ["30", "28%", "15", "15"],
-      "description": "After casting Intro Skill <strong style=\"color: var(--color-highlight);\">Tactical Strike</strong>, Jiyan gains {0} \"Resolve\" and his ATK is increased by {1} for {2}s. This can be triggered once every {3}s."
+      "description": "After casting Intro Skill <strong>Tactical Strike</strong>, Jiyan gains {0} \"Resolve\" and his ATK is increased by {1} for {2}s. This can be triggered once every {3}s."
     },
     {
       "idx": "Resonance 3-4",
       "slug": "spectation",
       "name": "Spectation",
       "params": ["16%", "32%", "8"],
-      "description": "When casting Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong>, Resonance Liberation <strong style=\"color: var(--color-highlight);\">Emerald Storm: Prelude</strong>, Resonance Skill <strong style=\"color: var(--color-highlight);\">Emerald Storm: Finale</strong> or Intro Skill <strong style=\"color: var(--color-highlight);\">Tactical Strike</strong>, Jiyan's Crit. Rate is increased by {0} and Crit. DMG is increased by {1} for {2}s."
+      "description": "When casting Resonance Skill <strong>Windqueller</strong>, Resonance Liberation <strong>Emerald Storm: Prelude</strong>, Resonance Skill <strong>Emerald Storm: Finale</strong> or Intro Skill <strong>Tactical Strike</strong>, Jiyan's Crit. Rate is increased by {0} and Crit. DMG is increased by {1} for {2}s."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "prudence",
       "name": "Prudence",
       "params": ["25%", "30"],
-      "description": "When casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Emerald Storm: Prelude</strong> or Resonance Liberation <strong style=\"color: var(--color-highlight);\">Emerald Storm: Finale</strong>, the Heavy Attack DMG Bonus of all team members is increased by {0} for {1}s."
+      "description": "When casting Resonance Liberation <strong>Emerald Storm: Prelude</strong> or Resonance Liberation <strong>Emerald Storm: Finale</strong>, the Heavy Attack DMG Bonus of all team members is increased by {0} for {1}s."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "resolution",
       "name": "Resolution",
       "params": ["120%", "3%", "8", "15"],
-      "description": "The DMG multiplier of Outro Skill <strong style=\"color: var(--color-highlight);\">Discipline</strong> is increased by {0}.\r\nWhen Jiyan's attacks hit a target, his ATK is increased by {1} for {2}s, stacking up to {3} times; this effect is immediately maxed after he casts Intro Skill <strong style=\"color: var(--color-highlight);\">Tactical Strike</strong>."
+      "description": "The DMG multiplier of Outro Skill <strong>Discipline</strong> is increased by {0}.\r\nWhen Jiyan's attacks hit a target, his ATK is increased by {1} for {2}s, stacking up to {3} times; this effect is immediately maxed after he casts Intro Skill <strong>Tactical Strike</strong>."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "fortitude",
       "name": "Fortitude",
       "params": ["1", "2", "120%"],
-      "description": "Every time <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong>, Intro Skill <strong style=\"color: var(--color-highlight);\">Tactical Strike</strong> or Resonance Skill <strong style=\"color: var(--color-highlight);\">Windqueller</strong> is used, Jiyan gains {0} stack(s) of \"Momentum\", stacking up to {1} times.\r\nResonance Liberation <strong style=\"color: var(--color-highlight);\">Emerald Storm: Finale</strong> will consume all \"Momentum\", and each stack consumed increases the DMG multiplier of Resonance Liberation <strong style=\"color: var(--color-highlight);\">Emerald Storm: Finale</strong> by {2}."
+      "description": "Every time <strong>Heavy Attack</strong>, Intro Skill <strong>Tactical Strike</strong> or Resonance Skill <strong>Windqueller</strong> is used, Jiyan gains {0} stack(s) of \"Momentum\", stacking up to {1} times.\r\nResonance Liberation <strong>Emerald Storm: Finale</strong> will consume all \"Momentum\", and each stack consumed increases the DMG multiplier of Resonance Liberation <strong>Emerald Storm: Finale</strong> by {2}."
     }
   ],
   "stats": { "hp": 839, "def": 97, "atk": 35, "energy": 12500 },

@@ -6,43 +6,43 @@
       "slug": "half-truths",
       "name": "Half Truths",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nAalto fires up to 5 consecutive shots, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>. Basic Attack 4 will spread the \"Mist\" forward, which lasts for <strong style=\"color: var(--color-attribute-aero);\">1.5</strong>s.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nAalto enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nAalto consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>."
+      "description": "<strong>Basic Attack</strong>\nAalto fires up to 5 consecutive shots, dealing <strong class=\"color-aero\">Aero DMG</strong>. Basic Attack 4 will spread the \"Mist\" forward, which lasts for <strong class=\"color-aero\">1.5</strong>s.\n \n<strong>Heavy Attack</strong>\nAalto enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nAalto consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>."
     },
     {
       "slug": "shift-trick",
       "name": "Shift Trick",
       "type": "Resonance Skill",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Mist Avatar</strong></size>\r\nCasts \"Mist\" and <strong style=\"color: var(--color-attribute-aero);\">1</strong> \"Mist Avatar(s)\" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate <strong style=\"color: var(--color-attribute-aero);\">6</strong> <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> around them, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Mist Missiles</strong></size>\r\nDeals <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>, considered as Resonance Skill damage."
+      "description": "<strong>Mist Avatar</strong>\r\nCasts \"Mist\" and <strong class=\"color-aero\">1</strong> \"Mist Avatar(s)\" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate <strong class=\"color-aero\">6</strong> <strong>Mist Bullets</strong> around them, dealing <strong class=\"color-aero\">Aero DMG</strong>.\r\n \r\n<strong>Mist Missiles</strong>\r\nDeals <strong class=\"color-aero\">Aero DMG</strong>, considered as Resonance Skill damage."
     },
     {
       "slug": "flower-in-the-mist",
       "name": "Flower in the Mist",
       "type": "Resonance Liberation",
-      "description": "Generate a \"Gate of Quandary\" in front, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero DMG</strong>. When bullets pass through the \"Gate of Quandary\", ATK is increased. \"Gate of Quandary\" lasts for <strong style=\"color: var(--color-attribute-aero);\">10</strong>s."
+      "description": "Generate a \"Gate of Quandary\" in front, dealing <strong class=\"color-aero\">Aero DMG</strong>. When bullets pass through the \"Gate of Quandary\", ATK is increased. \"Gate of Quandary\" lasts for <strong class=\"color-aero\">10</strong>s."
     },
     {
       "slug": "perfect-performance",
       "name": "Perfect Performance",
       "type": "Inherent Skill",
-      "description": "Aalto's <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> will always critically hit, triggered once every <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."
+      "description": "Aalto's <strong>Heavy Attack</strong> will always critically hit, triggered once every <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."
     },
     {
       "slug": "mid-game-break",
       "name": "Mid-game Break",
       "type": "Inherent Skill",
-      "description": "Aalto will continuously recover Stamina when he is in the Forte Circuit <strong style=\"color: var(--color-highlight);\">Miscloak Dash</strong> state."
+      "description": "Aalto will continuously recover Stamina when he is in the Forte Circuit <strong>Miscloak Dash</strong> state."
     },
     {
       "slug": "feint-shot",
       "name": "Feint Shot",
       "type": "Intro Skill",
-      "description": "Aalto shows up out of thin air to performs rapid continuous shooting, dealing <strong style=\"color: var(--color-attribute-aero);\">Aero damage</strong>."
+      "description": "Aalto shows up out of thin air to performs rapid continuous shooting, dealing <strong class=\"color-aero\">Aero damage</strong>."
     },
     {
       "slug": "misty-cover",
       "name": "Misty Cover",
       "type": "Forte Circuit",
-      "description": "When Aalto passes through \"Mist\" or \"Gate of Quandary\", he enters \"Mistcloak Dash\".\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mistcloak Dash</strong></size>\nMovement speed increased;\nDuring this period, \"Mist Drops\" are continuously consumed, and for each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" consumed, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Missile</strong> is generated.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mist Drops</strong></size>\nAalto can hold up to <strong style=\"color: var(--theme-palette-color-1);\">6</strong> Mist Drops.\nWhen <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-air Attack</strong> passes through \"Mist\" and hits the target, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" is recovered."
+      "description": "When Aalto passes through \"Mist\" or \"Gate of Quandary\", he enters \"Mistcloak Dash\".\n \n<strong>Mistcloak Dash</strong>\nMovement speed increased;\nDuring this period, \"Mist Drops\" are continuously consumed, and for each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" consumed, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong>Mist Missile</strong> is generated.\n \n<strong>Mist Drops</strong>\nAalto can hold up to <strong style=\"color: var(--theme-palette-color-1);\">6</strong> Mist Drops.\nWhen <strong>Basic Attack</strong> or <strong>Mid-air Attack</strong> passes through \"Mist\" and hits the target, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" is recovered."
     },
     {
       "slug": "skillful-cooking",
@@ -63,7 +63,7 @@
       "slug": "trickster-s-opening-show",
       "name": "Trickster's Opening Show",
       "params": ["4"],
-      "description": "The cooldown of Resonance Skill <strong style=\"color: var(--color-highlight);\">Shift Trick</strong> is reduced by {0}s."
+      "description": "The cooldown of Resonance Skill <strong>Shift Trick</strong> is reduced by {0}s."
     },
     {
       "idx": "Resonance 2-4",
@@ -77,28 +77,28 @@
       "slug": "hazey-transition",
       "name": "Hazey Transition",
       "params": ["50%"],
-      "description": "When Aalto's <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong> passes through the \"Gate of Quandary\", 2 more bullets will be generated, dealing {0} of the DMG of <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> or <strong style=\"color: var(--color-highlight);\">Mid-Air Attack</strong>."
+      "description": "When Aalto's <strong>Basic Attack</strong> or <strong>Mid-Air Attack</strong> passes through the \"Gate of Quandary\", 2 more bullets will be generated, dealing {0} of the DMG of <strong>Basic Attack</strong> or <strong>Mid-Air Attack</strong>."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "blake-bloom-for-finale",
       "name": "Blake Bloom for Finale",
       "params": ["30%", "30%"],
-      "description": "The damage of Resonance Skill <strong style=\"color: var(--color-highlight);\">Mist Bullets</strong> is increased by {0}; Aalto receives {1} less damage in his Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state."
+      "description": "The damage of Resonance Skill <strong>Mist Bullets</strong> is increased by {0}; Aalto receives {1} less damage in his Forte Circuit <strong>Mistcloak Dash</strong> state."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "applause-of-the-lost",
       "name": "Applause of the Lost",
       "params": ["25%", "6"],
-      "description": "In the Forte Circuit <strong style=\"color: var(--color-highlight);\">Mistcloak Dash</strong> state, Aalto's Aero DMG Bonus is increased by {0} for {1}s."
+      "description": "In the Forte Circuit <strong>Mistcloak Dash</strong> state, Aalto's Aero DMG Bonus is increased by {0} for {1}s."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "broker-s-secrets",
       "name": "Broker’s Secrets",
       "params": ["8%", "50%"],
-      "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Flower in the Mist</strong> now additionally increases Crit. Rate by {0}. When Aalto's Heavy Attack passes through the \"Gate of Quandary\", the damage dealt is additionally increased by {1}."
+      "description": "Resonance Liberation <strong>Flower in the Mist</strong> now additionally increases Crit. Rate by {0}. When Aalto's Heavy Attack passes through the \"Gate of Quandary\", the damage dealt is additionally increased by {1}."
     }
   ],
   "stats": { "hp": 788, "def": 88, "atk": 21, "energy": 15000 },

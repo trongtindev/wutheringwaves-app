@@ -1,26 +1,26 @@
 // en
-import en from './locales/en.json';
+import en from './locales/en/default.json';
 
 // id
-import id from './locales/id.json';
+import id from './locales/id/default.json';
 
 // ja
-import ja from './locales/ja.json';
+import ja from './locales/ja/default.json';
 
 // ko
-import ko from './locales/ko.json';
+import ko from './locales/ko/default.json';
 
 // th
-import th from './locales/th.json';
+import th from './locales/th/default.json';
 
 // tr
-import tr from './locales/tr.json';
+import tr from './locales/tr/default.json';
 
 // vi
-import vi from './locales/vi.json';
+import vi from './locales/vi/default.json';
 
 // uk
-import uk from './locales/uk.json';
+import uk from './locales/uk/default.json';
 
 export default defineI18nConfig(() => ({
   legacy: false,
@@ -37,6 +37,7 @@ export default defineI18nConfig(() => ({
     uk: { ...uk }
   },
   missingWarn: false,
+  fallbackWarn: false,
   warnHtmlInMessage: false,
   warnHtmlMessage: false
 }));

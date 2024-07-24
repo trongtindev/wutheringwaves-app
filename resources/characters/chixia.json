@@ -6,43 +6,43 @@
       "slug": "pow-pow",
       "name": "POW POW",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nChixia fires up to 4 consecutive shots, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nChixia enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nChixia consumes STA to perform consecutive shots at the target in mid-air, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>."
+      "description": "<strong>Basic Attack</strong>\nChixia fires up to 4 consecutive shots, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Heavy Attack</strong>\nChixia enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nChixia consumes STA to perform consecutive shots at the target in mid-air, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
     },
     {
       "slug": "whizzing-fight-spirit",
       "name": "Whizzing Fight Spirit",
       "type": "Resonance Skill",
-      "description": "Chixia unleashes a flurry of shots, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>.\r\n<size=10> </size>\r\n<strong style=\"color: var(--color-highlight);\">Whizzing Fight Spirit</strong> has 2 initial charges."
+      "description": "Chixia unleashes a flurry of shots, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\r\n \r\n<strong>Whizzing Fight Spirit</strong> has 2 initial charges."
     },
     {
       "slug": "blazing-flames",
       "name": "Blazing Flames",
       "type": "Resonance Liberation",
-      "description": "Chixia fires up fast shots at nearby enemies, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>."
+      "description": "Chixia fires up fast shots at nearby enemies, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
     },
     {
       "slug": "scorching-magazine",
       "name": "Scorching Magazine",
       "type": "Inherent Skill",
-      "description": "Max \"Thermobaric Bullets\" is increased by <strong style=\"color: var(--theme-palette-color-1);\">10</strong> rounds. The damage of Resonance Skill <strong style=\"color: var(--color-highlight);\">Boom Boom</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">50%</strong>."
+      "description": "Max \"Thermobaric Bullets\" is increased by <strong style=\"color: var(--theme-palette-color-1);\">10</strong> rounds. The damage of Resonance Skill <strong>Boom Boom</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">50%</strong>."
     },
     {
       "slug": "numbingly-spicy",
       "name": "Numbingly Spicy!",
       "type": "Inherent Skill",
-      "description": "Each \"Thermobaric Bullets\" that hits a target during Resonance Skill <strong style=\"color: var(--color-highlight);\">DAKA DAKA!</strong> increases ATK by <strong style=\"color: var(--theme-palette-color-1);\">1%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">10</strong>s, stacking up to <strong style=\"color: var(--theme-palette-color-1);\">30</strong> times."
+      "description": "Each \"Thermobaric Bullets\" that hits a target during Resonance Skill <strong>DAKA DAKA!</strong> increases ATK by <strong style=\"color: var(--theme-palette-color-1);\">1%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">10</strong>s, stacking up to <strong style=\"color: var(--theme-palette-color-1);\">30</strong> times."
     },
     {
       "slug": "grand-entrance",
       "name": "Grand Entrance",
       "type": "Intro Skill",
-      "description": "Chixia makes a heroic entrance and fires rapidly with her dual pistols at the target, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>."
+      "description": "Chixia makes a heroic entrance and fires rapidly with her dual pistols at the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
     },
     {
       "slug": "heroic-bullets",
       "name": "Heroic Bullets",
       "type": "Forte Circuit",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Resonance Skill: DAKA DAKA!</strong></size>\nHold Resonance Skill <strong style=\"color: var(--color-highlight);\">Whizzing Fight Spirit</strong> to enter <strong style=\"color: var(--color-highlight);\">DAKA DAKA!</strong>. In this state:\nChixia continuously consumes \"Thermobaric Bullets\" to attack the target, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>, considered as Resonance Skill damage;\nTap <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> to cast <strong style=\"color: var(--color-highlight);\">Basic Attack 4</strong>, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>, considered as Basic Attack damage. Then she terminates \"DAKA DAKA!\";\n·If <strong style=\"color: var(--color-attribute-fusion);\">30</strong> \"Thermobaric Bullets\" have been fired when <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> is activated, Chixia will cast Resonance Skill <strong style=\"color: var(--color-highlight);\">Boom Boom</strong> and terminate \"DAKA DAKA!\"\nChixia terminates \"DAKA DAKA!\" when all \"Thermobaric Bullets\" are consumed.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Resonance Skill: Boom Boom</strong></size>\nDeal <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong>, considered as Resonance Skill damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Thermobaric Bullets</strong></size>\nChixia can hold up to <strong style=\"color: var(--color-attribute-fusion);\">60</strong> \"Thermobaric Bullets\".\nInherent Skill <strong style=\"color: var(--color-highlight);\">Scorching Magazine</strong> increases Max \"Thermobaric Bullets\" by <strong style=\"color: var(--color-attribute-fusion);\">10</strong>.\nChixia obtains \"Thermobaric Bullets\" for every Normal Attack <strong style=\"color: var(--color-highlight);\">POW POW</strong> on hit.\nChixia obtains \"Thermobaric Bullets\" upon casting Intro Skill <strong style=\"color: var(--color-highlight);\">Grand Entrance</strong> and Resonance Skill <strong style=\"color: var(--color-highlight);\">Whizzing Fight Spirit</strong>."
+      "description": "<strong>Resonance Skill: DAKA DAKA!</strong>\nHold Resonance Skill <strong>Whizzing Fight Spirit</strong> to enter <strong>DAKA DAKA!</strong>. In this state:\nChixia continuously consumes \"Thermobaric Bullets\" to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill damage;\nTap <strong>Basic Attack</strong> to cast <strong>Basic Attack 4</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Basic Attack damage. Then she terminates \"DAKA DAKA!\";\n·If <strong class=\"color-fusion\">30</strong> \"Thermobaric Bullets\" have been fired when <strong>Basic Attack</strong> is activated, Chixia will cast Resonance Skill <strong>Boom Boom</strong> and terminate \"DAKA DAKA!\"\nChixia terminates \"DAKA DAKA!\" when all \"Thermobaric Bullets\" are consumed.\n \n<strong>Resonance Skill: Boom Boom</strong>\nDeal <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill damage.\n \n<strong>Thermobaric Bullets</strong>\nChixia can hold up to <strong class=\"color-fusion\">60</strong> \"Thermobaric Bullets\".\nInherent Skill <strong>Scorching Magazine</strong> increases Max \"Thermobaric Bullets\" by <strong class=\"color-fusion\">10</strong>.\nChixia obtains \"Thermobaric Bullets\" for every Normal Attack <strong>POW POW</strong> on hit.\nChixia obtains \"Thermobaric Bullets\" upon casting Intro Skill <strong>Grand Entrance</strong> and Resonance Skill <strong>Whizzing Fight Spirit</strong>."
     },
     {
       "slug": "skillful-cooking",
@@ -54,7 +54,7 @@
       "slug": "leaping-flames",
       "name": "Leaping Flames",
       "type": "Outro Skill",
-      "description": "Chixia releases a shock wave surrounding the target, dealing <strong style=\"color: var(--color-attribute-fusion);\">Fusion DMG</strong> equal to <strong style=\"color: var(--color-attribute-fusion);\">530.00%</strong> of Chixia's ATK to enemies within the range."
+      "description": "Chixia releases a shock wave surrounding the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong> equal to <strong class=\"color-fusion\">530.00%</strong> of Chixia's ATK to enemies within the range."
     }
   ],
   "resonanceChain": [
@@ -63,42 +63,42 @@
       "slug": "no-1-hero-play-fan",
       "name": "No.1 Hero Play Fan",
       "params": [],
-      "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Boom Boom</strong> hits will always be Critical Hits."
+      "description": "Resonance Skill <strong>Boom Boom</strong> hits will always be Critical Hits."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "leaping-sparkles",
       "name": "Leaping Sparkles",
       "params": ["1", "5", "20"],
-      "description": "During Resonance Liberation <strong style=\"color: var(--color-highlight);\">Blazing Flames</strong>, for every {0} target defeated, Chixia recovers {1} Resonance Energy, up to {2} each time."
+      "description": "During Resonance Liberation <strong>Blazing Flames</strong>, for every {0} target defeated, Chixia recovers {1} Resonance Energy, up to {2} each time."
     },
     {
       "idx": "Resonance 3-4",
       "slug": "eternal-flames",
       "name": "Eternal Flames",
       "params": ["50%", "40%"],
-      "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Blazing Flames</strong> deals {1} more damage to targets whose HP is below {0}."
+      "description": "Resonance Liberation <strong>Blazing Flames</strong> deals {1} more damage to targets whose HP is below {0}."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "hero-s-ultimate-move",
       "name": "Hero’s Ultimate Move",
       "params": ["60"],
-      "description": "Resonance Liberation <strong style=\"color: var(--color-highlight);\">Blazing Flames</strong> grants {0} “Thermobaric Bullets” and immediately resets the Cooldown of Resonance Skill <strong style=\"color: var(--color-highlight);\">Whizzing Fight Spirit</strong>."
+      "description": "Resonance Liberation <strong>Blazing Flames</strong> grants {0} “Thermobaric Bullets” and immediately resets the Cooldown of Resonance Skill <strong>Whizzing Fight Spirit</strong>."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "triumphant-explosions",
       "name": "Triumphant Explosions",
       "params": ["30%"],
-      "description": "When the Inherent Skill <strong style=\"color: var(--color-highlight);\">Numbingly Spicy!</strong> reaches max stacks, ATK is additionally increased by {0}."
+      "description": "When the Inherent Skill <strong>Numbingly Spicy!</strong> reaches max stacks, ATK is additionally increased by {0}."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "easter-egg-performance",
       "name": "Easter Egg Performance",
       "params": ["25%", "15"],
-      "description": "Resonance Skill <strong style=\"color: var(--color-highlight);\">Boom Boom</strong> increases the Basic Attack DMG Bonus of all team members by {0} for {1}s."
+      "description": "Resonance Skill <strong>Boom Boom</strong> increases the Basic Attack DMG Bonus of all team members by {0} for {1}s."
     }
   ],
   "stats": { "hp": 727, "def": 78, "atk": 24, "energy": 15000 },

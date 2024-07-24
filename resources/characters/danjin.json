@@ -6,43 +6,43 @@
       "slug": "execution",
       "name": "Execution",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\r\nDanjin performs up to 3 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\r\nDanjin combines her Forte with the blade in her hand and consumes Stamina to launch consecutive attacks, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\r\nConsume Stamina to perform a Mid-air Plunging Attack, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\r\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to launch an attack, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>.\r\n<size=10> </size>\r\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter: Ruby Shades</strong></size>\r\nAfter a successful Dodge Counter, Danjin can use the Resonance Skill <strong style=\"color: var(--color-highlight);\">Crimson Fragment</strong> to perform Resonance Skill: <strong style=\"color: var(--color-highlight);\">Crimson Erosion</strong>."
+      "description": "<strong>Basic Attack</strong>\r\nDanjin performs up to 3 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Heavy Attack</strong>\r\nDanjin combines her Forte with the blade in her hand and consumes Stamina to launch consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Mid-air Attack</strong>\r\nConsume Stamina to perform a Mid-air Plunging Attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Dodge Counter</strong>\r\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to launch an attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Dodge Counter: Ruby Shades</strong>\r\nAfter a successful Dodge Counter, Danjin can use the Resonance Skill <strong>Crimson Fragment</strong> to perform Resonance Skill: <strong>Crimson Erosion</strong>."
     },
     {
       "slug": "crimson-fragment",
       "name": "Crimson Fragment",
       "type": "Resonance Skill",
-      "description": "When casting <strong style=\"color: var(--color-highlight);\">Crimson Fragment</strong>, each attack consumes <strong style=\"color: var(--color-attribute-havoc);\">3%</strong> of Danjin's max HP. When Danjin's HP is less than <strong style=\"color: var(--color-attribute-havoc);\">1%</strong>, this no longer consumes HP.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Carmine Gleam</strong></size>\nDanjin attacks the target, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Crimson Erosion</strong></size>\nAfter <strong style=\"color: var(--color-highlight);\">Basic Attack 2</strong>, <strong style=\"color: var(--color-highlight);\">Dodge Counter</strong> or Intro Skill <strong style=\"color: var(--color-highlight);\">Vindication</strong>, use <strong style=\"color: var(--color-highlight);\">Resonance Skill</strong> to perform up to 2 consecutive strikes, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>.\nWhen <strong style=\"color: var(--color-highlight);\">Crimson Erosion II</strong> hits a target, apply <strong style=\"color: var(--color-highlight);\">Incinerating Will</strong> to it.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Incinerating Will</strong></size>\nDanjin's damage dealt to targets marked with <strong style=\"color: var(--color-highlight);\">Incinerating Will</strong> is increased by <strong style=\"color: var(--color-attribute-havoc);\">20%</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Sanguine Pulse</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Resonance Skill</strong> after <strong style=\"color: var(--color-highlight);\">Basic Attack 3</strong> to perform up to 3 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>."
+      "description": "When casting <strong>Crimson Fragment</strong>, each attack consumes <strong class=\"color-havoc\">3%</strong> of Danjin's max HP. When Danjin's HP is less than <strong class=\"color-havoc\">1%</strong>, this no longer consumes HP.\n \n<strong>Carmine Gleam</strong>\nDanjin attacks the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Crimson Erosion</strong>\nAfter <strong>Basic Attack 2</strong>, <strong>Dodge Counter</strong> or Intro Skill <strong>Vindication</strong>, use <strong>Resonance Skill</strong> to perform up to 2 consecutive strikes, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\nWhen <strong>Crimson Erosion II</strong> hits a target, apply <strong>Incinerating Will</strong> to it.\n \n<strong>Incinerating Will</strong>\nDanjin's damage dealt to targets marked with <strong>Incinerating Will</strong> is increased by <strong class=\"color-havoc\">20%</strong>.\n \n<strong>Sanguine Pulse</strong>\nUse <strong>Resonance Skill</strong> after <strong>Basic Attack 3</strong> to perform up to 3 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
     },
     {
       "slug": "crimson-bloom",
       "name": "Crimson Bloom",
       "type": "Resonance Liberation",
-      "description": "Danjin's anger intensifies as she frantically swings her dual blades, performing multiple rapid consecutive attacks, and <strong style=\"color: var(--color-attribute-havoc);\">1</strong> Scarlet Burst attack(s), dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>."
+      "description": "Danjin's anger intensifies as she frantically swings her dual blades, performing multiple rapid consecutive attacks, and <strong class=\"color-havoc\">1</strong> Scarlet Burst attack(s), dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
     },
     {
       "slug": "crimson-light",
       "name": "Crimson Light",
       "type": "Inherent Skill",
-      "description": "Damage of Resonance Skill <strong style=\"color: var(--color-highlight);\">Crimson Erosion</strong> triggered by <strong style=\"color: var(--color-highlight);\">Dodge Counter: Ruby Shades</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong>. The HP cost and stacks of \"Ruby Blossom\" recovered are doubled."
+      "description": "Damage of Resonance Skill <strong>Crimson Erosion</strong> triggered by <strong>Dodge Counter: Ruby Shades</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong>. The HP cost and stacks of \"Ruby Blossom\" recovered are doubled."
     },
     {
       "slug": "overflow",
       "name": "Overflow",
       "type": "Inherent Skill",
-      "description": "After casting the Resonance Skill <strong style=\"color: var(--color-highlight);\">Sanguine Pulse</strong>, Danjin's Heavy Attack damage is increased by <strong style=\"color: var(--theme-palette-color-1);\">30%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s."
+      "description": "After casting the Resonance Skill <strong>Sanguine Pulse</strong>, Danjin's Heavy Attack damage is increased by <strong style=\"color: var(--theme-palette-color-1);\">30%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s."
     },
     {
       "slug": "vindiction",
       "name": "Vindiction",
       "type": "Intro Skill",
-      "description": "With unwavering determination, Danjin unleashes a strike, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>."
+      "description": "With unwavering determination, Danjin unleashes a strike, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
     },
     {
       "slug": "serene-vigil",
       "name": "Serene Vigil",
       "type": "Forte Circuit",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Chaoscleave</strong></size>\nAfter accumulating <strong style=\"color: var(--color-attribute-havoc);\">60</strong> \"Ruby Blossom\", long press <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> to consume all \"Ruby Blossom\" to cast <strong style=\"color: var(--color-highlight);\">Chaoscleave</strong>, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong> considered as Heavy Attack damage, and restore HP for Danjin.\nIf current \"Ruby Blossom\" reaches over <strong style=\"color: var(--color-attribute-havoc);\">120</strong>, this skill consumes <strong style=\"color: var(--color-attribute-havoc);\">120</strong> \"Ruby Blossom\" to increase the damage multiplier of <strong style=\"color: var(--color-highlight);\">Chaoscleave</strong> and <strong style=\"color: var(--color-highlight);\">Scatterbloom</strong> performed this time.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack: Scatterbloom</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after Heavy Attack <strong style=\"color: var(--color-highlight);\">Chaoscleave</strong> to cast <strong style=\"color: var(--color-highlight);\">Shatter</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-havoc);\">Havoc DMG</strong>, considered as Heavy Attack damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Ruby Blossom</strong></size>\nDanjin can hold up to <strong style=\"color: var(--color-attribute-havoc);\">120</strong> stacks of Ruby Blossom.\nDanjin obtains \"Ruby Blossom\" when using Resonance Skill <strong style=\"color: var(--color-highlight);\">Crimson Fragment</strong>."
+      "description": "<strong>Heavy Attack: Chaoscleave</strong>\nAfter accumulating <strong class=\"color-havoc\">60</strong> \"Ruby Blossom\", long press <strong>Basic Attack</strong> to consume all \"Ruby Blossom\" to cast <strong>Chaoscleave</strong>, dealing <strong class=\"color-havoc\">Havoc DMG</strong> considered as Heavy Attack damage, and restore HP for Danjin.\nIf current \"Ruby Blossom\" reaches over <strong class=\"color-havoc\">120</strong>, this skill consumes <strong class=\"color-havoc\">120</strong> \"Ruby Blossom\" to increase the damage multiplier of <strong>Chaoscleave</strong> and <strong>Scatterbloom</strong> performed this time.\n \n<strong>Heavy Attack: Scatterbloom</strong>\nUse <strong>Basic Attack</strong> after Heavy Attack <strong>Chaoscleave</strong> to cast <strong>Shatter</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Ruby Blossom</strong>\nDanjin can hold up to <strong class=\"color-havoc\">120</strong> stacks of Ruby Blossom.\nDanjin obtains \"Ruby Blossom\" when using Resonance Skill <strong>Crimson Fragment</strong>."
     },
     {
       "slug": "skillful-cooking",
@@ -63,14 +63,14 @@
       "slug": "crimson-heart-of-justice",
       "name": "Crimson Heart of Justice",
       "params": ["5%", "6", "6", "1"],
-      "description": "When Danjin attacks a target with Resonance Skill's <strong style=\"color: var(--color-highlight);\">Incinerating Will</strong>, her ATK is increased by {0} for {1}s, stacking up to {2} times. Danjin loses {3} stacks of this effect each time she takes damage."
+      "description": "When Danjin attacks a target with Resonance Skill's <strong>Incinerating Will</strong>, her ATK is increased by {0} for {1}s, stacking up to {2} times. Danjin loses {3} stacks of this effect each time she takes damage."
     },
     {
       "idx": "Resonance II-IV",
       "slug": "dusted-mirror",
       "name": "Dusted Mirror",
       "params": ["20%"],
-      "description": "When Danjin attacks a target with Resonance Skill's <strong style=\"color: var(--color-highlight);\">Incinerating Will</strong>, her damage dealt is increased by {0}."
+      "description": "When Danjin attacks a target with Resonance Skill's <strong>Incinerating Will</strong>, her damage dealt is increased by {0}."
     },
     {
       "idx": "Resonance III-IV",
@@ -84,7 +84,7 @@
       "slug": "solitary-carnation",
       "name": "Solitary Carnation",
       "params": ["60", "15%"],
-      "description": "When Danjin has more than {0} \"Ruby Blossom\", her Crit. Rate is increased by {1}.\nThis effect lasts until the end of <strong style=\"color: var(--color-highlight);\">Heavy Attack: Scatterbloom</strong> even after all \"Ruby Blossom\" is consumed when casting <strong style=\"color: var(--color-highlight);\">Heavy Attack: Chaoscleave</strong>."
+      "description": "When Danjin has more than {0} \"Ruby Blossom\", her Crit. Rate is increased by {1}.\nThis effect lasts until the end of <strong>Heavy Attack: Scatterbloom</strong> even after all \"Ruby Blossom\" is consumed when casting <strong>Heavy Attack: Chaoscleave</strong>."
     },
     {
       "idx": "Resonance V-IV",
@@ -98,7 +98,7 @@
       "slug": "bloodied-jade",
       "name": "Bloodied Jade",
       "params": ["20%", "20"],
-      "description": "Heavy Attack <strong style=\"color: var(--color-highlight);\">Chaoscleave</strong> increases the ATK of all team members by {0} for {1}s."
+      "description": "Heavy Attack <strong>Chaoscleave</strong> increases the ATK of all team members by {0} for {1}s."
     }
   ],
   "stats": { "hp": 755, "def": 94, "atk": 21, "energy": 10000 },

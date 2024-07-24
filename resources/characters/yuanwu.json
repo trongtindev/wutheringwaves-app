@@ -6,43 +6,43 @@
       "slug": "leihuangquan",
       "name": "Leihuangquan",
       "type": "Basic Attack",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Basic Attack</strong></size>\nYuanwu performs up to 5 consecutive attacks, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Heavy Attack</strong></size>\nYuanwu consumes Stamina to attack the target, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Mid-air Attack</strong></size>\nYuanwu consumes Stamina to launch a Mid-air Plunging Attack, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Dodge Counter</strong></size>\nUse <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> after a successful <strong style=\"color: var(--color-highlight);\">Dodge</strong> to attack the target, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>."
+      "description": "<strong>Basic Attack</strong>\nYuanwu performs up to 5 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nYuanwu consumes Stamina to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nYuanwu consumes Stamina to launch a Mid-air Plunging Attack, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
     },
     {
       "slug": "leihuang-master",
       "name": "Leihuang Master",
       "type": "Resonance Skill",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Thunder Wedge</strong></size>\nYuanwu summons <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong>, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>, and forms a <strong style=\"color: var(--color-highlight);\">Thunder Field</strong> centered on the <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong>. <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> lasts for <strong style=\"color: var(--color-attribute-electro);\">12</strong>s.\nForte Circuit <strong style=\"color: var(--color-highlight);\">Rumbling Spark</strong> and Resonance Liberation <strong style=\"color: var(--color-highlight);\">Blazing Might</strong> will immediately detonate Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> on the field, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>, considered as Resonance Skill Damage.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Thunder Field</strong></size>\nThe on-field character gains the effects below when in the <strong style=\"color: var(--color-highlight);\">Thunder Field</strong>: a Coordinated Attack from Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> is triggered when attacks hit a target, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>. This can be triggered once every <strong style=\"color: var(--color-attribute-electro);\">1.2</strong>s. The effect lasts for <strong style=\"color: var(--color-attribute-electro);\">1.5</strong>s."
+      "description": "<strong>Thunder Wedge</strong>\nYuanwu summons <strong>Thunder Wedge</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>, and forms a <strong>Thunder Field</strong> centered on the <strong>Thunder Wedge</strong>. <strong>Thunder Wedge</strong> lasts for <strong class=\"color-electro\">12</strong>s.\nForte Circuit <strong>Rumbling Spark</strong> and Resonance Liberation <strong>Blazing Might</strong> will immediately detonate Resonance Skill <strong>Thunder Wedge</strong> on the field, dealing <strong class=\"color-electro\">Electro DMG</strong>, considered as Resonance Skill Damage.\n \n<strong>Thunder Field</strong>\nThe on-field character gains the effects below when in the <strong>Thunder Field</strong>: a Coordinated Attack from Resonance Skill <strong>Thunder Wedge</strong> is triggered when attacks hit a target, dealing <strong class=\"color-electro\">Electro DMG</strong>. This can be triggered once every <strong class=\"color-electro\">1.2</strong>s. The effect lasts for <strong class=\"color-electro\">1.5</strong>s."
     },
     {
       "slug": "blazing-might",
       "name": "Blazing Might",
       "type": "Resonance Liberation",
-      "description": "Awaken the power of thunder and provide Forte Circuit <strong style=\"color: var(--color-highlight);\">Lightning Infused</strong> status for all nearby characters for <strong style=\"color: var(--color-attribute-electro);\">10</strong>s, granting them increased Anti-interruption, then perform a powerful blow that deals <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>.\n<size=10> </size>"
+      "description": "Awaken the power of thunder and provide Forte Circuit <strong>Lightning Infused</strong> status for all nearby characters for <strong class=\"color-electro\">10</strong>s, granting them increased Anti-interruption, then perform a powerful blow that deals <strong class=\"color-electro\">Electro DMG</strong>.\n "
     },
     {
       "slug": "thunderweaver",
       "name": "Thunderweaver",
       "type": "Inherent Skill",
-      "description": "The damage multiplier of Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Uprising</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">40%</strong>, and its depletion of enemy Vibration Strength is enhanced."
+      "description": "The damage multiplier of Resonance Skill <strong>Thunder Uprising</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">40%</strong>, and its depletion of enemy Vibration Strength is enhanced."
     },
     {
       "slug": "reserved-confidence",
       "name": "Reserved Confidence",
       "type": "Inherent Skill",
-      "description": "The ranges of the Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Field</strong> and <strong style=\"color: var(--color-highlight);\">Thunder Uprising</strong> are greatly expanded. When exiting during combat, if <strong style=\"color: var(--color-highlight);\">Readiness</strong> is not full, Yuanwu will automatically leave <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> in place."
+      "description": "The ranges of the Resonance Skill <strong>Thunder Field</strong> and <strong>Thunder Uprising</strong> are greatly expanded. When exiting during combat, if <strong>Readiness</strong> is not full, Yuanwu will automatically leave <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong>Thunder Wedge</strong> in place."
     },
     {
       "slug": "thunder-bombardment",
       "name": "Thunder Bombardment",
       "type": "Intro Skill",
-      "description": "Attack the target, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>."
+      "description": "Attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
     },
     {
       "slug": "unassuming-blade",
       "name": "Unassuming Blade",
       "type": "Forte Circuit",
-      "description": "<size=40><strong style=\"color: var(--color-title);\">Rumbling Spark</strong></size>\nWhen \"Readiness\" is full, long press Resonance Skill to consume all \"Readiness\" and cast Rumbling Spark, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong> and entering the <strong style=\"color: var(--color-highlight);\">Lightning Infused</strong> state.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Thunder Uprising</strong></size>\nWhen you have full \"Readiness\", Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> will cast <strong style=\"color: var(--color-highlight);\">Thunder Uprising</strong>, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Lightning Infused</strong></size>\nThe character in <strong style=\"color: var(--color-highlight);\">Lightning Infused</strong> state has a greatly increased anti-interruption.\nWhen Yuanwu is in this state:\n-<strong style=\"color: var(--color-highlight);\">Basic Attacks</strong>: Hits targets in a larger range, depletes enemy Vibration Strength faster;\n-<strong style=\"color: var(--color-highlight);\">Heavy Attacks</strong>: Attack speed is increased, deplete enemy Vibration Strength faster;\n-<strong style=\"color: var(--color-highlight);\">Dodge Counters</strong>: Attack speed is increased, deplete enemy Vibration Strength faster.\n-Use <strong style=\"color: var(--color-highlight);\">Basic Attack</strong> within <strong style=\"color: var(--color-attribute-electro);\">3</strong>s after casting a <strong style=\"color: var(--color-highlight);\">Heavy Attack</strong> or a successful <strong style=\"color: var(--color-highlight);\">Counterattack</strong> to cast <strong style=\"color: var(--color-highlight);\">Thunderweaver</strong>, dealing <strong style=\"color: var(--color-attribute-electro);\">Electro DMG</strong>, considered as Basic Attack damage;\nYuanwu does not recover \"Readiness\" in this state.\n<size=10> </size>\n<size=40><strong style=\"color: var(--color-title);\">Readiness</strong></size>\nYuanwu can hold up to <strong style=\"color: var(--color-attribute-electro);\">100</strong> \"Readiness\".\nWhen Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> is on the field, Yuanwu gains <strong style=\"color: var(--color-attribute-electro);\">6</strong> \"Readiness\" every second, even when he is not the on-field character;\nWhen Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> hits a target with a Coordinated Attack, Yuanwu gains <strong style=\"color: var(--color-attribute-electro);\">5</strong> \"Readiness\"."
+      "description": "<strong>Rumbling Spark</strong>\nWhen \"Readiness\" is full, long press Resonance Skill to consume all \"Readiness\" and cast Rumbling Spark, dealing <strong class=\"color-electro\">Electro DMG</strong> and entering the <strong>Lightning Infused</strong> state.\n \n<strong>Thunder Uprising</strong>\nWhen you have full \"Readiness\", Resonance Skill <strong>Thunder Wedge</strong> will cast <strong>Thunder Uprising</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Lightning Infused</strong>\nThe character in <strong>Lightning Infused</strong> state has a greatly increased anti-interruption.\nWhen Yuanwu is in this state:\n-<strong>Basic Attacks</strong>: Hits targets in a larger range, depletes enemy Vibration Strength faster;\n-<strong>Heavy Attacks</strong>: Attack speed is increased, deplete enemy Vibration Strength faster;\n-<strong>Dodge Counters</strong>: Attack speed is increased, deplete enemy Vibration Strength faster.\n-Use <strong>Basic Attack</strong> within <strong class=\"color-electro\">3</strong>s after casting a <strong>Heavy Attack</strong> or a successful <strong>Counterattack</strong> to cast <strong>Thunderweaver</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>, considered as Basic Attack damage;\nYuanwu does not recover \"Readiness\" in this state.\n \n<strong>Readiness</strong>\nYuanwu can hold up to <strong class=\"color-electro\">100</strong> \"Readiness\".\nWhen Resonance Skill <strong>Thunder Wedge</strong> is on the field, Yuanwu gains <strong class=\"color-electro\">6</strong> \"Readiness\" every second, even when he is not the on-field character;\nWhen Resonance Skill <strong>Thunder Wedge</strong> hits a target with a Coordinated Attack, Yuanwu gains <strong class=\"color-electro\">5</strong> \"Readiness\"."
     },
     {
       "slug": "skillful-cooking",
@@ -63,42 +63,42 @@
       "slug": "steaming-cup-of-justice",
       "name": "Steaming Cup of Justice",
       "params": ["20%", "20%"],
-      "description": "When Yuanwu is in Forte Circuit's <strong style=\"color: var(--color-highlight);\">Lightning Infused</strong> state, his Basic Attack Speed is increased by {0}, and his Heavy Attack Speed is increased by {1}."
+      "description": "When Yuanwu is in Forte Circuit's <strong>Lightning Infused</strong> state, his Basic Attack Speed is increased by {0}, and his Heavy Attack Speed is increased by {1}."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "fierce-heart-serene-mind",
       "name": "Fierce Heart, Serene Mind",
       "params": ["15"],
-      "description": "Intro Skill <strong style=\"color: var(--color-highlight);\">Thunder Bombardment</strong> additionally recovers {0} Resonance Energy for Yuanwu."
+      "description": "Intro Skill <strong>Thunder Bombardment</strong> additionally recovers {0} Resonance Energy for Yuanwu."
     },
     {
       "idx": "Resonance 3-4",
       "slug": "upholder-of-integrity",
       "name": "Upholder of Integrity",
       "params": ["20%"],
-      "description": "When the Coordinated Attacks of Resonance Skill's <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> hits a target, the damage is additionally increased by {0} of Yuanwu's DEF."
+      "description": "When the Coordinated Attacks of Resonance Skill's <strong>Thunder Wedge</strong> hits a target, the damage is additionally increased by {0} of Yuanwu's DEF."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "retributive-knuckles",
       "name": "Retributive Knuckles",
       "params": ["200%", "10"],
-      "description": "When casting Resonance Liberation <strong style=\"color: var(--color-highlight);\">Blazing Might</strong>, the on-field character will gain a Shield equal to {0} of Yuanwu's DEF for {1}s."
+      "description": "When casting Resonance Liberation <strong>Blazing Might</strong>, the on-field character will gain a Shield equal to {0} of Yuanwu's DEF for {1}s."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "neighborhood-protector",
       "name": "Neighborhood Protector",
       "params": ["50%"],
-      "description": "When Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> is on the field, Yuanwu's Resonance Liberation DMG Bonus is increased by {0}."
+      "description": "When Resonance Skill <strong>Thunder Wedge</strong> is on the field, Yuanwu's Resonance Liberation DMG Bonus is increased by {0}."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "defender-of-all-realms",
       "name": "Defender of All Realms",
       "params": ["32%", "3"],
-      "description": "All team members nearby within the range of Resonance Skill <strong style=\"color: var(--color-highlight);\">Thunder Wedge</strong> will gain a {0} DEF increase, lasting {1}s."
+      "description": "All team members nearby within the range of Resonance Skill <strong>Thunder Wedge</strong> will gain a {0} DEF increase, lasting {1}s."
     }
   ],
   "stats": { "hp": 682, "def": 134, "atk": 18, "energy": 12500 },

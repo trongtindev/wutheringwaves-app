@@ -1,0 +1,40 @@
+{
+  "name": "Sanhua",
+  "quote": "Please don't stay too far away from me. I am confident to not let you get harmed in the slightest.",
+  "description": "The bodyguard of Jinzhou's Magistrate, known for having an icy personality.\nOnce regarded as the Asura of Calamity, Sanhua is now a taciturn guardian. She has learned to maintain inner calmness amidst the chaotic frequencies, and the things that once frightened her now fuel her determination.",
+  "skills": {
+    "frigid-light": {
+      "name": "Frigid Light",
+      "description": "<strong>Basic Attack</strong>\nSanhua performs up to 5 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Heavy Attack</strong>\nSanhua consumes STA to launch attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nSanhua consumes STA to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+    },
+    "eternal-frost": {
+      "name": "Eternal Frost",
+      "description": "Sanhua sends an air blade to create <strong class=\"color-glacio\">1</strong> \"Ice Prism\" on the ground, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+    },
+    "glacial-gaze": {
+      "name": "Glacial Gaze",
+      "description": "Sanhua deals <strong class=\"color-glacio\">Glacio DMG</strong> and creates <strong class=\"color-glacio\">1</strong> \"Glacier\"."
+    },
+    "condensation": {
+      "name": "Condensation",
+      "description": "Damage dealt by Sanhua's Resonance Skill increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s after casting her Intro Skill."
+    },
+    "avalanche": {
+      "name": "Avalanche",
+      "description": "Damage dealt by Sanhua's Forte Circuit <strong>Ice Burst</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s after casting <strong>Basic Attack 5</strong>."
+    },
+    "freezing-thorns": {
+      "name": "Freezing Thorns",
+      "description": "Sanhua swings her blade downward and creates 1 \"Ice Thorn\", dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+    },
+    "clarity-of-mind": {
+      "name": "Clarity of Mind",
+      "description": "<strong>Heavy Attack: Detonate</strong>\nWhen holding <strong>Basic Attack</strong>, a cursor moves back and forth on the Forte Gauge. Release <strong>Basic Attack</strong> while cursor falls in the \"Frostbite\" area, to perform Heavy Attack <strong>Detonate</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong> considered as Heavy Attack damage.\n \n<strong>Ice Burst</strong>\nSanhua’s Heavy Attack <strong>Detonate</strong> detonates all \"Ice Thorns\", \"Ice Prisms\" and \"Glaciers\" within her attack range, dealing <strong class=\"color-glacio\">Glacio DMG</strong>. DMG done by Ice Burst is considered as Resonance Skill damage.\n \n<strong>Frostbite Area</strong>\nThe \"Frostbite\" area expands with every <strong class=\"color-glacio\">1</strong> stack of \"Clarity\". \"Clarity\" stacks up to <strong class=\"color-glacio\">2</strong> times.\nSanhua obtains <strong class=\"color-glacio\">1</strong> stack of \"Clarity\" upon performing <strong>Basic Attack 5</strong>.\nSanhua obtains <strong class=\"color-glacio\">1</strong> stack of \"Clarity\" upon casting Intro Skill <strong>Freezing Thorns</strong>.\nSanhua obtains <strong class=\"color-glacio\">1</strong> stack of \"Clarity\" upon casting Resonance Skill <strong>Eternal Frost</strong>.\nSanhua obtains <strong class=\"color-glacio\">2</strong> stack(s) of \"Clarity\" upon casting Resonance Liberation <strong>Glacial Gaze</strong>.\nUpon casting Heavy Attack <strong>Detonate</strong>, all \"Clarity\" is removed."
+    },
+    "skillful-cooking": {
+      "name": "Skillful Cooking",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    "silversnow": { "name": "Silversnow", "description": "" }
+  }
+}

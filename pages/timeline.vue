@@ -226,12 +226,26 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         :onwheel="onWheel"
       >
         <div class="timeline position-relative w-100 h-100 d-flex flex-column">
+          <!-- MONTH TITLE -->
+          <v-sheet
+            v-for="([month, item], i) in monthList"
+            :key="i"
+            :style="`top: 12px; width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
+            class="month-title position-absolute pr-4"
+          >
+            <span
+              class="text-orange font-weight-bold position-sticky left-0 month"
+            >
+              {{ month }}
+            </span>
+          </v-sheet>
+
           <!-- DATE BAR -->
           <div
             v-for="(date, i) in dates"
             :key="i"
-            :style="`width: 1px; height: calc(100% - ${eventHeight}px); position: absolute; left: ${i * dayWidth}px; top: ${eventHeight}px;`"
-            class="bg-grey-darken-3"
+            :style="`height: calc(100% - ${eventHeight}px); left: ${i * dayWidth}px; top: ${eventHeight}px;`"
+            class="date-bar position-absolute"
           >
             <span
               class="position-absolute text-center pb-1"
@@ -244,20 +258,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
               style="width: 40px; left: -20px; top: -24px"
             >
               {{ date[1] }}
-            </span>
-          </div>
-
-          <!-- MONTH TITLE -->
-          <div
-            v-for="([month, item], i) in monthList"
-            :key="i"
-            class="position-absolute pr-4"
-            :style="`top: 12px; width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
-          >
-            <span
-              class="text-orange font-weight-bold position-sticky left-0 month"
-            >
-              {{ month }}
             </span>
           </div>
 
@@ -295,11 +295,11 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
           <!-- NOW BAR -->
           <div
-            class="bg-border z-20 position-relative opacity-75"
-            :style="`left: ${todayOffset * dayWidth}px; width: 2px; height: calc(100% - 10px); position: absolute; top: 10px;`"
+            class="now-bar bg-border z-20 position-relative opacity-75"
+            :style="`left: ${todayOffset * dayWidth}px;`"
           >
             <div
-              class="position-absolute rounded-xl top-0 text-center bg-white text-black"
+              class="position-absolute rounded-xl top-0 text-center bg-surface text-black border"
               style="width: 80px; left: -40px"
             >
               {{ today.format('HH:mm:ss') }}

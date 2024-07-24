@@ -1,0 +1,43 @@
+{
+  "name": "Rover (Havoc)",
+  "quote": "Is this the beginning of a new journey? Brimming with novel sounds, and untold stories...",
+  "description": "A mysterious Resonator with the power to absorb all sounds. Currently journeying to find their lost memories.",
+  "skills": {
+    "tuneslayer": {
+      "name": "Tuneslayer",
+      "description": "<strong>Basic Attack</strong>\nRover-Havoc performs up to 5 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Heavy Attack</strong>\nRover-Havoc consumes Stamina to attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\nUse <strong>Basic Attack</strong> after casting Heavy Attack to cast Basic Attack 4.\n \n<strong>Mid-air Attack</strong>\nRover-Havoc consumes Stamina to cast a Mid-Air Plunging Attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful Dodge to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    "wingblade": {
+      "name": "Wingblade",
+      "description": "Transforms sound into feathers, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    "deadening-abyss": {
+      "name": "Deadening Abyss",
+      "description": "Rover gathers resonating sounds to attack a target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    "metamorph": {
+      "name": "Metamorph",
+      "description": "In the <strong>Dark Surge</strong> state, Havoc DMG Bonus is increased by <strong class=\"color-havoc\">20%</strong>."
+    },
+    "bleak-crescendo": {
+      "name": "Bleak Crescendo",
+      "description": "While in the <strong>Dark Surge</strong> state, <strong>Basic Attack</strong> recovers <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Energy when it hits a target, and this effect can be triggered once per second."
+    },
+    "instant-of-annihilation": {
+      "name": "Instant of Annihilation",
+      "description": "Attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    "umbra-eclipse": {
+      "name": "Umbra Eclipse",
+      "description": "<strong>Devastation</strong>\nWhen \"Umbra\" is full, hold <strong>Basic Attack</strong> to cast <strong>Devastation</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Dark Surge</strong>\nAfter casting <strong>Devastation</strong>, Rover enters the <strong>Dark Surge</strong> state. In this state:\n<strong>Basic Attack</strong> is replaced with <strong>Enhanced Basic Attack</strong>, which performs up to 5 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>;\n<strong>Heavy Attack</strong> is replaced with <strong>Enhanced Heavy Attack</strong>;\nUse <strong>Basic Attack</strong> after casting <strong>Enhanced Heavy Attack</strong> to cast Heavy Attack <strong>Thwackblade</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage;\nUse <strong>Basic Attack</strong> after casting Heavy Attack <strong>Thwackblade</strong> to cast <strong> Enhanced Basic Attack 3</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>;\nResonance Skill <strong>Wingblade</strong> is replaced with Resonance Skill <strong>Lifetaker</strong>, transforming sounds into blades to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Umbra</strong>\nRover can hold up to 100 points of Umbra.\nNormal Attack <strong>Tuneslayer</strong> recovers Umbra on hit.\nResonance Skill <strong>Wingblade</strong> recovers Umbra when cast.\nResonance Skill <strong>Lifetaker</strong> recovers Umbra when cast.\nIntro Skill <strong>Instant of Annihilation</strong> recovers Umbra when cast."
+    },
+    "skill-1001708-skill-name": {
+      "name": "Skill_1001708_SkillName",
+      "description": "Skill_1001708_SkillDescribe"
+    },
+    "soundweaver": {
+      "name": "Soundweaver",
+      "description": "Rover summons a Havoc Field, dealing <strong class=\"color-havoc\">143.3%</strong> <strong class=\"color-havoc\">Havoc DMG</strong> to all targets within range every <strong class=\"color-havoc\">2</strong>s for <strong class=\"color-havoc\">6</strong>s."
+    }
+  }
+}
