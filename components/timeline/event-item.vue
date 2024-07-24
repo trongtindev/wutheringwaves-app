@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import dayjs from 'dayjs';
+import type dayjs from 'dayjs';
 import type { IEventConverted } from '~/interfaces/event';
 
 // define
@@ -149,14 +149,9 @@ const itemStyle = computed(() => {
       style="top: 6px"
       :style="`right: ${nextNearby ? '-55px' : shouldShowHourEnd ? '-120px' : '-40px'}; width: ${shouldShowHourEnd ? '120px' : '40px'};`"
     >
-      <span class="rounded-xl text-black bg-white bg-opacity-75 px-1">
-        {{
-          diffEnd > 86400000
-            ? `${Math.trunc(dayjs.duration(diffEnd).asDays())}d
-        ${shouldShowHourEnd ? dayjs.duration(diffEnd).format('H[h]') : ''}`
-            : dayjs.duration(diffEnd).format('HH:mm:ss')
-        }}
-      </span>
+      <v-chip :color="diffEnd < 86400000 ? 'warning' : undefined">
+        {{ props.event.end.fromNow() }}
+      </v-chip>
     </div>
 
     <!-- Starting timer-->
@@ -168,17 +163,9 @@ const itemStyle = computed(() => {
       style="top: 6px"
       :style="`left: ${prevNearby ? (shouldShowHourStart ? '-80px' : '-18px') : '-120px'}; width: ${shouldShowHourStart ? '120px' : '40px'};`"
     >
-      <span class="text-sm rounded-xl bg-white bg-opacity-75 px-1">
-        {{
-          diffStart > 86400000
-            ? `${Math.trunc(dayjs.duration(diffStart).asDays())}d ${
-                shouldShowHourStart
-                  ? dayjs.duration(diffStart).format('H[h]')
-                  : ''
-              }`
-            : dayjs.duration(diffStart).format('HH:mm:ss')
-        }}
-      </span>
+      <v-chip :color="diffStart < 86400000 ? 'success' : undefined">
+        {{ props.event.start.fromNow() }}
+      </v-chip>
     </div>
   </div>
 </template>

@@ -314,8 +314,7 @@
   "accounts": {
     "title": "Accounts",
     "newAccountDetected": "New Account Use Detected",
-    "successfullySwitched": "Successfully switch to {0}",
-    "nameNotSet": "Name not set"
+    "successfullySwitched": "Successfully switch to {0}"
   },
   "leaderboards": { "title": "Leaderboards" },
   "codes": {
@@ -434,7 +433,6 @@
     "percentage": "Percentage",
     "summoned": "Summoned",
     "hidden": "Hidden",
-    "manage": "Manage",
     "next": "Next",
     "previous": "Previous",
     "critRate": "Crit Rate",
@@ -448,6 +446,9 @@
     "serverTime": "Server time",
     "pullByDay": "Pull by day",
     "totalPull": "Total Pull",
-    "openIssues": "Open Issues"
+    "openIssues": "Open Issues",
+    "unnamed": "Unnamed",
+    "active": "Active",
+    "inactive": "Inactive"
   }
 }

@@ -295,7 +295,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
           <!-- NOW BAR -->
           <div
-            class="bg-grey-darken-1 z-20 position-relative opacity-75"
+            class="bg-border z-20 position-relative opacity-75"
             :style="`left: ${todayOffset * dayWidth}px; width: 2px; height: calc(100% - 10px); position: absolute; top: 10px;`"
           >
             <div

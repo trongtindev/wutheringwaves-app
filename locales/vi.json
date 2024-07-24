@@ -314,8 +314,7 @@
   "accounts": {
     "title": "Danh sách tài khoản",
     "newAccountDetected": "Đã phát hiện tài khoản mới",
-    "successfullySwitched": "Successfully switch to {0}",
-    "nameNotSet": "Chưa đặt tên"
+    "successfullySwitched": "Successfully switch to {0}"
   },
   "leaderboards": { "title": "Leaderboards" },
   "codes": {
@@ -434,7 +433,6 @@
     "percentage": "Tỉ lệ",
     "summoned": "Đã về nhà",
     "hidden": "Ẩn",
-    "manage": "Quản lý",
     "next": "Tiếp",
     "previous": "Trước",
     "critRate": "Crit Rate",
@@ -448,6 +446,9 @@
     "serverTime": "Server time",
     "pullByDay": "Lượt theo ngày",
     "totalPull": "Tổng số lượt",
-    "openIssues": "Báo cáo lỗi"
+    "openIssues": "Báo cáo lỗi",
+    "unnamed": "Unnamed",
+    "active": "Active",
+    "inactive": "Inactive"
   }
 }

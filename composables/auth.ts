@@ -17,7 +17,7 @@ export const useAuth = defineStore('useAuth', () => {
   const gState = useCookie('g_state');
   const device = useDevice();
   const accessToken = useLocalStorage<string | null>('accessToken', null);
-  const refreshToken = useLocalStorage<string | null>('accessToken', null);
+  const refreshToken = useLocalStorage<string | null>('refreshToken', null);
   const isScriptLoaded = ref(false);
 
   // functions

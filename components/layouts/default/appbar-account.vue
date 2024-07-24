@@ -1,117 +1,56 @@
-<script lang="ts" setup>
-import { mdiLogin } from '@mdi/js';
+<script setup lang="ts">
+import { mdiAccountConvert, mdiChevronRight } from '@mdi/js';
 
 // uses
-const auth = useAuth();
-
-// events
-const onPressedSignIn = async () => {
-  auth.state = 'sign-in';
-
-  try {
-    await auth.signIn();
-  } catch (error) {
-    console.error(error);
-
-    // TODO: handle this
-    alert(error);
-  } finally {
-    auth.state = '';
-  }
-};
-
-const onPressedSignOut = async () => {
-  try {
-    await auth.signOut();
-  } catch (error) {
-    console.error('error', error);
-
-    // TODO: handle this
-    alert(error);
-  }
-};
+const account = useAccount();
+const localePath = useLocalePath();
 </script>
 
 <template>
   <client-only>
-    <template #fallback>
-      <v-btn
-        :text="$t('common.signIn')"
-        :disabled="true"
-        :loading="true"
-        color="primary"
-        variant="flat"
-      >
-        <v-icon :icon="mdiLogin" />
-        <span class="ml-2">
-          {{ $t('common.signIn') }}
-        </span>
-      </v-btn>
-    </template>
+    <template #fallback></template>
 
-    <v-menu v-if="auth.user">
+    <v-menu
+      v-if="account.items.length > 1"
+      location="bottom right"
+      :min-width="200"
+    >
       <template #activator="{ props }">
-        <v-btn :border="true" :icon="true">
-          <v-avatar v-bind="props">
-            <v-img v-if="auth.user.photoUrl" :src="auth.user.photoUrl">
-              <template #error>
-                <div class="d-flex align-center justify-center w-100 h-100">
-                  ?
-                </div>
-              </template>
-            </v-img>
-            <span v-else>?</span>
-          </v-avatar>
-        </v-btn>
+        <v-btn v-bind="props" :icon="mdiAccountConvert" />
       </template>
 
-      <v-card :min-width="300">
-        <v-card-text class="text-center">
-          <v-avatar :size="64" class="border pa-1">
-            <v-img
-              v-if="auth.user.photoUrl"
-              :src="auth.user.photoUrl"
-              class="rounded-circle border"
-            >
-              <template #error>
-                <div class="d-flex align-center justify-center w-100 h-100">
-                  ?
-                </div>
-              </template>
-            </v-img>
-            <span v-else>?</span>
-          </v-avatar>
-        </v-card-text>
-        <v-card-title class="text-center">
-          {{ auth.user.name }}
-        </v-card-title>
+      <v-sheet :min-width="250">
+        <v-list>
+          <v-list-item
+            v-for="(element, index) in account.items"
+            :key="index"
+            :value="index"
+            :active="element.playerId == account.active"
+            :disabled="element.playerId == account.active"
+            :title="element.name || element.playerId"
+            @click="() => (account.active = element.playerId)"
+          >
+            <template #append>
+              <v-chip
+                v-if="element.playerId == account.active"
+                :text="$t('common.active')"
+              />
+              <v-icon v-else :icon="mdiChevronRight" />
+            </template>
+          </v-list-item>
+        </v-list>
+
         <v-divider />
-
-        <v-card-actions>
-          <v-spacer />
-
+        <div class="pa-2">
           <v-btn
-            color="warning"
-            :text="$t('common.signOut')"
-            @click="() => onPressedSignOut()"
+            variant="tonal"
+            :to="localePath(`/settings`)"
+            :block="true"
+            :text="$t('settings.title')"
+            :active="false"
           />
-        </v-card-actions>
-      </v-card>
+        </div>
+      </v-sheet>
     </v-menu>
-
-    <v-btn
-      v-else
-      :text="$t('common.signIn')"
-      :disabled="auth.state != ''"
-      :loading="auth.state == 'sign-in'"
-      color="primary"
-      variant="flat"
-      @click="() => onPressedSignIn()"
-    >
-      <v-icon :icon="mdiLogin" />
-      <span class="ml-2">
-        {{ $t('common.signIn') }}
-      </span>
-    </v-btn>
   </client-only>
 </template>

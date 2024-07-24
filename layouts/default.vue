@@ -4,8 +4,7 @@ import {
   mdiDatabaseSearch,
   mdiMenuClose,
   mdiMenuOpen,
-  mdiThemeLightDark,
-  mdiAccountConvert
+  mdiThemeLightDark
 } from '@mdi/js';
 import { useTheme } from 'vuetify';
 
@@ -21,7 +20,6 @@ const app = useApp();
 const i18n = useI18n();
 const sidebar = useSidebar();
 const { locales } = useI18n();
-const account = useAccount();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 const search = useSearch();
@@ -150,43 +148,8 @@ const onPressedSearch = () => {
       <template #append>
         <div class="d-flex align-center mr-2">
           <div class="d-flex flex-wrap ga-2">
-            <client-only>
-              <!-- switch game account -->
-              <v-menu v-if="account.items.length > 1">
-                <template #activator="{ props }">
-                  <v-btn v-bind="props" :icon="mdiAccountConvert" />
-                </template>
-
-                <v-card :min-width="300">
-                  <v-card-title>
-                    {{ $t('accounts.title') }}
-                  </v-card-title>
-                  <v-divider />
-
-                  <v-list>
-                    <v-list-item
-                      v-for="(element, index) in account.items"
-                      :key="index"
-                      :value="index"
-                      :active="element.playerId == account.active"
-                      :disabled="element.playerId == account.active"
-                      :title="element.name || $t('accounts.nameNotSet')"
-                      :subtitle="element.playerId"
-                      @click="() => (account.active = element.playerId)"
-                    />
-                  </v-list>
-                  <v-divider />
-
-                  <v-card-actions>
-                    <v-spacer />
-                    <v-btn
-                      :to="localePath('/settings#account')"
-                      :text="$t('common.manage')"
-                    />
-                  </v-card-actions>
-                </v-card>
-              </v-menu>
-            </client-only>
+            <!-- switch game account -->
+            <layouts-default-appbar-account />
 
             <!-- search -->
             <v-btn
@@ -204,7 +167,7 @@ const onPressedSearch = () => {
 
           <!-- account -->
           <v-divider :vertical="true" class="mr-4 ml-2" />
-          <layouts-default-appbar-account />
+          <layouts-default-appbar-auth />
         </div>
       </template>
     </v-app-bar>

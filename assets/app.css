@@ -221,3 +221,7 @@ div.event-item {
 .v-dialog > .v-overlay__content > form > .v-card > .v-card-text {
   padding: 16px 16px 16px !important;
 }
+
+.bg-border {
+  background-color: rgba(var(--v-border-color), 0.5);
+}
