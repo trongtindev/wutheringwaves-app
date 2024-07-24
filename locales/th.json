@@ -2,7 +2,9 @@
   "meta": {
     "title": "WutheringWaves.app",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
-    "index": { "title": "Wuthering Waves Wiki" },
+    "index": {
+      "title": "Wuthering Waves Wiki"
+    },
     "timeline": {
       "title": "Event timeline calendar",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
@@ -64,7 +66,9 @@
         }
       }
     },
-    "settings": { "title": "การตั้งค่า" },
+    "settings": {
+      "title": "การตั้งค่า"
+    },
     "guides": {
       "title": "Game Guides",
       "related": "Related Guides",
@@ -124,12 +128,16 @@
       "guides": {
         "pc": {
           "default": {
-            "1": { "title": "Open Your In-game Convene History." },
+            "1": {
+              "title": "Open Your In-game Convene History."
+            },
             "2": {
               "title": "Run the following command.",
               "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
             },
-            "3": { "title": "Paste the Convene Record URL into the box below." }
+            "3": {
+              "title": "Paste the Convene Record URL into the box below."
+            }
           }
         }
       },
@@ -148,7 +156,9 @@
         }
       }
     },
-    "history": { "title": "Convene History" },
+    "history": {
+      "title": "Convene History"
+    },
     "guaranteedAt": "Guaranteed at {0}",
     "lifetimePulls": "Lifetime Pulls",
     "pity": "Pity",
@@ -224,13 +234,22 @@
   },
   "tierList": {
     "title": "Tier list",
-    "create": { "title": "Create new Tier list", "liveVoting": "Live Voting" },
+    "create": {
+      "title": "Create new Tier list",
+      "liveVoting": "Live Voting"
+    },
     "liveVoting": "Live Voting",
     "save": "Save"
   },
-  "todoList": { "title": "Todo list" },
-  "trophies": { "title": "Trophies" },
-  "teams": { "title": "Teams" },
+  "todoList": {
+    "title": "Todo list"
+  },
+  "trophies": {
+    "title": "Trophies"
+  },
+  "teams": {
+    "title": "Teams"
+  },
   "echoes": {
     "title": "Echoes",
     "cost": "Cost",
@@ -238,28 +257,28 @@
     "sameElementCharacters": "Same Element Characters",
     "related": "Related Echo {name}"
   },
-  "faqs": {
-    "0": {
+  "faqs": [
+    {
       "title": "Where is my data being stored when I import?",
       "content": "Your URL is only saved to your web browser. Clearing your browser data on this website will delete your stored data. If you want to check your history, you'll need to import it again.\n\nYou also have to option to safely backup your URL using your Google Account inside the Settings page."
     },
-    "1": {
+    {
       "title": "How do I know this website won't steal my data?",
       "content": "Rest assured, we are players just like you and want to help Wuthering Waves grow by building useful tools for the all the Rovers in the world."
     },
-    "2": {
+    {
       "title": "My history is not automatically updating, what's wrong?",
       "content": "Just like in-game, your history does not instantly update. Try checking again later to see if your history is updated, otherwise it could be a bug."
     },
-    "3": {
+    {
       "title": "How do I raise a bug report or suggest a feature?",
       "content": "You can create an issue in our <a href='{repo}' target='_blank'><b>GitHub repository</b></a> using the proper template so that we can address your concern as soon as possible. Your contribution will help us create a better experience for our users, so we would greatly appreciate it!"
     },
-    "4": {
+    {
       "title": "How can I support this website?",
       "content": "Thank you for using this website. As you continue to use it, you also inspire us to keep improving it. Don't forget to leave a star on Github! \n\nIf you want to support us financially, we have a <a href='{donationPage}' target='_blank'><b>Donation page</b></a> to accept any donations to keep the website running!"
     }
-  },
+  ],
   "settings": {
     "title": "การตั้งค่า",
     "eraseAllData": "Erase All Data",
@@ -269,7 +288,9 @@
       "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
       "empty": "To add an account, you just need to import convene history."
     },
-    "backup": { "title": "Cloud Backup" },
+    "backup": {
+      "title": "Cloud Backup"
+    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
@@ -293,7 +314,10 @@
     "submit": "Post comment",
     "replies": "Replies"
   },
-  "dialog": { "close": "Close", "confirm": "Confirm" },
+  "dialog": {
+    "close": "Close",
+    "confirm": "Confirm"
+  },
   "backup": {
     "conflictTitle": "Action required",
     "conflictMessage": "Your local data in this browser is conflicting with the one stored in Cloud!",
@@ -314,7 +338,9 @@
     "newAccountDetected": "New Account Use Detected",
     "successfullySwitched": "Successfully switch to {0}"
   },
-  "leaderboards": { "title": "Leaderboards" },
+  "leaderboards": {
+    "title": "Leaderboards"
+  },
   "codes": {
     "title": "Gift Codes",
     "expiry": "Expiry",
@@ -327,7 +353,9 @@
     "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
     "redemptionStep": "Redemption Step"
   },
-  "map": { "title": "Interactive Map" },
+  "map": {
+    "title": "Interactive Map"
+  },
   "guides": {
     "title": "Game Guides",
     "editor": {
@@ -336,7 +364,10 @@
         "title": "Thumbnail",
         "placeholder": "Recommended size: 1,200x628px."
       },
-      "localization": { "title": "Localization", "primary": "Primary" }
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary"
+      }
     }
   },
   "search": {
