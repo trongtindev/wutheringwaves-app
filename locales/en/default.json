@@ -28,16 +28,16 @@
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
     },
     "codes": {
-      "title": "Wuthering Waves Gift Codes for {time}",
+      "title": "Gift Codes for {time}",
       "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
       "history": {
-        "title": "Wuthering Waves Pity Tracker",
+        "title": "Pity Tracker",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
-        "title": "Wuthering Waves Global Convene Stats",
+        "title": "Global Convene Stats",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       }
     },
@@ -56,7 +56,7 @@
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
-      "title": "All items in Wuthering Waves",
+      "title": "All items",
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
       "id": {
         "title": "Item: {name}",
@@ -117,7 +117,8 @@
     "endsIn": "Ends {0}",
     "current": "Current",
     "upcoming": "Upcoming",
-    "summary": "Events summary"
+    "summary": "Events summary",
+    "localTime": "Show as local time"
   },
   "convene": {
     "import": {
@@ -157,16 +158,15 @@
       }
     },
     "history": {
-      "title": "Pity Tracker"
+      "title": "Pity Tracker",
+      "empty": "You currently have no Convene History."
     },
     "guaranteedAt": "Guaranteed at {0}",
     "lifetimePulls": "Lifetime Pulls",
     "pity": "Pity",
-    "summary": {},
     "rank": {
       "title": "Your Global Rank",
       "level": "Your Total Pulls Rank",
-      "based": "Based on Global Convene Stats",
       "current": "Current {banner} median is {median} pulls",
       "more": "You have more pull than {percentage}% users",
       "less": "You have less pull than {percentage}% users",
@@ -195,20 +195,13 @@
     }
   },
   "showcase": {
-    "title": "Showcase",
-    "convene": {
-      "title": "Convene Showcase",
-      "showUID": "Show UID",
-      "emptyCard": "Please import convene history to fill the card.",
-      "show4Star": "Show 4 star",
-      "show5Star": "Show 5 star"
-    }
+    "title": "Showcase"
   },
   "characters": {
     "title": "Characters",
+    "message": "Import convene history to see already owned characters.",
     "resonanceChain": "Resonance Chain",
     "skills": "Skills",
-    "alert": "Import convene history to see already owned characters.",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
     "lastUpdatedOn": "{name} profile has been last updated on {time}.",
     "build": "{name} Build",
@@ -235,7 +228,13 @@
     "title": "Tier list"
   },
   "todoList": {
-    "title": "Todo list"
+    "title": "Todo list",
+    "empty": "Nothing to do yet! Add some from the Items page or the Calculator.",
+    "delete": {
+      "title": "Delete this todo?",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
   },
   "trophies": {
     "title": "Trophies"
@@ -343,7 +342,7 @@
     }
   },
   "search": {
-    "title": "Global Search"
+    "title": "Spotlight Search"
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -359,6 +358,17 @@
     "featuredWeapon": "Featured weapon",
     "standardResonator": "Standard resonator",
     "standardWeapon": "Standard weapon"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "message": "What we collects and what it is used for"
+  },
+  "updater": {
+    "title": "New update!",
+    "message": "Click refresh to get the new update",
+    "whatsNew": "What's new",
+    "later": "Later",
+    "refresh": "Refresh"
   },
   "common": {
     "name": "Name",
@@ -393,12 +403,8 @@
     "shortcuts": "Shortcuts",
     "copy": "Copy",
     "copied": "Copied",
-    "notEnoughData": "Not enough data!",
     "download": "Download",
-    "language": "Language",
-    "items": "Items",
-    "item": "Item",
-    "ascensionMaterial": "Ascension Material",
+    "ascensionMaterials": "Ascension Materials",
     "successfully": "Successfully!",
     "checkAll": "Check all",
     "clear": "Clear",
