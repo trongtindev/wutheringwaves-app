@@ -16,11 +16,14 @@ import th from '../locales/th/default.json';
 // tr
 import tr from '../locales/tr/default.json';
 
+// uk
+import uk from '../locales/uk/default.json';
+
 // vi
 import vi from '../locales/vi/default.json';
 
 // uk
-import uk from '../locales/uk/default.json';
+import zh from '../locales/zh/default.json';
 
 export default defineI18nConfig(() => ({
   legacy: false,
@@ -34,7 +37,8 @@ export default defineI18nConfig(() => ({
     th: { ...th },
     tr: { ...tr },
     vi: { ...vi },
-    uk: { ...uk }
+    uk: { ...uk },
+    zh: { ...zh }
   },
   missingWarn: false,
   fallbackWarn: false,

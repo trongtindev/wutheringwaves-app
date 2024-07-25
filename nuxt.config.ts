@@ -32,7 +32,8 @@ const localesMetadata: LocaleObject[] = [
   { name: 'ภาษาไทย', code: 'th', iso: 'th', rtl: true },
   { name: 'Türkçe', code: 'tr', iso: 'tr' },
   { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
-  { name: 'Ukrainian', code: 'uk', iso: 'uk' }
+  { name: 'Ukrainian', code: 'uk', iso: 'uk' },
+  { name: '中文(简体)', code: 'zh', iso: 'zh' }
 ];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
