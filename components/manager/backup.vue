@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const backup = useBackup();
+const sync = useSync();
 
 // computed
-const overlay = computed(() => backup.state == 'restore');
+const overlay = computed(() => sync.state == 'restore');
 </script>
 
 <template>

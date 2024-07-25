@@ -108,7 +108,7 @@ export const useAuth = defineStore('useAuth', () => {
       });
     }
 
-    const signInResult = await api.getInstance().post<{
+    const signInResult = await api.post<{
       accessToken: string;
       refreshToken: string;
     }>('auth/signin', payload);
@@ -141,11 +141,9 @@ export const useAuth = defineStore('useAuth', () => {
 
     if (isExpired || forceRefresh) {
       console.debug('getAccessToken()', 'refresh');
-      const result = await api
-        .getInstance()
-        .post<{ accessToken: string }>('auth/refresh', {
-          refreshToken: refreshToken.value
-        });
+      const result = await api.post<{ accessToken: string }>('auth/refresh', {
+        refreshToken: refreshToken.value
+      });
       accessToken.value = result.data.accessToken;
     }
 
@@ -154,10 +152,8 @@ export const useAuth = defineStore('useAuth', () => {
 
   const refreshProfile = async () => {
     try {
-      console.debug('refreshProfile');
-      const result = await api.getInstance().get<IUser>('users/me');
+      const result = await api.get<IUser>('users/me');
       user.value = result.data;
-      console.debug('refreshProfile', user.value);
     } catch (error) {
       console.warn(error);
       signOut();

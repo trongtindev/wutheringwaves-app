@@ -23,7 +23,6 @@ const loadData = async () => {
   return new Promise((resolve) => {
     state.value = 'load';
     api
-      .getInstance()
       .get<IListResponse<ITierList>>('tier-list', {
         params: {
           limit: limit.value,

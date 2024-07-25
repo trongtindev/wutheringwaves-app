@@ -24,7 +24,6 @@ const localePath = useLocalePath();
           : undefined
       "
       :disabled="props.data.upcoming && !app.inDev"
-      class="rounded"
       :class="{
         'ml-12': props.submenu
       }"

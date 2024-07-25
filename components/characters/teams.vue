@@ -38,7 +38,7 @@ const bestTeams = computed(() => {
       <v-sheet
         v-for="(element, index) in bestTeams"
         :key="index"
-        class="d-flex flex-wrap ga-2"
+        class="d-flex flex-wrap ga-2 justify-center"
       >
         <v-sheet
           v-for="(subElement, j) in element.items"

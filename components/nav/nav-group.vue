@@ -16,7 +16,7 @@ const title = computed(() => {
 <template>
   <v-list-group :value="title" :fluid="true">
     <template #activator="group">
-      <v-list-item v-bind="group.props" :title="title" class="rounded">
+      <v-list-item v-bind="group.props" :title="title">
         <template #prepend>
           <v-sheet
             class="mr-4 d-flex align-center justify-center"

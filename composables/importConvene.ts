@@ -10,7 +10,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
   // functions
   const start = async (url: string) => {
     // get records
-    const response = await api.getInstance().post<{
+    const response = await api.post<{
       playerId: number;
       serverId: string;
       items: {

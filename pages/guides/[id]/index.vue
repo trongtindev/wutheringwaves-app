@@ -11,11 +11,9 @@ const route = useRoute();
 const device = useDevice();
 
 // fetch
-const { data, status } = await api
-  .getInstance()
-  .get<IPost>(`posts/${route.params.id}`, {
-    validateStatus: () => true
-  });
+const { data, status } = await api.get<IPost>(`posts/${route.params.id}`, {
+  validateStatus: () => true
+});
 if (status != 200) throw createError({ statusCode: status });
 
 // computed
@@ -49,7 +47,7 @@ const thumbnailUrl = computed(() => {
 // lifecycle
 onMounted(() => {
   if (!device.isCrawler) {
-    api.getInstance().post(`posts/${data.id}/views`);
+    api.post(`posts/${data.id}/views`);
   }
 });
 
@@ -62,8 +60,8 @@ useSeoMeta({
   description: descriptionLocalized.value,
   ogDescription: descriptionLocalized.value,
   ogImage: thumbnailUrl.value,
-  articlePublishedTime: data.createdAt.toISOString(),
-  articleModifiedTime: data.updatedAt.toISOString()
+  articlePublishedTime: data.createdAt,
+  articleModifiedTime: data.updatedAt
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -77,9 +75,9 @@ useJsonld({
   // },
   headline: titleLocalized.value,
   thumbnailUrl: thumbnailUrl.value || undefined,
-  dateCreated: data.createdAt.toISOString(),
-  datePublished: data.createdAt.toISOString(),
-  dateModified: data.updatedAt.toISOString()
+  dateCreated: data.createdAt,
+  datePublished: data.createdAt,
+  dateModified: data.updatedAt
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -119,18 +117,12 @@ useJsonld({
         </v-card-title>
 
         <!-- thumbnail -->
-        <v-img
+        <base-image
           class="border-t border-b"
           :aspect-ratio="1.91 / 1"
           :src="data.thumbnail ? data.thumbnail.url : undefined"
           :cover="true"
-        >
-          <template #placeholder>
-            <div class="d-flex align-center justify-center h-100">
-              <v-progress-circular :indeterminate="true" />
-            </div>
-          </template>
-        </v-img>
+        />
 
         <v-card-text>
           <div class="tiptap" :innerHTML="contentLocalized"></div>

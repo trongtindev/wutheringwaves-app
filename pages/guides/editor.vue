@@ -19,11 +19,10 @@ const localePath = useLocalePath();
 // fetch
 const id = typeof route.query.id === 'string' ? route.query.id : undefined;
 const item = id
-  ? await api.getInstance().get<IListResponse<IPost>>(`posts/${id}`)
+  ? await api.get<IListResponse<IPost>>(`posts/${id}`)
   : undefined;
-const allCategories = await api
-  .getInstance()
-  .get<IListResponse<IPostCategory>>('posts/categories');
+const allCategories =
+  await api.get<IListResponse<IPostCategory>>('posts/categories');
 
 // states
 const editor = ref<Editor>();
@@ -55,7 +54,6 @@ const updateOrPublish = () => {
   state.value = 'submit';
 
   api
-    .getInstance()
     .post<IPost>('posts', {
       title: titleLocalized.value[locale.value],
       titleLocalized: titleLocalized.value,

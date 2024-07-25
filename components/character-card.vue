@@ -28,20 +28,20 @@ const nameLocalized = computed(() => {
     >
       <v-chip
         style="left: 5px; top: 5px"
-        class="pa-1 d-flex align-center position-absolute"
+        class="pa-1 d-flex align-center position-absolute rounded-xl"
       >
         <v-img
           v-if="props.item.attribute"
           class="bg-grey-darken-3 rounded-circle"
-          :width="18"
-          :height="18"
+          :width="16"
+          :height="16"
           :src="`/attributes/icons/${props.item.attribute.toLowerCase()}.png`"
           :alt="props.item.attribute"
         />
         <v-sheet
           v-else
-          :width="18"
-          :height="18"
+          :width="16"
+          :height="16"
           class="bg-grey-darken-3 rounded-circle"
         />
 

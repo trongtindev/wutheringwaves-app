@@ -3,7 +3,7 @@
   "items": [
     [
       {
-        "url": "https://wutheringwaves-echoes.kurogames-global.com/",
+        "officialUrl": "https://wutheringwaves-echoes.kurogames-global.com/",
         "name": "Version 1.0",
         "time": {
           "start": "2024-05-23 10:00",
@@ -48,7 +48,7 @@
         "color": "#ef772e"
       },
       {
-        "url": "https://wutheringwaves.kurogames.com/en/main/news/detail/1025",
+        "officialUrl": "https://wutheringwaves.kurogames.com/en/main/news/detail/1025",
         "name": "Depths of Illusive Realm - Dreams Ablaze in Darkness",
         "time": {
           "start": "2024-07-04 10:00",
@@ -88,7 +88,7 @@
         "thumbnail": "/events/covers/intensive-training.webp"
       },
       {
-        "url": "https://wutheringwaves.kurogames.com/en/main/news/detail/975",
+        "officialUrl": "https://wutheringwaves.kurogames.com/en/main/news/detail/975",
         "name": "[Bountiful Crescendo] Leveling Material Double Drop Event",
         "time": {
           "start": "2024-07-11 04:00",
@@ -101,7 +101,7 @@
     ],
     [
       {
-        "url": "https://wutheringwaves.kurogames.com/en/main/news/detail/813",
+        "officialUrl": "https://wutheringwaves.kurogames.com/en/main/news/detail/813",
         "name": "Overdash Club",
         "time": {
           "start": "2024-05-30 04:00",
@@ -151,7 +151,7 @@
         "color": "#141427",
         "description": "Complete tasks in [Lollo Campaign] to earn Lollo Stamps. Lollo Stamps can be used in the roulette of \"Lollo Helper\" to get random rewards.",
         "thumbnail": "/events/covers/lollo-campaign.webp",
-        "url": "https://wutheringwaves.kurogames.com/en/main/news/detail/1080"
+        "officialUrl": "https://wutheringwaves.kurogames.com/en/main/news/detail/1080"
       }
     ],
     [

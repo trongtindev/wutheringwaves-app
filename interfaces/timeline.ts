@@ -3,6 +3,7 @@ import type { ILocalized } from '~/interfaces/common';
 
 export interface ITimeline {
   url?: string;
+  officialUrl?: string;
   name: string;
   nameLocalized?: ILocalized;
   description?: string;

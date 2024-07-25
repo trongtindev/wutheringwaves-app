@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// define
 const props = defineProps<{
   src?: string;
   aspectRatio?: number;
@@ -17,5 +18,7 @@ const props = defineProps<{
         <v-progress-circular :indeterminate="true" />
       </div>
     </template>
+
+    <!-- <template #error>error</template> -->
   </v-img>
 </template>

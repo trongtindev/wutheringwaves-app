@@ -214,17 +214,28 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
   <!-- chips -->
   <header-chips class="mb-2" :github="`tree/main/resources/timeline.json`" />
 
+  <!-- timezone -->
+  <v-row class="mb-1">
+    <v-col>
+      <timezone-card :title="$t('common.localTime')" />
+    </v-col>
+
+    <v-col>
+      <timezone-card :title="$t('common.serverTime')" :utc-offset="8" />
+    </v-col>
+  </v-row>
+
   <v-card>
     <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
     <client-only>
       <div
         ref="timelineContainer"
-        class="w-100 overflow-x-scroll"
+        class="w-100 overflow-x-scroll overflow-y-hidden"
         style="width: min-content"
-        :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + 24 + events.length * (eventHeight + EVENT_MARGIN)}px`"
+        :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + 48 + events.length * (eventHeight + EVENT_MARGIN)}px`"
         :onwheel="onWheel"
       >
-        <div class="timeline position-relative w-100 h-100 d-flex flex-column">
+        <div class="timeline position-relative h-100 d-flex flex-column">
           <!-- MONTH TITLE -->
           <v-sheet
             v-for="([month, item], i) in monthList"
@@ -294,19 +305,8 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     </client-only>
   </v-card>
 
-  <!-- timezone -->
-  <!-- <v-row class="mt-1">
-    <v-col>
-      <timezone-card />
-    </v-col>
-
-    <v-col>
-      <timezone-card :utc-offset="8" :title="$t('common.serverTime')" />
-    </v-col>
-  </v-row> -->
-
   <v-dialog v-model="dialog" :width="720" :scrollable="true">
-    <timeline-dialog
+    <timeline-event-dialog
       v-if="dialogData"
       :data="dialogData"
       @on-close="() => (dialog = false)"

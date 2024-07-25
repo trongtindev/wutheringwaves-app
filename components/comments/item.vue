@@ -20,7 +20,6 @@ const onPressedLike = (type: 'like' | 'dislike') => {
   state.value = type;
 
   api
-    .getInstance()
     .post<IComment>(`comments/${props.data.id}/likes`, {
       type
     })

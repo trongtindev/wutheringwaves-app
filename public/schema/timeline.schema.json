@@ -12,6 +12,9 @@
             "url": {
               "type": "string"
             },
+            "officialUrl": {
+              "type": "string"
+            },
             "time": {
               "type": "object",
               "properties": {

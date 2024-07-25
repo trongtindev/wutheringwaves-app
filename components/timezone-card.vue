@@ -62,26 +62,26 @@ onUnmounted(() => {
       <client-only>
         <template #fallback>
           <div>
-            <div>0000/00/00</div>
-            <div>00:00:00</div>
+            <div class="text-body-1">0000/00/00</div>
+            <div class="text-body-1">00:00:00</div>
           </div>
         </template>
 
         <div>
           <div>
-            <span v-if="time">
+            <span v-if="time" class="text-body-1">
               {{ time.format('YYYY/MM/DD') }}
             </span>
 
-            <span v-else>0000/00/00</span>
+            <span v-else class="text-body-1">0000/00/00</span>
           </div>
 
           <div>
-            <span v-if="time">
+            <span v-if="time" class="text-body-1">
               {{ time.format('HH:mm:ss') }}
             </span>
 
-            <span v-else>00:00:00</span>
+            <span v-else class="text-body-1">00:00:00</span>
           </div>
         </div>
       </client-only>

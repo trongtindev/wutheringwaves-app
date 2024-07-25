@@ -198,7 +198,7 @@
               "properties": {
                 "role": {
                   "type": "string",
-                  "$ref": "./characters.schema.json#/components/schemas/characterRole"
+                  "$ref": "./character.components.json#/components/schemas/role"
                 },
                 "items": {
                   "type": "array",

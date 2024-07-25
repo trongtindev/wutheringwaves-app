@@ -46,7 +46,7 @@ const loadData = (parent?: IComment) => {
 
   state.value = 'loading';
   api
-    .getInstance()
+
     .get<IListResponse<IComment>>(`/comments`, {
       params: {
         channel: channel.value,
@@ -81,7 +81,7 @@ const uploadFile = (id: string) => {
 
   attachments.value[getIndex()].status = '';
   api
-    .getInstance()
+
     .post<IFile>(
       'files',
       {
@@ -139,7 +139,7 @@ const pages = computed(() => {
 const onSubmit = () => {
   state.value = 'submit';
   api
-    .getInstance()
+
     .post<IComment>(`/comments`, {
       channel: channel.value,
       content: content.value,
@@ -168,7 +168,7 @@ const onPressedDeleteAttachment = (id: string) => {
   if (index >= 0) {
     const result = attachments.value[index].result;
     if (result) {
-      api.getInstance().delete(`files/${result.id}`);
+      api.delete(`files/${result.id}`);
     }
 
     attachments.value.splice(index, 1);

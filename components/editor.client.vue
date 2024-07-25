@@ -77,7 +77,7 @@ const uploadFiles = async (files: File[]) => {
         message: file.name,
         persistent: true
       });
-      const result = await api.getInstance().post<IFile>(
+      const result = await api.post<IFile>(
         'files',
         {
           file

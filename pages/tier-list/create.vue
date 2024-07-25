@@ -98,7 +98,6 @@ const submit = async () => {
     state.value = 'submit';
     return new Promise((resolve, reject) => {
       api
-        .getInstance()
         .post<ITierList>(
           item.value ? `tier-list/${item.value.id}` : 'tier-list',
           {

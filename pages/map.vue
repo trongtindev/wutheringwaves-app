@@ -118,19 +118,16 @@ const onMarkChanged = (id: number, status: boolean) => {
 // functions
 const initialize = () => {
   // get markers
-  api
-    .getInstance()
-    .get<any[][]>('/map/markers')
-    .then((result) => {
-      markers.value = result.data.map((e) => {
-        return {
-          id: e[0],
-          type: e[1],
-          lat: e[2],
-          lng: e[3]
-        };
-      });
+  api.get<any[][]>('/map/markers').then((result) => {
+    markers.value = result.data.map((e) => {
+      return {
+        id: e[0],
+        type: e[1],
+        lat: e[2],
+        lng: e[3]
+      };
     });
+  });
 
   // get found markers
   database.getInstance().then((db) => {

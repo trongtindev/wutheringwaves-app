@@ -11,7 +11,7 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <v-card :to="localePath(`/items/${item.slug}`)" :title.attr="item.name">
+  <v-card :to="localePath(`/items/${item.slug}`)">
     <v-responsive
       :aspect-ratio="1 / 1"
       :style="`background-color: var(${item.rarity === 4 ? '--rarity-purple' : '--rarity-yellow'});`"

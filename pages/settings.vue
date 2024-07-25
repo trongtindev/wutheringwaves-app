@@ -22,7 +22,7 @@ useHead({
     <v-row>
       <v-col cols="12" md="7">
         <settings-account />
-        <settings-cloud-backup class="mt-2" />
+        <settings-cloud-sync class="mt-2" />
         <settings-analytics class="mt-2" />
         <settings-export-data class="mt-2" />
         <settings-erase-data class="mt-2" />

@@ -200,12 +200,9 @@ const totalSummoned = computed(() => {
 
 // functions
 const initialize = () => {
-  api
-    .getInstance()
-    .get<{ items: IBannerSummary[] }>('/convenes/summary')
-    .then((result) => {
-      summaryData.value = result.data.items;
-    });
+  api.get<{ items: IBannerSummary[] }>('/convenes/summary').then((result) => {
+    summaryData.value = result.data.items;
+  });
 
   filterType.value ??= CardPoolType['featured-resonator'];
   displayBanner.value = activeBanners.value.find((e) => {

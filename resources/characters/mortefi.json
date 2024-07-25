@@ -101,9 +101,8 @@
       "description": "When Resonance Liberation <strong>Violent Finale</strong> is cast, ATK of all team members is increased by {0} for {1}s."
     }
   ],
-  "stats": { "hp": 802, "def": 93, "atk": 20, "energy": 12500 },
+  "stats": { "hp": 10025, "def": 1137, "atk": 250, "energy": 125 },
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
         { "item": 41100011, "quantity": 4 },
@@ -113,46 +112,46 @@
     },
     {
       "cost": [
+        { "item": 2, "quantity": 10000 },
         { "item": 41400044, "quantity": 3 },
         { "item": 42300080, "quantity": 4 },
-        { "item": 41100012, "quantity": 4 },
-        { "item": 2, "quantity": 10000 }
+        { "item": 41100012, "quantity": 4 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
+        { "item": 2, "quantity": 15000 },
         { "item": 41400044, "quantity": 6 },
         { "item": 42300080, "quantity": 8 },
-        { "item": 41100012, "quantity": 8 },
-        { "item": 2, "quantity": 15000 }
+        { "item": 41100012, "quantity": 8 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
+        { "item": 2, "quantity": 20000 },
         { "item": 41400044, "quantity": 9 },
         { "item": 42300080, "quantity": 12 },
-        { "item": 41100013, "quantity": 4 },
-        { "item": 2, "quantity": 20000 }
+        { "item": 41100013, "quantity": 4 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
+        { "item": 2, "quantity": 40000 },
         { "item": 41400044, "quantity": 12 },
         { "item": 42300080, "quantity": 16 },
-        { "item": 41100013, "quantity": 8 },
-        { "item": 2, "quantity": 40000 }
+        { "item": 41100013, "quantity": 8 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
+        { "item": 2, "quantity": 80000 },
         { "item": 41400044, "quantity": 16 },
         { "item": 42300080, "quantity": 20 },
-        { "item": 41100014, "quantity": 4 },
-        { "item": 2, "quantity": 80000 }
+        { "item": 41100014, "quantity": 4 }
       ],
       "minLevel": 80
     }
@@ -247,5 +246,97 @@
     "vi": "Mortefi, một chuyên gia lão luyện trong nghiên cứu Tacetite Ứng dụng và là thành viên của Khoa An toàn của Viện Hàn lâm, sở hữu khả năng độc đáo biến đổi sự thất vọng tích tụ của mình thành ngọn lửa rực cháy.Từ cơn thịnh nộ bốc cháy nuốt chửng tất cả, con rồng đỏ sẽ giáng xuống.",
     "id": "Mortefi, seorang ahli terampil dalam Studi Tacetite Terapan dan anggota Departemen Keamanan Akademi, memiliki kemampuan unik untuk mengubah frustrasinya yang terakumulasi menjadi api yang menyala-nyala.Dari amukan api yang membakar segalanya, naga merah akan turun.",
     "th": "Mortefi, ผู้เชี่ยวชาญด้านการประยุกต์ใช้ Tacite ในระดับสูง และเป็นสมาชิกของแผนกความปลอดภัยของสถาบัน มีความสามารถพิเศษในการเปลี่ยนความหงุดหงิดที่สะสมไว้ให้กลายเป็นเปลวไฟจากโทสะที่ลุกโชนและเผาผลาญทุกสิ่ง มังกรแดงจะลงมา"
-  }
+  },
+  "bestWeapons": [
+    {
+      "different": 100,
+      "rank": 1,
+      "item": "static-mist"
+    },
+    {
+      "different": 80.4,
+      "rank": 1,
+      "item": "novaburst"
+    },
+    {
+      "different": 78.5,
+      "rank": 1,
+      "item": "undying-flame"
+    },
+    {
+      "different": 78.1,
+      "rank": 1,
+      "item": "pistols-26"
+    },
+    {
+      "different": 77.4,
+      "rank": 1,
+      "item": "thunderbolt"
+    },
+    {
+      "different": 70.4,
+      "rank": 5,
+      "item": "pistols-of-night"
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Moonlit Clouds"]
+    }
+  ],
+  "bestMainEchoes": ["impermanence-heron"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Fusion DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Fusion DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "skillPriority": [
+    "Resonance Liberation",
+    "Forte Circuit",
+    "Basic Attack",
+    "Resonance Skill",
+    "Intro Skill"
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["jiyan", "jinhsi", "jianxin"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["mortefi"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina"]
+        }
+      ]
+    }
+  ]
 }

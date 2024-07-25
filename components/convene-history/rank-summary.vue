@@ -24,7 +24,6 @@ const totalPullPercentage = ref(0);
 // functions
 const initialize = () => {
   api
-    .getInstance()
     .get<{
       items: IBannerSummary[];
       pullData: number[][];

@@ -22,7 +22,7 @@ export interface IPost {
   thumbnail: IFile;
   attachments?: IFile[];
   views: number;
-  updatedAt: Date;
-  createdAt: Date;
+  updatedAt: string;
+  createdAt: string;
   categories: IPostCategory[];
 }

@@ -10,7 +10,7 @@ const emits = defineEmits<{
 const i18n = useI18n();
 const auth = useAuth();
 const dialog = useDialog();
-const backup = useBackup();
+const sync = useSync();
 const database = useDatabase();
 
 // states
@@ -24,7 +24,7 @@ const onPressedConfirm = async (isConfirmed?: boolean) => {
 
       await database.eraseAllData();
       if (auth.isLoggedIn) {
-        await backup.eraseAll();
+        await sync.eraseAll();
       }
 
       window.location.reload();
@@ -48,7 +48,7 @@ onNuxtReady(() => emits('on-updated'));
 </script>
 
 <template>
-  <v-card color="error" variant="outlined">
+  <v-card color="warning" variant="outlined">
     <v-card-title>
       {{ $t('settings.data.erase.title') }}
     </v-card-title>
@@ -65,8 +65,7 @@ onNuxtReady(() => emits('on-updated'));
         :loading="state == 'erase'"
         :text="$t('settings.data.erase.button')"
         :prepend-icon="mdiTrashCan"
-        color="error"
-        variant="outlined"
+        color="warning"
         @click="() => onPressedConfirm()"
       />
     </v-card-actions>

@@ -11,9 +11,8 @@ const localePath = useLocalePath();
 const initializeDebounce = useDebounceFn(() => initialize(), 1000);
 
 // fetch
-const categories = await api
-  .getInstance()
-  .get<IListResponse<IPostCategory>>('posts/categories');
+const categories =
+  await api.get<IListResponse<IPostCategory>>('posts/categories');
 
 // states
 const data = ref<IListResponse<IPost>>();
@@ -23,7 +22,6 @@ const filterCategories = ref<string[]>([]);
 // functions
 const initialize = () => {
   api
-    .getInstance()
     .get<IListResponse<IPost>>(`${API_URL}/posts`)
     .then((result) => {
       data.value = result.data;

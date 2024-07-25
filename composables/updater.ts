@@ -8,7 +8,6 @@ export const useUpdater = defineStore('useUpdater', () => {
   // uses
   const http = axios.create();
   const i18n = useI18n();
-  const route = useRoute();
   const dialog = useDialog();
   const device = useDevice();
   const appConfig = useAppConfig();
@@ -33,12 +32,16 @@ export const useUpdater = defineStore('useUpdater', () => {
   };
 
   const checkAppForUpdates = async () => {
+    if (import.meta.dev) return;
+
     if (!interval) {
       interval = setInterval(() => checkAppForUpdates(), 60 * 5 * 1000);
     }
   };
 
   const checkWebForUpdates = async () => {
+    if (import.meta.dev) return;
+
     if (!interval) {
       interval = setInterval(() => checkWebForUpdates(), 60 * 5 * 1000);
     }
@@ -50,10 +53,7 @@ export const useUpdater = defineStore('useUpdater', () => {
     if (status != 200) return;
 
     console.debug('updater', appConfig.buildNumber, data.buildNumber);
-    if (
-      appConfig.buildNumber === data.buildNumber &&
-      !route.query.forceUpdateDialog
-    ) {
+    if (data.buildNumber && appConfig.buildNumber === data.buildNumber) {
       return;
     }
     isUpdateAvailable.value = true;

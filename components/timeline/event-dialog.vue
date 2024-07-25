@@ -1,5 +1,6 @@
 <script setup lang="ts">
 // import dayjs from 'dayjs';
+import { mdiOpenInNew, mdiLink } from '@mdi/js';
 import type { ITimelineEvent } from '~/interfaces/timeline';
 
 // define
@@ -26,19 +27,18 @@ const descriptionLocalized = computed(() => {
     <v-card-title>
       {{ nameLocalized }}
     </v-card-title>
-    <v-divider />
+
+    <!-- thumbnail -->
+    <base-image
+      v-if="props.data.thumbnail"
+      :src="props.data.thumbnail"
+      :aspect-ratio="16 / 9"
+      :cover="true"
+      class="border-t border-b"
+    />
+    <v-divider v-else />
 
     <v-card-text>
-      <!-- thumbnail -->
-      <div v-if="props.data.thumbnail">
-        <v-img
-          :src="props.data.thumbnail"
-          :aspect-ratio="16 / 9"
-          class="border rounded"
-          :cover="true"
-        />
-      </div>
-
       <!-- description -->
       <div v-if="descriptionLocalized">
         {{ descriptionLocalized }}
@@ -55,17 +55,16 @@ const descriptionLocalized = computed(() => {
         </span>
       </div>
 
-      <!-- url -->
-      <div v-if="props.data.url">
-        <a
-          :href="props.data.url"
-          :title="props.data.url"
-          target="_blank"
-          rel="nofollow"
-        >
-          {{ props.data.url }}
-        </a>
-      </div>
+      <v-card
+        v-if="props.data.officialUrl"
+        :title="$t('timeline.checkoutOfficialUrl')"
+        :subtitle="props.data.officialUrl"
+        :append-icon="mdiOpenInNew"
+        :href="props.data.officialUrl"
+        class="mt-2"
+        target="_blank"
+        rel="nofollow"
+      />
     </v-card-text>
     <v-divider />
 

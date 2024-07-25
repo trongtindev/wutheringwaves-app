@@ -59,7 +59,7 @@ const checkAndUploadThumbnail = async (file: File) => {
       file,
       state: 'uploading'
     };
-    const result = await api.getInstance().post<IFile>(
+    const result = await api.post<IFile>(
       'files',
       {
         file
