@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiDatabaseSearch, mdiClose } from '@mdi/js';
+import { mdiDatabaseSearch } from '@mdi/js';
 import type { ICharacter } from '~/interfaces/character';
 import type { IEcho } from '~/interfaces/echo';
 import type { IItem } from '~/interfaces/item';
@@ -10,7 +10,6 @@ import type { IWeapon } from '~/interfaces/weapon';
 // uses
 const search = useSearch();
 const resources = useResources();
-const { isDesktop } = useDevice();
 const submitDebounce = useDebounceFn(() => submit(), 500);
 
 // states
@@ -136,55 +135,25 @@ watch(() => keyword.value, submitDebounce);
 <template>
   <v-dialog v-model="search.active" :scrollable="true" :width="720">
     <v-card>
-      <v-card-title>
-        <v-row>
-          <v-col class="d-flex align-center">
-            {{ $t('search.title') }}
-          </v-col>
-          <v-col class="d-flex align-center justify-end">
-            <v-btn
-              size="x-small"
-              :icon="mdiClose"
-              variant="text"
-              @click="() => (search.active = false)"
-            />
-          </v-col>
-        </v-row>
-      </v-card-title>
-      <v-divider />
+      <v-form>
+        <v-text-field
+          v-model="keyword"
+          :placeholder="$t('search.title')"
+          :prepend-inner-icon="mdiDatabaseSearch"
+          :clearable="true"
+          :loading="state == 'submit'"
+          :hide-details="true"
+          :autofocus="true"
+        />
+      </v-form>
 
-      <v-card-text>
-        <v-form>
-          <alert id="search.alert" :text="$t('search.alert')" />
-          <alert
-            v-if="isDesktop"
-            id="search.alert"
-            :text="$t('search.alertTips')"
-          />
-          <v-text-field
-            v-model="keyword"
-            :placeholder="$t('search.placeholder')"
-            :prepend-inner-icon="mdiDatabaseSearch"
-            :clearable="true"
-            :loading="state == 'submit'"
-          />
-        </v-form>
-
-        <v-list v-if="results.length > 0 && keyword">
-          <search-result-item
-            v-for="(element, index) in results"
-            :key="index"
-            :data="element"
-          />
-        </v-list>
-        <!-- <v-card-text
-          v-else-if="results.length == 0 && keyword"
-          class="text-center"
-        >
-          {{ $t('search.noResults') }}
-        </v-card-text> -->
-      </v-card-text>
-      <v-divider />
+      <v-list v-if="results.length > 0 && keyword">
+        <search-result-item
+          v-for="(element, index) in results"
+          :key="index"
+          :data="element"
+        />
+      </v-list>
     </v-card>
   </v-dialog>
 </template>

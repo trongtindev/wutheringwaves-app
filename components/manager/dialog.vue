@@ -63,7 +63,7 @@ const cancelButtonText = computed(() => {
       return current.value.cancelButtonText;
     }
   }
-  return i18n.t('dialog.close');
+  return i18n.t('common.close');
 });
 
 const confirmButtonText = computed(() => {
@@ -72,7 +72,7 @@ const confirmButtonText = computed(() => {
       return current.value.confirmButtonText;
     }
   }
-  return i18n.t('dialog.confirm');
+  return i18n.t('common.confirm');
 });
 </script>
 
@@ -88,7 +88,6 @@ const confirmButtonText = computed(() => {
         <v-card-title class="text-center">
           {{ current.title }}
         </v-card-title>
-        <v-divider />
 
         <v-card-text>
           <div
@@ -96,7 +95,6 @@ const confirmButtonText = computed(() => {
             class="text-center"
           />
         </v-card-text>
-        <v-divider />
 
         <v-card-actions>
           <v-spacer />

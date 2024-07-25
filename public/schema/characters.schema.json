@@ -48,40 +48,5 @@
       }
     }
   },
-  "required": ["items"],
-  "components": {
-    "schemas": {
-      "characterSlug": {
-        "type": "string",
-        "enum": [
-          "sanhua",
-          "baizhi",
-          "lingyang",
-          "chixia",
-          "encore",
-          "mortefi",
-          "changli",
-          "calcharo",
-          "yinlin",
-          "yuanwu",
-          "jinhsi",
-          "yangyang",
-          "aalto",
-          "jiyan",
-          "jianxin",
-          "verina",
-          "taoqi",
-          "danjin",
-          "xiangli-yao",
-          "zhezhi",
-          "camellya",
-          "rover-havoc"
-        ]
-      },
-      "characterRole": {
-        "type": "string",
-        "enum": ["Main DPS", "Sub DPS", "Healer"]
-      }
-    }
-  }
+  "required": ["items"]
 }

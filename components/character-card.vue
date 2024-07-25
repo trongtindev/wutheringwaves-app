@@ -22,7 +22,7 @@ const nameLocalized = computed(() => {
     <v-img
       :aspect-ratio="1"
       :src="`/characters/icons/${props.item.slug}.webp`"
-      :alt="nameLocalized"
+      :alt="item.name"
       class="align-end h-100"
       cover
     >

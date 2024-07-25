@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "time": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "string"
+                },
+                "end": {
+                  "type": "string"
+                }
+              },
+              "required": ["start", "end"]
+            },
+            "name": {
+              "type": "string"
+            },
+            "nameLocalized": { "type": "object" },
+            "description": {
+              "type": "string"
+            },
+            "descriptionLocalized": { "type": "object" },
+            "thumbnail": {
+              "type": "string"
+            },
+            "thumbnailLocalized": { "type": "object" },
+            "color": {
+              "type": "string"
+            }
+          },
+          "required": ["time", "name", "color"]
+        }
+      }
+    }
+  },
+  "required": ["items"]
+}

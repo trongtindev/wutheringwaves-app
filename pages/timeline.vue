@@ -1,12 +1,11 @@
 <script setup lang="ts">
-// Converted from https://github.com/MadeBaruna/paimon-moe/tree/main/src/routes/timeline
 import dayjs from 'dayjs';
-import type { IEvent, IEventConverted } from '~/interfaces/event';
+import type { ITimeline, ITimelineEvent } from '~/interfaces/timeline';
 
 // define
 const dayWidth = 40;
 const eventHeight = 36;
-const eventMargin = 20;
+const EVENT_MARGIN = 8;
 const padding = 10;
 const marginTop = 80;
 const MONTH_HEIGHT = 48;
@@ -16,7 +15,7 @@ const i18n = useI18n();
 const resources = useResources();
 
 // fetch
-const eventsData = await resources.getEvents();
+const timeline = await resources.getTimeline();
 
 // states
 const timeDifference = ref(0);
@@ -38,11 +37,11 @@ const monthList = ref();
 const todayOffset = ref(0);
 const timelineContainer = ref<HTMLElement>(null as any);
 const dialog = ref(false);
-const dialogData = ref<IEvent>();
+const dialogData = ref<ITimelineEvent>();
 const browserTimeZone = ref();
 
 // functions
-const convertToDate = (e: IEvent, i): IEventConverted => {
+const convertToDate = (e: ITimeline, i: number): ITimelineEvent => {
   const start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
     timeDifference.value,
     'minute'
@@ -60,7 +59,7 @@ const convertToDate = (e: IEvent, i): IEventConverted => {
     start,
     end,
     duration
-  } as IEventConverted;
+  };
 };
 
 // events
@@ -69,7 +68,7 @@ const onTick = () => {
   todayOffset.value = Math.abs(firstDay.value.diff(today.value, 'day', true));
 };
 
-const onPressedEvent = (data: IEvent) => {
+const onPressedEvent = (data: ITimelineEvent) => {
   dialog.value = true;
   dialogData.value = data;
 };
@@ -109,7 +108,7 @@ onMounted(() => {
   browserTimeZone.value = dayjs.tz.guess();
   timeDifference.value = getTimeDifference();
 
-  events.value = eventsData.map((e, i) => {
+  events.value = timeline.map((e, i) => {
     if (Array.isArray(e)) {
       return e.map((item) => convertToDate(item, i));
     }
@@ -222,7 +221,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         ref="timelineContainer"
         class="w-100 overflow-x-scroll"
         style="width: min-content"
-        :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + events.length * (eventHeight + eventMargin)}px`"
+        :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + 24 + events.length * (eventHeight + EVENT_MARGIN)}px`"
         :onwheel="onWheel"
       >
         <div class="timeline position-relative w-100 h-100 d-flex flex-column">
@@ -262,33 +261,19 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
           <!-- EVENT STRIP -->
           <div v-for="(event, i) in events" :key="i">
-            <div v-if="Array.isArray(event)">
-              <timeline-event-item
-                v-for="(item, j) in event"
-                :key="j"
-                :prev="j > 0 ? event[j - 1] : null"
-                :next="j < event.length - 1 ? event[j + 1] : null"
-                :now="today"
-                :event="item"
-                :day-width="dayWidth"
-                :margin-top="marginTop + 24"
-                :event-height="eventHeight"
-                :event-margin="eventMargin"
-                :i="i"
-                @on-pressed="() => onPressedEvent(item)"
-              />
-            </div>
-
             <timeline-event-item
-              v-else
+              v-for="(item, j) in event"
+              :key="j"
+              :prev="j > 0 ? event[j - 1] : null"
+              :next="j < event.length - 1 ? event[j + 1] : null"
               :now="today"
-              :event="event"
+              :event="item"
               :day-width="dayWidth"
-              :margin-top="marginTop"
+              :margin-top="marginTop + 24"
               :event-height="eventHeight"
-              :event-margin="eventMargin"
+              :event-margin="EVENT_MARGIN"
               :i="i"
-              @on-pressed="() => onPressedEvent(event)"
+              @on-pressed="() => onPressedEvent(item)"
             />
           </div>
 

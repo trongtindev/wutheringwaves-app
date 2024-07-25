@@ -1,7 +1,7 @@
+import type dayjs from 'dayjs';
 import type { ILocalized } from '~/interfaces/common';
-import type { Dayjs } from 'dayjs';
 
-export interface IEvent {
+export interface ITimeline {
   url?: string;
   name: string;
   nameLocalized?: ILocalized;
@@ -25,11 +25,9 @@ export interface IEvent {
   color?: string;
 }
 
-export interface IEventConverted extends IEvent {
+export interface ITimelineEvent extends ITimeline {
   index: number;
-  start: Dayjs;
-  end: Dayjs;
-  duration: any;
-  offset: any;
-  startOnly: any;
+  start: dayjs.Dayjs;
+  end: dayjs.Dayjs;
+  duration: number;
 }

@@ -1,14 +1,25 @@
-import type { ICharacter, ICharacterData } from '@/interfaces/character';
+import type {
+  IAttribute,
+  ICharacter,
+  ICharacterData
+} from '@/interfaces/character';
 import type { ICode } from '@/interfaces/code';
 import type { IWeapon, IWeaponData } from '@/interfaces/weapon';
 import type { IItem, IItemData } from '~/interfaces/item';
 import type { IEcho, IEchoData } from '~/interfaces/echo';
 import type { ITrophy } from '~/interfaces/trophy';
+import type { ITimeline } from '~/interfaces/timeline';
+import { CardPoolType, type IBanner } from '~/interfaces/banner';
 
 export const useResources = defineStore('useResources', () => {
   const getBanners = async () => {
-    const data = (await import('~/resources/banners')).default;
-    return data.reverse();
+    const data = await import('~/resources/banners.json');
+    return data.default.items.reverse().map((e) => {
+      return {
+        ...e,
+        type: CardPoolType[e.type]
+      };
+    }) as IBanner[];
   };
 
   const weapons = async (): Promise<IWeapon[]> => {
@@ -86,8 +97,14 @@ export const useResources = defineStore('useResources', () => {
     return { groups, categories };
   };
 
-  const getEvents = async () => {
-    return (await import('~/resources/events')).default;
+  const getTimeline = async (): Promise<ITimeline[][]> => {
+    const data = await import('~/resources/timeline.json');
+    return data.default.items;
+  };
+
+  const getAttributes = async (): Promise<IAttribute[]> => {
+    const data = await import('~/resources/attributes.json');
+    return data.default.items;
   };
 
   return {
@@ -105,6 +122,7 @@ export const useResources = defineStore('useResources', () => {
     getItemData,
     getTrophies,
     getTrophyData,
-    getEvents
+    getTimeline,
+    getAttributes
   };
 });

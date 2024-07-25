@@ -8,20 +8,10 @@ import {
 } from '@mdi/js';
 import { useTheme } from 'vuetify';
 
-import BackupController from '../controllers/backup.vue';
-import DatabaseController from '../controllers/database.vue';
-import DialogController from '../controllers/dialog.vue';
-import NotificationController from '../controllers/notification.vue';
-import SnackbarController from '../controllers/snackbar.vue';
-import SearchController from '../controllers/search.vue';
-
 // uses
 const app = useApp();
-const i18n = useI18n();
 const sidebar = useSidebar();
-const { locales } = useI18n();
 const localePath = useLocalePath();
-const switchLocalePath = useSwitchLocalePath();
 const search = useSearch();
 const theme = useTheme();
 const analytics = useAnalytics();
@@ -69,52 +59,13 @@ const onPressedSearch = () => {
         />
       </v-list>
 
-      <!-- language -->
       <template #append>
         <v-divider />
         <v-list :nav="true" :lines="false">
-          <v-menu>
-            <template #activator="{ props }">
-              <v-list-item
-                rounded
-                :title="$t('common.language')"
-                v-bind="props"
-              >
-                <template #append>
-                  <v-avatar
-                    class="border"
-                    :size="24"
-                    :image="`/locales/${i18n.locale.value}.webp`"
-                    :cover="true"
-                  />
-                </template>
-              </v-list-item>
-            </template>
+          <!-- language -->
+          <layouts-language-switcher />
 
-            <v-sheet class="border rounded">
-              <v-list density="compact">
-                <v-list-item
-                  v-for="(element, index) in locales"
-                  :key="index"
-                  :value="index"
-                  :disabled="i18n.locale.value === element.code"
-                  :to="switchLocalePath(element.code)"
-                >
-                  <v-list-item-title>{{ element.name }}</v-list-item-title>
-
-                  <template #append>
-                    <v-avatar
-                      class="border"
-                      :size="24"
-                      :image="`/locales/${element.code}.webp`"
-                      :cover="true"
-                    />
-                  </template>
-                </v-list-item>
-              </v-list>
-            </v-sheet>
-          </v-menu>
-
+          <!-- settings -->
           <v-list-item
             rounded
             :to="localePath('/settings')"
@@ -183,14 +134,14 @@ const onPressedSearch = () => {
         <slot />
       </v-container>
 
-      <!-- TODO: remove soon -->
       <client-only>
-        <BackupController />
-        <DialogController />
-        <NotificationController />
-        <DatabaseController />
-        <SnackbarController />
-        <SearchController />
+        <manager-backup />
+        <manager-dialog />
+        <manager-notification />
+        <manager-database />
+        <manager-snackbar />
+        <manager-search />
+        <manager-updater />
       </client-only>
     </v-main>
   </v-app>

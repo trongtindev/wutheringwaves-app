@@ -70,7 +70,7 @@ const onPressedSignOut = async () => {
             <v-img
               v-if="auth.user.photoUrl"
               :src="auth.user.photoUrl"
-              class="rounded-circle border"
+              class="rounded-circle"
             >
               <template #error>
                 <div class="d-flex align-center justify-center w-100 h-100">

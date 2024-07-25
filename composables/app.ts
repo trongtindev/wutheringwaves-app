@@ -1,14 +1,8 @@
 import { defineStore } from 'pinia';
 
 export const useApp = defineStore('useApp', () => {
-  let interval: NodeJS.Timeout;
-
   // uses
-  const i18n = useI18n();
-  const dialog = useDialog();
-  const appConfig = useAppConfig();
   const runtimeConfig = useRuntimeConfig();
-  const device = useDevice();
 
   // config
   const { APP_NAME, APP_DISCORD, APP_VERSION, APP_REPO } = runtimeConfig.public;
@@ -29,41 +23,6 @@ export const useApp = defineStore('useApp', () => {
   const indProd = computed(() => !import.meta.dev);
 
   // functions
-  const initialize = () => {
-    if (import.meta.dev) return;
-    if (device.isCrawler) return;
-
-    checkForUpdates();
-    interval = setInterval(checkForUpdates, 60 * 5 * 1000);
-  };
-
-  const checkForUpdates = async () => {
-    try {
-      const { buildNumber } = await $fetch<{ buildNumber: number }>(
-        '/api/checkForUpdates',
-        {
-          signal: AbortSignal.timeout(5000)
-        }
-      );
-
-      console.debug('checkForUpdates', appConfig.buildNumber, buildNumber);
-      if (appConfig.buildNumber === buildNumber) {
-        return;
-      }
-
-      dialog.show({
-        title: i18n.t('common.updateFound'),
-        content: i18n.t('common.updateFoundMessage'),
-        onConfirm: () => {
-          reloadNuxtApp();
-        }
-      });
-      clearInterval(interval);
-    } catch (error) {
-      console.warn(error);
-    }
-  };
-
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -82,7 +41,6 @@ export const useApp = defineStore('useApp', () => {
     inDev,
     indProd,
     indBeta,
-    initialize,
     scrollTop
   };
 });

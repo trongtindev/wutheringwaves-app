@@ -46,6 +46,11 @@ const categories = computed(() => {
   return items;
 });
 
+// lifecycle
+// onMounted(() => {
+//   console.log(JSON.stringify(weapons.value.map((e) => e.name)));
+// });
+
 // seo meta
 const title = i18n.t('meta.weapons.title');
 const description = i18n.t('meta.weapons.description');
@@ -56,7 +61,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>
 
 <template>
-   <!-- filter -->
+  <!-- filter -->
   <v-row>
     <v-col cols="12" md="4">
       <v-text-field

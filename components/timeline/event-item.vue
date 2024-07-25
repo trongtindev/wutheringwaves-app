@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
-import type { IEventConverted } from '~/interfaces/event';
+import type { ITimelineEvent } from '~/interfaces/timeline';
 
 // define
 const props = defineProps<{
   i: number;
-  prev?: any;
-  next?: any;
+  prev?: ITimelineEvent;
+  next?: ITimelineEvent;
   now: dayjs.Dayjs;
-  event: IEventConverted;
+  event: ITimelineEvent & { offset: number };
   dayWidth: number;
   marginTop: number;
   eventHeight: number;
@@ -88,7 +88,7 @@ const shouldShowHourEnd = computed(() => {
 const style = computed(() => {
   let content = `width: ${props.dayWidth * props.event.duration}px;`;
   content += `left: ${props.dayWidth * props.event.offset}px;`;
-  content += `background-color: ${props.event.color || 'orange'};`;
+  content += `background-color: ${props.event.color || 'red'};`;
   content += `top: ${props.marginTop + props.i * (props.eventHeight + props.eventMargin)}px;`;
   content += `height: ${props.eventHeight}px;`;
   content += `padding-right: 10px;`;
@@ -112,25 +112,25 @@ const style = computed(() => {
   <div
     class="d-flex align-center justify-start z-10 text-white cursor-pointer position-absolute"
     :class="{
-      'rounded-l-xl': prevDiff > 0,
-      'rounded-r-xl': nextDiff > 1,
-      'border-s-md border-gray-3': prevDiff < 1
+      'rounded-ts rounded-bs': prevDiff > 0,
+      'rounded-be rounded-te': nextDiff > 1,
+      'border-s-md': prevDiff < 1
     }"
     :style="style"
     @click="() => onPressed()"
   >
-    <v-sheet
+    <div
       class="event-item position-absolute right-0 top-0 h-100 w-100 bg-no-repeat bg-position-center bg-size-cover"
+      style="max-width: 200px"
       :style="
         props.event.thumbnail
           ? `background-image: url(${props.event.thumbnail});`
           : undefined
       "
       :class="{
-        'rounded-r-xl': nextDiff > 1,
-        'border-e-md border-gray-3': nextDiff < 1
+        'rounded-be rounded-te': nextDiff > 1,
+        'border-e-md': nextDiff < 1
       }"
-      :max-width="200"
     />
 
     <span
@@ -141,7 +141,7 @@ const style = computed(() => {
 
     <!-- Ending timer-->
     <div
-      v-if="started && !ended && !props.event.startOnly && !attachedNext"
+      v-if="started && !ended && !attachedNext"
       class="position-absolute pl-3"
       style="top: 6px"
       :style="`right: ${nextNearby ? '-55px' : shouldShowHourEnd ? '-120px' : '-40px'}; width: ${shouldShowHourEnd ? '120px' : '40px'};`"

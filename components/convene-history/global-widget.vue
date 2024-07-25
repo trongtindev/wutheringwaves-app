@@ -36,31 +36,31 @@ onNuxtReady(() => emits('on-done'));
 
     <div v-else>
       <v-card>
-        <v-responsive :aspect-ratio="16 / 9">
-          <v-img
-            v-if="activeBanners[0].thumbnail"
-            :src="activeBanners[0].thumbnail"
-            :alt="activeBanners[0].featuredRare"
-          />
-        </v-responsive>
-
-        <v-card-title class="text-center">
-          {{ activeBanners[0].featuredRare }}
-        </v-card-title>
+        <v-img
+          v-if="activeBanners[0].thumbnail"
+          :aspect-ratio="16 / 9"
+          :src="activeBanners[0].thumbnail"
+          :alt="activeBanners[0].featuredRare"
+          class="align-end"
+        >
+          <!-- <v-card-title class="text-center">
+            {{ activeBanners[0].featuredRare }}
+          </v-card-title> -->
+        </v-img>
       </v-card>
 
       <v-card class="mt-2">
-        <v-responsive :aspect-ratio="16 / 9">
-          <v-img
-            v-if="activeBanners[1].thumbnail"
-            :src="activeBanners[1].thumbnail"
-            :alt="activeBanners[1].featuredRare"
-          />
-        </v-responsive>
-
-        <v-card-title class="text-center">
-          {{ activeBanners[1].featuredRare }}
-        </v-card-title>
+        <v-img
+          v-if="activeBanners[1].thumbnail"
+          :aspect-ratio="16 / 9"
+          :src="activeBanners[1].thumbnail"
+          :alt="activeBanners[1].featuredRare"
+          class="align-end"
+        >
+          <!-- <v-card-title class="text-center">
+            {{ activeBanners[1].featuredRare }}
+          </v-card-title> -->
+        </v-img>
       </v-card>
     </div>
   </v-card-text>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
-import type { IEvent } from '~/interfaces/event';
+import type { ITimeline } from '~/interfaces/timeline';
 
 // define
 const emits = defineEmits<{
@@ -11,8 +11,8 @@ const emits = defineEmits<{
 const resources = useResources();
 
 // states
-const current = ref<IEvent[]>([]);
-const upcoming = ref<IEvent[]>([]);
+const current = ref<ITimeline[]>([]);
+const upcoming = ref<ITimeline[]>([]);
 
 // functions
 const initialize = () => {
@@ -20,9 +20,9 @@ const initialize = () => {
 
   return new Promise((resolve, reject) => {
     resources
-      .getEvents()
+      .getTimeline()
       .then((result) => {
-        const list = (result.flatMap((e) => e) as IEvent[]).sort((a, b) => {
+        const list = (result.flatMap((e) => e) as ITimeline[]).sort((a, b) => {
           const timeA = dayjs(a.time.start).toDate().getTime();
           const timeB = dayjs(b.time.start).toDate().getTime();
           return timeB - timeA;

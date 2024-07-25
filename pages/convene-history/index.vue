@@ -177,7 +177,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       <v-alert
         v-if="convenes.length === 0"
         color="info"
-        :text="$t('You currently have no Convene History.')"
+        :text="$t('convene.history.empty')"
       />
 
       <div v-else-if="displayType === 'list'">

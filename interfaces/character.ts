@@ -1,6 +1,12 @@
 import type { ILocalized } from './common';
 import type { WeaponType } from './weapon';
 
+export interface IAttribute {
+  id: string;
+  name: string;
+  icon: string;
+}
+
 export type CharacterAttribute =
   | 'Aero'
   | 'Glacio'

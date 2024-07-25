@@ -1,7 +1,7 @@
 import { createVuetify } from 'vuetify';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import { en, ja, ko, th, vi } from 'vuetify/locale';
-import { md2 } from 'vuetify/blueprints';
+import { md3 } from 'vuetify/blueprints';
 import {
   VStepperVertical,
   VStepperVerticalItem,
@@ -22,9 +22,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       sets: { mdi }
     },
     defaults: {
-      global: {
-        eager: true
-      },
       VRow: {
         dense: true
       },
@@ -72,18 +69,13 @@ export default defineNuxtPlugin((nuxtApp) => {
         },
         light: {
           colors: {
-            'surface-variant-alt': '#dedede',
             primary: '#1867c0',
-            secondary: '#5CBBF6',
-            tertiary: '#E57373',
-            accent: '#005CAF',
-            quarternary: '#B0D1E8',
-            'surface-bright': '#fafafa'
+            secondary: '#5CBBF6'
           }
         }
       }
     },
-    blueprint: md2,
+    blueprint: md3,
     components: {
       VStepperVertical,
       VStepperVerticalItem,

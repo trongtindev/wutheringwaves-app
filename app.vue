@@ -9,15 +9,9 @@ const i18nHead = useLocaleHead({
   addSeoAttributes: true,
   identifierAttribute: 'default'
 });
-const app = useApp();
 // const rtl = useRtl();
 const vuetifyLocale = useLocale();
 const { SITE_URL } = useRuntimeConfig().public;
-
-// initialize
-if (import.meta.client) {
-  app.initialize();
-}
 
 // functions
 const initialize = () => {
@@ -34,9 +28,9 @@ const initializeLocalization = () => {
   // rtl.isRtl.value = isRtl;
 };
 
-// lifecycle
 watch(() => i18n.locale.value, initializeLocalization);
 
+// lifecycle
 onMounted(initialize);
 
 // seo meta

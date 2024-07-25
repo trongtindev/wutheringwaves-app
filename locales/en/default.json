@@ -71,10 +71,10 @@
     },
     "guides": {
       "title": "Game Guides",
-      "related": "Related Guides",
-      "recently": "Recently Guides",
-      "previous": "Previous guide",
-      "next": "Next guide"
+      "related": "Related Posts",
+      "recently": "Recent Posts",
+      "previous": "Previous Posts",
+      "next": "Next Posts"
     },
     "leaderboards": {
       "title": "Leaderboards",
@@ -83,7 +83,7 @@
   },
   "sidebar": {
     "home": "Home",
-    "timeline": "Timeline",
+    "timeline": "Event Timeline",
     "characters": "Characters",
     "weapons": "Weapons",
     "echoes": "Echoes",

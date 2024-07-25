@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import axiosRetry from 'axios-retry';
 
 export const useApi = defineStore('useApi', () => {
@@ -37,12 +37,28 @@ export const useApi = defineStore('useApi', () => {
     return config;
   });
 
-  instance.interceptors.response.use((response) => {
-    if (response.status >= 200 && response.status <= 299) {
-      response.data = parseDate(response.data);
+  instance.interceptors.response.use(
+    (response) => {
+      if (response.status >= 200 && response.status <= 299) {
+        response.data = parseDate(response.data);
+      }
+      return response;
+    },
+    async (error) => {
+      if (error instanceof AxiosError && error.response) {
+        if (error.response.status == 401) {
+          console.debug('api', 'refreshing token...');
+          const accessToken = await auth.getAccessToken(true);
+          error.response.config.headers.Authorization = `Bearer ${accessToken}`;
+
+          console.debug('api', 'retrying request...');
+          return getInstance()(error.response.config);
+        }
+      }
+
+      return error;
     }
-    return response;
-  });
+  );
 
   // functions
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

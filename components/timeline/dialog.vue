@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { IEvent } from '~/interfaces/event';
 // import dayjs from 'dayjs';
+import type { ITimelineEvent } from '~/interfaces/timeline';
 
 // define
 const props = defineProps<{
-  data: IEvent;
+  data: ITimelineEvent;
 }>();
 
 const emits = defineEmits<{

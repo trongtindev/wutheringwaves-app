@@ -1,0 +1,35 @@
+{
+  "$schema": "../public/schema/attributes.schema.json",
+  "items": [
+    {
+      "id": "aero",
+      "name": "Aero",
+      "icon": "/attributes/icons/aero.webp"
+    },
+    {
+      "id": "fusion",
+      "name": "Fusion",
+      "icon": "/attributes/icons/fusion.webp"
+    },
+    {
+      "id": "glacio",
+      "name": "Glacio",
+      "icon": "/attributes/icons/glacio.webp"
+    },
+    {
+      "id": "electro",
+      "name": "Electro",
+      "icon": "/attributes/icons/electro.webp"
+    },
+    {
+      "id": "spectro",
+      "name": "Spectro",
+      "icon": "/attributes/icons/spectro.webp"
+    },
+    {
+      "id": "havoc",
+      "name": "Havoc",
+      "icon": "/attributes/icons/havoc.webp"
+    }
+  ]
+}

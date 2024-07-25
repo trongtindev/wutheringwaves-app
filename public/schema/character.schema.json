@@ -88,7 +88,7 @@
         "type": "object",
         "properties": {
           "item": {
-            "$ref": "./weapons.components.json#/components/schemas/slug"
+            "$ref": "./weapon.components.json#/components/schemas/slug"
           },
           "rank": {
             "type": "integer"
@@ -204,7 +204,7 @@
                   "type": "array",
                   "items": {
                     "type": "string",
-                    "$ref": "./characters.schema.json#/components/schemas/characterSlug"
+                    "$ref": "./character.components.json#/components/schemas/slug"
                   },
                   "minItems": 1
                 }

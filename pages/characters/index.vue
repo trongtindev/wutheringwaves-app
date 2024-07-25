@@ -18,6 +18,8 @@ const filterAttribute = ref<string>('All');
 
 // functions
 const loadOwned = () => {
+  // console.log(JSON.stringify(characters.map((e) => e.name)));
+
   database
     .getInstance()
     .then((db) => {
@@ -98,7 +100,7 @@ useSeoMeta({
 
 <template>
   <!-- alert -->
-  <base-alert id="characters" :text="$t('characters.alert')" class="mb-2" />
+  <base-alert id="characters" :text="$t('characters.message')" class="mb-2" />
 
   <!-- filter -->
   <v-row>
