@@ -1,0 +1,453 @@
+{
+  "meta": {
+    "title": "Wuthering Waves Wiki",
+    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "index": {
+      "title": "Wuthering Waves Wiki"
+    },
+    "timeline": {
+      "title": "Event timeline calendar",
+      "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
+    },
+    "echoes": {
+      "title": "Echoes",
+      "description": "{name} is a {rarity} Class Echo. in Wuthering Waves."
+    },
+    "characters": {
+      "id": {
+        "title": "{name} Guide and Build",
+        "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
+      },
+      "description": "Resonators are obtainable units in Wuthering Waves. Individuals with the ability to resonate with certain objects and manipulate their frequencies are known as Resonators."
+    },
+    "weapons": {
+      "id": {
+        "description": "{name} is a {type} weapon in Wuthering Waves that can be obtained via the game's Convene system."
+      },
+      "title": "武器类型",
+      "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
+    },
+    "codes": {
+      "title": "Gift Codes for {time}",
+      "description": "All codes that you can redeem in Wuthering Waves for free rewards."
+    },
+    "convene": {
+      "history": {
+        "title": "Pity Tracker",
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+      },
+      "global": {
+        "title": "Global Convene Stats",
+        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+      }
+    },
+    "todoList": {
+      "description": "Wuthering Waves Todo List to plan and track items and mora you need, you can also see resin approximation needed to farm the items!"
+    },
+    "tierList": {
+      "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
+    },
+    "trophies": {
+      "title": "Trophies",
+      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+    },
+    "map": {
+      "title": "Interactive Map",
+      "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
+    },
+    "items": {
+      "title": "All items",
+      "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
+      "id": {
+        "title": "Item: {name}",
+        "description": {
+          "default": "{name} in Wuthering Waves. Learn where to find {name} and other information in this guide!",
+          "recipe": "{name} in Wuthering Waves. Learn where to the recipe for {name} and other information in this guide!"
+        }
+      }
+    },
+    "settings": {
+      "title": "设置"
+    },
+    "guides": {
+      "title": "Game Guides",
+      "related": "Related Guides",
+      "recently": "Recently Guides",
+      "previous": "Previous guide",
+      "next": "Next guide"
+    },
+    "leaderboards": {
+      "title": "排行榜",
+      "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
+    }
+  },
+  "sidebar": {
+    "home": "主页",
+    "timeline": "活动时间一览",
+    "characters": "角色",
+    "weapons": "武器",
+    "echoes": "Echoes",
+    "conveneHistory": "Pity Tracker",
+    "tierList": "梯度表",
+    "todoList": "任务列表",
+    "trophies": "奖杯",
+    "teams": "团队",
+    "leaderboards": "排行榜",
+    "codes": "赠品代码",
+    "map": "地图",
+    "guides": "教程",
+    "items": "项目",
+    "comparison": "比较",
+    "database": "数据库",
+    "convene": "Convene",
+    "conveneShowcase": "Showcase",
+    "conveneGlobalStats": "Global Stats",
+    "conveneImport": "导入历史"
+  },
+  "items": {
+    "title": "素材道具",
+    "howToObtain": "如何获得 {0}？",
+    "howToUnlock": "如何解锁 {0}？",
+    "cookingIngredients": "Cooking Ingredients",
+    "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
+  },
+  "timeline": {
+    "title": "Timeline",
+    "startsIn": "Starts {0}",
+    "endsIn": "Ends {0}",
+    "current": "当前",
+    "upcoming": "Upcoming",
+    "summary": "Events summary",
+    "localTime": "显示为本地时间"
+  },
+  "convene": {
+    "import": {
+      "title": "Import Convenes",
+      "success": "导入成功",
+      "processing": "处理中...",
+      "invalidLink": "Invalid link, please check it again",
+      "guides": {
+        "pc": {
+          "default": {
+            "1": {
+              "title": "在此PC中打开Wuthering Waves，然后在游戏中打开召集历史并等待加载它。"
+            },
+            "2": {
+              "title": "打开 Windows 的“开始”菜单，搜索 PowerShell",
+              "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
+            },
+            "3": {
+              "title": "将召集记录URL粘贴到下面的框中。"
+            }
+          }
+        }
+      },
+      "faqs": {
+        "1": {
+          "title": "如果我导入许多不同的帐户，怎么办？",
+          "content": "别担心，当您导入多个账户时，我们会自动分割它们，您将看到一个账户切换按钮。"
+        },
+        "2": {
+          "title": "Why not updating the record?",
+          "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+        },
+        "3": {
+          "title": "我的帐户是否安全？",
+          "content": "是的，通过此导入方法不可能干扰您的帐户。 最后，本网站是开源的 github ，您可以自己看到和评估它。 如果您仍然不信任，您可以跳过此功能并使用其他功能。"
+        }
+      }
+    },
+    "history": {
+      "title": "Pity Tracker",
+      "empty": "您目前没有召集历史记录。"
+    },
+    "guaranteedAt": "保底 {0} 抽",
+    "lifetimePulls": "总抽卡次数",
+    "pity": "可惜",
+    "rank": {
+      "title": "你的全球排名",
+      "level": "你的总抽卡排名",
+      "current": "Current {banner} median is {median} pulls",
+      "more": "You have more pull than {percentage}% users",
+      "less": "You have less pull than {percentage}% users",
+      "currentLuck": "Current {banner} median is {median}%",
+      "luck5": "5★ 欧气指数",
+      "luck4": "4★ 欧气指数",
+      "luckWinRateOff": "幸运胜率 50:50",
+      "medianTotal": "Global Median {median} pulls",
+      "medianLuck": "Global Median {median}%",
+      "moreTotal": "More pulls than {percentage}% users",
+      "lessTotal": "Less pulls than {percentage}% users",
+      "moreLuck": "Luckier than {percentage}% users",
+      "lessLuck": "Less lucky than {percentage}% users",
+      "top": "TOP",
+      "bottom": "BOTTOM"
+    },
+    "global": {
+      "title": "Global Convene Stats",
+      "fiveStar": "5★ 列表",
+      "fourStar": "4★ 列表",
+      "median": "5★ Median",
+      "totalUsers": "用户总数",
+      "conveneTotal": "Convene Total",
+      "worth": "Worth",
+      "chance": "Chance"
+    }
+  },
+  "showcase": {
+    "title": "Showcase"
+  },
+  "characters": {
+    "title": "角色",
+    "message": "Import convene history to see already owned characters.",
+    "resonanceChain": "Resonance Chain",
+    "skills": "技能",
+    "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
+    "lastUpdatedOn": "{name} profile has been last updated on {time}.",
+    "build": "{name} Build",
+    "calculations": "Calculations",
+    "overview": "概览",
+    "bestMainEchoes": "Best Main Echoes {name}",
+    "moreBuildGuides": "更多构建指南",
+    "bestWeapons": "Best Weapons {name}",
+    "bestEchoSets": "最佳Echo设置",
+    "bestEchoStats": "Best Echo Stats",
+    "bestTeams": "{name} Best Teams",
+    "ascensionMaterialsMap": "Ascension Materials Map",
+    "skillPriority": "{name} Skill Priority"
+  },
+  "weapons": {
+    "title": "武器",
+    "ranks": "Ranks",
+    "alert": "导入召集历史以查看已拥有的武器。",
+    "lastUpdatedOn": "{name} weapon has been last updated on {time}.",
+    "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> weapon.",
+    "skill": "{name} Skill"
+  },
+  "tierList": {
+    "title": "Tier list"
+  },
+  "todoList": {
+    "title": "Todo list",
+    "empty": "Nothing to do yet! Add some from the Items page or the Calculator.",
+    "delete": {
+      "title": "Delete this todo?",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "trophies": {
+    "title": "Trophies"
+  },
+  "teams": {
+    "title": "Teams"
+  },
+  "echoes": {
+    "title": "Echoes",
+    "cost": "Cost",
+    "sonataEffect": "Sonata effect",
+    "sameElementCharacters": "Same Element Characters",
+    "related": "Related Echo {name}"
+  },
+  "settings": {
+    "title": "设置",
+    "eraseAllData": "Erase All Data",
+    "accounts": {
+      "title": "帐户",
+      "autoImportConveneHistory": "Auto import convene history",
+      "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
+      "empty": "To add an account, you just need to import convene history."
+    },
+    "sync": {
+      "title": "Cloud Sync"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "optOut": "Opt-out",
+      "optOutSubtitle": "You can opt-out of Google Analytics"
+    },
+    "data": {
+      "export": {
+        "title": "Export Data",
+        "message": "You can download your convene data for backup or move it to another site.",
+        "button": "Download"
+      },
+      "erase": {
+        "title": "Erase All Data",
+        "message": "Erase All Data will clear all data and settings in your device and cloud sync. Please confirm that you have backed up important data of your account.",
+        "button": "Erase Now"
+      }
+    }
+  },
+  "comments": {
+    "empty": "Leave a comment so your voice will be heard first.",
+    "form": {
+      "submit": "Post comment"
+    },
+    "replies": "Replies"
+  },
+  "sync": {
+    "title": "云端 同步",
+    "conflict": {
+      "title": "您的数据冲突",
+      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
+      "cloudData": "Cloud Data",
+      "localData": "Local Browser Data",
+      "older": "OLDER",
+      "newer": "NEWER",
+      "useCloudData": "Use Cloud Data",
+      "useLocalData": "Use Local Data",
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
+      "lastCloudChanged": "Last changed: {0}"
+    },
+    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
+    "dataSynced": "数据已同步！",
+    "lastModified": "Last modified"
+  },
+  "accounts": {
+    "title": "Accounts",
+    "newAccountDetected": "New Account Use Detected",
+    "successfullySwitched": "Successfully switch to {0}"
+  },
+  "leaderboards": {
+    "title": "Leaderboards"
+  },
+  "codes": {
+    "title": "Gift Codes",
+    "expiry": "Expiry",
+    "code": "Code",
+    "rewards": "Rewards",
+    "expired": "Expired",
+    "howToRedeem": "How to Redeem Wuthering Waves Codes",
+    "howToRedeemGuide": "In-game menu, click the settings icon in the bottom right corner. Select the \"Other Settings\" tab with the spanner symbol. Hit the \"Redeem\" button next to the \"Redemption Code\" under Account.",
+    "redeemRequirement": "How to unlock Redemption",
+    "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
+    "redemptionStep": "Redemption Step"
+  },
+  "map": {
+    "title": "Interactive Map"
+  },
+  "guides": {
+    "title": "Game Guides",
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary"
+      }
+    }
+  },
+  "search": {
+    "title": "Spotlight 搜索"
+  },
+  "desktopApp": {
+    "title": "Desktop App",
+    "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
+    "download": "Download"
+  },
+  "autoImport": {
+    "notificationTitle": "Importing history...",
+    "notificationMessage": "Fetching history for account {0}."
+  },
+  "banner": {
+    "featuredResonator": "Featured resonator",
+    "featuredWeapon": "Featured weapon",
+    "standardResonator": "Standard resonator",
+    "standardWeapon": "Standard weapon"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "message": "What we collects and what it is used for"
+  },
+  "updater": {
+    "title": "新的更新",
+    "message": "点击“刷新”进行更新",
+    "whatsNew": "最新变化",
+    "later": "后来",
+    "refresh": "刷新"
+  },
+  "common": {
+    "name": "名称",
+    "time": "Time",
+    "home": "主页",
+    "delete": "删除",
+    "timeout": "Connection timeout, please wait a moment and try again later",
+    "invalidLink": "Invalid link, please check it again",
+    "invalidData": "Invalid data returned from API, try again later",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "back": "Back",
+    "cancel": "Cancel",
+    "import": "Import",
+    "search": "Search",
+    "all": "全部",
+    "echo": "Echo",
+    "any": "Any",
+    "skill": "Skill",
+    "create": "Create",
+    "save": "Save",
+    "copyLink": "Copy link",
+    "exportAsImage": "Export as Image",
+    "saveChanges": "Save changes",
+    "weapon": "Weapon",
+    "character": "角色",
+    "type": "Type",
+    "sort": "Sort",
+    "title": "Title",
+    "draft": "Draft",
+    "level": "Level",
+    "shortcuts": "Shortcuts",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "ascensionMaterials": "Ascension Materials",
+    "successfully": "Successfully!",
+    "checkAll": "Check all",
+    "clear": "Clear",
+    "retry": "Retry",
+    "upcoming": "即将到来的",
+    "upcomingContent": "这个页面是关于即将到来的内容。",
+    "upcomingContentMessage": "即将到来的内容可能会发生变化，也许不会代表最后产品。",
+    "upcomingWeapons": "Upcoming Weapons",
+    "upcomingCharacters": "即将到来的角色",
+    "energy": "Energy",
+    "options": "Options",
+    "trophy": "Trophy",
+    "noRecords": "未找到记录",
+    "yourLastConvene": "Your Last Convene",
+    "joinTheDiscord": "加入 Discord",
+    "viewOnGithub": "前往 GitHub",
+    "rarity": "Rarity",
+    "category": "Category",
+    "editThisPage": "Edit This Page",
+    "noRecordsFound": "No records found.",
+    "astrite": "Astrite",
+    "beta": "Beta",
+    "notice": "Notice",
+    "total": "Total",
+    "percentage": "Percentage",
+    "summoned": "Summoned",
+    "hidden": "Hidden",
+    "next": "Next",
+    "previous": "Previous",
+    "critRate": "Crit Rate",
+    "critDMG": "Crit DMG",
+    "atk": "ATK",
+    "def": "DEF",
+    "hp": "HP",
+    "cost": "Cost",
+    "close": "Close",
+    "loading": "Loading...",
+    "serverTime": "Server time",
+    "pullByDay": "Pull by day",
+    "totalPull": "Total Pull",
+    "openIssues": "Open Issues",
+    "unnamed": "Unnamed",
+    "active": "Active",
+    "inactive": "Inactive"
+  }
+}
