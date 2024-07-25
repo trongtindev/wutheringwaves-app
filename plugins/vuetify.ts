@@ -43,6 +43,14 @@ export default defineNuxtPlugin((nuxtApp) => {
       VAlert: {
         density: 'compact',
         variant: 'tonal'
+      },
+      VTextField: {
+        // density: 'compact',
+        variant: 'solo-filled'
+      },
+      VSelect: {
+        // density: 'compact',
+        variant: 'solo-filled'
       }
     },
     theme: {

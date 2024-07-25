@@ -100,14 +100,20 @@ a {
   border-style: solid;
   border-width: thin;
   border-color: var(--color-rarity5) !important;
-  /* box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important; */
 }
 
 .border-rarity4 {
   border-style: solid;
   border-width: thin;
   border-color: var(--color-rarity4) !important;
-  /* box-shadow: 0 -10px 10px 0 rgba(255, 230, 90, 0.2) !important; */
+}
+
+.border-line-rarity5 {
+  box-shadow: 0 -10px 10px 0 rgba(255, 177, 63, 0.2) !important;
+}
+
+.border-line-rarity4 {
+  box-shadow: 0 -10px 10px 0 rgba(210, 143, 214, 0.2) !important;
 }
 
 .bg-rarity5 {

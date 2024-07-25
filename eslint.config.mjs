@@ -19,7 +19,8 @@ export default withNuxt({}).append({
     '@typescript-eslint/no-dynamic-delete': 1,
     'prefer-rest-params': 1,
     'vue/no-mutating-props': 1,
-    '@typescript-eslint/unified-signatures': 0
+    '@typescript-eslint/unified-signatures': 0,
+    'vue/valid-v-for': 1
   },
   ignores: ['**/*.js']
 });

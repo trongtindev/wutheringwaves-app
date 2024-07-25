@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { CharacterDocument } from '~/collections/character';
+import { mdiMagnify, mdiFilterCog } from '@mdi/js';
 
 const i18n = useI18n();
 const resources = useResources();
@@ -8,13 +9,15 @@ const account = useAccount();
 
 // fetch
 const result = await resources.getCharacters();
+const attributes = await resources.getAttributes();
 const characters = result.sort((a, b) => a.name.localeCompare(b.name));
 
 // states
 const owned = ref<{ [key: string]: CharacterDocument }>();
+const filter = ref();
 const filterText = ref<string>();
 const filterRarity = ref<number>(0);
-const filterAttribute = ref<string>('All');
+const filterAttributes = ref<string[]>([]);
 
 // functions
 const loadOwned = () => {
@@ -44,6 +47,16 @@ const loadOwned = () => {
     .catch(console.error);
 };
 
+// events
+const onAttributeToggle = (id: string) => {
+  if (filterAttributes.value.includes(id)) {
+    const index = filterAttributes.value.findIndex((e) => e === id);
+    if (index >= 0) filterAttributes.value.splice(index, 1);
+  } else {
+    filterAttributes.value.push(id);
+  }
+};
+
 // computed
 const items = computed(() => {
   return characters.filter((e) => {
@@ -55,11 +68,11 @@ const items = computed(() => {
       }
     }
 
-    if (filterAttribute.value && filterAttribute.value !== 'All') {
-      if (e.attribute !== filterAttribute.value) {
-        return false;
-      }
-    }
+    // if (filterAttributes.value.length > 0) {
+    //   if (filterAttributes.value.includes(e.attribute)) {
+    //     return false;
+    //   }
+    // }
 
     const rarity = parseInt(`${filterRarity.value}` || '0');
     if (rarity > 0) {
@@ -103,37 +116,21 @@ useSeoMeta({
   <base-alert id="characters" :text="$t('characters.message')" class="mb-2" />
 
   <!-- filter -->
-  <v-row>
-    <v-col cols="12" md="4">
-      <v-text-field
-        v-model="filterText"
-        :label="$t('Search')"
-        :hide-details="true"
+  <v-text-field
+    v-model="filterText"
+    :placeholder="$t('common.searchPlaceholder')"
+    :hide-details="true"
+    :prepend-inner-icon="mdiMagnify"
+  >
+    <template #append-inner>
+      <v-btn
+        :text="$t('common.filter')"
+        :append-icon="mdiFilterCog"
+        variant="tonal"
+        @click.prevent="() => (filter = !filter)"
       />
-    </v-col>
-
-    <v-col cols="6" md="4">
-      <v-select
-        v-model="filterAttribute"
-        :label="$t('Attribute')"
-        :items="['All', 'Aero', 'Glacio', 'Electro', 'Fusion', 'Havoc']"
-        :item-title="(e) => e"
-        :hide-details="true"
-      />
-    </v-col>
-
-    <v-col cols="6" md="4">
-      <v-select
-        v-model="filterRarity"
-        :label="$t('common.rarity')"
-        :items="[0, 4, 5]"
-        :item-title="
-          (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
-        "
-        :hide-details="true"
-      />
-    </v-col>
-  </v-row>
+    </template>
+  </v-text-field>
 
   <!-- list -->
   <v-row class="mt-1">
@@ -147,6 +144,7 @@ useSeoMeta({
     >
       <character-card
         :item="element"
+        :portrait="true"
         :sequences="
           owned && owned[element.name]
             ? owned[element.name].resonanceChain
@@ -155,4 +153,17 @@ useSeoMeta({
       />
     </v-col>
   </v-row>
+
+  <!-- filter -->
+  <v-bottom-sheet v-model="filter" :inset="true">
+    <v-card :title="$t('common.filter')">
+      <v-card-text> something </v-card-text>
+
+      <v-card-actions>
+        <v-btn :text="$t('common.reset')" />
+        <v-spacer />
+        <v-btn :text="$t('common.apply')" />
+      </v-card-actions>
+    </v-card>
+  </v-bottom-sheet>
 </template>

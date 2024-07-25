@@ -28,8 +28,8 @@ export interface ICharacter {
   slug: string;
   name: string;
   nameLocalized?: ILocalized;
-  attribute?: CharacterAttribute;
-  weapon?: WeaponType;
+  attribute: IAttribute;
+  weapon?: string;
   rarity?: number;
   upcoming?: boolean;
   version?: number;

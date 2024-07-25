@@ -216,7 +216,8 @@
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
     "skillPriority": "{name} Skill Priority",
-    "teams": "Teams"
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "Weapons",
@@ -453,6 +454,10 @@
     "openIssues": "Open Issues",
     "unnamed": "Unnamed",
     "active": "Active",
-    "inactive": "Inactive"
+    "inactive": "Inactive",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Filter",
+    "apply": "Apply",
+    "reset": "Reset"
   }
 }

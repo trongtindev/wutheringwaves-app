@@ -5,6 +5,7 @@ const props = defineProps<{
   item: ICharacter;
   sequences?: number;
   customName?: string;
+  portrait?: boolean;
 }>();
 
 // uses
@@ -20,8 +21,8 @@ const nameLocalized = computed(() => {
 <template>
   <v-card :to="localePath(`/characters/${props.item.slug}`)">
     <v-img
-      :aspect-ratio="1"
-      :src="`/characters/icons/${props.item.slug}.webp`"
+      :aspect-ratio="portrait ? 3 / 4 : 1"
+      :src="`/characters/${portrait ? 'portraits' : 'icons'}/${props.item.slug}.webp`"
       :alt="item.name"
       class="align-end h-100"
       cover
@@ -35,8 +36,8 @@ const nameLocalized = computed(() => {
           class="bg-grey-darken-3 rounded-circle"
           :width="16"
           :height="16"
-          :src="`/attributes/icons/${props.item.attribute.toLowerCase()}.png`"
-          :alt="props.item.attribute"
+          :src="`/attributes/icons/${props.item.attribute.id}.webp`"
+          :alt="props.item.attribute.name"
         />
         <v-sheet
           v-else
@@ -60,10 +61,36 @@ const nameLocalized = computed(() => {
     </v-img>
     <v-divider />
 
+    <!-- <v-card-item v-if="portrait">
+      <template #prepend>
+        <v-avatar>
+          <v-img
+            v-if="item.attribute"
+            :src="`/attributes/icons/${item.attribute.toLowerCase()}.png`"
+          />
+        </v-avatar>
+      </template> -->
+
+    <!-- <v-card-title :class="`text-rarity${props.item.rarity}`" tag="h2">
+        {{ nameLocalized }}
+      </v-card-title>
+
+      <v-card-subtitle>
+        <span
+          v-if="props.sequences"
+          class="font-weight-bold ml-1 pr-1"
+          :style="`color: hsl(${100 - (props.sequences / 7) * 100}, 100%, 50%);`"
+        >
+          S{{ props.sequences }}
+        </span>
+        <span v-else> {{ $t('characters.notOwned') }} </span>
+      </v-card-subtitle>
+    </v-card-item> -->
+
     <v-card-title
       tag="h2"
       class="text-center"
-      :class="`text-rarity${props.item.rarity}`"
+      :class="`text-rarity${props.item.rarity} border-line-rarity${props.item.rarity}`"
     >
       {{ nameLocalized }}
     </v-card-title>

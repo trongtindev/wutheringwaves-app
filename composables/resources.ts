@@ -38,12 +38,24 @@ export const useResources = defineStore('useResources', () => {
     options ??= {};
 
     const data = await import('~/resources/characters.json');
-    return data.default.items.filter((e) => {
-      if (!options.ignoreHidden && e.hidden) {
-        return false;
-      }
-      return true;
-    }) as ICharacter[];
+    const attributes = await getAttributes();
+
+    return data.default.items
+      .filter((e) => {
+        if (!options.ignoreHidden && e.hidden) {
+          return false;
+        }
+        return true;
+      })
+      .map((e) => {
+        const attribute = attributes.find((attribute) => {
+          return attribute.id === e.attribute || attribute.name === e.attribute;
+        });
+        return {
+          ...e,
+          attribute: attribute || attributes[0]
+        };
+      });
   };
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {

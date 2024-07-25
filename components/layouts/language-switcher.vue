@@ -34,7 +34,7 @@ const currentLanguage = computed(() => {
         >
           <v-list-item-title>{{ element.name }}</v-list-item-title>
 
-          <template #append>
+          <template v-if="locale === element.code" #append>
             <v-avatar
               class="border"
               :size="24"

@@ -9,6 +9,7 @@ const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
 const goTo = useGoTo({ offset: -72, duration: 500 });
+const galleryActive = ref(0);
 
 // fetch
 const characters = await resources.getCharacters({ ignoreHidden: true });
@@ -22,6 +23,17 @@ if (!data) throw createError({ message: '2', statusCode: 404 });
 const tab = ref('overview');
 
 // computed
+const gallery = computed(() => {
+  return [
+    `/characters/splash-art/${item.slug}.webp`,
+    `/characters/portraits/${item.slug}.webp`,
+    `/characters/splash-art/${item.slug}.webp`,
+    `/characters/portraits/${item.slug}.webp`,
+    `/characters/splash-art/${item.slug}.webp`,
+    `/characters/portraits/${item.slug}.webp`
+  ];
+});
+
 const stats = computed(() => {
   if (!data.stats) return [];
 
@@ -97,7 +109,7 @@ watch(
 const title = i18n.t('meta.characters.id.title', { name: nameLocalized.value });
 const description = i18n.t('meta.characters.id.description', {
   name: nameLocalized.value,
-  attribute: item.attribute
+  attribute: item.attribute.name
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
 
@@ -171,15 +183,43 @@ useJsonld(() => ({
 
     <v-card-text>
       <v-row>
-        <v-col cols="12" md="4" class="d-flex justify-center align-center">
+        <v-col cols="12" md="5">
           <v-img
-            :src="`/characters/portraits/${item.slug}.webp`"
+            :aspect-ratio="4 / 3"
+            :src="gallery[galleryActive]"
             :alt="nameLocalized"
-            :height="256"
-          />
+          >
+            <template #error>
+              <v-img
+                :src="`/characters/portraits/${item.slug}.webp`"
+                :alt="nameLocalized"
+              >
+              </v-img>
+            </template>
+          </v-img>
+
+          <v-slide-group v-model="galleryActive" show-arrows>
+            <v-slide-group-item
+              v-for="(image, index) in gallery"
+              :key="index"
+              v-slot="{ isSelected, toggle, selectedClass }"
+            >
+              <v-card
+                :class="['ma-2', selectedClass]"
+                :height="100"
+                :width="100"
+                :disabled="isSelected"
+                @click="toggle"
+              >
+                <v-scale-transition>
+                  <v-img :src="image" />
+                </v-scale-transition>
+              </v-card>
+            </v-slide-group-item>
+          </v-slide-group>
         </v-col>
 
-        <v-col cols="12" md="8">
+        <v-col cols="12" md="7">
           <div>
             <h2
               class="text-body-2"
@@ -187,7 +227,7 @@ useJsonld(() => ({
                 $t('characters.introduction', {
                   name: nameLocalized,
                   rarity: item.rarity,
-                  attribute: item.attribute,
+                  attribute: item.attribute.name,
                   weaponType: item.weapon
                 })
               "
@@ -240,7 +280,7 @@ useJsonld(() => ({
               :text="$t(item.weapon)"
               :prepend-icon="weaponIcon"
             />
-            <v-chip v-if="item.attribute" :text="$t(item.attribute)" />
+            <v-chip :text="$t(item.attribute.name)" />
           </div>
         </v-col>
       </v-row>
