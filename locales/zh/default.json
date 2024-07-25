@@ -24,7 +24,7 @@
       "id": {
         "description": "{name} is a {type} weapon in Wuthering Waves that can be obtained via the game's Convene system."
       },
-      "title": "Weapons",
+      "title": "武器类型",
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
     },
     "codes": {
@@ -67,7 +67,7 @@
       }
     },
     "settings": {
-      "title": "Settings"
+      "title": "设置"
     },
     "guides": {
       "title": "Game Guides",
@@ -77,37 +77,37 @@
       "next": "Next guide"
     },
     "leaderboards": {
-      "title": "Leaderboards",
+      "title": "排行榜",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
     }
   },
   "sidebar": {
-    "home": "Ana sayfa",
-    "timeline": "Timeline",
-    "characters": "Karekter",
-    "weapons": "Silahlar",
+    "home": "主页",
+    "timeline": "活动时间一览",
+    "characters": "角色",
+    "weapons": "武器",
     "echoes": "Echoes",
     "conveneHistory": "Pity Tracker",
-    "tierList": "Tier list",
-    "todoList": "Todo list",
-    "trophies": "Trophies",
-    "teams": "Teams",
-    "leaderboards": "Leaderboards",
-    "codes": "Gift Codes",
-    "map": "Map",
-    "guides": "Guides",
-    "items": "Items",
-    "comparison": "Comparison",
-    "database": "Database",
+    "tierList": "梯度表",
+    "todoList": "任务列表",
+    "trophies": "奖杯",
+    "teams": "团队",
+    "leaderboards": "排行榜",
+    "codes": "赠品代码",
+    "map": "地图",
+    "guides": "教程",
+    "items": "项目",
+    "comparison": "比较",
+    "database": "数据库",
     "convene": "Convene",
     "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Global Stats",
-    "conveneImport": "Import history"
+    "conveneImport": "导入历史"
   },
   "items": {
-    "title": "Items",
-    "howToObtain": "How to obtain {0}?",
-    "howToUnlock": "How to unlock {0}?",
+    "title": "素材道具",
+    "howToObtain": "如何获得 {0}？",
+    "howToUnlock": "如何解锁 {0}？",
     "cookingIngredients": "Cooking Ingredients",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
@@ -115,65 +115,65 @@
     "title": "Timeline",
     "startsIn": "Starts {0}",
     "endsIn": "Ends {0}",
-    "current": "Current",
+    "current": "当前",
     "upcoming": "Upcoming",
     "summary": "Events summary",
-    "localTime": "Show as local time"
+    "localTime": "显示为本地时间"
   },
   "convene": {
     "import": {
       "title": "Import Convenes",
-      "success": "Import successfully!",
-      "processing": "Processing...",
+      "success": "导入成功",
+      "processing": "处理中...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
         "pc": {
           "default": {
             "1": {
-              "title": "Open Wuthering Waves in this PC then open the convene history in the game and wait it to load."
+              "title": "在此PC中打开Wuthering Waves，然后在游戏中打开召集历史并等待加载它。"
             },
             "2": {
-              "title": "Press START on your keyboard, then search for Powershell",
+              "title": "打开 Windows 的“开始”菜单，搜索 PowerShell",
               "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
             },
             "3": {
-              "title": "Paste the Convene Record URL into the box below."
+              "title": "将召集记录URL粘贴到下面的框中。"
             }
           }
         }
       },
       "faqs": {
         "1": {
-          "title": "What if I import many different accounts?",
-          "content": "Don't worry, when you import multiple accounts we will automatically split them and you will see an account switch button appear."
+          "title": "如果我导入许多不同的帐户，怎么办？",
+          "content": "别担心，当您导入多个账户时，我们会自动分割它们，您将看到一个账户切换按钮。"
         },
         "2": {
           "title": "Why not updating the record?",
           "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
         },
         "3": {
-          "title": "Is my account safe?",
-          "content": "Yes, through this import method it will not be possible to interfere with your account. And finally, this website is open source on github you can see and evaluate it yourself, if you still don't trust you can skip this feature and use other features."
+          "title": "我的帐户是否安全？",
+          "content": "是的，通过此导入方法不可能干扰您的帐户。 最后，本网站是开源的 github ，您可以自己看到和评估它。 如果您仍然不信任，您可以跳过此功能并使用其他功能。"
         }
       }
     },
     "history": {
       "title": "Pity Tracker",
-      "empty": "You currently have no Convene History."
+      "empty": "您目前没有召集历史记录。"
     },
-    "guaranteedAt": "Guaranteed at {0}",
-    "lifetimePulls": "Lifetime Pulls",
-    "pity": "Pity",
+    "guaranteedAt": "保底 {0} 抽",
+    "lifetimePulls": "总抽卡次数",
+    "pity": "可惜",
     "rank": {
-      "title": "Your Global Rank",
-      "level": "Your Total Pulls Rank",
+      "title": "你的全球排名",
+      "level": "你的总抽卡排名",
       "current": "Current {banner} median is {median} pulls",
       "more": "You have more pull than {percentage}% users",
       "less": "You have less pull than {percentage}% users",
       "currentLuck": "Current {banner} median is {median}%",
-      "luck5": "Luckiness 5★",
-      "luck4": "Luckiness 4★",
-      "luckWinRateOff": "Luckiness Win 50:50",
+      "luck5": "5★ 欧气指数",
+      "luck4": "4★ 欧气指数",
+      "luckWinRateOff": "幸运胜率 50:50",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
       "moreTotal": "More pulls than {percentage}% users",
@@ -185,10 +185,10 @@
     },
     "global": {
       "title": "Global Convene Stats",
-      "fiveStar": "5★ List",
-      "fourStar": "4★ List",
+      "fiveStar": "5★ 列表",
+      "fourStar": "4★ 列表",
       "median": "5★ Median",
-      "totalUsers": "Total Users",
+      "totalUsers": "用户总数",
       "conveneTotal": "Convene Total",
       "worth": "Worth",
       "chance": "Chance"
@@ -198,28 +198,28 @@
     "title": "Showcase"
   },
   "characters": {
-    "title": "Characters",
+    "title": "角色",
     "message": "Import convene history to see already owned characters.",
     "resonanceChain": "Resonance Chain",
-    "skills": "Skills",
+    "skills": "技能",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
     "lastUpdatedOn": "{name} profile has been last updated on {time}.",
     "build": "{name} Build",
     "calculations": "Calculations",
-    "overview": "Overview",
+    "overview": "概览",
     "bestMainEchoes": "Best Main Echoes {name}",
-    "moreBuildGuides": "More Build Guides",
+    "moreBuildGuides": "更多构建指南",
     "bestWeapons": "Best Weapons {name}",
-    "bestEchoSets": "Best Echo Sets",
+    "bestEchoSets": "最佳Echo设置",
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
     "skillPriority": "{name} Skill Priority"
   },
   "weapons": {
-    "title": "Weapons",
+    "title": "武器",
     "ranks": "Ranks",
-    "alert": "Import convene history to see already owned weapons.",
+    "alert": "导入召集历史以查看已拥有的武器。",
     "lastUpdatedOn": "{name} weapon has been last updated on {time}.",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> weapon.",
     "skill": "{name} Skill"
@@ -250,10 +250,10 @@
     "related": "Related Echo {name}"
   },
   "settings": {
-    "title": "Settings",
+    "title": "设置",
     "eraseAllData": "Erase All Data",
     "accounts": {
-      "title": "Accounts",
+      "title": "帐户",
       "autoImportConveneHistory": "Auto import convene history",
       "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
       "empty": "To add an account, you just need to import convene history."
@@ -287,9 +287,9 @@
     "replies": "Replies"
   },
   "sync": {
-    "title": "Cloud Sync",
+    "title": "云端 同步",
     "conflict": {
-      "title": "Your Data Conflict",
+      "title": "您的数据冲突",
       "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
       "cloudData": "Cloud Data",
       "localData": "Local Browser Data",
@@ -301,7 +301,7 @@
       "lastCloudChanged": "Last changed: {0}"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
-    "dataSynced": "Data has been synced!",
+    "dataSynced": "数据已同步！",
     "lastModified": "Last modified"
   },
   "accounts": {
@@ -342,7 +342,7 @@
     }
   },
   "search": {
-    "title": "Spotlight Search"
+    "title": "Spotlight 搜索"
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -364,17 +364,17 @@
     "message": "What we collects and what it is used for"
   },
   "updater": {
-    "title": "New update!",
-    "message": "Click refresh to get the new update",
-    "whatsNew": "What's new",
-    "later": "Later",
-    "refresh": "Refresh"
+    "title": "新的更新",
+    "message": "点击“刷新”进行更新",
+    "whatsNew": "最新变化",
+    "later": "后来",
+    "refresh": "刷新"
   },
   "common": {
-    "name": "Name",
+    "name": "名称",
     "time": "Time",
-    "home": "Home",
-    "delete": "Delete",
+    "home": "主页",
+    "delete": "删除",
     "timeout": "Connection timeout, please wait a moment and try again later",
     "invalidLink": "Invalid link, please check it again",
     "invalidData": "Invalid data returned from API, try again later",
@@ -384,7 +384,7 @@
     "cancel": "Cancel",
     "import": "Import",
     "search": "Search",
-    "all": "All",
+    "all": "全部",
     "echo": "Echo",
     "any": "Any",
     "skill": "Skill",
@@ -394,7 +394,7 @@
     "exportAsImage": "Export as Image",
     "saveChanges": "Save changes",
     "weapon": "Weapon",
-    "character": "Character",
+    "character": "角色",
     "type": "Type",
     "sort": "Sort",
     "title": "Title",
@@ -409,18 +409,18 @@
     "checkAll": "Check all",
     "clear": "Clear",
     "retry": "Retry",
-    "upcoming": "Upcoming",
-    "upcomingContent": "This page is about upcoming content.",
-    "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
+    "upcoming": "即将到来的",
+    "upcomingContent": "这个页面是关于即将到来的内容。",
+    "upcomingContentMessage": "即将到来的内容可能会发生变化，也许不会代表最后产品。",
     "upcomingWeapons": "Upcoming Weapons",
-    "upcomingCharacters": "Upcoming Characters",
+    "upcomingCharacters": "即将到来的角色",
     "energy": "Energy",
     "options": "Options",
     "trophy": "Trophy",
-    "noRecords": "No records found.",
+    "noRecords": "未找到记录",
     "yourLastConvene": "Your Last Convene",
-    "joinTheDiscord": "Join the Discord",
-    "viewOnGithub": "View on GitHub",
+    "joinTheDiscord": "加入 Discord",
+    "viewOnGithub": "前往 GitHub",
     "rarity": "Rarity",
     "category": "Category",
     "editThisPage": "Edit This Page",

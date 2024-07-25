@@ -82,10 +82,10 @@
     }
   },
   "sidebar": {
-    "home": "Ana sayfa",
+    "home": "Home",
     "timeline": "Timeline",
-    "characters": "Karekter",
-    "weapons": "Silahlar",
+    "characters": "Characters",
+    "weapons": "Weapons",
     "echoes": "Echoes",
     "conveneHistory": "Pity Tracker",
     "tierList": "Tier list",
