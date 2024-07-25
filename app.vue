@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import '@@/assets/app.css';
 import dayjs from 'dayjs';
-import { useLocale, useRtl } from 'vuetify';
+import { useLocale } from 'vuetify';
 
 // uses
 const i18n = useI18n();

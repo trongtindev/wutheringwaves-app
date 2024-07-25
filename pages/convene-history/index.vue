@@ -19,9 +19,13 @@ const filterBanner = ref<IBanner | null>(null);
 const filterRarity = ref<number[]>([5]);
 const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);
+const bannerListHeight = ref();
 
 // functions
 const initialize = () => {
+  updateBannerListHeight();
+  window.addEventListener('resize', updateBannerListHeight);
+
   database.getInstance().then((db) => {
     db.convenes
       .find({
@@ -88,6 +92,11 @@ const updateFilter = () => {
     });
 };
 
+const updateBannerListHeight = () => {
+  const toolbar = document.querySelector('.v-toolbar__content')!;
+  bannerListHeight.value = window.innerHeight - toolbar.clientHeight - 16;
+};
+
 // changes
 watch(
   () => account.active,
@@ -95,13 +104,16 @@ watch(
 );
 watch(() => filterBanner.value, updateFilter);
 watch(() => filterRarity.value, updateFilter);
-
-// lifecycle
-onNuxtReady(() => initialize());
 watch(
   () => account.onConveneChanged,
   () => initialize()
 );
+
+// lifecycle
+onMounted(() => initialize());
+onUnmounted(() => {
+  window.removeEventListener('resize', updateBannerListHeight);
+});
 
 // seo meta
 const title = i18n.t('meta.convene.history.title');
@@ -134,7 +146,19 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         :item-title="(e) => $t(e.name)"
         :clearable="true"
         :hide-details="true"
-      />
+      >
+        <template #item="{ item, props }">
+          <v-list-item v-bind="props" :title="item.title">
+            <!-- <template #prepend>
+              <v-avatar class="border" rounded />
+            </template> -->
+
+            <v-list-item-subtitle v-if="item.raw.featuredRare">
+              <v-chip class="text-rarity5" :text="item.raw.featuredRare" />
+            </v-list-item-subtitle>
+          </v-list-item>
+        </template>
+      </v-select>
     </v-col>
 
     <v-col cols="12" md="4">
@@ -233,7 +257,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
   </v-card>
 
   <div class="mt-2">
-    <masonry>
+    <masonry col-width="minmax(Min(22.5em, 100%), 1fr)">
       <template #default="masonry">
         <convene-history-rank-summary
           :convenes="convenes"

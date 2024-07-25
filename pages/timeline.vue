@@ -9,6 +9,7 @@ const eventHeight = 36;
 const eventMargin = 20;
 const padding = 10;
 const marginTop = 80;
+const MONTH_HEIGHT = 48;
 
 // uses
 const i18n = useI18n();
@@ -107,7 +108,6 @@ watch(
 onMounted(() => {
   browserTimeZone.value = dayjs.tz.guess();
   timeDifference.value = getTimeDifference();
-  console.log('timeDifference', timeDifference.value);
 
   events.value = eventsData.map((e, i) => {
     if (Array.isArray(e)) {
@@ -230,12 +230,11 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           <v-sheet
             v-for="([month, item], i) in monthList"
             :key="i"
-            :style="`top: 12px; width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
-            class="month-title position-absolute pr-4"
+            :style="`width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
+            :height="MONTH_HEIGHT"
+            class="position-absolute pr-4 top-0 d-flex align-center"
           >
-            <span
-              class="text-orange font-weight-bold position-sticky left-0 month"
-            >
+            <span class="text-h6 position-sticky left-0">
               {{ month }}
             </span>
           </v-sheet>
@@ -244,18 +243,18 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           <div
             v-for="(date, i) in dates"
             :key="i"
-            :style="`height: calc(100% - ${eventHeight}px); left: ${i * dayWidth}px; top: ${eventHeight}px;`"
-            class="date-bar position-absolute"
+            :style="`height: calc(100% - ${MONTH_HEIGHT}px); left: ${i * dayWidth}px; top: ${MONTH_HEIGHT + 24}px;`"
+            class="bg-border position-absolute w-1"
           >
             <span
               class="position-absolute text-center pb-1"
-              style="width: 40px; left: -20px"
+              style="width: 40px; left: -20px; top: -24px"
             >
               {{ date[0] }}
             </span>
             <span
-              class="position-absolute text-grey-darken-1 text-center pb-1"
-              style="width: 40px; left: -20px; top: -24px"
+              class="position-absolute text-caption text-center pb-1 top-0"
+              style="width: 40px; left: -20px"
             >
               {{ date[1] }}
             </span>
@@ -272,7 +271,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                 :now="today"
                 :event="item"
                 :day-width="dayWidth"
-                :margin-top="marginTop"
+                :margin-top="marginTop + 24"
                 :event-height="eventHeight"
                 :event-margin="eventMargin"
                 :i="i"
@@ -295,11 +294,11 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
           <!-- NOW BAR -->
           <div
-            class="now-bar bg-border z-20 position-relative opacity-75"
-            :style="`left: ${todayOffset * dayWidth}px;`"
+            class="now-bar w-2 position-relative opacity-75"
+            :style="`left: ${todayOffset * dayWidth}px; top: 12.6px`"
           >
             <div
-              class="position-absolute rounded-xl top-0 text-center bg-surface text-black border"
+              class="position-absolute rounded-xl text-center bg-surface border"
               style="width: 80px; left: -40px"
             >
               {{ today.format('HH:mm:ss') }}

@@ -22,6 +22,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       sets: { mdi }
     },
     defaults: {
+      global: {
+        eager: true
+      },
       VRow: {
         dense: true
       },
@@ -42,11 +45,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       VAlert: {
         density: 'compact',
-        variant: 'tonal',
-        class: 'text-center text-subtitle-2'
-      },
-      VAlertTitle: {
-        class: 'justify-center text-body-1'
+        variant: 'tonal'
       }
     },
     theme: {
@@ -55,9 +54,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark: {
           dark: true,
           colors: {
-            // primary: '#579DFF',
+            primary: '#1867c0',
             // 'on-primary': '#FFFFFF',
-            // secondary: '#625B71',
+            secondary: '#5CBBF6',
             // 'on-secondary': '#FFFFFF',
             background: '#1D2125',
             // 'on-background': '#ffffff',
@@ -72,9 +71,14 @@ export default defineNuxtPlugin((nuxtApp) => {
           }
         },
         light: {
-          dark: false,
           colors: {
-            // primary: '#579DFF'
+            'surface-variant-alt': '#dedede',
+            primary: '#1867c0',
+            secondary: '#5CBBF6',
+            tertiary: '#E57373',
+            accent: '#005CAF',
+            quarternary: '#B0D1E8',
+            'surface-bright': '#fafafa'
           }
         }
       }

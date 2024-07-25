@@ -2,7 +2,6 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
 import { updateModified } from './runtime/update-modified';
 import type { LocaleObject } from '@nuxtjs/i18n';
-import { updateTranslations } from './runtime/update-translations';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -40,6 +39,7 @@ const localesMetadata: LocaleObject[] = [
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   $development: {
+    // ssr: false,
     // debug: true,
     gtag: {
       enabled: false
@@ -115,7 +115,7 @@ export default defineNuxtConfig({
     ]
   },
 
-  css: ['~/assets/main.scss', '~/assets/tiptap.scss'],
+  css: ['~/assets/main.css', '~/assets/main.scss', '~/assets/tiptap.scss'],
 
   features: {
     inlineStyles: false
@@ -154,7 +154,7 @@ export default defineNuxtConfig({
 
   // modules config
   i18n: {
-    vueI18n: './i18n.config.ts',
+    vueI18n: './i18n/i18n.config.ts',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
@@ -163,7 +163,7 @@ export default defineNuxtConfig({
     },
     locales: localesMetadata,
     experimental: {
-      localeDetector: './i18n.detector.ts'
+      localeDetector: './i18n/i18n.detector.ts'
     }
   },
 
@@ -174,6 +174,9 @@ export default defineNuxtConfig({
   vueuse: { ssrHandlers: true },
 
   vite: {
+    resolve: {
+      extensions: ['.mjs', '.js', '.ts', '.json']
+    },
     vue: {
       template: {
         transformAssetUrls
@@ -230,9 +233,6 @@ export default defineNuxtConfig({
   },
 
   hooks: {
-    'modules:before': () => {
-      return updateTranslations(localesMetadata);
-    },
     'builder:watch': async (e, path) => {
       if (e != 'change') return;
 
@@ -243,7 +243,6 @@ export default defineNuxtConfig({
           !path.endsWith('characters.json')
         ) {
           await updateModified('characters');
-          return updateTranslations(localesMetadata, true);
         } else if (
           path.startsWith('resources/echoes') &&
           !path.endsWith('echoes.json')

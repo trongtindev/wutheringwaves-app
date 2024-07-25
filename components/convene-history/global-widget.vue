@@ -23,6 +23,9 @@ const activeBanners = banners
     const timeB = new Date(b.time!.start).getTime();
     return timeB - timeA;
   });
+
+// lifecycle
+onNuxtReady(() => emits('on-done'));
 </script>
 
 <template>

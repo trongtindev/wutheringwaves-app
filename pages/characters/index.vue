@@ -98,7 +98,7 @@ useSeoMeta({
 
 <template>
   <!-- alert -->
-  <alert id="characters" :text="$t('characters.alert')" />
+  <base-alert id="characters" :text="$t('characters.alert')" class="mb-2" />
 
   <!-- filter -->
   <v-row>

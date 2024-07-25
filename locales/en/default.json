@@ -259,8 +259,8 @@
       "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
       "empty": "To add an account, you just need to import convene history."
     },
-    "backup": {
-      "title": "Cloud Backup"
+    "sync": {
+      "title": "Cloud Sync"
     },
     "analytics": {
       "title": "Analytics",
@@ -275,7 +275,7 @@
       },
       "erase": {
         "title": "Erase All Data",
-        "message": "Erase All Data will clear all data and settings in your device and cloud backup. Please confirm that you have backed up important data of your account.",
+        "message": "Erase All Data will clear all data and settings in your device and cloud sync. Please confirm that you have backed up important data of your account.",
         "button": "Erase Now"
       }
     }

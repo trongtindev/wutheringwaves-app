@@ -10,6 +10,7 @@
     ],
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "allowImportingTsExtensions": true
   }
 }

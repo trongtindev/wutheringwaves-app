@@ -7,7 +7,8 @@ import type { ITrophy } from '~/interfaces/trophy';
 
 export const useResources = defineStore('useResources', () => {
   const getBanners = async () => {
-    return (await import('~/resources/banners')).default;
+    const data = (await import('~/resources/banners')).default;
+    return data.reverse();
   };
 
   const weapons = async (): Promise<IWeapon[]> => {

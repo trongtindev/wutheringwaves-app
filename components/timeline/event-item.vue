@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import type { IEventConverted } from '~/interfaces/event';
 
 // define
@@ -106,14 +106,6 @@ const style = computed(() => {
 
   return content;
 });
-
-const itemStyle = computed(() => {
-  const contents = ['background-position: center;', 'background-size: cover;'];
-  if (props.event.thumbnail) {
-    contents.push(`background-image: url(${props.event.thumbnail});`);
-  }
-  return contents.join(' ');
-});
 </script>
 
 <template>
@@ -127,17 +119,22 @@ const itemStyle = computed(() => {
     :style="style"
     @click="() => onPressed()"
   >
-    <div
-      class="event-item"
-      :style="itemStyle"
+    <v-sheet
+      class="event-item position-absolute right-0 top-0 h-100 w-100 bg-no-repeat bg-position-center bg-size-cover"
+      :style="
+        props.event.thumbnail
+          ? `background-image: url(${props.event.thumbnail});`
+          : undefined
+      "
       :class="{
         'rounded-r-xl': nextDiff > 1,
         'border-e-md border-gray-3': nextDiff < 1
       }"
+      :max-width="200"
     />
 
     <span
-      class="event-name text position-sticky left-0 text-no-wrap overflow-hidden"
+      class="text-subtitle-2 position-sticky left-0 text-no-wrap overflow-hidden"
     >
       {{ event.name }}
     </span>
@@ -150,7 +147,12 @@ const itemStyle = computed(() => {
       :style="`right: ${nextNearby ? '-55px' : shouldShowHourEnd ? '-120px' : '-40px'}; width: ${shouldShowHourEnd ? '120px' : '40px'};`"
     >
       <v-chip :color="diffEnd < 86400000 ? 'warning' : undefined">
-        {{ props.event.end.fromNow() }}
+        {{
+          diffEnd > 86400000
+            ? `${Math.trunc(dayjs.duration(diffEnd).asDays())}d
+        ${shouldShowHourEnd ? dayjs.duration(diffEnd).format('H[h]') : ''}`
+            : dayjs.duration(diffEnd).format('HH:mm:ss')
+        }}
       </v-chip>
     </div>
 
@@ -164,7 +166,15 @@ const itemStyle = computed(() => {
       :style="`left: ${prevNearby ? (shouldShowHourStart ? '-80px' : '-18px') : '-120px'}; width: ${shouldShowHourStart ? '120px' : '40px'};`"
     >
       <v-chip :color="diffStart < 86400000 ? 'success' : undefined">
-        {{ props.event.start.fromNow() }}
+        {{
+          diffStart > 86400000
+            ? `${Math.trunc(dayjs.duration(diffStart).asDays())}d ${
+                shouldShowHourStart
+                  ? dayjs.duration(diffStart).format('H[h]')
+                  : ''
+              }`
+            : dayjs.duration(diffStart).format('HH:mm:ss')
+        }}
       </v-chip>
     </div>
   </div>

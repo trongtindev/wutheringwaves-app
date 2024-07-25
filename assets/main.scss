@@ -2,19 +2,60 @@
   $color-pack: false
 );
 
+/* position */
+
+/* width */
+.w-1 {
+  width: 1px;
+}
+
+.w-2 {
+  width: 2px;
+}
+
+/* background */
+.bg-border {
+  background-color: rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat !important;
+}
+
+.bg-position-center {
+  background-position: center !important;
+}
+
+.bg-size-cover {
+  background-size: cover !important;
+}
+
 /* timeline */
 .timeline {
-  .month-title {}
-
-  .date-bar {
-    width: 1px;
-    background-color: rgba(var(--v-border-color), var(--v-border-opacity));
+  div.event-item {
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
 
   .now-bar {
-    width: 2px;
     height: calc(100% - 10px);
-    position: absolute;
     top: 10px;
+    background-color: rgba(var(--v-border-color), 0.5);
   }
+}
+
+/* masonry */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--col-width));
+  grid-template-rows: masonry;
+  justify-content: center;
+  grid-gap: var(--grid-gap);
+}
+
+.masonry > * {
+  align-self: start;
+}
+
+.masonry.stretch-first > *:first-child {
+  grid-column: 1/ -1;
 }

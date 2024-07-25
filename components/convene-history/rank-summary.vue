@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ConveneDocType } from '~/collections/convene';
-import { CardPoolType } from '~/interfaces/banner';
 import type { IBannerSummary } from '~/interfaces/convene';
 
 // define
@@ -23,32 +22,7 @@ const luckinessFourStar = ref(0);
 const totalPullPercentage = ref(0);
 
 // functions
-const calculatorPulls = () => {
-  let totalPlayers = 0;
-  let playersWithFewerPulls = 0;
-  const currentPulls = props.convenes.length;
-
-  for (const data of pullData.value) {
-    totalPlayers += data[1];
-    if (data[0] < currentPulls) {
-      playersWithFewerPulls += data[1];
-    }
-  }
-
-  totalPullPercentage.value = (playersWithFewerPulls / totalPlayers) * 100;
-  console.debug({ totalPlayers, currentPulls });
-};
-
-const calculatorLuckiness = () => {};
-
-// changes
-watch(
-  () => props.convenes,
-  () => calculatorPulls()
-);
-
-// lifecycle
-onNuxtReady(() => {
+const initialize = () => {
   api
     .getInstance()
     .get<{
@@ -66,7 +40,35 @@ onNuxtReady(() => {
 
       emits('on-updated');
     });
-});
+};
+
+const calculatorPulls = () => {
+  let totalPlayers = 0;
+  let playersWithFewerPulls = 0;
+  const currentPulls = props.convenes.length;
+
+  for (const data of pullData.value) {
+    totalPlayers += data[1];
+    if (data[0] < currentPulls) {
+      playersWithFewerPulls += data[1];
+    }
+  }
+
+  totalPullPercentage.value = (playersWithFewerPulls / totalPlayers) * 100;
+  if (isNaN(totalPullPercentage.value)) totalPullPercentage.value = 0;
+  console.debug({ totalPlayers, currentPulls });
+};
+
+const calculatorLuckiness = () => {};
+
+// changes
+watch(
+  () => props.convenes,
+  () => calculatorPulls()
+);
+
+// lifecycle
+onNuxtReady(initialize);
 </script>
 
 <template>
@@ -78,8 +80,8 @@ onNuxtReady(() => {
 
     <v-card-text>
       <!-- Total pulls -->
-      <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2">
-        <v-list-item>
+      <v-alert class="mb-4">
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('common.totalPull') }}
           </v-list-item-title>
@@ -107,11 +109,11 @@ onNuxtReady(() => {
             </div>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
 
       <!-- Luckiness Win Rate -->
-      <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2 mt-4">
-        <v-list-item>
+      <v-alert class="mb-4">
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('convene.rank.luckWinRateOff') }}
           </v-list-item-title>
@@ -131,11 +133,11 @@ onNuxtReady(() => {
             </div>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
 
       <!-- Luckiness 5★ -->
-      <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2 mt-4">
-        <v-list-item>
+      <v-alert class="mb-4">
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('convene.rank.luck5') }}
           </v-list-item-title>
@@ -153,11 +155,11 @@ onNuxtReady(() => {
             </div>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
 
       <!-- Luckiness 4★ -->
-      <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2 mt-4">
-        <v-list-item>
+      <v-alert>
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('convene.rank.luck4') }}
           </v-list-item-title>
@@ -175,7 +177,7 @@ onNuxtReady(() => {
             </div>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
     </v-card-text>
   </v-card>
 </template>

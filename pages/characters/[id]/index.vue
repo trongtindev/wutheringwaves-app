@@ -144,7 +144,7 @@ useJsonld(() => ({
   />
 
   <!-- upcoming -->
-  <v-alert
+  <base-alert
     v-if="item.upcoming"
     color="warning"
     class="mb-2"

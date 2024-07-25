@@ -47,9 +47,10 @@ We'd love your help in improving the website with features, bug reports, and pat
 We need more translators to help us translate the rest of the pages.
 
 ```
-utils/metadata.ts
-locales
+resources
 ```
+
+<a href="https://crowdin.com/project/wutheringwaves_app">Crowdin </a>
 
 ### Available Languages
 

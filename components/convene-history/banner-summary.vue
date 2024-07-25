@@ -96,9 +96,9 @@ if (import.meta.client) {
     <v-divider />
 
     <v-card-text>
-      <v-sheet class="bg-blue-grey-darken-3 rounded pt-2 pb-2">
-        <!-- lifetime pull -->
-        <v-list-item>
+      <!-- lifetime pull -->
+      <v-alert class="mb-4">
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('convene.lifetimePulls') }}
           </v-list-item-title>
@@ -123,14 +123,11 @@ if (import.meta.client) {
             </span>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
 
       <!-- luckWinRateOff -->
-      <v-sheet
-        v-if="showLuckWinRateOff"
-        class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2"
-      >
-        <v-list-item>
+      <v-alert v-if="showLuckWinRateOff" class="mb-4">
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('convene.rank.luckWinRateOff') }}
           </v-list-item-title>
@@ -141,11 +138,11 @@ if (import.meta.client) {
             </span>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
 
       <!-- 5 star pity -->
-      <v-sheet class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2">
-        <v-list-item>
+      <v-alert class="mb-4">
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('5 ★ Pity') }}
           </v-list-item-title>
@@ -162,11 +159,11 @@ if (import.meta.client) {
             </span>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
 
       <!-- 4 star pity -->
-      <v-sheet class="bg-blue-grey-darken-3 rounded mt-4 pt-2 pb-2">
-        <v-list-item>
+      <v-alert>
+        <v-list-item class="pa-0">
           <v-list-item-title>
             {{ $t('4 ★ Pity') }}
           </v-list-item-title>
@@ -181,7 +178,7 @@ if (import.meta.client) {
             </span>
           </template>
         </v-list-item>
-      </v-sheet>
+      </v-alert>
     </v-card-text>
 
     <!-- :color="element.win ? 'success' : undefined" -->

@@ -1,4 +1,5 @@
 {
+  "editor.wordWrap": "on",
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.words": [
