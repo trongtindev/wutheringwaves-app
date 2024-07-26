@@ -302,7 +302,14 @@ if (headers['if-modified-since']) {
 
       <v-card-actions class="d-flex align-center justify-end">
         <v-btn
-          :to="localePath(`/todo-list/create?type=weapon&slug=${item.slug}`)"
+          :to="
+            localePath({
+              path: '/todo-list/create',
+              meta: {
+                weapon: item.slug
+              }
+            })
+          "
           :text="$t('Add to Todo list')"
           :append-icon="mdiPlus"
           variant="outlined"
