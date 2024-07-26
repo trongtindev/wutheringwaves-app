@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: bun i --frozen-lockfile
 
-      - name: pnpm run lint
-        run: pnpm run lint
+      - name: bun run lint
+        run: bun run lint
 
-      - name: pnpm run typecheck
-        run: pnpm run typecheck
+      - name: bun run typecheck
+        run: bun run typecheck
