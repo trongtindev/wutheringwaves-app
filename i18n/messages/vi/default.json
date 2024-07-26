@@ -118,7 +118,8 @@
     "current": "Hiện tại",
     "upcoming": "Sắp tới",
     "summary": "Tóm tắt hoạt động",
-    "localTime": "Dùng giờ địa phương"
+    "localTime": "Dùng giờ địa phương",
+    "checkoutOfficialUrl": "Check out the official website"
   },
   "convene": {
     "import": {
@@ -214,7 +215,9 @@
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
-    "skillPriority": "{name} Skill Priority"
+    "skillPriority": "{name} Skill Priority",
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "Vũ khí",
@@ -297,12 +300,14 @@
       "newer": "NEWER",
       "useCloudData": "Use Cloud Data",
       "useLocalData": "Use Local Data",
-      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-      "lastCloudChanged": "Last changed: {0}"
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "Data has been synced!",
-    "lastModified": "Sửa đổi lần cuối"
+    "lastModified": "Sửa đổi lần cuối",
+    "lastSynced": "Last synced: {0}",
+    "push": "Push",
+    "pull": "Pull"
   },
   "accounts": {
     "title": "Danh sách tài khoản",
@@ -442,12 +447,18 @@
     "cost": "Cost",
     "close": "Close",
     "loading": "Đang tải...",
+    "localTime": "Local time",
     "serverTime": "Thời gian máy chủ",
     "pullByDay": "Lượt theo ngày",
     "totalPull": "Tổng số lượt",
     "openIssues": "Báo cáo lỗi",
     "unnamed": "Không tên",
     "active": "Hoạt động",
-    "inactive": "Không hoạt động"
+    "inactive": "Không hoạt động",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Bộ lọc",
+    "apply": "Apply",
+    "reset": "Reset",
+    "none": "None"
   }
 }
