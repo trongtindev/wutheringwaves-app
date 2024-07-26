@@ -9,6 +9,7 @@ const i18nHead = useLocaleHead({
   addSeoAttributes: true,
   identifierAttribute: 'default'
 });
+const analytics = useAnalytics();
 // const rtl = useRtl();
 const vuetifyLocale = useLocale();
 const { SITE_URL, GOOGLE_TAG_ID } = useRuntimeConfig().public;
@@ -79,12 +80,10 @@ useHead({
     }
   ],
   script: [
-    ...(!import.meta.dev
+    ...(!analytics.optOut
       ? [
           {
-            src:
-              'https://www.googletagmanager.com/gtag/js?id=G-TJSX2XNTR9' +
-              GOOGLE_TAG_ID,
+            src: 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_TAG_ID,
             async: true
           },
           {

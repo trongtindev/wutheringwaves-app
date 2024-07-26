@@ -108,7 +108,7 @@ watch(
 </script>
 
 <template>
-  <v-card class="mt-2">
+  <v-card>
     <v-card-title>
       {{ $t('guides.editor.thumbnail.title') }}
     </v-card-title>
@@ -160,3 +160,4 @@ watch(
     <v-divider />
   </v-card>
 </template>
+

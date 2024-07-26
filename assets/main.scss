@@ -2,6 +2,11 @@
   $color-pack: false
 );
 
+/* colors */
+.text-white {
+  color: white;
+}
+
 /* position */
 
 /* width */
@@ -59,3 +64,4 @@
 .masonry.stretch-first > *:first-child {
   grid-column: 1/ -1;
 }
+

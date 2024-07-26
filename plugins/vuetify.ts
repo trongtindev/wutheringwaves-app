@@ -45,11 +45,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         variant: 'tonal'
       },
       VTextField: {
-        // density: 'compact',
         variant: 'solo-filled'
       },
       VSelect: {
-        // density: 'compact',
+        variant: 'solo-filled'
+      },
+      VTextarea: {
+        variant: 'solo-filled'
+      },
+      VCombobox: {
         variant: 'solo-filled'
       }
     },

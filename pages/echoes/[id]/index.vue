@@ -4,6 +4,8 @@ const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
+const headers = useRequestHeaders(['If-Modified-Since']);
+const event = useRequestEvent();
 
 // states
 const echoes = await resources.getEchoes();
@@ -82,6 +84,15 @@ useJsonld({
     { '@type': 'ListItem', position: 2, name: i18n.t('echoes.title') }
   ]
 });
+
+// https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
+if (headers['if-modified-since']) {
+  const modifiedSince = new Date(headers['if-modified-since']);
+  const modifiedTime = new Date(item.modifiedTime);
+  if (modifiedSince.getTime() >= modifiedTime.getTime()) {
+    setResponseStatus(event!, 304);
+  }
+}
 </script>
 
 <template>
@@ -158,3 +169,4 @@ useJsonld({
     <comments :channel="`echo.${item.slug}`" />
   </div>
 </template>
+

@@ -8,6 +8,8 @@ const route = useRoute();
 const resources = useResources();
 const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
+const headers = useRequestHeaders(['If-Modified-Since']);
+const event = useRequestEvent();
 
 // states
 const dictItems = ref<{ [key: number]: IItem }>({});
@@ -98,14 +100,20 @@ useJsonld({
     { '@type': 'ListItem', position: 2, name: i18n.t('weapons.title') }
   ]
 });
+
+// https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
+if (headers['if-modified-since']) {
+  const modifiedSince = new Date(headers['if-modified-since']);
+  const modifiedTime = new Date(item.modifiedTime);
+  if (modifiedSince.getTime() >= modifiedTime.getTime()) {
+    setResponseStatus(event!, 304);
+  }
+}
 </script>
 
 <template>
   <!-- chips -->
-  <header-chips
-    class="mb-2"
-    :github="`tree/main/resources/weapons.json`"
-  />
+  <header-chips class="mb-2" :github="`tree/main/resources/weapons.json`" />
 
   <!-- upcoming -->
   <v-alert
@@ -296,3 +304,4 @@ useJsonld({
     <comments :channel="route.path" />
   </div>
 </template>
+

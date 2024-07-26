@@ -101,7 +101,26 @@ export const useResources = defineStore('useResources', () => {
 
   const getTrophies = async (): Promise<ITrophy[]> => {
     const data = await import('~/resources/trophy_items.json');
-    return data.default.items;
+    return data.default.items.map((e) => {
+      return {
+        ...e,
+        publishedTime: e.publishedTime || data.default.publishedTime,
+        modifiedTime: e.modifiedTime || data.default.modifiedTime
+      };
+    });
+  };
+
+  const getTrophy = async (slug: string): Promise<ITrophy> => {
+    const data = await import('~/resources/trophy_items.json');
+    return data.default.items
+      .map((e) => {
+        return {
+          ...e,
+          publishedTime: e.publishedTime || data.default.publishedTime,
+          modifiedTime: e.modifiedTime || data.default.modifiedTime
+        };
+      })
+      .find((e) => e.slug === slug)!;
   };
 
   const getTrophyData = async () => {
@@ -133,6 +152,7 @@ export const useResources = defineStore('useResources', () => {
     getItems,
     getItemData,
     getTrophies,
+    getTrophy,
     getTrophyData,
     getTimeline,
     getAttributes

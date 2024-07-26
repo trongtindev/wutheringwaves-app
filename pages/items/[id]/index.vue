@@ -4,6 +4,8 @@ const route = useRoute();
 const resources = useResources();
 const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
+const headers = useRequestHeaders(['If-Modified-Since']);
+const event = useRequestEvent();
 
 // states
 const items = await resources.getItems();
@@ -50,6 +52,12 @@ const obtainDescriptionLocalized = computed(() => {
     });
   }
   return null;
+});
+
+const relatedItems = computed(() => {
+  return shuffleArray(items)
+    .filter((e) => e.category == item.category)
+    .splice(0, 24);
 });
 
 // seo meta
@@ -101,6 +109,15 @@ useJsonld({
     { '@type': 'ListItem', position: 2, name: i18n.t('items.title') }
   ]
 });
+
+// https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
+if (headers['if-modified-since']) {
+  const modifiedSince = new Date(headers['if-modified-since']);
+  const modifiedTime = new Date(item.modifiedTime);
+  if (modifiedSince.getTime() >= modifiedTime.getTime()) {
+    setResponseStatus(event!, 304);
+  }
+}
 </script>
 
 <template>
@@ -199,8 +216,31 @@ useJsonld({
     </v-col>
   </v-row>
 
+  <!-- related -->
+  <v-card class="mt-2">
+    <v-card-title tag="h2">
+      {{ $t('common.related') }} {{ item.name }}
+    </v-card-title>
+    <v-divider />
+
+    <v-card-text>
+      <v-row>
+        <v-col
+          v-for="(element, index) in relatedItems"
+          :key="index"
+          cols="6"
+          sm="4"
+          md="3"
+          lg="2"
+        >
+          <item-card :item="element" />
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
+
   <!-- comments -->
   <div class="mt-2">
-    <comments :channel="route.path" />
+    <comments :channel="`item.${item.slug}`" />
   </div>
 </template>

@@ -42,9 +42,6 @@ export default defineNuxtConfig({
   $development: {
     // ssr: false,
     // debug: true,
-    gtag: {
-      enabled: false
-    }
   },
 
   modules: [
@@ -59,7 +56,6 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     // performance
     '@nuxtjs/fontaine',
-    'nuxt-gtag',
     // dev
     '@nuxt/eslint'
   ],
@@ -83,7 +79,7 @@ export default defineNuxtConfig({
     '/donation': {
       robots: false
     },
-    '/guides/create': {
+    '/guides/editor': {
       robots: false,
       prerender: false
     },
@@ -188,7 +184,20 @@ export default defineNuxtConfig({
       cssCodeSplit: false,
       rollupOptions: {
         output: {
-          experimentalMinChunkSize: 250 * 1024
+          experimentalMinChunkSize: 250 * 1024,
+          manualChunks: (id) => {
+            if (id.includes('resources/characters')) {
+              return 'resources-characters';
+            } else if (id.includes('resources/echoes')) {
+              return 'resources-echoes';
+            } else if (id.includes('resources/items')) {
+              return 'resources-items';
+            } else if (id.includes('resources/weapons')) {
+              return 'resources-weapons';
+            } else if (id.includes('resources')) {
+              return 'resources-other';
+            }
+          }
         }
       }
     },
@@ -237,4 +246,3 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-07-05'
 });
-

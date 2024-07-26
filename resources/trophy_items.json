@@ -1,11 +1,14 @@
 {
+  "$schema": "../public/schema/trophies.schema.json",
   "items": [
     {
       "slug": "echoes-of-the-past-jinzhou",
       "name": "Echoes of the Past: Jinzhou",
       "group": "Exploration: Huanglong",
       "category": "Exploration",
-      "description": "Deliver 30 Sonance Caskets to Chenpi."
+      "description": "Deliver 30 Sonance Caskets to Chenpi.",
+      "publishedTime": "2024-05-23T10:00:00.800Z",
+      "modifiedTime": "2024-05-23T10:00:00.800Z"
     },
     {
       "slug": "echoes-of-the-past-jinzhou",
@@ -1441,5 +1444,7 @@
       "category": "Voices",
       "description": "What the hell is a shiny, bright thing ......"
     }
-  ]
+  ],
+  "publishedTime": "2024-05-23T10:00:00.800Z",
+  "modifiedTime": "2024-05-23T10:00:00.800Z"
 }

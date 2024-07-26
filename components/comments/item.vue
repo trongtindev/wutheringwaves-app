@@ -55,29 +55,17 @@ const createdAt = computed(() => {
     <v-hover>
       <template #default="hover">
         <v-list-item v-bind="hover.props">
+          <v-list-item-title>
+            <span>{{ props.data.user.name }}</span>
+            <span> • </span>
+            <span class="text-caption text-grey">{{ createdAt }}</span>
+          </v-list-item-title>
           <template #prepend>
             <v-avatar class="border">
               <v-img v-if="photoUrl" :src="photoUrl" />
               <span v-else>?</span>
             </v-avatar>
           </template>
-
-          <v-list-item-title>
-            <span v-if="typeof props.data.user === 'string'">
-              {{ props.data.user }}
-            </span>
-            <span v-else>
-              {{ props.data.user.name }}
-            </span>
-
-            <span class="ml-2 text-caption">
-              {{ createdAt }}
-            </span>
-          </v-list-item-title>
-
-          <!-- <v-list-item-subtitle>
-        <div :innerHTML="props.data.content" />
-      </v-list-item-subtitle> -->
 
           <template #append>
             <v-btn
@@ -88,14 +76,13 @@ const createdAt = computed(() => {
             />
           </template>
         </v-list-item>
+        <div class="pl-16">
+          <div class="pl-2" :innerHTML="props.data.content" />
+        </div>
       </template>
     </v-hover>
 
-    <div class="pl-16">
-      <div class="pl-1" :innerHTML="props.data.content" />
-    </div>
-
-    <div class="pl-14 mt-2">
+    <div class="pl-15 mt-2">
       <v-btn
         size="small"
         variant="text"

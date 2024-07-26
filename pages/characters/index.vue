@@ -115,7 +115,7 @@ useSeoMeta({
   <!-- alert -->
   <base-alert id="characters" :text="$t('characters.message')" class="mb-2" />
 
-  <!-- filter -->
+  <!-- input -->
   <v-text-field
     v-model="filterText"
     :placeholder="$t('common.searchPlaceholder')"
@@ -127,7 +127,9 @@ useSeoMeta({
         :text="$t('common.filter')"
         :append-icon="mdiFilterCog"
         variant="tonal"
-        @click.prevent="() => (filter = !filter)"
+        @mousedown.stop
+        @mouseup.stop
+        @click.stop="() => (filter = !filter)"
       />
     </template>
   </v-text-field>
@@ -156,8 +158,14 @@ useSeoMeta({
 
   <!-- filter -->
   <v-bottom-sheet v-model="filter" :inset="true">
-    <v-card :title="$t('common.filter')">
+    <v-card>
+      <v-card-title>
+        {{ $t('common.filter') }}
+      </v-card-title>
+      <v-divider />
+
       <v-card-text> something </v-card-text>
+      <v-divider />
 
       <v-card-actions>
         <v-btn :text="$t('common.reset')" />

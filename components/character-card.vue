@@ -27,6 +27,14 @@ const nameLocalized = computed(() => {
       class="align-end h-100"
       cover
     >
+      <template #error>
+        <v-img
+          :aspect-ratio="portrait ? 3 / 4 : 1"
+          :src="`/characters/icons/${props.item.slug}.webp`"
+          :alt="item.name"
+        />
+      </template>
+
       <v-chip
         style="left: 5px; top: 5px"
         class="pa-1 d-flex align-center position-absolute rounded-xl"
@@ -96,3 +104,4 @@ const nameLocalized = computed(() => {
     </v-card-title>
   </v-card>
 </template>
+

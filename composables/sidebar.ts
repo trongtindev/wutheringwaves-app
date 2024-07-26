@@ -181,12 +181,6 @@ export const useSidebar = defineStore('useSidebar', () => {
     // TODO: update count to sort
   };
 
-  // lifecycle
-  // onMounted(() => {
-  //   setTimeout(() => {
-  //     setNotify('/', 1, 'resetOnVisit');
-  //   }, 1500);
-  // });
-
+  // exports
   return { open, items, notify, togglePin, setNotify, onOpened };
 });

@@ -13,12 +13,9 @@ const props = defineProps<{
 // uses
 const api = useApi();
 const auth = useAuth();
-const i18n = useI18n();
-const device = useDevice();
 const fileChoose = useFileDialog({
   accept: 'image/png, image/jpg, image/webp, image/jpeg'
 });
-const runtimeConfig = useRuntimeConfig();
 
 // states
 const state = ref<'' | 'submit' | 'loading'>('loading');
@@ -40,16 +37,12 @@ const attachments = ref<
 
 // functions
 const loadData = (parent?: IComment) => {
-  if (import.meta.server) {
-    throw new Error('Cannot run this on server-side!');
-  }
-
   state.value = 'loading';
   api
 
     .get<IListResponse<IComment>>(`/comments`, {
       params: {
-        channel: channel.value,
+        channel: props.channel,
         limit: limit.value,
         offset: offset.value,
         parent: parent ? parent.id : undefined
@@ -109,12 +102,10 @@ const uploadFile = (id: string) => {
 
 // computed
 const total = computed(() => {
+  if (data.value) {
+    return data.value.total;
+  }
   return 0;
-});
-
-const channel = computed(() => {
-  const path = props.channel.replace(`${i18n.locale.value}/`, '');
-  return `${runtimeConfig.public.SITE_URL}${path.startsWith('/') ? '' : '/'}${path}`;
 });
 
 const isContentError = computed<boolean>(() => {
@@ -141,7 +132,7 @@ const onSubmit = () => {
   api
 
     .post<IComment>(`/comments`, {
-      channel: channel.value,
+      channel: props.channel,
       content: content.value,
       attachments: attachments.value
         .filter((e) => e.result)
@@ -203,7 +194,6 @@ onMounted(() => loadData());
 
 <template>
   <v-card
-    v-if="!device.isCrawler"
     :class="{
       'border-none': props.flat
     }"
@@ -231,7 +221,6 @@ onMounted(() => loadData());
           <v-row class="mt-2">
             <v-col>
               <v-btn
-                class="border"
                 variant="text"
                 :disabled="state != '' || !auth.isLoggedIn"
                 @click="onPressedAddAttachment"

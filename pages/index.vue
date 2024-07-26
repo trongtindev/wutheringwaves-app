@@ -157,7 +157,6 @@ useSeoMeta({
               v-for="(item, index) in upcomingWeapons"
               :key="index"
               cols="6"
-              sm="4"
             >
               <weapon-card :item="item" />
             </v-col>
@@ -178,7 +177,6 @@ useSeoMeta({
               v-for="(item, index) in upcomingCharacters"
               :key="index"
               cols="6"
-              sm="4"
             >
               <character-card :item="item" />
             </v-col>

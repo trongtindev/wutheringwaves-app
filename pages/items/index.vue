@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { mdiFilterCog, mdiMagnify } from '@mdi/js';
 import type { IItem } from '~/interfaces/item';
 
 // uses
@@ -6,6 +7,7 @@ const i18n = useI18n();
 const route = useRoute();
 const router = useRouter();
 const resources = useResources();
+const searchDebounce = useDebounceFn(() => initialize(), 350);
 
 // data
 const items = await resources.getItems();
@@ -18,7 +20,8 @@ const displayItems = ref<IItem[]>([]);
 const filterText = ref(route.query.q ? route.query.q.toString() : undefined);
 const filterCategory = ref();
 const filterRarity = ref(0);
-const debouncedSearch = useDebounceFn(() => initialize(), 350);
+
+const filter = ref();
 
 // functions
 const initialize = () => {
@@ -53,7 +56,7 @@ const pages = computed(() => {
 });
 
 // changes
-watch(filterText, () => debouncedSearch());
+watch(filterText, () => searchDebounce());
 watch(filterCategory, () => initialize());
 watch(filterRarity, () => initialize());
 
@@ -74,41 +77,27 @@ useSeoMeta({
 </script>
 
 <template>
-  <!-- filter -->
-  <v-row>
-    <v-col cols="12" md="4">
-      <v-text-field
-        v-model="filterText"
-        :label="$t('common.search')"
-        :hide-details="true"
+  <!-- input -->
+  <v-text-field
+    v-model="filterText"
+    :placeholder="$t('common.searchPlaceholder')"
+    :hide-details="true"
+    :prepend-inner-icon="mdiMagnify"
+  >
+    <template #append-inner>
+      <v-btn
+        :text="$t('common.filter')"
+        :append-icon="mdiFilterCog"
+        variant="tonal"
+        @mousedown.stop
+        @mouseup.stop
+        @click.stop="() => (filter = !filter)"
       />
-    </v-col>
-
-    <v-col cols="6" md="4">
-      <v-select
-        v-model="filterCategory"
-        :label="$t('common.category')"
-        :item-title="(e) => e"
-        :hide-details="true"
-      />
-    </v-col>
-
-    <v-col cols="6" md="4">
-      <v-select
-        v-model="filterRarity"
-        :label="$t('common.rarity')"
-        :items="[0, 1, 2, 3, 4, 5]"
-        :item-title="
-          (e) => (e === 0 ? i18n.t('All') : `${e} ${i18n.t('Star')}`)
-        "
-        :item-value="(e) => e"
-        :hide-details="true"
-      />
-    </v-col>
-  </v-row>
+    </template>
+  </v-text-field>
 
   <!-- list -->
-  <v-row>
+  <v-row class="mt-1">
     <v-col
       v-for="(item, index) in displayItems"
       :key="index"
@@ -123,4 +112,23 @@ useSeoMeta({
   <client-only>
     <v-pagination v-model="page" :length="pages" />
   </client-only>
+
+  <!-- filter -->
+  <v-bottom-sheet v-model="filter" :inset="true">
+    <v-card>
+      <v-card-title>
+        {{ $t('common.filter') }}
+      </v-card-title>
+      <v-divider />
+
+      <v-card-text> something </v-card-text>
+      <v-divider />
+
+      <v-card-actions>
+        <v-btn :text="$t('common.reset')" />
+        <v-spacer />
+        <v-btn variant="flat" :text="$t('common.apply')" />
+      </v-card-actions>
+    </v-card>
+  </v-bottom-sheet>
 </template>

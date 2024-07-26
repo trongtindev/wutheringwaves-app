@@ -9,45 +9,50 @@ const api = useApi();
 const i18n = useI18n();
 const route = useRoute();
 const device = useDevice();
+const headers = useRequestHeaders(['If-Modified-Since']);
+const event = useRequestEvent();
 
 // fetch
-const { data, status } = await api.get<IPost>(`posts/${route.params.id}`, {
-  validateStatus: () => true
-});
+const { data: item, status } = await api.get<IPost>(
+  `posts/${route.params.id}`,
+  {
+    validateStatus: () => true
+  }
+);
 if (status != 200) throw createError({ statusCode: status });
 
 // computed
 const titleLocalized = computed(() => {
-  if (data.titleLocalized[i18n.locale.value]) {
-    return data.titleLocalized[i18n.locale.value];
+  if (item.titleLocalized[i18n.locale.value]) {
+    return item.titleLocalized[i18n.locale.value];
   }
-  return data.title;
+  return item.title;
 });
 
 const descriptionLocalized = computed(() => {
-  if (data.descriptionLocalized[i18n.locale.value]) {
-    return data.descriptionLocalized[i18n.locale.value];
+  if (item.descriptionLocalized[i18n.locale.value]) {
+    return item.descriptionLocalized[i18n.locale.value];
   }
-  return data.description;
+  return item.description;
 });
 
 const contentLocalized = computed(() => {
-  if (data.contentLocalized[i18n.locale.value]) {
-    return data.contentLocalized[i18n.locale.value];
+  if (item.contentLocalized[i18n.locale.value]) {
+    return item.contentLocalized[i18n.locale.value];
   }
-  return data.content;
+  return item.content;
 });
 
 const thumbnailUrl = computed(() => {
-  if (data.thumbnail) {
-    return data.thumbnail.url;
+  if (item.thumbnail) {
+    return item.thumbnail.url;
   }
   return null;
 });
 // lifecycle
 onMounted(() => {
   if (!device.isCrawler) {
-    api.post(`posts/${data.id}/views`);
+    api.post(`posts/${item.id}/views`);
   }
 });
 
@@ -60,8 +65,8 @@ useSeoMeta({
   description: descriptionLocalized.value,
   ogDescription: descriptionLocalized.value,
   ogImage: thumbnailUrl.value,
-  articlePublishedTime: data.createdAt,
-  articleModifiedTime: data.updatedAt
+  articlePublishedTime: item.createdAt,
+  articleModifiedTime: item.updatedAt
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -75,9 +80,9 @@ useJsonld({
   // },
   headline: titleLocalized.value,
   thumbnailUrl: thumbnailUrl.value || undefined,
-  dateCreated: data.createdAt,
-  datePublished: data.createdAt,
-  dateModified: data.updatedAt
+  dateCreated: item.createdAt,
+  datePublished: item.createdAt,
+  dateModified: item.updatedAt
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -88,9 +93,9 @@ useJsonld({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Person',
-    name: data.user.name
+    name: item.user.name
   },
-  copyrightNotice: data.user.name
+  copyrightNotice: item.user.name
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -105,6 +110,15 @@ useJsonld({
     { '@type': 'ListItem', position: 2, name: i18n.t('weapons.title') }
   ]
 });
+
+// https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
+if (headers['if-modified-since']) {
+  const modifiedSince = new Date(headers['if-modified-since']);
+  const modifiedTime = new Date(item.updatedAt);
+  if (modifiedSince.getTime() >= modifiedTime.getTime()) {
+    setResponseStatus(event!, 304);
+  }
+}
 </script>
 
 <template>
@@ -120,7 +134,7 @@ useJsonld({
         <base-image
           class="border-t border-b"
           :aspect-ratio="1.91 / 1"
-          :src="data.thumbnail ? data.thumbnail.url : undefined"
+          :src="item.thumbnail ? item.thumbnail.url : undefined"
           :cover="true"
         />
 
@@ -131,9 +145,9 @@ useJsonld({
 
       <!-- author -->
       <v-card class="mt-2 pt-2 pb-2">
-        <v-list-item :title="data.user.name">
+        <v-list-item :title="item.user.name">
           <template #prepend>
-            <v-avatar :image="data.user.photoUrl" />
+            <v-avatar :image="item.user.photoUrl" />
           </template>
         </v-list-item>
       </v-card>
@@ -157,5 +171,5 @@ useJsonld({
   </v-row>
 
   <!-- comments -->
-  <comments class="mt-2" :channel="`post.${data.id}`" />
+  <comments class="mt-2" :channel="`post.${item.id}`" />
 </template>

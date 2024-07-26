@@ -216,6 +216,16 @@
         "required": ["items"]
       },
       "minItems": 1
+    },
+    "splashArt": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        }
+      ]
     }
   }
 }

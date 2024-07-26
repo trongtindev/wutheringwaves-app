@@ -214,17 +214,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
   <!-- chips -->
   <header-chips class="mb-2" :github="`tree/main/resources/timeline.json`" />
 
-  <!-- timezone -->
-  <v-row class="mb-1">
-    <v-col>
-      <timezone-card :title="$t('common.localTime')" />
-    </v-col>
-
-    <v-col>
-      <timezone-card :title="$t('common.serverTime')" :utc-offset="8" />
-    </v-col>
-  </v-row>
-
   <v-card>
     <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
     <client-only>
@@ -313,3 +302,4 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     />
   </v-dialog>
 </template>
+

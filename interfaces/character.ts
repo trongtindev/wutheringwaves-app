@@ -36,6 +36,7 @@ export interface ICharacter {
   suggestedEchos?: string[];
   modifiedTime: string;
   publishedTime: string;
+  hidden?: boolean;
 }
 
 export interface ICharacterSkillData {
@@ -119,4 +120,5 @@ export interface ICharacterData {
       items: string[];
     }[];
   }[];
+  splashArt?: boolean | string;
 }

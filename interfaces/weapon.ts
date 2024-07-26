@@ -19,8 +19,8 @@ export interface IWeapon {
   type: WeaponType;
   rarity: number;
   upcoming?: boolean;
-  publishedTime?: string;
-  modifiedTime?: string;
+  publishedTime: string;
+  modifiedTime: string;
 }
 
 export interface IWeaponData {

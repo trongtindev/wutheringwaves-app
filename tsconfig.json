@@ -6,7 +6,8 @@
       "@pinia/nuxt",
       "@nuxtjs/sitemap",
       "@nuxtjs/i18n",
-      "@types/google.accounts"
+      "@types/google.accounts",
+      "@types/gtag.js"
     ],
     "resolveJsonModule": true,
     "esModuleInterop": true,

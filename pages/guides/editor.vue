@@ -36,6 +36,7 @@ const thumbnail = ref<IFile>();
 const slug = ref();
 const state = ref<'' | 'submit'>('');
 const categories = ref<string[]>([]);
+const keywords = ref<string>('wuthering waves guide, wuthering guide');
 
 // computed
 const localizations = computed(() => {
@@ -169,54 +170,33 @@ useHead({
       </v-col>
 
       <v-col cols="12" md="4">
-        <!-- publish -->
-        <v-card>
+        <!-- thumbnail -->
+        <guides-editor-thumbnail @on-file="(val) => (thumbnail = val)" />
+
+        <!-- seo -->
+        <v-card class="mt-2">
           <v-card-title>
-            {{ $t('common.publish') }}
+            {{ $t('guides.editor.seo') }}
           </v-card-title>
           <v-divider />
 
           <v-card-text>
             <v-text-field
               v-model="slug"
-              :label="$t('guides.editor.url.label')"
-              :placeholder="$t('guides.editor.url.placeholder')"
-              :hide-details="true"
+              :label="$t('guides.editor.seo.url.label')"
+              :placeholder="$t('guides.editor.seo.url.placeholder')"
               :readonly="true"
               :disabled="state != ''"
             />
-          </v-card-text>
-          <v-divider />
 
-          <v-card-actions>
-            <v-btn
-              :text="$t('common.saveDraft')"
-              :disabled="true"
-              @click="() => saveDraft()"
-            />
-            <v-spacer />
-
-            <v-btn
-              v-if="!auth.isSignedIn"
-              color="primary"
-              variant="flat"
-              :prepend-icon="mdiPublish"
-              :disabled="true"
-              :text="$t('common.signInToContinue')"
-            />
-            <v-btn
-              v-else
-              color="primary"
-              variant="flat"
-              :prepend-icon="mdiPublish"
-              :text="
-                item ? $t('guides.editor.update') : $t('guides.editor.publish')
-              "
+            <v-textarea
+              v-model="keywords"
+              :label="$t('guides.editor.seo.keywords.label')"
+              :placeholder="$t('guides.editor.seo.keywords.placeholder')"
+              :hide-details="true"
               :disabled="state != ''"
-              :loading="state == 'submit'"
-              @click="() => updateOrPublish()"
             />
-          </v-card-actions>
+          </v-card-text>
         </v-card>
 
         <!-- categories -->
@@ -248,9 +228,6 @@ useHead({
           </v-card-text>
           <v-divider />
         </v-card>
-
-        <!-- thumbnail -->
-        <guides-editor-thumbnail @on-file="(val) => (thumbnail = val)" />
 
         <!-- localization -->
         <v-card class="mt-2">
@@ -301,5 +278,33 @@ useHead({
         </v-card> -->
       </v-col>
     </v-row>
+
+    <v-app-bar location="bottom" class="pl-1 pr-1">
+      <v-spacer />
+      <v-btn
+        :text="$t('common.saveDraft')"
+        :disabled="true"
+        @click="() => saveDraft()"
+      />
+
+      <v-btn
+        v-if="!auth.isSignedIn"
+        color="primary"
+        variant="flat"
+        :prepend-icon="mdiPublish"
+        :disabled="true"
+        :text="$t('common.signInToContinue')"
+      />
+      <v-btn
+        v-else
+        color="primary"
+        variant="flat"
+        :prepend-icon="mdiPublish"
+        :text="item ? $t('guides.editor.update') : $t('guides.editor.publish')"
+        :disabled="state != ''"
+        :loading="state == 'submit'"
+        @click="() => updateOrPublish()"
+      />
+    </v-app-bar>
   </client-only>
 </template>

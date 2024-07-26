@@ -3,7 +3,7 @@ import type { IUser } from './user';
 
 export interface IComment {
   id: string;
-  user: IUser | string;
+  user: IUser;
   content: string;
   likes: number;
   dislikes: number;
@@ -11,3 +11,4 @@ export interface IComment {
   createdAt: string;
   attachments: IFile[];
 }
+

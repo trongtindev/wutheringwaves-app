@@ -3,10 +3,11 @@ const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
+const headers = useRequestHeaders(['If-Modified-Since']);
+const event = useRequestEvent();
 
 // states
-const items = await resources.getTrophies();
-const item = items.find((e) => e.slug === route.params.id)!;
+const item = await resources.getTrophy(`${route.params.id}`);
 if (!item) throw createError({ statusCode: 404 });
 
 // computed
@@ -54,45 +55,48 @@ useJsonld({
     { '@type': 'ListItem', position: 2, name: i18n.t('trophies.title') }
   ]
 });
+
+// https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
+if (headers['if-modified-since']) {
+  const modifiedSince = new Date(headers['if-modified-since']);
+  const modifiedTime = new Date(item.modifiedTime);
+  if (modifiedSince.getTime() >= modifiedTime.getTime()) {
+    setResponseStatus(event!, 304);
+  }
+}
 </script>
 
 <template>
-  <div>
-    <v-card>
-      <card-title>
-        <template #title>
-          <h1 class="text-h6">{{ i18n.t(item.name) }}</h1>
-        </template>
+  <!-- chips -->
+  <header-chips class="mb-2" :github="`tree/main/resources/trophies.json`" />
 
-        <template #actions>
-          <edit-this-page
-            :path="`tree/main/resources/trophies/${item.slug}.json`"
-          />
-        </template>
-      </card-title>
+  <v-card>
+    <v-card-title tag="h2">
+      {{ i18n.t(item.name) }}
+    </v-card-title>
+    <v-divider />
 
-      <v-card-text>
-        <v-row>
-          <v-col cols="12" md="4">
-            <v-img :src="`/trophies/icons/${item.slug}.webp`" :height="256" />
-          </v-col>
+    <v-card-text>
+      <v-row>
+        <v-col cols="12" md="4">
+          <v-img :src="`/trophies/icons/${item.slug}.webp`" :height="256" />
+        </v-col>
 
-          <v-col>
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip :text="item.group" />
-              <v-chip :text="item.category" />
-            </div>
+        <v-col>
+          <div class="d-flex flex-wrap ga-2">
+            <v-chip :text="item.group" />
+            <v-chip :text="item.category" />
+          </div>
 
-            <div class="mt-2">
-              {{ item.description }}
-            </div>
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+          <div class="mt-2">
+            {{ item.description }}
+          </div>
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
 
-    <div class="mt-2">
-      <comments :channel="route.path" />
-    </div>
+  <div class="mt-2">
+    <comments :channel="`trophy.${item.slug}`" />
   </div>
 </template>

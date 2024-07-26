@@ -3,10 +3,12 @@ import { mdiLogin } from '@mdi/js';
 
 // uses
 const auth = useAuth();
+const analytics = useAnalytics();
 
 // events
 const onPressedSignIn = async () => {
   auth.state = 'sign-in';
+  analytics.logEvent('login');
 
   try {
     await auth.signIn();

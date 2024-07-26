@@ -6,8 +6,8 @@ export interface IEcho {
   attribute: string;
   sonataEffects: string[];
   hidden?: boolean;
-  publishedTime?: string;
-  modifiedTime?: string;
+  publishedTime: string;
+  modifiedTime: string;
 }
 
 export interface IEchoData {

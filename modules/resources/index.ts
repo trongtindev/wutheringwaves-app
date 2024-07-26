@@ -7,7 +7,6 @@ export default defineNuxtModule({
   },
   hooks: {
     'builder:watch': async (e, path) => {
-      console.log('resources', e, path);
       if (e != 'change') return;
 
       // update resources

@@ -9,7 +9,9 @@ const route = useRoute();
 const resources = useResources();
 const runtimeConfig = useRuntimeConfig();
 const goTo = useGoTo({ offset: -72, duration: 500 });
-const galleryActive = ref(0);
+const showPicture = ref(0);
+const headers = useRequestHeaders(['If-Modified-Since']);
+const event = useRequestEvent();
 
 // fetch
 const characters = await resources.getCharacters({ ignoreHidden: true });
@@ -23,16 +25,10 @@ if (!data) throw createError({ message: '2', statusCode: 404 });
 const tab = ref('overview');
 
 // computed
-const gallery = computed(() => {
-  return [
-    `/characters/splash-art/${item.slug}.webp`,
-    `/characters/portraits/${item.slug}.webp`,
-    `/characters/splash-art/${item.slug}.webp`,
-    `/characters/portraits/${item.slug}.webp`,
-    `/characters/splash-art/${item.slug}.webp`,
-    `/characters/portraits/${item.slug}.webp`
-  ];
-});
+const pictures = [
+  `/characters/portraits/${item.slug}.webp`,
+  ...(data.splashArt ? [`/characters/splash-art/${item.slug}.webp`] : [])
+];
 
 const stats = computed(() => {
   if (!data.stats) return [];
@@ -94,7 +90,9 @@ const descriptionLocalized = computed(() => {
 });
 
 const moreBuildGuides = computed(() => {
-  return characters.filter((e) => e.attribute && e.attribute == item.attribute);
+  return characters.filter((e) => {
+    return e.attribute && e.attribute == item.attribute && !e.hidden;
+  });
 });
 
 // changes
@@ -146,6 +144,31 @@ useJsonld(() => ({
   },
   copyrightNotice: 'trongtindev'
 }));
+
+if (data.splashArt) {
+  useJsonld(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: `${runtimeConfig.public.SITE_URL}/characters/splash-art/${item.slug}.webp`,
+    license: `${runtimeConfig.public.SITE_URL}/license`,
+    acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
+    creditText: 'WutheringWaves.app',
+    creator: {
+      '@type': 'Organization',
+      name: 'Wuthering Waves'
+    },
+    copyrightNotice: 'trongtindev'
+  }));
+}
+
+// https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
+if (headers['if-modified-since']) {
+  const modifiedSince = new Date(headers['if-modified-since']);
+  const modifiedTime = new Date(item.modifiedTime);
+  if (modifiedSince.getTime() >= modifiedTime.getTime()) {
+    setResponseStatus(event!, 304);
+  }
+}
 </script>
 
 <template>
@@ -184,23 +207,25 @@ useJsonld(() => ({
     <v-card-text>
       <v-row>
         <v-col cols="12" md="5">
-          <v-img
-            :aspect-ratio="4 / 3"
-            :src="gallery[galleryActive]"
-            :alt="nameLocalized"
+          <a
+            :href="pictures[showPicture]"
+            :title="nameLocalized"
+            target="_blank"
           >
-            <template #error>
-              <v-img
-                :src="`/characters/portraits/${item.slug}.webp`"
-                :alt="nameLocalized"
-              >
-              </v-img>
-            </template>
-          </v-img>
+            <v-img
+              :aspect-ratio="4 / 3"
+              :src="pictures[showPicture]"
+              :alt="nameLocalized"
+            />
+          </a>
 
-          <v-slide-group v-model="galleryActive" show-arrows>
+          <v-slide-group
+            v-if="pictures.length > 1"
+            v-model="showPicture"
+            show-arrows
+          >
             <v-slide-group-item
-              v-for="(image, index) in gallery"
+              v-for="(image, index) in pictures"
               :key="index"
               v-slot="{ isSelected, toggle, selectedClass }"
             >
@@ -212,7 +237,7 @@ useJsonld(() => ({
                 @click="toggle"
               >
                 <v-scale-transition>
-                  <v-img :src="image" />
+                  <v-img :src="image" :cover="true" :aspect-ratio="1" />
                 </v-scale-transition>
               </v-card>
             </v-slide-group-item>

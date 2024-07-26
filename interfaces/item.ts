@@ -7,8 +7,8 @@ export interface IItem {
   nameLocalized?: ILocalized;
   rarity: number;
   category: string;
-  publishedTime?: string;
-  modifiedTime?: string;
+  publishedTime: string;
+  modifiedTime: string;
 }
 
 export interface IItemData {
@@ -25,3 +25,4 @@ export interface IItemData {
     quantity: number;
   }[];
 }
+

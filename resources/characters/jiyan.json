@@ -352,5 +352,7 @@
     "Resonance Skill",
     "Intro Skill",
     "Basic Attack"
-  ]
+  ],
+  "splashArt": true
 }
+

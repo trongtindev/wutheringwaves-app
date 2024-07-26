@@ -6,6 +6,8 @@ export interface ITrophy {
   description: string;
   hidden?: boolean;
   dependOn?: string;
+  publishedTime: string;
+  modifiedTime: string;
 }
 
 export interface ITrophyGroup {
@@ -19,3 +21,4 @@ export interface ITrophyCategory {
   name: string;
   total: number;
 }
+

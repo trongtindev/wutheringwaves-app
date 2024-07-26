@@ -11,9 +11,6 @@ importers:
       '@tiptap/extension-image':
         specifier: ^2.5.5
         version: 2.5.6(@tiptap/core@2.5.6(@tiptap/pm@2.5.6))
-      nuxt-gtag:
-        specifier: ^2.1.0
-        version: 2.1.0(magicast@0.3.4)(rollup@4.19.0)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -87,6 +84,9 @@ importers:
       '@types/google.accounts':
         specifier: ^0.0.14
         version: 0.0.14
+      '@types/gtag.js':
+        specifier: ^0.0.20
+        version: 0.0.20
       '@types/leaflet':
         specifier: ^1.9.12
         version: 1.9.12
@@ -1963,6 +1963,9 @@ packages:
 
   '@types/google.accounts@0.0.14':
     resolution: {integrity: sha512-HqIVkVzpiLWhlajhQQd4rIV7czanFvXblJI2J1fSrL+VKQuQwwZ63m35D/mI0flsqKE6p/hNrAG0Yn4FD6JvNA==}
+
+  '@types/gtag.js@0.0.20':
+    resolution: {integrity: sha512-wwAbk3SA2QeU67unN7zPxjEHmPmlXwZXZvQEpbEUQuMCRGgKyE1m6XDuTUA9b6pCGb/GqJmdfMOY5LuDjJSbbg==}
 
   '@types/http-errors@2.0.4':
     resolution: {integrity: sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==}
@@ -4240,9 +4243,6 @@ packages:
     resolution: {integrity: sha512-6vRdiXTw9SajEQOUi6Ze/XaIXzy1q/sD5UqHQSv3yqTu7Pot5S7fEihNXV8LpcgLz+9HzjVt70r7jYe7R99c2w==}
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
-
-  nuxt-gtag@2.1.0:
-    resolution: {integrity: sha512-06ES+hgMs5l98bHmsLyltbJXfVr1LAkm/5gwcncdNkz96+D0fVA+RhecIp06iDQXF+YPBE2xAgB4G5PnUn8drA==}
 
   nuxt-jsonld@2.0.8:
     resolution: {integrity: sha512-EnrEdh8q5TKqrY1ZaIU9xe9iqHc0bj/QR5b8BEO2ckWXIR6rHV+XxWMfdHMgGbo6fzrZTLTtlWUG2q0L7q45HQ==}
@@ -7962,6 +7962,8 @@ snapshots:
 
   '@types/google.accounts@0.0.14': {}
 
+  '@types/gtag.js@0.0.20': {}
+
   '@types/http-errors@2.0.4': {}
 
   '@types/http-proxy@1.17.14':
@@ -10507,17 +10509,6 @@ snapshots:
   nuxi@3.12.0:
     optionalDependencies:
       fsevents: 2.3.3
-
-  nuxt-gtag@2.1.0(magicast@0.3.4)(rollup@4.19.0):
-    dependencies:
-      '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
-      defu: 6.1.4
-      pathe: 1.1.2
-      ufo: 1.5.4
-    transitivePeerDependencies:
-      - magicast
-      - rollup
-      - supports-color
 
   nuxt-jsonld@2.0.8(typescript@5.5.4):
     dependencies:
