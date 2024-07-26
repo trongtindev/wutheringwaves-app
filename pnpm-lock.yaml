@@ -11,6 +11,9 @@ importers:
       '@tiptap/extension-image':
         specifier: ^2.5.5
         version: 2.5.6(@tiptap/core@2.5.6(@tiptap/pm@2.5.6))
+      nuxt-gtag:
+        specifier: ^2.1.0
+        version: 2.1.0(magicast@0.3.4)(rollup@4.19.0)
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.3.0
@@ -147,9 +150,6 @@ importers:
       nuxt:
         specifier: ^3.12.4
         version: 3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.12)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.19.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)(vite@5.3.4(@types/node@20.14.12)(sass@1.77.8)(terser@5.31.3))(vue-tsc@2.0.28(typescript@5.5.4))
-      nuxt-gtag:
-        specifier: ^2.0.7
-        version: 2.0.7(magicast@0.3.4)(rollup@4.19.0)
       nuxt-jsonld:
         specifier: ^2.0.8
         version: 2.0.8(typescript@5.5.4)
@@ -4241,8 +4241,8 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
-  nuxt-gtag@2.0.7:
-    resolution: {integrity: sha512-iiKS4agfMTPes94T7CIhawZTkach2CcJppQw40RgJeWqaor84g0VqLcpmH9c5/QcSH3QmGoArOtzXlBUKYXd2g==}
+  nuxt-gtag@2.1.0:
+    resolution: {integrity: sha512-06ES+hgMs5l98bHmsLyltbJXfVr1LAkm/5gwcncdNkz96+D0fVA+RhecIp06iDQXF+YPBE2xAgB4G5PnUn8drA==}
 
   nuxt-jsonld@2.0.8:
     resolution: {integrity: sha512-EnrEdh8q5TKqrY1ZaIU9xe9iqHc0bj/QR5b8BEO2ckWXIR6rHV+XxWMfdHMgGbo6fzrZTLTtlWUG2q0L7q45HQ==}
@@ -10508,7 +10508,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  nuxt-gtag@2.0.7(magicast@0.3.4)(rollup@4.19.0):
+  nuxt-gtag@2.1.0(magicast@0.3.4)(rollup@4.19.0):
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
       defu: 6.1.4

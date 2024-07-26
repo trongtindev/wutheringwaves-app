@@ -15,6 +15,7 @@ const {
   NUXT_PUBLIC_API_URL,
   NUXT_PUBLIC_APP_VERSION,
   // google
+  GOOGLE_TAG_ID,
   GOOGLE_CLIENT_ID,
   // adsense
   GOOGLE_ADSENSE_TEST_MODE,
@@ -222,7 +223,8 @@ export default defineNuxtConfig({
       SENTRY_DNS: NUXT_PUBLIC_SENTRY_DNS,
       SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',
       // google
-      GOOGLE_CLIENT_ID: GOOGLE_CLIENT_ID,
+      GOOGLE_TAG_ID,
+      GOOGLE_CLIENT_ID,
       // Adsense
       GOOGLE_ADSENSE_ID: GOOGLE_ADSENSE_ID,
       GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true'
@@ -235,3 +237,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-07-05'
 });
+

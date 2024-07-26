@@ -20,7 +20,8 @@ export default withNuxt({}).append({
     'prefer-rest-params': 1,
     'vue/no-mutating-props': 1,
     '@typescript-eslint/unified-signatures': 0,
-    'vue/valid-v-for': 1
+    'vue/valid-v-for': 1,
+    'no-useless-escape': 0
   },
   ignores: ['**/*.js']
 });

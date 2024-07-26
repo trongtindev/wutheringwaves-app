@@ -69,7 +69,6 @@
     "leaflet": "^1.9.4",
     "lint-staged": "^15.2.7",
     "nuxt": "^3.12.4",
-    "nuxt-gtag": "^2.0.7",
     "nuxt-jsonld": "^2.0.8",
     "nuxt-schema-org": "^3.3.9",
     "only-allow": "^1.2.1",
@@ -96,6 +95,7 @@
     ]
   },
   "dependencies": {
-    "@tiptap/extension-image": "^2.5.5"
+    "@tiptap/extension-image": "^2.5.5",
+    "nuxt-gtag": "^2.1.0"
   }
 }

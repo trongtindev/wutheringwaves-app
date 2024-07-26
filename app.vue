@@ -11,7 +11,7 @@ const i18nHead = useLocaleHead({
 });
 // const rtl = useRtl();
 const vuetifyLocale = useLocale();
-const { SITE_URL } = useRuntimeConfig().public;
+const { SITE_URL, GOOGLE_TAG_ID } = useRuntimeConfig().public;
 
 // functions
 const initialize = () => {
@@ -35,6 +35,9 @@ onMounted(initialize);
 
 // seo meta
 useHead({
+  htmlAttrs: {
+    lang: i18nHead.value.htmlAttrs!.lang
+  },
   titleTemplate: (titleChunk) => {
     return titleChunk
       ? `${titleChunk} | Wuthering Waves`
@@ -75,9 +78,22 @@ useHead({
       content: 'summary_large_image'
     }
   ],
-  htmlAttrs: {
-    lang: i18nHead.value.htmlAttrs!.lang
-  }
+  script: [
+    ...(!import.meta.dev
+      ? [
+          {
+            src:
+              'https://www.googletagmanager.com/gtag/js?id=G-TJSX2XNTR9' +
+              GOOGLE_TAG_ID,
+            async: true
+          },
+          {
+            type: 'text/javascript',
+            innerHTML: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag(\'js\', new Date()); gtag(\'config\', \'${GOOGLE_TAG_ID}\');`
+          }
+        ]
+      : [])
+  ]
 });
 useSeoMeta({
   ogSiteName: 'WutheringWaves.app',
