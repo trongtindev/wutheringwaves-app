@@ -1,29 +1,29 @@
 // en
-import en from '../locales/en/default.json';
+import en from './messages/en/default.json';
 
 // id
-import id from '../locales/id/default.json';
+import id from './messages/id/default.json';
 
 // ja
-import ja from '../locales/ja/default.json';
+import ja from './messages/ja/default.json';
 
 // ko
-import ko from '../locales/ko/default.json';
+import ko from './messages/ko/default.json';
 
 // th
-import th from '../locales/th/default.json';
+import th from './messages/th/default.json';
 
 // tr
-import tr from '../locales/tr/default.json';
+import tr from './messages/tr/default.json';
 
 // uk
-import uk from '../locales/uk/default.json';
+import uk from './messages/uk/default.json';
 
 // vi
-import vi from '../locales/vi/default.json';
+import vi from './messages/vi/default.json';
 
 // uk
-import zh from '../locales/zh/default.json';
+import zh from './messages/zh/default.json';
 
 export default defineI18nConfig(() => ({
   legacy: false,
