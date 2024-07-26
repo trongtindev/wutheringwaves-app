@@ -24,8 +24,6 @@
     "check-updates": "bunx npm-check-updates"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
     "@mdi/js": "^7.4.47",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/device": "^3.1.1",
