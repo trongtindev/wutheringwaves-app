@@ -118,7 +118,8 @@
     "current": "Current",
     "upcoming": "Upcoming",
     "summary": "Events summary",
-    "localTime": "Show as local time"
+    "localTime": "Show as local time",
+    "checkoutOfficialUrl": "Check out the official website"
   },
   "convene": {
     "import": {
@@ -214,7 +215,9 @@
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
-    "skillPriority": "{name} Skill Priority"
+    "skillPriority": "{name} Skill Priority",
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "Weapons",
@@ -297,12 +300,14 @@
       "newer": "NEWER",
       "useCloudData": "Use Cloud Data",
       "useLocalData": "Use Local Data",
-      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-      "lastCloudChanged": "Last changed: {0}"
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "Data has been synced!",
-    "lastModified": "Last modified"
+    "lastModified": "Last modified",
+    "lastSynced": "Last synced: {0}",
+    "push": "Push",
+    "pull": "Pull"
   },
   "accounts": {
     "title": "Accounts",
@@ -442,12 +447,18 @@
     "cost": "Cost",
     "close": "Close",
     "loading": "Loading...",
+    "localTime": "Local time",
     "serverTime": "Server time",
     "pullByDay": "Pull by day",
     "totalPull": "Total Pull",
     "openIssues": "Open Issues",
     "unnamed": "Unnamed",
     "active": "Active",
-    "inactive": "Inactive"
+    "inactive": "Inactive",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Filter",
+    "apply": "Apply",
+    "reset": "Reset",
+    "none": "None"
   }
 }
