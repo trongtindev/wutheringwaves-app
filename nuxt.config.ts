@@ -61,10 +61,7 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
-    '/': {
-      prerender: true
-    },
-    '/**': {
+    '/codes': {
       prerender: true
     },
     '/settings': {
@@ -80,10 +77,8 @@ export default defineNuxtConfig({
       robots: false
     },
     '/guides/editor': {
-      robots: false,
-      prerender: false
+      robots: false
     },
-    '/codes': { prerender: true },
     '/guides/rss': {
       proxy: '/api/rss/guides'
     },

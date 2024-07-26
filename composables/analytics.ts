@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia';
 
 export const useAnalytics = defineStore('useAnalytics', () => {
-  console.debug('useAnalytics');
-
   // uses
   const auth = useAuth();
   const { GOOGLE_TAG_ID } = useRuntimeConfig().public;
