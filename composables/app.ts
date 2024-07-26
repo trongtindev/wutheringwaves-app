@@ -20,8 +20,7 @@ export const useApp = defineStore('useApp', () => {
 
   // computed
   const inDev = computed(() => import.meta.dev);
-  const indBeta = computed(() => APP_VERSION.startsWith('0.'));
-  const indProd = computed(() => !import.meta.dev);
+  const inProd = computed(() => !import.meta.dev);
 
   // functions
   const scrollTop = () => {
@@ -40,8 +39,7 @@ export const useApp = defineStore('useApp', () => {
     githubRepo,
     fluid,
     inDev,
-    indProd,
-    indBeta,
+    inProd,
     scrollTop
   };
 });
