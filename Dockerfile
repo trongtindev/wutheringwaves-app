@@ -21,5 +21,5 @@ COPY --from=build-stage /app/.output /app/.output
 RUN cd /app/.output/server && bun i uncrypto
 
 ## run
-# CMD [ "bun", "/app/.output/server/index.mjs" ]
-CMD ["tail","-f","/dev/null"]
+CMD [ "bun", "/app/.output/server/index.mjs" ]
+# CMD ["tail","-f","/dev/null"]
