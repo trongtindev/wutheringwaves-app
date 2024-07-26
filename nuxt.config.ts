@@ -12,7 +12,6 @@ dotenv.config({ path: './.env', override: true });
 const {
   // general
   NUXT_PUBLIC_SITE_URL,
-  NUXT_PUBLIC_APP_VERSION,
   // api
   API_URL,
   API_TIMEOUT,
@@ -115,10 +114,6 @@ export default defineNuxtConfig({
     },
     '/guides/rss': {
       proxy: '/api/rss/guides'
-    },
-    // TODO: remove soon
-    '/echos/**': {
-      redirect: '/echoes/**'
     }
   },
 
@@ -152,7 +147,7 @@ export default defineNuxtConfig({
 
   sourcemap: {
     server: false,
-    client: false
+    client: true
   },
 
   telemetry: false,
