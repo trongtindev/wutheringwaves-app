@@ -118,7 +118,8 @@
     "current": "開催中のイベント",
     "upcoming": "今後のイベント",
     "summary": "イベント概要",
-    "localTime": "現地時間を表示"
+    "localTime": "現地時間を表示",
+    "checkoutOfficialUrl": "Check out the official website"
   },
   "convene": {
     "import": {
@@ -214,7 +215,9 @@
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
-    "skillPriority": "{name} Skill Priority"
+    "skillPriority": "{name} Skill Priority",
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "Weapons",
@@ -297,12 +300,14 @@
       "newer": "NEWER",
       "useCloudData": "Use Cloud Data",
       "useLocalData": "Use Local Data",
-      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-      "lastCloudChanged": "Last changed: {0}"
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "データが同期されました！",
-    "lastModified": "Last modified"
+    "lastModified": "Last modified",
+    "lastSynced": "Last synced: {0}",
+    "push": "Push",
+    "pull": "Pull"
   },
   "accounts": {
     "title": "アカウント",
@@ -442,12 +447,18 @@
     "cost": "Cost",
     "close": "Close",
     "loading": "読み込み中...",
+    "localTime": "Local time",
     "serverTime": "サーバー時刻",
     "pullByDay": "Pull by day",
     "totalPull": "四つ星",
     "openIssues": "Issue を見る",
     "unnamed": "名前なし",
     "active": "有効",
-    "inactive": "無効"
+    "inactive": "無効",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Filter",
+    "apply": "Apply",
+    "reset": "Reset",
+    "none": "None"
   }
 }
