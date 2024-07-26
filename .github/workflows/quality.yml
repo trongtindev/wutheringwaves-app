@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: bun i --frozen-lockfile
 
+      - name: npx nuxt prepare
+        run: npx nuxt prepare
+
       - name: bun run lint
         run: bun run lint
 
