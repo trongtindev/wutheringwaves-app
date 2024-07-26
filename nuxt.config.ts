@@ -83,6 +83,7 @@ export default defineNuxtConfig({
       robots: false,
       prerender: false
     },
+    '/codes': { prerender: true },
     '/guides/rss': {
       proxy: '/api/rss/guides'
     },
