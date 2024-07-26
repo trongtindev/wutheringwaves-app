@@ -67,36 +67,38 @@ if (headers['if-modified-since']) {
 </script>
 
 <template>
-  <!-- chips -->
-  <header-chips class="mb-2" :github="`tree/main/resources/trophies.json`" />
+  <div>
+    <!-- chips -->
+    <header-chips class="mb-2" :github="`tree/main/resources/trophies.json`" />
 
-  <v-card>
-    <v-card-title tag="h2">
-      {{ i18n.t(item.name) }}
-    </v-card-title>
-    <v-divider />
+    <v-card>
+      <v-card-title tag="h2">
+        {{ i18n.t(item.name) }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      <v-row>
-        <v-col cols="12" md="4">
-          <v-img :src="`/trophies/icons/${item.slug}.webp`" :height="256" />
-        </v-col>
+      <v-card-text>
+        <v-row>
+          <v-col cols="12" md="4">
+            <v-img :src="`/trophies/icons/${item.slug}.webp`" :height="256" />
+          </v-col>
 
-        <v-col>
-          <div class="d-flex flex-wrap ga-2">
-            <v-chip :text="item.group" />
-            <v-chip :text="item.category" />
-          </div>
+          <v-col>
+            <div class="d-flex flex-wrap ga-2">
+              <v-chip :text="item.group" />
+              <v-chip :text="item.category" />
+            </div>
 
-          <div class="mt-2">
-            {{ item.description }}
-          </div>
-        </v-col>
-      </v-row>
-    </v-card-text>
-  </v-card>
+            <div class="mt-2">
+              {{ item.description }}
+            </div>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
 
-  <div class="mt-2">
-    <comments :channel="`trophy.${item.slug}`" />
+    <div class="mt-2">
+      <comments :channel="`trophy.${item.slug}`" />
+    </div>
   </div>
 </template>

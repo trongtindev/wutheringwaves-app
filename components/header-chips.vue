@@ -2,7 +2,7 @@
 import { mdiGithub, mdiOpenInNew, mdiBug } from '@mdi/js';
 
 // define
-const { APP_DISCORD, APP_REPO } = useRuntimeConfig().public;
+const { DISCORD_INVITE_LINK, APP_REPO } = useRuntimeConfig().public;
 
 const props = defineProps<{
   github?: string;
@@ -31,7 +31,7 @@ const props = defineProps<{
     />
 
     <v-chip
-      :href="APP_DISCORD"
+      :href="DISCORD_INVITE_LINK"
       :text="$t('common.joinTheDiscord')"
       :append-icon="mdiOpenInNew"
       target="_blank"
@@ -39,3 +39,4 @@ const props = defineProps<{
     />
   </div>
 </template>
+

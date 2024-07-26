@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiDatabaseSearch } from '@mdi/js';
+import { mdiMagnify } from '@mdi/js';
 import type { ICharacter } from '~/interfaces/character';
 import type { IEcho } from '~/interfaces/echo';
 import type { IItem } from '~/interfaces/item';
@@ -139,7 +139,7 @@ watch(() => keyword.value, submitDebounce);
         <v-text-field
           v-model="keyword"
           :placeholder="$t('search.title')"
-          :prepend-inner-icon="mdiDatabaseSearch"
+          :prepend-inner-icon="mdiMagnify"
           :clearable="true"
           :loading="state == 'submit'"
           :hide-details="true"
@@ -157,3 +157,4 @@ watch(() => keyword.value, submitDebounce);
     </v-card>
   </v-dialog>
 </template>
+

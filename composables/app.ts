@@ -5,12 +5,13 @@ export const useApp = defineStore('useApp', () => {
   const runtimeConfig = useRuntimeConfig();
 
   // config
-  const { APP_NAME, APP_DISCORD, APP_VERSION, APP_REPO } = runtimeConfig.public;
+  const { APP_NAME, DISCORD_INVITE_LINK, APP_VERSION, APP_REPO } =
+    runtimeConfig.public;
 
   // define
   const name = computed(() => APP_NAME);
   const title = ref();
-  const discord = computed(() => APP_DISCORD);
+  const discord = computed(() => DISCORD_INVITE_LINK);
   const version = computed(() => APP_VERSION);
   const githubRepo = computed(() => APP_REPO);
 
@@ -44,3 +45,4 @@ export const useApp = defineStore('useApp', () => {
     scrollTop
   };
 });
+

@@ -58,67 +58,72 @@ useJsonld(() => ({
 </script>
 
 <template>
-  <!-- chips -->
-  <header-chips class="mb-2" :github="`tree/main/resources/codes.json`" />
+  <div>
+    <!-- chips -->
+    <header-chips class="mb-2" :github="`tree/main/resources/codes.json`" />
 
-  <!-- list -->
-  <v-card>
-    <v-card-title tag="h1">
-      {{ title }}
-    </v-card-title>
-    <v-divider />
+    <!-- list -->
+    <v-card>
+      <v-card-title tag="h1">
+        {{ title }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      <v-table class="border rounded">
-        <thead>
-          <tr>
-            <td class="border-b" style="width: 40%">{{ $t('codes.code') }}</td>
-            <td class="border-b" style="width: 40%">
-              {{ $t('codes.rewards') }}
-            </td>
-            <td class="border-b" style="width: 20%">
-              {{ $t('codes.expiry') }}
-            </td>
-          </tr>
-        </thead>
+      <v-card-text>
+        <v-table class="border rounded">
+          <thead>
+            <tr>
+              <td class="border-b" style="width: 40%">
+                {{ $t('codes.code') }}
+              </td>
+              <td class="border-b" style="width: 40%">
+                {{ $t('codes.rewards') }}
+              </td>
+              <td class="border-b" style="width: 20%">
+                {{ $t('codes.expiry') }}
+              </td>
+            </tr>
+          </thead>
 
-        <tbody>
-          <tr
-            v-for="(element, index) in items"
-            :key="index"
-            :class="{ 'mt-2': index > 0 }"
-          >
-            <codes-item :data="element" />
-          </tr>
-        </tbody>
-      </v-table>
-    </v-card-text>
-  </v-card>
+          <tbody>
+            <tr
+              v-for="(element, index) in items"
+              :key="index"
+              :class="{ 'mt-2': index > 0 }"
+            >
+              <codes-item :data="element" />
+            </tr>
+          </tbody>
+        </v-table>
+      </v-card-text>
+    </v-card>
 
-  <!-- How to Redeem -->
-  <v-card class="mt-2">
-    <v-card-title tag="h2">
-      {{ $t('codes.howToRedeem') }}
-    </v-card-title>
-    <v-divider />
+    <!-- How to Redeem -->
+    <v-card class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('codes.howToRedeem') }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      {{ $t('codes.howToRedeemGuide') }}
-    </v-card-text>
-  </v-card>
+      <v-card-text>
+        {{ $t('codes.howToRedeemGuide') }}
+      </v-card-text>
+    </v-card>
 
-  <!-- Redeem Requirement -->
-  <v-card class="mt-2">
-    <v-card-title tag="h2">
-      {{ $t('codes.redeemRequirement') }}
-    </v-card-title>
-    <v-divider />
+    <!-- Redeem Requirement -->
+    <v-card class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('codes.redeemRequirement') }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      {{ $t('codes.redeemRequirementGuide') }}
-    </v-card-text>
-  </v-card>
+      <v-card-text>
+        {{ $t('codes.redeemRequirementGuide') }}
+      </v-card-text>
+    </v-card>
 
-  <!-- comments -->
-  <comments channel="codes" class="mt-2" />
+    <!-- comments -->
+    <comments channel="codes" class="mt-2" />
+  </div>
 </template>
+

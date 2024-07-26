@@ -12,17 +12,18 @@ dotenv.config({ path: './.env', override: true });
 const {
   // general
   NUXT_PUBLIC_SITE_URL,
-  NUXT_PUBLIC_API_URL,
   NUXT_PUBLIC_APP_VERSION,
+  // api
+  API_URL,
+  API_TIMEOUT,
   // google
   GOOGLE_TAG_ID,
   GOOGLE_CLIENT_ID,
   // adsense
   GOOGLE_ADSENSE_TEST_MODE,
   GOOGLE_ADSENSE_ID,
-  // sentry
-  NUXT_PUBLIC_SENTRY_DEBUG,
-  NUXT_PUBLIC_SENTRY_DNS
+  // discord
+  DISCORD_INVITE_LINK
 } = process.env;
 
 const localesMetadata: LocaleObject[] = [
@@ -42,6 +43,9 @@ export default defineNuxtConfig({
   $development: {
     // ssr: false,
     // debug: true,
+    devtools: {
+      enabled: true
+    }
   },
 
   modules: [
@@ -61,7 +65,37 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
-    '/codes': {
+    '/': {
+      prerender: true
+    },
+    '/characters': {
+      prerender: true
+    },
+    '/characters/**': {
+      prerender: true
+    },
+    '/echoes': {
+      prerender: true
+    },
+    '/echoes/**': {
+      prerender: true
+    },
+    '/items': {
+      prerender: true
+    },
+    '/items/**': {
+      prerender: true
+    },
+    '/weapons': {
+      prerender: true
+    },
+    '/weapons/**': {
+      prerender: true
+    },
+    '/trophies': {
+      prerender: true
+    },
+    '/trophies/**': {
       prerender: true
     },
     '/settings': {
@@ -81,9 +115,6 @@ export default defineNuxtConfig({
     },
     '/guides/rss': {
       proxy: '/api/rss/guides'
-    },
-    '/characters/rss': {
-      proxy: '/api/rss/characters'
     },
     // TODO: remove soon
     '/echos/**': {
@@ -115,28 +146,14 @@ export default defineNuxtConfig({
     inlineStyles: false
   },
 
-  nitro: {
-    prerender: {
-      routes: ['/sitemap.xml']
-    },
-    serverAssets: [
-      {
-        baseName: 'resources',
-        dir: './resources'
-      }
-    ]
-  },
-
   site: {
     url: NUXT_PUBLIC_SITE_URL
   },
 
   sourcemap: {
     server: false,
-    client: true
+    client: false
   },
-
-  devtools: { enabled: false },
 
   telemetry: false,
 
@@ -146,7 +163,6 @@ export default defineNuxtConfig({
     dirs: ['./composables', './components']
   },
 
-  // modules config
   i18n: {
     vueI18n: './i18n/i18n.config.ts',
     defaultLocale: 'en',
@@ -155,10 +171,7 @@ export default defineNuxtConfig({
       useCookie: true,
       redirectOn: 'root'
     },
-    locales: localesMetadata,
-    experimental: {
-      localeDetector: './i18n/i18n.detector.ts'
-    }
+    locales: localesMetadata
   },
 
   pinia: {
@@ -168,6 +181,9 @@ export default defineNuxtConfig({
   vueuse: { ssrHandlers: true },
 
   vite: {
+    esbuild: {
+      legalComments: 'none'
+    },
     resolve: {
       extensions: ['.mjs', '.js', '.ts', '.json']
     },
@@ -195,6 +211,11 @@ export default defineNuxtConfig({
             }
           }
         }
+      },
+      terserOptions: {
+        format: {
+          comments: false
+        }
       }
     },
     plugins: [
@@ -204,8 +225,24 @@ export default defineNuxtConfig({
     ]
   },
 
+  nitro: {
+    preset: 'bun',
+    prerender: {
+      routes: ['/sitemap.xml'],
+      concurrency: 25
+    }
+  },
+
   build: {
     transpile: ['vuetify']
+  },
+
+  hooks: {
+    'nitro:build:before': (nitro) => {
+      if (['bun', 'node-server'].includes(nitro.options.preset)) {
+        nitro.options.prerender.crawlLinks = true;
+      }
+    }
   },
 
   appConfig: {
@@ -219,20 +256,17 @@ export default defineNuxtConfig({
       SITE_URL: NUXT_PUBLIC_SITE_URL,
       APP_NAME: 'WutheringWaves.app',
       APP_REPO: 'https://github.com/trongtindev/wutheringwaves-app',
-      APP_DISCORD: 'https://discord.gg/MxxYyUJEfT',
-      APP_VERSION: NUXT_PUBLIC_APP_VERSION,
       // api
-      API_URL: NUXT_PUBLIC_API_URL,
-      API_TIMEOUT: 15000,
-      // sentry
-      SENTRY_DNS: NUXT_PUBLIC_SENTRY_DNS,
-      SENTRY_DEBUG: NUXT_PUBLIC_SENTRY_DEBUG == 'true',
+      API_URL,
+      API_TIMEOUT: parseInt(API_TIMEOUT!),
       // google
       GOOGLE_TAG_ID,
       GOOGLE_CLIENT_ID,
       // Adsense
-      GOOGLE_ADSENSE_ID: GOOGLE_ADSENSE_ID,
-      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true'
+      GOOGLE_ADSENSE_ID,
+      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',
+      // discord
+      DISCORD_INVITE_LINK
     }
   },
 

@@ -9,7 +9,6 @@ export default withNuxt({}).append({
     'prefer-const': 1,
     '@typescript-eslint/no-non-null-asserted-optional-chain': 1,
     'vue/valid-template-root': 1,
-    'vue/no-multiple-template-root': 0,
     'vue/return-in-computed-property': 1,
     'no-empty': 1,
     '@typescript-eslint/ban-types': 1,

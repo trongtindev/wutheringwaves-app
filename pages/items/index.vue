@@ -77,58 +77,60 @@ useSeoMeta({
 </script>
 
 <template>
-  <!-- input -->
-  <v-text-field
-    v-model="filterText"
-    :placeholder="$t('common.searchPlaceholder')"
-    :hide-details="true"
-    :prepend-inner-icon="mdiMagnify"
-  >
-    <template #append-inner>
-      <v-btn
-        :text="$t('common.filter')"
-        :append-icon="mdiFilterCog"
-        variant="tonal"
-        @mousedown.stop
-        @mouseup.stop
-        @click.stop="() => (filter = !filter)"
-      />
-    </template>
-  </v-text-field>
-
-  <!-- list -->
-  <v-row class="mt-1">
-    <v-col
-      v-for="(item, index) in displayItems"
-      :key="index"
-      cols="6"
-      sm="4"
-      md="2"
+  <div>
+    <!-- input -->
+    <v-text-field
+      v-model="filterText"
+      :placeholder="$t('common.searchPlaceholder')"
+      :hide-details="true"
+      :prepend-inner-icon="mdiMagnify"
     >
-      <item-card :item="item" />
-    </v-col>
-  </v-row>
+      <template #append-inner>
+        <v-btn
+          :text="$t('common.filter')"
+          :append-icon="mdiFilterCog"
+          variant="tonal"
+          @mousedown.stop
+          @mouseup.stop
+          @click.stop="() => (filter = !filter)"
+        />
+      </template>
+    </v-text-field>
 
-  <client-only>
-    <v-pagination v-model="page" :length="pages" />
-  </client-only>
+    <!-- list -->
+    <v-row class="mt-1">
+      <v-col
+        v-for="(item, index) in displayItems"
+        :key="index"
+        cols="6"
+        sm="4"
+        md="2"
+      >
+        <item-card :item="item" />
+      </v-col>
+    </v-row>
 
-  <!-- filter -->
-  <v-bottom-sheet v-model="filter" :inset="true">
-    <v-card>
-      <v-card-title>
-        {{ $t('common.filter') }}
-      </v-card-title>
-      <v-divider />
+    <client-only>
+      <v-pagination v-model="page" :length="pages" />
+    </client-only>
 
-      <v-card-text> something </v-card-text>
-      <v-divider />
+    <!-- filter -->
+    <v-bottom-sheet v-model="filter" :inset="true">
+      <v-card>
+        <v-card-title>
+          {{ $t('common.filter') }}
+        </v-card-title>
+        <v-divider />
 
-      <v-card-actions>
-        <v-btn :text="$t('common.reset')" />
-        <v-spacer />
-        <v-btn variant="flat" :text="$t('common.apply')" />
-      </v-card-actions>
-    </v-card>
-  </v-bottom-sheet>
+        <v-card-text> something </v-card-text>
+        <v-divider />
+
+        <v-card-actions>
+          <v-btn :text="$t('common.reset')" />
+          <v-spacer />
+          <v-btn variant="flat" :text="$t('common.apply')" />
+        </v-card-actions>
+      </v-card>
+    </v-bottom-sheet>
+  </div>
 </template>

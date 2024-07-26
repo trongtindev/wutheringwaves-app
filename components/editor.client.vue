@@ -26,7 +26,6 @@ import {
   mdiYoutube
 } from '@mdi/js';
 import { Editor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/vue-3';
-import Bottleneck from 'bottleneck';
 import type { IFile } from '~/interfaces/file';
 
 // define
@@ -69,42 +68,39 @@ const addYoutube = () => {
 };
 
 const uploadFiles = async (files: File[]) => {
-  const worker = new Bottleneck({ maxConcurrent: 2 });
-  const tasks = files.map((file) => {
-    return worker.schedule(async () => {
-      const nid = await notification.create({
-        title: i18n.t('common.uploading'),
-        message: file.name,
-        persistent: true
-      });
-      const result = await api.post<IFile>(
-        'files',
-        {
-          file
-        },
-        {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          },
-          onUploadProgress: (e) => {
-            notification.update(nid, {
-              progress: e.progress ? e.progress * 100 : undefined
-            });
-          }
-        }
-      );
-      notification.remove(nid);
-
-      editor
-        .value!.chain()
-        .focus()
-        .setFigure({
-          fid: result.data.id,
-          src: result.data.url,
-          caption: file.name
-        })
-        .run();
+  const tasks = files.map(async (file) => {
+    const nid = await notification.create({
+      title: i18n.t('common.uploading'),
+      message: file.name,
+      persistent: true
     });
+    const result = await api.post<IFile>(
+      'files',
+      {
+        file
+      },
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+        onUploadProgress: (e) => {
+          notification.update(nid, {
+            progress: e.progress ? e.progress * 100 : undefined
+          });
+        }
+      }
+    );
+    notification.remove(nid);
+
+    editor
+      .value!.chain()
+      .focus()
+      .setFigure({
+        fid: result.data.id,
+        src: result.data.url,
+        caption: file.name
+      })
+      .run();
   });
   Promise.all(tasks);
 };
@@ -505,3 +501,4 @@ onUnmounted(() => editor.value?.destroy());
     </div>
   </client-only>
 </template>
+

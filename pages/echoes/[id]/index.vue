@@ -96,77 +96,78 @@ if (headers['if-modified-since']) {
 </script>
 
 <template>
-  <!-- chips -->
-  <header-chips
-    class="mb-2"
-    :github="`tree/main/resources/echoes/${item.slug}.json`"
-  />
+  <div>
+    <!-- chips -->
+    <header-chips
+      class="mb-2"
+      :github="`tree/main/resources/echoes/${item.slug}.json`"
+    />
 
-  <!-- page -->
-  <v-card>
-    <v-card-title tag="h1">
-      {{ nameLocalized }}
-    </v-card-title>
-    <v-divider />
+    <!-- page -->
+    <v-card>
+      <v-card-title tag="h1">
+        {{ nameLocalized }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      <v-row>
-        <v-col cols="4">
-          <v-img :src="`/echoes/icons/${item.slug}.webp`" :height="256" />
-        </v-col>
+      <v-card-text>
+        <v-row>
+          <v-col cols="4">
+            <v-img :src="`/echoes/icons/${item.slug}.webp`" :height="256" />
+          </v-col>
 
-        <v-col>
-          <div class="d-flex flex-wrap ga-2">
-            <v-chip :text="`${item.cost} ${$t('echoes.cost')}`" />
-            <v-chip :text="$t(item.class)" />
-            <v-chip :text="$t(item.attribute)" />
-          </div>
+          <v-col>
+            <div class="d-flex flex-wrap ga-2">
+              <v-chip :text="`${item.cost} ${$t('echoes.cost')}`" />
+              <v-chip :text="$t(item.class)" />
+              <v-chip :text="$t(item.attribute)" />
+            </div>
 
-          <div class="mt-2">
-            <div :innerHTML="skillDescription"></div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-card-text>
-  </v-card>
+            <div class="mt-2">
+              <div :innerHTML="skillDescription"></div>
+            </div>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
 
-  <!-- Sonata Effect -->
-  <v-card class="mt-2">
-    <v-card-title>
-      {{ $t('echoes.sonataEffect') }}
-    </v-card-title>
-    <v-divider />
+    <!-- Sonata Effect -->
+    <v-card class="mt-2">
+      <v-card-title>
+        {{ $t('echoes.sonataEffect') }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      {{ item.sonataEffects }}
-    </v-card-text>
-  </v-card>
+      <v-card-text>
+        {{ item.sonataEffects }}
+      </v-card-text>
+    </v-card>
 
-  <!-- related -->
-  <v-card v-if="relatedEchoes.length > 0" class="mt-2">
-    <v-card-title tag="h2">
-      {{ $t('echoes.related', { name: nameLocalized }) }}
-    </v-card-title>
-    <v-divider />
+    <!-- related -->
+    <v-card v-if="relatedEchoes.length > 0" class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('echoes.related', { name: nameLocalized }) }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      <v-row>
-        <v-col
-          v-for="(element, index) in relatedEchoes"
-          :key="index"
-          cols="6"
-          sm="4"
-          md="2"
-        >
-          <echo-card :item="element" />
-        </v-col>
-      </v-row>
-    </v-card-text>
-  </v-card>
+      <v-card-text>
+        <v-row>
+          <v-col
+            v-for="(element, index) in relatedEchoes"
+            :key="index"
+            cols="6"
+            sm="4"
+            md="2"
+          >
+            <echo-card :item="element" />
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
 
-  <!-- comments -->
-  <div class="mt-2">
-    <comments :channel="`echo.${item.slug}`" />
+    <!-- comments -->
+    <div class="mt-2">
+      <comments :channel="`echo.${item.slug}`" />
+    </div>
   </div>
 </template>
-

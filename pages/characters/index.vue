@@ -112,66 +112,68 @@ useSeoMeta({
 </script>
 
 <template>
-  <!-- alert -->
-  <base-alert id="characters" :text="$t('characters.message')" class="mb-2" />
+  <div>
+    <!-- alert -->
+    <base-alert id="characters" :text="$t('characters.message')" class="mb-2" />
 
-  <!-- input -->
-  <v-text-field
-    v-model="filterText"
-    :placeholder="$t('common.searchPlaceholder')"
-    :hide-details="true"
-    :prepend-inner-icon="mdiMagnify"
-  >
-    <template #append-inner>
-      <v-btn
-        :text="$t('common.filter')"
-        :append-icon="mdiFilterCog"
-        variant="tonal"
-        @mousedown.stop
-        @mouseup.stop
-        @click.stop="() => (filter = !filter)"
-      />
-    </template>
-  </v-text-field>
-
-  <!-- list -->
-  <v-row class="mt-1">
-    <v-col
-      v-for="(element, index) in items"
-      :key="index"
-      cols="6"
-      sm="4"
-      md="3"
-      lg="2"
+    <!-- input -->
+    <v-text-field
+      v-model="filterText"
+      :placeholder="$t('common.searchPlaceholder')"
+      :hide-details="true"
+      :prepend-inner-icon="mdiMagnify"
     >
-      <character-card
-        :item="element"
-        :portrait="true"
-        :sequences="
-          owned && owned[element.name]
-            ? owned[element.name].resonanceChain
-            : undefined
-        "
-      />
-    </v-col>
-  </v-row>
+      <template #append-inner>
+        <v-btn
+          :text="$t('common.filter')"
+          :append-icon="mdiFilterCog"
+          variant="tonal"
+          @mousedown.stop
+          @mouseup.stop
+          @click.stop="() => (filter = !filter)"
+        />
+      </template>
+    </v-text-field>
 
-  <!-- filter -->
-  <v-bottom-sheet v-model="filter" :inset="true">
-    <v-card>
-      <v-card-title>
-        {{ $t('common.filter') }}
-      </v-card-title>
-      <v-divider />
+    <!-- list -->
+    <v-row class="mt-1">
+      <v-col
+        v-for="(element, index) in items"
+        :key="index"
+        cols="6"
+        sm="4"
+        md="3"
+        lg="2"
+      >
+        <character-card
+          :item="element"
+          :portrait="true"
+          :sequences="
+            owned && owned[element.name]
+              ? owned[element.name].resonanceChain
+              : undefined
+          "
+        />
+      </v-col>
+    </v-row>
 
-      <v-card-text> something </v-card-text>
-      <v-divider />
+    <!-- filter -->
+    <v-bottom-sheet v-model="filter" :inset="true">
+      <v-card>
+        <v-card-title>
+          {{ $t('common.filter') }}
+        </v-card-title>
+        <v-divider />
 
-      <v-card-actions>
-        <v-btn :text="$t('common.reset')" />
-        <v-spacer />
-        <v-btn :text="$t('common.apply')" />
-      </v-card-actions>
-    </v-card>
-  </v-bottom-sheet>
+        <v-card-text> something </v-card-text>
+        <v-divider />
+
+        <v-card-actions>
+          <v-btn :text="$t('common.reset')" />
+          <v-spacer />
+          <v-btn :text="$t('common.apply')" />
+        </v-card-actions>
+      </v-card>
+    </v-bottom-sheet>
+  </div>
 </template>

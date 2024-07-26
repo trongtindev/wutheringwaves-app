@@ -52,7 +52,7 @@ const useApiFactory = () => {
         }
       }
 
-      return error;
+      throw error;
     }
   );
 

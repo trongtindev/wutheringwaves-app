@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   mdiCogs,
-  mdiDatabaseSearch,
+  mdiMagnify,
   mdiMenuClose,
   mdiMenuOpen,
   mdiThemeLightDark
@@ -107,15 +107,20 @@ const onPressedSearch = () => {
             <layouts-default-appbar-account />
 
             <!-- search -->
-            <v-btn
-              class="hidden-sm-and-down"
-              :icon="mdiDatabaseSearch"
-              @click="onPressedSearch"
-            />
+            <v-tooltip :text="$t('search.tooltip')" location="bottom">
+              <template #activator="{ props }">
+                <v-btn
+                  v-bind="props"
+                  :icon="mdiMagnify"
+                  @click="onPressedSearch"
+                />
+              </template>
+            </v-tooltip>
 
             <!-- theme -->
             <v-btn
               :icon="mdiThemeLightDark"
+              class="hidden-sm-and-down"
               @click="() => onPressedToggleTheme()"
             />
           </div>

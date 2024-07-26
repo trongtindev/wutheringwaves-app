@@ -1,3 +1,6 @@
 <script lang="ts" setup></script>
 
-<template>profile view</template>
+<template>
+  <div>profile</div>
+</template>
+

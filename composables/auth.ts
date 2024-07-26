@@ -8,7 +8,6 @@ export const useAuth = defineStore('useAuth', () => {
   const api = useApi();
   const route = useRoute();
   const router = useRouter();
-  const sentry = useSentry();
   const runtimeConfig = useRuntimeConfig();
 
   // states
@@ -169,21 +168,6 @@ export const useAuth = defineStore('useAuth', () => {
     return isLoggedIn.value && user.value != null;
   });
 
-  // changes
-  watch(
-    () => user.value,
-    () => {
-      if (user.value) {
-        sentry.setUser({
-          id: user.value.id,
-          email: user.value.email
-        });
-      } else {
-        sentry.setUser(null);
-      }
-    }
-  );
-
   // lifecycle
   onMounted(() => initialize());
 
@@ -197,3 +181,4 @@ export const useAuth = defineStore('useAuth', () => {
     getAccessToken
   };
 });
+

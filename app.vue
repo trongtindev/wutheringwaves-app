@@ -50,15 +50,10 @@ useHead({
       type: 'image/x-icon',
       href: `${SITE_URL}/favicon.png`
     },
-    // {
-    //   rel: 'alternate',
-    //   type: 'application/rss+xml',
-    //   href: `${SITE_URL}/guides/rss`
-    // },
     {
       rel: 'alternate',
       type: 'application/rss+xml',
-      href: `${SITE_URL}/characters/rss`
+      href: `${SITE_URL}/guides/rss`
     },
     ...(i18nHead.value.link || []).map((e) => {
       return {

@@ -121,126 +121,128 @@ if (headers['if-modified-since']) {
 </script>
 
 <template>
-  <!-- chips -->
-  <header-chips
-    class="mb-2"
-    :github="`tree/main/resources/items/${item.slug}.json`"
-  />
+  <div>
+    <!-- chips -->
+    <header-chips
+      class="mb-2"
+      :github="`tree/main/resources/items/${item.slug}.json`"
+    />
 
-  <!-- page -->
-  <v-card>
-    <v-card-title tag="h1">
-      {{ nameLocalized }}
-    </v-card-title>
-    <v-divider />
+    <!-- page -->
+    <v-card>
+      <v-card-title tag="h1">
+        {{ nameLocalized }}
+      </v-card-title>
+      <v-divider />
 
-    <v-card-text>
-      <v-row>
-        <v-col cols="12" md="4">
-          <v-img :src="`/items/icons/${item.slug}.webp`" :height="256" />
-        </v-col>
+      <v-card-text>
+        <v-row>
+          <v-col cols="12" md="4">
+            <v-img :src="`/items/icons/${item.slug}.webp`" :height="256" />
+          </v-col>
 
-        <v-col>
-          <div class="d-flex flex-wrap ga-2">
-            <v-chip :text="item.id.toString()" />
-            <v-chip :text="item.category" />
+          <v-col>
+            <div class="d-flex flex-wrap ga-2">
+              <v-chip :text="item.id.toString()" />
+              <v-chip :text="item.category" />
+            </div>
+
+            <div class="mt-2">
+              {{ data.description }}
+            </div>
+
+            <div v-if="data.bgDescription" class="mt-2">
+              <div :innerHTML="data.bgDescription"></div>
+            </div>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+
+    <v-row class="mt-1">
+      <v-col v-if="obtainDescriptionLocalized" cols="12" md="6">
+        <!-- obtain -->
+        <v-card class="fill-height">
+          <v-card-title tag="h2">
+            {{ $t('items.howToObtain', [nameLocalized]) }}
+          </v-card-title>
+          <v-divider />
+          <v-card-text>
+            <div :innerHTML="parseContent(obtainDescriptionLocalized)"></div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col v-if="data.unlockDescription" cols="12" md="6">
+        <!-- unlock -->
+        <v-card class="fill-height">
+          <v-card-title tag="h2">
+            {{ $t('items.howToUnlock', [nameLocalized]) }}
+          </v-card-title>
+          <v-divider />
+          <v-card-text>
+            <div :innerHTML="parseContent(data.unlockDescription)"></div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col v-if="data.cookingIngredients" cols="12" md="6">
+        <!-- cookingIngredients -->
+        <v-card class="fill-height">
+          <v-card-title tag="h2">
+            {{ $t('items.cookingIngredients') }}
+          </v-card-title>
+          <v-divider />
+
+          <div class="mt-3 mb-3">
+            <v-list-item
+              v-for="(element, index) in data.cookingIngredients"
+              :key="index"
+              :to="localePath(`/items/${itemDict[element.item].slug}`)"
+              :title="itemDict[element.item].name"
+              :subtitle="`x${element.quantity}`"
+              target="_blank"
+            >
+              <template #prepend>
+                <v-avatar class="border" rounded>
+                  <v-img
+                    v-if="itemDict[element.item]"
+                    :src="`/items/icons/${itemDict[element.item].slug}.webp`"
+                  />
+                </v-avatar>
+              </template>
+            </v-list-item>
           </div>
+        </v-card>
+      </v-col>
+    </v-row>
 
-          <div class="mt-2">
-            {{ data.description }}
-          </div>
+    <!-- related -->
+    <v-card class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('common.related') }} {{ item.name }}
+      </v-card-title>
+      <v-divider />
 
-          <div v-if="data.bgDescription" class="mt-2">
-            <div :innerHTML="data.bgDescription"></div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-card-text>
-  </v-card>
-
-  <v-row class="mt-1">
-    <v-col v-if="obtainDescriptionLocalized" cols="12" md="6">
-      <!-- obtain -->
-      <v-card class="fill-height">
-        <v-card-title tag="h2">
-          {{ $t('items.howToObtain', [nameLocalized]) }}
-        </v-card-title>
-        <v-divider />
-        <v-card-text>
-          <div :innerHTML="parseContent(obtainDescriptionLocalized)"></div>
-        </v-card-text>
-      </v-card>
-    </v-col>
-
-    <v-col v-if="data.unlockDescription" cols="12" md="6">
-      <!-- unlock -->
-      <v-card class="fill-height">
-        <v-card-title tag="h2">
-          {{ $t('items.howToUnlock', [nameLocalized]) }}
-        </v-card-title>
-        <v-divider />
-        <v-card-text>
-          <div :innerHTML="parseContent(data.unlockDescription)"></div>
-        </v-card-text>
-      </v-card>
-    </v-col>
-
-    <v-col v-if="data.cookingIngredients" cols="12" md="6">
-      <!-- cookingIngredients -->
-      <v-card class="fill-height">
-        <v-card-title tag="h2">
-          {{ $t('items.cookingIngredients') }}
-        </v-card-title>
-        <v-divider />
-
-        <div class="mt-3 mb-3">
-          <v-list-item
-            v-for="(element, index) in data.cookingIngredients"
+      <v-card-text>
+        <v-row>
+          <v-col
+            v-for="(element, index) in relatedItems"
             :key="index"
-            :to="localePath(`/items/${itemDict[element.item].slug}`)"
-            :title="itemDict[element.item].name"
-            :subtitle="`x${element.quantity}`"
-            target="_blank"
+            cols="6"
+            sm="4"
+            md="3"
+            lg="2"
           >
-            <template #prepend>
-              <v-avatar class="border" rounded>
-                <v-img
-                  v-if="itemDict[element.item]"
-                  :src="`/items/icons/${itemDict[element.item].slug}.webp`"
-                />
-              </v-avatar>
-            </template>
-          </v-list-item>
-        </div>
-      </v-card>
-    </v-col>
-  </v-row>
+            <item-card :item="element" />
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
 
-  <!-- related -->
-  <v-card class="mt-2">
-    <v-card-title tag="h2">
-      {{ $t('common.related') }} {{ item.name }}
-    </v-card-title>
-    <v-divider />
-
-    <v-card-text>
-      <v-row>
-        <v-col
-          v-for="(element, index) in relatedItems"
-          :key="index"
-          cols="6"
-          sm="4"
-          md="3"
-          lg="2"
-        >
-          <item-card :item="element" />
-        </v-col>
-      </v-row>
-    </v-card-text>
-  </v-card>
-
-  <!-- comments -->
-  <div class="mt-2">
-    <comments :channel="`item.${item.slug}`" />
+    <!-- comments -->
+    <div class="mt-2">
+      <comments :channel="`item.${item.slug}`" />
+    </div>
   </div>
 </template>

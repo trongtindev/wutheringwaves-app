@@ -23,12 +23,11 @@ export default defineNuxtRouteMiddleware((to) => {
 
   const headers = useRequestHeaders(['If-Modified-Since']);
   if (headers['if-modified-since']) {
-    const event = useRequestEvent();
     const { buildNumber } = useAppConfig();
     const modifiedSince = new Date(headers['if-modified-since']);
 
     if (modifiedSince.getTime() >= buildNumber) {
-      setResponseStatus(event!, 304);
+      abortNavigation({ statusCode: 304 });
     }
   }
 });

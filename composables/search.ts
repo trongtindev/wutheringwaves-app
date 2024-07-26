@@ -1,15 +1,14 @@
 export const useSearch = defineStore('useSearch', () => {
   // uses
-  const { controlLeft, space } = useMagicKeys();
+  const { slash } = useMagicKeys();
 
   // states
   const active = ref(false);
 
   // listens
-  watchEffect(() => {
-    if (controlLeft.value && space.value) {
-      active.value = !active.value;
-    }
+  watch(slash, (value) => {
+    if (!value) return;
+    active.value = !active.value;
   });
 
   // exports

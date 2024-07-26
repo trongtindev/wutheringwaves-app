@@ -122,54 +122,56 @@ if (headers['if-modified-since']) {
 </script>
 
 <template>
-  <v-row>
-    <v-col cols="12" md="8">
-      <!-- main -->
-      <v-card>
-        <v-card-title tag="h1">
-          {{ titleLocalized }}
-        </v-card-title>
+  <div>
+    <v-row>
+      <v-col cols="12" md="8">
+        <!-- main -->
+        <v-card>
+          <v-card-title tag="h1">
+            {{ titleLocalized }}
+          </v-card-title>
 
-        <!-- thumbnail -->
-        <base-image
-          class="border-t border-b"
-          :aspect-ratio="1.91 / 1"
-          :src="item.thumbnail ? item.thumbnail.url : undefined"
-          :cover="true"
-        />
+          <!-- thumbnail -->
+          <base-image
+            class="border-t border-b"
+            :aspect-ratio="1.91 / 1"
+            :src="item.thumbnail ? item.thumbnail.url : undefined"
+            :cover="true"
+          />
 
-        <v-card-text>
-          <div class="tiptap" :innerHTML="contentLocalized"></div>
-        </v-card-text>
-      </v-card>
+          <v-card-text>
+            <div class="tiptap" :innerHTML="contentLocalized"></div>
+          </v-card-text>
+        </v-card>
 
-      <!-- author -->
-      <v-card class="mt-2 pt-2 pb-2">
-        <v-list-item :title="item.user.name">
-          <template #prepend>
-            <v-avatar :image="item.user.photoUrl" />
-          </template>
-        </v-list-item>
-      </v-card>
-    </v-col>
+        <!-- author -->
+        <v-card class="mt-2 pt-2 pb-2">
+          <v-list-item :title="item.user.name">
+            <template #prepend>
+              <v-avatar :image="item.user.photoUrl" />
+            </template>
+          </v-list-item>
+        </v-card>
+      </v-col>
 
-    <v-col cols="12" md="4">
-      <!-- relate -->
-      <v-card>
-        <v-card-title>
-          {{ $t('guides.related') }}
-        </v-card-title>
-      </v-card>
+      <v-col cols="12" md="4">
+        <!-- relate -->
+        <v-card>
+          <v-card-title>
+            {{ $t('guides.related') }}
+          </v-card-title>
+        </v-card>
 
-      <!-- relate -->
-      <v-card class="mt-2">
-        <v-card-title>
-          {{ $t('guides.latest') }}
-        </v-card-title>
-      </v-card>
-    </v-col>
-  </v-row>
+        <!-- relate -->
+        <v-card class="mt-2">
+          <v-card-title>
+            {{ $t('guides.latest') }}
+          </v-card-title>
+        </v-card>
+      </v-col>
+    </v-row>
 
-  <!-- comments -->
-  <comments class="mt-2" :channel="`post.${item.id}`" />
+    <!-- comments -->
+    <comments class="mt-2" :channel="`post.${item.id}`" />
+  </div>
 </template>

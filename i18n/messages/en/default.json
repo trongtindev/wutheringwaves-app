@@ -347,7 +347,8 @@
     }
   },
   "search": {
-    "title": "Spotlight Search"
+    "title": "Spotlight Search",
+    "tooltip": "Press slash to open quickly."
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -428,7 +429,7 @@
     "viewOnGithub": "View on GitHub",
     "rarity": "Rarity",
     "category": "Category",
-    "editThisPage": "Edit This Page",
+    "editThisPage": "Edit this page",
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
     "beta": "Beta",

@@ -211,95 +211,96 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>
 
 <template>
-  <!-- chips -->
-  <header-chips class="mb-2" :github="`tree/main/resources/timeline.json`" />
+  <div>
+    <!-- chips -->
+    <header-chips class="mb-2" :github="`tree/main/resources/timeline.json`" />
 
-  <v-card>
-    <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
-    <client-only>
-      <div
-        ref="timelineContainer"
-        class="w-100 overflow-x-scroll overflow-y-hidden"
-        style="width: min-content"
-        :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + 48 + events.length * (eventHeight + EVENT_MARGIN)}px`"
-        :onwheel="onWheel"
-      >
-        <div class="timeline position-relative h-100 d-flex flex-column">
-          <!-- MONTH TITLE -->
-          <v-sheet
-            v-for="([month, item], i) in monthList"
-            :key="i"
-            :style="`width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
-            :height="MONTH_HEIGHT"
-            class="position-absolute pr-4 top-0 d-flex align-center"
-          >
-            <span class="text-h6 position-sticky left-0">
-              {{ month }}
-            </span>
-          </v-sheet>
-
-          <!-- DATE BAR -->
-          <div
-            v-for="(date, i) in dates"
-            :key="i"
-            :style="`height: calc(100% - ${MONTH_HEIGHT}px); left: ${i * dayWidth}px; top: ${MONTH_HEIGHT + 24}px;`"
-            class="bg-border position-absolute w-1"
-          >
-            <span
-              class="position-absolute text-center pb-1"
-              style="width: 40px; left: -20px; top: -24px"
+    <v-card>
+      <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
+      <client-only>
+        <div
+          ref="timelineContainer"
+          class="w-100 overflow-x-scroll overflow-y-hidden"
+          style="width: min-content"
+          :style="`padding-right: ${2 * padding * dayWidth}px; height: ${marginTop + 48 + events.length * (eventHeight + EVENT_MARGIN)}px`"
+          :onwheel="onWheel"
+        >
+          <div class="timeline position-relative h-100 d-flex flex-column">
+            <!-- MONTH TITLE -->
+            <v-sheet
+              v-for="([month, item], i) in monthList"
+              :key="i"
+              :style="`width: ${item.total * dayWidth}px; left: ${item.offset * dayWidth}px;`"
+              :height="MONTH_HEIGHT"
+              class="position-absolute pr-4 top-0 d-flex align-center"
             >
-              {{ date[0] }}
-            </span>
-            <span
-              class="position-absolute text-caption text-center pb-1 top-0"
-              style="width: 40px; left: -20px"
-            >
-              {{ date[1] }}
-            </span>
-          </div>
+              <span class="text-h6 position-sticky left-0">
+                {{ month }}
+              </span>
+            </v-sheet>
 
-          <!-- EVENT STRIP -->
-          <div v-for="(event, i) in events" :key="i">
-            <timeline-event-item
-              v-for="(item, j) in event"
-              :key="j"
-              :prev="j > 0 ? event[j - 1] : null"
-              :next="j < event.length - 1 ? event[j + 1] : null"
-              :now="today"
-              :event="item"
-              :day-width="dayWidth"
-              :margin-top="marginTop + 24"
-              :event-height="eventHeight"
-              :event-margin="EVENT_MARGIN"
-              :i="i"
-              @on-pressed="() => onPressedEvent(item)"
-            />
-          </div>
-
-          <!-- NOW BAR -->
-          <div
-            class="now-bar w-2 position-relative opacity-75"
-            :style="`left: ${todayOffset * dayWidth}px; top: 12.6px`"
-          >
+            <!-- DATE BAR -->
             <div
-              class="position-absolute rounded-xl text-center bg-surface border"
-              style="width: 80px; left: -40px"
+              v-for="(date, i) in dates"
+              :key="i"
+              :style="`height: calc(100% - ${MONTH_HEIGHT}px); left: ${i * dayWidth}px; top: ${MONTH_HEIGHT + 24}px;`"
+              class="bg-border position-absolute w-1"
             >
-              {{ today.format('HH:mm:ss') }}
+              <span
+                class="position-absolute text-center pb-1"
+                style="width: 40px; left: -20px; top: -24px"
+              >
+                {{ date[0] }}
+              </span>
+              <span
+                class="position-absolute text-caption text-center pb-1 top-0"
+                style="width: 40px; left: -20px"
+              >
+                {{ date[1] }}
+              </span>
+            </div>
+
+            <!-- EVENT STRIP -->
+            <div v-for="(event, i) in events" :key="i">
+              <timeline-event-item
+                v-for="(item, j) in event"
+                :key="j"
+                :prev="j > 0 ? event[j - 1] : null"
+                :next="j < event.length - 1 ? event[j + 1] : null"
+                :now="today"
+                :event="item"
+                :day-width="dayWidth"
+                :margin-top="marginTop + 24"
+                :event-height="eventHeight"
+                :event-margin="EVENT_MARGIN"
+                :i="i"
+                @on-pressed="() => onPressedEvent(item)"
+              />
+            </div>
+
+            <!-- NOW BAR -->
+            <div
+              class="now-bar w-2 position-relative opacity-75"
+              :style="`left: ${todayOffset * dayWidth}px; top: 12.6px`"
+            >
+              <div
+                class="position-absolute rounded-xl text-center bg-surface border"
+                style="width: 80px; left: -40px"
+              >
+                {{ today.format('HH:mm:ss') }}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </client-only>
-  </v-card>
+      </client-only>
+    </v-card>
 
-  <v-dialog v-model="dialog" :width="720" :scrollable="true">
-    <timeline-event-dialog
-      v-if="dialogData"
-      :data="dialogData"
-      @on-close="() => (dialog = false)"
-    />
-  </v-dialog>
+    <v-dialog v-model="dialog" :width="720" :scrollable="true">
+      <timeline-event-dialog
+        v-if="dialogData"
+        :data="dialogData"
+        @on-close="() => (dialog = false)"
+      />
+    </v-dialog>
+  </div>
 </template>
-

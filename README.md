@@ -1,4 +1,6 @@
-<center>A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!</center>
+<div align="center">
+  A pity counter for Wuthering Waves, using the up-to-date data with global statistics and more. Share your pulls with your friends and track your account!
+</div>
 
 <div align="center">
   <a href="https://crowdin.com/project/wutheringwaves_app">
@@ -52,13 +54,6 @@ resources
 
 <a href="https://crowdin.com/project/wutheringwaves_app">Crowdin </a>
 
-### Available Languages
-
-| Filename | Language Name |
-| -------- | ------------- |
-| en.json  | English       |
-| vi.json  | Vietnamese    |
-
 ## Development
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
@@ -74,19 +69,19 @@ disable Vetur).
 ### Project Setup
 
 ```sh
-pnpm install
+bun install
 ```
 
 #### Compile and Hot-Reload for Development
 
 ```sh
-pnpm run dev
+bun run dev
 ```
 
 #### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-pnpm test:unit
+bun test:unit
 ```
 
 #### Run End-to-End Tests with [Playwright](https://playwright.dev)
@@ -96,16 +91,16 @@ pnpm test:unit
 npx playwright install
 
 # When testing on CI, must build the project first
-pnpm build
+bun build
 
 # Runs the end-to-end tests
-pnpm test:e2e
+bun test:e2e
 # Runs the tests only on Chromium
-pnpm test:e2e --project=chromium
+bun test:e2e --project=chromium
 # Runs the tests of a specific file
-pnpm test:e2e tests/example.spec.ts
+bun test:e2e tests/example.spec.ts
 # Runs the tests in debug mode
-pnpm test:e2e --debug
+bun test:e2e --debug
 ```
 
 # License
