@@ -48,12 +48,11 @@ onNuxtReady(() => emits('on-updated'));
 </script>
 
 <template>
-  <v-card color="warning" variant="outlined">
-    <v-card-title>
-      {{ $t('settings.data.erase.title') }}
-    </v-card-title>
-    <v-divider />
-
+  <v-card
+    :title="$t('settings.data.erase.title')"
+    color="warning"
+    variant="tonal"
+  >
     <v-card-text>
       {{ $t('settings.data.erase.message') }}
     </v-card-text>
@@ -66,6 +65,7 @@ onNuxtReady(() => emits('on-updated'));
         :text="$t('settings.data.erase.button')"
         :prepend-icon="mdiTrashCan"
         color="warning"
+        variant="tonal"
         @click="() => onPressedConfirm()"
       />
     </v-card-actions>

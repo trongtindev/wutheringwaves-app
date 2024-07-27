@@ -52,7 +52,7 @@ useSeoMeta({
               <h1 class="text-h4">WutheringWaves.app</h1>
             </div>
             <div class="mt-1">
-              <h2 class="text-h5">{{ i18n.t('meta.title') }}</h2>
+              <h2 class="text-h5">{{ i18n.t('meta.index.title') }}</h2>
             </div>
             <div class="mt-2">
               <h3 class="text-h6">{{ i18n.t('meta.description') }}</h3>

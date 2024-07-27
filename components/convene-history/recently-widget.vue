@@ -58,6 +58,7 @@ onMounted(initialize);
       <v-skeleton-loader
         v-for="index in 5"
         :key="index"
+        :boilerplate="true"
         type="list-item-avatar-two-line"
       />
     </template>
@@ -66,6 +67,7 @@ onMounted(initialize);
       <v-skeleton-loader
         v-for="index in 5"
         :key="index"
+        :boilerplate="true"
         type="list-item-avatar-two-line"
       />
     </div>

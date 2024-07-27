@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia';
 import type { AccountDocType } from '~/collections/account';
 
 export const useAccount = defineStore('useAccount', () => {

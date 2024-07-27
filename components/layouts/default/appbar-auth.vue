@@ -4,6 +4,7 @@ import { mdiLogin } from '@mdi/js';
 // uses
 const auth = useAuth();
 const analytics = useAnalytics();
+const role = useRole();
 
 // events
 const onPressedSignIn = async () => {
@@ -66,7 +67,7 @@ const onPressedSignOut = async () => {
         </v-btn>
       </template>
 
-      <v-card :min-width="300">
+      <v-card :min-width="300" :elevation="3">
         <v-card-text class="text-center">
           <v-avatar :size="64" class="border pa-1">
             <v-img

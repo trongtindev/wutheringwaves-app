@@ -36,7 +36,7 @@ const relatedEchoes = computed(() => {
 
 // seo meta
 const title = `${i18n.t('common.echo')}: ${nameLocalized.value}`;
-const description = i18n.t('meta.echoes.description', {
+const description = i18n.t('meta.echoes.id.description', {
   name: nameLocalized.value,
   rarity: item.class
 });

@@ -313,10 +313,6 @@ useHead({
         <template #title>
           {{ i18n.t('tierList.create.title') }}
         </template>
-
-        <template #actions>
-          <back-button :to="localePath('/tier-list')" />
-        </template>
       </card-title>
 
       <v-card-text>

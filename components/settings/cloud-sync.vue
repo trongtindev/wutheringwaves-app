@@ -48,13 +48,7 @@ const onPressedPull = () => {
 </script>
 
 <template>
-  <v-card>
-    <card-title>
-      <template #title>
-        {{ $t('sync.title') }}
-      </template>
-    </card-title>
-
+  <v-card :title="$t('sync.title')">
     <v-card-text>
       We uses the Google Cloud Storage to save and sync your data. We can only
       read and write files that this site created.
@@ -96,3 +90,4 @@ const onPressedPull = () => {
     </v-card-actions>
   </v-card>
 </template>
+

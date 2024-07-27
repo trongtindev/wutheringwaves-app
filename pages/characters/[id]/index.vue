@@ -377,7 +377,7 @@ if (headers['if-modified-since']) {
     <comments class="mt-2" :channel="`character.${item.slug}`" />
 
     <!-- navigation -->
-    <v-bottom-navigation v-model="tab" :grow="true">
+    <v-bottom-navigation v-model="tab" :grow="true" class="border-t">
       <v-btn value="overview" :text="$t('characters.overview')" />
       <v-btn
         value="build"

@@ -61,13 +61,7 @@ onNuxtReady(() => emits('on-updated'));
 </script>
 
 <template>
-  <v-card>
-    <card-title>
-      <template #title>
-        {{ $t('settings.data.export.title') }}
-      </template>
-    </card-title>
-
+  <v-card :title="$t('settings.data.export.title')">
     <v-card-text>
       {{ $t('settings.data.export.message') }}
     </v-card-text>
@@ -80,6 +74,7 @@ onNuxtReady(() => emits('on-updated'));
         :loading="state === 'export'"
         :prepend-icon="mdiDownload"
         :text="$t('settings.data.export.button')"
+        variant="tonal"
         @click="startExports"
       />
     </v-card-actions>

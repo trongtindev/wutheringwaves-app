@@ -22,6 +22,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       sets: { mdi }
     },
     defaults: {
+      global: {
+        elevation: 0
+      },
       VRow: {
         dense: true
       },
@@ -55,6 +58,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       VCombobox: {
         variant: 'solo-filled'
+      },
+      VCard: {
+        class: 'border-thin'
       }
     },
     theme: {

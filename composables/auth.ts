@@ -181,4 +181,3 @@ export const useAuth = defineStore('useAuth', () => {
     getAccessToken
   };
 });
-

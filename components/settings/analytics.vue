@@ -7,12 +7,7 @@ const analytics = useAnalytics();
 
 <template>
   <div>
-    <v-card>
-      <v-card-title>
-        {{ $t('settings.analytics.title') }}
-      </v-card-title>
-      <v-divider />
-
+    <v-card :title="$t('settings.analytics.title')">
       <v-list>
         <v-list-item
           :title="$t('settings.analytics.optOut')"
@@ -26,3 +21,4 @@ const analytics = useAnalytics();
     </v-card>
   </div>
 </template>
+

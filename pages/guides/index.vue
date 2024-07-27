@@ -86,52 +86,26 @@ useSeoMeta({
     />
 
     <!-- input -->
-    <v-text-field
-      v-model="filterTitle"
-      :placeholder="$t('common.searchPlaceholder')"
-      :hide-details="true"
-      :prepend-inner-icon="mdiMagnify"
-      :loading="state == 'fetch'"
-    >
-      <template #append-inner>
-        <v-btn
-          :text="$t('common.filter')"
-          :append-icon="mdiFilterCog"
-          variant="tonal"
-          @mousedown.stop
-          @mouseup.stop
-          @click.stop="() => (filter = !filter)"
-        />
-      </template>
-    </v-text-field>
-    <!-- <v-row>
-    <v-col>
+    <div class="mb-2">
       <v-text-field
         v-model="filterTitle"
-        :placeholder="$t('guides.filter.title')"
+        :placeholder="$t('common.searchPlaceholder')"
         :hide-details="true"
-      />
-    </v-col>
-
-    <v-col>
-      <v-select
-        v-model="filterCategories"
-        :placeholder="$t('guides.filter.categories')"
-        :hide-details="true"
-        :multiple="true"
-        :items="categories.data.items"
-        :item-title="
-          (e) => {
-            if (e.nameLocalized[i18n.locale.value]) {
-              return e.nameLocalized[i18n.locale.value];
-            }
-            return e.name;
-          }
-        "
-        item-value="id"
-      />
-    </v-col>
-  </v-row> -->
+        :prepend-inner-icon="mdiMagnify"
+        :loading="state == 'fetch'"
+      >
+        <template #append-inner>
+          <v-btn
+            :text="$t('common.filter')"
+            :append-icon="mdiFilterCog"
+            variant="tonal"
+            @mousedown.stop
+            @mouseup.stop
+            @click.stop="() => (filter = !filter)"
+          />
+        </template>
+      </v-text-field>
+    </div>
 
     <!-- list -->
     <v-row v-if="data">

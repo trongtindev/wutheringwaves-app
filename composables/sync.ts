@@ -34,25 +34,29 @@ export const useSync = defineStore('useSync', () => {
   };
 
   const check = async () => {
-    console.debug('useSync', 'check', { isLoggedIn: auth.isLoggedIn });
+    console.debug('useSync', 'check');
 
     const response = await api.get<ISyncPull>('sync/pull');
     lastCloudChanged.value = response.data.createdAt
       ? new Date(response.data.createdAt).getTime()
       : 0;
+    console.debug('useSync', 'check', {
+      lastLocalChanged: lastLocalChanged.value,
+      lastCloudChanged: lastCloudChanged.value
+    });
 
     if (lastCloudChanged.value && !lastLocalChanged.value) {
       pull();
     } else if (lastCloudChanged.value > lastLocalChanged.value) {
-      // dialog.show({
-      //   persistent: true,
-      //   title: i18n.t('sync.conflict.title'),
-      //   content: i18n.t('sync.conflict.message'),
-      //   cancelButtonText: i18n.t('sync.conflict.useLocalData'),
-      //   confirmButtonText: i18n.t('sync.conflict.useCloudData'),
-      //   onCancel: () => push(),
-      //   onConfirm: () => pull()
-      // });
+      dialog.show({
+        persistent: true,
+        title: i18n.t('sync.conflict.title'),
+        content: i18n.t('sync.conflict.message'),
+        cancelButtonText: i18n.t('sync.conflict.useLocalData'),
+        confirmButtonText: i18n.t('sync.conflict.useCloudData'),
+        onCancel: () => push(),
+        onConfirm: () => pull()
+      });
     } else if (lastCloudChanged.value != lastLocalChanged.value) {
       push();
     }

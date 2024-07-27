@@ -15,12 +15,11 @@ const route = useRoute();
 const router = useRouter();
 const dialog = useDialog();
 const localePath = useLocalePath();
+const role = useRole()
 
 // fetch
 const id = typeof route.query.id === 'string' ? route.query.id : undefined;
-const item = id
-  ? await api.get<IListResponse<IPost>>(`posts/${id}`)
-  : undefined;
+const item = id ? (await api.get<IPost>(`posts/${id}`)).data : undefined;
 const allCategories =
   await api.get<IListResponse<IPostCategory>>('posts/categories');
 
@@ -30,13 +29,24 @@ const localizationTab = ref(i18n.locale.value);
 const titleLocalized = ref<{ [key: string]: string }>({});
 const descriptionLocalized = ref<{ [key: string]: string }>({});
 const contentLocalized = ref<{ [key: string]: string }>({});
-const locale = ref<string>(i18n.locale.value);
-const locales = ref<string[]>([]);
-const thumbnail = ref<IFile>();
-const slug = ref();
+const locale = ref<string>(item ? item.locale : i18n.locale.value);
+const locales = ref<string[]>(item ? item.locales : []);
+const thumbnail = ref<IFile | undefined>(item ? item.thumbnail : undefined);
+const slug = ref(item ? item.slug : undefined);
 const state = ref<'' | 'submit'>('');
-const categories = ref<string[]>([]);
-const keywords = ref<string>('wuthering waves guide, wuthering guide');
+const categories = ref<string[]>(item ? item.categories.map((e) => e.id) : []);
+const keywords = ref<string>(
+  item ? item.keywords : 'wuthering waves guide, wuthering guide'
+);
+const attachments = ref<IFile[]>([]);
+
+if (item) {
+  titleLocalized.value = {};
+  titleLocalized.value[item.locale] = item.title;
+
+  descriptionLocalized.value = {};
+  descriptionLocalized.value[item.locale] = item.description;
+}
 
 // computed
 const localizations = computed(() => {
@@ -47,15 +57,11 @@ const localizations = computed(() => {
 });
 
 // functions
-const saveDraft = () => {
-  // TODO: save to local browser
-};
-
 const updateOrPublish = () => {
   state.value = 'submit';
 
   api
-    .post<IPost>('posts', {
+    .post<IPost>(item ? `posts/${item.id}` : 'posts', {
       title: titleLocalized.value[locale.value],
       titleLocalized: titleLocalized.value,
       description: descriptionLocalized.value[locale.value],
@@ -65,10 +71,11 @@ const updateOrPublish = () => {
       categories: categories.value,
       thumbnail: thumbnail.value ? thumbnail.value.id : undefined,
       locale: locale.value,
-      locales: locales.value
+      locales: locales.value,
+      attachments: attachments.value.map((e) => e.id)
     })
     .then((result) => {
-      router.push(localePath(`/guides/${result.data.slug}`));
+      router.push(localePath(`/posts/${result.data.slug}`));
     })
     .catch((error) => {
       console.error(error);
@@ -110,7 +117,9 @@ watch(
 // seo meta
 const pageTitle = i18n.t('meta.guides.editor.title');
 
-useApp().title = i18n.t('guides.editor.title');
+useApp().title = item
+  ? i18n.t('guides.actions.edit')
+  : i18n.t('guides.editor.title');
 useHead({
   title: pageTitle,
   meta: [
@@ -171,7 +180,10 @@ useHead({
 
       <v-col cols="12" md="4">
         <!-- thumbnail -->
-        <guides-editor-thumbnail @on-file="(val) => (thumbnail = val)" />
+        <guides-editor-thumbnail
+          :default-value="thumbnail"
+          @on-file="(val) => (thumbnail = val)"
+        />
 
         <!-- seo -->
         <v-card class="mt-2">
@@ -281,12 +293,6 @@ useHead({
 
     <v-app-bar location="bottom" class="pl-1 pr-1">
       <v-spacer />
-      <v-btn
-        :text="$t('common.saveDraft')"
-        :disabled="true"
-        @click="() => saveDraft()"
-      />
-
       <v-btn
         v-if="!auth.isSignedIn"
         color="primary"

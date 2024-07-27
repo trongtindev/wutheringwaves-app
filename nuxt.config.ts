@@ -22,7 +22,8 @@ const {
   GOOGLE_ADSENSE_TEST_MODE,
   GOOGLE_ADSENSE_ID,
   // discord
-  DISCORD_INVITE_LINK
+  DISCORD_INVITE_LINK,
+  DISCORD_BOT_NAME
 } = process.env;
 
 const localesMetadata: LocaleObject[] = [
@@ -268,7 +269,8 @@ export default defineNuxtConfig({
       GOOGLE_ADSENSE_ID,
       GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',
       // discord
-      DISCORD_INVITE_LINK
+      DISCORD_INVITE_LINK,
+      DISCORD_BOT_NAME
     }
   },
 

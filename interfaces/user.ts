@@ -6,3 +6,10 @@ export interface IUser {
   createdAt: number;
   updatedAt: number;
 }
+
+export type UserRole = 'Owner' | 'Manager' | 'Member';
+
+export interface IUserRole {
+  role: UserRole;
+  status: boolean;
+}

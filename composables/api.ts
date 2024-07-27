@@ -1,10 +1,18 @@
 import axios, { AxiosError } from 'axios';
 import axiosRetry from 'axios-retry';
 
+declare module 'axios' {
+  interface AxiosRequestConfig {
+    handleError?: boolean;
+  }
+}
+
 const useApiFactory = () => {
   // uses
+  const i18n = useI18n();
   const auth = useAuth();
   const route = useRoute();
+  const dialog = useDialog();
   const runtimeConfig = useRuntimeConfig();
 
   // config
@@ -49,6 +57,22 @@ const useApiFactory = () => {
 
           console.debug('api', 'retrying request...');
           return getInstance()(error.response.config);
+        }
+
+        if (error.config && error.config.handleError) {
+          const message = (() => {
+            if (error.response) {
+              const message: string | string[] = error.response.data.message;
+              return typeof message === 'string'
+                ? message
+                : message.join('<br/>');
+            }
+            return;
+          })();
+          dialog.show({
+            title: i18n.t('common.error'),
+            content: message
+          });
         }
       }
 
