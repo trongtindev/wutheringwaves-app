@@ -7,6 +7,7 @@ COPY . .
 
 ### install and build
 RUN bun i --frozen-lockfile
+ENV NITRO_PRESET=bun
 RUN bun run build
 
 # run-stage

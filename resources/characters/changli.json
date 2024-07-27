@@ -246,5 +246,130 @@
     }
   ],
   "birthday": "June 6th",
-  "splashArt": true
+  "splashArt": true,
+  "bestWeapons": [
+    {
+      "different": 110.1,
+      "rank": 1,
+      "item": "blazing-brilliance"
+    },
+    {
+      "different": 100,
+      "rank": 1,
+      "item": "emerald-of-genesis"
+    },
+    {
+      "different": 100,
+      "rank": 1,
+      "item": "commando-of-conviction"
+    },
+    {
+      "different": 100,
+      "rank": 1,
+      "item": "lunar-cutter"
+    },
+    {
+      "different": 100,
+      "rank": 1,
+      "item": "lumingloss"
+    },
+    {
+      "different": 100,
+      "rank": 1,
+      "item": "sword-of-night"
+    }
+  ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Molten Rift"]
+    },
+    {
+      "different": 90.7,
+      "items": ["Molten Rift", "Lingering Tunes"]
+    },
+    {
+      "different": 86.2,
+      "items": ["Molten Rift", "Moonlit Clouds"]
+    }
+  ],
+  "bestMainEchoes": ["inferno-rider", "mech-abomination"],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Fusion DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Fusion DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate"]
+        },
+        {
+          "cost": 4,
+          "stats": ["Crit DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "skillPriority": [
+    "Resonance Skill",
+    "Forte Circuit",
+    "Resonance Liberation",
+    "Basic Attack",
+    "Intro Skill"
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["changli"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["yinlin", "rover-havoc", "encore"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina"]
+        }
+      ]
+    }
+  ]
 }

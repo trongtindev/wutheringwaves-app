@@ -114,6 +114,14 @@ export default defineNuxtConfig({
     },
     '/guides/rss': {
       proxy: '/api/rss/guides'
+    },
+    // TODO: remove soon
+    '/echos': {
+      robots: false
+    },
+    '/echos/**': {
+      robots: false,
+      redirect: '/echoes/**'
     }
   },
 
@@ -221,7 +229,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'bun',
     prerender: {
       routes: ['/sitemap.xml'],
       concurrency: 25
