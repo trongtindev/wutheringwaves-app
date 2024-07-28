@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Wuthering Waves",
-    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "description": "wutheringwaves.app helps you track your pity analysis, global stats, and manage your to-do lists for Wuthering Waves. Explore our comprehensive database, which includes detailed information on characters, weapons, echoes, and more. Maximize your gameplay experience with our extensive resources and tools designed specifically for Wuthering Waves players.",
     "index": {
       "title": "Your personal tracker"
     },
     "timeline": {
       "title": "Event timeline calendar",
-      "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
+      "description": "wutheringwaves.app features a comprehensive timeline that allows you to view the start and end dates of events, as well as the duration of Wuthering Waves versions. Stay informed with our neat and organized timeline, ensuring you never miss an important event or update in the game. Explore our site for detailed guides, character builds, and more to enhance your Wuthering Waves experience."
     },
     "echoes": {
       "title": "Echoes",
@@ -19,7 +19,7 @@
     "characters": {
       "id": {
         "title": "{name} Guide and Build",
-        "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
+        "description": "{name} is a playable {attribute} Resonator in Wuthering Waves. Discover their best builds, optimal team compositions, effective rotations, ascension materials, and other detailed information here. Explore strategies to maximize {name}'s potential and enhance your gameplay experience."
       },
       "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
     },
@@ -28,35 +28,35 @@
         "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
       },
       "title": "Weapons",
-      "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
+      "description": "wutheringwaves.app provides detailed information on the five types of weapons in Wuthering Waves: Sword, Broadblade, Gauntlet, Pistols, and Rectifier. Explore their stats, ascension materials, and more to optimize your weapon choices and enhance your gameplay experience."
     },
     "codes": {
       "title": "Gift Codes for {time}",
-      "description": "All codes that you can redeem in Wuthering Waves for free rewards."
+      "description": "Find all redeemable codes for Wuthering Waves and claim free rewards at wutheringwaves.app. Stay updated with the latest codes and maximize your in-game benefits with our comprehensive list."
     },
     "convene": {
       "history": {
         "title": "Pity Tracker",
-        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+        "description": "Use the Convene Counter on wutheringwaves.app to track your pity counter and monitor when you obtain characters or weapons. View global statistics and check your top rank. Automatically import and back up logs from PC, Android, iOS, and PlayStation, and save them for over 6 months. Enhance your gameplay experience with our comprehensive tracking tools."
       },
       "global": {
         "title": "Global Convene Stats",
-        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+        "description": "Track the most pullable Resonators and view the global average pity percentage from wutheringwaves.app users on our Wuthering Waves Convene page. Stay informed and optimize your pulls with our detailed statistics and insights."
       }
     },
     "todoList": {
-      "description": "Wuthering Waves Todo List to plan and track items and mora you need, you can also see resin approximation needed to farm the items!"
+      "description": "wutheringwaves.app offers a comprehensive Wuthering Waves To-Do List to help you plan and track the items and mora you need. Additionally, you can see the resin approximation required to farm these items. Optimize your resource management and enhance your gameplay with our detailed planning tools."
     },
     "tierList": {
-      "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
+      "description": "Find the best Wuthering Waves Tier List or create your own on wutheringwaves.app. Stay updated with the latest version of the Wuthering Waves Tier List and explore comprehensive rankings to optimize your gameplay."
     },
     "trophies": {
-      "title": "Trophies",
-      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+      "title": "Achinments",
+      "description": "Track your Wuthering Waves trophies and achievements easily on wutheringwaves.app! Access a complete list of all trophies with detailed descriptions to help you complete and manage your achievements"
     },
     "map": {
       "title": "Interactive Map",
-      "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
+      "description": "Wuthering Waves is an open-world game. Our new interactive map on wutheringwaves.app is now live, allowing you to track your progress and achieve 100% exploration. Find ascension materials for your weapons and Resonators, as well as Echoes to improve your characters. Optimize your adventure with our comprehensive mapping tools."
     },
     "items": {
       "title": "All items",
@@ -64,8 +64,8 @@
       "id": {
         "title": "Item: {name}",
         "description": {
-          "default": "{name} in Wuthering Waves. Learn where to find {name} and other information in this guide!",
-          "recipe": "{name} in Wuthering Waves. Learn where to the recipe for {name} and other information in this guide!"
+          "default": "{name} in Wuthering Waves. Learn where to find {name} and discover other detailed information in this comprehensive guide on wutheringwaves.app!",
+          "recipe": "{name} in Wuthering Waves. Learn where to find the recipe for {name} and discover other detailed information in this comprehensive guide on wutheringwaves.app!"
         }
       }
     },
@@ -77,7 +77,7 @@
     },
     "leaderboards": {
       "title": "Leaderboards",
-      "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
+      "description": "Wuthering Waves damage leaderboards, profile sharing, character card generator, compare your pull results with others, and more on wutheringwaves.app. Stay competitive and share your achievements with the community"
     }
   },
   "sidebar": {
@@ -89,7 +89,7 @@
     "conveneHistory": "Pity Tracker",
     "tierList": "Tier list",
     "todoList": "Todo list",
-    "trophies": "Trophies",
+    "trophies": "Achievements",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
