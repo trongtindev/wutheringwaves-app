@@ -14,7 +14,7 @@ export const useRole = defineStore('useRole', () => {
     return new Promise((resolve) => {
       console.debug('useRole', 'initialize');
 
-      if (!auth.isLoggedIn) {
+      if (!auth.isSignedIn) {
         roles.value = null;
         resolve(true);
         return;
@@ -68,7 +68,7 @@ export const useRole = defineStore('useRole', () => {
 
   // changes
   watch(
-    () => auth.user,
+    () => auth.isSignedIn,
     () => initialize()
   );
 

@@ -108,7 +108,7 @@ export const useSync = defineStore('useSync', () => {
       db = await database.getInstance();
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await db.importJSON(response.data.data as any);
+      await db.importJSON(JSON.parse(response.data.content as any));
 
       if (response.data.createdAt) {
         const time = new Date(response.data.createdAt).getTime();

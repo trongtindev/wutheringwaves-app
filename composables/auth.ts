@@ -11,7 +11,7 @@ export const useAuth = defineStore('useAuth', () => {
   const runtimeConfig = useRuntimeConfig();
 
   // states
-  const user = useLocalStorage<IUser | null>('user', null);
+  const user = ref<IUser | null>(null);
   const state = ref<'' | 'sign-in'>('');
   const gState = useCookie('g_state');
   const device = useDevice();

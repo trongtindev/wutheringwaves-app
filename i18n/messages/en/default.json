@@ -479,6 +479,9 @@
     "views": "Views",
     "signInRequired": "Sign in Required",
     "signInRequiredMessage": "This feature which require sign in.",
-    "error": "Error"
+    "error": "Error",
+    "rolesRequired": "Roles required",
+    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "getRoles": "Get roles"
   }
 }

@@ -43,9 +43,9 @@ export default defineNuxtConfig({
   $development: {
     // ssr: false,
     // debug: true,
-    devtools: {
-      enabled: true
-    }
+    // devtools: {
+    //   enabled: true
+    // }
   },
 
   modules: [

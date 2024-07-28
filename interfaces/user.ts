@@ -7,7 +7,18 @@ export interface IUser {
   updatedAt: number;
 }
 
-export type UserRole = 'Owner' | 'Manager' | 'Member';
+export type UserRole =
+  | 'Owner'
+  | 'Manager'
+  | 'Moderator'
+  | 'Content Writer'
+  | 'Contributor'
+  | 'Member';
+
+export enum UserRoleColor {
+  Owner = '#ff0000',
+  Manager = ''
+}
 
 export interface IUserRole {
   role: UserRole;

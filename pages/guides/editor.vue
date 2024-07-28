@@ -15,7 +15,7 @@ const route = useRoute();
 const router = useRouter();
 const dialog = useDialog();
 const localePath = useLocalePath();
-const role = useRole()
+const role = useRole();
 
 // fetch
 const id = typeof route.query.id === 'string' ? route.query.id : undefined;
@@ -312,5 +312,10 @@ useHead({
         @click="() => updateOrPublish()"
       />
     </v-app-bar>
+
+    <roles-required
+      :roles="['Owner', 'Manager', 'Moderator', 'Content Writer']"
+      type="any"
+    />
   </client-only>
 </template>

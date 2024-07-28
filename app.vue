@@ -88,7 +88,7 @@ useHead({
     }
   ],
   script: [
-    ...(!analytics.optOut
+    ...(!analytics.optOut && !import.meta.dev
       ? [
           {
             src: 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_TAG_ID,

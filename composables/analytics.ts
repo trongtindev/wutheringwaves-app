@@ -32,10 +32,12 @@ export const useAnalytics = defineStore('useAnalytics', () => {
       | undefined
   ) => {
     if (typeof window.gtag === 'undefined') {
-      if (!import.meta.dev || !optOut.value) {
+      if (!import.meta.dev && !optOut.value) {
         console.warn('useAnalytics', 'gtag is not initialized!');
       }
+      return;
     }
+
     console.debug('useAnalytics', 'config', config);
     window.gtag('config', GOOGLE_TAG_ID, config);
   };
@@ -50,7 +52,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
       | undefined
   ) => {
     if (typeof window.gtag === 'undefined') {
-      if (!import.meta.dev || !optOut.value) {
+      if (!import.meta.dev && !optOut.value) {
         console.warn('useAnalytics', 'gtag is not initialized!');
       }
 

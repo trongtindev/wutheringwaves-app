@@ -1,6 +1,6 @@
 export interface ISyncPull {
-  data: string;
   size: number;
+  content: string;
   createdAt?: string;
 }
 

@@ -125,7 +125,7 @@ watch(
     <v-divider />
 
     <v-card
-      class="rounded-t-0"
+      class="rounded-t-0 border-none"
       :disabled="thumbnail && thumbnail.state == 'uploading'"
       @click="() => fileDialog.open({ reset: true })"
     >
