@@ -42,6 +42,9 @@
       "global": {
         "title": "Global Convene Stats",
         "description": "Stay informed with detailed statistics on the most pullable Resonators and global pity percentage at wutheringwaves.app"
+      },
+      "share": {
+        "title": "Convene history card generator"
       }
     },
     "todoList": {
@@ -82,7 +85,7 @@
   },
   "sidebar": {
     "home": "Home",
-    "timeline": "Event Timeline",
+    "timeline": "Timeline",
     "characters": "Characters",
     "weapons": "Weapons",
     "echoes": "Echoes",
@@ -99,9 +102,9 @@
     "comparison": "Comparison",
     "database": "Database",
     "convene": "Convene",
-    "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Global Stats",
-    "conveneImport": "Import history"
+    "conveneImport": "Import history",
+    "conveneShare": "Share history"
   },
   "items": {
     "title": "Items",
@@ -193,10 +196,10 @@
       "conveneTotal": "Convene Total",
       "worth": "Worth",
       "chance": "Chance"
+    },
+    "share": {
+      "title": "Share history"
     }
-  },
-  "showcase": {
-    "title": "Showcase"
   },
   "characters": {
     "title": "Characters",

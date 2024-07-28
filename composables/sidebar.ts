@@ -55,12 +55,12 @@ export const useSidebar = defineStore('useSidebar', () => {
           title: 'sidebar.conveneImport'
         },
         {
-          url: '/convene-history/global',
-          title: 'sidebar.conveneGlobalStats'
+          url: '/convene-history/share',
+          title: 'sidebar.conveneShare'
         },
         {
-          url: '/showcase/convene',
-          title: 'sidebar.conveneShowcase'
+          url: '/convene-history/global',
+          title: 'sidebar.conveneGlobalStats'
         }
       ]
     },

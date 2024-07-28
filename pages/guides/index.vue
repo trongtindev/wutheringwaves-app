@@ -134,7 +134,7 @@ useSeoMeta({
       />
 
       <!-- filter -->
-      <v-bottom-sheet v-model="filter" :inset="true">
+      <base-drawer v-model="filter">
         <v-card>
           <v-card-title>
             {{ $t('common.filter') }}
@@ -180,7 +180,7 @@ useSeoMeta({
             />
           </v-card-actions>
         </v-card>
-      </v-bottom-sheet>
+      </base-drawer>
     </client-only>
   </div>
 </template>

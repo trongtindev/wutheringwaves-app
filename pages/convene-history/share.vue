@@ -7,11 +7,13 @@ import { mdiDownload, mdiUpload } from '@mdi/js';
 import urlSlug from 'url-slug';
 
 // define
-const CARDS = Array.from(Array(25).keys()).map((i) => {
-  return {
-    id: i + 1
-  };
-});
+const CARDS = Array.from(Array(25).keys())
+  .filter((e) => e !== 3)
+  .map((i) => {
+    return {
+      id: i + 1
+    };
+  });
 
 // uses
 const i18n = useI18n();
@@ -26,7 +28,7 @@ const height = ref(540);
 const totalPull = ref(0);
 const luckWinRateOff = ref(0);
 const convenes = ref<ConveneDocument[]>(null as any);
-const showOptions = ref(false);
+const options = ref(false);
 const showUID = ref(true);
 const show4Star = ref(true);
 const show5Star = ref(true);
@@ -207,6 +209,20 @@ const isEmptyCard = computed(() => {
 
 // lifecycle
 onMounted(initialize);
+
+// seo meta
+const title = i18n.t('meta.convene.share.title');
+const description = i18n.t('meta.convene.share.description');
+
+useApp().title = i18n.t('convene.share.title');
+useHead({
+  title
+});
+useSeoMeta({
+  ogTitle: title,
+  description: description,
+  ogDescription: description
+});
 </script>
 
 <template>
@@ -215,12 +231,12 @@ onMounted(initialize);
     <breadcrumbs
       :items="[
         {
-          to: '/showcase',
-          title: i18n.t('showcase.title')
+          to: '/convene-history',
+          title: i18n.t('convene.history.title')
         },
         {
-          to: '/showcase/convene',
-          title: i18n.t('showcase.convene.title')
+          to: '/convene-history/share',
+          title: i18n.t('convene.share.title')
         }
       ]"
     />
@@ -353,7 +369,7 @@ onMounted(initialize);
         <v-btn
           class="mr-1"
           :text="$t('common.options')"
-          @click="() => (showOptions = !showOptions)"
+          @click="() => (options = !options)"
         />
 
         <v-btn
@@ -367,9 +383,20 @@ onMounted(initialize);
       </div>
     </client-only>
 
-    <v-expand-transition v-if="showOptions">
-      <v-card class="mt-4">
-        <v-card-text class="ml-4 mr-4">
+    <v-navigation-drawer
+      v-model="options"
+      :temporary="true"
+      :width="360"
+      location="right"
+    >
+      <v-card>
+        <!-- general -->
+        <v-card-title>
+          {{ $t('convene.share.general') }}
+        </v-card-title>
+        <v-card-text>
+          <v-select :label="$t('common.banner')" />
+
           <v-switch
             v-model="showUID"
             :label="$t('showcase.convene.showUID')"
@@ -386,17 +413,20 @@ onMounted(initialize);
             :hide-details="true"
           />
         </v-card-text>
-        <v-divider />
 
+        <!-- background -->
+        <v-card-title>
+          {{ $t('convene.share.background') }}
+        </v-card-title>
         <v-card-text>
-          <v-row>
-            <v-col
-              v-for="(element, index) in CARDS"
-              :key="index"
-              cols="6"
-              sm="4"
-              lg="2"
-            >
+          <v-btn
+            :block="true"
+            :prepend-icon="mdiUpload"
+            :text="$t('common.upload')"
+            variant="tonal"
+          />
+          <!-- <v-row>
+            <v-col v-for="(element, index) in CARDS" :key="index" cols="6">
               <v-card
                 class="border rounded h-100"
                 :disabled="background == element.id"
@@ -405,18 +435,23 @@ onMounted(initialize);
                 <v-img :src="`/cards/T_Card${element.id}.png`" />
               </v-card>
             </v-col>
+          </v-row> -->
+        </v-card-text>
 
-            <v-col cols="6" sm="4" lg="2">
-              <v-card
-                class="border rounded h-100 d-flex align-center justify-center"
-              >
-                <v-icon :icon="mdiUpload" />
-              </v-card>
-            </v-col>
-          </v-row>
+        <!-- foreground -->
+        <v-card-title>
+          {{ $t('convene.share.foreground') }}
+        </v-card-title>
+        <v-card-text>
+          <v-btn
+            :block="true"
+            :prepend-icon="mdiUpload"
+            :text="$t('common.upload')"
+            variant="tonal"
+          />
         </v-card-text>
       </v-card>
-    </v-expand-transition>
+    </v-navigation-drawer>
   </div>
 </template>
 
