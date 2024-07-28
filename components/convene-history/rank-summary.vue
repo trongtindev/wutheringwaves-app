@@ -71,12 +71,7 @@ onNuxtReady(initialize);
 </script>
 
 <template>
-  <v-card>
-    <v-card-title>
-      {{ $t('convene.rank.title') }}
-    </v-card-title>
-    <v-divider />
-
+  <v-card :title="$t('convene.rank.title')">
     <v-card-text>
       <!-- Total pulls -->
       <v-alert class="mb-4">

@@ -47,27 +47,31 @@ useHead({
   link: [
     {
       rel: 'icon',
-      type: 'image/x-icon',
-      href: `${SITE_URL}/favicon.png`
+      href: `${SITE_URL}/favicon.ico`
+    },
+    {
+      rel: 'apple-touch-icon',
+      href: `${SITE_URL}/icon-192.png`
     },
     {
       rel: 'alternate',
       type: 'application/rss+xml',
       href: `${SITE_URL}/guides/rss`
     },
-    {
-      rel: 'preconnect',
-      href: 'https://fonts.googleapis.com'
-    },
-    {
-      rel: 'preconnect',
-      href: 'https://fonts.gstatic.com',
-      crossorigin: true
-    },
-    {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
-    },
+
+    // {
+    //   rel: 'preconnect',
+    //   href: 'https://fonts.googleapis.com'
+    // },
+    // {
+    //   rel: 'preconnect',
+    //   href: 'https://fonts.gstatic.com',
+    //   crossorigin: true
+    // },
+    // {
+    //   rel: 'stylesheet',
+    //   href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
+    // },
     ...(i18nHead.value.link || []).map((e) => {
       return {
         ...e,
@@ -85,6 +89,22 @@ useHead({
     {
       name: 'twitter:card',
       content: 'summary_large_image'
+    },
+    {
+      name: 'application-name',
+      content: 'WutheringWaves.app'
+    },
+    {
+      name: 'apple-mobile-web-app-title',
+      content: 'WutheringWaves.app'
+    },
+    {
+      name: 'mobile-web-app-capable',
+      content: 'yes'
+    },
+    {
+      name: 'apple-mobile-web-app-capable',
+      content: 'yes'
     }
   ],
   script: [

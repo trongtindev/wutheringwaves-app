@@ -15,6 +15,7 @@ const localePath = useLocalePath();
 const search = useSearch();
 const theme = useTheme();
 const analytics = useAnalytics();
+const route = useRoute();
 
 // events
 const onPressedToggleTheme = () => {
@@ -35,19 +36,16 @@ const onPressedSearch = () => {
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
       <!-- logo -->
-      <v-sheet class="pb-2 pt-2">
-        <v-list-item title="wutheringwaves.app" subtitle="wutheringwaves.app">
-          <template #prepend>
-            <v-avatar
-              class="border"
-              rounded
-              image="/favicon.webp"
-              alt="WutheringWaves.app"
-            />
-          </template>
-        </v-list-item>
-      </v-sheet>
-      <v-divider />
+      <div class="pt-2 pl-2">
+        <v-card :to="localePath('/')" :width="48" :height="48">
+          <v-avatar
+            :size="48"
+            rounded
+            image="/icon-192-maskable.png"
+            alt="WutheringWaves.app logo"
+          />
+        </v-card>
+      </div>
 
       <!-- sidebar -->
       <v-list :nav="true" :lines="false">
@@ -60,7 +58,6 @@ const onPressedSearch = () => {
       </v-list>
 
       <template #append>
-        <v-divider />
         <v-list :nav="true" :lines="false">
           <!-- language -->
           <layouts-language-switcher />
@@ -136,6 +133,16 @@ const onPressedSearch = () => {
     <v-main>
       <!-- container -->
       <v-container :fluid="app.fluid">
+        <router-link :to="localePath('/convene-history')">
+          <base-alert
+            v-if="!route.path.includes('convene')"
+            id="convene.message"
+            color="warning"
+            class="mb-2"
+            :text="$t('convene.message')"
+            :closable="true"
+          />
+        </router-link>
         <slot />
       </v-container>
 

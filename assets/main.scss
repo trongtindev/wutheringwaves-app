@@ -2,13 +2,19 @@
   $color-pack: false
 );
 
-/* wrap*/
-.wrap-title {
-  text-wrap: unset !important;
+/* line-clamp */
+.line-clamp-2 {
   display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  height: 3.2em;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* colors */

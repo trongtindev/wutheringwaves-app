@@ -65,13 +65,11 @@ useSeoMeta({
           <v-card-title>
             {{ $t('desktopApp.title') }}
           </v-card-title>
-          <v-divider />
 
           <v-card-text>
             <!-- <v-responsive :aspect-ratio="2 / 1" class="border rounded mb-2" /> -->
             {{ $t('desktopApp.introduce') }}
           </v-card-text>
-          <v-divider />
 
           <v-card-actions class="d-flex justify-end">
             <v-btn
@@ -84,34 +82,15 @@ useSeoMeta({
         </v-card>
 
         <!-- current event -->
-        <v-card @on-done="masonry.refreshLayout">
-          <v-card-title tag="h2">
-            {{ $t('timeline.summary') }}
-          </v-card-title>
-          <v-divider />
-
-          <timeline-summary-widget />
-          <v-divider />
-
-          <v-card-actions class="d-flex justify-end">
-            <v-btn
-              variant="text"
-              :to="localePath('/timeline')"
-              :text="$t('timeline.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-card-actions>
-        </v-card>
+        <timeline-summary-widget @on-done="masonry.refreshLayout" />
 
         <!-- yourLastConvene -->
         <v-card>
           <v-card-title>
             {{ $t('common.yourLastConvene') }}
           </v-card-title>
-          <v-divider />
 
           <convene-history-recently-widget @on-done="masonry.refreshLayout" />
-          <v-divider />
 
           <v-card-actions class="d-flex justify-end">
             <v-btn
@@ -130,10 +109,8 @@ useSeoMeta({
           <v-card-title>
             {{ $t('convene.global.title') }}
           </v-card-title>
-          <v-divider />
 
           <convene-history-global-widget @on-done="masonry.refreshLayout" />
-          <v-divider />
 
           <v-card-actions class="d-flex justify-end">
             <v-btn
@@ -150,7 +127,6 @@ useSeoMeta({
           <v-card-title tag="h3">
             {{ $t('common.upcomingWeapons') }}
           </v-card-title>
-          <v-divider />
 
           <v-card-text>
             <v-row>
@@ -170,7 +146,6 @@ useSeoMeta({
           <v-card-title tag="h3">
             {{ $t('common.upcomingCharacters') }}
           </v-card-title>
-          <v-divider />
 
           <v-card-text>
             <v-row>
@@ -183,46 +158,6 @@ useSeoMeta({
               </v-col>
             </v-row>
           </v-card-text>
-        </v-card>
-
-        <!-- shortcuts -->
-        <v-card>
-          <v-card-title>
-            {{ $t('common.shortcuts') }}
-          </v-card-title>
-          <v-divider />
-
-          <v-list>
-            <!-- <v-list-item
-              :to="localePath('/showcase/convene')"
-              :title="$t('showcase.convene.title')"
-              :append-icon="mdiChevronRight"
-            /> -->
-
-            <!-- <v-list-item
-              :to="localePath('/todo-list')"
-              :title="$t('todoList.title')"
-              :append-icon="mdiChevronRight"
-            /> -->
-
-            <v-list-item
-              :to="localePath('/echoes')"
-              :title="$t('echoes.title')"
-              :append-icon="mdiChevronRight"
-            />
-
-            <v-list-item
-              :to="localePath('/weapons')"
-              :title="$t('weapons.title')"
-              :append-icon="mdiChevronRight"
-            />
-
-            <v-list-item
-              :to="localePath('/characters')"
-              :title="$t('characters.title')"
-              :append-icon="mdiChevronRight"
-            />
-          </v-list>
         </v-card>
       </template>
     </masonry>

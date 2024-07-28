@@ -114,7 +114,12 @@ useSeoMeta({
 <template>
   <div>
     <!-- alert -->
-    <base-alert id="characters" :text="$t('characters.message')" class="mb-2" />
+    <base-alert
+      id="characters.message"
+      class="mb-2"
+      :text="$t('characters.message')"
+      :closable="true"
+    />
 
     <!-- input -->
     <v-text-field

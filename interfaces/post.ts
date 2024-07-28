@@ -27,4 +27,5 @@ export interface IPost {
   createdAt: string;
   categories: IPostCategory[];
   keywords: string;
+  deleted: boolean;
 }

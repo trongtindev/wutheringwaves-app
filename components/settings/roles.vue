@@ -17,7 +17,6 @@ const clipboard = useClipboard();
 const { DISCORD_INVITE_LINK, DISCORD_BOT_NAME } = useRuntimeConfig().public;
 
 // states
-
 const copied = ref();
 const pasted = ref();
 const status = ref<'' | 'link' | 'unlink' | 'refresh'>('');
@@ -42,7 +41,9 @@ const onPressedCopy = () => {
 };
 
 const onPressPaste = () => {
-  verifyCode.value = clipboard.text.value;
+  navigator.clipboard.readText().then((result) => {
+    verifyCode.value = result;
+  });
   pasted.value = true;
 
   setTimeout(() => {
@@ -120,7 +121,6 @@ const onPressedRefreshRoles = () => {
         </div>
       </v-card-text>
 
-      <v-divider />
       <v-card-actions>
         <v-btn
           color="warning"
@@ -157,16 +157,18 @@ const onPressedRefreshRoles = () => {
         />
         <v-text-field
           v-model="linkMessage"
-          class="mb-2"
           :hide-details="true"
+          :readonly="true"
+          class="mb-2"
           onclick="this.select()"
         >
           <template #append-inner>
             <v-btn
               variant="text"
               :icon="copied ? mdiCheck : mdiContentCopy"
-              :readonly="true"
               :disabled="!clipboard.isSupported.value"
+              @mousedown.stop
+              @mouseup.stop
               @click="() => onPressedCopy()"
             />
           </template>

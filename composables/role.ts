@@ -57,8 +57,16 @@ export const useRole = defineStore('useRole', () => {
     return roles.value != null;
   });
 
-  const hasRoles = (_roles: UserRole[]) => {
+  const hasRoles = (_roles: UserRole[], type: 'all' | 'any' = 'any') => {
     if (roles.value) {
+      if (type == 'any') {
+        return (
+          _roles.findIndex((e) => {
+            return roles.value?.includes(e);
+          }) >= 0
+        );
+      }
+
       return _roles.every((e) => {
         return roles.value?.includes(e);
       });

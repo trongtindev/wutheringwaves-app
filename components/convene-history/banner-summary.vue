@@ -89,12 +89,7 @@ if (import.meta.client) {
 </script>
 
 <template>
-  <v-card>
-    <v-card-title>
-      {{ props.title }}
-    </v-card-title>
-    <v-divider />
-
+  <v-card :title="props.title">
     <v-card-text>
       <!-- lifetime pull -->
       <v-alert class="mb-4">
@@ -181,21 +176,29 @@ if (import.meta.client) {
       </v-alert>
     </v-card-text>
 
-    <!-- :color="element.win ? 'success' : undefined" -->
-    <v-divider v-if="guaranteedAt5List.length > 0" />
-    <v-card-text
-      v-if="guaranteedAt5List.length > 0"
-      class="d-flex flex-wrap ga-2 justify-center"
-    >
-      <v-chip v-for="(element, index) in guaranteedAt5List" :key="index">
-        <span>{{ $t(element.name) }}</span>
-        <span
-          class="ml-2 font-weight-bold"
-          :style="`color: hsl(${100 - (element.pity / 80) * 100}, 100%, 50%);`"
-        >
-          {{ element.pity }}
-        </span>
-      </v-chip>
-    </v-card-text>
+    <div v-if="guaranteedAt5List.length > 0">
+      <v-row>
+        <v-col class="d-flex align-center">
+          <v-divider />
+        </v-col>
+        <v-col class="d-flex align-center justify-center">
+          {{ $t('common.recent') }}
+        </v-col>
+        <v-col class="d-flex align-center">
+          <v-divider />
+        </v-col>
+      </v-row>
+      <v-card-actions class="d-flex flex-wrap ga-2 justify-center">
+        <v-chip v-for="(element, index) in guaranteedAt5List" :key="index">
+          <span>{{ $t(element.name) }}</span>
+          <span
+            class="ml-2 font-weight-bold"
+            :style="`color: hsl(${100 - (element.pity / 80) * 100}, 100%, 50%);`"
+          >
+            {{ element.pity }}
+          </span>
+        </v-chip>
+      </v-card-actions>
+    </div>
   </v-card>
 </template>

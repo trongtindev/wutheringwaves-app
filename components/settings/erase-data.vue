@@ -56,7 +56,6 @@ onNuxtReady(() => emits('on-updated'));
     <v-card-text>
       {{ $t('settings.data.erase.message') }}
     </v-card-text>
-    <v-divider />
 
     <v-card-actions class="d-flex justify-end">
       <v-btn

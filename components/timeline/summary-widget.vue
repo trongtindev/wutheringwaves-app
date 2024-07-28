@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
 import type { ITimeline } from '~/interfaces/timeline';
+import { mdiChevronRight } from '@mdi/js';
 
 // define
 const emits = defineEmits<{
@@ -9,6 +10,7 @@ const emits = defineEmits<{
 
 // uses
 const resources = useResources();
+const localePath = useLocalePath();
 
 // states
 const current = ref<ITimeline[]>([]);
@@ -64,55 +66,70 @@ await initialize();
 </script>
 
 <template>
-  <v-list>
-    <!-- current -->
-    <v-list-subheader>
-      {{ $t('timeline.current') }}
-    </v-list-subheader>
+  <v-card>
+    <v-card-title>
+      {{ $t('timeline.summary') }}
+    </v-card-title>
 
-    <v-list-item
-      v-for="(element, index) in current"
-      :key="index"
-      class="rounded-xl"
-      :class="{
-        'mt-2': index > 0
-      }"
-    >
-      <v-list-item-title>
-        {{ element.name }}
-      </v-list-item-title>
+    <v-list>
+      <!-- current -->
+      <v-list-subheader>
+        {{ $t('timeline.current') }}
+      </v-list-subheader>
 
-      <v-list-item-subtitle>
-        <client-only>
-          <template #fallback>...</template>
-          {{ $t('timeline.endsIn', [dayjs(element.time.end).fromNow()]) }}
-        </client-only>
-      </v-list-item-subtitle>
-    </v-list-item>
+      <v-list-item
+        v-for="(element, index) in current"
+        :key="index"
+        class="rounded-xl"
+        :class="{
+          'mt-2': index > 0
+        }"
+      >
+        <v-list-item-title>
+          {{ element.name }}
+        </v-list-item-title>
 
-    <!-- upcoming -->
-    <v-list-subheader>
-      {{ $t('timeline.upcoming') }}
-    </v-list-subheader>
+        <v-list-item-subtitle>
+          <client-only>
+            <template #fallback>...</template>
+            {{ $t('timeline.endsIn', [dayjs(element.time.end).fromNow()]) }}
+          </client-only>
+        </v-list-item-subtitle>
+      </v-list-item>
 
-    <v-list-item
-      v-for="(element, index) in upcoming"
-      :key="index"
-      class="rounded-xl"
-      :class="{
-        'mt-2': index > 0
-      }"
-    >
-      <v-list-item-title>
-        {{ element.name }}
-      </v-list-item-title>
+      <!-- upcoming -->
+      <v-list-subheader>
+        {{ $t('timeline.upcoming') }}
+      </v-list-subheader>
 
-      <v-list-item-subtitle>
-        <client-only>
-          <template #fallback>...</template>
-          {{ $t('timeline.startsIn', [dayjs(element.time.start).fromNow()]) }}
-        </client-only>
-      </v-list-item-subtitle>
-    </v-list-item>
-  </v-list>
+      <v-list-item
+        v-for="(element, index) in upcoming"
+        :key="index"
+        class="rounded-xl"
+        :class="{
+          'mt-2': index > 0
+        }"
+      >
+        <v-list-item-title>
+          {{ element.name }}
+        </v-list-item-title>
+
+        <v-list-item-subtitle>
+          <client-only>
+            <template #fallback>...</template>
+            {{ $t('timeline.startsIn', [dayjs(element.time.start).fromNow()]) }}
+          </client-only>
+        </v-list-item-subtitle>
+      </v-list-item>
+    </v-list>
+
+    <v-card-actions class="d-flex justify-end">
+      <v-btn
+        variant="text"
+        :to="localePath('/timeline')"
+        :text="$t('timeline.title')"
+        :append-icon="mdiChevronRight"
+      />
+    </v-card-actions>
+  </v-card>
 </template>

@@ -34,7 +34,7 @@ onNuxtReady(() => emits('on-updated'));
 <template>
   <div>
     <v-card :title="$t('settings.accounts.title')">
-      <v-list v-if="account.items.length > 0">
+      <div v-if="account.items.length > 0">
         <settings-account-item
           v-for="(element, index) in account.items"
           :key="index"
@@ -44,7 +44,7 @@ onNuxtReady(() => emits('on-updated'));
           }"
           @on-delete="() => onPressedDelete(element.playerId)"
         />
-      </v-list>
+      </div>
 
       <v-card-text v-else>
         {{ $t('settings.accounts.empty') }}

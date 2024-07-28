@@ -37,7 +37,7 @@ watch(
   <div>
     <v-sheet class="pl-4 pr-4">
       <v-row :no-gutters="true">
-        <v-col class="d-flex align-center">
+        <v-col class="d-flex align-center text-caption text-secondary">
           {{ props.data.playerId }}
         </v-col>
 

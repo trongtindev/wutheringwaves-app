@@ -122,7 +122,6 @@ watch(
     <v-card-title>
       {{ $t('guides.editor.thumbnail.title') }}
     </v-card-title>
-    <v-divider />
 
     <v-card
       class="rounded-t-0 border-none"

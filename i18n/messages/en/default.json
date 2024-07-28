@@ -121,6 +121,7 @@
     "checkoutOfficialUrl": "Check out the official website"
   },
   "convene": {
+    "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
     "import": {
       "title": "Import Convenes",
       "success": "Import successfully!",
@@ -352,12 +353,34 @@
       },
       "localization": {
         "title": "Localization",
-        "primary": "Primary"
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "_title": {
+        "label": "Title"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": {
+        "keywords": {
+          "label": "Keywords"
+        }
+      },
+      "categories": {
+        "title": "Categories"
+      },
+      "options": {
+        "title": "Options"
       }
     },
     "related": "Related Posts",
     "previous": "Previous Posts",
-    "next": "Next Posts"
+    "next": "Next Posts",
+    "deleted": {
+      "title": "This post has been deleted!"
+    }
   },
   "search": {
     "title": "Spotlight Search",
@@ -482,6 +505,7 @@
     "error": "Error",
     "rolesRequired": "Roles required",
     "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
-    "getRoles": "Get roles"
+    "getRoles": "Get roles",
+    "recent": "Recent"
   }
 }

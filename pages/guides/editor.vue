@@ -15,7 +15,6 @@ const route = useRoute();
 const router = useRouter();
 const dialog = useDialog();
 const localePath = useLocalePath();
-const role = useRole();
 
 // fetch
 const id = typeof route.query.id === 'string' ? route.query.id : undefined;
@@ -39,6 +38,8 @@ const keywords = ref<string>(
   item ? item.keywords : 'wuthering waves guide, wuthering guide'
 );
 const attachments = ref<IFile[]>([]);
+const allowDiscussion = ref(true);
+const allowRating = ref(true);
 
 if (item) {
   titleLocalized.value = {};
@@ -63,16 +64,29 @@ const updateOrPublish = () => {
   api
     .post<IPost>(item ? `posts/${item.id}` : 'posts', {
       title: titleLocalized.value[locale.value],
-      titleLocalized: titleLocalized.value,
+      titleLocalized: Object.fromEntries(
+        locales.value.map((e) => {
+          return [e, titleLocalized.value[e]];
+        })
+      ),
       description: descriptionLocalized.value[locale.value],
-      descriptionLocalized: descriptionLocalized.value,
+      descriptionLocalized: Object.fromEntries(
+        locales.value.map((e) => {
+          return [e, descriptionLocalized.value[e]];
+        })
+      ),
       content: contentLocalized.value[locale.value],
-      contentLocalized: contentLocalized.value,
+      contentLocalized: Object.fromEntries(
+        locales.value.map((e) => {
+          return [e, contentLocalized.value[e]];
+        })
+      ),
       categories: categories.value,
       thumbnail: thumbnail.value ? thumbnail.value.id : undefined,
       locale: locale.value,
       locales: locales.value,
-      attachments: attachments.value.map((e) => e.id)
+      attachments: attachments.value.map((e) => e.id),
+      keywords: keywords.value
     })
     .then((result) => {
       router.push(localePath(`/posts/${result.data.slug}`));
@@ -106,6 +120,15 @@ watch(
     localizationTab.value = locale.value;
   }
 );
+
+watch(
+  () => localizationTab.value,
+  (locale) => {
+    const content = contentLocalized.value[locale];
+    editor.value?.commands.setContent(content);
+  }
+);
+
 watch(
   () => titleLocalized.value,
   () => {
@@ -145,13 +168,12 @@ useHead({
               {{ localization }}
             </v-tab>
           </v-tabs>
-          <v-divider />
 
           <v-card-text>
             <v-text-field
               v-model="titleLocalized[localizationTab]"
-              :label="$t('guides.editor.title.label')"
-              :placeholder="$t('guides.editor.title.placeholder')"
+              :label="$t('guides.editor._title.label')"
+              :placeholder="$t('guides.editor._title.placeholder')"
               :persistent-counter="true"
               :counter="160"
               :maxlength="160"
@@ -190,7 +212,6 @@ useHead({
           <v-card-title>
             {{ $t('guides.editor.seo') }}
           </v-card-title>
-          <v-divider />
 
           <v-card-text>
             <v-text-field
@@ -216,7 +237,6 @@ useHead({
           <v-card-title>
             {{ $t('guides.editor.categories.title') }}
           </v-card-title>
-          <v-divider />
 
           <v-card-text class="text-center">
             <v-select
@@ -238,7 +258,6 @@ useHead({
               item-value="id"
             />
           </v-card-text>
-          <v-divider />
         </v-card>
 
         <!-- localization -->
@@ -246,7 +265,6 @@ useHead({
           <v-card-title>
             {{ $t('guides.editor.localization.title') }}
           </v-card-title>
-          <v-divider />
 
           <v-card-text class="text-center">
             <v-select
@@ -261,7 +279,7 @@ useHead({
             <v-select
               v-model="locales"
               :label="$t('guides.editor.localization.secondary')"
-              :items="i18n.locales.value"
+              :items="i18n.locales.value.filter((e) => e.code !== locale)"
               :hide-details="true"
               :multiple="true"
               :disabled="state != ''"
@@ -269,25 +287,26 @@ useHead({
               item-value="code"
             />
           </v-card-text>
-          <v-divider />
         </v-card>
 
-        <!-- discussion -->
-        <!-- <v-card class="mt-2">
+        <!-- options -->
+        <v-card class="mt-2" :disabled="true">
           <v-card-title>
-            {{ $t('posts.discussion') }}
+            {{ $t('guides.editor.options.title') }}
           </v-card-title>
-          <v-divider />
 
-          <v-list>
-            <v-list-item :title="$t('posts.allowComments')">
-              <template #append>
-                <v-switch v-model="allowComments" :hide-details="true" />
-              </template>
-            </v-list-item>
-          </v-list>
-          <v-divider />
-        </v-card> -->
+          <v-list-item :title="$t('guides.editor.allowDiscussion')">
+            <template #append>
+              <v-switch v-model="allowDiscussion" :hide-details="true" />
+            </template>
+          </v-list-item>
+
+          <v-list-item :title="$t('guides.editor.allowRating')">
+            <template #append>
+              <v-switch v-model="allowRating" :hide-details="true" />
+            </template>
+          </v-list-item>
+        </v-card>
       </v-col>
     </v-row>
 

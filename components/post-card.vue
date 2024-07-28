@@ -12,7 +12,11 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <v-card class="fill-height" :to="localePath(`/posts/${item.slug}`)">
+  <v-card
+    :key="item.id"
+    class="fill-height"
+    :to="localePath(`/posts/${item.slug}`)"
+  >
     <base-image
       class="border-b"
       :aspect-ratio="1.91 / 1"
@@ -34,11 +38,11 @@ const localePath = useLocalePath();
     </div>
 
     <v-card-item>
-      <v-card-title class="text-body-1 wrap-title" tag="h2">
+      <div class="text-body-1 line-clamp-2 mb-2" tag="h2">
         {{ item.title }}
-      </v-card-title>
+      </div>
 
-      <v-card-subtitle>
+      <v-card-subtitle class="text-caption">
         <client-only>
           <template #fallback> 0000/00/00 00:00 </template>
 

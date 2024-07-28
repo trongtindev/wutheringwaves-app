@@ -17,11 +17,14 @@ const event = useRequestEvent();
 const { API_URL } = useRuntimeConfig().public;
 const localePath = useLocalePath();
 const auth = useAuth();
+const dialog = useDialog();
+const role = useRole();
 
 // fetch
 const { data: item, status } = await api.get<IPost>(
   `posts/${route.params.id}`,
   {
+    cache: { key: `${route.params.id}`, ttl: 60 * 5 * 1000 },
     validateStatus: () => true
   }
 );
@@ -38,13 +41,36 @@ const { data: relatedItems } = useFetch<IListResponse<IPost>>(
 
 // events
 const onPressedReport = () => {};
-const onPressedDelete = () => {};
+
+const onPressedDelete = (confirm?: boolean) => {
+  if (!confirm) {
+    dialog.show({
+      title: i18n.t('guides.delete.title'),
+      content: i18n.t('guides.delete.message'),
+      color: 'warning',
+      confirmButtonText: i18n.t('common.delete'),
+      onConfirm: () => onPressedDelete(true)
+    });
+    return;
+  }
+
+  api
+    .delete(`posts/${item.id}`, {
+      handleError: true
+    })
+    .then(() => window.location.reload());
+};
 
 // computed
 const titleLocalized = computed(() => {
+  if (item.deleted) {
+    return i18n.t('guides.deleted.title');
+  }
+
   if (item.titleLocalized[i18n.locale.value]) {
     return item.titleLocalized[i18n.locale.value];
   }
+
   return item.title;
 });
 
@@ -73,6 +99,14 @@ const lastUpdated = computed(() => {
   return dayjs(item.updatedAt).format('HH:mm - YYYY/MM/DD');
 });
 
+const isOwner = computed(() => {
+  return auth.user && auth.user.id === item.user.id;
+});
+
+const canModify = computed(() => {
+  return isOwner.value || role.hasRoles(['Owner', 'Manager', 'Moderator']);
+});
+
 // lifecycle
 onMounted(() => {
   if (!device.isCrawler) {
@@ -82,7 +116,19 @@ onMounted(() => {
 
 // seo meta
 useApp().title = i18n.t('guides.title');
-useHead({ title: titleLocalized.value });
+useHead({
+  title: titleLocalized.value,
+  meta: [
+    ...(item.deleted
+      ? [
+          {
+            name: 'robots',
+            content: 'noindex'
+          }
+        ]
+      : [])
+  ]
+});
 useSeoMeta({
   ogType: 'article',
   ogTitle: titleLocalized.value,
@@ -153,6 +199,7 @@ if (headers['if-modified-since']) {
         <v-card>
           <!-- thumbnail -->
           <base-image
+            v-if="!item.deleted"
             class="border-b"
             :aspect-ratio="1.91 / 1"
             :src="item.thumbnail ? item.thumbnail.url : undefined"
@@ -160,7 +207,10 @@ if (headers['if-modified-since']) {
           />
 
           <!-- categories -->
-          <div class="d-flex flex-wrap ga-2 mt-4 pl-4 pr-4">
+          <div
+            v-if="item.categories.length > 0"
+            class="d-flex flex-wrap ga-2 pl-4 pr-4 mt-4"
+          >
             <v-chip
               v-for="(category, index) in item.categories"
               :key="index"
@@ -177,7 +227,7 @@ if (headers['if-modified-since']) {
               {{ $t('common.lastUpdatedOn', { time: lastUpdated }) }}
             </v-card-subtitle>
 
-            <template #append>
+            <template v-if="!item.deleted" #append>
               <client-only>
                 <v-menu>
                   <template #activator="{ props }">
@@ -190,12 +240,12 @@ if (headers['if-modified-since']) {
 
                   <v-list :elevation="3">
                     <v-list-item
+                      v-if="canModify"
                       :title="$t('guides.actions.edit')"
                       :disabled="!auth.isSignedIn"
                       :to="localePath(`/guides/editor/?id=${item.id}`)"
                       @click="() => onPressedReport()"
                     />
-                    <v-divider />
 
                     <v-list-item
                       class="text-warning"
@@ -205,6 +255,7 @@ if (headers['if-modified-since']) {
                       @click="() => onPressedReport()"
                     />
                     <v-list-item
+                      v-if="canModify"
                       class="text-error"
                       :title="$t('guides.actions.delete')"
                       :append-icon="mdiTrashCan"
@@ -216,7 +267,7 @@ if (headers['if-modified-since']) {
             </template>
           </v-card-item>
 
-          <v-card-text>
+          <v-card-text v-if="!item.deleted">
             <div class="tiptap" :innerHTML="contentLocalized"></div>
           </v-card-text>
         </v-card>
@@ -281,6 +332,6 @@ if (headers['if-modified-since']) {
     </v-row>
 
     <!-- comments -->
-    <comments class="mt-2" :channel="`post.${item.id}`" />
+    <comments v-if="!item.deleted" class="mt-2" :channel="`post.${item.id}`" />
   </div>
 </template>

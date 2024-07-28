@@ -1,5 +1,6 @@
 # build-stage
 FROM oven/bun:1 AS build-stage
+ENV CI=1
 WORKDIR /app
 
 ## copy source
@@ -12,6 +13,7 @@ RUN bun run build
 
 # run-stage
 FROM oven/bun:1
+ENV CI=1
 WORKDIR /app
 EXPOSE 3000
 

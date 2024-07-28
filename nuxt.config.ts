@@ -15,6 +15,11 @@ const {
   // api
   API_URL,
   API_TIMEOUT,
+  // redis
+  REDIS_HOST,
+  REDIS_PORT,
+  REDIS_USER,
+  REDIS_PASS,
   // google
   GOOGLE_TAG_ID,
   GOOGLE_CLIENT_ID,
@@ -233,7 +238,16 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/sitemap.xml'],
       concurrency: 25
-    }
+    },
+    // storage: {
+    //   redis: {
+    //     driver: 'redis',
+    //     host: REDIS_HOST,
+    //     port: REDIS_PORT,
+    //     username: REDIS_USER,
+    //     password: REDIS_PASS
+    //   }
+    // }
   },
 
   build: {

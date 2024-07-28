@@ -3,6 +3,10 @@ import axiosRetry from 'axios-retry';
 
 declare module 'axios' {
   interface AxiosRequestConfig {
+    cache?: {
+      ttl: number;
+      key: string;
+    };
     handleError?: boolean;
   }
 }
@@ -15,7 +19,7 @@ const useApiFactory = () => {
   const dialog = useDialog();
   const runtimeConfig = useRuntimeConfig();
 
-  // config
+  // define
   const { API_URL, API_TIMEOUT } = runtimeConfig.public;
 
   const instance = axios.create({
@@ -28,6 +32,8 @@ const useApiFactory = () => {
   if (!import.meta.dev) axiosRetry(instance);
 
   instance.interceptors.request.use(async (config) => {
+    // if (config.cache) { }
+
     if (import.meta.client && auth.isLoggedIn) {
       if (
         config.url &&
@@ -45,7 +51,16 @@ const useApiFactory = () => {
   });
 
   instance.interceptors.response.use(
-    (response) => {
+    async (response) => {
+      // if (response.status >= 200 && response.status <= 299) {
+      //   if (import.meta.server && response.config.cache) {
+      //     let { key, ttl } = response.config.cache;
+
+      //     console.log('write cache', key, ttl);
+      //     await useStorage('redis').setItem(key, response.data, { ex: 5000 });
+      //   }
+      // }
+
       return response;
     },
     async (error) => {

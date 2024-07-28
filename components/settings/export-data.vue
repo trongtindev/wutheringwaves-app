@@ -65,7 +65,6 @@ onNuxtReady(() => emits('on-updated'));
     <v-card-text>
       {{ $t('settings.data.export.message') }}
     </v-card-text>
-    <v-divider />
 
     <v-card-actions>
       <v-spacer />
