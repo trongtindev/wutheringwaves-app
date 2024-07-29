@@ -11,11 +11,14 @@
     },
     "echoes": {
       "title": "Відлуння",
+      "id": {
+        "description": "{name} має {rarity} клас Відлуння в Wuthering Waves."
+      },
       "description": "{name} is a {rarity} Class Echo. in Wuthering Waves."
     },
     "characters": {
       "id": {
-        "title": "{name} Guide and Build",
+        "title": "{name} гайд та білд",
         "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
       },
       "description": "Resonators are obtainable units in Wuthering Waves. Individuals with the ability to resonate with certain objects and manipulate their frequencies are known as Resonators."
@@ -28,17 +31,20 @@
       "description": "У Wuthering Wawes є п'ять видів зброї: Меч, Широкий клинок, Рукавиці, Пістолети та Ректифікатор."
     },
     "codes": {
-      "title": "Gift Codes for {time}",
+      "title": "Подарункові коди дійсні {time}",
       "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
       "history": {
-        "title": "Pity Tracker",
+        "title": "Лічильник Гаранту",
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
-        "title": "Global Convene Stats",
+        "title": "Глобальна статистика витягів",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+      },
+      "share": {
+        "title": "Convene history card generator"
       }
     },
     "todoList": {
@@ -48,7 +54,7 @@
       "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
-      "title": "Трофеї",
+      "title": "Achievements",
       "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
@@ -56,7 +62,7 @@
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
-      "title": "All items",
+      "title": "Всі речі",
       "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
       "id": {
         "title": "Item: {name}",
@@ -70,11 +76,7 @@
       "title": "Налаштування"
     },
     "guides": {
-      "title": "Ігрові Ґайди",
-      "related": "Пов'язані Ґайди",
-      "recently": "Останні гайди",
-      "previous": "Попередній ґайд",
-      "next": "Наступний ґайд"
+      "title": "Ігрові Ґайди"
     },
     "leaderboards": {
       "title": "Таблиці лідерів",
@@ -87,40 +89,43 @@
     "characters": "Персонажі",
     "weapons": "Зброя",
     "echoes": "Відлуння",
-    "conveneHistory": "Pity Tracker",
+    "conveneHistory": "Лічильник гаранту",
     "tierList": "Tier list",
     "todoList": "Список завдань",
-    "trophies": "Трофеї",
+    "trophies": "Досягнення",
     "teams": "Команди",
     "leaderboards": "Таблиці лідерів",
     "codes": "Подарункові коди",
     "map": "Мапа",
     "guides": "Ґайди",
     "items": "Предмети",
-    "comparison": "Comparison",
+    "comparison": "Порівняння",
     "database": "База даних",
     "convene": "Скликання",
-    "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Глобальна статистика",
-    "conveneImport": "Історія імпорту"
+    "conveneImport": "Історія імпорту",
+    "conveneShare": "Share history"
   },
   "items": {
-    "title": "Items",
+    "title": "Предмети",
     "howToObtain": "Як отримати {0}?",
     "howToUnlock": "Як розблокувати {0}?",
     "cookingIngredients": "Інгредієнти",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {
-    "title": "Timeline",
+    "title": "Розклад",
     "startsIn": "Починається {0}",
     "endsIn": "Завершується {0}",
     "current": "Поточна версія",
     "upcoming": "Незабаром",
     "summary": "Підсумок подій",
-    "localTime": "Show as local time"
+    "localTime": "Показувати як місцевий час",
+    "checkoutOfficialUrl": "Переглянути офіційний сайт",
+    "ended": "Ended"
   },
   "convene": {
+    "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
     "import": {
       "title": "Імпортувати Скликання",
       "success": "Імпорт успішний!",
@@ -133,69 +138,69 @@
               "title": "Відкрийте Wuthering Waves в цьому ПК, потім відкрийте історію скликання у грі й зачекайте, поки вона завантажиться."
             },
             "2": {
-              "title": "Press START on your keyboard, then search for Powershell",
-              "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
+              "title": "Натисніть START на клавіатурі, потім шукайте Powershell",
+              "content": "Відкрийте {windowsPowerShell} і виконайте наступну команду (якщо буде запропоновано, вставте шлях до гри)."
             },
             "3": {
-              "title": "Paste the Convene Record URL into the box below."
+              "title": "Вставте ваш URL-посилання з Історією Скликань."
             }
           }
         }
       },
       "faqs": {
         "1": {
-          "title": "What if I import many different accounts?",
-          "content": "Don't worry, when you import multiple accounts we will automatically split them and you will see an account switch button appear."
+          "title": "Що робити якщо, ви маєте багато облікових записів?",
+          "content": "Не хвилюйтеся, коли ви імпортуєте кілька облікових записів, їх буде автоматично розділимо і побачите кнопку перемикання облікового запису."
         },
         "2": {
-          "title": "Why not updating the record?",
-          "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+          "title": "Чому б не оновити історію?",
+          "content": "Оновлення записів відбувається з 30-хвилинною затримкою. Якщо дані не показуються на цій сторінці, спробуйте пізніше. Виберіть часовий пояс, що показуватися: Америка (UTC-5); Європа (UTC+1); Азія, HMT, SEA (UTC+8)."
         },
         "3": {
-          "title": "Is my account safe?",
-          "content": "Yes, through this import method it will not be possible to interfere with your account. And finally, this website is open source on github you can see and evaluate it yourself, if you still don't trust you can skip this feature and use other features."
+          "title": "Мій обліковий запис у безпеці?",
+          "content": "Так, за допомогою цього методу імпорту неможливо буде втрутитися у ваш обліковий запис. І врешті, цей сайт має відкритий вихідний код на github, ви можете побачити та перевірити його самостійно, якщо ви все ще не довіряєте, ви можете пропустити цю функцію і використати інші можливості."
         }
       }
     },
     "history": {
-      "title": "Pity Tracker",
-      "empty": "You currently have no Convene History."
+      "title": "Лічильник гаранту",
+      "empty": "На цей час у вас немає Історії скликань."
     },
-    "guaranteedAt": "Guaranteed at {0}",
-    "lifetimePulls": "Lifetime Pulls",
-    "pity": "Pity",
+    "guaranteedAt": "Гарант на {0}",
+    "lifetimePulls": "Скликань за весь час",
+    "pity": "Гарант",
     "rank": {
-      "title": "Your Global Rank",
-      "level": "Your Total Pulls Rank",
-      "current": "Current {banner} median is {median} pulls",
-      "more": "You have more pull than {percentage}% users",
-      "less": "You have less pull than {percentage}% users",
-      "currentLuck": "Current {banner} median is {median}%",
-      "luck5": "Luckiness 5★",
-      "luck4": "Luckiness 4★",
-      "luckWinRateOff": "Luckiness Win 50:50",
-      "medianTotal": "Global Median {median} pulls",
-      "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% users",
-      "lessTotal": "Less pulls than {percentage}% users",
+      "title": "Ваше глобальне місце",
+      "level": "Ваш загальний рейтинг витягувань",
+      "current": "Поточна медіана {banner} дорівнює {median} скликань",
+      "more": "Ви маєте більше скликань, ніж {percentage}% користувачів",
+      "less": "Ви маєте менше скликань, ніж {percentage}% користувачів",
+      "currentLuck": "Поточна медіана {banner} дорівнює {median} скликань",
+      "luck5": "5★ Везіння",
+      "luck4": "4★ Везіння",
+      "luckWinRateOff": "Перемог 50:50",
+      "medianTotal": "Глобальна медіана {median} витягу",
+      "medianLuck": "Глобальна медіана {median}%",
+      "moreTotal": "Більше скликань, ніж {percentage}% користувачів",
+      "lessTotal": "Менше скликань, ніж {percentage}% користувачів",
       "moreLuck": "Luckier than {percentage}% users",
       "lessLuck": "Less lucky than {percentage}% users",
-      "top": "TOP",
-      "bottom": "BOTTOM"
+      "top": "ТОП",
+      "bottom": "Низ"
     },
     "global": {
-      "title": "Global Convene Stats",
-      "fiveStar": "5★ List",
-      "fourStar": "4★ List",
-      "median": "5★ Median",
-      "totalUsers": "Total Users",
+      "title": "Глобальна статистика витягів",
+      "fiveStar": "5★ Список",
+      "fourStar": "4★ Список",
+      "median": "5★ Середнє",
+      "totalUsers": "Усього користувачів",
       "conveneTotal": "Convene Total",
       "worth": "Worth",
       "chance": "Chance"
+    },
+    "share": {
+      "title": "Share history"
     }
-  },
-  "showcase": {
-    "title": "Showcase"
   },
   "characters": {
     "title": "Персонажі",
@@ -205,16 +210,18 @@
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
     "lastUpdatedOn": "{name} profile has been last updated on {time}.",
     "build": "{name} Build",
-    "calculations": "Calculations",
-    "overview": "Overview",
-    "bestMainEchoes": "Best Main Echoes {name}",
+    "calculations": "Розрахунки",
+    "overview": "Огляд",
+    "bestMainEchoes": "{name} краще Відлуння",
     "moreBuildGuides": "More Build Guides",
     "bestWeapons": "Best Weapons {name}",
     "bestEchoSets": "Best Echo Sets",
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
-    "skillPriority": "{name} Skill Priority"
+    "skillPriority": "{name} Skill Priority",
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "Зброя",
@@ -258,51 +265,72 @@
       "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
       "empty": "To add an account, you just need to import convene history."
     },
-    "sync": {
-      "title": "Cloud Sync"
-    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
       "optOutSubtitle": "You can opt-out of Google Analytics"
     },
-    "data": {
-      "export": {
-        "title": "Export Data",
-        "message": "You can download your convene data for backup or move it to another site.",
-        "button": "Download"
-      },
-      "erase": {
-        "title": "Erase All Data",
-        "message": "Erase All Data will clear all data and settings in your device and cloud sync. Please confirm that you have backed up important data of your account.",
-        "button": "Erase Now"
+    "roles": {
+      "title": "Ваші ролі",
+      "refreshRoles": "Оновлення ролей",
+      "link": "Перевірити та з'єднати",
+      "unlink": "Відв’язати",
+      "message": "Ви успішно прив'язані до Discord.",
+      "setupGuide1": "Після приєднання до Discord вам потрібно надіслати пряме повідомлення з наведеним нижче змістом боту з ім'ям {name}.",
+      "setupGuide2": "Ви отримаєте код підтвердження від BOT, скопіюйте та вставте його сюди.",
+      "verifyCode": "Код підтвердження",
+      "emptyRoles": "Ви ще не маєте жодної ролі!"
+    },
+    "syncData": {
+      "title": "Sync data",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "Import"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "DANGER!!!",
+        "message": "Your data will clear in your browser and cloud sync."
       }
     }
   },
   "comments": {
-    "empty": "Leave a comment so your voice will be heard first.",
+    "empty": "Залишіть коментар, щоб ваш голос був почутим перший.",
     "form": {
-      "submit": "Post comment"
+      "submit": "Опублікувати коментар"
     },
-    "replies": "Replies"
+    "replies": "Відповіді"
   },
   "sync": {
-    "title": "Cloud Sync",
+    "title": "Синхронізація у хмарі",
     "conflict": {
-      "title": "Your Data Conflict",
-      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
-      "cloudData": "Cloud Data",
-      "localData": "Local Browser Data",
-      "older": "OLDER",
-      "newer": "NEWER",
-      "useCloudData": "Use Cloud Data",
-      "useLocalData": "Use Local Data",
-      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-      "lastCloudChanged": "Last changed: {0}"
+      "title": "Конфлікт даних",
+      "message": "Ваші локальні дані в цьому браузері конфліктують з даними, що зберігаються в хмарі!",
+      "cloudData": "Дані в Хмарі",
+      "localData": "Дані локального браузера",
+      "older": "Старіші",
+      "newer": "Новіші",
+      "useCloudData": "Використовувати дані з хмари",
+      "useLocalData": "Використовувати локальні дані",
+      "smallSizeWarning": "ОБЕРЕЖНО, РОЗМІР НАБАГАТО МЕНШИЙ!"
     },
-    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
-    "dataSynced": "Data has been synced!",
-    "lastModified": "Last modified"
+    "introduce": "Ми використовуємо хмарне сховище Google для збереження та синхронізації ваших даних. Ми можемо читати і записувати лише файли, створені цим сайтом.",
+    "dataSynced": "Дані синхронізовано!",
+    "lastModified": "Остання зміна: {0}",
+    "lastSynced": "Востаннє синхронізовано: {0}",
+    "push": "Push",
+    "pull": "Pull"
   },
   "accounts": {
     "title": "Accounts",
@@ -337,12 +365,38 @@
       },
       "localization": {
         "title": "Localization",
-        "primary": "Primary"
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "_title": {
+        "label": "Title"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": {
+        "keywords": {
+          "label": "Keywords"
+        }
+      },
+      "categories": {
+        "title": "Categories"
+      },
+      "options": {
+        "title": "Options"
       }
+    },
+    "related": "Related Posts",
+    "previous": "Previous Posts",
+    "next": "Next Posts",
+    "deleted": {
+      "title": "This post has been deleted!"
     }
   },
   "search": {
-    "title": "Spotlight Search"
+    "title": "Spotlight Search",
+    "tooltip": "Press slash to open quickly."
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -442,12 +496,34 @@
     "cost": "Cost",
     "close": "Close",
     "loading": "Loading...",
+    "localTime": "Local time",
     "serverTime": "Server time",
     "pullByDay": "Pull by day",
     "totalPull": "Total Pull",
     "openIssues": "Open Issues",
     "unnamed": "Unnamed",
     "active": "Active",
-    "inactive": "Inactive"
+    "inactive": "Inactive",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Filter",
+    "apply": "Apply",
+    "reset": "Reset",
+    "none": "None",
+    "related": "Related",
+    "lastUpdatedOn": "Last updated {time}",
+    "views": "Views",
+    "signInRequired": "Sign in Required",
+    "signInRequiredMessage": "This feature which require sign in.",
+    "error": "Error",
+    "rolesRequired": "Roles required",
+    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "getRoles": "Get roles",
+    "recent": "Recent",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery"
   }
 }
