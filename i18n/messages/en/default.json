@@ -262,7 +262,7 @@
     "accounts": {
       "title": "Accounts",
       "autoImportConveneHistory": "Auto import convene history",
-      "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
+      "autoImportConveneHistorySubtitle": "Your data is automatically updated when you visit the site",
       "empty": "To add an account, you just need to import convene history."
     },
     "analytics": {
