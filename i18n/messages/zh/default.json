@@ -11,6 +11,9 @@
     },
     "echoes": {
       "title": "Echoes",
+      "id": {
+        "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
+      },
       "description": "{name} is a {rarity} Class Echo. in Wuthering Waves."
     },
     "characters": {
@@ -39,6 +42,9 @@
       "global": {
         "title": "Global Convene Stats",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+      },
+      "share": {
+        "title": "Convene history card generator"
       }
     },
     "todoList": {
@@ -48,7 +54,7 @@
       "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
-      "title": "Trophies",
+      "title": "Achievements",
       "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
@@ -70,11 +76,7 @@
       "title": "设置"
     },
     "guides": {
-      "title": "Game Guides",
-      "related": "Related Guides",
-      "recently": "Recently Guides",
-      "previous": "Previous guide",
-      "next": "Next guide"
+      "title": "Game Guides"
     },
     "leaderboards": {
       "title": "排行榜",
@@ -100,9 +102,9 @@
     "comparison": "比较",
     "database": "数据库",
     "convene": "Convene",
-    "conveneShowcase": "Showcase",
     "conveneGlobalStats": "Global Stats",
-    "conveneImport": "导入历史"
+    "conveneImport": "导入历史",
+    "conveneShare": "Share history"
   },
   "items": {
     "title": "素材道具",
@@ -118,9 +120,12 @@
     "current": "当前",
     "upcoming": "Upcoming",
     "summary": "Events summary",
-    "localTime": "显示为本地时间"
+    "localTime": "显示为本地时间",
+    "checkoutOfficialUrl": "Check out the official website",
+    "ended": "Ended"
   },
   "convene": {
+    "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
     "import": {
       "title": "Import Convenes",
       "success": "导入成功",
@@ -192,10 +197,10 @@
       "conveneTotal": "Convene Total",
       "worth": "Worth",
       "chance": "Chance"
+    },
+    "share": {
+      "title": "Share history"
     }
-  },
-  "showcase": {
-    "title": "Showcase"
   },
   "characters": {
     "title": "角色",
@@ -214,7 +219,9 @@
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
-    "skillPriority": "{name} Skill Priority"
+    "skillPriority": "{name} Skill Priority",
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "武器",
@@ -258,24 +265,43 @@
       "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
       "empty": "To add an account, you just need to import convene history."
     },
-    "sync": {
-      "title": "Cloud Sync"
-    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
       "optOutSubtitle": "You can opt-out of Google Analytics"
     },
-    "data": {
-      "export": {
-        "title": "Export Data",
-        "message": "You can download your convene data for backup or move it to another site.",
-        "button": "Download"
-      },
-      "erase": {
-        "title": "Erase All Data",
-        "message": "Erase All Data will clear all data and settings in your device and cloud sync. Please confirm that you have backed up important data of your account.",
-        "button": "Erase Now"
+    "roles": {
+      "title": "Your roles",
+      "refreshRoles": "Refresh roles",
+      "link": "Verify and Link",
+      "unlink": "Unlink",
+      "message": "You have successfully linked to Discord.",
+      "setupGuide1": "After joining Discord, you need to send a direct message with the content below to the BOT named \"{name}\".",
+      "setupGuide2": "You will receive the verify code from BOT, copy and paste it here.",
+      "verifyCode": "Verify code",
+      "emptyRoles": "You don't have any roles yet!"
+    },
+    "syncData": {
+      "title": "Sync data",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "Import"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "DANGER!!!",
+        "message": "Your data will clear in your browser and cloud sync."
       }
     }
   },
@@ -297,12 +323,14 @@
       "newer": "NEWER",
       "useCloudData": "Use Cloud Data",
       "useLocalData": "Use Local Data",
-      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-      "lastCloudChanged": "Last changed: {0}"
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "数据已同步！",
-    "lastModified": "Last modified"
+    "lastModified": "Last modified",
+    "lastSynced": "Last synced: {0}",
+    "push": "Push",
+    "pull": "Pull"
   },
   "accounts": {
     "title": "Accounts",
@@ -337,12 +365,38 @@
       },
       "localization": {
         "title": "Localization",
-        "primary": "Primary"
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "_title": {
+        "label": "Title"
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": {
+        "keywords": {
+          "label": "Keywords"
+        }
+      },
+      "categories": {
+        "title": "Categories"
+      },
+      "options": {
+        "title": "Options"
       }
+    },
+    "related": "Related Posts",
+    "previous": "Previous Posts",
+    "next": "Next Posts",
+    "deleted": {
+      "title": "This post has been deleted!"
     }
   },
   "search": {
-    "title": "Spotlight 搜索"
+    "title": "Spotlight 搜索",
+    "tooltip": "Press slash to open quickly."
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -442,12 +496,34 @@
     "cost": "Cost",
     "close": "Close",
     "loading": "Loading...",
+    "localTime": "Local time",
     "serverTime": "Server time",
     "pullByDay": "Pull by day",
     "totalPull": "Total Pull",
     "openIssues": "Open Issues",
     "unnamed": "Unnamed",
     "active": "Active",
-    "inactive": "Inactive"
+    "inactive": "Inactive",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Filter",
+    "apply": "Apply",
+    "reset": "Reset",
+    "none": "None",
+    "related": "Related",
+    "lastUpdatedOn": "Last updated {time}",
+    "views": "Views",
+    "signInRequired": "Sign in Required",
+    "signInRequiredMessage": "This feature which require sign in.",
+    "error": "Error",
+    "rolesRequired": "Roles required",
+    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "getRoles": "Get roles",
+    "recent": "Recent",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery"
   }
 }

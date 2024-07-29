@@ -1,74 +1,74 @@
 {
   "meta": {
     "title": "Wuthering Waves",
-    "description": "Track pity analysis, global stats, and manage to-do lists for Wuthering Waves. Explore character info, weapons, echoes, and more",
+    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
     "index": {
       "title": "Your personal tracker"
     },
     "timeline": {
       "title": "Event timeline calendar",
-      "description": "Track Wuthering Waves events, character banners, and version durations with our neat timeline"
+      "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
     },
     "echoes": {
       "title": "Echoes",
       "id": {
         "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
       },
-      "description": "Find the best Echo builds for your Wuthering Waves characters on wutheringwaves.app. Detailed info on Echoes, items, and more"
+      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
     },
     "characters": {
       "id": {
         "title": "{name} Guide and Build",
-        "description": "Explore {name}'s best builds, teams, rotations, and ascension materials for Wuthering Waves. Maximize their potential."
+        "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
       },
-      "description": "Discover Wuthering Waves character guides on wutheringwaves.app. Find ascension materials, echoes, team setups, and more."
+      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
     },
     "weapons": {
       "id": {
-        "description": "Find ascension materials and track {name}'s rank, a {type} weapon in Wuthering Waves, on wutheringwaves.app"
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
       },
       "title": "Weapons",
-      "description": "Explore stats, ascension materials, and more for Sword, Broadblade, Gauntlet, Pistols, and Rectifier weapons in Wuthering Waves"
+      "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
     },
     "codes": {
       "title": "Gift Codes for {time}",
-      "description": "Claim free rewards with redeemable Wuthering Waves codes on wutheringwaves.app. Stay updated with the latest codes"
+      "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
       "history": {
         "title": "Pity Tracker",
-        "description": "Track pity and obtain characters or weapons using the Convene Counter on wutheringwaves.app. Global stats and auto-sync available"
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
         "title": "Global Convene Stats",
-        "description": "Stay informed with detailed statistics on the most pullable Resonators and global pity percentage at wutheringwaves.app"
+        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       },
       "share": {
         "title": "Convene history card generator"
       }
     },
     "todoList": {
-      "description": "Plan and track items with the Wuthering Waves To-Do List on wutheringwaves.app. See resin approximation and optimize resource management."
+      "description": "Wuthering Waves Todo List to plan and track items and mora you need, you can also see resin approximation needed to farm the items!"
     },
     "tierList": {
-      "description": "Find or create the best Wuthering Waves Tier List on wutheringwaves.app. Stay updated with the latest rankings"
+      "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
       "title": "Achievements",
-      "description": "Track your Wuthering Waves trophies and achievements on wutheringwaves.app. Complete list with detailed descriptions available."
+      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
       "title": "Interactive Map",
-      "description": "Explore Wuthering Waves with our live interactive map on wutheringwaves.app. Track progress, find ascension materials, and more"
+      "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
       "title": "All items",
-      "description": "Get in-depth descriptions of items for characters, weapons, and echoes in Wuthering Waves. Maximize your gameplay experience",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
       "id": {
         "title": "Item: {name}",
         "description": {
-          "default": "{name} in Wuthering Waves. Learn where to find {name} and discover other detailed information in this comprehensive guide on wutheringwaves.app!",
-          "recipe": "{name} in Wuthering Waves. Learn where to find the recipe for {name} and discover other detailed information in this comprehensive guide on wutheringwaves.app!"
+          "default": "{name} in Wuthering Waves. Learn where to find {name} and other information in this guide!",
+          "recipe": "{name} in Wuthering Waves. Learn where to the recipe for {name} and other information in this guide!"
         }
       }
     },
@@ -80,19 +80,19 @@
     },
     "leaderboards": {
       "title": "Leaderboards",
-      "description": "View Wuthering Waves leaderboards and compare your pulls with others on wutheringwaves.app. Join the community now!"
+      "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
     }
   },
   "sidebar": {
     "home": "Home",
-    "timeline": "Timeline",
+    "timeline": "Event Timeline",
     "characters": "Characters",
     "weapons": "Weapons",
     "echoes": "Echoes",
     "conveneHistory": "Pity Tracker",
     "tierList": "Tier list",
     "todoList": "Todo list",
-    "trophies": "Achievements",
+    "trophies": "Trophies",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
@@ -327,7 +327,7 @@
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "Data has been synced!",
-    "lastModified": "Last modified: {0}",
+    "lastModified": "Last modified",
     "lastSynced": "Last synced: {0}",
     "push": "Push",
     "pull": "Pull"

@@ -11,6 +11,9 @@
     },
     "echoes": {
       "title": "Echoes",
+      "id": {
+        "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
+      },
       "description": "{name} is a {rarity} Class Echo. in Wuthering Waves."
     },
     "characters": {
@@ -28,7 +31,7 @@
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
     },
     "codes": {
-      "title": "Gift Codes for {time}",
+      "title": "Mã Giftcode trong tháng {time}",
       "description": "All codes that you can redeem in Wuthering Waves for free rewards."
     },
     "convene": {
@@ -37,8 +40,11 @@
         "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
-        "title": "Global Convene Stats",
+        "title": "Thống kê triệu hồi toàn cầu",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+      },
+      "share": {
+        "title": "Convene history card generator"
       }
     },
     "todoList": {
@@ -48,11 +54,11 @@
       "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
-      "title": "Trophies",
+      "title": "Achievements",
       "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
     },
     "map": {
-      "title": "Interactive Map",
+      "title": "Bản đồ tương tác",
       "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
     },
     "items": {
@@ -70,11 +76,7 @@
       "title": "Cài đặt"
     },
     "guides": {
-      "title": "Hướng dẫn",
-      "related": "Hướng dẫn liên quan",
-      "recently": "Recently Guides",
-      "previous": "Previous guide",
-      "next": "Next guide"
+      "title": "Hướng dẫn"
     },
     "leaderboards": {
       "title": "Bảng xếp hạng",
@@ -83,7 +85,7 @@
   },
   "sidebar": {
     "home": "Trang chủ",
-    "timeline": "Hoạt động",
+    "timeline": "Lịch hoạt động",
     "characters": "Nhân vật",
     "weapons": "Vũ khí",
     "echoes": "Echoes",
@@ -99,10 +101,10 @@
     "items": "Vật phẩm",
     "comparison": "So sánh",
     "database": "Database",
-    "convene": "Convene",
-    "conveneShowcase": "Showcase",
+    "convene": "Triệu hồi",
     "conveneGlobalStats": "Thống kê toàn cầu",
-    "conveneImport": "Nhập lịch sử"
+    "conveneImport": "Nhập lịch sử",
+    "conveneShare": "Chia sẻ lịch sử"
   },
   "items": {
     "title": "Vật phẩm",
@@ -112,15 +114,18 @@
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
   "timeline": {
-    "title": "Timeline",
+    "title": "Lịch hoạt động",
     "startsIn": "Bắt đầu {0}",
     "endsIn": "Kết thúc {0}",
     "current": "Hiện tại",
     "upcoming": "Sắp tới",
     "summary": "Tóm tắt hoạt động",
-    "localTime": "Dùng giờ địa phương"
+    "localTime": "Dùng giờ địa phương",
+    "checkoutOfficialUrl": "Xem trang chính thức",
+    "ended": "Ended"
   },
   "convene": {
+    "message": "Wuthering Waves sẽ xoá lịch sử triệu hồi sau 6 tháng, hãy sao lưu ngay!",
     "import": {
       "title": "Nhập lịch sử triệu hồi",
       "success": "Đã nhập thành công!",
@@ -192,10 +197,10 @@
       "conveneTotal": "Convene Total",
       "worth": "Worth",
       "chance": "Tỉ lệ"
+    },
+    "share": {
+      "title": "Chia sẻ lịch sử"
     }
-  },
-  "showcase": {
-    "title": "Showcase"
   },
   "characters": {
     "title": "Nhân vật",
@@ -214,7 +219,9 @@
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
-    "skillPriority": "{name} Skill Priority"
+    "skillPriority": "{name} Skill Priority",
+    "teams": "Teams",
+    "notOwned": "Not owned"
   },
   "weapons": {
     "title": "Vũ khí",
@@ -258,24 +265,43 @@
       "autoImportConveneHistorySubtitle": "Lịch sử sẽ tự động nhập khi bạn truy cập website.",
       "empty": "Để thêm tài khoản, bạn chỉ cần nhập lịch sử triệu hồi."
     },
-    "sync": {
-      "title": "Đồng bộ đám mây"
-    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
       "optOutSubtitle": "You can opt-out of Google Analytics"
     },
-    "data": {
-      "export": {
-        "title": "Export Data",
-        "message": "Bạn có thể tải xuống dữ liệu triệu hồi của mình để lưu trữ hoặc di chuyển sang một trang web khác.",
-        "button": "Tải xuống"
-      },
-      "erase": {
-        "title": "Xóa tất cả dữ liệu",
-        "message": "Erase All Data will clear all data and settings in your device and cloud sync. Please confirm that you have backed up important data of your account.",
-        "button": "Erase Now"
+    "roles": {
+      "title": "Vai trò của bạn",
+      "refreshRoles": "Làm mới vai trò",
+      "link": "Xác thực và Liên kết",
+      "unlink": "Hủy liên kết",
+      "message": "Bạn đã kết nối thành công với Discord.",
+      "setupGuide1": "Sau khi tham gia Discord, bạn cần gửi tin trực tiếp với nội dung bên dưới cho BOT có tên là \"{name}\".",
+      "setupGuide2": "Bạn sẽ nhận được mã xác nhận từ BOT, sao chép và dán nó vào đây.",
+      "verifyCode": "Mã xác thực",
+      "emptyRoles": "Bạn chưa có quyền nào!"
+    },
+    "syncData": {
+      "title": "Sync data",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "Import"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "DANGER!!!",
+        "message": "Your data will clear in your browser and cloud sync."
       }
     }
   },
@@ -289,20 +315,22 @@
   "sync": {
     "title": "Cloud Sync",
     "conflict": {
-      "title": "Your Data Conflict",
-      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
+      "title": "Dữ liệu xung đột",
+      "message": "Dữ liệu trên trình duyệt của bạn đang xung đột với dữ liệu được lưu trên đám mây!",
       "cloudData": "Cloud Data",
       "localData": "Local Browser Data",
       "older": "OLDER",
       "newer": "NEWER",
       "useCloudData": "Use Cloud Data",
       "useLocalData": "Use Local Data",
-      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!",
-      "lastCloudChanged": "Last changed: {0}"
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
-    "dataSynced": "Data has been synced!",
-    "lastModified": "Sửa đổi lần cuối"
+    "dataSynced": "Dữ liệu đã được đồng bộ hóa!",
+    "lastModified": "Sửa đổi lần cuối: {0}",
+    "lastSynced": "Đồng bộ lần cuối: {0}",
+    "push": "Push",
+    "pull": "Pull"
   },
   "accounts": {
     "title": "Danh sách tài khoản",
@@ -332,17 +360,43 @@
     "editor": {
       "title": "Add new post",
       "thumbnail": {
-        "title": "Thumbnail",
+        "title": "Ảnh đại diện",
         "placeholder": "Recommended size: 1,200x628px."
       },
       "localization": {
         "title": "Bản địa hóa",
-        "primary": "Primary"
+        "primary": "Chính",
+        "secondary": "Phụ"
+      },
+      "_title": {
+        "label": "Tiêu đề"
+      },
+      "description": {
+        "label": "Miêu tả",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": {
+        "keywords": {
+          "label": "Từ khoá"
+        }
+      },
+      "categories": {
+        "title": "Danh mục"
+      },
+      "options": {
+        "title": "Tùy chỉnh"
       }
+    },
+    "related": "Các bài viết liên quan",
+    "previous": "Bài đăng trước",
+    "next": "Bài đăng tiếp theo",
+    "deleted": {
+      "title": "Bài đăng này đã bị xóa!"
     }
   },
   "search": {
-    "title": "Spotlight Search"
+    "title": "Tìm kiếm nhanh",
+    "tooltip": "Press slash to open quickly."
   },
   "desktopApp": {
     "title": "Ứng dụng máy tính",
@@ -395,25 +449,25 @@
     "saveChanges": "Save changes",
     "weapon": "Weapon",
     "character": "Character",
-    "type": "Type",
+    "type": "Loại",
     "sort": "Sort",
     "title": "Title",
     "draft": "Draft",
     "level": "Level",
     "shortcuts": "Shortcuts",
-    "copy": "Copy",
-    "copied": "Copied",
-    "download": "Download",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "download": "Tải xuống",
     "ascensionMaterials": "Ascension Materials",
     "successfully": "Successfully!",
     "checkAll": "Check all",
     "clear": "Clear",
     "retry": "Retry",
-    "upcoming": "Upcoming",
-    "upcomingContent": "This page is about upcoming content.",
-    "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
-    "upcomingWeapons": "Upcoming Weapons",
-    "upcomingCharacters": "Upcoming Characters",
+    "upcoming": "Sắp có",
+    "upcomingContent": "Trang này nói về nội dung sắp có.",
+    "upcomingContentMessage": "Nội dung sắp có có thể thay đổi và có thể không phản ánh đúng sản phẩm cuối cùng.",
+    "upcomingWeapons": "Vũ khí sắp có",
+    "upcomingCharacters": "Nhân vật sắp có",
     "energy": "Energy",
     "options": "Options",
     "trophy": "Trophy",
@@ -442,12 +496,34 @@
     "cost": "Cost",
     "close": "Close",
     "loading": "Đang tải...",
+    "localTime": "Local time",
     "serverTime": "Thời gian máy chủ",
     "pullByDay": "Lượt theo ngày",
     "totalPull": "Tổng số lượt",
     "openIssues": "Báo cáo lỗi",
     "unnamed": "Không tên",
     "active": "Hoạt động",
-    "inactive": "Không hoạt động"
+    "inactive": "Không hoạt động",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Bộ lọc",
+    "apply": "Áp dụng",
+    "reset": "Đặt lại",
+    "none": "Không",
+    "related": "Related",
+    "lastUpdatedOn": "Cập nhật lần cuối: {time}",
+    "views": "Lượt xem",
+    "signInRequired": "Yêu cầu đăng nhập",
+    "signInRequiredMessage": "Bạn cần phải đăng nhập để sử dụng tính năng này.",
+    "error": "Lỗi",
+    "rolesRequired": "Cần có vai trò",
+    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "getRoles": "Get roles",
+    "recent": "Recent",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery"
   }
 }
