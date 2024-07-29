@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
   id?: string;
-  to?: string;
   title?: string;
   text?: string;
   closable?: boolean;
@@ -24,8 +23,8 @@ const onPressed = () => {
   <client-only>
     <v-alert
       v-model="enabled"
-      :to="props.to"
       class="pa-2 mb-2"
+      :class="{ 'cursor-pointer': typeof props.id !== 'undefined' }"
       @click="onPressed"
     >
       <template #title>
