@@ -54,7 +54,7 @@
       "description": "Find or create the best Wuthering Waves Tier List on wutheringwaves.app. Stay updated with the latest rankings"
     },
     "trophies": {
-      "title": "Achinments",
+      "title": "Achievements",
       "description": "Track your Wuthering Waves trophies and achievements on wutheringwaves.app. Complete list with detailed descriptions available."
     },
     "map": {
@@ -121,7 +121,8 @@
     "upcoming": "Upcoming",
     "summary": "Events summary",
     "localTime": "Show as local time",
-    "checkoutOfficialUrl": "Check out the official website"
+    "checkoutOfficialUrl": "Check out the official website",
+    "ended": "Ended"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -264,25 +265,10 @@
       "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
       "empty": "To add an account, you just need to import convene history."
     },
-    "sync": {
-      "title": "Cloud Sync"
-    },
     "analytics": {
       "title": "Analytics",
       "optOut": "Opt-out",
       "optOutSubtitle": "You can opt-out of Google Analytics"
-    },
-    "data": {
-      "export": {
-        "title": "Export Data",
-        "message": "You can download your convene data for backup or move it to another site.",
-        "button": "Download"
-      },
-      "erase": {
-        "title": "Erase All Data",
-        "message": "Erase All Data will clear all data and settings in your device and cloud sync. Please confirm that you have backed up important data of your account.",
-        "button": "Erase Now"
-      }
     },
     "roles": {
       "title": "Your roles",
@@ -294,6 +280,29 @@
       "setupGuide2": "You will receive the verify code from BOT, copy and paste it here.",
       "verifyCode": "Verify code",
       "emptyRoles": "You don't have any roles yet!"
+    },
+    "syncData": {
+      "title": "Sync data",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "Import"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "DANGER!!!",
+        "message": "Your data will clear in your browser and cloud sync."
+      }
     }
   },
   "comments": {
@@ -509,6 +518,12 @@
     "rolesRequired": "Roles required",
     "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
     "getRoles": "Get roles",
-    "recent": "Recent"
+    "recent": "Recent",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery"
   }
 }
