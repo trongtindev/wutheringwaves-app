@@ -16,6 +16,7 @@ const localePath = useLocalePath();
   <div v-if="props.data.url && !props.data.items">
     <v-list-item
       :to="localePath(props.data.url)"
+      :rel="props.data.rel"
       :title="$t(props.data.title)"
       :exact="index === 0"
       :active="

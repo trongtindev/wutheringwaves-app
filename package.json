@@ -78,5 +78,8 @@
     "preinstall": "npx only-allow bun",
     "check-updates": "bunx npm-check-updates"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@date-io/dayjs": "^3.0.0"
+  }
 }

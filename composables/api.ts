@@ -29,7 +29,13 @@ const useApiFactory = () => {
       'Content-Type': 'application/json'
     }
   });
-  if (!import.meta.dev) axiosRetry(instance);
+  if (!import.meta.dev) {
+    axiosRetry(instance, {
+      retries: 5,
+      retryDelay: (count) => count * 500,
+      retryCondition: () => true
+    });
+  }
 
   instance.interceptors.request.use(async (config) => {
     // if (config.cache) { }

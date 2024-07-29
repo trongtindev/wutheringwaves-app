@@ -384,8 +384,10 @@
         "title": "Categories"
       },
       "options": {
-        "title": "Options"
-      }
+        "title": "Options",
+        "schedule": "Schedule publish"
+      },
+      "update": "Save changes"
     },
     "related": "Related Posts",
     "previous": "Previous Posts",

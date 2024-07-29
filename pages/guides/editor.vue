@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import type { Editor } from '@tiptap/vue-3';
-import { mdiPublish } from '@mdi/js';
+import { mdiPublish, mdiRefresh, mdiCalendarRange } from '@mdi/js';
 import urlSlug from 'url-slug';
 import type { IListResponse } from '~/interfaces/api';
 import type { IFile } from '~/interfaces/file';
 import type { IPost, IPostCategory } from '~/interfaces/post';
-import { AxiosError } from 'axios';
 
 // uses
 const api = useApi();
@@ -13,7 +12,6 @@ const i18n = useI18n();
 const auth = useAuth();
 const route = useRoute();
 const router = useRouter();
-const dialog = useDialog();
 const localePath = useLocalePath();
 
 // fetch
@@ -38,8 +36,7 @@ const keywords = ref<string>(
   item ? item.keywords : 'wuthering waves guide, wuthering guide'
 );
 const attachments = ref<IFile[]>([]);
-const allowDiscussion = ref(true);
-const allowRating = ref(true);
+const schedule = ref();
 
 if (item) {
   titleLocalized.value = item.titleLocalized;
@@ -50,6 +47,8 @@ if (item) {
 
   contentLocalized.value = item.contentLocalized;
   contentLocalized.value[item.locale] = item.content;
+
+  schedule.value = new Date(item.createdAt).toISOString();
 }
 
 // computed
@@ -65,55 +64,55 @@ const updateOrPublish = () => {
   state.value = 'submit';
 
   api
-    .post<IPost>(item ? `posts/${item.id}` : 'posts', {
-      title: titleLocalized.value[locale.value],
-      titleLocalized: Object.fromEntries(
-        locales.value.map((e) => {
-          return [e, titleLocalized.value[e]];
-        })
-      ),
-      description: descriptionLocalized.value[locale.value],
-      descriptionLocalized: Object.fromEntries(
-        locales.value.map((e) => {
-          return [e, descriptionLocalized.value[e]];
-        })
-      ),
-      content: contentLocalized.value[locale.value],
-      contentLocalized: Object.fromEntries(
-        locales.value.map((e) => {
-          return [e, contentLocalized.value[e]];
-        })
-      ),
-      categories: categories.value,
-      thumbnail: thumbnail.value ? thumbnail.value.id : undefined,
-      locale: locale.value,
-      locales: locales.value,
-      attachments: attachments.value.map((e) => e.id),
-      keywords: keywords.value
-    })
+    .post<IPost>(
+      item ? `posts/${item.id}` : 'posts',
+      {
+        title: titleLocalized.value[locale.value],
+        titleLocalized: Object.fromEntries(
+          locales.value.map((e) => {
+            return [e, titleLocalized.value[e]];
+          })
+        ),
+        description: descriptionLocalized.value[locale.value],
+        descriptionLocalized: Object.fromEntries(
+          locales.value.map((e) => {
+            return [e, descriptionLocalized.value[e]];
+          })
+        ),
+        content: contentLocalized.value[locale.value],
+        contentLocalized: Object.fromEntries(
+          locales.value.map((e) => {
+            return [e, contentLocalized.value[e]];
+          })
+        ),
+        categories: categories.value,
+        thumbnail: thumbnail.value ? thumbnail.value.id : undefined,
+        locale: locale.value,
+        locales: locales.value,
+        attachments: attachments.value.map((e) => e.id),
+        keywords: keywords.value,
+        schedule: schedule.value ? schedule.value : undefined
+      },
+      {
+        handleError: true
+      }
+    )
     .then((result) => {
-      router.push(localePath(`/posts/${result.data.slug}`));
-    })
-    .catch((error) => {
-      console.error(error);
-
-      if (error instanceof AxiosError && error.response) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const errors: string[] = (error.response.data as any).message || [];
-        dialog.show({
-          title: i18n.t('common.error'),
-          content: typeof errors === 'string' ? errors : errors.join('<br/>')
-        });
+      if (item) {
+        router.push(localePath(`/posts/${item.id}`));
       } else {
-        dialog.show({
-          title: i18n.t('error'),
-          content: error.message
-        });
+        router.push(localePath(`/posts/${result.data.slug}`));
       }
     })
     .finally(() => {
       state.value = '';
     });
+};
+
+// events
+const onTitleChanged = () => {
+  const title = titleLocalized.value[localizationTab.value];
+  slug.value = urlSlug(title);
 };
 
 // changes
@@ -129,14 +128,6 @@ watch(
   (locale) => {
     const content = contentLocalized.value[locale];
     editor.value?.commands.setContent(content);
-  }
-);
-
-watch(
-  () => titleLocalized.value,
-  () => {
-    const title = titleLocalized.value[localizationTab.value];
-    slug.value = title ? urlSlug(title) : '';
   }
 );
 
@@ -181,6 +172,7 @@ useHead({
               :counter="160"
               :maxlength="160"
               :disabled="state != ''"
+              @keyup="onTitleChanged"
             />
 
             <v-textarea
@@ -226,7 +218,6 @@ useHead({
               v-model="slug"
               :label="$t('guides.editor.seo.url.label')"
               :placeholder="$t('guides.editor.seo.url.placeholder')"
-              :readonly="true"
               :disabled="state != ''"
             />
 
@@ -279,7 +270,7 @@ useHead({
               v-model="locale"
               :label="$t('guides.editor.localization.primary')"
               :items="i18n.locales.value"
-              :disabled="state != ''"
+              :disabled="state != '' || item != null"
               item-title="name"
               item-value="code"
             />
@@ -298,22 +289,19 @@ useHead({
         </v-card>
 
         <!-- options -->
-        <v-card class="mt-2" :disabled="true">
+        <v-card class="mt-2">
           <v-card-title>
             {{ $t('guides.editor.options.title') }}
           </v-card-title>
 
-          <v-list-item :title="$t('guides.editor.allowDiscussion')">
-            <template #append>
-              <v-switch v-model="allowDiscussion" :hide-details="true" />
-            </template>
-          </v-list-item>
-
-          <v-list-item :title="$t('guides.editor.allowRating')">
-            <template #append>
-              <v-switch v-model="allowRating" :hide-details="true" />
-            </template>
-          </v-list-item>
+          <v-card-text>
+            <v-text-field
+              v-model="schedule"
+              :label="$t('guides.editor.options.schedule')"
+              :hide-details="true"
+              :append-inner-icon="mdiCalendarRange"
+            />
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -332,7 +320,7 @@ useHead({
         v-else
         color="primary"
         variant="flat"
-        :prepend-icon="mdiPublish"
+        :prepend-icon="item ? mdiRefresh : mdiPublish"
         :text="item ? $t('guides.editor.update') : $t('guides.editor.publish')"
         :disabled="state != ''"
         :loading="state == 'submit'"

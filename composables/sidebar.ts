@@ -22,11 +22,13 @@ export interface IMenu {
   items?: IMenu[];
   beta?: boolean;
   upcoming?: boolean;
+  rel?: 'nofollow';
 }
 
 export const useSidebar = defineStore('useSidebar', () => {
   // uses
   const analytics = useAnalytics();
+  const overlay = ref(false);
 
   // states
   const notify = ref<{
@@ -52,7 +54,8 @@ export const useSidebar = defineStore('useSidebar', () => {
         },
         {
           url: '/convene-history/import',
-          title: 'sidebar.conveneImport'
+          title: 'sidebar.conveneImport',
+          rel: 'nofollow'
         },
         {
           url: '/convene-history/share',
@@ -182,5 +185,5 @@ export const useSidebar = defineStore('useSidebar', () => {
   };
 
   // exports
-  return { open, items, notify, togglePin, setNotify, onOpened };
+  return { open, items, notify, togglePin, setNotify, onOpened, overlay };
 });

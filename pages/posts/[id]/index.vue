@@ -328,10 +328,14 @@ if (headers['if-modified-since']) {
             {{ $t('guides.latest') }}
           </v-card-title>
         </v-card> -->
+
+        <!-- comments -->
+        <comments
+          v-if="!item.deleted"
+          class="mt-2"
+          :channel="`post.${item.id}`"
+        />
       </v-col>
     </v-row>
-
-    <!-- comments -->
-    <comments v-if="!item.deleted" class="mt-2" :channel="`post.${item.id}`" />
   </div>
 </template>

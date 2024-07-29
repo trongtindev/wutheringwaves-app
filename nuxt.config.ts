@@ -127,11 +127,7 @@ export default defineNuxtConfig({
       prerender: false
     },
     // TODO: remove soon
-    '/echos': {
-      robots: false
-    },
     '/echos/**': {
-      robots: false,
       redirect: '/echoes/**'
     }
   },
@@ -162,6 +158,19 @@ export default defineNuxtConfig({
 
   site: {
     url: NUXT_PUBLIC_SITE_URL
+  },
+
+  robots: {
+    groups: [
+      {
+        userAgent: 'AhrefsBot',
+        disallow: ['*']
+      },
+      {
+        userAgent: 'SemrushBot',
+        disallow: ['*']
+      }
+    ]
   },
 
   sourcemap: {

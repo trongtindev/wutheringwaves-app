@@ -1,21 +1,15 @@
 <script setup lang="ts">
 import type { IMarker } from '~/interfaces/map';
-import { mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
 import type { Map, MapOptions, TileLayerOptions } from 'leaflet';
-import {
-  DesktopAppGameType,
-  type IDesktopAppActor
-} from '~/interfaces/desktopApp';
+import { mdiCogs, mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
 
 // uses
-const app = useApp();
 const api = useApi();
 const i18n = useI18n();
 const route = useRoute();
 const router = useRouter();
 const sidebar = useSidebar();
 const database = useDatabase();
-const appConfig = useAppConfig();
 const desktopApp = useDesktopApp();
 
 // states
@@ -30,12 +24,6 @@ const options: MapOptions = {
   preferCanvas: true
 };
 const tileLayerOptions: TileLayerOptions & { getX: any; getY: any } = {
-  // minNativeZoom: 0,
-  // maxNativeZoom: 4,
-  // bounds: [
-  //   [-68e4, -68e4],
-  //   [68e4, 68e4]
-  // ],
   tms: true,
   noWrap: true,
   bounds: [
@@ -45,7 +33,7 @@ const tileLayerOptions: TileLayerOptions & { getX: any; getY: any } = {
   getX: leafletGetX,
   getY: leafletGetY
 };
-const drawer = ref(true);
+const panel = ref(true);
 const tab = ref('markers');
 const shows = ref<{ [key: string]: boolean }>({});
 const markers = ref<IMarker[]>();
@@ -55,10 +43,10 @@ const hideFound = ref(false);
 
 // computed
 const urlTemplate = computed(() => {
-  // if (import.meta.dev && route.query.localTiles) {
-  return '/map/tiles/{z}/{getX}_{getY}.webp';
-  // }
-  // return `https://files.wutheringwaves.app/tiles/{z}/{getX}_{getY}.webp`;
+  if (import.meta.dev && route.query.localTiles) {
+    return '/map/tiles/{z}/{getX}_{getY}.webp';
+  }
+  return `https://files.wutheringwaves.app/tiles/{z}/{getX}_{getY}.webp`;
 });
 
 const displayMarkers = computed(() => {
@@ -141,33 +129,14 @@ const initialize = () => {
   });
 };
 
-// events
-watch(
-  () => desktopApp.player,
-  (value) => {
-    if (!value) return;
-    if (!leaflet.value) return;
-
-    // const bounds = [
-    //   [-68e4, -68e4],
-    //   [68e4, 68e4]
-    // ];
-    // const x = value.x / 1000000;
-    // const z = value.z / 1000000;
-    // console.log({ x, z });
-
-    // leaflet.value.panTo([x, z]);
-  }
-);
-
 // lifecycle
 onMounted(() => {
-  sidebar.open = false;
+  sidebar.overlay = true;
   setTimeout(initialize, 1000);
 });
 
 onUnmounted(() => {
-  sidebar.open = true;
+  sidebar.overlay = true;
 });
 
 // seo meta
@@ -195,7 +164,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <div v-if="leaflet">{{ leaflet.getCenter() }}</div>
     <!-- <v-navigation-drawer v-model="drawer" :width="400">
       <client-only>
         <v-tabs v-model="tab" :fixed-tabs="true">
@@ -238,9 +206,8 @@ useSeoMeta({
         </v-tabs-window>
       </client-only>
     </v-navigation-drawer> -->
-
-    <v-card>
-      <client-only>
+    <client-only>
+      <v-card>
         <v-responsive :aspect-ratio="16 / 9">
           <lazy-leaflet-map
             :compass="
@@ -275,9 +242,32 @@ useSeoMeta({
           </template> -->
           </lazy-leaflet-map>
         </v-responsive>
-      </client-only>
-    </v-card>
+      </v-card>
 
-    <!-- <v-btn class="position-fixed" text="OK" @click="() => (drawer = !drawer)" /> -->
+      <base-panel v-model="panel">
+        <v-tabs v-model="tab" :fixed-tabs="true">
+          <v-tab value="markers">
+            <v-icon :icon="mdiMapMarker" />
+          </v-tab>
+          <v-tab value="comments">
+            <v-icon :icon="mdiComment" />
+          </v-tab>
+          <v-tab value="account">
+            <v-icon :icon="mdiAccount" />
+          </v-tab>
+        </v-tabs>
+      </base-panel>
+    </client-only>
+
+    <v-fab
+      :prepend-icon="mdiCogs"
+      color="primary"
+      location="bottom end"
+      size="64"
+      fixed
+      app
+      appear
+      @click="() => (panel = !panel)"
+    />
   </div>
 </template>

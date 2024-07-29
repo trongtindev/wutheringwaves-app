@@ -6,10 +6,19 @@ import {
   VStepperVerticalItem,
   VStepperVerticalActions
 } from 'vuetify/labs/VStepperVertical';
+import {
+  VTimePicker
+  // VTimePickerClock,
+  // VTimePickerControls
+} from 'vuetify/labs/VTimePicker';
 import { VBtn } from 'vuetify/components';
+import DayJsAdapter from '@date-io/dayjs';
 
 export const vuetifyConfig = createVuetify({
   ssr: true,
+  date: {
+    adapter: DayJsAdapter
+  },
   locale: {
     locale: 'en',
     fallback: 'en',
@@ -63,6 +72,7 @@ export const vuetifyConfig = createVuetify({
       // class: 'border-thin'
     },
     VCardBtn: {
+      class: 'text-body-2',
       variant: 'tonal'
     }
   },
@@ -104,6 +114,7 @@ export const vuetifyConfig = createVuetify({
   components: {
     VStepperVertical,
     VStepperVerticalItem,
-    VStepperVerticalActions
+    VStepperVerticalActions,
+    VTimePicker
   }
 });

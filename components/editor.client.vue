@@ -23,7 +23,8 @@ import {
   mdiTableColumnRemove,
   mdiTableRowRemove,
   mdiImageText,
-  mdiYoutube
+  mdiYoutube,
+  mdiFormatClear
 } from '@mdi/js';
 import { Editor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/vue-3';
 import type { IFile } from '~/interfaces/file';
@@ -272,6 +273,19 @@ onUnmounted(() => editor.value?.destroy());
           class="border rounded"
           color="white"
           size="x-small"
+          :icon="mdiFormatClear"
+          @click="editor.chain().focus().clearNodes().unsetAllMarks().run()"
+        />
+
+        <!-- vertical line -->
+        <v-divider vertical />
+
+        <!-- bold -->
+        <v-btn
+          variant="text"
+          class="border rounded"
+          color="white"
+          size="x-small"
           :icon="mdiFormatBold"
           :active="editor.isActive('bold')"
           @click="editor.chain().focus().toggleBold().run()"
@@ -467,11 +481,10 @@ onUnmounted(() => editor.value?.destroy());
       <div v-else class="text-center">
         <v-progress-circular :indeterminate="true" />
       </div>
-
+      <!--
       <bubble-menu :editor="editor" :tippy-options="{ duration: 100 }">
         <v-card :elevation="3">
           <v-card-text class="d-flex ga-2 pa-2">
-            <!-- bold -->
             <v-btn
               variant="text"
               class="border rounded"
@@ -482,7 +495,6 @@ onUnmounted(() => editor.value?.destroy());
               @click="editor.chain().focus().toggleBold().run()"
             />
 
-            <!-- italic -->
             <v-btn
               variant="text"
               class="border rounded"
@@ -494,11 +506,10 @@ onUnmounted(() => editor.value?.destroy());
             />
           </v-card-text>
         </v-card>
-      </bubble-menu>
+      </bubble-menu> -->
     </div>
     <div v-else class="text-center">
       <v-progress-circular :indeterminate="true" />
     </div>
   </client-only>
 </template>
-
