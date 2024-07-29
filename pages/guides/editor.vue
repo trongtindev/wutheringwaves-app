@@ -42,11 +42,14 @@ const allowDiscussion = ref(true);
 const allowRating = ref(true);
 
 if (item) {
-  titleLocalized.value = {};
+  titleLocalized.value = item.titleLocalized;
   titleLocalized.value[item.locale] = item.title;
 
-  descriptionLocalized.value = {};
+  descriptionLocalized.value = item.descriptionLocalized;
   descriptionLocalized.value[item.locale] = item.description;
+
+  contentLocalized.value = item.contentLocalized;
+  contentLocalized.value[item.locale] = item.content;
 }
 
 // computed
@@ -194,7 +197,12 @@ useHead({
             <lazy-editor
               :readonly="state != ''"
               @on-updated="(val) => (contentLocalized[localizationTab] = val)"
-              @on-initialized="(val) => (editor = val)"
+              @on-initialized="
+                (val) => {
+                  editor = val;
+                  editor.commands.setContent(contentLocalized[localizationTab]);
+                }
+              "
             />
           </v-card-text>
         </v-card>

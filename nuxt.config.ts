@@ -1,4 +1,3 @@
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 import dotenv from 'dotenv';
 import type { LocaleObject } from '@nuxtjs/i18n';
 
@@ -16,10 +15,10 @@ const {
   API_URL,
   API_TIMEOUT,
   // redis
-  REDIS_HOST,
-  REDIS_PORT,
-  REDIS_USER,
-  REDIS_PASS,
+  // REDIS_HOST,
+  // REDIS_PORT,
+  // REDIS_USER,
+  // REDIS_PASS,
   // google
   GOOGLE_TAG_ID,
   GOOGLE_CLIENT_ID,
@@ -48,9 +47,10 @@ export default defineNuxtConfig({
   $development: {
     // ssr: false,
     // debug: true,
-    // devtools: {
-    //   enabled: true
-    // }
+  },
+
+  devtools: {
+    enabled: false
   },
 
   modules: [
@@ -115,11 +115,16 @@ export default defineNuxtConfig({
     '/donation': {
       robots: false
     },
+    '/guides': {
+      prerender: false
+    },
     '/guides/editor': {
-      robots: false
+      robots: false,
+      prerender: false
     },
     '/guides/rss': {
-      proxy: '/api/rss/guides'
+      proxy: '/api/rss/guides',
+      prerender: false
     },
     // TODO: remove soon
     '/echos': {
@@ -196,11 +201,6 @@ export default defineNuxtConfig({
     resolve: {
       extensions: ['.mjs', '.js', '.ts', '.json']
     },
-    vue: {
-      template: {
-        transformAssetUrls
-      }
-    },
     build: {
       cssCodeSplit: false,
       rollupOptions: {
@@ -226,19 +226,14 @@ export default defineNuxtConfig({
           comments: false
         }
       }
-    },
-    plugins: [
-      vuetify({
-        autoImport: true
-      })
-    ]
+    }
   },
 
   nitro: {
     prerender: {
       routes: ['/sitemap.xml'],
       concurrency: 25
-    },
+    }
     // storage: {
     //   redis: {
     //     driver: 'redis',
@@ -248,10 +243,6 @@ export default defineNuxtConfig({
     //     password: REDIS_PASS
     //   }
     // }
-  },
-
-  build: {
-    transpile: ['vuetify']
   },
 
   hooks: {

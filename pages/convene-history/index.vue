@@ -7,6 +7,7 @@ import type { ConveneDocumentConverted } from '~/interfaces/convene';
 
 // uses
 const i18n = useI18n();
+const router = useRouter();
 const localePath = useLocalePath();
 const resources = useResources();
 const database = useDatabase();
@@ -173,15 +174,18 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </v-col>
     </v-row>
 
-    <v-card>
-      <v-card-text>
-        <v-alert
-          v-if="convenes.length === 0"
-          color="info"
-          :text="$t('convene.history.empty')"
-        />
+    <v-card v-if="convenes.length === 0">
+      <v-empty-state
+        :title="$t('convene.history.empty')"
+        :text="$t('convene.message')"
+        :action-text="$t('common.import')"
+        @click:action="() => router.push(localePath('/convene-history/import'))"
+      />
+    </v-card>
 
-        <div v-else-if="displayType === 'list'">
+    <v-card v-else>
+      <v-card-text>
+        <div v-if="displayType === 'list'">
           <v-data-table
             class="border rounded"
             :items="displayConvenes"
@@ -293,21 +297,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             :convenes="convenes"
             @on-updated="() => masonry.refreshLayout()"
           />
-
-          <v-card>
-            <v-list>
-              <v-list-item
-                :to="localePath('/convene-history/global')"
-                :title="$t('convene.global.title')"
-                :append-icon="mdiChevronRight"
-              />
-              <v-list-item
-                :to="localePath('/showcase/convene')"
-                :title="$t('showcase.convene.title')"
-                :append-icon="mdiChevronRight"
-              />
-            </v-list>
-          </v-card>
         </template>
       </masonry>
     </div>

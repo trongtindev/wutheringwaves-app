@@ -10,6 +10,7 @@ const display = useDisplay();
 // states
 const bottomSheet = ref(display.smAndDown);
 
+// changes
 watch(
   () => display.smAndDown.value,
   (value) => {
@@ -19,7 +20,7 @@ watch(
 </script>
 
 <template>
-  <v-bottom-sheet v-if="bottomSheet" v-model="model" :inset="true">
+  <v-bottom-sheet v-if="bottomSheet" v-model="model">
     <slot />
   </v-bottom-sheet>
 

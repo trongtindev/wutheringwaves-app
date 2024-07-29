@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import { mdiOpenInNew, mdiLink } from '@mdi/js';
 import type { ITimelineEvent } from '~/interfaces/timeline';
 
@@ -13,6 +13,14 @@ const emits = defineEmits<{
 }>();
 
 // computed
+const startsIn = computed(() => {
+  return props.data.start.diff(dayjs(), 'minutes');
+});
+
+const endsIn = computed(() => {
+  return props.data.end.diff(dayjs(), 'minutes');
+});
+
 const nameLocalized = computed(() => {
   return props.data.name;
 });
@@ -24,35 +32,45 @@ const descriptionLocalized = computed(() => {
 
 <template>
   <v-card>
-    <v-card-title>
-      {{ nameLocalized }}
-    </v-card-title>
-
     <!-- thumbnail -->
     <base-image
       v-if="props.data.thumbnail"
       :src="props.data.thumbnail"
       :aspect-ratio="16 / 9"
       :cover="true"
-      class="border-t border-b"
     />
-    <v-divider v-else />
+
+    <v-card-title>
+      {{ nameLocalized }}
+    </v-card-title>
 
     <v-card-text>
       <!-- description -->
-      <div v-if="descriptionLocalized">
-        {{ descriptionLocalized }}
+      <div>
+        <div
+          v-if="descriptionLocalized"
+          :innerHTML="descriptionLocalized"
+        ></div>
+        <div v-else>
+          {{ $t('common.noDescription') }}
+        </div>
       </div>
 
       <!-- time -->
-      <div class="d-flex flex-wrap ga-2">
-        <span>
-          {{ props.data.time.start }}
-        </span>
-        <span>-</span>
-        <span>
-          {{ props.data.time.end }}
-        </span>
+      <div class="mt-2">
+        <v-chip
+          v-if="startsIn > 0"
+          :text="$t('timeline.startsIn', [props.data.start.fromNow()])"
+          color="success"
+        />
+
+        <v-chip
+          v-else-if="endsIn > 0"
+          :text="$t('timeline.endsIn', [props.data.end.fromNow()])"
+          color="info"
+        />
+
+        <v-chip v-else :text="$t('timeline.ended')" />
       </div>
 
       <v-card
@@ -61,12 +79,11 @@ const descriptionLocalized = computed(() => {
         :subtitle="props.data.officialUrl"
         :append-icon="mdiOpenInNew"
         :href="props.data.officialUrl"
-        class="mt-2"
+        class="mt-4 border"
         target="_blank"
         rel="nofollow"
       />
     </v-card-text>
-    <v-divider />
 
     <v-card-actions>
       <v-spacer />

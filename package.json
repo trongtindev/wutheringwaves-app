@@ -1,27 +1,9 @@
 {
   "name": "@trongtindev/wutheringwaves-app",
-  "type": "module",
   "author": {
     "url": "https://trongtin.dev",
     "name": "trongtindev",
     "email": "me@trongtin.dev"
-  },
-  "description": "A collection of tools to help playing Wuthering Waves.",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development nuxt dev",
-    "build": "nuxt build",
-    "lint": "eslint . --ignore-pattern \"**/*.js\"",
-    "lint:fix": "eslint . --fix --ignore-pattern \"**/*.js\"",
-    "format": "prettier --write ./",
-    "preview": "nuxt preview",
-    "cleanup": "nuxi cleanup",
-    "analyze": "nuxi analyze",
-    "typecheck": "nuxt typecheck",
-    "upgrade": "nuxt upgrade",
-    "generate": "nuxt generate",
-    "postinstall": "nuxt prepare",
-    "preinstall": "npx only-allow bun",
-    "check-updates": "bunx npm-check-updates"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
@@ -78,5 +60,23 @@
     "vite-plugin-vuetify": "^2.0.3",
     "vue-chartjs": "^5.3.1",
     "vuetify": "^3.6.13"
-  }
+  },
+  "description": "A collection of tools to help playing Wuthering Waves.",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nuxt dev",
+    "build": "nuxt build",
+    "lint": "eslint . --ignore-pattern \"**/*.js\"",
+    "lint:fix": "eslint . --fix --ignore-pattern \"**/*.js\"",
+    "format": "prettier --write ./",
+    "preview": "nuxt preview",
+    "cleanup": "nuxi cleanup",
+    "analyze": "nuxi analyze",
+    "typecheck": "nuxt typecheck",
+    "upgrade": "nuxt upgrade",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "preinstall": "npx only-allow bun",
+    "check-updates": "bunx npm-check-updates"
+  },
+  "type": "module"
 }

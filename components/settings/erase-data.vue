@@ -17,29 +17,30 @@ const database = useDatabase();
 const state = ref<'' | 'erase'>('');
 
 // events
-const onPressedConfirm = async (isConfirmed?: boolean) => {
-  if (isConfirmed) {
-    try {
-      state.value = 'erase';
-
-      await database.eraseAllData();
-      if (auth.isLoggedIn) {
-        await sync.eraseAll();
-      }
-
-      window.location.reload();
-    } catch (error) {
-      alert(error);
-    } finally {
-      state.value = '';
-    }
-  } else {
+const onPressedConfirm = async (confirm?: boolean) => {
+  if (!confirm) {
     dialog.show({
-      color: 'error',
-      title: i18n.t('settings.eraseAllData'),
-      content: i18n.t('settings.eraseAllDataConfirm'),
+      color: 'warning',
+      title: i18n.t('settings.eraseData.confirm.title'),
+      content: i18n.t('settings.eraseData.confirm.message'),
       onConfirm: () => onPressedConfirm(true)
     });
+    return;
+  }
+
+  try {
+    state.value = 'erase';
+
+    await database.eraseAllData();
+    if (auth.isLoggedIn) {
+      await sync.eraseAll();
+    }
+
+    window.location.reload();
+  } catch (error) {
+    alert(error);
+  } finally {
+    state.value = '';
   }
 };
 
@@ -49,21 +50,20 @@ onNuxtReady(() => emits('on-updated'));
 
 <template>
   <v-card
-    :title="$t('settings.data.erase.title')"
+    :title="$t('settings.eraseData.title')"
     color="warning"
     variant="tonal"
   >
     <v-card-text>
-      {{ $t('settings.data.erase.message') }}
+      {{ $t('settings.eraseData.introduce') }}
     </v-card-text>
 
     <v-card-actions class="d-flex justify-end">
       <v-btn
         :disabled="state != ''"
         :loading="state == 'erase'"
-        :text="$t('settings.data.erase.button')"
+        :text="$t('settings.eraseData.eraseNow')"
         :prepend-icon="mdiTrashCan"
-        color="warning"
         variant="tonal"
         @click="() => onPressedConfirm()"
       />

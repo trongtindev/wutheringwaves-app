@@ -327,8 +327,8 @@
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "Data has been synced!",
-    "lastModified": "Last modified",
-    "lastSynced": "Last synced: {0}",
+    "lastModified": "Last modified: {time}",
+    "lastSynced": "Last synced: {time}",
     "push": "Push",
     "pull": "Pull"
   },

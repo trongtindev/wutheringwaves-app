@@ -284,7 +284,7 @@ useSeoMeta({
       <div v-if="chartInitialized">
         <!-- filter -->
         <v-row>
-          <v-col cols="12" sm="4">
+          <v-col cols="12" sm="6">
             <v-select
               v-model="filterType"
               :items="types"
@@ -295,7 +295,7 @@ useSeoMeta({
             />
           </v-col>
 
-          <v-col cols="12" sm="8">
+          <v-col cols="12" sm="6">
             <v-select
               v-model="filterBanner"
               :items="activeBanners"
@@ -309,7 +309,7 @@ useSeoMeta({
 
         <!-- thumbnails -->
         <v-row v-if="displayBanner && displayBanner.thumbnail" class="mt-2">
-          <v-col cols="12" sm="6">
+          <v-col cols="12" md="6">
             <v-card>
               <base-image
                 :src="displayBanner.thumbnail"

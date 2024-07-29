@@ -72,8 +72,7 @@ useSeoMeta({
           </v-card-text>
 
           <v-card-actions class="d-flex justify-end">
-            <v-btn
-              variant="text"
+            <v-card-btn
               :disabled="true"
               :text="$t('common.upcoming')"
               :append-icon="mdiDownload"
@@ -93,14 +92,13 @@ useSeoMeta({
           <convene-history-recently-widget @on-done="masonry.refreshLayout" />
 
           <v-card-actions class="d-flex justify-end">
-            <v-btn
+            <v-card-btn
               tag="h2"
               :to="localePath('/convene-history')"
-              variant="text"
               :append-icon="mdiChevronRight"
             >
               <h2 class="text-body-2">{{ $t('convene.history.title') }}</h2>
-            </v-btn>
+            </v-card-btn>
           </v-card-actions>
         </v-card>
 
@@ -113,8 +111,7 @@ useSeoMeta({
           <convene-history-global-widget @on-done="masonry.refreshLayout" />
 
           <v-card-actions class="d-flex justify-end">
-            <v-btn
-              variant="text"
+            <v-card-btn
               :to="localePath('/convene-history/global')"
               :text="$t('convene.global.title')"
               :append-icon="mdiChevronRight"

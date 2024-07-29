@@ -33,7 +33,11 @@ onNuxtReady(() => emits('on-updated'));
 
 <template>
   <div>
-    <v-card :title="$t('settings.accounts.title')">
+    <v-card>
+      <v-card-title>
+        {{ $t('settings.accounts.title') }}
+      </v-card-title>
+
       <div v-if="account.items.length > 0">
         <settings-account-item
           v-for="(element, index) in account.items"

@@ -23,7 +23,11 @@ const show = computed(() => {
     :persistent="true"
     class="w-100 h-100 d-flex align-center justify-center"
   >
-    <v-card :title="$t('common.rolesRequired')" :min-width="480">
+    <v-card :max-width="480">
+      <v-card-title class="text-center">
+        {{ $t('common.rolesRequired') }}
+      </v-card-title>
+
       <v-card-text>
         <base-alert
           color="warning"
@@ -39,7 +43,6 @@ const show = computed(() => {
         </div>
       </v-card-text>
 
-      <v-divider />
       <v-card-actions>
         <v-btn :text="$t('common.back')" :to="localePath('/guides')" />
         <v-spacer />

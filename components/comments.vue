@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import type { IListResponse } from '@/interfaces/api';
 import type { IComment } from '@/interfaces/comment';
-import { mdiSend, mdiImageOutline, mdiAlert, mdiTrashCan } from '@mdi/js';
+import {
+  mdiSend,
+  mdiImageOutline,
+  mdiAlert,
+  mdiTrashCan,
+  mdiEmoticon
+} from '@mdi/js';
 import type { IFile } from '~/interfaces/file';
 
 const props = defineProps<{
@@ -201,7 +207,6 @@ onMounted(() => loadData());
     <v-card-title v-if="!props.hideTitle">
       {{ $t('Comments') }} ({{ total }})
     </v-card-title>
-    <v-divider v-if="!props.hideTitle" />
 
     <v-card-text>
       <client-only>
@@ -219,13 +224,16 @@ onMounted(() => loadData());
           />
 
           <v-row class="mt-2">
-            <v-col>
+            <v-col class="d-flex ga-2">
               <v-btn
-                variant="text"
+                variant="tonal"
                 :disabled="state != '' || !auth.isLoggedIn"
                 @click="onPressedAddAttachment"
               >
                 <v-icon :icon="mdiImageOutline" color="white" />
+              </v-btn>
+              <v-btn variant="tonal" :disabled="true">
+                <v-icon :icon="mdiEmoticon" color="white" />
               </v-btn>
             </v-col>
 
@@ -235,7 +243,7 @@ onMounted(() => loadData());
                 :loading="state == 'submit'"
                 :disabled="!canSubmit || state != '' || !auth.isLoggedIn"
                 :prepend-icon="mdiSend"
-                :text="$t('comments.submit')"
+                :text="$t('comments.form.submit')"
               />
             </v-col>
           </v-row>
@@ -312,14 +320,13 @@ onMounted(() => loadData());
         </div>
       </client-only>
     </v-card-text>
-    <v-divider />
 
     <client-only>
       <v-list v-if="!data">
         <v-skeleton-loader type="list-item-avatar-two-line" />
       </v-list>
       <v-card-text v-else-if="data.total === 0">
-        {{ $t('comments.empty') }}
+        <base-alert :text="$t('comments.empty')" />
       </v-card-text>
 
       <v-card-text v-else>
@@ -333,7 +340,6 @@ onMounted(() => loadData());
         />
       </v-card-text>
 
-      <v-divider v-if="pages > 0" />
       <v-card-actions v-if="pages > 0" class="d-flex justify-center">
         <v-pagination v-model="page" :length="pages" />
       </v-card-actions>

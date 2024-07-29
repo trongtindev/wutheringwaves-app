@@ -139,9 +139,8 @@ useSeoMeta({
           <v-card-title>
             {{ $t('common.filter') }}
           </v-card-title>
-          <v-divider />
 
-          <v-card-text>
+          <v-form class="pl-2 pr-2">
             <v-select
               v-model="filterLanguages"
               :items="i18n.locales.value"
@@ -167,13 +166,13 @@ useSeoMeta({
               "
               item-value="id"
             />
-          </v-card-text>
-          <v-divider />
+          </v-form>
 
           <v-card-actions>
             <v-btn :text="$t('common.reset')" />
             <v-spacer />
             <v-btn
+              color="primary"
               variant="flat"
               :text="$t('common.apply')"
               @click="() => fetch()"

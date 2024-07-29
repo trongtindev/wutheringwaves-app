@@ -124,8 +124,7 @@ await initialize();
     </v-list>
 
     <v-card-actions class="d-flex justify-end">
-      <v-btn
-        variant="text"
+      <v-card-btn
         :to="localePath('/timeline')"
         :text="$t('timeline.title')"
         :append-icon="mdiChevronRight"

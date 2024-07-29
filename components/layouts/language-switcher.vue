@@ -33,15 +33,6 @@ const currentLanguage = computed(() => {
           :to="switchLocalePath(element.code)"
         >
           <v-list-item-title>{{ element.name }}</v-list-item-title>
-
-          <template v-if="locale === element.code" #append>
-            <v-avatar
-              class="border"
-              :size="24"
-              :image="`/locales/${element.code}.webp`"
-              :cover="true"
-            />
-          </template>
         </v-list-item>
       </v-list>
     </v-sheet>

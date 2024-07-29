@@ -3,17 +3,8 @@ import { type ConveneDocument } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
 import { toBlob } from 'html-to-image';
 import { saveAs } from 'file-saver';
-import { mdiDownload, mdiUpload } from '@mdi/js';
+import { mdiDownload, mdiUpload, mdiCogs, mdiViewGallery } from '@mdi/js';
 import urlSlug from 'url-slug';
-
-// define
-const CARDS = Array.from(Array(25).keys())
-  .filter((e) => e !== 3)
-  .map((i) => {
-    return {
-      id: i + 1
-    };
-  });
 
 // uses
 const i18n = useI18n();
@@ -33,6 +24,7 @@ const showUID = ref(true);
 const show4Star = ref(true);
 const show5Star = ref(true);
 const background = ref();
+const backgroundGallery = ref(false);
 
 // functions
 const initialize = () => {
@@ -192,17 +184,6 @@ const bestPull = computed(() => {
   };
 });
 
-const backgroundUrl = computed(() => {
-  // if (primary.value) {
-  //   const card = CARDS.find((e) => e.character == primary.value?.name);
-  //   if (card) return `/cards/T_Card${card.id}.png`;
-  // }
-  if (background.value) {
-    return `/cards/T_Card${background.value}.png`;
-  }
-  return `/cards/T_Card1.png`;
-});
-
 const isEmptyCard = computed(() => {
   return convenes.value && convenes.value.length === 0;
 });
@@ -257,7 +238,7 @@ useSeoMeta({
           <div ref="card" class="card-container rounded">
             <div
               class="background position-absolute"
-              :style="`background-image: url(${backgroundUrl})`"
+              :style="`background-image: url(${background})`"
             ></div>
 
             <div class="left pt-4 pl-4 pr-4">
@@ -365,93 +346,112 @@ useSeoMeta({
         </div>
       </div>
 
-      <div class="d-flex justify-center mt-4">
+      <v-app-bar location="bottom" class="border-t">
+        <v-spacer />
         <v-btn
-          class="mr-1"
+          :prepend-icon="mdiCogs"
           :text="$t('common.options')"
+          variant="tonal"
+          class="mr-2"
           @click="() => (options = !options)"
         />
 
         <v-btn
-          class="ml-1"
           :loading="state == 'download'"
           :text="$t('common.download')"
           :prepend-icon="mdiDownload"
-          color="green"
+          color="primary"
+          variant="tonal"
+          class="mr-2"
           @click="() => downloadImage()"
         />
-      </div>
+      </v-app-bar>
+
+      <v-navigation-drawer
+        v-model="options"
+        :temporary="true"
+        :width="360"
+        location="right"
+      >
+        <v-card>
+          <!-- general -->
+          <v-card-title>
+            {{ $t('convene.share.general') }}
+          </v-card-title>
+
+          <v-form class="pl-2 pr-2">
+            <v-select :label="$t('common.banner')" class="pl-2 pr-2" />
+            <v-checkbox
+              v-model="showUID"
+              :label="$t('showcase.convene.showUID')"
+              :hide-details="true"
+            />
+            <v-checkbox
+              v-model="show4Star"
+              :label="$t('showcase.convene.show4Star')"
+              :hide-details="true"
+            />
+            <v-checkbox
+              v-model="show5Star"
+              :label="$t('showcase.convene.show5Star')"
+              :hide-details="true"
+            />
+          </v-form>
+
+          <!-- background -->
+          <v-card-title>
+            {{ $t('common.background') }}
+          </v-card-title>
+          <v-card-text>
+            <v-row>
+              <v-col>
+                <v-btn
+                  :block="true"
+                  :prepend-icon="mdiViewGallery"
+                  :text="$t('common.gallery')"
+                  variant="tonal"
+                  @click="() => (backgroundGallery = true)"
+                />
+              </v-col>
+              <v-col>
+                <v-btn
+                  :block="true"
+                  :prepend-icon="mdiUpload"
+                  :text="$t('common.upload')"
+                  variant="tonal"
+                />
+              </v-col>
+            </v-row>
+          </v-card-text>
+
+          <!-- foreground -->
+          <v-card-title>
+            {{ $t('common.foreground') }}
+          </v-card-title>
+          <v-card-text>
+            <v-btn
+              :block="true"
+              :prepend-icon="mdiUpload"
+              :text="$t('common.upload')"
+              variant="tonal"
+            />
+          </v-card-text>
+        </v-card>
+      </v-navigation-drawer>
+
+      <v-dialog v-model="backgroundGallery" :scrollable="true" :width="1080">
+        <dialog-gallery
+          type="cards"
+          @on-close="() => (backgroundGallery = false)"
+          @on-selected="
+            (val) => {
+              background = val;
+              backgroundGallery = false;
+            }
+          "
+        />
+      </v-dialog>
     </client-only>
-
-    <v-navigation-drawer
-      v-model="options"
-      :temporary="true"
-      :width="360"
-      location="right"
-    >
-      <v-card>
-        <!-- general -->
-        <v-card-title>
-          {{ $t('convene.share.general') }}
-        </v-card-title>
-        <v-card-text>
-          <v-select :label="$t('common.banner')" />
-
-          <v-switch
-            v-model="showUID"
-            :label="$t('showcase.convene.showUID')"
-            :hide-details="true"
-          />
-          <v-switch
-            v-model="show4Star"
-            :label="$t('showcase.convene.show4Star')"
-            :hide-details="true"
-          />
-          <v-switch
-            v-model="show5Star"
-            :label="$t('showcase.convene.show5Star')"
-            :hide-details="true"
-          />
-        </v-card-text>
-
-        <!-- background -->
-        <v-card-title>
-          {{ $t('convene.share.background') }}
-        </v-card-title>
-        <v-card-text>
-          <v-btn
-            :block="true"
-            :prepend-icon="mdiUpload"
-            :text="$t('common.upload')"
-            variant="tonal"
-          />
-          <!-- <v-row>
-            <v-col v-for="(element, index) in CARDS" :key="index" cols="6">
-              <v-card
-                class="border rounded h-100"
-                :disabled="background == element.id"
-                @click="() => (background = element.id)"
-              >
-                <v-img :src="`/cards/T_Card${element.id}.png`" />
-              </v-card>
-            </v-col>
-          </v-row> -->
-        </v-card-text>
-
-        <!-- foreground -->
-        <v-card-title>
-          {{ $t('convene.share.foreground') }}
-        </v-card-title>
-        <v-card-text>
-          <v-btn
-            :block="true"
-            :prepend-icon="mdiUpload"
-            :text="$t('common.upload')"
-            variant="tonal"
-          />
-        </v-card-text>
-      </v-card>
-    </v-navigation-drawer>
   </div>
 </template>
 

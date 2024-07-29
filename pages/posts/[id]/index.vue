@@ -276,7 +276,7 @@ if (headers['if-modified-since']) {
         <v-card class="mt-2 pt-2 pb-2">
           <v-list-item :title="item.user.name">
             <template #prepend>
-              <v-avatar :image="item.user.photoUrl" />
+              <v-avatar :image="item.user.photoUrl" class="border" />
             </template>
           </v-list-item>
         </v-card>

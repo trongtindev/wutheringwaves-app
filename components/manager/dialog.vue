@@ -97,13 +97,14 @@ const confirmButtonText = computed(() => {
         </v-card-text>
 
         <v-card-actions>
+          <v-btn :text="cancelButtonText" @click="onPressedCancel" />
           <v-spacer />
 
-          <v-btn :text="cancelButtonText" @click="onPressedCancel" />
           <v-btn
             v-if="current.onConfirm"
             :text="confirmButtonText"
             :color="current.confirmButtonColor"
+            variant="tonal"
             @click="onPressedConfirm"
           />
         </v-card-actions>
