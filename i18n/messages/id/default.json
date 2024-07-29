@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Wuthering Waves Wiki",
+    "title": "Wuthering Waves",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
     "index": {
-      "title": "Wuthering Waves Wiki"
+      "title": "Your personal tracker"
     },
     "timeline": {
       "title": "Event timeline calendar",
@@ -14,18 +14,18 @@
       "id": {
         "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
       },
-      "description": "{name} is a {rarity} Class Echo. in Wuthering Waves."
+      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
     },
     "characters": {
       "id": {
         "title": "{name} Guide and Build",
         "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
       },
-      "description": "Resonators are obtainable units in Wuthering Waves. Individuals with the ability to resonate with certain objects and manipulate their frequencies are known as Resonators."
+      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
     },
     "weapons": {
       "id": {
-        "description": "{name} is a {type} weapon in Wuthering Waves that can be obtained via the game's Convene system."
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
       },
       "title": "Senjata",
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
@@ -63,7 +63,7 @@
     },
     "items": {
       "title": "All items",
-      "description": "List of all items in Wuthering Waves, along with their descriptions and rarity.",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
       "id": {
         "title": "Item: {name}",
         "description": {
@@ -85,7 +85,7 @@
   },
   "sidebar": {
     "home": "Beranda",
-    "timeline": "Timeline",
+    "timeline": "Event Timeline",
     "characters": "Karakter",
     "weapons": "Senjata",
     "echoes": "Echoes",
@@ -262,7 +262,7 @@
     "accounts": {
       "title": "Accounts",
       "autoImportConveneHistory": "Auto import convene history",
-      "autoImportConveneHistorySubtitle": "Once you set it up, your statistics will automatically refresh.",
+      "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
       "empty": "To add an account, you just need to import convene history."
     },
     "analytics": {
@@ -477,7 +477,7 @@
     "viewOnGithub": "View on GitHub",
     "rarity": "Rarity",
     "category": "Category",
-    "editThisPage": "Edit This Page",
+    "editThisPage": "Edit this page",
     "noRecordsFound": "No records found.",
     "astrite": "Astrite",
     "beta": "Beta",
