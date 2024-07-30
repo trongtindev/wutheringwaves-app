@@ -21,17 +21,17 @@ const options: MapOptions = {
   maxZoom: 15,
   markerZoomAnimation: true,
   attributionControl: false,
-  preferCanvas: true
+  preferCanvas: true,
 };
 const tileLayerOptions: TileLayerOptions & { getX: any; getY: any } = {
   tms: true,
   noWrap: true,
   bounds: [
     [-1, -1],
-    [1, 1]
+    [1, 1],
   ],
   getX: leafletGetX,
-  getY: leafletGetY
+  getY: leafletGetY,
 };
 const panel = ref(true);
 const tab = ref('markers');
@@ -70,7 +70,7 @@ const displayMarkers = computed(() => {
         latlng: [e.lat, e.lng],
         icon,
         title: `${e.id} ${e.type}`,
-        opacity: foundMarkers.value.includes(e.id.toString()) ? 0.25 : 1
+        opacity: foundMarkers.value.includes(e.id.toString()) ? 0.25 : 1,
       };
     });
 });
@@ -89,8 +89,8 @@ const onPressedMarker = (latLng: number[]) => {
   }
   router.replace({
     query: {
-      id: selected.value ? selected.value.id : undefined
-    }
+      id: selected.value ? selected.value.id : undefined,
+    },
   });
 };
 
@@ -112,7 +112,7 @@ const initialize = () => {
         id: e[0],
         type: e[1],
         lat: e[2],
-        lng: e[3]
+        lng: e[3],
       };
     });
   });
@@ -150,15 +150,15 @@ useHead({
     ? [
         {
           name: 'robots',
-          content: 'noindex'
-        }
+          content: 'noindex',
+        },
       ]
-    : []
+    : [],
 });
 useSeoMeta({
   ogTitle: title,
   description: description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -216,7 +216,7 @@ useSeoMeta({
                     desktopApp.player.x,
                     desktopApp.player.y,
                     desktopApp.player.z,
-                    desktopApp.player.r
+                    desktopApp.player.r,
                   ]
                 : undefined
             "
@@ -245,17 +245,21 @@ useSeoMeta({
       </v-card>
 
       <base-panel v-model="panel">
-        <v-tabs v-model="tab" :fixed-tabs="true">
-          <v-tab value="markers">
-            <v-icon :icon="mdiMapMarker" />
-          </v-tab>
-          <v-tab value="comments">
-            <v-icon :icon="mdiComment" />
-          </v-tab>
-          <v-tab value="account">
-            <v-icon :icon="mdiAccount" />
-          </v-tab>
-        </v-tabs>
+        <template #default="props">
+          <v-card :min-height="props.height" class="h-100">
+            <v-tabs v-model="tab" :fixed-tabs="true">
+              <v-tab value="markers">
+                <v-icon :icon="mdiMapMarker" />
+              </v-tab>
+              <v-tab value="comments">
+                <v-icon :icon="mdiComment" />
+              </v-tab>
+              <v-tab value="account">
+                <v-icon :icon="mdiAccount" />
+              </v-tab>
+            </v-tabs>
+          </v-card>
+        </template>
       </base-panel>
     </client-only>
 

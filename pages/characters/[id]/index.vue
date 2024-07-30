@@ -179,6 +179,7 @@ if (headers['if-modified-since']) {
     <header-chips
       class="mb-2"
       :github="`tree/main/resources/characters/${item.slug}.json`"
+      :translate="{ type: 'character', slug: item.slug }"
     />
 
     <!-- upcoming -->

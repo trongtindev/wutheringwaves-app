@@ -283,7 +283,7 @@
     },
     "syncData": {
       "title": "Sync data",
-      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+      "introduce": "We uses the {provider} to save and sync your data on Cloud. We can only read and write files that this site created."
     },
     "exportData": {
       "title": "Export data",
@@ -426,6 +426,16 @@
     "later": "Later",
     "refresh": "Refresh"
   },
+  "commit": {
+    "character": {
+      "overview": "Overview",
+      "quote": "Quote",
+      "description": "Description",
+      "skills": "Skills"
+    },
+    "successfully": "Thank you for your contribution, your request has been sent and is being reviewed.",
+    "viewPullRequest": "View Pull Request"
+  },
   "common": {
     "name": "Name",
     "time": "Time",
@@ -526,6 +536,8 @@
     "background": "Background",
     "foreground": "Foreground",
     "upload": "Upload",
-    "gallery": "Gallery"
+    "gallery": "Gallery",
+    "translateThisPage": "Translate this page",
+    "description": "Description"
   }
 }

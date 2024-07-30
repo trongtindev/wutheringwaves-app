@@ -126,6 +126,8 @@ export default defineNuxtConfig({
       proxy: '/api/rss/guides',
       prerender: false
     },
+    '/commit': { robots: false },
+    '/commit/**': { robots: false },
     // TODO: remove soon
     '/echos/**': {
       redirect: '/echoes/**'
@@ -175,7 +177,7 @@ export default defineNuxtConfig({
 
   sourcemap: {
     server: false,
-    client: true
+    client: false
   },
 
   telemetry: false,
@@ -226,6 +228,8 @@ export default defineNuxtConfig({
               return 'resources-weapons';
             } else if (id.includes('resources')) {
               return 'resources-other';
+            } else if (id.includes('tiptap')) {
+              return 'tiptap';
             }
           }
         }

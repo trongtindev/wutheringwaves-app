@@ -37,11 +37,11 @@ const initialize = () => {
     db.convenes
       .find({
         selector: {
-          playerId: account.active
-        }
+          playerId: account.active,
+        },
       })
       .sort({
-        createdAt: 'desc'
+        createdAt: 'desc',
       })
       .exec()
       .then((result) => {
@@ -61,14 +61,14 @@ const downloadImage = async () => {
       toBlob(card.value, {
         width: width.value,
         height: height.value,
-        skipFonts: true
+        skipFonts: true,
       }),
       new Promise((resolve) => setTimeout(resolve, 500)),
       toBlob(card.value, {
         width: width.value,
         height: height.value,
-        skipFonts: true
-      })
+        skipFonts: true,
+      }),
     ]).then((res) => res[2] as Blob);
     saveAs(blob, `${account.active}-convene-history.png`);
   } catch (error) {
@@ -141,7 +141,7 @@ const items = computed(() => {
           slug: urlSlug(filterItem.name),
           chain: 0,
           rarity: filterItem.qualityLevel,
-          items: items
+          items: items,
         });
       }
     });
@@ -155,7 +155,7 @@ const items = computed(() => {
       .map(() => {
         return {
           chain: 0,
-          rarity: 0
+          rarity: 0,
         };
       })
       .forEach((e) => {
@@ -180,7 +180,7 @@ const bestPull = computed(() => {
     slug: null,
     name: 'Unknown',
     chain: 0,
-    rarity: 5
+    rarity: 5,
   };
 });
 
@@ -197,12 +197,12 @@ const description = i18n.t('meta.convene.share.description');
 
 useApp().title = i18n.t('convene.share.title');
 useHead({
-  title
+  title,
 });
 useSeoMeta({
   ogTitle: title,
   description: description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -213,12 +213,12 @@ useSeoMeta({
       :items="[
         {
           to: '/convene-history',
-          title: i18n.t('convene.history.title')
+          title: i18n.t('convene.history.title'),
         },
         {
           to: '/convene-history/share',
-          title: i18n.t('convene.share.title')
-        }
+          title: i18n.t('convene.share.title'),
+        },
       ]"
     />
 
@@ -367,12 +367,7 @@ useSeoMeta({
         />
       </v-app-bar>
 
-      <v-navigation-drawer
-        v-model="options"
-        :temporary="true"
-        :width="360"
-        location="right"
-      >
+      <base-panel v-model="options">
         <v-card>
           <!-- general -->
           <v-card-title>
@@ -437,7 +432,7 @@ useSeoMeta({
             />
           </v-card-text>
         </v-card>
-      </v-navigation-drawer>
+      </base-panel>
 
       <v-dialog v-model="backgroundGallery" :scrollable="true" :width="1080">
         <dialog-gallery

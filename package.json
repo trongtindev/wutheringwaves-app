@@ -24,7 +24,7 @@
     "@tiptap/extension-text-align": "^2.5.7",
     "@tiptap/extension-youtube": "^2.5.7",
     "@tiptap/starter-kit": "^2.5.7",
-    "@tiptap/vue-3": "^2.5.4",
+    "@tiptap/vue-3": "^2.5.8",
     "@types/file-saver": "^2.0.7",
     "@types/google.accounts": "^0.0.14",
     "@types/gtag.js": "^0.0.20",

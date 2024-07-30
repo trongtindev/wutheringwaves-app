@@ -17,7 +17,6 @@ type GalleryType =
   | 'echo-icons'
   | 'weapon-icons'
   | 'item-icons'
-  | 'backgrounds'
   | 'emotes';
 const emits = defineEmits<{
   (e: 'on-close');

@@ -8,6 +8,7 @@ const model = defineModel<boolean>();
 const display = useDisplay();
 
 // states
+const height = ref(0);
 const bottomSheet = ref(display.smAndDown);
 
 // changes
@@ -15,13 +16,18 @@ watch(
   () => display.smAndDown.value,
   (value) => {
     bottomSheet.value = value;
-  }
+  },
 );
+
+// lifecycle
+onMounted(() => {
+  height.value = window.innerHeight * 0.75;
+});
 </script>
 
 <template>
   <v-bottom-sheet v-if="bottomSheet" v-model="model">
-    <slot />
+    <slot :height="height" />
   </v-bottom-sheet>
 
   <v-navigation-drawer
@@ -31,6 +37,6 @@ watch(
     :width="360"
     location="right"
   >
-    <slot />
+    <slot :height="height" />
   </v-navigation-drawer>
 </template>

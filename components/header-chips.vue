@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { mdiGithub, mdiOpenInNew, mdiBug } from '@mdi/js';
+import { mdiGithub, mdiOpenInNew, mdiBug, mdiTranslate } from '@mdi/js';
 
 // define
 const { DISCORD_INVITE_LINK, APP_REPO } = useRuntimeConfig().public;
 
 const props = defineProps<{
   github?: string;
+  translate?: { [key: string]: string };
 }>();
+
+// uses
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -22,6 +26,20 @@ const props = defineProps<{
     />
 
     <v-chip
+      v-if="props.translate"
+      :to="
+        localePath({
+          path: '/commit',
+          query: props.translate
+        })
+      "
+      :text="$t('common.translateThisPage')"
+      :prepend-icon="mdiTranslate"
+      rel="nofollow"
+    />
+
+    <v-chip
+      v-if="props.github"
       :href="`${APP_REPO}/${props.github}`"
       :text="$t('common.editThisPage')"
       :prepend-icon="mdiGithub"
@@ -39,4 +57,3 @@ const props = defineProps<{
     />
   </div>
 </template>
-
