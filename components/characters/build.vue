@@ -29,7 +29,7 @@ const bestWeapons = computed(() => {
     return {
       item: props.weapons.find((weapon) => weapon.slug == e.item)!,
       rank: e.rank,
-      different: e.different
+      different: e.different,
     };
   });
 });

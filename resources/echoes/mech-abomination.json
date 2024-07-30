@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.833Z",
   "modifiedTime": "2024-07-09T15:18:53.115Z",
-  "slug": "mech-abomination",
+  "publishedTime": "2024-06-28T15:43:21.833Z",
   "skill": {
     "id": 280009,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["48.64%", "320.00%", "160.00%", "12.00%", "15", "20"]
     ],
     "description": "\"Strike the enemies in front, dealing {0} Electro DMG. Summon Mech Waste to attack enemies. Mech Waste deals {1} Electro DMG on-hit and explode after a while to deal {2} Electro DMG.\n\nAfter casting this Echo Skill, increase current character's ATK by {3} for {4}s. \nDamage dealt by Mech Waste is considered Outro Skill DMG. \n\nCD: {5}s"
-  }
+  },
+  "slug": "mech-abomination"
 }

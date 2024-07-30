@@ -82,7 +82,7 @@ await initialize();
         :key="index"
         class="rounded-xl"
         :class="{
-          'mt-2': index > 0
+          'mt-2': index > 0,
         }"
       >
         <v-list-item-title>
@@ -107,7 +107,7 @@ await initialize();
         :key="index"
         class="rounded-xl"
         :class="{
-          'mt-2': index > 0
+          'mt-2': index > 0,
         }"
       >
         <v-list-item-title>

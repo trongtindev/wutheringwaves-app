@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.824Z",
   "modifiedTime": "2024-07-09T15:18:53.037Z",
-  "slug": "clang-bang",
+  "publishedTime": "2024-06-28T15:43:21.824Z",
   "skill": {
     "id": 200050,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["32.00%+64", "8"]
     ],
     "description": "Summon a Clang Bang that follows the enemy and eventually self-combusts, dealing {0} Glacio DMG.\n\nCD: {1}s"
-  }
+  },
+  "slug": "clang-bang"
 }

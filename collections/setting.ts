@@ -32,7 +32,7 @@ export const settingCollectionMethods: SettingCollectionMethods = {
   countAllDocuments: async function (this: SettingCollection) {
     const allDocs = await this.find().exec();
     return allDocs.length;
-  }
+  },
 };
 
 export const settingSchema: RxJsonSchema<SettingDocType> = {
@@ -43,14 +43,14 @@ export const settingSchema: RxJsonSchema<SettingDocType> = {
   properties: {
     key: {
       type: 'string',
-      maxLength: 100
+      maxLength: 100,
     },
     value: {
-      type: 'string'
+      type: 'string',
     },
     createdAt: {
-      type: 'number'
-    }
+      type: 'number',
+    },
   },
-  required: ['key', 'value']
+  required: ['key', 'value'],
 };

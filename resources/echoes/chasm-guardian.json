@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.823Z",
   "modifiedTime": "2024-07-09T15:18:53.031Z",
-  "slug": "chasm-guardian",
+  "publishedTime": "2024-06-28T15:43:21.823Z",
   "skill": {
     "id": 200023,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["273.60%", "10.00%", "5", "10.00%", "15"]
     ],
     "description": "Transform into Chasm Guardian to perform a Leap Strike that deals {0} Havoc DMG on hit. Current character loses {1} HP after the hit lands. Periodically restore current character's HP after {2}s for up to {3} of their Max HP.\r\n\r\nCD: {4}s"
-  }
+  },
+  "slug": "chasm-guardian"
 }

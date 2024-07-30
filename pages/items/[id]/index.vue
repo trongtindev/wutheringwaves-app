@@ -24,11 +24,11 @@ const title = computed(() => {
 const description = computed(() => {
   if (item.name.toLowerCase().includes('recipe')) {
     return i18n.t('meta.items.id.description.recipe', {
-      name: nameLocalized.value
+      name: nameLocalized.value,
     });
   }
   return i18n.t('meta.items.id.description.default', {
-    name: nameLocalized.value
+    name: nameLocalized.value,
   });
 });
 
@@ -48,7 +48,7 @@ const obtainDescriptionLocalized = computed(() => {
   } else if (item.name.toLowerCase().includes('waveband')) {
     return i18n.t('items.obtainedFromConvenes', {
       item: nameLocalized.value,
-      character: '?'
+      character: '?',
     });
   }
   return null;
@@ -72,7 +72,7 @@ useSeoMeta({
   ogDescription: description,
   ogImage,
   articlePublishedTime: item.publishedTime,
-  articleModifiedTime: item.modifiedTime
+  articleModifiedTime: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -81,7 +81,7 @@ useJsonld({
   thumbnailUrl: ogImage,
   dateCreated: item.publishedTime,
   datePublished: item.publishedTime,
-  dateModified: item.modifiedTime
+  dateModified: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -92,9 +92,9 @@ useJsonld({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
-    name: 'Wuthering Waves'
+    name: 'Wuthering Waves',
   },
-  copyrightNotice: 'trongtindev'
+  copyrightNotice: 'trongtindev',
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -104,10 +104,10 @@ useJsonld({
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: useRuntimeConfig().public.SITE_URL
+      item: useRuntimeConfig().public.SITE_URL,
     },
-    { '@type': 'ListItem', position: 2, name: i18n.t('items.title') }
-  ]
+    { '@type': 'ListItem', position: 2, name: i18n.t('items.title') },
+  ],
 });
 
 // https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since

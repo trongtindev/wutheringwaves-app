@@ -26,14 +26,14 @@ const useApiFactory = () => {
     baseURL: API_URL,
     timeout: API_TIMEOUT,
     headers: {
-      'Content-Type': 'application/json'
-    }
+      'Content-Type': 'application/json',
+    },
   });
   if (!import.meta.dev) {
     axiosRetry(instance, {
       retries: 5,
       retryDelay: (count) => count * 500,
-      retryCondition: () => true
+      retryCondition: () => true,
     });
   }
 
@@ -92,13 +92,13 @@ const useApiFactory = () => {
           })();
           dialog.show({
             title: i18n.t('common.error'),
-            content: message
+            content: message,
           });
         }
       }
 
       throw error;
-    }
+    },
   );
 
   const getInstance = () => instance;
@@ -108,5 +108,5 @@ const useApiFactory = () => {
 };
 
 export const useApi = defineStore('useApi', () =>
-  useApiFactory().getInstance()
+  useApiFactory().getInstance(),
 );

@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.056Z",
-  "modifiedTime": "2024-07-09T15:18:08.493Z",
-  "slug": "jinzhou-keeper",
-  "skill": {
-    "params": [
-      ["8%", "10%", "15"],
-      ["10%", "12.5%", "15"],
-      ["12%", "15%", "15"],
-      ["14%", "17.5%", "15"],
-      ["16%", "20%", "15"]
-    ],
-    "description": "When Intro Skill is released, increases the caster's ATK by {0} and HP by {1}, lasting for {2}s."
-  },
-  "stats": { "atk": 31 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "A weapon designed to commemorate the Midnight Rangers' vigilant protection for Jinzhou. \"Cast your gaze towards the north, where the city's silhouette fades, its gates veiled by the tranquil rain.\"",
+  "modifiedTime": "2024-07-09T15:18:08.493Z",
+  "publishedTime": "2024-06-28T15:43:22.056Z",
   "ranks": [
     "When Intro Skill is released, increases the caster's ATK by 8% and HP by 10%, lasting for 15s.",
     "When Intro Skill is released, increases the caster's ATK by 10% and HP by 12.5%, lasting for 15s.",
     "When Intro Skill is released, increases the caster's ATK by 12% and HP by 15%, lasting for 15s.",
     "When Intro Skill is released, increases the caster's ATK by 14% and HP by 17.5%, lasting for 15s.",
     "When Intro Skill is released, increases the caster's ATK by 16% and HP by 20%, lasting for 15s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["8%", "10%", "15"],
+      ["10%", "12.5%", "15"],
+      ["12%", "15%", "15"],
+      ["14%", "17.5%", "15"],
+      ["16%", "20%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases the caster's ATK by {0} and HP by {1}, lasting for {2}s."
+  },
+  "slug": "jinzhou-keeper",
+  "stats": { "atk": 31 }
 }

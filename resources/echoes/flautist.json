@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.827Z",
   "modifiedTime": "2024-07-09T15:18:53.066Z",
-  "slug": "flautist",
+  "publishedTime": "2024-06-28T15:43:21.827Z",
   "skill": {
     "id": 200019,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["53.28%", "1", "15"]
     ],
     "description": "Transform into Flautist, continuously emitting Electro lasers, dealing {0} Electro DMG for a total of 10 times. Gain {1} Concerto Energy every time a hit lands.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "flautist"
 }

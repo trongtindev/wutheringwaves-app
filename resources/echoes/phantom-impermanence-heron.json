@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.835Z",
   "modifiedTime": "2024-07-09T15:18:53.125Z",
-  "slug": "phantom-impermanence-heron",
+  "publishedTime": "2024-06-28T15:43:21.835Z",
   "skill": {
     "id": 281010,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["310.56%", "55.73%", "20"]
     ],
     "description": "Transform into Impermanence Heron to fly up and smack down, dealing {0} Havoc DMG.\n\nLong press to stay as Impermanence Heron and continuously spit flames, each attack dealing {1} Havoc DMG.\n\nOnce the initial attack lands on any enemy, the current character regains 10 Resonance Energy. If the current character uses their Outro Skill within the next 15s, the next character’s damage dealt will be boosted by 12% for 15s.\n\nCD: {2}s"
-  }
+  },
+  "slug": "phantom-impermanence-heron"
 }

@@ -5,4 +5,3 @@ export const shuffleArray = <T>(arr: T[]) => {
     return arrCopy[i];
   });
 };
-

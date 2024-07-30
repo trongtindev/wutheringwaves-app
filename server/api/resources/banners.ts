@@ -6,7 +6,7 @@ export default defineEventHandler(() => {
     return {
       ...e,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      type: CardPoolType[e.type as any]
+      type: CardPoolType[e.type as any],
     };
   });
 });

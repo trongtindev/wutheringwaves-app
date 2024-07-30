@@ -22,7 +22,7 @@ const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
       title: i18n.t('settings.accounts.deleteConfirm'),
       content: i18n.t('settings.accounts.deleteConfirmMessage'),
       onConfirm: () => onPressedDelete(playerId, true),
-      confirmButtonText: i18n.t('common.delete')
+      confirmButtonText: i18n.t('common.delete'),
     });
   }
 };
@@ -44,7 +44,7 @@ onNuxtReady(() => emits('on-updated'));
           :key="index"
           :data="element"
           :class="{
-            'mt-2': index > 0
+            'mt-2': index > 0,
           }"
           @on-delete="() => onPressedDelete(element.playerId)"
         />

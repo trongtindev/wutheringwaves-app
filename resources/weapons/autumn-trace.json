@@ -1,14 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.048Z",
-  "modifiedTime": "2024-07-09T15:18:08.447Z",
-  "description": "This Broadblade is a ceremonial weapon used by the Jinzhou Magistrate of the Huanglong province at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left alone in the • world, it is still prosperous and long-lasting.",
-  "ranks": [
-    "Increases ATK by 4% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
-    "Increases ATK by 6.2% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
-    "Increases ATK by 8.4% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
-    "Increases ATK by 10.6% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
-    "Increases ATK by 12.8% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s."
-  ],
   "ascensionsAndStats": [
     {
       "stats": [
@@ -75,5 +65,15 @@
         { "amount": 7, "name": "FF Whisperin Core" }
       ]
     }
+  ],
+  "description": "This Broadblade is a ceremonial weapon used by the Jinzhou Magistrate of the Huanglong province at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left alone in the • world, it is still prosperous and long-lasting.",
+  "modifiedTime": "2024-07-09T15:18:08.447Z",
+  "publishedTime": "2024-06-28T15:43:22.048Z",
+  "ranks": [
+    "Increases ATK by 4% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
+    "Increases ATK by 6.2% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
+    "Increases ATK by 8.4% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
+    "Increases ATK by 10.6% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s.",
+    "Increases ATK by 12.8% upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to 5 time(s). This effect lasts for 7s and can be triggered 1 time(s) every 1s."
   ]
 }

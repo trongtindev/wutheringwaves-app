@@ -1,6 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.971Z",
-  "modifiedTime": "2024-07-09T15:18:54.118Z",
+  "bgDescription": "A medication that revive downed individuals. Its portable dosage form is designed for emergencies, which contains a mechanical compartment containing highly concentrated active ingredients.",
   "description": "Used to immediately heal a selected downed Resonator for 100% of their max HP. This item can only be used once every 60s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
-  "bgDescription": "A medication that revive downed individuals. Its portable dosage form is designed for emergencies, which contains a mechanical compartment containing highly concentrated active ingredients."
+  "modifiedTime": "2024-07-09T15:18:54.118Z",
+  "publishedTime": "2024-06-28T15:43:21.971Z"
 }

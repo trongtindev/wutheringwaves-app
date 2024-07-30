@@ -23,7 +23,7 @@ const onPressedMarkAsFound = async () => {
 
   const db = await database.getInstance();
   db.markers.upsert({
-    key: `${props.data.id}`
+    key: `${props.data.id}`,
   });
   emits('on-mark-changed', true);
 };
@@ -36,8 +36,8 @@ const onPressedMarkAsNotFound = async () => {
   db.markers
     .findOne({
       selector: {
-        key: `${props.data.id}`
-      }
+        key: `${props.data.id}`,
+      },
     })
     .exec()
     .then((document) => {

@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.824Z",
   "modifiedTime": "2024-07-09T15:18:53.039Z",
-  "slug": "crownless",
+  "publishedTime": "2024-06-28T15:43:21.824Z",
   "skill": {
     "id": 280005,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["134.08%", "100.56%", "67.04%", "12.00%", "12.00%", "15", "20"]
     ],
     "description": "Transform into Crownless and perform up to 4 consecutive attacks. The first 2 attacks deal {0} Havoc DMG each, the 3rd attack deals {1} Havoc DMG 2 times, and the 4th attack deals {2} Havoc DMG 3 times.\n\nAfter the transformation, increase current character's Havoc DMG by {3} and Resonance Skill DMG by {4} for {5}s.\n\nCD: {6}s"
-  }
+  },
+  "slug": "crownless"
 }

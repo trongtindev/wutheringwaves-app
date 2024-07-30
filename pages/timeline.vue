@@ -44,11 +44,11 @@ const browserTimeZone = ref();
 const convertToDate = (e: ITimeline, i: number): ITimelineEvent => {
   const start = dayjs(e.time.start, 'YYYY-MM-DD HH:mm').subtract(
     timeDifference.value,
-    'minute'
+    'minute',
   );
   const end = dayjs(e.time.end, 'YYYY-MM-DD HH:mm').subtract(
     timeDifference.value,
-    'minute'
+    'minute',
   );
   const duration = end.diff(start, 'day', true);
   if (lastEventTime.value < end) lastEventTime.value = end;
@@ -58,7 +58,7 @@ const convertToDate = (e: ITimeline, i: number): ITimelineEvent => {
     index: i,
     start,
     end,
-    duration
+    duration,
   };
 };
 
@@ -98,9 +98,9 @@ watch(
     timelineContainer.value.scrollTo({
       left,
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
-  }
+  },
 );
 
 // lifecycle
@@ -153,8 +153,8 @@ onMounted(() => {
             firstDay.value.diff(
               events.value[current.index][j].start,
               'day',
-              true
-            )
+              true,
+            ),
           );
           events.value[current.index][j].offset = offset;
         }
@@ -174,7 +174,7 @@ onMounted(() => {
     if (months.value[month] === undefined) {
       months.value[month] = {
         total: 0,
-        offset: 0
+        offset: 0,
       };
     }
     months.value[month].total++;

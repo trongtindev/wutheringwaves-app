@@ -4,7 +4,7 @@ import {
   mdiMagnify,
   mdiMenuClose,
   mdiMenuOpen,
-  mdiThemeLightDark
+  mdiThemeLightDark,
 } from '@mdi/js';
 import { useDisplay, useTheme } from 'vuetify';
 
@@ -23,7 +23,7 @@ const onPressedToggleTheme = () => {
   theme.global.name.value =
     theme.global.name.value === 'dark' ? 'light' : 'dark';
   analytics.logEvent('feature.theme', {
-    name: theme.global.name.value
+    name: theme.global.name.value,
   });
 };
 

@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.830Z",
   "modifiedTime": "2024-07-09T15:18:53.089Z",
-  "slug": "havoc-prism",
+  "publishedTime": "2024-06-28T15:43:21.830Z",
   "skill": {
     "id": 200011,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["23.04%", "8"]
     ],
     "description": "Summon a Havoc Prism to fire five crystal shards, each dealing {0} Havoc DMG.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "havoc-prism"
 }

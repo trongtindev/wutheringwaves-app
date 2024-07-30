@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.049Z",
-  "modifiedTime": "2024-07-09T15:18:08.449Z",
-  "slug": "autumntrace",
-  "skill": {
-    "params": [
-      ["4%", "5", "7", "1", "1"],
-      ["6.2%", "5", "7", "1", "1"],
-      ["8.4%", "5", "7", "1", "1"],
-      ["10.6%", "5", "7", "1", "1"],
-      ["12.8%", "5", "7", "1", "1"]
-    ],
-    "description": "Increases ATK by {0} upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
-  },
-  "stats": { "atk": 33, "critRate": 450 },
   "ascensions": [
     {
       "cost": [
@@ -62,5 +48,19 @@
       "minLevel": 80
     },
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
-  ]
+  ],
+  "modifiedTime": "2024-07-09T15:18:08.449Z",
+  "publishedTime": "2024-06-28T15:43:22.049Z",
+  "skill": {
+    "params": [
+      ["4%", "5", "7", "1", "1"],
+      ["6.2%", "5", "7", "1", "1"],
+      ["8.4%", "5", "7", "1", "1"],
+      ["10.6%", "5", "7", "1", "1"],
+      ["12.8%", "5", "7", "1", "1"]
+    ],
+    "description": "Increases ATK by {0} upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
+  },
+  "slug": "autumntrace",
+  "stats": { "atk": 33, "critRate": 450 }
 }

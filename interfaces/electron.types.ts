@@ -1,7 +1,7 @@
 export enum ElectronEventType {
-  ready = 'electron.ready'
+  ready = 'electron.ready',
 }
 
 export enum ElectronInvokeType {
-  ready = 'electron.invoke.ready'
+  ready = 'electron.invoke.ready',
 }

@@ -1,10 +1,10 @@
 export enum DesktopAppEventType {
-  notificationCreate = 'desktopApp.notificationCreate'
+  notificationCreate = 'desktopApp.notificationCreate',
 }
 
 export enum DesktopAppGameType {
   playerInfo = 'game.playerInfo',
-  objectList = 'game.objectList'
+  objectList = 'game.objectList',
 }
 
 export interface IDesktopAppActor {

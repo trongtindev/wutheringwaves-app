@@ -30,7 +30,7 @@ const localePath = useLocalePath();
       :to="
         localePath({
           path: '/commit',
-          query: props.translate
+          query: props.translate,
         })
       "
       :text="$t('common.translateThisPage')"

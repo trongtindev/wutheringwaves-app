@@ -22,14 +22,14 @@ watch(
     database.getInstance().then((result) => {
       result.accounts.updateOne(
         {
-          playerId: props.data.playerId
+          playerId: props.data.playerId,
         },
         {
-          autoImport: value
-        }
+          autoImport: value,
+        },
       );
     });
-  }
+  },
 );
 </script>
 

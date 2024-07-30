@@ -8,15 +8,15 @@ export default defineSitemapEventHandler(() => {
         images: [
           {
             loc: `/characters/icons/${e.slug}.webp`,
-            title: `${e.name} avatar`
+            title: `${e.name} avatar`,
           },
           {
             loc: `/characters/portraits/${e.slug}.webp`,
-            title: `${e.name} portrait`
-          }
+            title: `${e.name} portrait`,
+          },
         ],
         lastmod: e.modifiedTime,
-        _i18nTransform: true
+        _i18nTransform: true,
       });
     })
     .flatMap((e) => e);

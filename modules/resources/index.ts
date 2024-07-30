@@ -3,7 +3,7 @@ import { updateModified } from './runtime/update-modified';
 
 export default defineNuxtModule({
   meta: {
-    name: 'resources'
+    name: 'resources',
   },
   hooks: {
     'builder:watch': async (e, path) => {
@@ -33,6 +33,6 @@ export default defineNuxtModule({
           await updateModified('weapons');
         }
       }
-    }
-  }
+    },
+  },
 });

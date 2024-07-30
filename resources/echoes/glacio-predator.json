@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.829Z",
   "modifiedTime": "2024-07-09T15:18:53.079Z",
-  "slug": "glacio-predator",
+  "publishedTime": "2024-06-28T15:43:21.829Z",
   "skill": {
     "id": 200014,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["46.08%", "4.61%", "23.04%", "8"]
     ],
     "description": "Summon a Glacio Predator that throws an ice spear, dealing {0} Glacio DMG on hit. Deal {1} Glacio DMG up to 10 times during the charging time, and {2} Glacio DMG when the spear explodes.\n\nCD: {3}s"
-  }
+  },
+  "slug": "glacio-predator"
 }

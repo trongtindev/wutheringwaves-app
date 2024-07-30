@@ -1,5 +1,5 @@
 export default defineEventHandler(() => {
   return {
-    buildNumber: useAppConfig().buildNumber as number
+    buildNumber: useAppConfig().buildNumber as number,
   };
 });

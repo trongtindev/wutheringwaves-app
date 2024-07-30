@@ -63,7 +63,7 @@ const onPressedPull = () => {
           $t('sync.lastSynced', {
             time: sync.lastCloudChanged
               ? dayjs(sync.lastCloudChanged).fromNow()
-              : $t('common.none')
+              : $t('common.none'),
           })
         }}
       </v-chip>

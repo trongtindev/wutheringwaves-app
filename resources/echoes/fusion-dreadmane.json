@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.827Z",
   "modifiedTime": "2024-07-09T15:18:53.069Z",
-  "slug": "fusion-dreadmane",
+  "publishedTime": "2024-06-28T15:43:21.827Z",
   "skill": {
     "id": 200039,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["32.00%+64", "8"]
     ],
     "description": "Summon a Fusion Dreadmane that fiercely strikes the enemy, dealing {0} Fusion DMG.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "fusion-dreadmane"
 }

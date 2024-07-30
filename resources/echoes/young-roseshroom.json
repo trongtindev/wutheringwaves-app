@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.840Z",
   "modifiedTime": "2024-07-09T15:18:53.171Z",
-  "slug": "young-roseshroom",
+  "publishedTime": "2024-06-28T15:43:21.840Z",
   "skill": {
     "id": 200031,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["32.00%+64", "8"]
     ],
     "description": "Summon a Baby Roseshroom that fires a laser, dealing {0} Havoc DMG.\n\nCD: {1}s"
-  }
+  },
+  "slug": "young-roseshroom"
 }

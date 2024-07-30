@@ -22,9 +22,9 @@ useJsonld({
       '@type': 'ListItem',
       position: i + 1,
       name: e.title,
-      item: `${runtimeConfig.public.SITE_URL}${e.to ? localePath(e.to) : ''}`
+      item: `${runtimeConfig.public.SITE_URL}${e.to ? localePath(e.to) : ''}`,
     };
-  })
+  }),
 });
 </script>
 

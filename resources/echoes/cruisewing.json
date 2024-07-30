@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.824Z",
   "modifiedTime": "2024-07-09T15:18:53.042Z",
-  "slug": "cruisewing",
+  "publishedTime": "2024-06-28T15:43:21.824Z",
   "skill": {
     "id": 200024,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["1.80%", "80", "8"]
     ],
     "description": "Summon a Cruisewing that restores HP for all current team characters by {0} of their Max HPs plus an additional {1} points of HP, up to 4 times.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "cruisewing"
 }

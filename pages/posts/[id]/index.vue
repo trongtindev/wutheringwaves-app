@@ -25,8 +25,8 @@ const { data: item, status } = await api.get<IPost>(
   `posts/${route.params.id}`,
   {
     cache: { key: `${route.params.id}`, ttl: 60 * 5 * 1000 },
-    validateStatus: () => true
-  }
+    validateStatus: () => true,
+  },
 );
 if (status != 200) throw createError({ statusCode: status });
 
@@ -34,9 +34,9 @@ const { data: relatedItems } = useFetch<IListResponse<IPost>>(
   `${API_URL}/posts/${item.id}/related`,
   {
     params: {
-      limit: 5
-    }
-  }
+      limit: 5,
+    },
+  },
 );
 
 // events
@@ -49,14 +49,14 @@ const onPressedDelete = (confirm?: boolean) => {
       content: i18n.t('guides.delete.message'),
       color: 'warning',
       confirmButtonText: i18n.t('common.delete'),
-      onConfirm: () => onPressedDelete(true)
+      onConfirm: () => onPressedDelete(true),
     });
     return;
   }
 
   api
     .delete(`posts/${item.id}`, {
-      handleError: true
+      handleError: true,
     })
     .then(() => window.location.reload());
 };
@@ -123,11 +123,11 @@ useHead({
       ? [
           {
             name: 'robots',
-            content: 'noindex'
-          }
+            content: 'noindex',
+          },
         ]
-      : [])
-  ]
+      : []),
+  ],
 });
 useSeoMeta({
   ogType: 'article',
@@ -136,7 +136,7 @@ useSeoMeta({
   ogDescription: descriptionLocalized.value,
   ogImage: thumbnailUrl.value,
   articlePublishedTime: item.createdAt,
-  articleModifiedTime: item.updatedAt
+  articleModifiedTime: item.updatedAt,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -152,7 +152,7 @@ useJsonld({
   thumbnailUrl: thumbnailUrl.value || undefined,
   dateCreated: item.createdAt,
   datePublished: item.createdAt,
-  dateModified: item.updatedAt
+  dateModified: item.updatedAt,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -163,9 +163,9 @@ useJsonld({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Person',
-    name: item.user.name
+    name: item.user.name,
   },
-  copyrightNotice: item.user.name
+  copyrightNotice: item.user.name,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -175,10 +175,10 @@ useJsonld({
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: useRuntimeConfig().public.SITE_URL
+      item: useRuntimeConfig().public.SITE_URL,
     },
-    { '@type': 'ListItem', position: 2, name: i18n.t('weapons.title') }
-  ]
+    { '@type': 'ListItem', position: 2, name: i18n.t('weapons.title') },
+  ],
 });
 
 // https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since

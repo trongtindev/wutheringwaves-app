@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.825Z",
   "modifiedTime": "2024-07-09T15:18:53.049Z",
-  "slug": "dreamless",
+  "publishedTime": "2024-06-28T15:43:21.825Z",
   "skill": {
     "id": 280011,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["54.08%", "270.40%", "5", "50.00%", "20"]
     ],
     "description": "Transform into Dreamless and perform 6 consecutive attacks. The first 5 attacks deal {0} Havoc DMG each, and the last attack deal {1} Havoc DMG.\nThe DMG of this Echo Skill is increased by {2} during the first {3}s after Rover-Havoc casts Resonance Liberation.\n\nCD: {4}s"
-  }
+  },
+  "slug": "dreamless"
 }

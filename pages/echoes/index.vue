@@ -72,7 +72,7 @@ useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -124,4 +124,3 @@ useSeoMeta({
     </v-row>
   </div>
 </template>
-

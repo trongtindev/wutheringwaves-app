@@ -104,4 +104,3 @@ const nameLocalized = computed(() => {
     </v-card-title>
   </v-card>
 </template>
-

@@ -1,109 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "publishedTime": "2024-06-28T15:43:21.814Z",
-  "modifiedTime": "2024-07-21T15:18:52.825Z",
-  "description": "Leader of the \"Ghost Hounds\", an international mercenary group. Ruthless, vengeful, unforgiving. A potential client must be mindful of the price to pay before making him an offer.",
-  "skills": [
-    {
-      "slug": "gnawing-fangs",
-      "name": "Gnawing Fangs",
-      "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nCalcharo performs up to 4 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nConsumes Stamina to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nConsumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
-    },
-    {
-      "slug": "extermination-order",
-      "name": "Extermination Order",
-      "type": "Resonance Skill",
-      "description": "Calcharo performs up to 3 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\nIf Calcharo is switched off field, or if Resonance Skill <strong>Extermination Order</strong> is not performed again in a while, this skill will enter Cooldown.\nResonance Skill <strong>Extermination Order</strong> does not interrupt Calcharo's Basic Attack combo."
-    },
-    {
-      "slug": "phantom-etching",
-      "name": "Phantom Etching",
-      "type": "Resonance Liberation",
-      "description": "Calcharo attacks the target, dealing <strong class=\"color-electro\">Electro DMG</strong> and enters <strong>Deathblade Gear</strong> state. After Resonance Liberation <strong>Deathblade Gear</strong> state ends, Calcharo's next Intro Skill is replaced with Intro Skill <strong>\"Necessary Means\"</strong>, which deals <strong class=\"color-electro\">Electro DMG</strong>, considered as Intro Skill damage.\n \n<strong>Deathblade Gear</strong>\n-<strong>Basic Attack</strong> is replaced with Basic Attack <strong>Hounds Roar</strong>.\n-<strong>Dodge Counter</strong> deals increased damage, considered as Resonance Liberation damage.\n \n<strong>Hounds Roar</strong>\nCalcharo performs up to 5 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>, considered as Basic Attack Damage."
-    },
-    {
-      "slug": "bloodshed-awaken",
-      "name": "Bloodshed Awaken",
-      "type": "Inherent Skill",
-      "description": "When casting Heavy Attack <strong>\"Mercy\"</strong>, Calcharo's Resonance Liberation DMG Bonus is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s."
-    },
-    {
-      "slug": "revenant-rush",
-      "name": "Revenant Rush",
-      "type": "Inherent Skill",
-      "description": "When Heavy Attack <strong>\"Death Messenger\"</strong> hits the target, the damage taken by Calcharo is reduced by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s."
-    },
-    {
-      "slug": "wanted-outlaw",
-      "name": "Wanted Outlaw",
-      "type": "Intro Skill",
-      "description": "Attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
-    },
-    {
-      "slug": "hunting-mission",
-      "name": "Hunting Mission",
-      "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: \"Mercy\"</strong>\nWhen Calcharo has <strong class=\"color-electro\">3</strong> \"Cruelty\", his <strong>Heavy Attack</strong> is replaced with Heavy Attack <strong>\"Mercy\"</strong>.\nWhen casting Heavy Attack <strong>\"Mercy\"</strong>, Calcharo consumes <strong class=\"color-electro\">3</strong> \"Cruelty\" to deal <strong class=\"color-electro\">Electro DMG</strong>, considered as Heavy Attack damage, and recovers Resonance Energy and Concerto Energy.\n \n<strong>\"Cruelty\"</strong>\nCalcharo can hold up to <strong class=\"color-electro\">3</strong> \"Cruelty\".\nUnder Resonance Liberation <strong>Deathblade Gear</strong> state, \"Cruelty\" cannot be acquired.\nWhen Resonance Skill <strong>Extermination Order</strong> hits the target, gain <strong class=\"color-electro\">1</strong> \"Cruelty\".\n \n<strong>Heavy Attack: \"Death Messenger\"</strong>\nWhen Calcharo has <strong class=\"color-electro\">5</strong> \"Killing Intent\", his <strong>Basic Attack</strong> is replaced with Heavy Attack <strong>\"Death Messenger\"</strong>.\nWhen casting Heavy Attack <strong>\"Death Messenger\"</strong>, Calcharo consumes <strong class=\"color-electro\">5</strong> \"Killing Intent\" to deal <strong class=\"color-electro\">Electro DMG</strong>, considered as Resonance Liberation damage, and recovers Resonance Energy and Concerto Energy.\n \n<strong>\"Killing Intent\"</strong>\nUnder Resonance Liberation <strong>Deathblade Gear</strong> state, Calcharo's Forte Gauge is replaced with \"Killing Intent\", stacking up to <strong class=\"color-electro\">5</strong>.\nWhen Basic Attack <strong>Hounds Roar</strong> hits the target, Calcharo gains 1 \"Killing Intent\"."
-    },
-    {
-      "slug": "skillful-cooking",
-      "name": "Skillful Cooking",
-      "type": "Inherent Skill",
-      "description": "Has a chance to produce special dishes when cooking"
-    },
-    {
-      "slug": "shadowy-raid",
-      "name": "Shadowy Raid",
-      "type": "Outro Skill",
-      "description": "Calcharo summons <strong>Phantom</strong> to support the on-field Resonator, clearing the targets in front with a slash. The <strong>Phantom's</strong> attack deals <strong class=\"color-electro\">Electro DMG</strong> equal to <strong class=\"color-electro\">195.98%+391.96%</strong> of Calcharo's ATK."
-    }
-  ],
-  "resonanceChain": [
-    {
-      "idx": "Resonance 1-4",
-      "slug": "covert-negotiation",
-      "name": "Covert Negotiation",
-      "params": ["10", "20"],
-      "description": "When Resonance Skill <strong>Extermination Order</strong> hits a target, it additionally recovers {0} Resonance Energy. This can be triggered once every {1}s."
-    },
-    {
-      "idx": "Resonance 2-4",
-      "slug": "zero-sum-game",
-      "name": "Zero-Sum Game",
-      "params": ["30%", "15"],
-      "description": "After Calcharo casts Intro Skill <strong>Wanted Criminal</strong> or Intro Skill <strong>\"Necessary Means\"</strong>, his Resonance Skill DMG Bonus is increased by {0} for {1}s."
-    },
-    {
-      "idx": "Resonance 3-4",
-      "slug": "iron-fist-diplomacy",
-      "name": "Iron Fist Diplomacy",
-      "params": ["25%"],
-      "description": "During the Resonance Liberation <strong>Deathblade Gear</strong> state, Calcharo's Electro DMG Bonus is increased by {0}."
-    },
-    {
-      "idx": "Resonance 4-4",
-      "slug": "dark-alliance",
-      "name": "Dark Alliance",
-      "params": ["20%", "30"],
-      "description": "After casting Outro Skill <strong>Shadowy Raid</strong>, Electro DMG Bonus of all team members is increased by {0} for {1}s."
-    },
-    {
-      "idx": "Resonance 5-4",
-      "slug": "unconventional-compact",
-      "name": "Unconventional Compact",
-      "params": ["50%"],
-      "description": "Intro Skill <strong>Wanted Criminal</strong> and Intro Skill <strong>\"Necessary Means:</strong> deal {0} more damage."
-    },
-    {
-      "idx": "Resonance 6-4",
-      "slug": "the-ultimatum",
-      "name": "The Ultimatum",
-      "params": ["2", "100.00%"],
-      "description": "When casting Resonance Liberation <strong>\"Death Messenger\"</strong>, Calcharo will summon {0} <strong>Phantoms</strong> to perform Coordinated Attacks. Each <strong>Phantom</strong> deals <strong class=\"color-electro\">Electro DMG</strong> equal to {1} of Calcharo's ATK, which is considered Resonance Liberation damage."
-    }
-  ],
-  "stats": { "hp": 10500, "def": 1186, "atk": 438 },
   "ascensions": [
     {
       "cost": [
@@ -158,6 +54,125 @@
       "minLevel": 80
     }
   ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Void Thunder"]
+    },
+    {
+      "different": 95,
+      "items": ["Void Thunder", "Lingering Tunes"]
+    },
+    {
+      "different": 95,
+      "items": ["Lingering Tunes"]
+    },
+    {
+      "different": 94.5,
+      "items": ["Void Thunder", "Moonlit Clouds"]
+    },
+    {
+      "different": 93,
+      "items": ["Lingering Tunes", "Moonlit Clouds"]
+    }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate", "Crit DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Electro DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Electro DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestMainEchoes": [
+    "tempest-mephis",
+    "thundering-mephis",
+    "flautist",
+    "mech-abomination"
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["calcharo"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["yinlin", "sanhua", "jianxin"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina", "baizhi"]
+        }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    {
+      "item": "lustrous-razor",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "verdant-summit",
+      "rank": 1,
+      "different": 96.6
+    },
+    {
+      "item": "autumntrace",
+      "rank": 1,
+      "different": 82.8
+    },
+    {
+      "item": "helios-cleaver",
+      "rank": 1,
+      "different": 78.7
+    },
+    {
+      "item": "broadblade-41",
+      "rank": 1,
+      "different": 76.5
+    },
+    {
+      "item": "broadblade-of-night",
+      "rank": 5,
+      "different": 71.8
+    },
+    {
+      "item": "guardian-broadblade",
+      "rank": 5,
+      "different": 70.2
+    }
+  ],
+  "birthday": "July 8th",
+  "birthplace": "New Federation",
+  "description": "Leader of the \"Ghost Hounds\", an international mercenary group. Ruthless, vengeful, unforgiving. A potential client must be mindful of the price to pay before making him an offer.",
+  "descriptionLocalized": {
+    "vi": "Lãnh đạo của \"Bầy Ma\", một nhóm lính đánh thuê quốc tế. Nhẫn tâm, báo thù, không tha thứ. Khách hàng tiềm năng cần lưu ý về cái giá phải trả trước khi đưa ra lời đề nghị cho anh ta.",
+    "id": "Pemimpin \"Ghost Hounds\", kelompok tentara bayaran internasional. Kejam, pendendam, tidak kenal ampun. Klien potensial harus memperhatikan harga yang harus dibayar sebelum memberinya penawaran.",
+    "th": "ผู้นำของ \"ผีหมาป่า\" กลุ่มทหารรับจ้างระหว่างประเทศ โหดเหี้ยม แสวงแก้แค้น ไม่ให้อภัย ลูกค้าที่อาจเป็นไปได้ต้องระมัดระวังในเรื่องค่าใช้จ่ายก่อนที่จะเสนอให้เขา"
+  },
   "forte": [
     {
       "id": 111,
@@ -236,109 +251,56 @@
       "name": "ATK+4.20%"
     }
   ],
+  "modifiedTime": "2024-07-21T15:18:52.825Z",
+  "publishedTime": "2024-06-28T15:43:21.814Z",
   "quote": "They'll make an offer we like. I'll make sure of it.",
-  "birthday": "July 8th",
-  "birthplace": "New Federation",
   "quoteLocalized": {
     "vi": "Họ sẽ đưa ra một lời đề nghị mà chúng ta thích. Tôi sẽ đảm bảo điều đó.",
     "id": "Mereka akan memberikan penawaran yang kita sukai. Aku akan pastikan itu.",
     "th": "Mereka akan memberikan tawaran yang kita sukai. Aku akan pastikan itu."
   },
-  "descriptionLocalized": {
-    "vi": "Lãnh đạo của \"Bầy Ma\", một nhóm lính đánh thuê quốc tế. Nhẫn tâm, báo thù, không tha thứ. Khách hàng tiềm năng cần lưu ý về cái giá phải trả trước khi đưa ra lời đề nghị cho anh ta.",
-    "id": "Pemimpin \"Ghost Hounds\", kelompok tentara bayaran internasional. Kejam, pendendam, tidak kenal ampun. Klien potensial harus memperhatikan harga yang harus dibayar sebelum memberinya penawaran.",
-    "th": "ผู้นำของ \"ผีหมาป่า\" กลุ่มทหารรับจ้างระหว่างประเทศ โหดเหี้ยม แสวงแก้แค้น ไม่ให้อภัย ลูกค้าที่อาจเป็นไปได้ต้องระมัดระวังในเรื่องค่าใช้จ่ายก่อนที่จะเสนอให้เขา"
-  },
-  "bestWeapons": [
+  "resonanceChain": [
     {
-      "item": "lustrous-razor",
-      "rank": 1,
-      "different": 100
+      "idx": "Resonance 1-4",
+      "slug": "covert-negotiation",
+      "name": "Covert Negotiation",
+      "params": ["10", "20"],
+      "description": "When Resonance Skill <strong>Extermination Order</strong> hits a target, it additionally recovers {0} Resonance Energy. This can be triggered once every {1}s."
     },
     {
-      "item": "verdant-summit",
-      "rank": 1,
-      "different": 96.6
+      "idx": "Resonance 2-4",
+      "slug": "zero-sum-game",
+      "name": "Zero-Sum Game",
+      "params": ["30%", "15"],
+      "description": "After Calcharo casts Intro Skill <strong>Wanted Criminal</strong> or Intro Skill <strong>\"Necessary Means\"</strong>, his Resonance Skill DMG Bonus is increased by {0} for {1}s."
     },
     {
-      "item": "autumntrace",
-      "rank": 1,
-      "different": 82.8
+      "idx": "Resonance 3-4",
+      "slug": "iron-fist-diplomacy",
+      "name": "Iron Fist Diplomacy",
+      "params": ["25%"],
+      "description": "During the Resonance Liberation <strong>Deathblade Gear</strong> state, Calcharo's Electro DMG Bonus is increased by {0}."
     },
     {
-      "item": "helios-cleaver",
-      "rank": 1,
-      "different": 78.7
+      "idx": "Resonance 4-4",
+      "slug": "dark-alliance",
+      "name": "Dark Alliance",
+      "params": ["20%", "30"],
+      "description": "After casting Outro Skill <strong>Shadowy Raid</strong>, Electro DMG Bonus of all team members is increased by {0} for {1}s."
     },
     {
-      "item": "broadblade-41",
-      "rank": 1,
-      "different": 76.5
+      "idx": "Resonance 5-4",
+      "slug": "unconventional-compact",
+      "name": "Unconventional Compact",
+      "params": ["50%"],
+      "description": "Intro Skill <strong>Wanted Criminal</strong> and Intro Skill <strong>\"Necessary Means:</strong> deal {0} more damage."
     },
     {
-      "item": "broadblade-of-night",
-      "rank": 5,
-      "different": 71.8
-    },
-    {
-      "item": "guardian-broadblade",
-      "rank": 5,
-      "different": 70.2
-    }
-  ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Void Thunder"]
-    },
-    {
-      "different": 95,
-      "items": ["Void Thunder", "Lingering Tunes"]
-    },
-    {
-      "different": 95,
-      "items": ["Lingering Tunes"]
-    },
-    {
-      "different": 94.5,
-      "items": ["Void Thunder", "Moonlit Clouds"]
-    },
-    {
-      "different": 93,
-      "items": ["Lingering Tunes", "Moonlit Clouds"]
-    }
-  ],
-  "bestMainEchoes": [
-    "tempest-mephis",
-    "thundering-mephis",
-    "flautist",
-    "mech-abomination"
-  ],
-  "bestEchoStats": [
-    {
-      "type": "4-3-3-1-1",
-      "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Crit DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
-      ]
+      "idx": "Resonance 6-4",
+      "slug": "the-ultimatum",
+      "name": "The Ultimatum",
+      "params": ["2", "100.00%"],
+      "description": "When casting Resonance Liberation <strong>\"Death Messenger\"</strong>, Calcharo will summon {0} <strong>Phantoms</strong> to perform Coordinated Attacks. Each <strong>Phantom</strong> deals <strong class=\"color-electro\">Electro DMG</strong> equal to {1} of Calcharo's ATK, which is considered Resonance Liberation damage."
     }
   ],
   "skillPriority": [
@@ -348,23 +310,61 @@
     "Intro Skill",
     "Basic Attack"
   ],
-  "bestTeams": [
+  "skills": [
     {
-      "name": "#1",
-      "items": [
-        {
-          "role": "Main DPS",
-          "items": ["calcharo"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["yinlin", "sanhua", "jianxin"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
-      ]
+      "slug": "gnawing-fangs",
+      "name": "Gnawing Fangs",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nCalcharo performs up to 4 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nConsumes Stamina to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nConsumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+    },
+    {
+      "slug": "extermination-order",
+      "name": "Extermination Order",
+      "type": "Resonance Skill",
+      "description": "Calcharo performs up to 3 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\nIf Calcharo is switched off field, or if Resonance Skill <strong>Extermination Order</strong> is not performed again in a while, this skill will enter Cooldown.\nResonance Skill <strong>Extermination Order</strong> does not interrupt Calcharo's Basic Attack combo."
+    },
+    {
+      "slug": "phantom-etching",
+      "name": "Phantom Etching",
+      "type": "Resonance Liberation",
+      "description": "Calcharo attacks the target, dealing <strong class=\"color-electro\">Electro DMG</strong> and enters <strong>Deathblade Gear</strong> state. After Resonance Liberation <strong>Deathblade Gear</strong> state ends, Calcharo's next Intro Skill is replaced with Intro Skill <strong>\"Necessary Means\"</strong>, which deals <strong class=\"color-electro\">Electro DMG</strong>, considered as Intro Skill damage.\n \n<strong>Deathblade Gear</strong>\n-<strong>Basic Attack</strong> is replaced with Basic Attack <strong>Hounds Roar</strong>.\n-<strong>Dodge Counter</strong> deals increased damage, considered as Resonance Liberation damage.\n \n<strong>Hounds Roar</strong>\nCalcharo performs up to 5 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>, considered as Basic Attack Damage."
+    },
+    {
+      "slug": "bloodshed-awaken",
+      "name": "Bloodshed Awaken",
+      "type": "Inherent Skill",
+      "description": "When casting Heavy Attack <strong>\"Mercy\"</strong>, Calcharo's Resonance Liberation DMG Bonus is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s."
+    },
+    {
+      "slug": "revenant-rush",
+      "name": "Revenant Rush",
+      "type": "Inherent Skill",
+      "description": "When Heavy Attack <strong>\"Death Messenger\"</strong> hits the target, the damage taken by Calcharo is reduced by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s."
+    },
+    {
+      "slug": "wanted-outlaw",
+      "name": "Wanted Outlaw",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+    },
+    {
+      "slug": "hunting-mission",
+      "name": "Hunting Mission",
+      "type": "Forte Circuit",
+      "description": "<strong>Heavy Attack: \"Mercy\"</strong>\nWhen Calcharo has <strong class=\"color-electro\">3</strong> \"Cruelty\", his <strong>Heavy Attack</strong> is replaced with Heavy Attack <strong>\"Mercy\"</strong>.\nWhen casting Heavy Attack <strong>\"Mercy\"</strong>, Calcharo consumes <strong class=\"color-electro\">3</strong> \"Cruelty\" to deal <strong class=\"color-electro\">Electro DMG</strong>, considered as Heavy Attack damage, and recovers Resonance Energy and Concerto Energy.\n \n<strong>\"Cruelty\"</strong>\nCalcharo can hold up to <strong class=\"color-electro\">3</strong> \"Cruelty\".\nUnder Resonance Liberation <strong>Deathblade Gear</strong> state, \"Cruelty\" cannot be acquired.\nWhen Resonance Skill <strong>Extermination Order</strong> hits the target, gain <strong class=\"color-electro\">1</strong> \"Cruelty\".\n \n<strong>Heavy Attack: \"Death Messenger\"</strong>\nWhen Calcharo has <strong class=\"color-electro\">5</strong> \"Killing Intent\", his <strong>Basic Attack</strong> is replaced with Heavy Attack <strong>\"Death Messenger\"</strong>.\nWhen casting Heavy Attack <strong>\"Death Messenger\"</strong>, Calcharo consumes <strong class=\"color-electro\">5</strong> \"Killing Intent\" to deal <strong class=\"color-electro\">Electro DMG</strong>, considered as Resonance Liberation damage, and recovers Resonance Energy and Concerto Energy.\n \n<strong>\"Killing Intent\"</strong>\nUnder Resonance Liberation <strong>Deathblade Gear</strong> state, Calcharo's Forte Gauge is replaced with \"Killing Intent\", stacking up to <strong class=\"color-electro\">5</strong>.\nWhen Basic Attack <strong>Hounds Roar</strong> hits the target, Calcharo gains 1 \"Killing Intent\"."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "shadowy-raid",
+      "name": "Shadowy Raid",
+      "type": "Outro Skill",
+      "description": "Calcharo summons <strong>Phantom</strong> to support the on-field Resonator, clearing the targets in front with a slash. The <strong>Phantom's</strong> attack deals <strong class=\"color-electro\">Electro DMG</strong> equal to <strong class=\"color-electro\">195.98%+391.96%</strong> of Calcharo's ATK."
     }
-  ]
+  ],
+  "stats": { "hp": 10500, "def": 1186, "atk": 438 }
 }

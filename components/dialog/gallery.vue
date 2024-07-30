@@ -3,7 +3,7 @@ const CARDS = Array.from(Array(25).keys())
   .filter((e) => e !== 3)
   .map((i) => {
     return {
-      id: i + 1
+      id: i + 1,
     };
   });
 

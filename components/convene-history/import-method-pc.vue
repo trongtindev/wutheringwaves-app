@@ -42,11 +42,11 @@ const onPressedImport = async () => {
 const onPressedPowerShell = () => {
   if (i18n.locale.value == 'vi') {
     window.open(
-      'https://www.google.com/search?q=c%C3%A1ch+m%E1%BB%9F+Windows+PowerShell'
+      'https://www.google.com/search?q=c%C3%A1ch+m%E1%BB%9F+Windows+PowerShell',
     );
   } else {
     window.open(
-      'https://www.google.com/search?q=how+to+run+Windows+PowerShell'
+      'https://www.google.com/search?q=how+to+run+Windows+PowerShell',
     );
   }
 };
@@ -79,7 +79,7 @@ watch(
   (value) => {
     if (!value) return;
     url.value = value;
-  }
+  },
 );
 
 // lifecycle

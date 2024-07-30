@@ -25,4 +25,3 @@ export interface IItemData {
     quantity: number;
   }[];
 }
-

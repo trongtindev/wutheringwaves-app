@@ -44,21 +44,21 @@ export const useAccount = defineStore('useAccount', () => {
   const upsert = async (
     playerId: string,
     serverId: string,
-    conveneHistoryUrl: string
+    conveneHistoryUrl: string,
   ) => {
     const db = await database.getInstance();
     const doc = await db.accounts
       .findOne({
         selector: {
-          playerId
-        }
+          playerId,
+        },
       })
       .exec();
 
     if (doc) {
       await doc.patch({
         conveneHistoryUrl,
-        lastImport: Date.now()
+        lastImport: Date.now(),
       });
     } else {
       await db.accounts.upsert({
@@ -66,7 +66,7 @@ export const useAccount = defineStore('useAccount', () => {
         serverId,
         conveneHistoryUrl,
         autoImport: true,
-        lastImport: Date.now()
+        lastImport: Date.now(),
       });
     }
   };
@@ -76,7 +76,7 @@ export const useAccount = defineStore('useAccount', () => {
     const result = await db.accounts
       .find()
       .sort({
-        createdAt: 'asc'
+        createdAt: 'asc',
       })
       .exec();
     if (result.length > 0) {
@@ -93,8 +93,8 @@ export const useAccount = defineStore('useAccount', () => {
     return await db.accounts
       .findOne({
         selector: {
-          playerId
-        }
+          playerId,
+        },
       })
       .exec();
   };
@@ -129,7 +129,7 @@ export const useAccount = defineStore('useAccount', () => {
       const nid = await notification.create({
         title: i18n.t('autoImport.notificationTitle'),
         message: i18n.t('autoImport.notificationMessage', [account.playerId]),
-        persistent: true
+        persistent: true,
       });
 
       console.debug('autoImport', account.playerId, 'start');
@@ -161,7 +161,7 @@ export const useAccount = defineStore('useAccount', () => {
 
     if (newValue && oldValue) {
       snackbar.show({
-        content: i18n.t('accounts.successfullySwitched', [newValue])
+        content: i18n.t('accounts.successfullySwitched', [newValue]),
       });
     }
   });
@@ -189,6 +189,6 @@ export const useAccount = defineStore('useAccount', () => {
     upsert,
     getDocument,
     getConveneHistoryUrl,
-    initialize
+    initialize,
   };
 });

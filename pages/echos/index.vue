@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute();
 await navigateTo(route.path.replace('/echos', '/echoes'), {
-  redirectCode: 301
+  redirectCode: 301,
 });
 </script>
 

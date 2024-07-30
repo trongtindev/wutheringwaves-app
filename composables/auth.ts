@@ -69,7 +69,7 @@ export const useAuth = defineStore('useAuth', () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const payload: any = {
       code: options.code || undefined,
-      idToken: undefined
+      idToken: undefined,
     };
     if (!options.code) {
       console.debug('google.accounts.id.initialize');
@@ -83,7 +83,7 @@ export const useAuth = defineStore('useAuth', () => {
           },
           auto_select: true,
           cancel_on_tap_outside: false,
-          use_fedcm_for_prompt: options.useFedCM
+          use_fedcm_for_prompt: options.useFedCM,
         });
         window.google.accounts.id.prompt(async (result) => {
           console.debug('google.accounts.id.prompt', result);
@@ -103,7 +103,7 @@ export const useAuth = defineStore('useAuth', () => {
       payload.idToken = credential;
     } else {
       router.replace({
-        path: route.path
+        path: route.path,
       });
     }
 
@@ -141,7 +141,7 @@ export const useAuth = defineStore('useAuth', () => {
     if (isExpired || forceRefresh) {
       console.debug('getAccessToken()', 'refresh');
       const result = await api.post<{ accessToken: string }>('auth/refresh', {
-        refreshToken: refreshToken.value
+        refreshToken: refreshToken.value,
       });
       accessToken.value = result.data.accessToken;
     }
@@ -178,6 +178,6 @@ export const useAuth = defineStore('useAuth', () => {
     isSignedIn,
     signIn,
     signOut,
-    getAccessToken
+    getAccessToken,
   };
 });

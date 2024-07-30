@@ -30,21 +30,21 @@ const startExports = async () => {
         time: e.time,
         name: e.name,
         qualityLevel: e.qualityLevel,
-        cardPoolType: e.cardPoolType
+        cardPoolType: e.cardPoolType,
       };
     });
 
     if (convenesData.length === 0) {
       dialog.show({
         title: i18n.t('common.notice'),
-        content: i18n.t('settings.data.export.empty')
+        content: i18n.t('settings.data.export.empty'),
       });
       return;
     }
 
     const csvConfig = mkConfig({
       useKeysAsHeaders: true,
-      filename: `wutheringwaves.app-${dayjs().toISOString()}`
+      filename: `wutheringwaves.app-${dayjs().toISOString()}`,
     });
     const csv = generateCsv(csvConfig)(convenesData);
     download(csvConfig)(csv);

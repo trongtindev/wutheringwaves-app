@@ -8,7 +8,7 @@ import {
   mdiChevronRight,
   mdiGrid,
   mdiViewList,
-  mdiDownload
+  mdiDownload,
 } from '@mdi/js';
 
 // define

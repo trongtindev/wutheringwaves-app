@@ -15,7 +15,7 @@ const i18n = useI18n();
 const dialog = useDialog();
 const fileDialog = useFileDialog({
   accept: 'image/png,image/jpg,image/jpeg,image/webp',
-  multiple: false
+  multiple: false,
 });
 
 // state
@@ -30,7 +30,7 @@ const thumbnail = ref<{
 if (props.defaultValue) {
   thumbnail.value = {
     state: 'uploaded',
-    result: props.defaultValue
+    result: props.defaultValue,
   };
 }
 
@@ -47,7 +47,7 @@ const checkAndUploadThumbnail = async (file: File) => {
           resolve({ w: image.width, h: image.height });
         };
         image.onerror = reject;
-      }
+      },
     );
 
     // validate
@@ -60,7 +60,7 @@ const checkAndUploadThumbnail = async (file: File) => {
     ) {
       dialog.show({
         title: i18n.t('common.notice'),
-        content: i18n.t('guides.editor.thumbnail.wrongSize')
+        content: i18n.t('guides.editor.thumbnail.wrongSize'),
       });
       return;
     }
@@ -68,33 +68,33 @@ const checkAndUploadThumbnail = async (file: File) => {
     // uploading
     thumbnail.value = {
       file,
-      state: 'uploading'
+      state: 'uploading',
     };
     const result = await api.post<IFile>(
       'files',
       {
-        file
+        file,
       },
       {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data',
         },
         onUploadProgress: (e) => {
           thumbnail.value = {
             file,
             state: 'uploading',
             progress:
-              e.progress && e.progress < 100 ? e.progress * 100 : undefined
+              e.progress && e.progress < 100 ? e.progress * 100 : undefined,
           };
-        }
-      }
+        },
+      },
     );
 
     thumbnail.value = {
       file: undefined,
       state: 'uploaded',
       result: result.data,
-      progress: undefined
+      progress: undefined,
     };
     emits('on-file', result.data);
   } catch (error: any) {
@@ -113,7 +113,7 @@ watch(
     if (file == null) return;
 
     checkAndUploadThumbnail(file);
-  }
+  },
 );
 </script>
 

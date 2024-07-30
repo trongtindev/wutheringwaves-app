@@ -11,7 +11,7 @@ useHead({ title });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -22,8 +22,8 @@ useSeoMeta({
       :items="[
         {
           to: '/teams',
-          title: i18n.t('teams.title')
-        }
+          title: i18n.t('teams.title'),
+        },
       ]"
     />
 

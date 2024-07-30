@@ -33,7 +33,7 @@ export const markerCollectionMethods: MarkerCollectionMethods = {
   countAllDocuments: async function (this: MarkerCollection) {
     const allDocs = await this.find().exec();
     return allDocs.length;
-  }
+  },
 };
 
 export const markerSchema: RxJsonSchema<MarkerDocType> = {
@@ -44,19 +44,19 @@ export const markerSchema: RxJsonSchema<MarkerDocType> = {
   properties: {
     key: {
       type: 'string',
-      maxLength: 50
+      maxLength: 50,
     },
     type: {
       type: 'string',
-      default: null
+      default: null,
     },
     note: {
       type: 'string',
-      default: null
+      default: null,
     },
     createdAt: {
-      type: 'number'
-    }
+      type: 'number',
+    },
   },
-  required: ['key']
+  required: ['key'],
 };

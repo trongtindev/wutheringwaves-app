@@ -40,8 +40,8 @@ const initialize = () => {
     db.trophies
       .find({
         selector: {
-          playerId: account.active
-        }
+          playerId: account.active,
+        },
       })
       .exec()
       .then((result) => {
@@ -61,7 +61,7 @@ const initialize = () => {
   displayItems.value = matchItems.value.map((e) => {
     return {
       ...e,
-      items: items.filter((item) => item.dependOn && item.dependOn === e.name)
+      items: items.filter((item) => item.dependOn && item.dependOn === e.name),
     };
   });
 };
@@ -82,8 +82,8 @@ const onItemChecked = async (slug: string, value: boolean) => {
       .findOne({
         selector: {
           slug,
-          playerId: account.active
-        }
+          playerId: account.active,
+        },
       })
       .exec();
     if (doc) doc.remove();
@@ -97,7 +97,7 @@ watch(filterGroup, () => initialize());
 watch(filterCategory, () => initialize());
 watch(
   () => account.active,
-  () => initialize()
+  () => initialize(),
 );
 
 // lifecycle
@@ -112,7 +112,7 @@ useHead({ title });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 

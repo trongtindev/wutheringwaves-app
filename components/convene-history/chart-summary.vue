@@ -51,7 +51,7 @@ watch(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     items.value = (value || []) as any;
     emits('on-updated');
-  }
+  },
 );
 
 // lifecycle
@@ -63,7 +63,7 @@ onNuxtReady(async () => {
     Legend,
     BarElement,
     CategoryScale,
-    LinearScale
+    LinearScale,
   } = await import('chart.js');
 
   ChartJS.register(
@@ -72,7 +72,7 @@ onNuxtReady(async () => {
     Legend,
     BarElement,
     CategoryScale,
-    LinearScale
+    LinearScale,
   );
 
   chartInitialized.value = true;
@@ -91,7 +91,7 @@ onNuxtReady(async () => {
       <bar
         v-if="chartInitialized"
         :options="{
-          responsive: true
+          responsive: true,
         }"
         :data="{
           labels,
@@ -99,9 +99,9 @@ onNuxtReady(async () => {
             {
               data: datasets,
               label: $t('common.totalPull'),
-              backgroundColor: 'green'
-            }
-          ]
+              backgroundColor: 'green',
+            },
+          ],
         }"
       />
     </v-card-text>

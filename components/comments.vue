@@ -6,7 +6,7 @@ import {
   mdiImageOutline,
   mdiAlert,
   mdiTrashCan,
-  mdiEmoticon
+  mdiEmoticon,
 } from '@mdi/js';
 import type { IFile } from '~/interfaces/file';
 
@@ -20,7 +20,7 @@ const props = defineProps<{
 const api = useApi();
 const auth = useAuth();
 const fileChoose = useFileDialog({
-  accept: 'image/png, image/jpg, image/webp, image/jpeg'
+  accept: 'image/png, image/jpg, image/webp, image/jpeg',
 });
 
 // states
@@ -51,8 +51,8 @@ const loadData = (parent?: IComment) => {
         channel: props.channel,
         limit: limit.value,
         offset: offset.value,
-        parent: parent ? parent.id : undefined
-      }
+        parent: parent ? parent.id : undefined,
+      },
     })
     .then((result) => {
       data.value = result.data;
@@ -61,7 +61,7 @@ const loadData = (parent?: IComment) => {
     .catch((error) => {
       data.value = {
         total: 0,
-        items: []
+        items: [],
       };
       // TODO: handle error
       console.error(error);
@@ -84,16 +84,16 @@ const uploadFile = (id: string) => {
     .post<IFile>(
       'files',
       {
-        file: attachments.value[getIndex()].file
+        file: attachments.value[getIndex()].file,
       },
       {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data',
         },
         onUploadProgress: (e) => {
           attachments.value[getIndex()].progress = e.progress;
-        }
-      }
+        },
+      },
     )
     .then((result) => {
       attachments.value[getIndex()].result = result.data;
@@ -142,7 +142,7 @@ const onSubmit = () => {
       content: content.value,
       attachments: attachments.value
         .filter((e) => e.result)
-        .map((e) => e.result?.id)
+        .map((e) => e.result?.id),
     })
     .then(() => {
       attachments.value = [];
@@ -180,7 +180,7 @@ watch(fileChoose.files, (value) => {
     attachments.value.push({
       id,
       file: file,
-      status: ''
+      status: '',
     });
     uploadFile(id);
   });
@@ -191,7 +191,7 @@ watch(
   () => {
     data.value = null as any;
     loadData();
-  }
+  },
 );
 
 // lifecycle
@@ -201,7 +201,7 @@ onMounted(() => loadData());
 <template>
   <v-card
     :class="{
-      'border-none': props.flat
+      'border-none': props.flat,
     }"
   >
     <v-card-title v-if="!props.hideTitle">
@@ -335,7 +335,7 @@ onMounted(() => loadData());
           :key="index"
           :data="element"
           :class="{
-            'mt-2': index > 0
+            'mt-2': index > 0,
           }"
         />
       </v-card-text>

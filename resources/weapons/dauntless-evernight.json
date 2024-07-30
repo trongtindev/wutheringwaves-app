@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.052Z",
-  "modifiedTime": "2024-07-09T15:18:08.470Z",
-  "slug": "dauntless-evernight",
-  "skill": {
-    "params": [
-      ["8%", "15%", "15"],
-      ["10%", "18.75%", "15"],
-      ["12%", "22.5%", "15"],
-      ["14%", "26.25%", "15"],
-      ["16%", "30%", "15"]
-    ],
-    "description": "When Intro Skill is released, increases ATK by {0} and DEF by {1}, lasting for {2}s."
-  },
-  "stats": { "atk": 27 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "A weapon designed to commemorate the Midnight Rangers' preparedness \"Autumn fades in endless nights, ready blades gleam with silent might.\"",
+  "modifiedTime": "2024-07-09T15:18:08.470Z",
+  "publishedTime": "2024-06-28T15:43:22.052Z",
   "ranks": [
     "When intro skill is released, increases ATK by 8% and DEF by 15%, lasting for 15s.",
     "When intro skill is released, increases ATK by 10% and DEF by 18.75%, lasting for 15s.",
     "When intro skill is released, increases ATK by 12% and DEF by 22.5%, lasting for 15s.",
     "When intro skill is released, increases ATK by 14% and DEF by 26.25%, lasting for 15s.",
     "When intro skill is released, increases ATK by 16% and DEF by 30%, lasting for 15s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["8%", "15%", "15"],
+      ["10%", "18.75%", "15"],
+      ["12%", "22.5%", "15"],
+      ["14%", "26.25%", "15"],
+      ["16%", "30%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases ATK by {0} and DEF by {1}, lasting for {2}s."
+  },
+  "slug": "dauntless-evernight",
+  "stats": { "atk": 27 }
 }

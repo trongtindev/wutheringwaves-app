@@ -13,16 +13,16 @@ useHead({
       ? [
           {
             name: 'robots',
-            content: 'noindex'
-          }
+            content: 'noindex',
+          },
         ]
-      : []
+      : [],
 });
 
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -33,12 +33,12 @@ useSeoMeta({
       :items="[
         {
           to: '/todo-list',
-          title: i18n.t('todoList.title')
+          title: i18n.t('todoList.title'),
         },
         {
           to: '/todo-list/create',
-          title: i18n.t('common.create')
-        }
+          title: i18n.t('common.create'),
+        },
       ]"
     />
 

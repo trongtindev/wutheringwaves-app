@@ -2,7 +2,7 @@ import type {
   RxDocument,
   RxCollection,
   RxJsonSchema,
-  MangoQuerySelector
+  MangoQuerySelector,
 } from 'rxdb';
 
 export type AccountDocType = {
@@ -25,7 +25,7 @@ export type AccountCollectionMethods = {
   countAllDocuments: () => Promise<number>;
   updateOne: (
     selector: MangoQuerySelector<AccountDocType>,
-    patch: Partial<AccountDocType>
+    patch: Partial<AccountDocType>,
   ) => Promise<void>;
   deleteOne: (selector: MangoQuerySelector<AccountDocType>) => Promise<void>;
 };
@@ -50,22 +50,22 @@ export const accountCollectionMethods: AccountCollectionMethods = {
   updateOne: async function (
     this: AccountCollection,
     selector: MangoQuerySelector<AccountDocType>,
-    patch: Partial<AccountDocType>
+    patch: Partial<AccountDocType>,
   ) {
     const doc = await this.findOne({
-      selector
+      selector,
     }).exec();
     if (doc) await doc.patch(patch);
   },
   deleteOne: async function (
     this: AccountCollection,
-    selector: MangoQuerySelector<AccountDocType>
+    selector: MangoQuerySelector<AccountDocType>,
   ) {
     const doc = await this.findOne({
-      selector
+      selector,
     }).exec();
     if (doc) await doc.remove();
-  }
+  },
 };
 
 export const accountSchema: RxJsonSchema<AccountDocType> = {
@@ -76,27 +76,27 @@ export const accountSchema: RxJsonSchema<AccountDocType> = {
   properties: {
     playerId: {
       type: 'string',
-      maxLength: 50
+      maxLength: 50,
     },
     serverId: {
-      type: 'string'
+      type: 'string',
     },
     conveneHistoryUrl: {
       type: 'string',
-      default: ''
+      default: '',
     },
     createdAt: {
-      type: 'number'
+      type: 'number',
     },
     name: {
-      type: 'string'
+      type: 'string',
     },
     autoImport: {
-      type: 'boolean'
+      type: 'boolean',
     },
     lastImport: {
-      type: 'number'
-    }
+      type: 'number',
+    },
   },
-  required: ['playerId', 'serverId']
+  required: ['playerId', 'serverId'],
 };

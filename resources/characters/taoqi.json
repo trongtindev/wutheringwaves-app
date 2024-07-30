@@ -1,118 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "quote": "Phew... All set. Time for a little break.",
-  "quoteLocalized": {
-    "vi": "Phù... Đã xong. Đã đến lúc nghỉ ngơi một chút.",
-    "id": "Hah... Siap. Saatnya istirahat sebentar.",
-    "th": "Phew... Selesai. Waktu untuk istirahat sebentar."
-  },
-  "description": "Taoqi is the director of border defense at the Ministry of Development. Despite her seemingly laid-back demeanor, she consistently proves to be a dependable and supportive individual, always lending her hand to those in need. Taoqi is not only a reliable colleague, but also a trustworthy friend that people can confide in.",
-  "descriptionLocalized": {
-    "vi": "Taoqi là giám đốc phòng thủ biên giới của Bộ Phát triển. Mặc dù có thái độ có vẻ thoải mái nhưng cô ấy luôn chứng tỏ mình là một người đáng tin cậy và luôn hỗ trợ, luôn giúp đỡ những người gặp khó khăn. Taoqi không chỉ là một đồng nghiệp đáng tin cậy mà còn là một người bạn đáng tin cậy mà mọi người có thể tâm sự.",
-    "id": "Taoqi adalah direktur pertahanan perbatasan di Kementerian Pengembangan. Terlepas dari sikapnya yang tampak santai, dia secara konsisten membuktikan dirinya sebagai individu yang dapat diandalkan dan mendukung, selalu mengulurkan tangannya kepada mereka yang membutuhkan. Taoqi bukan hanya kolega yang dapat diandalkan, tetapi juga teman yang dapat dipercaya yang dapat dipercaya orang.",
-    "th": "เต้าฉีเป็นผู้อำนวยการฝ่ายป้องกันชายแดนที่กระทรวงพัฒนา แม้เธอจะดูเหมือนเป็นคนขี้เล่น แต่เธอก็พิสูจน์ให้เห็นว่าเป็นคนน่าเชื่อถือและให้การสนับสนุนเสมอ เธอพร้อมจะยื่นมือช่วยเหลือคนที่ต้องการความช่วยเหลือ เต้าฉีไม่เพียงแต่เป็นเพื่อนร่วมงานที่ไว้ใจได้ แต่ยังเป็นเพื่อนที่ไว้ใจได้อีกด้วย ที่คนสามารถไว้ใจได้"
-  },
-  "skills": [
-    {
-      "slug": "concealed-edge",
-      "name": "Concealed Edge",
-      "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\r\nTaoqi performs up to 4 continuous attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Heavy Attack</strong>\r\nTaoqi consumes Stamina and enters <strong>Rocksteady Defense</strong> state.\r\n \r\n<strong>Rocksteady Defense</strong>\r\nTaoqi's damage taken is reduced by <strong class=\"color-havoc\">35%</strong>;\r\n-When Taoqi is attacked during <strong>Rocksteady Defense</strong>, she will cat <strong>Strategic Parry</strong>;\r\n-<strong>Strategic Parry</strong> is automatically cast after <strong>Rocksteady Defense</strong> lasts for <strong class=\"color-havoc\">3</strong>s;\r\n-If Taoqi is attacked when casting Resonance Skill <strong>Rocksteady Shield</strong>, <strong>Strategic Parry</strong> is automatically cast.\r\n \r\n<strong>Strategic Parry</strong>\r\nTaoqi attacks the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Mid-air Attack</strong>\r\nTaoqi consumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Dodge Counter</strong>\r\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "fortified-defense",
-      "name": "Fortified Defense",
-      "type": "Resonance Skill",
-      "description": "Taoqi deals <strong class=\"color-havoc\">Havoc DMG</strong> to surrounding targets, generating <strong class=\"color-havoc\">3</strong> Rocksteady Shield and restoring HP to Taoqi.\nIf attacked when casting <strong>Fortified Defense</strong>, <strong>Strategic Parry</strong> will be automatically cast.\n \n<strong>Rocksteady Shield</strong>\nWhen the active character is attacked, <strong class=\"color-havoc\">1</strong> <strong>Rocksteady Shield</strong> is consumed to reduce the damage taken."
-    },
-    {
-      "slug": "unmovable",
-      "name": "Unmovable",
-      "type": "Resonance Liberation",
-      "description": "Launch an attack based on Taoqi's DEF on the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "steadfast-protection",
-      "name": "Steadfast Protection",
-      "type": "Inherent Skill",
-      "description": "During the duration of the Resonance Skill <strong>Rocksteady Shield</strong>, the Character's DEF is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong>."
-    },
-    {
-      "slug": "unyielding",
-      "name": "Unyielding",
-      "type": "Inherent Skill",
-      "description": "After <strong>Heavy Attack: Strategic Parry</strong> is successfully triggered, <strong style=\"color: var(--theme-palette-color-1);\">25</strong> Stamina is recovered."
-    },
-    {
-      "slug": "defense-formation",
-      "name": "Defense Formation",
-      "type": "Intro Skill",
-      "description": "Attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "power-shift",
-      "name": "Power Shift",
-      "type": "Forte Circuit",
-      "description": "<strong>Timed Counters</strong>\r\nWhen carrying \"Resolving Caliber\", use <strong>Basic Attack</strong> after <strong>Heavy Attack: Strategic Parry</strong> or <strong>Intro Skill: Defense Formation</strong> to cast <strong>Timed Counters</strong>, performing up to 3 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Basic Attack damage.\r\n<strong>Timed Counters</strong> consume <strong class=\"color-havoc\">1</strong> \"Resolving Caliber\" upon hitting an enemy to grant a shield.\r\nAfter casting the Intro Skill <strong>Defense Formation</strong>, using <strong>Basic Attack</strong> can directly cast <strong>Timed Counters</strong>.\r\n \r\n<strong>Resolving Caliber</strong>\r\nTaoqi can hold up to <strong class=\"color-havoc\">3</strong> Resolving Caliber.\r\n<strong>Basic Attack 4</strong> will consume all of Taoqi's <strong>Rocksteady Shields</strong> to obtain that many \"Resolving Caliber\".\r\nWhile <strong>Rocksteady Shield</strong> exists, when the on-field character is attacked, <strong class=\"color-havoc\">1</strong> <strong>Rocksteady Shield</strong> will be consumed, and \"Resolving Caliber\" is recovered.\r\nAfter <strong>Rocksteady Shield</strong> ends, all remaining <strong>Rocksteady Shield</strong> will be consumed to grant that many \"Resolving Caliber\"."
-    },
-    {
-      "slug": "skillful-cooking",
-      "name": "Skillful Cooking",
-      "type": "Inherent Skill",
-      "description": "Has a chance to produce special dishes when cooking"
-    },
-    {
-      "slug": "iron-will",
-      "name": "Iron Will",
-      "type": "Outro Skill",
-      "description": ""
-    }
-  ],
-  "resonanceChain": [
-    {
-      "idx": "Resonance I-IV",
-      "slug": "essense-of-tranquility",
-      "name": "Essense of Tranquility",
-      "params": ["40%"],
-      "description": "Forte Circuit <strong>Power Shift</strong>'s Shield is increased by {0}."
-    },
-    {
-      "idx": "Resonance 2-4",
-      "slug": "silent-strength",
-      "name": "Silent Strength",
-      "params": ["20%", "20%"],
-      "description": "The Crit. Rate and Crit. DMG of Resonance Liberation <strong>Unmovable</strong> is increased by {0} and {1}, respectively."
-    },
-    {
-      "idx": "Resonance 3-4",
-      "slug": "keen-eyed-observer",
-      "name": "Keen-eyed Observer",
-      "params": ["30"],
-      "description": "The duration of Resonance Skill <strong>Rocksteady Shield</strong> is extended to {0}s."
-    },
-    {
-      "idx": "Resonance 4-4",
-      "slug": "heavylifting-duty",
-      "name": "Heavylifting Duty",
-      "params": ["25%", "50%", "5", "15"],
-      "description": "When Taoqi successfully triggers Heavy Attack <strong>Strategic Parry</strong>, she restores {0} HP and increases her DEF by {1} for {2}s. This can be triggered once every {3}s."
-    },
-    {
-      "idx": "Resonance 5-4",
-      "slug": "benevolent-guardian",
-      "name": "Benevolent Guardian",
-      "params": ["50%", "20"],
-      "description": "The damage of Forte Circuit <strong>Power Shift</strong> is increased by {0}. When Forte Circuit <strong>Power Shift</strong> hits a target, restore {1} Resonance Energy."
-    },
-    {
-      "idx": "Resonance 6-4",
-      "slug": "defender-of-peace",
-      "name": "Defender of Peace",
-      "params": ["40%"],
-      "description": "The damage of Taoqi's Basic Attack and Heavy Attack is increased by {0} while the Shield granted by Resonance Skill <strong>Rocksteady Shield</strong> holds."
-    }
-  ],
-  "stats": { "hp": 716, "def": 128, "atk": 18, "energy": 12500 },
   "ascensions": [
     { "cost": [], "minLevel": 0 },
     {
@@ -168,6 +55,14 @@
       "minLevel": 80
     }
   ],
+  "birthday": "February 25th",
+  "birthplace": "Huanglong",
+  "description": "Taoqi is the director of border defense at the Ministry of Development. Despite her seemingly laid-back demeanor, she consistently proves to be a dependable and supportive individual, always lending her hand to those in need. Taoqi is not only a reliable colleague, but also a trustworthy friend that people can confide in.",
+  "descriptionLocalized": {
+    "vi": "Taoqi là giám đốc phòng thủ biên giới của Bộ Phát triển. Mặc dù có thái độ có vẻ thoải mái nhưng cô ấy luôn chứng tỏ mình là một người đáng tin cậy và luôn hỗ trợ, luôn giúp đỡ những người gặp khó khăn. Taoqi không chỉ là một đồng nghiệp đáng tin cậy mà còn là một người bạn đáng tin cậy mà mọi người có thể tâm sự.",
+    "id": "Taoqi adalah direktur pertahanan perbatasan di Kementerian Pengembangan. Terlepas dari sikapnya yang tampak santai, dia secara konsisten membuktikan dirinya sebagai individu yang dapat diandalkan dan mendukung, selalu mengulurkan tangannya kepada mereka yang membutuhkan. Taoqi bukan hanya kolega yang dapat diandalkan, tetapi juga teman yang dapat dipercaya yang dapat dipercaya orang.",
+    "th": "เต้าฉีเป็นผู้อำนวยการฝ่ายป้องกันชายแดนที่กระทรวงพัฒนา แม้เธอจะดูเหมือนเป็นคนขี้เล่น แต่เธอก็พิสูจน์ให้เห็นว่าเป็นคนน่าเชื่อถือและให้การสนับสนุนเสมอ เธอพร้อมจะยื่นมือช่วยเหลือคนที่ต้องการความช่วยเหลือ เต้าฉีไม่เพียงแต่เป็นเพื่อนร่วมงานที่ไว้ใจได้ แต่ยังเป็นเพื่อนที่ไว้ใจได้อีกด้วย ที่คนสามารถไว้ใจได้"
+  },
   "forte": [
     {
       "id": 233,
@@ -246,6 +141,111 @@
       "name": "Havoc DMG Bonus+4.20%"
     }
   ],
-  "birthday": "February 25th",
-  "birthplace": "Huanglong"
+  "quote": "Phew... All set. Time for a little break.",
+  "quoteLocalized": {
+    "vi": "Phù... Đã xong. Đã đến lúc nghỉ ngơi một chút.",
+    "id": "Hah... Siap. Saatnya istirahat sebentar.",
+    "th": "Phew... Selesai. Waktu untuk istirahat sebentar."
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance I-IV",
+      "slug": "essense-of-tranquility",
+      "name": "Essense of Tranquility",
+      "params": ["40%"],
+      "description": "Forte Circuit <strong>Power Shift</strong>'s Shield is increased by {0}."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "silent-strength",
+      "name": "Silent Strength",
+      "params": ["20%", "20%"],
+      "description": "The Crit. Rate and Crit. DMG of Resonance Liberation <strong>Unmovable</strong> is increased by {0} and {1}, respectively."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "keen-eyed-observer",
+      "name": "Keen-eyed Observer",
+      "params": ["30"],
+      "description": "The duration of Resonance Skill <strong>Rocksteady Shield</strong> is extended to {0}s."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "heavylifting-duty",
+      "name": "Heavylifting Duty",
+      "params": ["25%", "50%", "5", "15"],
+      "description": "When Taoqi successfully triggers Heavy Attack <strong>Strategic Parry</strong>, she restores {0} HP and increases her DEF by {1} for {2}s. This can be triggered once every {3}s."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "benevolent-guardian",
+      "name": "Benevolent Guardian",
+      "params": ["50%", "20"],
+      "description": "The damage of Forte Circuit <strong>Power Shift</strong> is increased by {0}. When Forte Circuit <strong>Power Shift</strong> hits a target, restore {1} Resonance Energy."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "defender-of-peace",
+      "name": "Defender of Peace",
+      "params": ["40%"],
+      "description": "The damage of Taoqi's Basic Attack and Heavy Attack is increased by {0} while the Shield granted by Resonance Skill <strong>Rocksteady Shield</strong> holds."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "concealed-edge",
+      "name": "Concealed Edge",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\r\nTaoqi performs up to 4 continuous attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Heavy Attack</strong>\r\nTaoqi consumes Stamina and enters <strong>Rocksteady Defense</strong> state.\r\n \r\n<strong>Rocksteady Defense</strong>\r\nTaoqi's damage taken is reduced by <strong class=\"color-havoc\">35%</strong>;\r\n-When Taoqi is attacked during <strong>Rocksteady Defense</strong>, she will cat <strong>Strategic Parry</strong>;\r\n-<strong>Strategic Parry</strong> is automatically cast after <strong>Rocksteady Defense</strong> lasts for <strong class=\"color-havoc\">3</strong>s;\r\n-If Taoqi is attacked when casting Resonance Skill <strong>Rocksteady Shield</strong>, <strong>Strategic Parry</strong> is automatically cast.\r\n \r\n<strong>Strategic Parry</strong>\r\nTaoqi attacks the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Mid-air Attack</strong>\r\nTaoqi consumes Stamina to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\r\n \r\n<strong>Dodge Counter</strong>\r\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    {
+      "slug": "fortified-defense",
+      "name": "Fortified Defense",
+      "type": "Resonance Skill",
+      "description": "Taoqi deals <strong class=\"color-havoc\">Havoc DMG</strong> to surrounding targets, generating <strong class=\"color-havoc\">3</strong> Rocksteady Shield and restoring HP to Taoqi.\nIf attacked when casting <strong>Fortified Defense</strong>, <strong>Strategic Parry</strong> will be automatically cast.\n \n<strong>Rocksteady Shield</strong>\nWhen the active character is attacked, <strong class=\"color-havoc\">1</strong> <strong>Rocksteady Shield</strong> is consumed to reduce the damage taken."
+    },
+    {
+      "slug": "unmovable",
+      "name": "Unmovable",
+      "type": "Resonance Liberation",
+      "description": "Launch an attack based on Taoqi's DEF on the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    {
+      "slug": "steadfast-protection",
+      "name": "Steadfast Protection",
+      "type": "Inherent Skill",
+      "description": "During the duration of the Resonance Skill <strong>Rocksteady Shield</strong>, the Character's DEF is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong>."
+    },
+    {
+      "slug": "unyielding",
+      "name": "Unyielding",
+      "type": "Inherent Skill",
+      "description": "After <strong>Heavy Attack: Strategic Parry</strong> is successfully triggered, <strong style=\"color: var(--theme-palette-color-1);\">25</strong> Stamina is recovered."
+    },
+    {
+      "slug": "defense-formation",
+      "name": "Defense Formation",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    {
+      "slug": "power-shift",
+      "name": "Power Shift",
+      "type": "Forte Circuit",
+      "description": "<strong>Timed Counters</strong>\r\nWhen carrying \"Resolving Caliber\", use <strong>Basic Attack</strong> after <strong>Heavy Attack: Strategic Parry</strong> or <strong>Intro Skill: Defense Formation</strong> to cast <strong>Timed Counters</strong>, performing up to 3 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Basic Attack damage.\r\n<strong>Timed Counters</strong> consume <strong class=\"color-havoc\">1</strong> \"Resolving Caliber\" upon hitting an enemy to grant a shield.\r\nAfter casting the Intro Skill <strong>Defense Formation</strong>, using <strong>Basic Attack</strong> can directly cast <strong>Timed Counters</strong>.\r\n \r\n<strong>Resolving Caliber</strong>\r\nTaoqi can hold up to <strong class=\"color-havoc\">3</strong> Resolving Caliber.\r\n<strong>Basic Attack 4</strong> will consume all of Taoqi's <strong>Rocksteady Shields</strong> to obtain that many \"Resolving Caliber\".\r\nWhile <strong>Rocksteady Shield</strong> exists, when the on-field character is attacked, <strong class=\"color-havoc\">1</strong> <strong>Rocksteady Shield</strong> will be consumed, and \"Resolving Caliber\" is recovered.\r\nAfter <strong>Rocksteady Shield</strong> ends, all remaining <strong>Rocksteady Shield</strong> will be consumed to grant that many \"Resolving Caliber\"."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "iron-will",
+      "name": "Iron Will",
+      "type": "Outro Skill",
+      "description": ""
+    }
+  ],
+  "stats": { "hp": 716, "def": 128, "atk": 18, "energy": 12500 }
 }

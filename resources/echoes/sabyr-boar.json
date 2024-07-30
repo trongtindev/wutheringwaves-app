@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.836Z",
   "modifiedTime": "2024-07-09T15:18:53.138Z",
-  "slug": "sabyr-boar",
+  "publishedTime": "2024-06-28T15:43:21.836Z",
   "skill": {
     "id": 200025,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["32.00%+64", "8"]
     ],
     "description": "Summon a Sabyr Boar to headbutt the enemy into the air, dealing {0} Physical DMG.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "sabyr-boar"
 }

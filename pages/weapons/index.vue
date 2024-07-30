@@ -110,4 +110,3 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     </v-row>
   </div>
 </template>
-

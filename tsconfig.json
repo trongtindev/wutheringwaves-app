@@ -1,6 +1,4 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "exclude": ["scripts/**/*.ts"],
   "compilerOptions": {
     "types": [
       "@pinia/nuxt",
@@ -13,5 +11,7 @@
     "esModuleInterop": true,
     "noImplicitAny": false,
     "allowImportingTsExtensions": true
-  }
+  },
+  "exclude": ["scripts/**/*.ts"],
+  "extends": "./.nuxt/tsconfig.json"
 }

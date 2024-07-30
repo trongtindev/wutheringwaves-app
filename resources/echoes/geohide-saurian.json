@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.828Z",
   "modifiedTime": "2024-07-09T15:18:53.075Z",
-  "slug": "geohide-saurian",
+  "publishedTime": "2024-06-28T15:43:21.828Z",
   "skill": {
     "id": 200030,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["17.12%", "15"]
     ],
     "description": "Summon a Viridblaze Saurian to continuously spit fire, dealing {0} Fusion DMG 10 times.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "geohide-saurian"
 }

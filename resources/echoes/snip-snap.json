@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.837Z",
   "modifiedTime": "2024-07-09T15:18:53.141Z",
-  "slug": "snip-snap",
+  "publishedTime": "2024-06-28T15:43:21.837Z",
   "skill": {
     "id": 200004,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["32.00%+64", "8"]
     ],
     "description": "Summon a Snip Snap that throws fireballs at the enemy, dealing {0} Fusion DMG on-hit.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "snip-snap"
 }

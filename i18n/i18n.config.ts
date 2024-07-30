@@ -38,10 +38,10 @@ export default defineI18nConfig(() => ({
     tr: { ...tr },
     vi: { ...vi },
     uk: { ...uk },
-    zh: { ...zh }
+    zh: { ...zh },
   },
   missingWarn: false,
   fallbackWarn: false,
   warnHtmlInMessage: false,
-  warnHtmlMessage: false
+  warnHtmlMessage: false,
 }));

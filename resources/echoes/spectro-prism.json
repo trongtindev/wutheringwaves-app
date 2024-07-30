@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.837Z",
   "modifiedTime": "2024-07-09T15:18:53.145Z",
-  "slug": "spectro-prism",
+  "publishedTime": "2024-06-28T15:43:21.837Z",
   "skill": {
     "id": 200010,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["8", "14.40%", "8"]
     ],
     "description": "Summon a Spectro Prism to emit a laser that hits the enemy up to {0} times, dealing {1} Spectro DMG each time.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "spectro-prism"
 }

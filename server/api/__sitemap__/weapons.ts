@@ -8,11 +8,11 @@ export default defineSitemapEventHandler(() => {
         images: [
           {
             loc: `/weapons/icons/${e.slug}.webp`,
-            title: `${e.name} avatar`
-          }
+            title: `${e.name} avatar`,
+          },
         ],
         lastmod: e.modifiedTime,
-        _i18nTransform: true
+        _i18nTransform: true,
       });
     })
     .flatMap((e) => e);

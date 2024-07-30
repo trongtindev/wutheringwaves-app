@@ -7,14 +7,14 @@ import type { IListResponse } from '~/interfaces/api';
 export default defineEventHandler(async (event) => {
   const { SITE_URL, API_URL } = useRuntimeConfig().public;
   const request = axios.create({
-    baseURL: API_URL
+    baseURL: API_URL,
   });
   axiosRetry(request);
 
   const feed = new RSS({
     title: 'WutheringWaves.app',
     site_url: SITE_URL,
-    feed_url: `${SITE_URL}/guides/rss`
+    feed_url: `${SITE_URL}/guides/rss`,
   });
 
   const result = await request.get<IListResponse<IPost>>('posts');
@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
       title: item.title,
       url: `${SITE_URL}/guides/${item.slug}`,
       description: item.description,
-      date: item.createdAt
+      date: item.createdAt,
     });
   }
 

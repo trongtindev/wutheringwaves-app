@@ -27,12 +27,12 @@ const initialize = () => {
         selector: {
           playerId: account.active,
           qualityLevel: {
-            $gte: 4
-          }
-        }
+            $gte: 4,
+          },
+        },
       })
       .sort({
-        createdAt: 'desc'
+        createdAt: 'desc',
       })
       .limit(5)
       .exec()

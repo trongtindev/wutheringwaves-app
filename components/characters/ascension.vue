@@ -43,7 +43,7 @@ if (props.data.ascensions) {
 
     <v-card-text
       v-for="(ascension, index) in data.ascensions.filter(
-        (e) => e.cost.length > 0
+        (e) => e.cost.length > 0,
       )"
       :key="index"
     >

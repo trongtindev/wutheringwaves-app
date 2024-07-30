@@ -21,20 +21,20 @@ const chartInitialized = ref(false);
 const types = ref([
   {
     name: 'Featured resonator',
-    cardPoolType: CardPoolType['featured-resonator']
+    cardPoolType: CardPoolType['featured-resonator'],
   },
   {
     name: 'Featured weapon',
-    cardPoolType: CardPoolType['featured-weapon']
+    cardPoolType: CardPoolType['featured-weapon'],
   },
   {
     name: 'Standard resonator',
-    cardPoolType: CardPoolType['standard-resonator']
+    cardPoolType: CardPoolType['standard-resonator'],
   },
   {
     name: 'Standard weapon',
-    cardPoolType: CardPoolType['standard-weapon']
-  }
+    cardPoolType: CardPoolType['standard-weapon'],
+  },
 ]);
 const filterType = ref<number>();
 const filterBanner = ref<string>();
@@ -43,7 +43,7 @@ const filterBanner = ref<string>();
 const summary = computed(() => {
   if (displayBanner.value && summaryData.value) {
     return summaryData.value.find(
-      (e) => e.banner === displayBanner.value!.name
+      (e) => e.banner === displayBanner.value!.name,
     );
   }
   return undefined;
@@ -54,7 +54,7 @@ const bannerType = computed(() => {
     if (
       [
         CardPoolType['featured-weapon'],
-        CardPoolType['standard-weapon']
+        CardPoolType['standard-weapon'],
       ].includes(displayBanner.value.type)
     ) {
       return 'weapons';
@@ -149,7 +149,7 @@ const fiveStarList = computed(() => {
       const slug = urlSlug(e.item);
       return {
         ...e,
-        icon: `/${e.resourceType == 'Weapon' ? 'weapons' : 'characters'}/icons/${slug}.webp`
+        icon: `/${e.resourceType == 'Weapon' ? 'weapons' : 'characters'}/icons/${slug}.webp`,
       };
     });
   }
@@ -162,7 +162,7 @@ const fourStarList = computed(() => {
       const slug = urlSlug(e.item);
       return {
         ...e,
-        icon: `/${e.resourceType == 'Weapon' ? 'weapons' : 'characters'}/icons/${slug}.webp`
+        icon: `/${e.resourceType == 'Weapon' ? 'weapons' : 'characters'}/icons/${slug}.webp`,
       };
     });
   }
@@ -220,7 +220,7 @@ watch(
     if (activeBanners.value.length > 0) {
       filterBanner.value = activeBanners.value[0].name;
     }
-  }
+  },
 );
 
 watch(() => filterBanner.value, initialize);
@@ -237,7 +237,7 @@ onNuxtReady(async () => {
     PointElement,
     LineElement,
     CategoryScale,
-    LinearScale
+    LinearScale,
   } = await import('chart.js');
 
   ChartJS.register(
@@ -248,7 +248,7 @@ onNuxtReady(async () => {
     PointElement,
     LineElement,
     CategoryScale,
-    LinearScale
+    LinearScale,
   );
   chartInitialized.value = true;
 });
@@ -262,7 +262,7 @@ useHead({ title });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -273,8 +273,8 @@ useSeoMeta({
       :items="[
         {
           to: '/convene-history',
-          title: i18n.t('convene.history.title')
-        }
+          title: i18n.t('convene.history.title'),
+        },
       ]"
     />
 
@@ -447,7 +447,7 @@ useSeoMeta({
             <Line
               id="pullByDay"
               :options="{
-                responsive: true
+                responsive: true,
               }"
               :data="{
                 labels: pbdLabels,
@@ -456,9 +456,9 @@ useSeoMeta({
                     label: i18n.t('common.pullByDay'),
                     backgroundColor: '#4e7cff',
                     borderColor: '#4e7cff',
-                    data: pbdDatasets
-                  }
-                ]
+                    data: pbdDatasets,
+                  },
+                ],
               }"
             />
           </v-card-text>
@@ -473,12 +473,12 @@ useSeoMeta({
                 responsive: true,
                 scales: {
                   x: {
-                    stacked: true
+                    stacked: true,
                   },
                   y: {
-                    stacked: false
-                  }
-                }
+                    stacked: false,
+                  },
+                },
               }"
               :data="{
                 labels: rateLabels,
@@ -488,15 +488,15 @@ useSeoMeta({
                     data: rateDatasets[0],
                     label: i18n.t('convene.global.chance'),
                     backgroundColor: '#4e7cff',
-                    borderColor: '#4e7cff'
+                    borderColor: '#4e7cff',
                   },
                   {
                     type: 'bar',
                     data: rateDatasets[1],
                     label: i18n.t('common.totalPull'),
-                    backgroundColor: '#ffb13f'
-                  }
-                ]
+                    backgroundColor: '#ffb13f',
+                  },
+                ],
               }"
             />
           </v-card-text>
@@ -511,12 +511,12 @@ useSeoMeta({
                 responsive: true,
                 scales: {
                   x: {
-                    stacked: true
+                    stacked: true,
                   },
                   y: {
-                    stacked: true
-                  }
-                }
+                    stacked: true,
+                  },
+                },
               }"
               :data="{
                 labels: rcLabels,
@@ -524,44 +524,44 @@ useSeoMeta({
                   {
                     data: rcDatasets[0],
                     label: 'S0',
-                    backgroundColor: '#dddddd'
+                    backgroundColor: '#dddddd',
                   },
                   {
                     data: rcDatasets[1],
                     label: 'S1',
-                    backgroundColor: '#f24a72'
+                    backgroundColor: '#f24a72',
                   },
                   {
                     data: rcDatasets[2],
                     label: 'S2',
-                    backgroundColor: '#fdaf75'
+                    backgroundColor: '#fdaf75',
                   },
                   {
                     data: rcDatasets[3],
                     label: 'S3',
-                    backgroundColor: '#eaea7f'
+                    backgroundColor: '#eaea7f',
                   },
                   {
                     data: rcDatasets[4],
                     label: 'S4',
-                    backgroundColor: '#6cc4a1'
+                    backgroundColor: '#6cc4a1',
                   },
                   {
                     data: rcDatasets[5],
                     label: 'S5',
-                    backgroundColor: '#4d96ff'
+                    backgroundColor: '#4d96ff',
                   },
                   {
                     data: rcDatasets[6],
                     label: 'S6',
-                    backgroundColor: '#ff6fb5'
+                    backgroundColor: '#ff6fb5',
                   },
                   {
                     data: rcDatasets[7],
                     label: '> S6',
-                    backgroundColor: '#ab46d2'
-                  }
-                ]
+                    backgroundColor: '#ab46d2',
+                  },
+                ],
               }"
             />
           </v-card-text>

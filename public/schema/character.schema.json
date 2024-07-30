@@ -1,7 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Character",
-  "type": "object",
   "properties": {
     "birthday": { "type": "string" },
     "birthplace": { "type": "string" },
@@ -227,5 +225,7 @@
         }
       ]
     }
-  }
+  },
+  "title": "Character",
+  "type": "object"
 }

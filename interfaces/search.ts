@@ -5,7 +5,7 @@ export enum SearchResultType {
   'character',
   'weapon',
   'trophy',
-  'echo'
+  'echo',
 }
 
 export interface ISearchResult {

@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.827Z",
   "modifiedTime": "2024-07-09T15:18:53.064Z",
-  "slug": "fission-junrock",
+  "publishedTime": "2024-06-28T15:43:21.827Z",
   "skill": {
     "id": 200003,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["2%", "15"]
     ],
     "description": "Summon a Fission Junrock. Generate a Resonance Effect that restores {0} HP for friendly units each time. If not in combat, you can pick up minerals or plants nearby.\n\nCD: {1}s"
-  }
+  },
+  "slug": "fission-junrock"
 }

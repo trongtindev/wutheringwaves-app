@@ -23,7 +23,7 @@ const onPressedConfirm = async (confirm?: boolean) => {
       color: 'warning',
       title: i18n.t('settings.eraseData.confirm.title'),
       content: i18n.t('settings.eraseData.confirm.message'),
-      onConfirm: () => onPressedConfirm(true)
+      onConfirm: () => onPressedConfirm(true),
     });
     return;
   }

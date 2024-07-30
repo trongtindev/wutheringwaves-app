@@ -26,7 +26,7 @@ export const useNotification = defineStore('useNotification', () => {
 
     floatItems.value[index] = {
       ...floatItems.value[index],
-      ...args
+      ...args,
     };
   };
 
@@ -34,7 +34,7 @@ export const useNotification = defineStore('useNotification', () => {
     id: string,
     options?: {
       floatOnly?: boolean;
-    }
+    },
   ) => {
     options ??= {};
 
@@ -53,6 +53,6 @@ export const useNotification = defineStore('useNotification', () => {
     floatItems,
     create,
     update,
-    remove
+    remove,
   };
 });

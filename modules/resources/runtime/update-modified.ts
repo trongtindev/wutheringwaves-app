@@ -6,7 +6,7 @@ const rootDir = path.resolve('./resources');
 const formatCode = async (file: string) => {
   return new Promise((resolve, reject) => {
     const process = exec(`npx prettier ${file} --write`, {
-      cwd: path.resolve(__dirname, '../')
+      cwd: path.resolve(__dirname, '../'),
     });
     process.on('error', reject);
     process.on('exit', resolve);

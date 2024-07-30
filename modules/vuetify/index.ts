@@ -5,8 +5,8 @@ export default defineNuxtModule({
   meta: {
     name: 'vuetify',
     compatibility: {
-      nuxt: '>=3.0.0'
-    }
+      nuxt: '>=3.0.0',
+    },
   },
   setup: (options, nuxt) => {
     nuxt.options.build.transpile.push('vuetify');
@@ -30,9 +30,9 @@ export default defineNuxtModule({
           // styles: {
           //   configFile: './assets/settings.scss'
           // },
-          autoImport: true
-        })
+          autoImport: true,
+        }),
       );
-    }
-  }
+    },
+  },
 });

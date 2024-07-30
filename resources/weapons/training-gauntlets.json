@@ -1,12 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.064Z",
-  "modifiedTime": "2024-07-09T15:18:08.537Z",
-  "slug": "training-gauntlets",
-  "skill": {
-    "params": [["4%"], ["5%"], ["6%"], ["7%"], ["8%"]],
-    "description": "Increases ATK by {0}."
-  },
-  "stats": { "atk": 20 },
   "ascensions": [
     {
       "cost": [
@@ -49,11 +41,19 @@
     }
   ],
   "description": "These gauntlets is designed specifically for training and teaching, offering only the basic features.",
+  "modifiedTime": "2024-07-09T15:18:08.537Z",
+  "publishedTime": "2024-06-28T15:43:22.064Z",
   "ranks": [
     "Increases ATK by 5%",
     "Increases ATK by 6%",
     "Increases ATK by 7%",
     "Increases ATK by 8%",
     "Increases ATK by 9%"
-  ]
+  ],
+  "skill": {
+    "params": [["4%"], ["5%"], ["6%"], ["7%"], ["8%"]],
+    "description": "Increases ATK by {0}."
+  },
+  "slug": "training-gauntlets",
+  "stats": { "atk": 20 }
 }

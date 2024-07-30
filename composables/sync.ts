@@ -29,7 +29,7 @@ export const useSync = defineStore('useSync', () => {
 
     console.log('useSync', 'initialize', {
       lastLocalChanged: lastLocalChanged.value,
-      lastCloudChanged: lastCloudChanged.value
+      lastCloudChanged: lastCloudChanged.value,
     });
   };
 
@@ -42,7 +42,7 @@ export const useSync = defineStore('useSync', () => {
       : 0;
     console.debug('useSync', 'check', {
       lastLocalChanged: lastLocalChanged.value,
-      lastCloudChanged: lastCloudChanged.value
+      lastCloudChanged: lastCloudChanged.value,
     });
 
     if (lastCloudChanged.value && !lastLocalChanged.value) {
@@ -55,7 +55,7 @@ export const useSync = defineStore('useSync', () => {
         cancelButtonText: i18n.t('sync.conflict.useLocalData'),
         confirmButtonText: i18n.t('sync.conflict.useCloudData'),
         onCancel: () => push(),
-        onConfirm: () => pull()
+        onConfirm: () => pull(),
       });
     } else if (lastCloudChanged.value != lastLocalChanged.value) {
       push();
@@ -72,7 +72,7 @@ export const useSync = defineStore('useSync', () => {
     const db = await database.getInstance();
     const json = await db.exportJSON();
     const response = await api.post<ISyncPush>('sync/push', {
-      data: JSON.stringify(json)
+      data: JSON.stringify(json),
     });
 
     const time = new Date(response.data.createdAt).getTime();
@@ -80,7 +80,7 @@ export const useSync = defineStore('useSync', () => {
     lastLocalChanged.value = time;
 
     snackbar.show({
-      content: i18n.t('sync.dataSynced')
+      content: i18n.t('sync.dataSynced'),
     });
   };
 
@@ -94,8 +94,8 @@ export const useSync = defineStore('useSync', () => {
     state.value = 'restore';
     const response = await api.get<ISyncPull>('sync/pull', {
       params: {
-        withData: true
-      }
+        withData: true,
+      },
     });
 
     try {
@@ -142,14 +142,14 @@ export const useSync = defineStore('useSync', () => {
     () => auth.isLoggedIn,
     () => {
       if (auth.isLoggedIn && database.isInitialized) checkDebounce();
-    }
+    },
   );
 
   watch(
     () => database.isInitialized,
     () => {
       if (database.isInitialized && auth.isLoggedIn) checkDebounce();
-    }
+    },
   );
 
   watch(
@@ -157,7 +157,7 @@ export const useSync = defineStore('useSync', () => {
     () => {
       lastLocalChanged.value = new Date().getTime();
       if (auth.isLoggedIn) checkDebounce();
-    }
+    },
   );
 
   // lifecycle
@@ -170,6 +170,6 @@ export const useSync = defineStore('useSync', () => {
     lastCloudChanged,
     pull,
     push,
-    eraseAll
+    eraseAll,
   };
 });

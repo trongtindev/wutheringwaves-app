@@ -2,7 +2,7 @@ import type {
   RxDocument,
   RxCollection,
   RxJsonSchema,
-  MangoQuerySelector
+  MangoQuerySelector,
 } from 'rxdb';
 
 export type ConveneDocType = {
@@ -48,17 +48,17 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
   },
   deleteMany: async function (
     this: ConveneCollection,
-    selector: MangoQuerySelector<ConveneDocType>
+    selector: MangoQuerySelector<ConveneDocType>,
   ) {
     const docs = await this.find({
-      selector
+      selector,
     }).exec();
     await Promise.all(
       docs.map((e) => {
         return e.remove();
-      })
+      }),
     );
-  }
+  },
 };
 
 export const conveneSchema: RxJsonSchema<ConveneDocType> = {
@@ -69,35 +69,35 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
   properties: {
     _id: {
       type: 'string',
-      maxLength: 50
+      maxLength: 50,
     },
     playerId: {
-      type: 'string'
+      type: 'string',
     },
     cardPoolType: {
-      type: 'number'
+      type: 'number',
     },
     qualityLevel: {
-      type: 'number'
+      type: 'number',
     },
     resourceType: {
-      type: 'string'
+      type: 'string',
     },
     name: {
-      type: 'string'
+      type: 'string',
     },
     time: {
-      type: 'string'
+      type: 'string',
     },
     pity: {
-      type: 'number'
+      type: 'number',
     },
     win: {
-      type: 'boolean'
+      type: 'boolean',
     },
     createdAt: {
-      type: 'number'
-    }
+      type: 'number',
+    },
   },
   required: [
     '_id',
@@ -106,6 +106,6 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     'qualityLevel',
     'resourceType',
     'name',
-    'time'
-  ]
+    'time',
+  ],
 };

@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.055Z",
-  "modifiedTime": "2024-07-09T15:18:08.491Z",
-  "slug": "hollow-mirage",
-  "skill": {
-    "params": [
-      ["3", "3%", "3", "1"],
-      ["3", "3.5%", "3", "1"],
-      ["3", "4%", "3", "1"],
-      ["3", "4.5%", "3", "1"],
-      ["3", "5%", "3", "1"]
-    ],
-    "description": "When Resonance Liberation is released, grants {0} stack(s) of Iron Armor. Each stack increases ATK and DEF by {1}, stacking up to {2} time(s). When the Resonator takes damage, reduces the number of stacks by {3}."
-  },
-  "stats": { "atk": 33 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "The Gauntlets born from the strange phenomenon in the sky. The blacksmith infused the feelings of witnessing the strange star into the weapon, making it look hollow and light, but it can exert a tremendous momentum while protecting the user.",
+  "modifiedTime": "2024-07-09T15:18:08.491Z",
+  "publishedTime": "2024-06-28T15:43:22.055Z",
   "ranks": [
     "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 3%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
     "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 3.5%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
     "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 4%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
     "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 4.5%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
     "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and defense by 5%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["3", "3%", "3", "1"],
+      ["3", "3.5%", "3", "1"],
+      ["3", "4%", "3", "1"],
+      ["3", "4.5%", "3", "1"],
+      ["3", "5%", "3", "1"]
+    ],
+    "description": "When Resonance Liberation is released, grants {0} stack(s) of Iron Armor. Each stack increases ATK and DEF by {1}, stacking up to {2} time(s). When the Resonator takes damage, reduces the number of stacks by {3}."
+  },
+  "slug": "hollow-mirage",
+  "stats": { "atk": 33 }
 }

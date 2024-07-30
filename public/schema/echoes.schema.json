@@ -1,7 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "title": "Echos",
   "properties": {
     "items": {
       "type": "array",
@@ -61,5 +59,7 @@
       }
     }
   },
-  "required": ["items"]
+  "required": ["items"],
+  "title": "Echos",
+  "type": "object"
 }

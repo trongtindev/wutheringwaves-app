@@ -17,7 +17,7 @@ export type UserRole =
 
 export enum UserRoleColor {
   Owner = '#ff0000',
-  Manager = ''
+  Manager = '',
 }
 
 export interface IUserRole {

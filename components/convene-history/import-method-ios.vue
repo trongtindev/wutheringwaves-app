@@ -16,7 +16,7 @@ const sampleJSON = ref({
   serverId: 'f7f187161ce9dea7b8d091b2214db191',
   cardPoolId: 'c646aadfe1ad61b9c50654ff43b2a832',
   cardPoolType: 1,
-  languageCode: 'en'
+  languageCode: 'en',
 });
 
 // computed
@@ -39,7 +39,7 @@ const canImport = computed<boolean>(() => {
 // events
 const onPressedDownload = () => {
   window.open(
-    'https://apps.apple.com/us/app/stream-network-debug-tool/id1312141691'
+    'https://apps.apple.com/us/app/stream-network-debug-tool/id1312141691',
   );
 };
 
@@ -47,7 +47,7 @@ const onPressedImport = () => {
   // convert json to URL
   const parse = JSON.parse(json.value);
   const uri = new URL(
-    'https://aki-gm-resources-oversea.aki-game.net/aki/gacha/index.html#/record'
+    'https://aki-gm-resources-oversea.aki-game.net/aki/gacha/index.html#/record',
   );
   uri.searchParams.set('record_id', parse.recordId);
   uri.searchParams.set('player_id', parse.playerId);

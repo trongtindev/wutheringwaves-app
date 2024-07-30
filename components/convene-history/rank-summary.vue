@@ -63,7 +63,7 @@ const calculatorLuckiness = () => {};
 // changes
 watch(
   () => props.convenes,
-  () => calculatorPulls()
+  () => calculatorPulls(),
 );
 
 // lifecycle
@@ -83,7 +83,7 @@ onNuxtReady(initialize);
           <v-list-item-subtitle>
             {{
               $t('convene.rank.more', {
-                percentage: formatNumber(totalPullPercentage)
+                percentage: formatNumber(totalPullPercentage),
               })
             }}
           </v-list-item-subtitle>

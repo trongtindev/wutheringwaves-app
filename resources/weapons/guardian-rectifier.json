@@ -1,12 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.054Z",
-  "modifiedTime": "2024-07-09T15:18:08.486Z",
-  "slug": "guardian-rectifier",
-  "skill": {
-    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
-    "description": "Increases Basic Attack and Heavy Attack DMG Bonus by {0}."
-  },
-  "stats": { "atk": 26 },
   "ascensions": [
     {
       "cost": [
@@ -58,11 +50,19 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "The first Jinzhou Magistrate, in memory of the mysterious person who helped defend the border and build the city, created the Guardian series under his guidance. Today, it has become the cornerstone of the development of new weapons.",
+  "modifiedTime": "2024-07-09T15:18:08.486Z",
+  "publishedTime": "2024-06-28T15:43:22.054Z",
   "ranks": [
     "Increases Basic Attack and Heavy Attack DMG Bonus by 12%.",
     "Increases Basic Attack and Heavy Attack DMG Bonus by 15%.",
     "Increases Basic Attack and Heavy Attack DMG Bonus by 18%.",
     "Increases Basic Attack and Heavy Attack DMG Bonus by 21%.",
     "Increases Basic Attack and Heavy Attack DMG Bonus by 24%."
-  ]
+  ],
+  "skill": {
+    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
+    "description": "Increases Basic Attack and Heavy Attack DMG Bonus by {0}."
+  },
+  "slug": "guardian-rectifier",
+  "stats": { "atk": 26 }
 }

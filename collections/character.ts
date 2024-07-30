@@ -2,7 +2,7 @@ import type {
   RxDocument,
   RxCollection,
   RxJsonSchema,
-  MangoQuerySelector
+  MangoQuerySelector,
 } from 'rxdb';
 
 export type CharacterDocType = {
@@ -45,17 +45,17 @@ export const characterCollectionMethods: CharacterCollectionMethods = {
   },
   deleteMany: async function (
     this: CharacterCollection,
-    selector: MangoQuerySelector<CharacterDocType>
+    selector: MangoQuerySelector<CharacterDocType>,
   ) {
     const docs = await this.find({
-      selector
+      selector,
     }).exec();
     await Promise.all(
       docs.map((e) => {
         return e.remove();
-      })
+      }),
     );
-  }
+  },
 };
 
 export const characterSchema: RxJsonSchema<CharacterDocType> = {
@@ -66,26 +66,26 @@ export const characterSchema: RxJsonSchema<CharacterDocType> = {
   properties: {
     key: {
       type: 'string',
-      maxLength: 100
+      maxLength: 100,
     },
     name: {
       type: 'string',
-      maxLength: 100
+      maxLength: 100,
     },
     resonanceChain: {
       type: 'string',
-      default: 0
+      default: 0,
     },
     obtainedAt: {
-      type: 'number'
+      type: 'number',
     },
     playerId: {
       type: 'string',
-      default: 0
+      default: 0,
     },
     createdAt: {
-      type: 'number'
-    }
+      type: 'number',
+    },
   },
-  required: ['key', 'name', 'resonanceChain', 'obtainedAt', 'playerId']
+  required: ['key', 'name', 'resonanceChain', 'obtainedAt', 'playerId'],
 };

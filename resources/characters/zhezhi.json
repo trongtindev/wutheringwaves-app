@@ -1,18 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "quote": "What I wanted to say is, the sunlight on you right now is so beautiful. Can I ... paint you?",
-  "quoteLocalized": {
-    "vi": "Điều tôi muốn nói là, ánh nắng trên bạn lúc này thật đẹp. Tôi có thể... vẽ bạn chứ?"
-  },
-  "description": "Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft. She's not very eloquent, but her persistence and love for painting speak volumes.",
-  "descriptionLocalized": {
-    "vi": "Zhezhi là một họa sĩ được ủy thác, im lặng và nhút nhát với sự cống hiến cho đồ nghề của mình. Cô ấy không hùng biện lắm, nhưng sự kiên trì và yêu thích hội họa của cô ấy đã nói lên nhiều."
-  },
-  "stats": {
-    "atk": 375,
-    "def": 1198,
-    "hp": 12250
-  },
   "ascensions": [
     {
       "cost": [
@@ -66,5 +53,18 @@
       ],
       "minLevel": 80
     }
-  ]
+  ],
+  "description": "Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft. She's not very eloquent, but her persistence and love for painting speak volumes.",
+  "descriptionLocalized": {
+    "vi": "Zhezhi là một họa sĩ được ủy thác, im lặng và nhút nhát với sự cống hiến cho đồ nghề của mình. Cô ấy không hùng biện lắm, nhưng sự kiên trì và yêu thích hội họa của cô ấy đã nói lên nhiều."
+  },
+  "quote": "What I wanted to say is, the sunlight on you right now is so beautiful. Can I ... paint you?",
+  "quoteLocalized": {
+    "vi": "Điều tôi muốn nói là, ánh nắng trên bạn lúc này thật đẹp. Tôi có thể... vẽ bạn chứ?"
+  },
+  "stats": {
+    "atk": 375,
+    "def": 1198,
+    "hp": 12250
+  }
 }

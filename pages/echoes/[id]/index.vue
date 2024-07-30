@@ -38,7 +38,7 @@ const relatedEchoes = computed(() => {
 const title = `${i18n.t('common.echo')}: ${nameLocalized.value}`;
 const description = i18n.t('meta.echoes.id.description', {
   name: nameLocalized.value,
-  rarity: item.class
+  rarity: item.class,
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/echoes/icons/${item.slug}.webp`;
 
@@ -51,7 +51,7 @@ useSeoMeta({
   ogDescription: description,
   ogImage,
   articlePublishedTime: item.publishedTime,
-  articleModifiedTime: item.modifiedTime
+  articleModifiedTime: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -59,7 +59,7 @@ useJsonld({
   headline: title,
   thumbnailUrl: ogImage,
   dateCreated: item.publishedTime,
-  datePublished: item.modifiedTime
+  datePublished: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -68,8 +68,8 @@ useJsonld({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
-    name: 'Wuthering Waves'
-  }
+    name: 'Wuthering Waves',
+  },
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -79,10 +79,10 @@ useJsonld({
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: useRuntimeConfig().public.SITE_URL
+      item: useRuntimeConfig().public.SITE_URL,
     },
-    { '@type': 'ListItem', position: 2, name: i18n.t('echoes.title') }
-  ]
+    { '@type': 'ListItem', position: 2, name: i18n.t('echoes.title') },
+  ],
 });
 
 // https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since

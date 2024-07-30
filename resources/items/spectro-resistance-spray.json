@@ -1,6 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.003Z",
-  "modifiedTime": "2024-07-09T15:18:54.257Z",
+  "bgDescription": "A pressurized canister spray filled using an advanced process that creates a special protective layer on the user's body surface to increase resistance to specified types of injuries.",
   "description": "Increases all party members' Spectro DMG RES by 15%, lasting for 180s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
-  "bgDescription": "A pressurized canister spray filled using an advanced process that creates a special protective layer on the user's body surface to increase resistance to specified types of injuries."
+  "modifiedTime": "2024-07-09T15:18:54.257Z",
+  "publishedTime": "2024-06-28T15:43:22.003Z"
 }

@@ -6,7 +6,7 @@ import {
   mdiReload,
   mdiLinkVariantOff,
   mdiLinkVariantPlus,
-  mdiOpenInNew
+  mdiOpenInNew,
 } from '@mdi/js';
 
 // uses
@@ -59,11 +59,11 @@ const onPressedLink = () => {
     .post(
       '/users/me/link',
       {
-        code: verifyCode.value
+        code: verifyCode.value,
       },
       {
-        handleError: true
-      }
+        handleError: true,
+      },
     )
     .then(async () => {
       await role.refreshRoles();
@@ -77,7 +77,7 @@ const onPressedUnlink = () => {
   status.value = 'unlink';
   api
     .delete('/users/me/link', {
-      handleError: true
+      handleError: true,
     })
     .then(() => {
       role.roles = null;
@@ -150,7 +150,7 @@ const onPressedRefreshRoles = () => {
         <base-alert
           :text="
             $t('settings.roles.setupGuide1', {
-              name: DISCORD_BOT_NAME
+              name: DISCORD_BOT_NAME,
             })
           "
           class="mb-2"

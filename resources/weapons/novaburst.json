@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.057Z",
-  "modifiedTime": "2024-07-09T15:18:08.504Z",
-  "slug": "novaburst",
-  "skill": {
-    "params": [
-      ["4%", "8", "3"],
-      ["5%", "8", "3"],
-      ["6%", "8", "3"],
-      ["7%", "8", "3"],
-      ["8%", "8", "3"]
-    ],
-    "description": "When the Resonator dashes or dodges, increases ATK by {0}, stacking up to {2} time(s). This effect lasts for {1}s."
-  },
-  "stats": { "atk": 33 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "Pistols born from the strange phenomena in the sky. The forager infused the weapon with the feelings from witnessing the strange star, making it look hollow and light, yet extremely stable, with the power of thunder when it fires.",
+  "modifiedTime": "2024-07-09T15:18:08.504Z",
+  "publishedTime": "2024-06-28T15:43:22.057Z",
   "ranks": [
     "When the Resonator dashes or dodges, increases ATK by 4%, stacking up to 3 time(s). This effect lasts for 8s.",
     "When the Resonator dashes or dodges, increases ATK by 5%, stacking up to 3 time(s). This effect lasts for 8s.",
     "When the Resonator dashes or dodges, increases ATK by 6%, stacking up to 3 time(s). This effect lasts for 8s.",
     "When the Resonator dashes or dodges, increases ATK by 7%, stacking up to 3 time(s). This effect lasts for 8s.",
     "When the Resonator dashes or dodges, increases ATK by 8%, stacking up to 3 time(s). This effect lasts for 8s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["4%", "8", "3"],
+      ["5%", "8", "3"],
+      ["6%", "8", "3"],
+      ["7%", "8", "3"],
+      ["8%", "8", "3"]
+    ],
+    "description": "When the Resonator dashes or dodges, increases ATK by {0}, stacking up to {2} time(s). This effect lasts for {1}s."
+  },
+  "slug": "novaburst",
+  "stats": { "atk": 33 }
 }

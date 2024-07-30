@@ -114,7 +114,7 @@ const style = computed(() => {
     :class="{
       'rounded-ts rounded-bs': prevDiff > 0,
       'rounded-be rounded-te': nextDiff > 1,
-      'border-s-md': prevDiff < 1
+      'border-s-md': prevDiff < 1,
     }"
     :style="style"
     @click="() => onPressed()"
@@ -129,7 +129,7 @@ const style = computed(() => {
       "
       :class="{
         'rounded-be rounded-te': nextDiff > 1,
-        'border-e-md': nextDiff < 1
+        'border-e-md': nextDiff < 1,
       }"
     />
 

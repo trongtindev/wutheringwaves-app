@@ -11,15 +11,15 @@ useHead({
   meta: [
     {
       name: 'robots',
-      content: 'noindex'
-    }
-  ]
+      content: 'noindex',
+    },
+  ],
 });
 
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 

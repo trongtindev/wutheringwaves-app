@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.835Z",
   "modifiedTime": "2024-07-09T15:18:53.129Z",
-  "slug": "phantom-rocksteady-guardian",
+  "publishedTime": "2024-06-28T15:43:21.835Z",
   "skill": {
     "id": 201022,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["8.29%", "5.52%", "4.59%", "15"]
     ],
     "description": "Transform into Rocksteady Guardian and enter a Parry State. Upon being attacked, deal Spectro DMG equal to {0} of the current character's Max HP, and perform a follow-up attack that deals Spectro DMG equal to {0} of the current character's Max HP.\n \nUse the Echo skill again to exit the transformation.\n \nIf the attack received is a <color=Highlight>Special Skill</color> attack, interrupt the enemy's <color=Highlight>Special Skill</color>, gain a Shield equal to 30% Max HP, and perform a two-stage follow-up attack, each inflicting Spectro DMG equal to {1} of the current character's max HP. These follow-up attacks simultaneously launch three ground-breaking waves, each inflicting Spectro DMG equal to {2} of the current character's Max HP.\n \nCD: {3}s</color>"
-  }
+  },
+  "slug": "phantom-rocksteady-guardian"
 }

@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.050Z",
-  "modifiedTime": "2024-07-09T15:18:08.453Z",
-  "slug": "broadblade-41",
-  "skill": {
-    "params": [
-      ["80%", "12%", "40%", "5%", "8", "1"],
-      ["80%", "15%", "50%", "6.25%", "8", "1"],
-      ["80%", "18%", "60%", "7.5%", "8", "1"],
-      ["80%", "21%", "70%", "8.75%", "8", "1"],
-      ["80%", "24%", "80%", "10%", "8", "1"]
-    ],
-    "description": "When the Resonator's HP is above {0}, increases ATK by {1}. When the Resonator's HP is below {2}, restores their HP by {3} for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered {5} time(s) every {4}s."
-  },
-  "stats": { "atk": 33, "energy": 720 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "Improved version of a mass-produced broadblade model developed in Huanglong. With its formidable performance and innovative technologies, this broadblade carries a weight only to be wielded by seasoned warriors.",
+  "modifiedTime": "2024-07-09T15:18:08.453Z",
+  "publishedTime": "2024-06-28T15:43:22.050Z",
   "ranks": [
     "When the Resonator's HP is above 80%, increases ATK by 12%. When the Resonator's HP is below 40%, restores their HP by 5% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
     "When the Resonator's HP is above 80%, increases ATK by 15%. When the Resonator's HP is below 50%, restores their HP by 6.25% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
     "When the Resonator's HP is above 80%, increases ATK by 18%. When the Resonator's HP is below 60%, restores their HP by 7.5% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
     "When the Resonator's HP is above 80%, increases ATK by 21%. When the Resonator's HP is below 70%, restores their HP by 8.75% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s.",
     "When the Resonator's HP is above 80%, increases ATK by 24%. When the Resonator's HP is below 80%, restores their HP by 10% for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered 1 time(s) every 8s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["80%", "12%", "40%", "5%", "8", "1"],
+      ["80%", "15%", "50%", "6.25%", "8", "1"],
+      ["80%", "18%", "60%", "7.5%", "8", "1"],
+      ["80%", "21%", "70%", "8.75%", "8", "1"],
+      ["80%", "24%", "80%", "10%", "8", "1"]
+    ],
+    "description": "When the Resonator's HP is above {0}, increases ATK by {1}. When the Resonator's HP is below {2}, restores their HP by {3} for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered {5} time(s) every {4}s."
+  },
+  "slug": "broadblade-41",
+  "stats": { "atk": 33, "energy": 720 }
 }

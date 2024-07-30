@@ -4,38 +4,38 @@ import {
   accountCollectionMethods,
   accountDocMethods,
   accountSchema,
-  type AccountCollection
+  type AccountCollection,
 } from '@/collections/account';
 import {
   conveneCollectionMethods,
   conveneDocMethods,
   conveneSchema,
-  type ConveneCollection
+  type ConveneCollection,
 } from '@/collections/convene';
 import {
   settingCollectionMethods,
   settingDocMethods,
   settingSchema,
-  type SettingCollection
+  type SettingCollection,
 } from '@/collections/setting';
 
 import {
   markerSchema,
   markerDocMethods,
   markerCollectionMethods,
-  type MarkerCollection
+  type MarkerCollection,
 } from '~/collections/marker';
 import {
   characterCollectionMethods,
   characterDocMethods,
   characterSchema,
-  type CharacterCollection
+  type CharacterCollection,
 } from '~/collections/character';
 import {
   trophyCollectionMethods,
   trophyDocMethods,
   trophySchema,
-  type TrophyCollection
+  type TrophyCollection,
 } from '~/collections/trophy';
 
 export type DatabaseCollections = {
@@ -89,7 +89,7 @@ export const useDatabase = defineStore('useDatabase', () => {
       createRxDatabase<DatabaseCollections>({
         name: 'default',
         storage: getRxStorageDexie(),
-        multiInstance: false
+        multiInstance: false,
       })
         .then(async (result) => {
           db = result;
@@ -125,14 +125,14 @@ export const useDatabase = defineStore('useDatabase', () => {
                     oldDoc.resourceType = 'Weapon';
                   }
                   return oldDoc;
-                }
-              }
+                },
+              },
             },
             settings: {
               schema: settingSchema,
               methods: settingDocMethods,
               statics: settingCollectionMethods,
-              autoMigrate: false
+              autoMigrate: false,
             },
             accounts: {
               schema: accountSchema,
@@ -155,14 +155,14 @@ export const useDatabase = defineStore('useDatabase', () => {
                 4: function (oldDoc) {
                   oldDoc.lastImport = 0;
                   return oldDoc;
-                }
-              }
+                },
+              },
             },
             markers: {
               schema: markerSchema,
               methods: markerDocMethods,
               statics: markerCollectionMethods,
-              autoMigrate: false
+              autoMigrate: false,
             },
             characters: {
               schema: characterSchema,
@@ -180,8 +180,8 @@ export const useDatabase = defineStore('useDatabase', () => {
                 },
                 3: function (oldDoc) {
                   return oldDoc;
-                }
-              }
+                },
+              },
             },
             trophies: {
               schema: trophySchema,
@@ -192,9 +192,9 @@ export const useDatabase = defineStore('useDatabase', () => {
                 1: function (oldDoc) {
                   oldDoc.playerId = '';
                   return oldDoc;
-                }
-              }
-            }
+                },
+              },
+            },
           });
 
           // check migration
@@ -307,6 +307,6 @@ export const useDatabase = defineStore('useDatabase', () => {
     isChanged,
     initialize,
     getInstance,
-    eraseAllData
+    eraseAllData,
   };
 });

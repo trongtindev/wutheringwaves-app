@@ -64,7 +64,7 @@ const loadConveneHistoryUrl = () => {
 // changes
 watch(
   () => account.active,
-  () => loadConveneHistoryUrl()
+  () => loadConveneHistoryUrl(),
 );
 
 // lifecycle
@@ -88,14 +88,14 @@ useHead({
   meta: [
     {
       name: 'robots',
-      content: 'noindex'
-    }
-  ]
+      content: 'noindex',
+    },
+  ],
 });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 
 // block crawler

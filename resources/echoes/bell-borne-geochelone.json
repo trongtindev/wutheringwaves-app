@@ -1,7 +1,7 @@
 {
   "$schema": "../../public/schema/echo.schema.json",
-  "publishedTime": "2024-06-28T15:43:21.823Z",
   "modifiedTime": "2024-07-09T15:18:53.026Z",
+  "publishedTime": "2024-06-28T15:43:21.823Z",
   "skill": {
     "id": 280003,
     "cd": 20,

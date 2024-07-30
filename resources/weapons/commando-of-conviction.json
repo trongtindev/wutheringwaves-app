@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.051Z",
-  "modifiedTime": "2024-07-09T15:18:08.466Z",
-  "slug": "commando-of-conviction",
-  "skill": {
-    "params": [
-      ["15%", "15"],
-      ["18.75%", "15"],
-      ["22.5%", "15"],
-      ["26.25%", "15"],
-      ["30%", "15"]
-    ],
-    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
-  },
-  "stats": { "atk": 33 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "A weapon designed to commemorate the Midnight Rangers' courage. \"A thousand echoes carry the war's tale, as spirits unite in resounding gorges of valor.\"",
+  "modifiedTime": "2024-07-09T15:18:08.466Z",
+  "publishedTime": "2024-06-28T15:43:22.051Z",
   "ranks": [
     "When Intro Skill is released, increases ATK by 15%, lasting for 15s.",
     "When Intro Skill is released, increases ATK by 18.75%, lasting for 15s.",
     "When Intro Skill is released, increases ATK by 22.5%, lasting for 15s.",
     "When Intro Skill is released, increases ATK by 26.25%, lasting for 15s.",
     "When Intro Skill is released, increases ATK by 30%, lasting for 15s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["15%", "15"],
+      ["18.75%", "15"],
+      ["22.5%", "15"],
+      ["26.25%", "15"],
+      ["30%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
+  },
+  "slug": "commando-of-conviction",
+  "stats": { "atk": 33 }
 }

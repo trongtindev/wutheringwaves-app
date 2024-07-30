@@ -18,7 +18,7 @@ const i18n = useI18n();
 const active = ref({
   z1: true,
   z2: true,
-  z13: true
+  z13: true,
 });
 const groups = ref([
   {
@@ -34,12 +34,12 @@ const groups = ref([
       'z11',
       'z12',
       'z13',
-      'z14'
-    ]
+      'z14',
+    ],
   },
   {
     name: 'battle',
-    items: ['z251', 'z8', 'z9']
+    items: ['z251', 'z8', 'z9'],
   },
   {
     name: 'material',
@@ -53,12 +53,12 @@ const groups = ref([
       'z107',
       'z108',
       'z162',
-      'z163'
-    ]
+      'z163',
+    ],
   },
   {
     name: 'ore',
-    items: ['z401', 'z402', 'z403', 'z404', 'z405']
+    items: ['z401', 'z402', 'z403', 'z404', 'z405'],
   },
   {
     name: 'echoes',
@@ -77,14 +77,14 @@ const groups = ref([
           'z244',
           'z245',
           'z248',
-          'z251'
+          'z251',
         ].includes(e);
-      })
+      }),
   },
   {
     name: 'others',
-    items: null
-  }
+    items: null,
+  },
 ]);
 const items = ref<{ [key: string]: IMarker[] }>();
 const count = ref({});

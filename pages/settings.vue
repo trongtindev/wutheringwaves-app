@@ -11,9 +11,9 @@ useHead({
   meta: [
     {
       name: 'robots',
-      content: 'noindex'
-    }
-  ]
+      content: 'noindex',
+    },
+  ],
 });
 </script>
 

@@ -23,7 +23,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
       total: number;
     }>('/convenes/import', {
       url,
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
     });
 
     // initial account
@@ -37,8 +37,8 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     const conveneDeletes = await db.convenes
       .find({
         selector: {
-          playerId
-        }
+          playerId,
+        },
       })
       .exec();
     await db.convenes.bulkRemove(conveneDeletes.map((e) => e._id));
@@ -101,7 +101,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
         time: e.time,
         pity,
         win,
-        createdAt: new Date(e.time).getTime() - i
+        createdAt: new Date(e.time).getTime() - i,
       };
     });
     await db.convenes.bulkInsert(conveneWrites);
@@ -116,7 +116,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
         output[element.name] ??= {
           name: element.name,
           resonanceChain: -1,
-          obtainedAt: 0
+          obtainedAt: 0,
         };
         output[element.name].resonanceChain += 1;
         output[element.name].obtainedAt = (() => {
@@ -136,7 +136,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
       return {
         ...characterObjects[e],
         playerId: playerId,
-        key: `${characterObjects[e].name}${playerId}`
+        key: `${characterObjects[e].name}${playerId}`,
       };
     });
 
@@ -145,7 +145,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
 
     return {
       playerId,
-      changes: conveneWrites.length - conveneDeletes.length
+      changes: conveneWrites.length - conveneDeletes.length,
     };
   };
 

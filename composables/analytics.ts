@@ -18,7 +18,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
 
     if (auth.user) {
       config({
-        user_id: auth.user.id
+        user_id: auth.user.id,
       });
     }
   };
@@ -29,7 +29,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
       | Gtag.EventParams
       | Gtag.CustomParams
       | Gtag.ConfigParams
-      | undefined
+      | undefined,
   ) => {
     if (typeof window.gtag === 'undefined') {
       if (!import.meta.dev && !optOut.value) {
@@ -49,7 +49,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
       | Gtag.ControlParams
       | Gtag.EventParams
       | Gtag.CustomParams
-      | undefined
+      | undefined,
   ) => {
     if (typeof window.gtag === 'undefined') {
       if (!import.meta.dev && !optOut.value) {
@@ -67,9 +67,9 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     () => auth.user,
     (value) => {
       config({
-        user_id: value ? value.id : undefined
+        user_id: value ? value.id : undefined,
       });
-    }
+    },
   );
 
   // lifecycle

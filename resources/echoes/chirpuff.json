@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.824Z",
   "modifiedTime": "2024-07-09T15:18:53.034Z",
-  "slug": "chirpuff",
+  "publishedTime": "2024-06-28T15:43:21.824Z",
   "skill": {
     "id": 200027,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["3", "38.40%", "8"]
     ],
     "description": "Summon a Chirpuff that self-inflates and blasts a powerful gust of wind forward {0} times. Each blast inflicts {1} Aero DMG and pushes enemies backwards.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "chirpuff"
 }

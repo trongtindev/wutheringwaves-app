@@ -1,12 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.054Z",
-  "modifiedTime": "2024-07-09T15:18:08.485Z",
-  "slug": "guardian-pistols",
-  "skill": {
-    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
-    "description": "Resonance Skill DMG Bonus is increased by {0}."
-  },
-  "stats": { "atk": 24 },
   "ascensions": [
     {
       "cost": [
@@ -58,11 +50,19 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "The first Jinzhou Magistrate, in memory of the mysterious person who helped defend the border and build the city, created the Guardian series under his guidance. Today, it has become the cornerstone of the development of new weapons.",
+  "modifiedTime": "2024-07-09T15:18:08.485Z",
+  "publishedTime": "2024-06-28T15:43:22.054Z",
   "ranks": [
     "Resonance Skill DMG Bonus is increased by 12%.",
     "Resonance Skill DMG Bonus is increased by 15%.",
     "Resonance Skill DMG Bonus is increased by 18%.",
     "Resonance Skill DMG Bonus is increased by 21%.",
     "Resonance Skill DMG Bonus is increased by 24%."
-  ]
+  ],
+  "skill": {
+    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
+    "description": "Resonance Skill DMG Bonus is increased by {0}."
+  },
+  "slug": "guardian-pistols",
+  "stats": { "atk": 24 }
 }

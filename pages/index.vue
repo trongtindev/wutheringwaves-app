@@ -21,7 +21,7 @@ useApp().title = i18n.t('common.home');
 useHead({ title });
 useSeoMeta({
   title: title,
-  description: i18n.t('meta.description')
+  description: i18n.t('meta.description'),
 });
 </script>
 

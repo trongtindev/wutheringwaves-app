@@ -25,7 +25,7 @@ const snackbar = useSnackbar();
 const renderMarkerDebounce = useDebounceFn(() => renderMarker(), 250);
 const renderMarkerLimitThrottle = useThrottleFn(() => {
   snackbar.show({
-    content: i18n.t('map.markerLimit')
+    content: i18n.t('map.markerLimit'),
   });
 }, 5000);
 
@@ -57,11 +57,11 @@ const initialize = async () => {
   );
   await import('leaflet/dist/leaflet.css');
   const transformation = [
-    0.00037647058823529414, 160, 0.00037647058823529414, 160
+    0.00037647058823529414, 160, 0.00037647058823529414, 160,
   ];
 
   leaflet.value = map(container.value, {
-    ...props.options
+    ...props.options,
     // crs: extend(CRS.Simple, {
     //   transformation: new Transformation(
     //     transformation[0],
@@ -127,12 +127,12 @@ const renderMarker = async () => {
           icon: e.icon
             ? icon({
                 iconUrl: e.icon,
-                iconSize: [28, 28]
+                iconSize: [28, 28],
               })
             : undefined,
           title: e.title,
-          opacity: e.opacity || 1
-        }
+          opacity: e.opacity || 1,
+        },
       };
     })
     .filter((e) => {
@@ -172,7 +172,7 @@ const renderMarker = async () => {
   });
   markerInstances.value = markers.reduce(
     (acc, e) => ((acc[e!.getLatLng().toString()] = e), acc),
-    {}
+    {},
   );
   console.log(markers.length);
 };
@@ -180,17 +180,17 @@ const renderMarker = async () => {
 // changes
 watch(
   () => props.markers,
-  () => renderMarkerDebounce()
+  () => renderMarkerDebounce(),
 );
 
 watch(
   () => center.value,
-  () => renderMarkerDebounce()
+  () => renderMarkerDebounce(),
 );
 
 watch(
   () => zoom.value,
-  () => renderMarkerDebounce()
+  () => renderMarkerDebounce(),
 );
 
 watch(
@@ -208,7 +208,7 @@ watch(
     } else if (popupInstance.value) {
       popupInstance.value.closePopup();
     }
-  }
+  },
 );
 
 watch(
@@ -228,14 +228,14 @@ watch(
     playerCompass.value.setIcon(
       divIcon({
         html: `<img src="/map/compass.png" style="transform: rotate(${rotation}deg);" />`,
-        iconSize: [28, 28]
-      })
+        iconSize: [28, 28],
+      }),
     );
     playerCompass.value.setLatLng([x, z]);
     leaflet.value.panTo([x, z]);
 
     console.log([x, z]);
-  }
+  },
 );
 
 // lifecycle

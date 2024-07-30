@@ -14,12 +14,12 @@ const emits = defineEmits<{
 // states
 const nameLocalized = ref({
   en: props.data.name,
-  ...(props.data.nameLocalized || {})
+  ...(props.data.nameLocalized || {}),
 } as ILocalized);
 
 const descriptionLocalized = ref({
   en: props.data.description,
-  ...(props.data.descriptionLocalized || {})
+  ...(props.data.descriptionLocalized || {}),
 } as ILocalized);
 
 // functions
@@ -27,7 +27,7 @@ const emitChanged = () => {
   emits('on-changed', {
     ...props.data,
     name: nameLocalized.value['en'],
-    nameLocalized: nameLocalized.value
+    nameLocalized: nameLocalized.value,
   });
 };
 </script>

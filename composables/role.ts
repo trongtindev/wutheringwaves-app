@@ -30,8 +30,8 @@ export const useRole = defineStore('useRole', () => {
       api
         .get<IListResponse<IUserRole> | null>('users/me/roles', {
           params: {
-            refresh
-          }
+            refresh,
+          },
         })
         .then((result) => {
           if (result.data === null) {
@@ -77,7 +77,7 @@ export const useRole = defineStore('useRole', () => {
   // changes
   watch(
     () => auth.isSignedIn,
-    () => initialize()
+    () => initialize(),
   );
 
   // lifecycle

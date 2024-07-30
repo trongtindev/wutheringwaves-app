@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.829Z",
   "modifiedTime": "2024-07-09T15:18:53.083Z",
-  "slug": "gulpuff",
+  "publishedTime": "2024-06-28T15:43:21.829Z",
   "skill": {
     "id": 200026,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["5", "23.04%", "8"]
     ],
     "description": "Summon a Gulpuff that blows bubbles {0} times, each time dealing {1} Glacio DMG.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "gulpuff"
 }

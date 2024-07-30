@@ -26,7 +26,7 @@ export const useApp = defineStore('useApp', () => {
   const scrollTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -40,7 +40,6 @@ export const useApp = defineStore('useApp', () => {
     fluid,
     inDev,
     inProd,
-    scrollTop
+    scrollTop,
   };
 });
-

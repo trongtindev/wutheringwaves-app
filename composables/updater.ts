@@ -48,7 +48,7 @@ export const useUpdater = defineStore('useUpdater', () => {
 
     // fetch version
     const { data, status } = await http.get<{ buildNumber: number }>(
-      '/api/version'
+      '/api/version',
     );
     if (status != 200) return;
 
@@ -67,7 +67,7 @@ export const useUpdater = defineStore('useUpdater', () => {
       onConfirm: () => {
         reloadNuxtApp();
       },
-      persistent: true
+      persistent: true,
     });
     clearInterval(interval);
   };

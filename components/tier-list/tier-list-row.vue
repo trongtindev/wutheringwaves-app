@@ -2,7 +2,7 @@
 import type {
   ITierListRow,
   TierListItem,
-  TierListType
+  TierListType,
 } from '@/interfaces/tier-list';
 
 const props = defineProps<{
@@ -74,7 +74,7 @@ onMounted(() => {});
       class="rounded border ml-2 d-flex align-center justify-center"
       :class="{
         draggable: index > 0,
-        'ml-2': index > 0
+        'ml-2': index > 0,
       }"
       :ondrop="() => onDrop(element)"
       :ondragstart="() => onDragStart(element)"
@@ -83,7 +83,7 @@ onMounted(() => {});
       <v-sheet
         class="rounded"
         :class="{
-          'cursor-grab': props.editor
+          'cursor-grab': props.editor,
         }"
         :width="96"
         :height="96"

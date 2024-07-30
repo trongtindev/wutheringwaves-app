@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.053Z",
-  "modifiedTime": "2024-07-09T15:18:08.477Z",
-  "slug": "gauntlets-of-night",
-  "skill": {
-    "params": [
-      ["8%", "10"],
-      ["10%", "10"],
-      ["12%", "10"],
-      ["14%", "10"],
-      ["16%", "10"]
-    ],
-    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
-  },
-  "stats": { "atk": 26 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "May victory prevail the lasting night. In addition to the sworn oath of protection, these gauntlets also commemorates the sacrifices of those brave souls.",
+  "modifiedTime": "2024-07-09T15:18:08.477Z",
+  "publishedTime": "2024-06-28T15:43:22.053Z",
   "ranks": [
     "When Intro Skill is released, increases ATK by 8%, lasting for 10s.",
     "When Intro Skill is released, increases ATK by 10%, lasting for 10s.",
     "When Intro Skill is released, increases ATK by 12%, lasting for 10s.",
     "When Intro Skill is released, increases ATK by 14%, lasting for 10s.",
     "When Intro Skill is released, increases ATK by 16%, lasting for 10s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["8%", "10"],
+      ["10%", "10"],
+      ["12%", "10"],
+      ["14%", "10"],
+      ["16%", "10"]
+    ],
+    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
+  },
+  "slug": "gauntlets-of-night",
+  "stats": { "atk": 26 }
 }

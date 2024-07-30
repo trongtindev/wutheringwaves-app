@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.828Z",
   "modifiedTime": "2024-07-09T15:18:53.071Z",
-  "slug": "fusion-prism",
+  "publishedTime": "2024-06-28T15:43:21.828Z",
   "skill": {
     "id": 200009,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["32.00%+64", "8"]
     ],
     "description": "Summon a Fusion Prism to fire a crystal shard, dealing {0} Fusion DMG.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "fusion-prism"
 }

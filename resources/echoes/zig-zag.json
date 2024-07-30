@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.841Z",
   "modifiedTime": "2024-07-09T15:18:53.173Z",
-  "slug": "zig-zag",
+  "publishedTime": "2024-06-28T15:43:21.841Z",
   "skill": {
     "id": 200006,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["48.00%+96", "15"]
     ],
     "description": "Summon a Zig Zag that denotates Spectro energy, dealing {0} Spectro DMG and creating a Stagnation Zone that lasts 1.8s.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "zig-zag"
 }

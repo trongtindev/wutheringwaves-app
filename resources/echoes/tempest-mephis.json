@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.838Z",
   "modifiedTime": "2024-07-09T15:18:53.152Z",
-  "slug": "tempest-mephis",
+  "publishedTime": "2024-06-28T15:43:21.838Z",
   "skill": {
     "id": 280004,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["102.48%", "175.68%", "12.00%", "12.00%", "15", "20"]
     ],
     "description": "Transform into Tempest Mephis to perform tail swing attacks followed by a claw attack. The lightning strike summoned by the tail swing deals {0} Electro DMG each time, while the claw attack deals {1} Electro DMG.\r\n\r\nAfter the claw hit, increase the current character’s Electro DMG by {2} and Heavy Attack DMG by {3} for {4}s.\r\n\r\nCD: {5}s"
-  }
+  },
+  "slug": "tempest-mephis"
 }

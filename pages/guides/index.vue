@@ -15,9 +15,9 @@ const categories = await api.get<IListResponse<IPostCategory>>(
   'posts/categories',
   {
     params: {
-      languages: [i18n.locale.value]
-    }
-  }
+      languages: [i18n.locale.value],
+    },
+  },
 );
 
 // states
@@ -50,11 +50,11 @@ const fetch = () => {
 // changes
 watch(
   () => filterTitle.value,
-  () => fetchDebounce()
+  () => fetchDebounce(),
 );
 watch(
   () => filterCategories.value,
-  () => fetchDebounce()
+  () => fetchDebounce(),
 );
 
 // lifecycle
@@ -69,7 +69,7 @@ useHead({ title });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -80,8 +80,8 @@ useSeoMeta({
       :items="[
         {
           to: 'guides',
-          title: i18n.t('guides.title')
-        }
+          title: i18n.t('guides.title'),
+        },
       ]"
     />
 

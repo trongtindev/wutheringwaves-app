@@ -11,7 +11,7 @@ export const useSettings = defineStore('useSettings', () => {
     defaultValue: any,
     options?: {
       upsert?: boolean;
-    }
+    },
   ) => {
     options ??= {};
 
@@ -19,8 +19,8 @@ export const useSettings = defineStore('useSettings', () => {
     const result = await db.settings
       .findOne({
         selector: {
-          key
-        }
+          key,
+        },
       })
       .exec();
 
@@ -39,7 +39,7 @@ export const useSettings = defineStore('useSettings', () => {
     const db = await database.getInstance();
     return db.settings.upsert({
       key,
-      value: JSON.stringify(value)
+      value: JSON.stringify(value),
     });
   };
 

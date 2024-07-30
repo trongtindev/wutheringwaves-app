@@ -27,7 +27,7 @@ const {
   GOOGLE_ADSENSE_ID,
   // discord
   DISCORD_INVITE_LINK,
-  DISCORD_BOT_NAME
+  DISCORD_BOT_NAME,
 } = process.env;
 
 const localesMetadata: LocaleObject[] = [
@@ -39,7 +39,7 @@ const localesMetadata: LocaleObject[] = [
   { name: 'Türkçe', code: 'tr', iso: 'tr' },
   { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
   { name: 'Ukrainian', code: 'uk', iso: 'uk' },
-  { name: '中文(简体)', code: 'zh', iso: 'zh' }
+  { name: '中文(简体)', code: 'zh', iso: 'zh' },
 ];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: false
+    enabled: false,
   },
 
   modules: [
@@ -66,72 +66,72 @@ export default defineNuxtConfig({
     // performance
     '@nuxtjs/fontaine',
     // dev
-    '@nuxt/eslint'
+    '@nuxt/eslint',
   ],
 
   routeRules: {
     '/': {
-      prerender: true
+      prerender: true,
     },
     '/characters': {
-      prerender: true
+      prerender: true,
     },
     '/characters/**': {
-      prerender: true
+      prerender: true,
     },
     '/echoes': {
-      prerender: true
+      prerender: true,
     },
     '/echoes/**': {
-      prerender: true
+      prerender: true,
     },
     '/items': {
-      prerender: true
+      prerender: true,
     },
     '/items/**': {
-      prerender: true
+      prerender: true,
     },
     '/weapons': {
-      prerender: true
+      prerender: true,
     },
     '/weapons/**': {
-      prerender: true
+      prerender: true,
     },
     '/trophies': {
-      prerender: true
+      prerender: true,
     },
     '/trophies/**': {
-      prerender: true
+      prerender: true,
     },
     '/settings': {
-      robots: false
+      robots: false,
     },
     '/convene-history/import': {
-      robots: false
+      robots: false,
     },
     '/license': {
-      robots: false
+      robots: false,
     },
     '/donation': {
-      robots: false
+      robots: false,
     },
     '/guides': {
-      prerender: false
+      prerender: false,
     },
     '/guides/editor': {
       robots: false,
-      prerender: false
+      prerender: false,
     },
     '/guides/rss': {
       proxy: '/api/rss/guides',
-      prerender: false
+      prerender: false,
     },
     '/commit': { robots: false },
     '/commit/**': { robots: false },
     // TODO: remove soon
     '/echos/**': {
-      redirect: '/echoes/**'
-    }
+      redirect: '/echoes/**',
+    },
   },
 
   sitemap: {
@@ -141,43 +141,43 @@ export default defineNuxtConfig({
       '/convene-history/import',
       '/privacy-policy',
       '/license',
-      '/donation'
+      '/donation',
     ],
     sources: [
       '/api/__sitemap__/characters',
       '/api/__sitemap__/echoes',
       '/api/__sitemap__/items',
       '/api/__sitemap__/trophies',
-      '/api/__sitemap__/weapons'
-    ]
+      '/api/__sitemap__/weapons',
+    ],
   },
 
   css: ['~/assets/main.css', '~/assets/main.scss', '~/assets/tiptap.scss'],
 
   features: {
-    inlineStyles: false
+    inlineStyles: false,
   },
 
   site: {
-    url: NUXT_PUBLIC_SITE_URL
+    url: NUXT_PUBLIC_SITE_URL,
   },
 
   robots: {
     groups: [
       {
         userAgent: 'AhrefsBot',
-        disallow: ['*']
+        disallow: ['*'],
       },
       {
         userAgent: 'SemrushBot',
-        disallow: ['*']
-      }
-    ]
+        disallow: ['*'],
+      },
+    ],
   },
 
   sourcemap: {
     server: false,
-    client: false
+    client: false,
   },
 
   telemetry: false,
@@ -185,7 +185,7 @@ export default defineNuxtConfig({
   components: ['./components'],
 
   imports: {
-    dirs: ['./composables', './components']
+    dirs: ['./composables', './components'],
   },
 
   i18n: {
@@ -194,23 +194,23 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
       useCookie: true,
-      redirectOn: 'root'
+      redirectOn: 'root',
     },
-    locales: localesMetadata
+    locales: localesMetadata,
   },
 
   pinia: {
-    storesDirs: ['./composables/**']
+    storesDirs: ['./composables/**'],
   },
 
   vueuse: { ssrHandlers: true },
 
   vite: {
     esbuild: {
-      legalComments: 'none'
+      legalComments: 'none',
     },
     resolve: {
-      extensions: ['.mjs', '.js', '.ts', '.json']
+      extensions: ['.mjs', '.js', '.ts', '.json'],
     },
     build: {
       cssCodeSplit: false,
@@ -231,22 +231,22 @@ export default defineNuxtConfig({
             } else if (id.includes('tiptap')) {
               return 'tiptap';
             }
-          }
-        }
+          },
+        },
       },
       terserOptions: {
         format: {
-          comments: false
-        }
-      }
-    }
+          comments: false,
+        },
+      },
+    },
   },
 
   nitro: {
     prerender: {
       routes: ['/sitemap.xml'],
-      concurrency: 25
-    }
+      concurrency: 25,
+    },
     // storage: {
     //   redis: {
     //     driver: 'redis',
@@ -263,11 +263,11 @@ export default defineNuxtConfig({
       if (['bun', 'node-server'].includes(nitro.options.preset)) {
         nitro.options.prerender.crawlLinks = true;
       }
-    }
+    },
   },
 
   appConfig: {
-    buildNumber: Date.now()
+    buildNumber: Date.now(),
   },
 
   // environments
@@ -288,13 +288,13 @@ export default defineNuxtConfig({
       GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',
       // discord
       DISCORD_INVITE_LINK,
-      DISCORD_BOT_NAME
-    }
+      DISCORD_BOT_NAME,
+    },
   },
 
   experimental: {
-    viewTransition: true
+    viewTransition: true,
   },
 
-  compatibilityDate: '2024-07-05'
+  compatibilityDate: '2024-07-05',
 });

@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.836Z",
   "modifiedTime": "2024-07-09T15:18:53.131Z",
-  "slug": "phantom-thundering-mephis",
+  "publishedTime": "2024-06-28T15:43:21.836Z",
   "skill": {
     "id": 281001,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["132.61%", "189.44%", "31.57%", "12.00%", "12.00%", "15", "20"]
     ],
     "description": "Transform into Thundering Mephis, engaging in a rapid assault of up to 6 strikes. The first 5 strikes deal {0} Electro DMG each, while the final strike inflicts {1} Electro DMG, with an additional {2} Electro DMG from the thunder.\n\nAfter the final hit, increase the current character’s Electro DMG by {3} and Resonance Liberation DMG by {4} for {5}s.\n\nCD: {6}s"
-  }
+  },
+  "slug": "phantom-thundering-mephis"
 }

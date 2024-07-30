@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.835Z",
   "modifiedTime": "2024-07-09T15:18:53.127Z",
-  "slug": "phantom-mourning-aix",
+  "publishedTime": "2024-06-28T15:43:21.835Z",
   "skill": {
     "id": 281008,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["157.44%", "236.16%", "12.00%", "12.00%", "15", "20"]
     ],
     "description": "Transform into Mourning Aix and perform 2 consecutive claw attacks, each attack dealing {0} and {1} Spectro DMG respectively.\n\nAfter the transformation, increase current character's Spectro DMG by {2} and Resonance Liberation DMG by {3} for {4}s\n\nCD: {5}s"
-  }
+  },
+  "slug": "phantom-mourning-aix"
 }

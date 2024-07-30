@@ -1,20 +1,5 @@
 {
   "$schema": "./.schema.json",
-  "publishedTime": "2024-06-28T15:43:22.047Z",
-  "modifiedTime": "2024-07-09T15:18:08.441Z",
-  "slug": "ages-of-harvest",
-  "skill": {
-    "name": "Devine Blessing",
-    "params": [
-      ["12%", "24%", "12"],
-      ["15%", "30%", "12"],
-      ["18%", "36%", "12"],
-      ["21%", "42%", "12"],
-      ["24%", "48%", "12"]
-    ],
-    "description": "Grants {0} Attribute DMG Bonus.\nCasting Intro Skill gives the equipper Ageless Marking, which grants {1} Resonance Skill DMG Bonus for {2}s. Casting Resonance Skill gives the equipper Ethereal Endowment, which grants {1} Resonance Skill DMG Bonus for {2}s."
-  },
-  "stats": { "atk": 587.5, "critRate": 24.3 },
   "ascensions": [
     {
       "cost": [
@@ -63,5 +48,20 @@
       ],
       "minLevel": 80
     }
-  ]
+  ],
+  "modifiedTime": "2024-07-09T15:18:08.441Z",
+  "publishedTime": "2024-06-28T15:43:22.047Z",
+  "skill": {
+    "name": "Devine Blessing",
+    "params": [
+      ["12%", "24%", "12"],
+      ["15%", "30%", "12"],
+      ["18%", "36%", "12"],
+      ["21%", "42%", "12"],
+      ["24%", "48%", "12"]
+    ],
+    "description": "Grants {0} Attribute DMG Bonus.\nCasting Intro Skill gives the equipper Ageless Marking, which grants {1} Resonance Skill DMG Bonus for {2}s. Casting Resonance Skill gives the equipper Ethereal Endowment, which grants {1} Resonance Skill DMG Bonus for {2}s."
+  },
+  "slug": "ages-of-harvest",
+  "stats": { "atk": 587.5, "critRate": 24.3 }
 }

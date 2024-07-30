@@ -1,7 +1,7 @@
 import type {
   IAttribute,
   ICharacter,
-  ICharacterData
+  ICharacterData,
 } from '@/interfaces/character';
 import type { ICode } from '@/interfaces/code';
 import type { IWeapon, IWeaponData } from '@/interfaces/weapon';
@@ -17,7 +17,7 @@ export const useResources = defineStore('useResources', () => {
     return data.default.items.reverse().map((e) => {
       return {
         ...e,
-        type: CardPoolType[e.type]
+        type: CardPoolType[e.type],
       };
     }) as IBanner[];
   };
@@ -53,7 +53,7 @@ export const useResources = defineStore('useResources', () => {
         });
         return {
           ...e,
-          attribute: attribute || attributes[0]
+          attribute: attribute || attributes[0],
         };
       });
   };
@@ -105,7 +105,7 @@ export const useResources = defineStore('useResources', () => {
       return {
         ...e,
         publishedTime: e.publishedTime || data.default.publishedTime,
-        modifiedTime: e.modifiedTime || data.default.modifiedTime
+        modifiedTime: e.modifiedTime || data.default.modifiedTime,
       };
     });
   };
@@ -117,7 +117,7 @@ export const useResources = defineStore('useResources', () => {
         return {
           ...e,
           publishedTime: e.publishedTime || data.default.publishedTime,
-          modifiedTime: e.modifiedTime || data.default.modifiedTime
+          modifiedTime: e.modifiedTime || data.default.modifiedTime,
         };
       })
       .find((e) => e.slug === slug)!;
@@ -155,6 +155,6 @@ export const useResources = defineStore('useResources', () => {
     getTrophy,
     getTrophyData,
     getTimeline,
-    getAttributes
+    getAttributes,
   };
 });

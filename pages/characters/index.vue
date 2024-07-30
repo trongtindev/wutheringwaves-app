@@ -29,15 +29,15 @@ const loadOwned = () => {
       db.characters
         .find({
           selector: {
-            playerId: account.active
-          }
+            playerId: account.active,
+          },
         })
         .exec()
         .then((result) => {
           if (result.length > 0) {
             owned.value = result.reduce(
               (acc, e) => ((acc[e.name] = e), acc),
-              {}
+              {},
             );
           } else {
             owned.value = {};
@@ -90,7 +90,7 @@ watch(
   () => account.active,
   (value) => {
     if (value) loadOwned();
-  }
+  },
 );
 
 // lifecycle
@@ -102,12 +102,12 @@ const description = i18n.t('meta.characters.description');
 
 useApp().title = i18n.t('characters.title');
 useHead({
-  title
+  title,
 });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 

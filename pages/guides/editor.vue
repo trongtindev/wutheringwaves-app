@@ -33,7 +33,7 @@ const slug = ref(item ? item.slug : undefined);
 const state = ref<'' | 'submit'>('');
 const categories = ref<string[]>(item ? item.categories.map((e) => e.id) : []);
 const keywords = ref<string>(
-  item ? item.keywords : 'wuthering waves guide, wuthering guide'
+  item ? item.keywords : 'wuthering waves guide, wuthering guide',
 );
 const attachments = ref<IFile[]>([]);
 const schedule = ref();
@@ -71,19 +71,19 @@ const updateOrPublish = () => {
         titleLocalized: Object.fromEntries(
           locales.value.map((e) => {
             return [e, titleLocalized.value[e]];
-          })
+          }),
         ),
         description: descriptionLocalized.value[locale.value],
         descriptionLocalized: Object.fromEntries(
           locales.value.map((e) => {
             return [e, descriptionLocalized.value[e]];
-          })
+          }),
         ),
         content: contentLocalized.value[locale.value],
         contentLocalized: Object.fromEntries(
           locales.value.map((e) => {
             return [e, contentLocalized.value[e]];
-          })
+          }),
         ),
         categories: categories.value,
         thumbnail: thumbnail.value ? thumbnail.value.id : undefined,
@@ -91,11 +91,11 @@ const updateOrPublish = () => {
         locales: locales.value,
         attachments: attachments.value.map((e) => e.id),
         keywords: keywords.value,
-        schedule: schedule.value ? schedule.value : undefined
+        schedule: schedule.value ? schedule.value : undefined,
       },
       {
-        handleError: true
-      }
+        handleError: true,
+      },
     )
     .then((result) => {
       if (item) {
@@ -120,7 +120,7 @@ watch(
   () => locale.value,
   () => {
     localizationTab.value = locale.value;
-  }
+  },
 );
 
 watch(
@@ -128,7 +128,7 @@ watch(
   (locale) => {
     const content = contentLocalized.value[locale];
     editor.value?.commands.setContent(content);
-  }
+  },
 );
 
 // seo meta
@@ -142,9 +142,9 @@ useHead({
   meta: [
     {
       name: 'robots',
-      content: 'noindex'
-    }
-  ]
+      content: 'noindex',
+    },
+  ],
 });
 </script>
 

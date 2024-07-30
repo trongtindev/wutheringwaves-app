@@ -1,107 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "description": "With an extensive knowledge of botany, Verina is always solicitous, always smiling, and always wishing for every flower to be blessed with the miracle of life.",
-  "skills": [
-    {
-      "slug": "cultivation",
-      "name": "Cultivation",
-      "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nVerina performs up to 5 consecutive attacks with vines, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nVerina consumes STA to charge forward, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nVerina consumes STA to perform up to 3 consecutive attacks in mid-air, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Mid-air Heavy Attack</strong>\nHold <strong>Basic Attack</strong> to consume STA and perform a mid-air Plunging Attack, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
-    },
-    {
-      "slug": "botany-experiment",
-      "name": "Botany Experiment",
-      "type": "Resonance Skill",
-      "description": "Verina converges an energy field in front to grow foliage, dealing <strong class=\"color-spectro\">Spectro DMG</strong> within the range."
-    },
-    {
-      "slug": "arboreal-flourish",
-      "name": "Arboreal Flourish",
-      "type": "Resonance Liberation",
-      "description": "Verina nourishes nearby foliage at rapid speed, dealing <strong class=\"color-spectro\">Spectro DMG</strong> while healing all Characters on teams nearby. A <strong>Photosynthesis Mark</strong> is applied to the target on hit.\n \n<strong>Photosynthesis Mark</strong>\nWhenever a Character on a team nearby performs an attack on targets with a Photosynthesis Mark, Verina performs a Coordinated Attack, dealing <strong class=\"color-spectro\">Spectro DMG</strong> while healing the active Character dealing damage on a team nearby, triggered 1 time per second."
-    },
-    {
-      "slug": "grace-of-life",
-      "name": "Grace of Life",
-      "type": "Inherent Skill",
-      "description": "Verina protects a team member from fatal damage and grants a shield with strength equal to <strong style=\"color: var(--theme-palette-color-1);\">120%</strong> of Verina's ATK, lasting for <strong style=\"color: var(--theme-palette-color-1);\">10</strong>s. This can be triggered 1 time every <strong style=\"color: var(--theme-palette-color-1);\">10</strong> minutes."
-    },
-    {
-      "slug": "gift-of-nature",
-      "name": "Gift of Nature",
-      "type": "Inherent Skill",
-      "description": "When Verina casts Heavy Attack <strong>Starflower Blooms</strong>, Mid-air Attack <strong>Starflower Blooms</strong>, Resonance Liberation <strong>Arboreal Flourish</strong> or Outro Skill <strong>Blossom</strong>, all team members' ATK are increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."
-    },
-    {
-      "slug": "verdant-growth",
-      "name": "Verdant Growth",
-      "type": "Intro Skill",
-      "description": "Verina attacks the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
-    },
-    {
-      "slug": "starflower-blooms",
-      "name": "Starflower Blooms",
-      "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: Starflower Blooms</strong>\nWhen casting <strong>Heavy Attack</strong>, if Verina carries \"Photosynthesis Energy\", Verina consumes <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" to recover Concerto Energy and heal all characters on a nearby team;\n<strong>Heavy Attack: Starflower Blooms</strong> deals <strong class=\"color-spectro\">Spectro DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Mid-air Attack: Starflower Blooms</strong>\nWhen casting <strong>Mid-air Attack</strong>, if Verina carries \"Photosynthesis Energy\", Verina consumes <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" to recover Concerto Energy and heal all characters on a nearby team;\n<strong>Mid-air Attack: Starflower Blooms</strong> deals <strong class=\"color-spectro\">Spectro DMG</strong>, considered as Basic Attack damage.\nVerina can cast <strong>Mid-air Attack: Starflower Blooms</strong> by using <strong>Basic Attack</strong> after casting <strong>Heavy Attack: Starflower Blooms</strong>.\n \n<strong>Photosynthesis Energy</strong>\nVerina can hold up to <strong class=\"color-spectro\">4</strong> \"Photosynthesis Energy\".\nVerina obtains <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" for every Basic Attack 5 on hit;\nVerina obtains <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" for every Resonance Skill <strong>Botany Experiment</strong> on hit;\nVerina obtains <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" for every Intro Skill <strong>Verdant Growth</strong> on hit."
-    },
-    {
-      "slug": "skillful-cooking",
-      "name": "Skillful Cooking",
-      "type": "Inherent Skill",
-      "description": "Has a chance to produce special dishes when cooking"
-    },
-    {
-      "slug": "blossom",
-      "name": "Blossom",
-      "type": "Outro Skill",
-      "description": "Verina heals the next character by <strong style=\"color: var(--theme-palette-color-1);\">19%</strong> of her ATK per second for <strong style=\"color: var(--theme-palette-color-1);\">6</strong>s. All characters on nearby teams gain <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> All-Type DMG Deepen for <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."
-    }
-  ],
-  "resonanceChain": [
-    {
-      "idx": "Resonance 1-4",
-      "slug": "moment-of-emergence",
-      "name": "Moment of Emergence",
-      "params": ["5", "20%", "30"],
-      "description": "Outro Skill <strong>Blossom</strong> grants the next character a continuous Healing effect, recovering HP by {1} of Verina's ATK every {0}s for {2}s."
-    },
-    {
-      "idx": "Resonance 2-4",
-      "slug": "sprouting-reflections",
-      "name": "Sprouting Reflections",
-      "params": ["1", "10"],
-      "description": "Resonance Skill <strong>Botany Experiment</strong> additionally grants {0} [Photosynthetic Energy] and {1} Concerto Energy."
-    },
-    {
-      "idx": "Resonance 3-4",
-      "slug": "the-choice-to-flourish",
-      "name": "The Choice to Flourish",
-      "params": ["12%"],
-      "description": "Healing of Resonance Liberation's <strong>Photosynthesis Mark</strong> is increased by {0}."
-    },
-    {
-      "idx": "Resonance 4-4",
-      "slug": "blossoming-embrace",
-      "name": "Blossoming Embrace",
-      "params": ["15%", "24"],
-      "description": "Heavy Attack <strong>Starflower Blooms</strong>, Mid-Air Attack <strong>Starflower Blooms</strong>, Resonance Liberation <strong>Arboreal Flourish</strong> and Outro Skill <strong>Blossom</strong> increases the Spectro DMG Bonus of all team members by {0} for {1}s."
-    },
-    {
-      "idx": "Resonance 5-4",
-      "slug": "miraculous-blooms",
-      "name": "Miraculous Blooms",
-      "params": ["50%", "20%"],
-      "description": "When Verina heals a team member with HP less than {0}, her Healing is increased by {1}."
-    },
-    {
-      "idx": "Resonance 6-4",
-      "slug": "joyous-harvest",
-      "name": "Joyous Harvest",
-      "params": ["20%", "1"],
-      "description": "Heavy Attack <strong>Starflower Blooms</strong> and Mid-Air Attack <strong>Starflower Blooms</strong> deal {0} more damage. They will trigger Coordinated Attack {1} time and heal all characters nearby. The DMG of this Coordinated Attack and the Healing are equal to those of the Resonance Liberation's <strong>Photosynthesis Mark</strong>."
-    }
-  ],
-  "stats": { "hp": 14238, "def": 1100, "atk": 338, "energy": 175 },
   "ascensions": [
     {
       "cost": [
@@ -156,6 +54,65 @@
       "minLevel": 80
     }
   ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Rejuvenating Glow"]
+    }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Healing Bonus", "ATK%"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Energy Regen"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Energy Regen"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["bell-borne-geochelone"],
+  "bestWeapons": [
+    {
+      "item": "variation",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "rectifier-of-voyager",
+      "rank": 5,
+      "different": 100
+    },
+    {
+      "item": "rectifier-25",
+      "rank": 1,
+      "different": 100
+    }
+  ],
+  "birthday": "May 18th",
+  "birthplace": "New Federation",
+  "description": "With an extensive knowledge of botany, Verina is always solicitous, always smiling, and always wishing for every flower to be blessed with the miracle of life.",
+  "descriptionLocalized": {
+    "vi": "Với kiến thức sâu rộng về thực vật học, Verina luôn ân cần, luôn mỉm cười, và luôn mong muốn mọi bông hoa đều được ban phước với phép màu của sự sống.",
+    "id": "Dengan pengetahuan botani yang luas, Verina selalu perhatian, selalu tersenyum, dan selalu berharap agar setiap bunga diberkati dengan keajaiban kehidupan.",
+    "th": "ด้วยความรู้ด้านพฤกษศาสตร์อันกว้างขวาง เวริน่าจึงมักแสดงความห่วงใย มีรอยยิ้มอยู่เสมอ และปรารถนาให้ดอกไม้ทุกดอกได้รับพรแห่งชีวิต"
+  },
   "forte": [
     {
       "id": 221,
@@ -235,18 +192,55 @@
     }
   ],
   "quote": "Plants talk in a silent and sincere language. I can translate their talk for you, if you want.",
-  "birthday": "May 18th",
-  "birthplace": "New Federation",
   "quoteLocalized": {
     "vi": "Thực vật nói chuyện bằng ngôn ngữ im lặng và chân thành. Tôi có thể dịch lời nói của chúng cho bạn, nếu bạn muốn.",
     "id": "Tumbuhan berbicara dalam bahasa yang hening dan tulus. Aku bisa menerjemahkan ucapan mereka untukmu, jika kau mau.",
     "th": "พืชพูดด้วยภาษาที่เงียบและจริงใจ ฉันสามารถแปลการพูดของพวกเขาให้คุณได้ ถ้าคุณต้องการ"
   },
-  "descriptionLocalized": {
-    "vi": "Với kiến thức sâu rộng về thực vật học, Verina luôn ân cần, luôn mỉm cười, và luôn mong muốn mọi bông hoa đều được ban phước với phép màu của sự sống.",
-    "id": "Dengan pengetahuan botani yang luas, Verina selalu perhatian, selalu tersenyum, dan selalu berharap agar setiap bunga diberkati dengan keajaiban kehidupan.",
-    "th": "ด้วยความรู้ด้านพฤกษศาสตร์อันกว้างขวาง เวริน่าจึงมักแสดงความห่วงใย มีรอยยิ้มอยู่เสมอ และปรารถนาให้ดอกไม้ทุกดอกได้รับพรแห่งชีวิต"
-  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "moment-of-emergence",
+      "name": "Moment of Emergence",
+      "params": ["5", "20%", "30"],
+      "description": "Outro Skill <strong>Blossom</strong> grants the next character a continuous Healing effect, recovering HP by {1} of Verina's ATK every {0}s for {2}s."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "sprouting-reflections",
+      "name": "Sprouting Reflections",
+      "params": ["1", "10"],
+      "description": "Resonance Skill <strong>Botany Experiment</strong> additionally grants {0} [Photosynthetic Energy] and {1} Concerto Energy."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "the-choice-to-flourish",
+      "name": "The Choice to Flourish",
+      "params": ["12%"],
+      "description": "Healing of Resonance Liberation's <strong>Photosynthesis Mark</strong> is increased by {0}."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "blossoming-embrace",
+      "name": "Blossoming Embrace",
+      "params": ["15%", "24"],
+      "description": "Heavy Attack <strong>Starflower Blooms</strong>, Mid-Air Attack <strong>Starflower Blooms</strong>, Resonance Liberation <strong>Arboreal Flourish</strong> and Outro Skill <strong>Blossom</strong> increases the Spectro DMG Bonus of all team members by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "miraculous-blooms",
+      "name": "Miraculous Blooms",
+      "params": ["50%", "20%"],
+      "description": "When Verina heals a team member with HP less than {0}, her Healing is increased by {1}."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "joyous-harvest",
+      "name": "Joyous Harvest",
+      "params": ["20%", "1"],
+      "description": "Heavy Attack <strong>Starflower Blooms</strong> and Mid-Air Attack <strong>Starflower Blooms</strong> deal {0} more damage. They will trigger Coordinated Attack {1} time and heal all characters nearby. The DMG of this Coordinated Attack and the Healing are equal to those of the Resonance Liberation's <strong>Photosynthesis Mark</strong>."
+    }
+  ],
   "skillPriority": [
     "Forte Circuit",
     "Resonance Liberation",
@@ -254,55 +248,61 @@
     "Basic Attack",
     "Intro Skill"
   ],
-  "bestWeapons": [
+  "skills": [
     {
-      "item": "variation",
-      "rank": 1,
-      "different": 100
+      "slug": "cultivation",
+      "name": "Cultivation",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nVerina performs up to 5 consecutive attacks with vines, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nVerina consumes STA to charge forward, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nVerina consumes STA to perform up to 3 consecutive attacks in mid-air, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Mid-air Heavy Attack</strong>\nHold <strong>Basic Attack</strong> to consume STA and perform a mid-air Plunging Attack, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
     },
     {
-      "item": "rectifier-of-voyager",
-      "rank": 5,
-      "different": 100
+      "slug": "botany-experiment",
+      "name": "Botany Experiment",
+      "type": "Resonance Skill",
+      "description": "Verina converges an energy field in front to grow foliage, dealing <strong class=\"color-spectro\">Spectro DMG</strong> within the range."
     },
     {
-      "item": "rectifier-25",
-      "rank": 1,
-      "different": 100
+      "slug": "arboreal-flourish",
+      "name": "Arboreal Flourish",
+      "type": "Resonance Liberation",
+      "description": "Verina nourishes nearby foliage at rapid speed, dealing <strong class=\"color-spectro\">Spectro DMG</strong> while healing all Characters on teams nearby. A <strong>Photosynthesis Mark</strong> is applied to the target on hit.\n \n<strong>Photosynthesis Mark</strong>\nWhenever a Character on a team nearby performs an attack on targets with a Photosynthesis Mark, Verina performs a Coordinated Attack, dealing <strong class=\"color-spectro\">Spectro DMG</strong> while healing the active Character dealing damage on a team nearby, triggered 1 time per second."
+    },
+    {
+      "slug": "grace-of-life",
+      "name": "Grace of Life",
+      "type": "Inherent Skill",
+      "description": "Verina protects a team member from fatal damage and grants a shield with strength equal to <strong style=\"color: var(--theme-palette-color-1);\">120%</strong> of Verina's ATK, lasting for <strong style=\"color: var(--theme-palette-color-1);\">10</strong>s. This can be triggered 1 time every <strong style=\"color: var(--theme-palette-color-1);\">10</strong> minutes."
+    },
+    {
+      "slug": "gift-of-nature",
+      "name": "Gift of Nature",
+      "type": "Inherent Skill",
+      "description": "When Verina casts Heavy Attack <strong>Starflower Blooms</strong>, Mid-air Attack <strong>Starflower Blooms</strong>, Resonance Liberation <strong>Arboreal Flourish</strong> or Outro Skill <strong>Blossom</strong>, all team members' ATK are increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."
+    },
+    {
+      "slug": "verdant-growth",
+      "name": "Verdant Growth",
+      "type": "Intro Skill",
+      "description": "Verina attacks the target, dealing <strong class=\"color-spectro\">Spectro DMG</strong>."
+    },
+    {
+      "slug": "starflower-blooms",
+      "name": "Starflower Blooms",
+      "type": "Forte Circuit",
+      "description": "<strong>Heavy Attack: Starflower Blooms</strong>\nWhen casting <strong>Heavy Attack</strong>, if Verina carries \"Photosynthesis Energy\", Verina consumes <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" to recover Concerto Energy and heal all characters on a nearby team;\n<strong>Heavy Attack: Starflower Blooms</strong> deals <strong class=\"color-spectro\">Spectro DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Mid-air Attack: Starflower Blooms</strong>\nWhen casting <strong>Mid-air Attack</strong>, if Verina carries \"Photosynthesis Energy\", Verina consumes <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" to recover Concerto Energy and heal all characters on a nearby team;\n<strong>Mid-air Attack: Starflower Blooms</strong> deals <strong class=\"color-spectro\">Spectro DMG</strong>, considered as Basic Attack damage.\nVerina can cast <strong>Mid-air Attack: Starflower Blooms</strong> by using <strong>Basic Attack</strong> after casting <strong>Heavy Attack: Starflower Blooms</strong>.\n \n<strong>Photosynthesis Energy</strong>\nVerina can hold up to <strong class=\"color-spectro\">4</strong> \"Photosynthesis Energy\".\nVerina obtains <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" for every Basic Attack 5 on hit;\nVerina obtains <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" for every Resonance Skill <strong>Botany Experiment</strong> on hit;\nVerina obtains <strong class=\"color-spectro\">1</strong> stack of \"Photosynthesis Energy\" for every Intro Skill <strong>Verdant Growth</strong> on hit."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "blossom",
+      "name": "Blossom",
+      "type": "Outro Skill",
+      "description": "Verina heals the next character by <strong style=\"color: var(--theme-palette-color-1);\">19%</strong> of her ATK per second for <strong style=\"color: var(--theme-palette-color-1);\">6</strong>s. All characters on nearby teams gain <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> All-Type DMG Deepen for <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."
     }
   ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Rejuvenating Glow"]
-    }
-  ],
-  "bestMainEchoes": ["bell-borne-geochelone"],
-  "bestEchoStats": [
-    {
-      "type": "4-3-3-1-1",
-      "items": [
-        {
-          "cost": 4,
-          "stats": ["Healing Bonus", "ATK%"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Energy Regen"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Energy Regen"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
-      ]
-    }
-  ]
+  "stats": { "hp": 14238, "def": 1100, "atk": 338, "energy": 175 }
 }

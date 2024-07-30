@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.823Z",
   "modifiedTime": "2024-07-09T15:18:53.029Z",
-  "slug": "chaserazor",
+  "publishedTime": "2024-06-28T15:43:21.823Z",
   "skill": {
     "id": 200047,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["112.00%", "168.00%", "15"]
     ],
     "description": "Transform into Carapace to perform a spinning attack that deals {0} Aero DMG, followed by a slash that deals {1} Aero DMG.\n\nCD: {2}s"
-  }
+  },
+  "slug": "chaserazor"
 }

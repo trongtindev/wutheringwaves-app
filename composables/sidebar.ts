@@ -12,7 +12,7 @@ import {
   mdiCalendar,
   mdiGrid,
   mdiCompareHorizontal,
-  mdiBagPersonal
+  mdiBagPersonal,
 } from '@mdi/js';
 
 export interface IMenu {
@@ -42,7 +42,7 @@ export const useSidebar = defineStore('useSidebar', () => {
     {
       url: '/',
       icon: mdiHomeOutline,
-      title: 'sidebar.home'
+      title: 'sidebar.home',
     },
     {
       icon: mdiCounter,
@@ -50,79 +50,79 @@ export const useSidebar = defineStore('useSidebar', () => {
       items: [
         {
           url: '/convene-history',
-          title: 'sidebar.conveneHistory'
+          title: 'sidebar.conveneHistory',
         },
         {
           url: '/convene-history/import',
           title: 'sidebar.conveneImport',
-          rel: 'nofollow'
+          rel: 'nofollow',
         },
         {
           url: '/convene-history/share',
-          title: 'sidebar.conveneShare'
+          title: 'sidebar.conveneShare',
         },
         {
           url: '/convene-history/global',
-          title: 'sidebar.conveneGlobalStats'
-        }
-      ]
+          title: 'sidebar.conveneGlobalStats',
+        },
+      ],
     },
     {
       url: '/timeline',
       icon: mdiCalendar,
-      title: 'sidebar.timeline'
+      title: 'sidebar.timeline',
     },
     {
       url: '/map',
       icon: mdiMap,
       title: 'sidebar.map',
-      upcoming: true
+      upcoming: true,
     },
     {
       url: '/characters',
       icon: '/icons/character.png',
-      title: 'sidebar.characters'
+      title: 'sidebar.characters',
     },
     {
       url: '/codes',
       icon: mdiWalletGiftcard,
-      title: 'sidebar.codes'
+      title: 'sidebar.codes',
     },
     {
       url: '/teams',
       icon: mdiAccountGroup,
       title: 'sidebar.teams',
-      upcoming: true
+      upcoming: true,
     },
     {
       url: '/leaderboards',
       icon: mdiChartTimeline,
       title: 'sidebar.leaderboards',
-      upcoming: true
+      upcoming: true,
     },
     {
       url: '/tier-list',
       icon: mdiChartBarStacked,
       title: 'sidebar.tierList',
-      upcoming: true
+      upcoming: true,
     },
     {
       url: '/todo-list',
       icon: mdiListStatus,
       title: 'sidebar.todoList',
-      upcoming: true
+      upcoming: true,
     },
     {
       url: '/guides',
       icon: mdiMap,
       title: 'sidebar.guides',
-      beta: true
+      beta: true,
     },
     {
       url: '/comparison',
       icon: mdiCompareHorizontal,
       title: 'sidebar.comparison',
-      upcoming: true
+      upcoming: true,
     },
     {
       icon: mdiBagPersonal,
@@ -131,25 +131,25 @@ export const useSidebar = defineStore('useSidebar', () => {
         {
           url: '/items',
           icon: mdiGrid,
-          title: 'sidebar.items'
+          title: 'sidebar.items',
         },
         {
           url: '/trophies',
           icon: mdiTrophy,
-          title: 'sidebar.trophies'
+          title: 'sidebar.trophies',
         },
         {
           url: '/echoes',
           icon: '/icons/echo.png',
-          title: 'sidebar.echoes'
+          title: 'sidebar.echoes',
         },
         {
           url: '/weapons',
           icon: '/icons/weapon.png',
-          title: 'sidebar.weapons'
-        }
-      ]
-    }
+          title: 'sidebar.weapons',
+        },
+      ],
+    },
   ]);
 
   // functions
@@ -158,7 +158,7 @@ export const useSidebar = defineStore('useSidebar', () => {
   const setNotify = (
     url: string,
     value: number,
-    policy?: 'default' | 'resetOnVisit'
+    policy?: 'default' | 'resetOnVisit',
   ) => {
     notify.value[url] = { value, policy };
   };
@@ -168,7 +168,7 @@ export const useSidebar = defineStore('useSidebar', () => {
     url: string,
     options?: {
       ignoreAnalytics?: boolean;
-    }
+    },
   ) => {
     options ??= {};
     if (!options.ignoreAnalytics) {

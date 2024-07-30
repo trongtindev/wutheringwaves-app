@@ -1,11 +1,11 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.840Z",
   "modifiedTime": "2024-07-09T15:18:53.168Z",
-  "slug": "young-geohide-saurian",
+  "publishedTime": "2024-06-28T15:43:21.840Z",
   "skill": {
     "id": 200029,
     "cd": 8,
     "params": [["8"], ["8"], ["8"], ["8"], ["8"]],
     "description": "Transform into Baby Viridblaze Saurian to rest in place, and slowly restore HP.\n\nCD: {0}s"
-  }
+  },
+  "slug": "young-geohide-saurian"
 }

@@ -57,11 +57,11 @@ const initialize = async () => {
     .find({
       selector: {
         playerId: account.active,
-        cardPoolType: props.type
-      }
+        cardPoolType: props.type,
+      },
     })
     .sort({
-      createdAt: 'desc'
+      createdAt: 'desc',
     })
     .exec()
     .then((result) => {
@@ -79,7 +79,7 @@ const initialize = async () => {
 // changes
 watch(
   () => account.active,
-  () => initialize()
+  () => initialize(),
 );
 
 // lifecycle

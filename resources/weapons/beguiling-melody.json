@@ -1,7 +1,7 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.049Z",
+  "ascensions": [],
   "modifiedTime": "2024-07-09T15:18:08.451Z",
-  "slug": "beguiling-melody",
+  "publishedTime": "2024-06-28T15:43:22.049Z",
   "skill": {
     "params": [
       ["4", "4"],
@@ -12,6 +12,6 @@
     ],
     "description": "When Intro Skill is released, restores Concerto Energy by {0}. When Outro Skill is released, restores Resonance Energy by {1}."
   },
-  "stats": { "atk": 24 },
-  "ascensions": []
+  "slug": "beguiling-melody",
+  "stats": { "atk": 24 }
 }

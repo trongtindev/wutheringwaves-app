@@ -27,7 +27,7 @@ useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
-  ogImage
+  ogImage,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -38,9 +38,9 @@ useJsonld({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
-    name: 'Wuthering Waves'
+    name: 'Wuthering Waves',
   },
-  copyrightNotice: 'trongtindev'
+  copyrightNotice: 'trongtindev',
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -50,10 +50,10 @@ useJsonld({
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: useRuntimeConfig().public.SITE_URL
+      item: useRuntimeConfig().public.SITE_URL,
     },
-    { '@type': 'ListItem', position: 2, name: i18n.t('trophies.title') }
-  ]
+    { '@type': 'ListItem', position: 2, name: i18n.t('trophies.title') },
+  ],
 });
 
 // https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since

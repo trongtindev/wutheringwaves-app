@@ -4,14 +4,7 @@
     "schemas": {
       "id": {
         "type": "string",
-        "enum": [
-          "aero",
-          "fusion",
-          "glacio",
-          "electro",
-          "spectro",
-          "havoc"
-        ]
+        "enum": ["aero", "fusion", "glacio", "electro", "spectro", "havoc"]
       }
     }
   }

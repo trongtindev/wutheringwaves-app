@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.061Z",
-  "modifiedTime": "2024-07-09T15:18:08.521Z",
-  "slug": "rectifier-of-voyager",
-  "skill": {
-    "params": [
-      ["8", "20", "1"],
-      ["9", "20", "1"],
-      ["10", "20", "1"],
-      ["11", "20", "1"],
-      ["12", "20", "1"]
-    ],
-    "description": "When Resonance Skill is released, restores Resonance Energy by {0}. This effect can be triggered {2} time(s) every {1}s."
-  },
-  "stats": { "atk": 24, "energy": 720 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "The Rectifier provided by the Pioneer Association for the explorers, with bright colors, not easy to lose, hard texture can cope with various extreme environments for a long time, and is very popular among the explorers.",
+  "modifiedTime": "2024-07-09T15:18:08.521Z",
+  "publishedTime": "2024-06-28T15:43:22.061Z",
   "ranks": [
     "When Resonance Skill is released, restores Resonance Energy by 8. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Skill is released, restores Resonance Energy by 9. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Skill is released, restores Resonance Energy by 10. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Skill is released, restores Resonance Energy by 12. This effect can be triggered 1 time(s) every 20s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["8", "20", "1"],
+      ["9", "20", "1"],
+      ["10", "20", "1"],
+      ["11", "20", "1"],
+      ["12", "20", "1"]
+    ],
+    "description": "When Resonance Skill is released, restores Resonance Energy by {0}. This effect can be triggered {2} time(s) every {1}s."
+  },
+  "slug": "rectifier-of-voyager",
+  "stats": { "atk": 24, "energy": 720 }
 }

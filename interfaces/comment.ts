@@ -11,4 +11,3 @@ export interface IComment {
   createdAt: string;
   attachments: IFile[];
 }
-

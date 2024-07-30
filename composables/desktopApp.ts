@@ -1,10 +1,10 @@
 import {
   DesktopAppGameType,
-  type IDesktopAppActor
+  type IDesktopAppActor,
 } from '~/interfaces/desktopApp';
 import {
   ElectronEventType,
-  ElectronInvokeType
+  ElectronInvokeType,
 } from '~/interfaces/electron.types';
 
 export const useDesktopApp = defineStore('useDesktopApp', () => {
@@ -21,7 +21,7 @@ export const useDesktopApp = defineStore('useDesktopApp', () => {
   // functions
   const on = <T>(
     eventName: string,
-    listener: (data: T, callback?: () => Promise<void> | void) => void
+    listener: (data: T, callback?: () => Promise<void> | void) => void,
   ) => {
     if (!window.electron) return;
     window.electron.on(eventName, listener);
@@ -29,7 +29,7 @@ export const useDesktopApp = defineStore('useDesktopApp', () => {
   const emit = <T1, T2>(
     eventName: string,
     data: T1,
-    callback?: (result: T2, error?: string) => void
+    callback?: (result: T2, error?: string) => void,
   ) => {
     if (!window.electron) return;
     window.electron.emit<T1, T2>(eventName, data, callback);
@@ -54,6 +54,6 @@ export const useDesktopApp = defineStore('useDesktopApp', () => {
     objects,
     enabled,
     on,
-    emit
+    emit,
   };
 });

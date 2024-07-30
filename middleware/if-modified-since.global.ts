@@ -10,7 +10,7 @@ export default defineNuxtRouteMiddleware((to) => {
     '/items/',
     '/weapons/',
     '/guides/',
-    '/trophies/'
+    '/trophies/',
   ];
 
   if (

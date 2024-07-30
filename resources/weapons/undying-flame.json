@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.067Z",
-  "modifiedTime": "2024-07-09T15:18:08.550Z",
-  "slug": "undying-flame",
-  "skill": {
-    "params": [
-      ["20%", "15"],
-      ["25%", "15"],
-      ["30%", "15"],
-      ["35%", "15"],
-      ["40%", "15"]
-    ],
-    "description": "When Intro Skill is released, increases Resonance Skill DMG Bonus by {0} for {1}s."
-  },
-  "stats": { "atk": 33 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "A weapon designed to commemorate the Midnight Rangers' dedication. \"Let my body ablaze, flames dance to banish all evil's haze.\"",
+  "modifiedTime": "2024-07-09T15:18:08.550Z",
+  "publishedTime": "2024-06-28T15:43:22.067Z",
   "ranks": [
     "When Intro Skill is released, increases Resonance Skill DMG Bonus by 20% for 15s.",
     "When Intro Skill is released, increases Resonance Skill DMG Bonus by 25% for 15s.",
     "When Intro Skill is released, increases Resonance Skill DMG Bonus by 30% for 15s.",
     "When Intro Skill is released, increases Resonance Skill DMG Bonus by 35% for 15s.",
     "When Intro Skill is released, increases Resonance Skill DMG Bonus by 40% for 15s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["20%", "15"],
+      ["25%", "15"],
+      ["30%", "15"],
+      ["35%", "15"],
+      ["40%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases Resonance Skill DMG Bonus by {0} for {1}s."
+  },
+  "slug": "undying-flame",
+  "stats": { "atk": 33 }
 }

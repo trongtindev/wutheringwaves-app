@@ -32,7 +32,7 @@ const skillDescription = computed(() => {
   const lastIndex = data.skill.params.length - 1;
   return data.skill.description.replace(
     /\{(\d+)\}/g,
-    (_, j) => data.skill.params[lastIndex][j] || ''
+    (_, j) => data.skill.params[lastIndex][j] || '',
   );
 });
 
@@ -50,7 +50,7 @@ onMounted(() => {
 const title = `${i18n.t('Weapon')}: ${nameLocalized.value}`;
 const description = i18n.t('meta.weapons.id.description', {
   name: nameLocalized.value,
-  type: item.type
+  type: item.type,
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/weapons/icons/${item.slug}.webp`;
 
@@ -63,7 +63,7 @@ useSeoMeta({
   ogDescription: description,
   ogImage,
   articlePublishedTime: item.publishedTime,
-  articleModifiedTime: item.modifiedTime
+  articleModifiedTime: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -72,7 +72,7 @@ useJsonld({
   thumbnailUrl: ogImage,
   dateCreated: item.publishedTime,
   datePublished: item.publishedTime,
-  dateModified: item.modifiedTime
+  dateModified: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -83,9 +83,9 @@ useJsonld({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
-    name: 'Wuthering Waves'
+    name: 'Wuthering Waves',
   },
-  copyrightNotice: 'trongtindev'
+  copyrightNotice: 'trongtindev',
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -95,10 +95,10 @@ useJsonld({
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: useRuntimeConfig().public.SITE_URL
+      item: useRuntimeConfig().public.SITE_URL,
     },
-    { '@type': 'ListItem', position: 2, name: i18n.t('weapons.title') }
-  ]
+    { '@type': 'ListItem', position: 2, name: i18n.t('weapons.title') },
+  ],
 });
 
 // https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget#if-modified-since
@@ -152,7 +152,7 @@ if (headers['if-modified-since']) {
                 :innerHTML="
                   $t('weapons.introduction', {
                     name: nameLocalized,
-                    rarity: item.rarity
+                    rarity: item.rarity,
                   })
                 "
               />
@@ -225,7 +225,7 @@ if (headers['if-modified-since']) {
           {{
             $t('weapons.lastUpdatedOn', {
               name: nameLocalized,
-              time: dayjs(item.modifiedTime)
+              time: dayjs(item.modifiedTime),
             })
           }}
         </h2>
@@ -253,7 +253,7 @@ if (headers['if-modified-since']) {
 
       <v-card-text
         v-for="(ascension, index) in data.ascensions.filter(
-          (e) => e.cost.length > 0
+          (e) => e.cost.length > 0,
         )"
         :key="index"
       >
@@ -306,8 +306,8 @@ if (headers['if-modified-since']) {
             localePath({
               path: '/todo-list/create',
               meta: {
-                weapon: item.slug
-              }
+                weapon: item.slug,
+              },
             })
           "
           :text="$t('Add to Todo list')"

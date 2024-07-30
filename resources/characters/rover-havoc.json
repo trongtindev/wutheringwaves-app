@@ -1,107 +1,5 @@
 {
   "$schema": "../../public/schema/character.schema.json",
-  "description": "A mysterious Resonator with the power to absorb all sounds. Currently journeying to find their lost memories.",
-  "skills": [
-    {
-      "slug": "tuneslayer",
-      "name": "Tuneslayer",
-      "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nRover-Havoc performs up to 5 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Heavy Attack</strong>\nRover-Havoc consumes Stamina to attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\nUse <strong>Basic Attack</strong> after casting Heavy Attack to cast Basic Attack 4.\n \n<strong>Mid-air Attack</strong>\nRover-Havoc consumes Stamina to cast a Mid-Air Plunging Attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful Dodge to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "wingblade",
-      "name": "Wingblade",
-      "type": "Resonance Skill",
-      "description": "Transforms sound into feathers, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "deadening-abyss",
-      "name": "Deadening Abyss",
-      "type": "Resonance Liberation",
-      "description": "Rover gathers resonating sounds to attack a target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "metamorph",
-      "name": "Metamorph",
-      "type": "Inherent Skill",
-      "description": "In the <strong>Dark Surge</strong> state, Havoc DMG Bonus is increased by <strong class=\"color-havoc\">20%</strong>."
-    },
-    {
-      "slug": "bleak-crescendo",
-      "name": "Bleak Crescendo",
-      "type": "Inherent Skill",
-      "description": "While in the <strong>Dark Surge</strong> state, <strong>Basic Attack</strong> recovers <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Energy when it hits a target, and this effect can be triggered once per second."
-    },
-    {
-      "slug": "instant-of-annihilation",
-      "name": "Instant of Annihilation",
-      "type": "Intro Skill",
-      "description": "Attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
-    },
-    {
-      "slug": "umbra-eclipse",
-      "name": "Umbra Eclipse",
-      "type": "Forte Circuit",
-      "description": "<strong>Devastation</strong>\nWhen \"Umbra\" is full, hold <strong>Basic Attack</strong> to cast <strong>Devastation</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Dark Surge</strong>\nAfter casting <strong>Devastation</strong>, Rover enters the <strong>Dark Surge</strong> state. In this state:\n<strong>Basic Attack</strong> is replaced with <strong>Enhanced Basic Attack</strong>, which performs up to 5 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>;\n<strong>Heavy Attack</strong> is replaced with <strong>Enhanced Heavy Attack</strong>;\nUse <strong>Basic Attack</strong> after casting <strong>Enhanced Heavy Attack</strong> to cast Heavy Attack <strong>Thwackblade</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage;\nUse <strong>Basic Attack</strong> after casting Heavy Attack <strong>Thwackblade</strong> to cast <strong> Enhanced Basic Attack 3</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>;\nResonance Skill <strong>Wingblade</strong> is replaced with Resonance Skill <strong>Lifetaker</strong>, transforming sounds into blades to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Umbra</strong>\nRover can hold up to 100 points of Umbra.\nNormal Attack <strong>Tuneslayer</strong> recovers Umbra on hit.\nResonance Skill <strong>Wingblade</strong> recovers Umbra when cast.\nResonance Skill <strong>Lifetaker</strong> recovers Umbra when cast.\nIntro Skill <strong>Instant of Annihilation</strong> recovers Umbra when cast."
-    },
-    {
-      "slug": "skill-1001708-skill-name",
-      "name": "Skill_1001708_SkillName",
-      "type": "Inherent Skill",
-      "description": "Skill_1001708_SkillDescribe"
-    },
-    {
-      "slug": "soundweaver",
-      "name": "Soundweaver",
-      "type": "Outro Skill",
-      "description": "Rover summons a Havoc Field, dealing <strong class=\"color-havoc\">143.3%</strong> <strong class=\"color-havoc\">Havoc DMG</strong> to all targets within range every <strong class=\"color-havoc\">2</strong>s for <strong class=\"color-havoc\">6</strong>s."
-    }
-  ],
-  "resonanceChain": [
-    {
-      "idx": "Resonance I-IV",
-      "slug": "cryptic-insight",
-      "name": "Cryptic Insight",
-      "params": ["30%"],
-      "description": "Resonance Skill DMG Bonus is increased by {0}."
-    },
-    {
-      "idx": "Resonance II-IV",
-      "slug": "waning-crescent",
-      "name": "Waning Crescent",
-      "params": [],
-      "description": "Reset Resonance Skill's Cooldown when Rover enters the <strong>Dark Surge</strong> state by casting Heavy Attack <strong>Devastation</strong>."
-    },
-    {
-      "idx": "Resonance III-IV",
-      "slug": "surging-resonance",
-      "name": "Surging Resonance",
-      "params": ["10%"],
-      "description": "In the <strong>Dark Surge</strong> state, Basic Attack V restores HP equal to {0} of total HP lost on hit."
-    },
-    {
-      "idx": "Resonance IV-IV",
-      "slug": "annihilated-silence",
-      "name": "Annihilated Silence",
-      "params": ["10%", "20"],
-      "description": "Heavy Attack <strong>Devastation</strong> and Resonance Liberation <strong>Deadening Abyss</strong> reduces enemy Havoc RES by {0} for {1}s on hit."
-    },
-    {
-      "idx": "Resonance V-IV",
-      "slug": "aeon-symphony",
-      "name": "Aeon Symphony",
-      "params": ["50%"],
-      "description": "In the <strong>Dark Surge</strong> state, <strong>Basic Attack V</strong> deals an additional <strong>Havoc damage</strong> equal to {0} of <strong>Basic Attack V</strong> damage."
-    },
-    {
-      "idx": "Resonance VI-IV",
-      "slug": "ebbing-undercurrent",
-      "name": "Ebbing Undercurrent",
-      "params": ["25%"],
-      "description": "In the <strong>Dark Surge</strong> state, Rover's Crit. Rate is increased by {0}."
-    }
-  ],
-  "stats": { "hp": 10825, "def": 1259, "atk": 413, "energy": 125 },
   "ascensions": [
     {
       "cost": [
@@ -156,6 +54,127 @@
       "minLevel": 80
     }
   ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Sun-sinking Eclipse"]
+    },
+    {
+      "different": 91.3,
+      "items": ["Sun-sinking Eclipse", "Lingering Tunes"]
+    },
+    {
+      "different": 87.8,
+      "items": ["Sun-sinking Eclipse", "Moonlit Clouds"]
+    }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Havoc DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Havoc DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit Rate"]
+        },
+        {
+          "cost": 4,
+          "stats": ["Crit DMG"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["dreamless"],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["rover-havoc"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["sanhua", "danjin"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina", "baizhi"]
+        }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    {
+      "item": "emerald-of-genesis",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "commando-of-conviction",
+      "rank": 1,
+      "different": 82.4
+    },
+    {
+      "item": "lumingloss",
+      "rank": 1,
+      "different": 80
+    },
+    {
+      "item": "lunar-cutter",
+      "rank": 1,
+      "different": 79.5
+    },
+    {
+      "item": "sword-18",
+      "rank": 1,
+      "different": 77.9
+    },
+    {
+      "item": "sword-of-night",
+      "rank": 1,
+      "different": 71.6
+    }
+  ],
+  "birthday": "Player's Choice",
+  "birthplace": "Unknown",
+  "description": "A mysterious Resonator with the power to absorb all sounds. Currently journeying to find their lost memories.",
   "forte": [
     {
       "id": 287,
@@ -235,124 +254,105 @@
     }
   ],
   "quote": "Is this the beginning of a new journey? Brimming with novel sounds, and untold stories...",
-  "birthday": "Player's Choice",
-  "birthplace": "Unknown",
-  "bestWeapons": [
+  "resonanceChain": [
     {
-      "item": "emerald-of-genesis",
-      "rank": 1,
-      "different": 100
+      "idx": "Resonance I-IV",
+      "slug": "cryptic-insight",
+      "name": "Cryptic Insight",
+      "params": ["30%"],
+      "description": "Resonance Skill DMG Bonus is increased by {0}."
     },
     {
-      "item": "commando-of-conviction",
-      "rank": 1,
-      "different": 82.4
+      "idx": "Resonance II-IV",
+      "slug": "waning-crescent",
+      "name": "Waning Crescent",
+      "params": [],
+      "description": "Reset Resonance Skill's Cooldown when Rover enters the <strong>Dark Surge</strong> state by casting Heavy Attack <strong>Devastation</strong>."
     },
     {
-      "item": "lumingloss",
-      "rank": 1,
-      "different": 80
+      "idx": "Resonance III-IV",
+      "slug": "surging-resonance",
+      "name": "Surging Resonance",
+      "params": ["10%"],
+      "description": "In the <strong>Dark Surge</strong> state, Basic Attack V restores HP equal to {0} of total HP lost on hit."
     },
     {
-      "item": "lunar-cutter",
-      "rank": 1,
-      "different": 79.5
+      "idx": "Resonance IV-IV",
+      "slug": "annihilated-silence",
+      "name": "Annihilated Silence",
+      "params": ["10%", "20"],
+      "description": "Heavy Attack <strong>Devastation</strong> and Resonance Liberation <strong>Deadening Abyss</strong> reduces enemy Havoc RES by {0} for {1}s on hit."
     },
     {
-      "item": "sword-18",
-      "rank": 1,
-      "different": 77.9
+      "idx": "Resonance V-IV",
+      "slug": "aeon-symphony",
+      "name": "Aeon Symphony",
+      "params": ["50%"],
+      "description": "In the <strong>Dark Surge</strong> state, <strong>Basic Attack V</strong> deals an additional <strong>Havoc damage</strong> equal to {0} of <strong>Basic Attack V</strong> damage."
     },
     {
-      "item": "sword-of-night",
-      "rank": 1,
-      "different": 71.6
+      "idx": "Resonance VI-IV",
+      "slug": "ebbing-undercurrent",
+      "name": "Ebbing Undercurrent",
+      "params": ["25%"],
+      "description": "In the <strong>Dark Surge</strong> state, Rover's Crit. Rate is increased by {0}."
     }
   ],
-  "bestEchoSets": [
+  "skills": [
     {
-      "different": 100,
-      "items": ["Sun-sinking Eclipse"]
+      "slug": "tuneslayer",
+      "name": "Tuneslayer",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nRover-Havoc performs up to 5 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Heavy Attack</strong>\nRover-Havoc consumes Stamina to attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\nUse <strong>Basic Attack</strong> after casting Heavy Attack to cast Basic Attack 4.\n \n<strong>Mid-air Attack</strong>\nRover-Havoc consumes Stamina to cast a Mid-Air Plunging Attack, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful Dodge to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
     },
     {
-      "different": 91.3,
-      "items": ["Sun-sinking Eclipse", "Lingering Tunes"]
+      "slug": "wingblade",
+      "name": "Wingblade",
+      "type": "Resonance Skill",
+      "description": "Transforms sound into feathers, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
     },
     {
-      "different": 87.8,
-      "items": ["Sun-sinking Eclipse", "Moonlit Clouds"]
+      "slug": "deadening-abyss",
+      "name": "Deadening Abyss",
+      "type": "Resonance Liberation",
+      "description": "Rover gathers resonating sounds to attack a target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    {
+      "slug": "metamorph",
+      "name": "Metamorph",
+      "type": "Inherent Skill",
+      "description": "In the <strong>Dark Surge</strong> state, Havoc DMG Bonus is increased by <strong class=\"color-havoc\">20%</strong>."
+    },
+    {
+      "slug": "bleak-crescendo",
+      "name": "Bleak Crescendo",
+      "type": "Inherent Skill",
+      "description": "While in the <strong>Dark Surge</strong> state, <strong>Basic Attack</strong> recovers <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Energy when it hits a target, and this effect can be triggered once per second."
+    },
+    {
+      "slug": "instant-of-annihilation",
+      "name": "Instant of Annihilation",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>."
+    },
+    {
+      "slug": "umbra-eclipse",
+      "name": "Umbra Eclipse",
+      "type": "Forte Circuit",
+      "description": "<strong>Devastation</strong>\nWhen \"Umbra\" is full, hold <strong>Basic Attack</strong> to cast <strong>Devastation</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Dark Surge</strong>\nAfter casting <strong>Devastation</strong>, Rover enters the <strong>Dark Surge</strong> state. In this state:\n<strong>Basic Attack</strong> is replaced with <strong>Enhanced Basic Attack</strong>, which performs up to 5 consecutive attacks, dealing <strong class=\"color-havoc\">Havoc DMG</strong>;\n<strong>Heavy Attack</strong> is replaced with <strong>Enhanced Heavy Attack</strong>;\nUse <strong>Basic Attack</strong> after casting <strong>Enhanced Heavy Attack</strong> to cast Heavy Attack <strong>Thwackblade</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>, considered as Heavy Attack damage;\nUse <strong>Basic Attack</strong> after casting Heavy Attack <strong>Thwackblade</strong> to cast <strong> Enhanced Basic Attack 3</strong> to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>;\nResonance Skill <strong>Wingblade</strong> is replaced with Resonance Skill <strong>Lifetaker</strong>, transforming sounds into blades to attack the target, dealing <strong class=\"color-havoc\">Havoc DMG</strong>.\n \n<strong>Umbra</strong>\nRover can hold up to 100 points of Umbra.\nNormal Attack <strong>Tuneslayer</strong> recovers Umbra on hit.\nResonance Skill <strong>Wingblade</strong> recovers Umbra when cast.\nResonance Skill <strong>Lifetaker</strong> recovers Umbra when cast.\nIntro Skill <strong>Instant of Annihilation</strong> recovers Umbra when cast."
+    },
+    {
+      "slug": "skill-1001708-skill-name",
+      "name": "Skill_1001708_SkillName",
+      "type": "Inherent Skill",
+      "description": "Skill_1001708_SkillDescribe"
+    },
+    {
+      "slug": "soundweaver",
+      "name": "Soundweaver",
+      "type": "Outro Skill",
+      "description": "Rover summons a Havoc Field, dealing <strong class=\"color-havoc\">143.3%</strong> <strong class=\"color-havoc\">Havoc DMG</strong> to all targets within range every <strong class=\"color-havoc\">2</strong>s for <strong class=\"color-havoc\">6</strong>s."
     }
   ],
-  "bestMainEchoes": ["dreamless"],
-  "bestEchoStats": [
-    {
-      "type": "4-3-3-1-1",
-      "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit DMG", "Crit Rate"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Havoc DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Havoc DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
-      ]
-    },
-    {
-      "type": "4-4-1-1-1",
-      "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate"]
-        },
-        {
-          "cost": 4,
-          "stats": ["Crit DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
-      ]
-    }
-  ],
-  "bestTeams": [
-    {
-      "name": "#1",
-      "items": [
-        {
-          "role": "Main DPS",
-          "items": ["rover-havoc"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["sanhua", "danjin"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
-      ]
-    }
-  ]
+  "stats": { "hp": 10825, "def": 1259, "atk": 413, "energy": 125 }
 }

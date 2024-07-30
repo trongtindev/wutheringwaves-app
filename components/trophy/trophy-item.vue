@@ -36,14 +36,14 @@ watch(
     if (typeof newValue != 'undefined' && typeof oldValue != 'undefined') {
       emits('on-checked', newValue);
     }
-  }
+  },
 );
 
 watch(
   () => props.checkedItems,
   (value) => {
     checked.value = value.includes(props.data.slug);
-  }
+  },
 );
 </script>
 

@@ -30,7 +30,7 @@ export const trophyCollectionMethods: TrophyCollectionMethods = {
   countAllDocuments: async function (this: TrophyCollection) {
     const allDocs = await this.find().exec();
     return allDocs.length;
-  }
+  },
 };
 
 export const trophySchema: RxJsonSchema<TrophyDocType> = {
@@ -41,14 +41,14 @@ export const trophySchema: RxJsonSchema<TrophyDocType> = {
   properties: {
     slug: {
       type: 'string',
-      maxLength: 50
+      maxLength: 50,
     },
     playerId: {
-      type: 'string'
+      type: 'string',
     },
     createdAt: {
-      type: 'number'
-    }
+      type: 'number',
+    },
   },
-  required: ['slug', 'playerId']
+  required: ['slug', 'playerId'],
 };

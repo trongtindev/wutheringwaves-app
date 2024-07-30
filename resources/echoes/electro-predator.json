@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.826Z",
   "modifiedTime": "2024-07-09T15:18:53.054Z",
-  "slug": "electro-predator",
+  "publishedTime": "2024-06-28T15:43:21.826Z",
   "skill": {
     "id": 200015,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["17.28%", "46.08%", "8"]
     ],
     "description": "Summon an Electro Predator to shoot the enemy 5 times. The first 4 shots deals {0} Electro DMG, and the last deals {1} Electro DMG.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "electro-predator"
 }

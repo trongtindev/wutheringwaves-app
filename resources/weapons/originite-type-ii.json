@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.058Z",
-  "modifiedTime": "2024-07-09T15:18:08.507Z",
-  "slug": "originite-type-ii",
-  "skill": {
-    "params": [
-      ["5%", "20", "1"],
-      ["6.25%", "20", "1"],
-      ["7.5%", "20", "1"],
-      ["8.75%", "20", "1"],
-      ["10%", "20", "1"]
-    ],
-    "description": "When Resonance Liberation is released, restores HP by {0}. This effect can be triggered {2} time(s) every {1}s."
-  },
-  "stats": { "atk": 26 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "To create new Tacetite weapons, the Huaxu Academy designed this test Sword for technical verification. Its main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.",
+  "modifiedTime": "2024-07-09T15:18:08.507Z",
+  "publishedTime": "2024-06-28T15:43:22.058Z",
   "ranks": [
     "When Resonance Liberation is released, restores HP by 5%. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Liberation is released, restores HP by 6.25%. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Liberation is released, restores HP by 7.5%. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Liberation is released, restores HP by 8.75%. This effect can be triggered 1 time(s) every 20s.",
     "When Resonance Liberation is released, restores HP by 10%. This effect can be triggered 1 time(s) every 20s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["5%", "20", "1"],
+      ["6.25%", "20", "1"],
+      ["7.5%", "20", "1"],
+      ["8.75%", "20", "1"],
+      ["10%", "20", "1"]
+    ],
+    "description": "When Resonance Liberation is released, restores HP by {0}. This effect can be triggered {2} time(s) every {1}s."
+  },
+  "slug": "originite-type-ii",
+  "stats": { "atk": 26 }
 }

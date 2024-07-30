@@ -51,5 +51,5 @@ export const mapIconNamedDict = {
   z402: 'Lampylumen',
   z403: 'Fragipurple',
   z404: 'Floramber',
-  z405: 'Lampylumen'
+  z405: 'Lampylumen',
 };

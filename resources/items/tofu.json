@@ -1,7 +1,7 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.026Z",
-  "modifiedTime": "2024-07-09T15:18:54.369Z",
   "$schema": "./.schema.json",
+  "bgDescription": "A nutritious ingredient made from beans, widely used in various specialty dishes due to its unique taste.",
   "description": "Ingredients obtained through culinary research.",
-  "bgDescription": "A nutritious ingredient made from beans, widely used in various specialty dishes due to its unique taste."
+  "modifiedTime": "2024-07-09T15:18:54.369Z",
+  "publishedTime": "2024-06-28T15:43:22.026Z"
 }

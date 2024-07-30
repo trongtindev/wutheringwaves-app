@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.053Z",
-  "modifiedTime": "2024-07-09T15:18:08.476Z",
-  "slug": "gauntlets-21d",
-  "skill": {
-    "params": [
-      ["8%", "50%", "8", "5%", "6", "1"],
-      ["10%", "62.5%", "8", "6.25%", "6", "1"],
-      ["12%", "75%", "8", "7.5%", "6", "1"],
-      ["14%", "87.5%", "8", "8.75%", "6", "1"],
-      ["16%", "100%", "8", "10%", "6", "1"]
-    ],
-    "description": "When the Resonator dashes or dodges, increases ATK by {0}. Increases Counter Attack DMG by {1}, lasting for {2}s. When Counter Attack is performed, restores the Resonator's HP by {3}. This effect can be triggered {5} time(s) every {4}s."
-  },
-  "stats": { "atk": 31, "energy": 864 },
   "ascensions": [
     {
       "cost": [
@@ -62,5 +48,19 @@
       "minLevel": 80
     },
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
-  ]
+  ],
+  "modifiedTime": "2024-07-09T15:18:08.476Z",
+  "publishedTime": "2024-06-28T15:43:22.053Z",
+  "skill": {
+    "params": [
+      ["8%", "50%", "8", "5%", "6", "1"],
+      ["10%", "62.5%", "8", "6.25%", "6", "1"],
+      ["12%", "75%", "8", "7.5%", "6", "1"],
+      ["14%", "87.5%", "8", "8.75%", "6", "1"],
+      ["16%", "100%", "8", "10%", "6", "1"]
+    ],
+    "description": "When the Resonator dashes or dodges, increases ATK by {0}. Increases Counter Attack DMG by {1}, lasting for {2}s. When Counter Attack is performed, restores the Resonator's HP by {3}. This effect can be triggered {5} time(s) every {4}s."
+  },
+  "slug": "gauntlets-21d",
+  "stats": { "atk": 31, "energy": 864 }
 }

@@ -26,7 +26,7 @@ watch(
   () => {
     item.value = snackbar.queues[0];
     show.value = true;
-  }
+  },
 );
 
 onMounted(() => {

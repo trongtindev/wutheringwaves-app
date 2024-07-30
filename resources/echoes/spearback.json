@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.837Z",
   "modifiedTime": "2024-07-09T15:18:53.142Z",
-  "slug": "spearback",
+  "publishedTime": "2024-06-28T15:43:21.837Z",
   "skill": {
     "id": 200034,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["29.96%", "51.36%", "15"]
     ],
     "description": "Summon a Spearback to perform 5 consecutive attacks. The first 4 attacks deal {0} Physical DMG, and the last deals {1} Physical DMG.\r\n\r\nCD: {2}s"
-  }
+  },
+  "slug": "spearback"
 }

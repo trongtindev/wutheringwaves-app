@@ -13,7 +13,7 @@ watch(
   () => date.value,
   (newValue) => {
     console.log('newValue', newValue);
-  }
+  },
 );
 </script>
 

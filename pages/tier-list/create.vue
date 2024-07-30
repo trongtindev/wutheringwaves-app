@@ -4,7 +4,7 @@ import {
   type ITierList,
   type ITierListRow,
   type TierListItem,
-  type TierListType
+  type TierListType,
 } from '@/interfaces/tier-list';
 import type { ICharacter } from '@/interfaces/character';
 import type { IWeapon } from '@/interfaces/weapon';
@@ -43,23 +43,23 @@ const initialize = () => {
     {
       label: 'S',
       items: [],
-      color: '#ff7f7f'
+      color: '#ff7f7f',
     },
     {
       label: 'A',
       items: [],
-      color: '#ffbf7f'
+      color: '#ffbf7f',
     },
     {
       label: 'B',
       items: [],
-      color: '#ffff7f'
+      color: '#ffff7f',
     },
     {
       label: 'C',
       items: [],
-      color: '#bfff7f'
-    }
+      color: '#bfff7f',
+    },
   ].map((e) => {
     return { ...e, id: randomId() };
   });
@@ -92,7 +92,7 @@ const submit = async () => {
       content: i18n.t('common.signInRequiredMessage'),
       onConfirm: () => {
         auth.signIn().then(() => submit());
-      }
+      },
     });
   } else {
     state.value = 'submit';
@@ -107,17 +107,17 @@ const submit = async () => {
               return {
                 label: e.label,
                 color: e.color,
-                items: e.items.map((e) => e.slug)
+                items: e.items.map((e) => e.slug),
               };
-            })
-          }
+            }),
+          },
         )
         .then((result) => {
           resolve(result);
 
           router.push(`/tier-list/${result.data.id}`);
           snackbar.show({
-            content: i18n.t('tierList.create.saveSuccessfully')
+            content: i18n.t('tierList.create.saveSuccessfully'),
           });
         })
         .catch((error) => {
@@ -138,7 +138,7 @@ const copyLink = async () => {
       content: i18n.t('common.signInRequiredMessage'),
       onConfirm: () => {
         auth.signIn().then(() => submit());
-      }
+      },
     });
   } else if (!item.value) {
     // submit().then(() => copyLink());
@@ -158,14 +158,14 @@ const liveVoting = () => {
       content: i18n.t('common.signInRequiredMessage'),
       onConfirm: () => {
         auth.signIn().then(() => submit());
-      }
+      },
     });
   } else if (!item.value) {
     submit().then(() => liveVoting());
   } else {
     dialog.show({
       title: i18n.t('common.comingSoon'),
-      content: i18n.t('common.comingSoonMessage')
+      content: i18n.t('common.comingSoonMessage'),
     });
   }
 };
@@ -224,10 +224,10 @@ const onDragEnter = (row: ITierListRow) => {
 
   if (dragPreviousRow.value) {
     const previousRowIndex = rows.value.findIndex(
-      (e) => e.id === dragPreviousRow.value?.id
+      (e) => e.id === dragPreviousRow.value?.id,
     );
     const previousRowItemIndex = rows.value[previousRowIndex].items.findIndex(
-      (e) => e.slug === dragItem.value.slug
+      (e) => e.slug === dragItem.value.slug,
     );
 
     dragPreviousRow.value = null;
@@ -239,7 +239,7 @@ const onDragEnter = (row: ITierListRow) => {
 
   const rowIndex = rows.value.findIndex((e) => e.id === row.id);
   const itemIndex = rows.value[rowIndex].items.findIndex(
-    (e) => e.slug === dragItem.value.slug
+    (e) => e.slug === dragItem.value.slug,
   );
 
   if (itemIndex <= 0) {
@@ -253,7 +253,7 @@ const onDragLeave = (row: ITierListRow) => {
 
   const rowIndex = rows.value.findIndex((e) => e.id === row.id);
   const itemIndex = rows.value[rowIndex].items.findIndex(
-    (e) => e.slug === dragItem.value.slug
+    (e) => e.slug === dragItem.value.slug,
   );
 
   if (itemIndex >= 0) {
@@ -276,7 +276,7 @@ const canSubmit = computed(() => {
 // changes
 watch(
   () => type.value,
-  () => initialize()
+  () => initialize(),
 );
 
 // lifecycle
@@ -288,7 +288,7 @@ onMounted(() => {
 
 // seo meta
 useHead({
-  title: i18n.t('tierList.create.title')
+  title: i18n.t('tierList.create.title'),
 });
 </script>
 
@@ -299,12 +299,12 @@ useHead({
       :items="[
         {
           to: '/tier-list',
-          title: i18n.t('tierList.title')
+          title: i18n.t('tierList.title'),
         },
         {
           to: '/tier-list/create',
-          title: i18n.t('common.create')
-        }
+          title: i18n.t('common.create'),
+        },
       ]"
     />
 

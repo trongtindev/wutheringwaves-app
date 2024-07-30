@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.064Z",
-  "modifiedTime": "2024-07-09T15:18:08.535Z",
-  "slug": "thunderbolt",
-  "skill": {
-    "params": [
-      ["7%", "3", "10", "1", "1"],
-      ["11%", "3", "10", "1", "1"],
-      ["15%", "3", "10", "1", "1"],
-      ["19%", "3", "10", "1", "1"],
-      ["23%", "3", "10", "1", "1"]
-    ],
-    "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by {0}, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
-  },
-  "stats": { "atk": 31 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "These Pistols are ceremonial weapons used in the inauguration ceremony of the Jinzhou Magistrate of Huanglong. The golden ginkgo leaf pattern represents that Huanglong should be like the ginkgo, although it is left in the world, it is still thriving.",
+  "modifiedTime": "2024-07-09T15:18:08.535Z",
+  "publishedTime": "2024-06-28T15:43:22.064Z",
   "ranks": [
     "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 7%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
     "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 11%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
     "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 15%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
     "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 19%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
     "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by 23%, stacking up to 3 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["7%", "3", "10", "1", "1"],
+      ["11%", "3", "10", "1", "1"],
+      ["15%", "3", "10", "1", "1"],
+      ["19%", "3", "10", "1", "1"],
+      ["23%", "3", "10", "1", "1"]
+    ],
+    "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by {0}, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
+  },
+  "slug": "thunderbolt",
+  "stats": { "atk": 31 }
 }

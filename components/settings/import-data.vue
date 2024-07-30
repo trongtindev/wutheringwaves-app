@@ -4,7 +4,7 @@ import { mdiUpload } from '@mdi/js';
 // uses
 const fileDialog = useFileDialog({
   accept: import.meta.dev ? 'text/*' : 'text/csv',
-  multiple: false
+  multiple: false,
 });
 
 // functions

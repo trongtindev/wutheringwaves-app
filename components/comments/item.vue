@@ -21,7 +21,7 @@ const onPressedLike = (type: 'like' | 'dislike') => {
 
   api
     .post<IComment>(`comments/${props.data.id}/likes`, {
-      type
+      type,
     })
     .then((result) => {
       // TODO: use emit

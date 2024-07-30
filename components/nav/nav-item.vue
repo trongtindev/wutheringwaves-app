@@ -26,7 +26,7 @@ const localePath = useLocalePath();
       "
       :disabled="props.data.upcoming && !app.inDev"
       :class="{
-        'ml-12': props.submenu
+        'ml-12': props.submenu,
       }"
       @click="() => sidebar.onOpened(props.data.url!)"
     >

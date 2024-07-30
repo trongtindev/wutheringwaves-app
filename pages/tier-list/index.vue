@@ -29,8 +29,8 @@ const loadData = async () => {
           offset: page.value * limit.value - limit.value,
           search: search.value ? search.value : undefined,
           sort: sortBy.value ? sortBy.value : undefined,
-          type: filterType.value ? filterType.value : undefined
-        }
+          type: filterType.value ? filterType.value : undefined,
+        },
       })
       .then((result) => {
         data.value = result.data;
@@ -59,22 +59,22 @@ const pages = computed<number>(() => {
 // changes
 watch(
   () => search.value,
-  () => debouncedSearch()
+  () => debouncedSearch(),
 );
 
 watch(
   () => sortBy.value,
-  () => loadData()
+  () => loadData(),
 );
 
 watch(
   () => filterType.value,
-  () => loadData()
+  () => loadData(),
 );
 
 watch(
   () => page.value,
-  () => loadData()
+  () => loadData(),
 );
 
 // lifecycle
@@ -91,7 +91,7 @@ useHead({ title });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 
@@ -102,8 +102,8 @@ useSeoMeta({
       :items="[
         {
           to: '/tier-list',
-          title: i18n.t('tierList.title')
-        }
+          title: i18n.t('tierList.title'),
+        },
       ]"
     />
 

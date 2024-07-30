@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.048Z",
-  "modifiedTime": "2024-07-09T15:18:08.443Z",
-  "slug": "amity-accord",
-  "skill": {
-    "params": [
-      ["20%", "15"],
-      ["25%", "15"],
-      ["30%", "15"],
-      ["35%", "15"],
-      ["40%", "15"]
-    ],
-    "description": "When Intro Skill is released, increases Resonance Liberation DMG Bonus by {0}, lasting for {1}s."
-  },
-  "stats": { "atk": 27 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "A weapon designed to commemorate the Midnight Rangers' comradeship. \"Thin garments yield to icy moons, while armor withstands the chill of stars.\"",
+  "modifiedTime": "2024-07-09T15:18:08.443Z",
+  "publishedTime": "2024-06-28T15:43:22.048Z",
   "ranks": [
     "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 20%, lasting for 15s.",
     "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 25%, lasting for 15s.",
     "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 30%, lasting for 15s.",
     "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 35%, lasting for 15s.",
     "When Intro Skill is released, increases Resonance Liberation DMG Bonus by 40%, lasting for 15s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["20%", "15"],
+      ["25%", "15"],
+      ["30%", "15"],
+      ["35%", "15"],
+      ["40%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases Resonance Liberation DMG Bonus by {0}, lasting for {1}s."
+  },
+  "slug": "amity-accord",
+  "stats": { "atk": 27 }
 }

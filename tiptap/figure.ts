@@ -3,7 +3,7 @@ import {
   mergeAttributes,
   Node,
   nodeInputRule,
-  Tracker
+  Tracker,
 } from '@tiptap/core';
 
 export interface FigureOptions {
@@ -45,7 +45,7 @@ export const Figure = Node.create<FigureOptions>({
 
   addOptions() {
     return {
-      HTMLAttributes: {}
+      HTMLAttributes: {},
     };
   },
 
@@ -62,26 +62,26 @@ export const Figure = Node.create<FigureOptions>({
       fid: {
         default: null,
         parseHTML: (element) =>
-          element.querySelector('img')?.getAttribute('fid')
+          element.querySelector('img')?.getAttribute('fid'),
       },
 
       src: {
         default: null,
         parseHTML: (element) =>
-          element.querySelector('img')?.getAttribute('src')
+          element.querySelector('img')?.getAttribute('src'),
       },
 
       alt: {
         default: null,
         parseHTML: (element) =>
-          element.querySelector('img')?.getAttribute('alt')
+          element.querySelector('img')?.getAttribute('alt'),
       },
 
       title: {
         default: null,
         parseHTML: (element) =>
-          element.querySelector('img')?.getAttribute('title')
-      }
+          element.querySelector('img')?.getAttribute('title'),
+      },
     };
   },
 
@@ -89,8 +89,8 @@ export const Figure = Node.create<FigureOptions>({
     return [
       {
         tag: 'figure',
-        contentElement: 'figcaption'
-      }
+        contentElement: 'figcaption',
+      },
     ];
   },
 
@@ -102,10 +102,10 @@ export const Figure = Node.create<FigureOptions>({
         'img',
         mergeAttributes(HTMLAttributes, {
           draggable: false,
-          contenteditable: false
-        })
+          contenteditable: false,
+        }),
       ],
-      ['figcaption', 0]
+      ['figcaption', 0],
     ];
   },
 
@@ -120,7 +120,7 @@ export const Figure = Node.create<FigureOptions>({
               .insertContent({
                 type: this.name,
                 attrs,
-                content: caption ? [{ type: 'text', text: caption }] : []
+                content: caption ? [{ type: 'text', text: caption }] : [],
               })
               // set cursor at end of caption field
               .command(({ tr, commands }) => {
@@ -139,7 +139,7 @@ export const Figure = Node.create<FigureOptions>({
           const images = findChildrenInRange(
             doc,
             { from, to },
-            (node) => node.type.name === 'image'
+            (node) => node.type.name === 'image',
           );
 
           if (!images.length) {
@@ -157,15 +157,15 @@ export const Figure = Node.create<FigureOptions>({
 
             const range = {
               from: mapResult.position,
-              to: mapResult.position + node.nodeSize
+              to: mapResult.position + node.nodeSize,
             };
 
             return commands.insertContentAt(range, {
               type: this.name,
               attrs: {
                 fid: node.attrs.fid,
-                src: node.attrs.src
-              }
+                src: node.attrs.src,
+              },
             });
           });
         },
@@ -178,7 +178,7 @@ export const Figure = Node.create<FigureOptions>({
           const figures = findChildrenInRange(
             doc,
             { from, to },
-            (node) => node.type.name === this.name
+            (node) => node.type.name === this.name,
           );
 
           if (!figures.length) {
@@ -196,18 +196,18 @@ export const Figure = Node.create<FigureOptions>({
 
             const range = {
               from: mapResult.position,
-              to: mapResult.position + node.nodeSize
+              to: mapResult.position + node.nodeSize,
             };
 
             return commands.insertContentAt(range, {
               type: 'image',
               attrs: {
                 fid: node.attrs.fid,
-                src: node.attrs.src
-              }
+                src: node.attrs.src,
+              },
             });
           });
-        }
+        },
     };
   },
 
@@ -219,8 +219,8 @@ export const Figure = Node.create<FigureOptions>({
         getAttributes: (match) => {
           const [, fid, src, alt, title] = match;
           return { fid, src, alt, title };
-        }
-      })
+        },
+      }),
     ];
-  }
+  },
 });

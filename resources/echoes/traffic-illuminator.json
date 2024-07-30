@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.839Z",
   "modifiedTime": "2024-07-09T15:18:53.160Z",
-  "slug": "traffic-illuminator",
+  "publishedTime": "2024-06-28T15:43:21.839Z",
   "skill": {
     "id": 200049,
     "cd": 15,
@@ -13,5 +12,6 @@
       ["1", "15"]
     ],
     "description": "Summon a Traffic Illuminator, immobilizing enemies for up to {0}s. The immobilization will be lifted once the enemy is hit.\r\n\r\nCD: {1}s"
-  }
+  },
+  "slug": "traffic-illuminator"
 }

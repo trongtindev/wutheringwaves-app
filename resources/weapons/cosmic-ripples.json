@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.051Z",
-  "modifiedTime": "2024-07-09T15:18:08.468Z",
-  "slug": "cosmic-ripples",
-  "skill": {
-    "params": [
-      ["12.8%", "3.2%", "5", "8", "0.5", "1"],
-      ["16%", "4%", "5", "8", "0.5", "1"],
-      ["19.2%", "4.8%", "5", "8", "0.5", "1"],
-      ["22.4%", "5.6%", "5", "8", "0.5", "1"],
-      ["25.6%", "6.4%", "5", "8", "0.5", "1"]
-    ],
-    "description": "Increases Energy Regen by {0}. When hitting a target with Basic Attacks, increases Basic Attack DMG Bonus by {1}, stacking up to {2} time(s). This effect lasts for {3}s and can be triggered {5} time(s) every {4}s."
-  },
-  "stats": { "atk": 40 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "Designed after ginkgo leaves, this rectifier generates smooth and stable waveforms, making it reliable for a wide range of combat situations.",
+  "modifiedTime": "2024-07-09T15:18:08.468Z",
+  "publishedTime": "2024-06-28T15:43:22.051Z",
   "ranks": [
     "Energy Regen is increased by 12.8%. When Basic Attack hits a target, Basic Attack Damage is increased by 3.2%. This effect can stack up to 5 times and last for 8s.",
     "Energy Regen is increased by 16%. When Basic Attack hits a target, Basic Attack Damage is increased by 4%. This effect can stack up to 5 times and last for 8s.",
     "Energy Regen is increased by 19.2%. When Basic Attack hits a target, Basic Attack Damage is increased by 4.8%. This effect can stack up to 5 times and last for 8s.",
     "Energy Regen is increased by 22.4%. When Basic Attack hits a target, Basic Attack Damage is increased by 5.6%. This effect can stack up to 5 times and last for 8s.",
     "Energy Regen is increased by 25.6%. When Basic Attack hits a target, Basic Attack Damage is increased by 6.4%. This effect can stack up to 5 times and last for 8s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["12.8%", "3.2%", "5", "8", "0.5", "1"],
+      ["16%", "4%", "5", "8", "0.5", "1"],
+      ["19.2%", "4.8%", "5", "8", "0.5", "1"],
+      ["22.4%", "5.6%", "5", "8", "0.5", "1"],
+      ["25.6%", "6.4%", "5", "8", "0.5", "1"]
+    ],
+    "description": "Increases Energy Regen by {0}. When hitting a target with Basic Attacks, increases Basic Attack DMG Bonus by {1}, stacking up to {2} time(s). This effect lasts for {3}s and can be triggered {5} time(s) every {4}s."
+  },
+  "slug": "cosmic-ripples",
+  "stats": { "atk": 40 }
 }

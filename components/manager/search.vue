@@ -45,9 +45,9 @@ const submit = async () => {
           slug: `/characters/${e.slug}`,
           icon: `/characters/icons/${e.slug}.webp`,
           name: e.name,
-          rarity: e.rarity
+          rarity: e.rarity,
         };
-      })
+      }),
     ];
 
     // echoes
@@ -63,9 +63,9 @@ const submit = async () => {
           slug: `/weapons/${e.slug}`,
           icon: `/weapons/icons/${e.slug}.webp`,
           name: e.name,
-          rarity: e.rarity
+          rarity: e.rarity,
         };
-      })
+      }),
     ];
 
     // echoes
@@ -80,9 +80,9 @@ const submit = async () => {
           type: SearchResultType.echo,
           slug: `/echoes/${e.slug}`,
           icon: `/echoes/icons/${e.slug}.webp`,
-          name: e.name
+          name: e.name,
         };
-      })
+      }),
     ];
 
     // items
@@ -98,9 +98,9 @@ const submit = async () => {
           slug: `/items/${e.slug}`,
           icon: `/items/icons/${e.slug}.webp`,
           name: e.name,
-          rarity: e.rarity
+          rarity: e.rarity,
         };
-      })
+      }),
     ];
 
     trophies.value ??= await resources.getTrophies();
@@ -114,9 +114,9 @@ const submit = async () => {
           type: SearchResultType.trophy,
           slug: `/trophies/${e.slug}`,
           icon: `/trophies/icons/${e.slug}.webp`,
-          name: e.name
+          name: e.name,
         };
-      })
+      }),
     ];
 
     console.log('submit');
@@ -157,4 +157,3 @@ watch(() => keyword.value, submitDebounce);
     </v-card>
   </v-dialog>
 </template>
-

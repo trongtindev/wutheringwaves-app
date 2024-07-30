@@ -1,12 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.054Z",
-  "modifiedTime": "2024-07-09T15:18:08.483Z",
-  "slug": "guardian-gauntlets",
-  "skill": {
-    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
-    "description": "Increases Resonance Liberation DMG Bonus by {0}."
-  },
-  "stats": { "atk": 24 },
   "ascensions": [
     {
       "cost": [
@@ -56,5 +48,13 @@
       "minLevel": 80
     },
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
-  ]
+  ],
+  "modifiedTime": "2024-07-09T15:18:08.483Z",
+  "publishedTime": "2024-06-28T15:43:22.054Z",
+  "skill": {
+    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
+    "description": "Increases Resonance Liberation DMG Bonus by {0}."
+  },
+  "slug": "guardian-gauntlets",
+  "stats": { "atk": 24 }
 }

@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.831Z",
   "modifiedTime": "2024-07-09T15:18:53.097Z",
-  "slug": "hooscamp",
+  "publishedTime": "2024-06-28T15:43:21.831Z",
   "skill": {
     "id": 200045,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["48.00%+96", "8"]
     ],
     "description": "Transform into Hooscamp Flinger and pounce at the enemies, dealing {0} Aero DMG.\n\nCD: {1}s"
-  }
+  },
+  "slug": "hooscamp"
 }

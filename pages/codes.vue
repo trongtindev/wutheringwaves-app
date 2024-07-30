@@ -14,7 +14,7 @@ const items = (await resources.getCodes()).sort((a, b) => {
 
 // seo meta
 const title = i18n.t('meta.codes.title', {
-  time: `${new Date().getMonth() + 1}/${new Date().getFullYear()}`
+  time: `${new Date().getMonth() + 1}/${new Date().getFullYear()}`,
 });
 const description = i18n.t('meta.codes.description');
 
@@ -25,13 +25,13 @@ useHead({
     {
       name: 'keywords',
       content:
-        'wuthering code, wuthering waves code, wuthering gift code, wuthering waves gift code'
-    }
-  ]
+        'wuthering code, wuthering waves code, wuthering gift code, wuthering waves gift code',
+    },
+  ],
 });
 useSeoMeta({
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 useJsonld(() => ({
   '@context': 'https://schema.org',
@@ -42,18 +42,18 @@ useJsonld(() => ({
       name: i18n.t('codes.redeemRequirement'),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: i18n.t('codes.redeemRequirementGuide')
-      }
+        text: i18n.t('codes.redeemRequirementGuide'),
+      },
     },
     {
       '@type': 'Question',
       name: i18n.t('codes.howToRedeem'),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: i18n.t('codes.howToRedeemGuide')
-      }
-    }
-  ]
+        text: i18n.t('codes.howToRedeemGuide'),
+      },
+    },
+  ],
 }));
 </script>
 
@@ -126,4 +126,3 @@ useJsonld(() => ({
     <comments channel="codes" class="mt-2" />
   </div>
 </template>
-

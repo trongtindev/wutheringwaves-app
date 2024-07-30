@@ -1,18 +1,4 @@
 {
-  "publishedTime": "2024-06-28T15:43:22.062Z",
-  "modifiedTime": "2024-07-09T15:18:08.526Z",
-  "slug": "stonard",
-  "skill": {
-    "params": [
-      ["18%", "15"],
-      ["27%", "15"],
-      ["36%", "15"],
-      ["45%", "15"],
-      ["54%", "15"]
-    ],
-    "description": "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by {0}, lasting for {1}s."
-  },
-  "stats": { "atk": 33, "critRate": 450 },
   "ascensions": [
     {
       "cost": [
@@ -64,11 +50,25 @@
     { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
   ],
   "description": "These Gauntlets are ceremonial weapon used at the inauguration ceremony of the Huanglong Magistrate. The golden ginkgo leaf pattern represents that Huanglong should be like a ginkgo, although it is left alone in the world, it is still prosperous and long-lasting.",
+  "modifiedTime": "2024-07-09T15:18:08.526Z",
+  "publishedTime": "2024-06-28T15:43:22.062Z",
   "ranks": [
     "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 18%, lasting for 15s.",
     "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 27%, lasting for 15s.",
     "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 36%, lasting for 15s.",
     "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 45%, lasting for 15s.",
     "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by 54%, lasting for 15s."
-  ]
+  ],
+  "skill": {
+    "params": [
+      ["18%", "15"],
+      ["27%", "15"],
+      ["36%", "15"],
+      ["45%", "15"],
+      ["54%", "15"]
+    ],
+    "description": "When Resonance Skill is released, increases the caster's Resonance Liberation DMG Bonus by {0}, lasting for {1}s."
+  },
+  "slug": "stonard",
+  "stats": { "atk": 33, "critRate": 450 }
 }

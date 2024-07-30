@@ -31,11 +31,11 @@ const initialize = () => {
     db.convenes
       .find({
         selector: {
-          playerId: account.active
-        }
+          playerId: account.active,
+        },
       })
       .sort({
-        createdAt: 'desc'
+        createdAt: 'desc',
       })
       .exec()
       .then((result) => {
@@ -72,7 +72,7 @@ const updateFilter = () => {
           filterBanner.value.time &&
           [
             CardPoolType['featured-resonator'],
-            CardPoolType['featured-weapon']
+            CardPoolType['featured-weapon'],
           ].includes(e.cardPoolType)
         ) {
           const timeStart = dayjs(filterBanner.value.time.start)
@@ -101,13 +101,13 @@ const updateBannerListHeight = () => {
 // changes
 watch(
   () => account.active,
-  () => initialize()
+  () => initialize(),
 );
 watch(() => filterBanner.value, updateFilter);
 watch(() => filterRarity.value, updateFilter);
 watch(
   () => account.onConveneChanged,
-  () => initialize()
+  () => initialize(),
 );
 
 // lifecycle
@@ -132,8 +132,8 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       :items="[
         {
           to: '/convene-history',
-          title: i18n.t('convene.history.title')
-        }
+          title: i18n.t('convene.history.title'),
+        },
       ]"
     />
 
@@ -193,7 +193,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
               { title: $t('Time'), width: '30%' },
               { title: $t('Name'), width: '40%' },
               { title: $t('Pity'), width: '15%' },
-              { title: $t('common.rarity'), width: '15%' }
+              { title: $t('common.rarity'), width: '15%' },
             ]"
             item-value="key"
           >

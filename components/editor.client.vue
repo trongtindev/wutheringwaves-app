@@ -24,7 +24,7 @@ import {
   mdiTableRowRemove,
   mdiImageText,
   mdiYoutube,
-  mdiFormatClear
+  mdiFormatClear,
 } from '@mdi/js';
 import { Editor, EditorContent, BubbleMenu, FloatingMenu } from '@tiptap/vue-3';
 import type { IFile } from '~/interfaces/file';
@@ -49,7 +49,7 @@ const notification = useNotification();
 const editor = ref<Editor>();
 const fileDialog = useFileDialog({
   accept: 'image/png,image/jpg,image/jpeg,image/webp',
-  multiple: true
+  multiple: true,
 });
 
 // functions
@@ -73,23 +73,23 @@ const uploadFiles = async (files: File[]) => {
     const nid = await notification.create({
       title: i18n.t('common.uploading'),
       message: file.name,
-      persistent: true
+      persistent: true,
     });
     const result = await api.post<IFile>(
       'files',
       {
-        file
+        file,
       },
       {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data',
         },
         onUploadProgress: (e) => {
           notification.update(nid, {
-            progress: e.progress ? e.progress * 100 : undefined
+            progress: e.progress ? e.progress * 100 : undefined,
           });
-        }
-      }
+        },
+      },
     );
     notification.remove(nid);
 
@@ -99,7 +99,7 @@ const uploadFiles = async (files: File[]) => {
       .setFigure({
         fid: result.data.id,
         src: result.data.url,
-        caption: file.name
+        caption: file.name,
       })
       .run();
   });
@@ -116,7 +116,7 @@ watch(
     });
     if (files.length <= 0) return;
     uploadFiles(files);
-  }
+  },
 );
 
 // watch(
@@ -144,8 +144,8 @@ onMounted(async () => {
     extensions: [
       StarterKit.configure({
         dropcursor: {
-          color: '#ffffff'
-        }
+          color: '#ffffff',
+        },
       }),
       Table.configure({ resizable: true }),
       TableCell.configure(),
@@ -153,22 +153,22 @@ onMounted(async () => {
       TableRow.configure(),
       Youtube.configure({
         inline: false,
-        ccLanguage: 'en'
+        ccLanguage: 'en',
       }),
       BubbleMenu.configure({
-        element: document.querySelector('.menu') as HTMLElement
+        element: document.querySelector('.menu') as HTMLElement,
       }),
       CharacterCount.configure({}),
       TextAlign.configure({
-        types: ['heading', 'paragraph']
+        types: ['heading', 'paragraph'],
       }),
       Image.configure({ inline: true }),
-      Figure.configure()
+      Figure.configure(),
     ],
     content: props.defaultContent || '',
     onUpdate: ({ editor }) => {
       emits('on-updated', editor.getHTML());
-    }
+    },
   });
   editor.value.on('create', () => emits('on-initialized', editor.value!));
 });

@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.825Z",
   "modifiedTime": "2024-07-09T15:18:53.051Z",
-  "slug": "dwarf-cassowary",
+  "publishedTime": "2024-06-28T15:43:21.825Z",
   "skill": {
     "id": 200051,
     "cd": 8,
@@ -13,5 +12,6 @@
       ["3", "38.40%", "8", "0.00%"]
     ],
     "description": "Summon a Dwarf Cassowary that tracks and attacks the enemy, dealing {1} Physical DMG {0} time(s).\n\nCD: {2}s"
-  }
+  },
+  "slug": "dwarf-cassowary"
 }

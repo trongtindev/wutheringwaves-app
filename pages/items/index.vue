@@ -29,8 +29,8 @@ const initialize = () => {
 
   router.replace({
     query: {
-      q: filterText.value || undefined
-    }
+      q: filterText.value || undefined,
+    },
   });
 
   matchItems.value = items.filter((e) => {
@@ -72,7 +72,7 @@ useHead({ title });
 useSeoMeta({
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
 });
 </script>
 

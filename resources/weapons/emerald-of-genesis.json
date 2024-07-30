@@ -1,18 +1,5 @@
 {
   "$schema": "./.schema.json",
-  "publishedTime": "2024-06-28T15:43:22.052Z",
-  "modifiedTime": "2024-07-20T15:18:08.474Z",
-  "skill": {
-    "params": [
-      ["12.8%", "6%", "2", "10"],
-      ["16%", "7.5%", "2", "10"],
-      ["19.2%", "9%", "2", "10"],
-      ["22.4%", "10.5%", "2", "10"],
-      ["25.6%", "12%", "2", "10"]
-    ],
-    "description": "Increases Energy Regen by {0}. When Resonance Skill is released, increases ATK by {1}, stacking up to {2} time(s). This effect lasts for {3}s."
-  },
-  "stats": { "atk": 587.5, "critRate": 24.3 },
   "ascensions": [
     {
       "cost": [
@@ -62,5 +49,18 @@
       "minLevel": 80
     }
   ],
-  "description": "Pay heed: the frigid blade reveals an icy current that amalgamates into a whirlpool of thoughts. Use this powerful sequence to crush your enemies with ease using the Sword."
+  "description": "Pay heed: the frigid blade reveals an icy current that amalgamates into a whirlpool of thoughts. Use this powerful sequence to crush your enemies with ease using the Sword.",
+  "modifiedTime": "2024-07-20T15:18:08.474Z",
+  "publishedTime": "2024-06-28T15:43:22.052Z",
+  "skill": {
+    "params": [
+      ["12.8%", "6%", "2", "10"],
+      ["16%", "7.5%", "2", "10"],
+      ["19.2%", "9%", "2", "10"],
+      ["22.4%", "10.5%", "2", "10"],
+      ["25.6%", "12%", "2", "10"]
+    ],
+    "description": "Increases Energy Regen by {0}. When Resonance Skill is released, increases ATK by {1}, stacking up to {2} time(s). This effect lasts for {3}s."
+  },
+  "stats": { "atk": 587.5, "critRate": 24.3 }
 }

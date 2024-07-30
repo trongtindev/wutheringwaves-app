@@ -7,8 +7,8 @@ const props = withDefaults(
   }>(),
   {
     gridGap: '0.5em',
-    colWidth: 'minmax(Min(22.5em, 100%), 1fr)'
-  }
+    colWidth: 'minmax(Min(22.5em, 100%), 1fr)',
+  },
 );
 
 // uses
@@ -24,7 +24,7 @@ const columnCount = ref(0);
 const refreshLayout = async () => {
   grids.value.forEach(async (grid) => {
     const ncol = getComputedStyle(grid._el).gridTemplateColumns.split(
-      ' '
+      ' ',
     ).length;
     columnCount.value = ncol;
     grid.items.forEach((c) => {
@@ -71,7 +71,7 @@ const calcGrid = async (masonryElements: HTMLElement[]) => {
           );
         }),
         ncol: 0,
-        mod: 0
+        mod: 0,
       };
     });
     refreshLayout();

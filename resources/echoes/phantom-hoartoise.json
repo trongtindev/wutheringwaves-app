@@ -1,11 +1,11 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.834Z",
   "modifiedTime": "2024-07-09T15:18:53.122Z",
-  "slug": "phantom-hoartoise",
+  "publishedTime": "2024-06-28T15:43:21.834Z",
   "skill": {
     "id": 201033,
     "cd": 8,
     "params": [["8"], ["8"], ["8"], ["8"], ["8"]],
     "description": "Transform into Hoartoise and slowly restore HP. Use the Echo skill again to exit the transformation state.\n\nCD: {0}s"
-  }
+  },
+  "slug": "phantom-hoartoise"
 }

@@ -7,7 +7,7 @@ export enum CardPoolType {
   'standard-weapon' = 4,
   'beginner' = 5,
   'beginner-choice' = 6,
-  'beginner-choice-custom' = 7
+  'beginner-choice-custom' = 7,
 }
 
 export interface IBanner {

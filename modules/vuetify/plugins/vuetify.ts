@@ -5,5 +5,5 @@ export default defineNuxtPlugin({
   setup: (nuxtApp) => {
     nuxtApp.vueApp.use(vuetifyConfig);
     nuxtApp.provide('vuetify', vuetifyConfig);
-  }
+  },
 });

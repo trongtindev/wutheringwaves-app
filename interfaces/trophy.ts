@@ -21,4 +21,3 @@ export interface ITrophyCategory {
   name: string;
   total: number;
 }
-

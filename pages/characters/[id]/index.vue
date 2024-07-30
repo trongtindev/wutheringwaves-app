@@ -29,7 +29,7 @@ const tab = ref('overview');
 // computed
 const pictures = [
   `/characters/portraits/${item.slug}.webp`,
-  ...(data.splashArt ? [`/characters/splash-art/${item.slug}.webp`] : [])
+  ...(data.splashArt ? [`/characters/splash-art/${item.slug}.webp`] : []),
 ];
 
 const stats = computed(() => {
@@ -38,24 +38,24 @@ const stats = computed(() => {
   return [
     {
       label: 'atk',
-      value: data.stats.atk
+      value: data.stats.atk,
     },
     {
       label: 'def',
-      value: data.stats.def
+      value: data.stats.def,
     },
     {
       label: 'hp',
-      value: data.stats.hp
+      value: data.stats.hp,
     },
     {
       label: 'critRate',
-      value: 5
+      value: 5,
     },
     {
       label: 'critDMG',
-      value: 150
-    }
+      value: 150,
+    },
   ];
 });
 
@@ -102,14 +102,14 @@ watch(
   () => tab.value,
   (elementId) => {
     goTo(`#${elementId}`);
-  }
+  },
 );
 
 // seo meta
 const title = i18n.t('meta.characters.id.title', { name: nameLocalized.value });
 const description = i18n.t('meta.characters.id.description', {
   name: nameLocalized.value,
-  attribute: item.attribute.name
+  attribute: item.attribute.name,
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
 
@@ -122,7 +122,7 @@ useSeoMeta({
   description,
   ogDescription: description,
   articlePublishedTime: item.publishedTime,
-  articleModifiedTime: item.modifiedTime
+  articleModifiedTime: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -131,7 +131,7 @@ useJsonld({
   thumbnailUrl: ogImage,
   dateCreated: item.publishedTime,
   datePublished: item.publishedTime,
-  dateModified: item.modifiedTime
+  dateModified: item.modifiedTime,
 });
 useJsonld(() => ({
   '@context': 'https://schema.org',
@@ -142,9 +142,9 @@ useJsonld(() => ({
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
-    name: 'Wuthering Waves'
+    name: 'Wuthering Waves',
   },
-  copyrightNotice: 'trongtindev'
+  copyrightNotice: 'trongtindev',
 }));
 
 if (data.splashArt) {
@@ -157,9 +157,9 @@ if (data.splashArt) {
     creditText: 'WutheringWaves.app',
     creator: {
       '@type': 'Organization',
-      name: 'Wuthering Waves'
+      name: 'Wuthering Waves',
     },
-    copyrightNotice: 'trongtindev'
+    copyrightNotice: 'trongtindev',
   }));
 }
 
@@ -196,8 +196,8 @@ if (headers['if-modified-since']) {
       :items="[
         {
           to: '/characters',
-          title: i18n.t('characters.title')
-        }
+          title: i18n.t('characters.title'),
+        },
       ]"
     />
 
@@ -257,7 +257,7 @@ if (headers['if-modified-since']) {
                     name: nameLocalized,
                     rarity: item.rarity,
                     attribute: item.attribute.name,
-                    weaponType: item.weapon
+                    weaponType: item.weapon,
                   })
                 "
               />
@@ -321,7 +321,7 @@ if (headers['if-modified-since']) {
           {{
             $t('characters.lastUpdatedOn', {
               name: nameLocalized,
-              time: dayjs(item.modifiedTime)
+              time: dayjs(item.modifiedTime),
             })
           }}
         </h2>

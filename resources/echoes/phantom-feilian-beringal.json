@@ -1,7 +1,6 @@
 {
-  "publishedTime": "2024-06-28T15:43:21.834Z",
   "modifiedTime": "2024-07-09T15:18:53.120Z",
-  "slug": "phantom-feilian-beringal",
+  "publishedTime": "2024-06-28T15:43:21.834Z",
   "skill": {
     "id": 281006,
     "cd": 20,
@@ -13,5 +12,6 @@
       ["231.84%", "283.36%", "12.00%", "12.00%", "15", "20"]
     ],
     "description": "Transform into Feilian Beringal to perform a powerful kick. If the kick lands on an enemy, immediately perform a follow-up strike. The kick deals {0} Aero DMG, and the follow-up strike deals {1} Aero DMG.\r\n\r\nAfter the follow-up strike hits, the current character's Aero DMG increases by {2}, and the Heavy Attack DMG increases by {3} for {4}s\r\n\r\nCD: {5}s"
-  }
+  },
+  "slug": "phantom-feilian-beringal"
 }
