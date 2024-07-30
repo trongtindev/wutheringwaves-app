@@ -239,13 +239,13 @@
   "birthday": "April 18th",
   "birthplace": "Huanglong",
   "quoteLocalized": {
-    "vi": "Lính tuần tra Jinzhou, Chixia. Cứ gọi tôi bất cứ khi nào bạn gặp khó khăn!",
     "id": "Patroli Jinzhou, Chixia. Kamu selalu bisa memanggilku jika kamu berada dalam kesulitan!",
-    "th": "Jinzhou Patroller, Chixia. Kapan pun kau dalam kesulitan, kau selalu bisa memanggilku!"
+    "th": "Jinzhou Patroller, Chixia. Kapan pun kau dalam kesulitan, kau selalu bisa memanggilku!",
+    "vi": "Lính tuần tra Jinzhou, Chixia. Cứ gọi tôi bất cứ khi nào bạn gặp khó khăn!"
   },
   "descriptionLocalized": {
-    "vi": "Chixia là một Patroller trẻ tuổi đầy nhiệt huyết, mang ánh sáng rực rỡ đến các con phố của Jinzhou. Cô ấy luôn sẵn sàng trở thành anh hùng mà ai đó cần.",
     "id": "Chixia adalah seorang Patroller muda yang bersemangat yang menerangi jalanan Jinzhou. Dia selalu siap menjadi pahlawan yang dibutuhkan seseorang.",
-    "th": "ชิเซีย เป็นนักลาดตระเวนสาวร่าเริงที่ส่องแสงสว่างไปทั่วถนนของจินโจว เธอพร้อมเสมอที่จะเป็นฮีโร่ที่ใครบางคนต้องการ"
+    "th": "ชิเซีย เป็นนักลาดตระเวนสาวร่าเริงที่ส่องแสงสว่างไปทั่วถนนของจินโจว เธอพร้อมเสมอที่จะเป็นฮีโร่ที่ใครบางคนต้องการ",
+    "vi": "Chixia là một Patroller trẻ tuổi đầy nhiệt huyết, mang ánh sáng rực rỡ đến các con phố của Jinzhou. Cô ấy luôn sẵn sàng trở thành anh hùng mà ai đó cần."
   }
 }
