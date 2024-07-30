@@ -14,7 +14,11 @@
       "slug": "extermination-order",
       "name": "Extermination Order",
       "type": "Resonance Skill",
-      "description": "Calcharo performs up to 3 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\nIf Calcharo is switched off field, or if Resonance Skill <strong>Extermination Order</strong> is not performed again in a while, this skill will enter Cooldown.\nResonance Skill <strong>Extermination Order</strong> does not interrupt Calcharo's Basic Attack combo."
+      "description": "Calcharo performs up to 3 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\nIf Calcharo is switched off field, or if Resonance Skill <strong>Extermination Order</strong> is not performed again in a while, this skill will enter Cooldown.\nResonance Skill <strong>Extermination Order</strong> does not interrupt Calcharo's Basic Attack combo.",
+      "nameLocalized": {
+        "en": "Extermination Order",
+        "vi": "skill tieng viet test"
+      }
     },
     {
       "slug": "phantom-etching",
@@ -240,73 +244,30 @@
   "birthday": "July 8th",
   "birthplace": "New Federation",
   "quoteLocalized": {
-    "vi": "Họ sẽ đưa ra một lời đề nghị mà chúng ta thích. Tôi sẽ đảm bảo điều đó.",
     "id": "Mereka akan memberikan penawaran yang kita sukai. Aku akan pastikan itu.",
-    "th": "Mereka akan memberikan tawaran yang kita sukai. Aku akan pastikan itu."
+    "th": "Mereka akan memberikan tawaran yang kita sukai. Aku akan pastikan itu.",
+    "vi": "Họ sẽ đưa ra một lời đề nghị mà chúng ta thích. Tôi sẽ đảm bảo điều đó."
   },
   "descriptionLocalized": {
-    "vi": "Lãnh đạo của \"Bầy Ma\", một nhóm lính đánh thuê quốc tế. Nhẫn tâm, báo thù, không tha thứ. Khách hàng tiềm năng cần lưu ý về cái giá phải trả trước khi đưa ra lời đề nghị cho anh ta.",
     "id": "Pemimpin \"Ghost Hounds\", kelompok tentara bayaran internasional. Kejam, pendendam, tidak kenal ampun. Klien potensial harus memperhatikan harga yang harus dibayar sebelum memberinya penawaran.",
-    "th": "ผู้นำของ \"ผีหมาป่า\" กลุ่มทหารรับจ้างระหว่างประเทศ โหดเหี้ยม แสวงแก้แค้น ไม่ให้อภัย ลูกค้าที่อาจเป็นไปได้ต้องระมัดระวังในเรื่องค่าใช้จ่ายก่อนที่จะเสนอให้เขา"
+    "th": "ผู้นำของ \"ผีหมาป่า\" กลุ่มทหารรับจ้างระหว่างประเทศ โหดเหี้ยม แสวงแก้แค้น ไม่ให้อภัย ลูกค้าที่อาจเป็นไปได้ต้องระมัดระวังในเรื่องค่าใช้จ่ายก่อนที่จะเสนอให้เขา",
+    "vi": "Lãnh đạo của \"Bầy Ma\", một nhóm lính đánh thuê quốc tế. Nhẫn tâm, báo thù, không tha thứ. Khách hàng tiềm năng cần lưu ý về cái giá phải trả trước khi đưa ra lời đề nghị cho anh ta."
   },
   "bestWeapons": [
-    {
-      "item": "lustrous-razor",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "verdant-summit",
-      "rank": 1,
-      "different": 96.6
-    },
-    {
-      "item": "autumntrace",
-      "rank": 1,
-      "different": 82.8
-    },
-    {
-      "item": "helios-cleaver",
-      "rank": 1,
-      "different": 78.7
-    },
-    {
-      "item": "broadblade-41",
-      "rank": 1,
-      "different": 76.5
-    },
-    {
-      "item": "broadblade-of-night",
-      "rank": 5,
-      "different": 71.8
-    },
-    {
-      "item": "guardian-broadblade",
-      "rank": 5,
-      "different": 70.2
-    }
+    { "item": "lustrous-razor", "rank": 1, "different": 100 },
+    { "item": "verdant-summit", "rank": 1, "different": 96.6 },
+    { "item": "autumntrace", "rank": 1, "different": 82.8 },
+    { "item": "helios-cleaver", "rank": 1, "different": 78.7 },
+    { "item": "broadblade-41", "rank": 1, "different": 76.5 },
+    { "item": "broadblade-of-night", "rank": 5, "different": 71.8 },
+    { "item": "guardian-broadblade", "rank": 5, "different": 70.2 }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Void Thunder"]
-    },
-    {
-      "different": 95,
-      "items": ["Void Thunder", "Lingering Tunes"]
-    },
-    {
-      "different": 95,
-      "items": ["Lingering Tunes"]
-    },
-    {
-      "different": 94.5,
-      "items": ["Void Thunder", "Moonlit Clouds"]
-    },
-    {
-      "different": 93,
-      "items": ["Lingering Tunes", "Moonlit Clouds"]
-    }
+    { "different": 100, "items": ["Void Thunder"] },
+    { "different": 95, "items": ["Void Thunder", "Lingering Tunes"] },
+    { "different": 95, "items": ["Lingering Tunes"] },
+    { "different": 94.5, "items": ["Void Thunder", "Moonlit Clouds"] },
+    { "different": 93, "items": ["Lingering Tunes", "Moonlit Clouds"] }
   ],
   "bestMainEchoes": [
     "tempest-mephis",
@@ -318,26 +279,11 @@
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Crit DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate", "Crit DMG"] },
+        { "cost": 3, "stats": ["Electro DMG"] },
+        { "cost": 3, "stats": ["Electro DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -352,18 +298,9 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["calcharo"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["yinlin", "sanhua", "jianxin"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
+        { "role": "Main DPS", "items": ["calcharo"] },
+        { "role": "Sub DPS", "items": ["yinlin", "sanhua", "jianxin"] },
+        { "role": "Healer", "items": ["verina", "baizhi"] }
       ]
     }
   ]
