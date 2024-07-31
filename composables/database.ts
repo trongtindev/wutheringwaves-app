@@ -37,6 +37,12 @@ import {
   trophySchema,
   type TrophyCollection,
 } from '~/collections/trophy';
+import {
+  weaponCollectionMethods,
+  weaponDocMethods,
+  weaponSchema,
+  type WeaponCollection,
+} from '~/collections/weapon';
 
 export type DatabaseCollections = {
   convenes: ConveneCollection;
@@ -45,6 +51,7 @@ export type DatabaseCollections = {
   markers: MarkerCollection;
   characters: CharacterCollection;
   trophies: TrophyCollection;
+  weapons: WeaponCollection;
 };
 export type MyDatabase = RxDatabase<DatabaseCollections>;
 
@@ -195,6 +202,13 @@ export const useDatabase = defineStore('useDatabase', () => {
                 },
               },
             },
+            weapons: {
+              schema: weaponSchema,
+              methods: weaponDocMethods,
+              statics: weaponCollectionMethods,
+              autoMigrate: false,
+              migrationStrategies: {},
+            },
           });
 
           // check migration
@@ -250,7 +264,7 @@ export const useDatabase = defineStore('useDatabase', () => {
           }, false);
           db.characters.postInsert(() => onChangedDebounce(), false);
           db.characters.postSave(() => onChangedDebounce(), false);
-          // db.characters.postRemove(() => onChangedDebounce(), false);
+          db.characters.postRemove(() => onChangedDebounce(), false);
 
           // trophies
           db.trophies.preInsert((plainData) => {
@@ -259,6 +273,14 @@ export const useDatabase = defineStore('useDatabase', () => {
           db.trophies.postInsert(() => onChangedDebounce(), false);
           db.trophies.postSave(() => onChangedDebounce(), false);
           db.trophies.postRemove(() => onChangedDebounce(), false);
+
+          // weapons
+          db.weapons.preInsert((plainData) => {
+            plainData.createdAt ??= new Date().getTime();
+          }, false);
+          db.weapons.postInsert(() => onChangedDebounce(), false);
+          db.weapons.postSave(() => onChangedDebounce(), false);
+          db.weapons.postRemove(() => onChangedDebounce(), false);
 
           state.value = '';
           isInitialized.value = true;
