@@ -207,32 +207,35 @@ useSeoMeta({
       </client-only>
     </v-navigation-drawer> -->
     <client-only>
-      <v-card>
-        <v-responsive :aspect-ratio="16 / 9">
-          <lazy-leaflet-map
-            :compass="
-              desktopApp.player
-                ? [
-                    desktopApp.player.x,
-                    desktopApp.player.y,
-                    desktopApp.player.z,
-                    desktopApp.player.r,
-                  ]
-                : undefined
-            "
-            :options="options"
-            @on-initialized="(val) => (leaflet = val)"
-            @on-pressed-marker="(val) => onPressedMarker(val)"
-          >
-            <template #default="{ leaflet }">
-              <lazy-leaflet-tile-layer
-                :leaflet="leaflet"
-                :options="tileLayerOptions"
-                :url-template="urlTemplate"
-              />
-            </template>
+      <base-screen>
+        <template #default="{ height }">
+          {{ height }}
+          <v-card>
+            <v-responsive :aspect-ratio="16 / 9">
+              <lazy-leaflet-map
+                :compass="
+                  desktopApp.player
+                    ? [
+                        desktopApp.player.x,
+                        desktopApp.player.y,
+                        desktopApp.player.z,
+                        desktopApp.player.r,
+                      ]
+                    : undefined
+                "
+                :options="options"
+                @on-initialized="(val) => (leaflet = val)"
+                @on-pressed-marker="(val) => onPressedMarker(val)"
+              >
+                <template #default="{ leaflet }">
+                  <lazy-leaflet-tile-layer
+                    :leaflet="leaflet"
+                    :options="tileLayerOptions"
+                    :url-template="urlTemplate"
+                  />
+                </template>
 
-            <!-- <template #popup>
+                <!-- <template #popup>
             <map-popup
               v-if="selected"
               :data="selected"
@@ -240,9 +243,11 @@ useSeoMeta({
               @on-mark-changed="(val) => onMarkChanged(selected!.id, val)"
             />
           </template> -->
-          </lazy-leaflet-map>
-        </v-responsive>
-      </v-card>
+              </lazy-leaflet-map>
+            </v-responsive>
+          </v-card>
+        </template>
+      </base-screen>
 
       <base-panel v-model="panel">
         <template #default="props">
@@ -266,8 +271,8 @@ useSeoMeta({
     <v-fab
       :prepend-icon="mdiCogs"
       color="primary"
-      location="bottom end"
-      size="64"
+      location="top start"
+      size="48"
       fixed
       app
       appear

@@ -121,6 +121,13 @@ useHead({
         ]
       : []),
   ],
+  style: [
+    {
+      id: 'preload-css',
+      innerHTML:
+        '@media screen and (min-width: 1264px) { main { padding-left: 256px !important; } }',
+    },
+  ],
 });
 useSeoMeta({
   ogSiteName: 'WutheringWaves.app',
@@ -132,7 +139,11 @@ useSeoMeta({
   ogDescription: i18n.t('meta.description'),
 });
 
-onNuxtReady(() => window.postMessage('onNuxtReady'));
+onNuxtReady(() => {
+  const preloadCSS = document.querySelector('#preload-css');
+  if (preloadCSS) preloadCSS.remove();
+  window.postMessage('onNuxtReady');
+});
 </script>
 
 <template>

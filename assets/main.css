@@ -162,12 +162,6 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 1264px) {
-  main {
-    padding-left: 256px !important;
-  }
-}
-
 .float-notifications {
   z-index: 999;
   position: fixed;

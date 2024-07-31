@@ -63,8 +63,6 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/robots',
     '@nuxtjs/device',
-    // performance
-    '@nuxtjs/fontaine',
     // dev
     '@nuxt/eslint',
   ],

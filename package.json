@@ -6,10 +6,9 @@
     "email": "me@trongtin.dev"
   },
   "devDependencies": {
-    "@mdi/js": "^7.4.47",
+    "@mdi/js": "git+https://github.com/trongtindev/mdi-js-es",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/device": "^3.1.1",
-    "@nuxtjs/fontaine": "^0.4.3",
     "@nuxtjs/i18n": "^8.3.2",
     "@nuxtjs/robots": "4.0.2",
     "@nuxtjs/sitemap": "^5.3.5",
@@ -61,7 +60,8 @@
     "vite-plugin-vuetify": "^2.0.3",
     "vue-chartjs": "^5.3.1",
     "vue-tsc": "^2.0.29",
-    "vuetify": "^3.6.13"
+    "vuetify": "^3.6.13",
+    "@date-io/dayjs": "^3.0.0"
   },
   "description": "A collection of tools to help playing Wuthering Waves.",
   "scripts": {
@@ -81,7 +81,10 @@
     "check-updates": "bunx npm-check-updates"
   },
   "type": "module",
-  "dependencies": {
-    "@date-io/dayjs": "^3.0.0"
-  }
+  "trustedDependencies": [
+    "esbuild",
+    "protobufjs",
+    "rxdb",
+    "vue-demi"
+  ]
 }
