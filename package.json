@@ -6,6 +6,7 @@
     "email": "me@trongtin.dev"
   },
   "devDependencies": {
+    "@date-io/dayjs": "^3.0.0",
     "@mdi/js": "git+https://github.com/trongtindev/mdi-js-es",
     "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/device": "^3.1.1",
@@ -13,17 +14,6 @@
     "@nuxtjs/robots": "4.0.2",
     "@nuxtjs/sitemap": "^5.3.5",
     "@pinia/nuxt": "^0.5.2",
-    "@tiptap/extension-bubble-menu": "^2.5.7",
-    "@tiptap/extension-character-count": "^2.5.7",
-    "@tiptap/extension-image": "^2.5.6",
-    "@tiptap/extension-table": "^2.5.7",
-    "@tiptap/extension-table-cell": "^2.5.7",
-    "@tiptap/extension-table-header": "^2.5.7",
-    "@tiptap/extension-table-row": "^2.5.7",
-    "@tiptap/extension-text-align": "^2.5.7",
-    "@tiptap/extension-youtube": "^2.5.7",
-    "@tiptap/starter-kit": "^2.5.7",
-    "@tiptap/vue-3": "^2.5.8",
     "@types/file-saver": "^2.0.7",
     "@types/google.accounts": "^0.0.14",
     "@types/gtag.js": "^0.0.20",
@@ -55,13 +45,13 @@
     "rxdb": "^15.28.1",
     "rxjs": "^7.8.1",
     "sass": "^1.77.8",
+    "tinymce": "^7.2.1",
     "typescript": "^5.5.4",
     "url-slug": "^4.0.1",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-chartjs": "^5.3.1",
     "vue-tsc": "^2.0.29",
-    "vuetify": "^3.6.13",
-    "@date-io/dayjs": "^3.0.0"
+    "vuetify": "^3.6.13"
   },
   "description": "A collection of tools to help playing Wuthering Waves.",
   "scripts": {

@@ -268,7 +268,7 @@ if (headers['if-modified-since']) {
           </v-card-item>
 
           <v-card-text v-if="!item.deleted">
-            <div class="tiptap" :innerHTML="contentLocalized"></div>
+            <div :innerHTML="contentLocalized"></div>
           </v-card-text>
         </v-card>
 

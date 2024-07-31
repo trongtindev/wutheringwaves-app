@@ -150,7 +150,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  css: ['~/assets/main.css', '~/assets/main.scss', '~/assets/tiptap.scss'],
+  css: ['~/assets/main.css', '~/assets/main.scss'],
 
   features: {
     inlineStyles: false,
@@ -226,8 +226,6 @@ export default defineNuxtConfig({
               return 'resources-weapons';
             } else if (id.includes('resources')) {
               return 'resources-other';
-            } else if (id.includes('tiptap')) {
-              return 'tiptap';
             }
           },
         },

@@ -7,7 +7,7 @@ export const useNotification = defineStore('useNotification', () => {
   const floatItems = ref<INotification[]>([]);
 
   // functions
-  const create = async (data: Partial<INotification>) => {
+  const create = (data: Partial<INotification>) => {
     data.id ??= randomId();
 
     items.value.push(data as INotification);

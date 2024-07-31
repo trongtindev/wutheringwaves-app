@@ -126,7 +126,7 @@ export const useAccount = defineStore('useAccount', () => {
         }
       }
 
-      const nid = await notification.create({
+      const nid = notification.create({
         title: i18n.t('autoImport.notificationTitle'),
         message: i18n.t('autoImport.notificationMessage', [account.playerId]),
         persistent: true,

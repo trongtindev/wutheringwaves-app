@@ -1,5 +1,7 @@
 declare global {
   interface Window {
+    // tinymce
+    tinymce: import('tinymce').EditorManager;
     // electron
     electron: {
       on: <T>(

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Editor } from '@tiptap/vue-3';
 import { mdiPublish, mdiRefresh, mdiCalendarRange } from '@mdi/js';
+import type { Editor } from 'tinymce';
 import urlSlug from 'url-slug';
 import type { IListResponse } from '~/interfaces/api';
 import type { IFile } from '~/interfaces/file';
@@ -127,7 +127,7 @@ watch(
   () => localizationTab.value,
   (locale) => {
     const content = contentLocalized.value[locale];
-    editor.value?.commands.setContent(content);
+    editor.value?.setContent(content);
   },
 );
 
@@ -177,7 +177,7 @@ useHead({
 
             <v-textarea
               v-model="descriptionLocalized[localizationTab]"
-              class="mt-2"
+              class="mt-2 mb-2"
               :label="$t('guides.editor.description.label')"
               :placeholder="$t('guides.editor.description.placeholder')"
               :persistent-counter="true"
@@ -192,7 +192,7 @@ useHead({
               @on-initialized="
                 (val) => {
                   editor = val;
-                  editor.commands.setContent(contentLocalized[localizationTab]);
+                  editor.setContent(contentLocalized[localizationTab] ?? '');
                 }
               "
             />
