@@ -4,7 +4,7 @@ const i18n = useI18n();
 const route = useRoute();
 
 // head meta
-useApp().title = i18n.t('commit.title');
+useAppBar().title = i18n.t('commit.title');
 </script>
 
 <template>

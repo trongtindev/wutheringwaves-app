@@ -257,7 +257,7 @@ onNuxtReady(async () => {
 const title = i18n.t('meta.convene.global.title');
 const description = i18n.t('meta.convene.global.description');
 
-useApp().title = i18n.t('convene.global.title');
+useAppBar().title = i18n.t('convene.global.title');
 useHead({ title });
 useSeoMeta({
   ogTitle: title,

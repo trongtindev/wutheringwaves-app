@@ -18,7 +18,7 @@ const title = i18n.t('meta.codes.title', {
 });
 const description = i18n.t('meta.codes.description');
 
-useApp().title = i18n.t('codes.title');
+useAppBar().title = i18n.t('codes.title');
 useHead({
   title,
   meta: [

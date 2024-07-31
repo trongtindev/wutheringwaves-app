@@ -134,7 +134,7 @@ watch(
 // seo meta
 const pageTitle = i18n.t('meta.guides.editor.title');
 
-useApp().title = item
+useAppBar().title = item
   ? i18n.t('guides.actions.edit')
   : i18n.t('guides.editor.title');
 useHead({

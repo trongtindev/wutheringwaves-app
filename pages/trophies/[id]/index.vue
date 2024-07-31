@@ -20,7 +20,7 @@ const title = `${i18n.t('common.trophy')}: ${nameLocalized.value}`;
 const description = i18n.t(item.description);
 const ogImage = `${runtimeConfig.public.SITE_URL}/trophies/icons/${item.slug}.webp`;
 
-useApp().title = i18n.t('trophies.title');
+useAppBar().title = i18n.t('trophies.title');
 useHead({ title });
 useSeoMeta({
   ogType: 'article',

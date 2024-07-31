@@ -113,7 +113,7 @@ const description = i18n.t('meta.characters.id.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
 
-useApp().title = i18n.t('characters.title');
+useAppBar().title = i18n.t('characters.title');
 useHead({ title });
 useSeoMeta({
   ogType: 'article',

@@ -205,7 +205,7 @@ onUnmounted(() => {
 const title = i18n.t('meta.timeline.title');
 const description = i18n.t('meta.timeline.description');
 
-useApp().title = i18n.t('timeline.title');
+useAppBar().title = i18n.t('timeline.title');
 useHead({ title });
 useSeoMeta({ ogTitle: title, description, ogDescription: description });
 </script>

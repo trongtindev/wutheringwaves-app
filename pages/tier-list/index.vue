@@ -3,7 +3,7 @@ import type { IListResponse } from '@/interfaces/api';
 import { type ITierList } from '@/interfaces/tier-list';
 
 // uses
-const app = useApp();
+const appBar = useAppBar();
 const api = useApi();
 const i18n = useI18n();
 const localePath = useLocalePath();

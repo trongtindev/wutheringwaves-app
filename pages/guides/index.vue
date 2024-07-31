@@ -64,7 +64,7 @@ fetch(); // no need onMounted
 const title = i18n.t('meta.guides.title');
 const description = i18n.t('meta.guides.description');
 
-useApp().title = i18n.t('guides.title');
+useAppBar().title = i18n.t('guides.title');
 useHead({ title });
 useSeoMeta({
   ogTitle: title,

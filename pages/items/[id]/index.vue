@@ -63,7 +63,7 @@ const relatedItems = computed(() => {
 // seo meta
 const ogImage = `${runtimeConfig.public.SITE_URL}/items/icons/${item.slug}.webp`;
 
-useApp().title = i18n.t('items.title');
+useAppBar().title = i18n.t('items.title');
 useHead({ title: title.value });
 useSeoMeta({
   ogType: 'article',

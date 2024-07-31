@@ -115,7 +115,7 @@ onMounted(() => {
 });
 
 // seo meta
-useApp().title = i18n.t('guides.title');
+useAppBar().title = i18n.t('guides.title');
 useHead({
   title: titleLocalized.value,
   meta: [

@@ -6,10 +6,12 @@ const props = defineProps<{
 }>();
 
 // uses
-const app = useApp();
 const route = useRoute();
 const sidebar = useSidebar();
 const localePath = useLocalePath();
+
+// computed
+const inDev = import.meta.dev;
 </script>
 
 <template>
@@ -24,7 +26,7 @@ const localePath = useLocalePath();
           ? route.path.startsWith(localePath(props.data.url))
           : undefined
       "
-      :disabled="props.data.upcoming && !app.inDev"
+      :disabled="props.data.upcoming && !inDev"
       :class="{
         'ml-12': props.submenu,
       }"

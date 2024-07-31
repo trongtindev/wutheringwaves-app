@@ -79,3 +79,9 @@
 .masonry.stretch-first > *:first-child {
   grid-column: 1/ -1;
 }
+
+/* leaflet */
+.leaflet-container {
+  background-color: black !important;
+  outline: 0 !important;
+}

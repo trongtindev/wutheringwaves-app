@@ -107,7 +107,7 @@ onNuxtReady(() => initialize());
 const title = i18n.t('meta.trophies.title');
 const description = i18n.t('meta.trophies.description');
 
-useApp().title = i18n.t('trophies.title');
+useAppBar().title = i18n.t('trophies.title');
 useHead({ title });
 useSeoMeta({
   ogTitle: title,

@@ -54,7 +54,7 @@ const description = i18n.t('meta.weapons.id.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/weapons/icons/${item.slug}.webp`;
 
-useApp().title = i18n.t('weapons.title');
+useAppBar().title = i18n.t('weapons.title');
 useHead({ title });
 useSeoMeta({
   ogType: 'article',

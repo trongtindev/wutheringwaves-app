@@ -100,7 +100,7 @@ onMounted(() => loadOwned());
 const title = i18n.t('characters.title');
 const description = i18n.t('meta.characters.description');
 
-useApp().title = i18n.t('characters.title');
+useAppBar().title = i18n.t('characters.title');
 useHead({
   title,
 });

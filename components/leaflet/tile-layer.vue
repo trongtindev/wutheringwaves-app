@@ -14,8 +14,8 @@ const instance = ref<TileLayer>();
 
 // functions
 const initialize = async () => {
-  const { tileLayer } = await import('leaflet');
-  instance.value = tileLayer(props.urlTemplate, props.options);
+  const { TileLayer } = window.leaflet;
+  instance.value = new TileLayer(props.urlTemplate, props.options);
   props.leaflet.addLayer(instance.value);
 };
 

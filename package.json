@@ -33,7 +33,6 @@
     "html-to-image": "^1.11.11",
     "jsonschema": "^1.4.1",
     "jwt-decode": "^4.0.0",
-    "leaflet": "^1.9.4",
     "nuxt": "^3.12.4",
     "nuxt-jsonld": "^2.0.8",
     "nuxt-schema-org": "^3.3.9",

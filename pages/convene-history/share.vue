@@ -195,7 +195,7 @@ onMounted(initialize);
 const title = i18n.t('meta.convene.share.title');
 const description = i18n.t('meta.convene.share.description');
 
-useApp().title = i18n.t('convene.share.title');
+useAppBar().title = i18n.t('convene.share.title');
 useHead({
   title,
 });

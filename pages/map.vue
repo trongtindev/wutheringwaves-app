@@ -10,7 +10,6 @@ const route = useRoute();
 const router = useRouter();
 const sidebar = useSidebar();
 const database = useDatabase();
-const desktopApp = useDesktopApp();
 
 // states
 const leaflet = ref<Map>();
@@ -143,7 +142,7 @@ onUnmounted(() => {
 const title = i18n.t('map.title');
 const description = i18n.t('meta.map.description');
 
-useApp().title = i18n.t('map.title');
+useAppBar().setTitle(i18n.t('map.title'));
 useHead({
   title,
   meta: route.query.id
@@ -164,119 +163,81 @@ useSeoMeta({
 
 <template>
   <div>
-    <!-- <v-navigation-drawer v-model="drawer" :width="400">
+    <v-card>
       <client-only>
-        <v-tabs v-model="tab" :fixed-tabs="true">
-          <v-tab value="markers">
-            <v-icon :icon="mdiMapMarker" />
-          </v-tab>
-          <v-tab value="comments">
-            <v-icon :icon="mdiComment" />
-          </v-tab>
-          <v-tab value="account">
-            <v-icon :icon="mdiAccount" />
-          </v-tab>
-        </v-tabs>
-        <v-divider />
+        <template #fallback>
+          <div class="leaflet-map pa-4">
+            {{ $t('common.loading') }}
+          </div>
+        </template>
 
-        <v-tabs-window v-model="tab">
-          <v-tabs-window-item value="markers" class="pa-2">
-            <v-card class="mb-2">
-              <v-list-item :title="$t('map.hideFoundMarkers')">
-                <template #append>
-                  <v-switch v-model="hideFound" :hide-details="true" />
-                </template>
-              </v-list-item>
-            </v-card>
-
-            <map-markers
-              v-if="markers"
-              :markers="markers"
-              @on-active-changed="(val) => (shows = val)"
-            />
-
-            <div v-else class="text-center">
-              <v-progress-circular :indeterminate="true" />
-            </div>
-          </v-tabs-window-item>
-
-          <v-tabs-window-item value="comments">
-            <map-comments :selected="selected" />
-          </v-tabs-window-item>
-        </v-tabs-window>
-      </client-only>
-    </v-navigation-drawer> -->
-    <client-only>
-      <base-screen>
-        <template #default="{ height }">
-          {{ height }}
-          <v-card>
-            <v-responsive :aspect-ratio="16 / 9">
-              <lazy-leaflet-map
-                :compass="
-                  desktopApp.player
-                    ? [
-                        desktopApp.player.x,
-                        desktopApp.player.y,
-                        desktopApp.player.z,
-                        desktopApp.player.r,
-                      ]
-                    : undefined
-                "
+        <div>
+          <base-screen :ratio="0.95">
+            <template #default="{ height }">
+              <leaflet-map
+                :height="height"
                 :options="options"
                 @on-initialized="(val) => (leaflet = val)"
                 @on-pressed-marker="(val) => onPressedMarker(val)"
               >
-                <template #default="{ leaflet }">
-                  <lazy-leaflet-tile-layer
-                    :leaflet="leaflet"
+                <template #default="{ leaflet: instance }">
+                  <leaflet-tile-layer
+                    :leaflet="instance"
                     :options="tileLayerOptions"
                     :url-template="urlTemplate"
                   />
                 </template>
+              </leaflet-map>
+            </template>
+          </base-screen>
 
-                <!-- <template #popup>
-            <map-popup
-              v-if="selected"
-              :data="selected"
-              :initial-value="foundMarkers.includes(selected.id.toString())"
-              @on-mark-changed="(val) => onMarkChanged(selected!.id, val)"
-            />
-          </template> -->
-              </lazy-leaflet-map>
-            </v-responsive>
-          </v-card>
-        </template>
-      </base-screen>
+          <base-panel v-model="panel">
+            <template #default="props">
+              <v-card :min-height="props.height" class="h-100">
+                <v-tabs v-model="tab" :fixed-tabs="true">
+                  <v-tab value="markers">
+                    <v-icon :icon="mdiMapMarker" />
+                  </v-tab>
+                  <v-tab value="comments">
+                    <v-icon :icon="mdiComment" />
+                  </v-tab>
+                  <v-tab value="account">
+                    <v-icon :icon="mdiAccount" />
+                  </v-tab>
+                </v-tabs>
+              </v-card>
+            </template>
+          </base-panel>
+        </div>
 
-      <base-panel v-model="panel">
-        <template #default="props">
-          <v-card :min-height="props.height" class="h-100">
-            <v-tabs v-model="tab" :fixed-tabs="true">
-              <v-tab value="markers">
-                <v-icon :icon="mdiMapMarker" />
-              </v-tab>
-              <v-tab value="comments">
-                <v-icon :icon="mdiComment" />
-              </v-tab>
-              <v-tab value="account">
-                <v-icon :icon="mdiAccount" />
-              </v-tab>
-            </v-tabs>
-          </v-card>
-        </template>
-      </base-panel>
-    </client-only>
+        <v-fab
+          :prepend-icon="mdiCogs"
+          color="primary"
+          location="top right"
+          size="48"
+          fixed
+          app
+          appear
+          @click="() => (panel = !panel)"
+        />
+      </client-only>
+    </v-card>
 
-    <v-fab
-      :prepend-icon="mdiCogs"
-      color="primary"
-      location="top start"
-      size="48"
-      fixed
-      app
-      appear
-      @click="() => (panel = !panel)"
-    />
+    <v-card class="mt-2">
+      <v-card-title tag="h1">
+        {{ $t('map.title') }}
+      </v-card-title>
+      <v-card-text>
+        {{ $t('meta.map.description') }}
+      </v-card-text>
+    </v-card>
+
+    <!-- howToUse -->
+    <v-card class="mt-2">
+      <v-card-title tag="h2">
+        {{ $t('common.howToUse', [$t('map.title')]) }}
+      </v-card-title>
+      <v-card-text> </v-card-text>
+    </v-card>
   </div>
 </template>

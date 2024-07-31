@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { mdiGithub, mdiChevronRight, mdiOpenInNew, mdiDownload } from '@mdi/js';
 
+// define
+const { APP_NAME, APP_REPO, DISCORD_INVITE_LINK } = useRuntimeConfig().public;
+
 // uses
-const app = useApp();
 const i18n = useI18n();
 const resources = useResources();
 const localePath = useLocalePath();
@@ -17,7 +19,7 @@ const upcomingCharacters = characters.filter((e) => e.upcoming);
 // seo meta
 const title = i18n.t('meta.index.title');
 
-useApp().title = i18n.t('common.home');
+useAppBar().title = i18n.t('common.home');
 useHead({ title });
 useSeoMeta({
   title: title,
@@ -35,14 +37,14 @@ useSeoMeta({
             <v-chip
               :prepend-icon="mdiGithub"
               :text="$t('common.viewOnGithub')"
-              :href="app.githubRepo"
+              :href="APP_REPO"
               target="_blank"
             />
 
             <v-chip
               :prepend-icon="mdiOpenInNew"
               :text="$t('common.joinTheDiscord')"
-              :href="app.discord"
+              :href="DISCORD_INVITE_LINK"
               target="_blank"
             />
           </div>
@@ -163,7 +165,7 @@ useSeoMeta({
       <v-row :no-gutters="true">
         <v-col cols="12" md="6" class="d-flex align-center">
           <h2>
-            {{ app.name }}
+            {{ APP_NAME }}
           </h2>
         </v-col>
 
@@ -174,16 +176,16 @@ useSeoMeta({
           </div>
 
           <div>
-            <a :href="app.githubRepo" target="_blank" title="Github">
-              Github
+            <a :href="APP_REPO" target="_blank" title="Github"> Github </a>
+          </div>
+          <div>
+            <a :href="DISCORD_INVITE_LINK" target="_blank" title="Discord">
+              Discord
             </a>
           </div>
           <div>
-            <a :href="app.discord" target="_blank" title="Discord"> Discord </a>
-          </div>
-          <div>
             <a
-              :href="`${app.githubRepo}/issues`"
+              :href="`${APP_REPO}/issues`"
               target="_blank"
               :title="$t('Report a Bug')"
             >
@@ -233,7 +235,7 @@ useSeoMeta({
       <div class="d-flex flex-column">
         <div class="d-flex w-100 align-center">
           <div>
-            <div>© 2024 {{ app.name }}</div>
+            <div>© 2024 {{ APP_NAME }}</div>
             <div>
               All game assets and trademarks are the property of their
               respective owners.

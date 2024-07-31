@@ -6,12 +6,12 @@ const props = defineProps<{
   color?: string;
 }>();
 
-// uses
-const app = useApp();
+// define
+const { APP_REPO } = useRuntimeConfig().public;
 
 // events
 const onPressedContribute = () => {
-  window.open(`${app.githubRepo}${props.path || ''}`);
+  window.open(`${APP_REPO}${props.path || ''}`);
 };
 </script>
 

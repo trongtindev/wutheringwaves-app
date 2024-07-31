@@ -9,7 +9,7 @@ import {
 import { useDisplay, useTheme } from 'vuetify';
 
 // uses
-const app = useApp();
+const appBar = useAppBar();
 const sidebar = useSidebar();
 const localePath = useLocalePath();
 const search = useSearch();
@@ -89,12 +89,9 @@ const onPressedSearch = () => {
             {{ $t('common.loading') }}
           </template>
 
-          <span v-if="app.title">
-            {{ app.title }}
-          </span>
-          <span v-else>
-            {{ app.name }}
-          </span>
+          <v-sheet v-if="appBar.title" class="text-h6">
+            {{ appBar.title }}
+          </v-sheet>
         </client-only>
       </v-app-bar-title>
 
@@ -134,7 +131,7 @@ const onPressedSearch = () => {
     <!-- main -->
     <v-main>
       <!-- container -->
-      <v-container :fluid="app.fluid">
+      <v-container :fluid="true">
         <router-link :to="localePath('/convene-history')">
           <base-alert
             v-if="!route.path.includes('convene')"

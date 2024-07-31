@@ -66,7 +66,7 @@ onMounted(() => initialize());
 const title = i18n.t('meta.echoes.title');
 const description = i18n.t('meta.echoes.description');
 
-useApp().title = i18n.t('echoes.title');
+useAppBar().title = i18n.t('echoes.title');
 useHead({ title });
 useSeoMeta({
   title,

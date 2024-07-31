@@ -5,7 +5,7 @@ const i18n = useI18n();
 // seo meta
 const title = i18n.t('meta.settings.title');
 
-useApp().title = i18n.t('settings.title');
+useAppBar().title = i18n.t('settings.title');
 useHead({
   title,
   meta: [

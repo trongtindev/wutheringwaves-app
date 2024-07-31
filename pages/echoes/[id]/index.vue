@@ -42,7 +42,7 @@ const description = i18n.t('meta.echoes.id.description', {
 });
 const ogImage = `${runtimeConfig.public.SITE_URL}/echoes/icons/${item.slug}.webp`;
 
-useApp().title = i18n.t('echoes.title');
+useAppBar().title = i18n.t('echoes.title');
 useHead({ title });
 useSeoMeta({
   ogType: 'article',

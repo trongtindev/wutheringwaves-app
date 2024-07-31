@@ -82,7 +82,7 @@ onMounted(() => {
 const title = i18n.t('convene.import.title');
 const description = i18n.t('meta.convene.history.description');
 
-useApp().title = i18n.t('convene.import.title');
+useAppBar().title = i18n.t('convene.import.title');
 useHead({
   title,
   meta: [

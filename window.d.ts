@@ -1,7 +1,13 @@
+import type * as L from 'leaflet';
+
 declare global {
   interface Window {
+    // leaflet
+    leaflet: typeof L;
+
     // tinymce
     tinymce: import('tinymce').EditorManager;
+
     // electron
     electron: {
       on: <T>(

@@ -58,15 +58,15 @@ const onPressedPull = () => {
     </v-card-text>
 
     <v-card-actions>
-      <v-chip class="ml-1">
+      <div class="text-caption ml-2">
         {{
-          $t('sync.lastSynced', {
-            time: sync.lastCloudChanged
+          $t('sync.lastSynced', [
+            sync.lastCloudChanged
               ? dayjs(sync.lastCloudChanged).fromNow()
               : $t('common.none'),
-          })
+          ])
         }}
-      </v-chip>
+      </div>
 
       <v-spacer />
 
