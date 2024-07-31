@@ -54,6 +54,16 @@
     },
     "replies": "Replies"
   },
+  "commit": {
+    "character": {
+      "overview": "Overview",
+      "quote": "Quote",
+      "description": "Description",
+      "skills": "Skills"
+    },
+    "successfully": "Thank you for your contribution, your request has been sent and is being reviewed.",
+    "viewPullRequest": "View Pull Request"
+  },
   "common": {
     "name": "名前",
     "time": "時間",
@@ -154,7 +164,9 @@
     "background": "Background",
     "foreground": "Foreground",
     "upload": "Upload",
-    "gallery": "Gallery"
+    "gallery": "Gallery",
+    "translateThisPage": "Translate this page",
+    "description": "Description"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -275,8 +287,10 @@
         "title": "Categories"
       },
       "options": {
-        "title": "Options"
-      }
+        "title": "Options",
+        "schedule": "Schedule publish"
+      },
+      "update": "Save changes"
     },
     "related": "Related Posts",
     "previous": "Previous Posts",
