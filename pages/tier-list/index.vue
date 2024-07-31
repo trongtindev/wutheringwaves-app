@@ -3,7 +3,6 @@ import type { IListResponse } from '@/interfaces/api';
 import { type ITierList } from '@/interfaces/tier-list';
 
 // uses
-const appBar = useAppBar();
 const api = useApi();
 const i18n = useI18n();
 const localePath = useLocalePath();
@@ -34,7 +33,6 @@ const loadData = async () => {
       })
       .then((result) => {
         data.value = result.data;
-        app.scrollTop();
         resolve(result);
       })
       .catch((error) => {

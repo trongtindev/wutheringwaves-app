@@ -19,7 +19,7 @@ const options: MapOptions = {
   minZoom: 11,
   maxZoom: 15,
   markerZoomAnimation: true,
-  attributionControl: false,
+  // attributionControl: false,
   preferCanvas: true,
 };
 const tileLayerOptions: TileLayerOptions & { getX: any; getY: any } = {

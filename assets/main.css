@@ -119,10 +119,6 @@ a {
   background-color: var(--color-background-rarity4) !important;
 }
 
-.leaflet-attribution-flag {
-  display: none !important;
-}
-
 .z-1 {
   z-index: 1;
 }
