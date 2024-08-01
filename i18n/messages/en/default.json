@@ -311,7 +311,31 @@
     "title": "Leaderboards"
   },
   "map": {
-    "title": "Interactive Map"
+    "title": "Interactive Map",
+    "locations": {
+      "dimForest": "Dim Forest",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "tigersMaw": "Tiger's Maw",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Central Plains",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland"
+    },
+    "categories": {
+      "selfCreatedPin": "Self-Created Pin",
+      "levelUpMaterial": "Level-Up Material",
+      "waypoints": "Waypoints",
+      "specialItems": "Special Items",
+      "chests": "Chests",
+      "puzzleChest": "Puzzle Chest",
+      "localSpecialties": "Local Specialties",
+      "enemies": "Enemies",
+      "ores": "Ores",
+      "animals": "Animals",
+      "landmarks": "Landmarks"
+    }
   },
   "meta": {
     "title": "Wuthering Waves",

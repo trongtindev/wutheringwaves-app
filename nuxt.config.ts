@@ -14,6 +14,8 @@ const {
   // api
   API_URL,
   API_TIMEOUT,
+  // file
+  FILE_URL,
   // redis
   // REDIS_HOST,
   // REDIS_PORT,
@@ -276,6 +278,8 @@ export default defineNuxtConfig({
       // api
       API_URL,
       API_TIMEOUT: parseInt(API_TIMEOUT!),
+      // file
+      FILE_URL,
       // google
       GOOGLE_TAG_ID,
       GOOGLE_CLIENT_ID,

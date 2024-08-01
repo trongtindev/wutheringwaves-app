@@ -3,12 +3,15 @@ import type { IWeapon } from '@/interfaces/weapon';
 
 const i18n = useI18n();
 const resources = useResources();
+const database = useDatabase();
+const account = useAccount();
 
 // states
 const weapons = ref<IWeapon[]>(await resources.weapons());
 const filterText = ref<string>();
 const filterType = ref<string>('All');
 const filterRarity = ref<number>(0);
+const ownedCount = ref({});
 
 // computed
 const items = computed(() => {
@@ -46,10 +49,42 @@ const categories = computed(() => {
   return items;
 });
 
+// functions
+const calculatorOwned = () => {
+  if (!account.active) return;
+
+  database.getInstance().then((db) => {
+    db.weapons
+      .find({
+        selector: {
+          playerId: account.active,
+        },
+      })
+      .exec()
+      .then((documents) => {
+        ownedCount.value = Object.fromEntries(
+          documents.map((doc) => [doc.resourceId, doc.count]),
+        );
+      });
+  });
+};
+
+// changes
+watch(
+  () => database.isChanged,
+  () => calculatorOwned(),
+);
+
+watch(
+  () => account.active,
+  () => calculatorOwned(),
+);
+
 // lifecycle
-// onMounted(() => {
-//   console.log(JSON.stringify(weapons.value.map((e) => e.name)));
-// });
+onNuxtReady(() => {
+  // console.log(JSON.stringify(weapons.value.map((e) => e.name)));
+  calculatorOwned();
+});
 
 // seo meta
 const title = i18n.t('meta.weapons.title');
@@ -62,6 +97,9 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
 <template>
   <div>
+    <!-- alert -->
+    <base-alert id="weapons.alert" :text="$t('weapons.alert')" />
+
     <!-- filter -->
     <v-row>
       <v-col cols="12" md="4">
@@ -98,14 +136,14 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     <!-- list -->
     <v-row class="mt-1">
       <v-col
-        v-for="(item, index) in items"
+        v-for="(element, index) in items"
         :key="index"
         cols="6"
         sm="4"
         md="3"
         lg="2"
       >
-        <weapon-card :item="item" />
+        <weapon-card :item="element" :owned-count="ownedCount[element.id]" />
       </v-col>
     </v-row>
   </div>

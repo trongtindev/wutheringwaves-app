@@ -3,6 +3,7 @@ import type { IWeapon } from '~/interfaces/weapon';
 
 const props = defineProps<{
   item: IWeapon;
+  ownedCount?: number;
 }>();
 
 const localePath = useLocalePath();
@@ -15,7 +16,26 @@ const localePath = useLocalePath();
       :src="`/weapons/icons/${props.item.slug}.webp`"
       :cover="true"
       class="align-end h-100"
-    />
+    >
+      <v-sheet class="position-absolute top-0 left-0 pl-2 pt-2">
+        <client-only>
+          <v-tooltip location="bottom">
+            <template #activator="tooltip">
+              <v-chip
+                v-if="props.ownedCount"
+                v-bind="tooltip.props"
+                :text="props.ownedCount.toString()"
+                color="info"
+              />
+            </template>
+
+            <div>
+              {{ $t('weapons.ownedTooltip') }}
+            </div>
+          </v-tooltip>
+        </client-only>
+      </v-sheet>
+    </v-img>
 
     <v-card-title
       tag="h2"

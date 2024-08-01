@@ -62,8 +62,14 @@ const initialize = async () => {
   leaflet.value = new Map(container.value, props.options);
   leaflet.value.invalidateSize();
 
-  // leaflet.value.on('click', (e) => {
-  //   if (!leaflet.value) return;
+  leaflet.value.on('click', (e) => {
+    if (!leaflet.value) return;
+
+    console.log('leaflet', 'click', {
+      lat: e.latlng.lat,
+      lng: e.latlng.lng,
+    });
+  });
 
   //   const distance = 1000 / Math.pow(2, zoom.value - baseZoomLevel.value);
   //   const markers = Object.keys(markerInstances.value)

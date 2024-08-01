@@ -3,6 +3,9 @@ import type { IMarker } from '~/interfaces/map';
 import type { Map, MapOptions, TileLayerOptions } from 'leaflet';
 import { mdiCogs, mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
 
+// define
+const { FILE_URL } = useRuntimeConfig().public;
+
 // uses
 const api = useApi();
 const i18n = useI18n();
@@ -21,8 +24,12 @@ const options: MapOptions = {
   markerZoomAnimation: true,
   // attributionControl: false,
   preferCanvas: true,
+  zoomControl: false,
 };
-const tileLayerOptions: TileLayerOptions & { getX: any; getY: any } = {
+const tileLayerOptions: TileLayerOptions & {
+  getX: typeof leafletGetX;
+  getY: typeof leafletGetY;
+} = {
   tms: true,
   noWrap: true,
   bounds: [
@@ -45,7 +52,7 @@ const urlTemplate = computed(() => {
   if (import.meta.dev && route.query.localTiles) {
     return '/map/tiles/{z}/{getX}_{getY}.webp';
   }
-  return `https://files.wutheringwaves.app/tiles/{z}/{getX}_{getY}.webp`;
+  return `${FILE_URL}/tiles/{z}/{getX}_{getY}.webp`;
 });
 
 const displayMarkers = computed(() => {
@@ -191,20 +198,11 @@ useSeoMeta({
             </template>
           </base-screen>
 
+          <!-- panel -->
           <base-panel v-model="panel">
             <template #default="props">
               <v-card :min-height="props.height" class="h-100">
-                <v-tabs v-model="tab" :fixed-tabs="true">
-                  <v-tab value="markers">
-                    <v-icon :icon="mdiMapMarker" />
-                  </v-tab>
-                  <v-tab value="comments">
-                    <v-icon :icon="mdiComment" />
-                  </v-tab>
-                  <v-tab value="account">
-                    <v-icon :icon="mdiAccount" />
-                  </v-tab>
-                </v-tabs>
+                <map-panel />
               </v-card>
             </template>
           </base-panel>

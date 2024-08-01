@@ -19,6 +19,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
         qualityLevel: number;
         cardPoolType: number;
         resourceType: string;
+        resourceId: number;
       }[];
       total: number;
     }>('/convenes/import', {
@@ -106,7 +107,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     });
     await db.convenes.bulkInsert(conveneWrites);
 
-    // calc owned
+    // calculator characters
     const resonators = response.data.items.filter((e) => {
       return e.resourceType.startsWith('R');
     });
@@ -142,6 +143,33 @@ export const useImportConvene = defineStore('useImportConvene', () => {
 
     await db.characters.deleteMany({ playerId });
     await db.characters.bulkUpsert(characterWrites);
+
+    // calculator weapons
+    const weaponCounts: {
+      [key: string]: {
+        count: number;
+        resourceId: number;
+      };
+    } = {};
+    for (const element of response.data.items) {
+      if (!element.resourceType.startsWith('W')) continue;
+      weaponCounts[element.name] ??= {
+        count: 0,
+        resourceId: element.resourceId,
+      };
+      weaponCounts[element.name].count += 1;
+    }
+
+    const weaponsWrites = Object.keys(weaponCounts).map((e) => {
+      return {
+        ...weaponCounts[e],
+        playerId,
+        key: `${weaponCounts[e].resourceId}${playerId}`,
+      };
+    });
+
+    await db.weapons.deleteMany({ playerId });
+    await db.weapons.bulkUpsert(weaponsWrites);
 
     return {
       playerId,

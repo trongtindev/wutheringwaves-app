@@ -8,6 +8,9 @@ import {
 } from '@mdi/js';
 import { useDisplay, useTheme } from 'vuetify';
 
+// define
+const { APP_NAME } = useRuntimeConfig().public;
+
 // uses
 const appBar = useAppBar();
 const sidebar = useSidebar();
@@ -36,20 +39,24 @@ const onPressedSearch = () => {
 <template>
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
-      <!-- logo -->
-      <div class="pt-2 pl-2">
-        <v-card :to="localePath('/')" :width="48" :height="48">
-          <v-avatar
-            :size="48"
-            rounded
-            image="/icon-192-maskable.png"
-            alt="WutheringWaves.app logo"
-          />
-        </v-card>
-      </div>
-
       <!-- sidebar -->
       <v-list :nav="true" :lines="false">
+        <!-- logo -->
+        <v-list-item :to="localePath('/')" :active="false">
+          <template #prepend>
+            <v-avatar
+              rounded
+              image="/icon-192-maskable.png"
+              alt="WutheringWaves.app logo"
+            />
+          </template>
+
+          <v-list-item-title>
+            {{ APP_NAME }}
+          </v-list-item-title>
+          <v-list-item-subtitle> www.wutheringwaves.app </v-list-item-subtitle>
+        </v-list-item>
+
         <nav-item
           v-for="(element, index) in sidebar.items"
           :key="index"

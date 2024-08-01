@@ -13,6 +13,7 @@ export type WeaponAcquisitionMethod =
   | 'Chests';
 
 export interface IWeapon {
+  id: number;
   slug: string;
   name: string;
   nameLocalized?: ILocalized;
