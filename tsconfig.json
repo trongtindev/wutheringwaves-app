@@ -5,7 +5,8 @@
       "@nuxtjs/sitemap",
       "@nuxtjs/i18n",
       "@types/google.accounts",
-      "@types/gtag.js"
+      "@types/gtag.js",
+      "@types/leaflet.markercluster"
     ],
     "resolveJsonModule": true,
     "esModuleInterop": true,

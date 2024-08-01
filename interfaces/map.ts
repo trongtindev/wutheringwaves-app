@@ -4,3 +4,9 @@ export interface IMarker {
   lng: number;
   lat: number;
 }
+
+export interface IMapCategory {
+  type: 'self' | 'characters' | 'markers';
+  name: string;
+  items?: string[];
+}

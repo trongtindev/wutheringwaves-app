@@ -316,12 +316,28 @@
       "dimForest": "Dim Forest",
       "portCityOfGuixu": "Port City of Guixu",
       "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Fallen Grave",
+      "frostingHarbor": "Frosting Harbor",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
       "tigersMaw": "Tiger's Maw",
       "wumingBay": "Wuming Bay",
       "jinzhou": "Jinzhou",
       "centralPlains": "Central Plains",
       "gorgesOfSpirits": "Gorges of Spirits",
-      "desorockHighland": "Desorock Highland"
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Lollo Warehouse",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen"
     },
     "categories": {
       "selfCreatedPin": "Self-Created Pin",
@@ -334,7 +350,8 @@
       "enemies": "Enemies",
       "ores": "Ores",
       "animals": "Animals",
-      "landmarks": "Landmarks"
+      "landmarks": "Landmarks",
+      "echoes": "Echoes"
     }
   },
   "meta": {
@@ -563,6 +580,7 @@
     "alert": "Import convene history to see already owned weapons.",
     "lastUpdatedOn": "{name} weapon has been last updated on {time}.",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> weapon.",
-    "skill": "{name} Skill"
+    "skill": "{name} Skill",
+    "obtainedTooltip": "Number of times obtained via convene."
   }
 }

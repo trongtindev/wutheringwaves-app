@@ -3,7 +3,7 @@ import type { IWeapon } from '~/interfaces/weapon';
 
 const props = defineProps<{
   item: IWeapon;
-  ownedCount?: number;
+  obtainedCount?: number;
 }>();
 
 const localePath = useLocalePath();
@@ -22,15 +22,15 @@ const localePath = useLocalePath();
           <v-tooltip location="bottom">
             <template #activator="tooltip">
               <v-chip
-                v-if="props.ownedCount"
+                v-if="props.obtainedCount"
                 v-bind="tooltip.props"
-                :text="props.ownedCount.toString()"
+                :text="props.obtainedCount.toString()"
                 color="info"
               />
             </template>
 
             <div>
-              {{ $t('weapons.ownedTooltip') }}
+              {{ $t('weapons.obtainedTooltip') }}
             </div>
           </v-tooltip>
         </client-only>

@@ -11,7 +11,7 @@ const weapons = ref<IWeapon[]>(await resources.weapons());
 const filterText = ref<string>();
 const filterType = ref<string>('All');
 const filterRarity = ref<number>(0);
-const ownedCount = ref({});
+const obtainedCount = ref({});
 
 // computed
 const items = computed(() => {
@@ -62,7 +62,7 @@ const calculatorOwned = () => {
       })
       .exec()
       .then((documents) => {
-        ownedCount.value = Object.fromEntries(
+        obtainedCount.value = Object.fromEntries(
           documents.map((doc) => [doc.resourceId, doc.count]),
         );
       });
@@ -143,7 +143,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         md="3"
         lg="2"
       >
-        <weapon-card :item="element" :owned-count="ownedCount[element.id]" />
+        <weapon-card
+          :item="element"
+          :obtained-count="obtainedCount[element.id]"
+        />
       </v-col>
     </v-row>
   </div>

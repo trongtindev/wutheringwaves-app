@@ -3,6 +3,9 @@ import { useDisplay } from 'vuetify';
 
 // define
 const model = defineModel<boolean>();
+const props = defineProps<{
+  location?: 'right' | 'left';
+}>();
 
 // uses
 const display = useDisplay();
@@ -35,7 +38,7 @@ onMounted(() => {
     v-model="model"
     :temporary="true"
     :width="360"
-    location="right"
+    :location="props.location || 'right'"
   >
     <slot :height="height" />
   </v-navigation-drawer>

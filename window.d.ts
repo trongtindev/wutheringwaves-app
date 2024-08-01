@@ -4,6 +4,7 @@ declare global {
   interface Window {
     // leaflet
     leaflet: typeof L;
+    // leafletMap: typeof L.map;
 
     // tinymce
     tinymce: import('tinymce').EditorManager;

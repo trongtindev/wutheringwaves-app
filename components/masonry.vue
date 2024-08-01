@@ -12,6 +12,8 @@ const props = withDefaults(
 );
 
 // uses
+const device = useDevice();
+const windowSize = useWindowSize();
 const refreshLayoutDebounce = useDebounceFn(() => refreshLayout(), 150);
 
 // states
@@ -22,6 +24,8 @@ const columnCount = ref(0);
 
 // functions
 const refreshLayout = async () => {
+  console.debug('refreshLayout');
+
   grids.value.forEach(async (grid) => {
     const ncol = getComputedStyle(grid._el).gridTemplateColumns.split(
       ' ',
@@ -87,15 +91,12 @@ const initialize = () => {
   refreshLayout();
 };
 
-// lifecycle
-onMounted(() => {
-  initialize();
-  window.addEventListener('resize', refreshLayoutDebounce, false);
-});
+// changes
+watch(windowSize.width, refreshLayoutDebounce);
+watch(windowSize.height, refreshLayoutDebounce);
 
-onUnmounted(() => {
-  window.removeEventListener('resize', refreshLayoutDebounce, false);
-});
+// lifecycle
+if (!device.isMobile) onNuxtReady(initialize);
 </script>
 
 <template>

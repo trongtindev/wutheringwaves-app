@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["self", "characters", "markers"]
+          },
+          "name": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "./item.components.json#/components/schemas/slug"
+            }
+          }
+        },
+        "required": ["type", "name"]
+      }
+    }
+  },
+  "type": "object"
+}
