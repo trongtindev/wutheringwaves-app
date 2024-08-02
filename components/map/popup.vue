@@ -92,7 +92,11 @@ watch(() => account.active, checkMarked);
     <v-card-title> #{{ props.id }} </v-card-title>
 
     <v-sheet :max-height="480" class="overflow-y-auto">
-      <comments :lite="true" :load-more="true" :channel="`mapPin.${props.id}`" />
+      <comments
+        :lite="true"
+        :load-more="true"
+        :channel="`mapPin.${props.id}`"
+      />
     </v-sheet>
 
     <v-divider />
