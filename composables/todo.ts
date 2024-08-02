@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia';
-
 export const useTodo = defineStore('useTodo', () => {
   // uses
   // const database = useDatabase();

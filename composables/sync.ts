@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia';
 import type { ISyncPull, ISyncPush } from '~/interfaces/sync';
 
 export const useSync = defineStore('useSync', () => {

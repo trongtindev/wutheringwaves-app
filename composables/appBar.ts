@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia';
-
 export const useAppBar = defineStore('useAppBar', () => {
   // config
   const { APP_NAME } = useRuntimeConfig().public;

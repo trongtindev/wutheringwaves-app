@@ -24,8 +24,6 @@ const columnCount = ref(0);
 
 // functions
 const refreshLayout = async () => {
-  console.debug('refreshLayout');
-
   grids.value.forEach(async (grid) => {
     const ncol = getComputedStyle(grid._el).gridTemplateColumns.split(
       ' ',
@@ -92,11 +90,15 @@ const initialize = () => {
 };
 
 // changes
-watch(windowSize.width, refreshLayoutDebounce);
-watch(windowSize.height, refreshLayoutDebounce);
+if (!device.isMobile) {
+  watch(windowSize.width, refreshLayoutDebounce);
+  watch(windowSize.height, refreshLayoutDebounce);
+}
 
 // lifecycle
-if (!device.isMobile) onNuxtReady(initialize);
+if (!device.isMobile) {
+  onNuxtReady(initialize);
+}
 </script>
 
 <template>

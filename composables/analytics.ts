@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia';
-
 export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
   const auth = useAuth();

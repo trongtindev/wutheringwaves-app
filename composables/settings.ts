@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia';
-
 export const useSettings = defineStore('useSettings', () => {
   // uses
   const database = useDatabase();

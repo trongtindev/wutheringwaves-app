@@ -1,5 +1,4 @@
 import type { ISnackbar } from '@/interfaces/snackbar';
-import { defineStore } from 'pinia';
 
 export const useSnackbar = defineStore('useSnackbar', () => {
   // states

@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia';
 import type { INotification } from '~/interfaces/notification';
 
 export const useNotification = defineStore('useNotification', () => {

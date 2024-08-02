@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia';
-
 declare global {
   const grecaptcha: {
     execute: (key: string, options?: any) => Promise<string>;

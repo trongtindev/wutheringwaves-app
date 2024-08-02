@@ -63,6 +63,12 @@ export default defineNuxtConfig({
     // debug: true,
   },
 
+  $production: {
+    i18n: {
+      baseUrl: NUXT_PUBLIC_SITE_URL,
+    },
+  },
+
   devtools: {
     enabled: false,
   },
@@ -251,6 +257,8 @@ export default defineNuxtConfig({
               return 'resources-weapons';
             } else if (id.includes('resources')) {
               return 'resources-other';
+            } else if (id.includes('vuetify')) {
+              return 'vuetify';
             }
           },
         },
@@ -259,6 +267,20 @@ export default defineNuxtConfig({
         format: {
           comments: false,
         },
+        compress: {
+          drop_console: false,
+        },
+      },
+    },
+    server: {
+      warmup: {
+        clientFiles: [
+          'app.vue',
+          'layouts/default.vue',
+          './composables/database.ts',
+          './composables/resources.ts',
+          './components/convene-history/chart-summary.vue',
+        ],
       },
     },
   },

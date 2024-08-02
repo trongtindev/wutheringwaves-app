@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia';
 import type { IUser } from '~/interfaces/user';
 import { jwtDecode } from 'jwt-decode';
 import { AxiosError } from 'axios';

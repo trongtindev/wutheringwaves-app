@@ -1,5 +1,4 @@
 import type { IDialogParams } from '../interfaces/dialog';
-import { defineStore } from 'pinia';
 
 export const useDialog = defineStore('useDialog', () => {
   // states
