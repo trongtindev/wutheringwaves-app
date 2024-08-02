@@ -1,28 +1,17 @@
 import { createVuetify } from 'vuetify';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
-import { en, ja, ko, th, vi } from 'vuetify/locale';
 import {
   VStepperVertical,
   VStepperVerticalItem,
   VStepperVerticalActions,
 } from 'vuetify/labs/VStepperVertical';
-import {
-  VTimePicker,
-  // VTimePickerClock,
-  // VTimePickerControls
-} from 'vuetify/labs/VTimePicker';
 import { VBtn } from 'vuetify/components';
-import DayJsAdapter from '@date-io/dayjs';
 
 export const vuetifyConfig = createVuetify({
   ssr: true,
-  date: {
-    adapter: DayJsAdapter,
-  },
   locale: {
     locale: 'en',
     fallback: 'en',
-    messages: { en, ja, ko, th, vi },
   },
   icons: {
     defaultSet: 'mdi',
@@ -115,6 +104,5 @@ export const vuetifyConfig = createVuetify({
     VStepperVertical,
     VStepperVerticalItem,
     VStepperVerticalActions,
-    VTimePicker,
   },
 });

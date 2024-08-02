@@ -241,12 +241,8 @@ export default defineNuxtConfig({
     resolve: {
       extensions: ['.mjs', '.js', '.ts', '.json'],
     },
-    css: {
-      transformer: 'lightningcss',
-    },
     build: {
       cssCodeSplit: false,
-      cssMinify: 'lightningcss',
       rollupOptions: {
         output: {
           experimentalMinChunkSize: 250 * 1024,
@@ -261,8 +257,8 @@ export default defineNuxtConfig({
               return 'resources-weapons';
             } else if (id.includes('resources')) {
               return 'resources-other';
-            } else if (id.includes('vuetify')) {
-              return 'vuetify';
+            } else if (id.includes('i18n')) {
+              return 'i18n';
             }
           },
         },
@@ -288,6 +284,8 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  build: {},
 
   nitro: {
     prerender: {

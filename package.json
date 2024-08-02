@@ -6,7 +6,6 @@
     "email": "me@trongtin.dev"
   },
   "devDependencies": {
-    "@date-io/dayjs": "^3.0.0",
     "@mdi/js": "git+https://github.com/trongtindev/mdi-js-es",
     "@nuxt/eslint": "^0.4.0",
     "@nuxtjs/device": "^3.1.1",
@@ -35,7 +34,6 @@
     "html-to-image": "^1.11.11",
     "jsonschema": "^1.4.1",
     "jwt-decode": "^4.0.0",
-    "lightningcss": "^1.25.1",
     "nuxt": "^3.12.4",
     "nuxt-jsonld": "^2.0.8",
     "nuxt-schema-org": "^3.3.9",
