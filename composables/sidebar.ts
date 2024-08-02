@@ -75,7 +75,7 @@ export const useSidebar = defineStore('useSidebar', () => {
       url: '/map',
       icon: mdiMap,
       title: 'sidebar.map',
-      upcoming: true,
+      beta: true,
     },
     {
       url: '/characters',
