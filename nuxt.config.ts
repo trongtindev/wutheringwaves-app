@@ -33,15 +33,27 @@ const {
 } = process.env;
 
 const localesMetadata: LocaleObject[] = [
-  { name: 'English', code: 'en', iso: 'en', isCatchallLocale: true },
-  { name: 'Indonesia', code: 'id', iso: 'id' },
-  { name: '日本語', code: 'ja', iso: 'ja' },
-  { name: '한국어', code: 'ko', iso: 'ko' },
-  { name: 'ภาษาไทย', code: 'th', iso: 'th', rtl: true },
-  { name: 'Türkçe', code: 'tr', iso: 'tr' },
-  { name: 'Tiếng Việt', code: 'vi', iso: 'vi' },
-  { name: 'Ukrainian', code: 'uk', iso: 'uk' },
-  { name: '中文(简体)', code: 'zh', iso: 'zh' },
+  {
+    name: 'English',
+    code: 'en',
+    iso: 'en',
+    isCatchallLocale: true,
+    files: ['en/default.json'],
+  },
+  { name: 'Indonesia', code: 'id', iso: 'id', files: ['id/default.json'] },
+  { name: '日本語', code: 'ja', iso: 'ja', files: ['ja/default.json'] },
+  { name: '한국어', code: 'ko', iso: 'ko', files: ['ko/default.json'] },
+  {
+    name: 'ภาษาไทย',
+    code: 'th',
+    iso: 'th',
+    rtl: true,
+    files: ['th/default.json'],
+  },
+  { name: 'Türkçe', code: 'tr', iso: 'tr', files: ['tr/default.json'] },
+  { name: 'Tiếng Việt', code: 'vi', iso: 'vi', files: ['vi/default.json'] },
+  { name: 'Ukrainian', code: 'uk', iso: 'uk', files: ['uk/default.json'] },
+  { name: '中文(简体)', code: 'zh', iso: 'zh', files: ['zh/default.json'] },
 ];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -199,6 +211,11 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
     locales: localesMetadata,
+    langDir: './i18n/messages',
+    compilation: {
+      strictMessage: false,
+    },
+    lazy: true,
   },
 
   pinia: {
