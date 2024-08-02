@@ -63,14 +63,14 @@ const urlTemplate = computed(() => {
 
 // functions
 const checkAndClusterShowTip = async () => {
-  const show = await new Promise<boolean>((resolve) => {
+  const ignore = await new Promise<boolean>((resolve) => {
     if (skipClusterShowTip.value) {
-      resolve(false);
+      resolve(true);
       return;
     }
     settings.get('map.guides.pinCluster', false).then(resolve);
   });
-  if (show) return;
+  if (ignore) return;
 
   dialog.show({
     title: i18n.t('common.didYouKnow'),
