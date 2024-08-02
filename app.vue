@@ -112,10 +112,10 @@ useHead({
       ? [
           {
             src: 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_TAG_ID,
-            async: true,
+            type: 'text/partytown',
           },
           {
-            type: 'text/javascript',
+            type: 'text/partytown',
             innerHTML: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag(\'js\', new Date()); gtag(\'config\', \'${GOOGLE_TAG_ID}\');`,
           },
         ]

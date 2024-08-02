@@ -65,6 +65,8 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/robots',
     '@nuxtjs/device',
+    // optimization
+    '@nuxtjs/partytown',
     // dev
     '@nuxt/eslint',
   ],
@@ -201,6 +203,10 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ['./composables/**'],
+  },
+
+  partytown: {
+    forward: ['dataLayer.push'],
   },
 
   vueuse: { ssrHandlers: true },
