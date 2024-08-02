@@ -1,5 +1,5 @@
 {
-  "endOfLine": "crlf",
+  "endOfLine": "lf",
   "plugins": ["prettier-plugin-sort-json"],
   "quoteProps": "as-needed",
   "singleQuote": true
