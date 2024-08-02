@@ -241,8 +241,12 @@ export default defineNuxtConfig({
     resolve: {
       extensions: ['.mjs', '.js', '.ts', '.json'],
     },
+    css: {
+      transformer: 'lightningcss',
+    },
     build: {
       cssCodeSplit: false,
+      cssMinify: 'lightningcss',
       rollupOptions: {
         output: {
           experimentalMinChunkSize: 250 * 1024,
