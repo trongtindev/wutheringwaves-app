@@ -18,16 +18,18 @@ const i18n = useI18n();
 const route = useRoute();
 const sidebar = useSidebar();
 const database = useDatabase();
-const settings = ref<IMapSettings>({
-  opacity: 0.9,
-  pinCluster: false,
-  hideMarkedPins: true,
-});
+const settings = useSettings();
 const showSettings = ref(false);
 const account = useAccount();
+const dialog = useDialog();
 
 // states
 const map = shallowRef<L.Map>();
+const mapSettingsData = ref<IMapSettings>({
+  opacity: 0.9,
+  pinCluster: true,
+  hideMarkedPins: true,
+});
 const tileLayer = shallowRef<L.TileLayer>();
 const mapOptions: L.MapOptions = {
   zoom: 11,
@@ -49,6 +51,7 @@ const pins = shallowRef<
 const markedPins = ref<number[]>([]);
 const markers = shallowRef(new Map<number, IMapMarker>());
 const counter = ref<{ [key: string]: number }>({});
+const skipClusterShowTip = ref();
 
 // computed
 const urlTemplate = computed(() => {
@@ -59,6 +62,25 @@ const urlTemplate = computed(() => {
 });
 
 // functions
+const checkAndClusterShowTip = async () => {
+  const show = await new Promise<boolean>((resolve) => {
+    if (skipClusterShowTip.value) {
+      resolve(false);
+      return;
+    }
+    settings.get('map.guides.pinCluster', false).then(resolve);
+  });
+  if (show) return;
+
+  dialog.show({
+    title: i18n.t('common.didYouKnow'),
+    content: `${i18n.t('map.guides.pinCluster.description')} ${i18n.t('map.settings.pinCluster.description')}`,
+  });
+
+  skipClusterShowTip.value = true;
+  settings.set('map.guides.pinCluster', true);
+};
+
 const loadPins = () => {
   return new Promise((resolve, reject) => {
     api
@@ -225,8 +247,6 @@ const updateLocations = (level: number) => {
 const onMapZoom = (level: number) => updateLocations(level);
 
 const onFilterMarkers = (values: string[]) => {
-  if (!map.value) return;
-
   const types: string[] = values.map((e) => {
     if (!e.startsWith('z') && mapSlugMarker[e]) {
       return mapSlugMarker[e];
@@ -246,6 +266,8 @@ const onFilterMarkers = (values: string[]) => {
       });
     });
   markers.value = newMap;
+
+  checkAndClusterShowTip();
 };
 
 const onMarked = (id: number, value: boolean) => {
@@ -258,7 +280,7 @@ const onMarked = (id: number, value: boolean) => {
 };
 
 // changes
-watch(settings, (newValue, oldValue) => {
+watch(mapSettingsData, (newValue, oldValue) => {
   if (newValue.pinCluster !== oldValue.pinCluster) {
     console.debug('pinCluster', 'changed', newValue.pinCluster);
   }
@@ -296,7 +318,7 @@ useSeoMeta({
           :marked="markedPins"
           :markers="markers"
           :exclude="markedPins"
-          :cluster="settings.pinCluster"
+          :cluster="mapSettingsData.pinCluster"
           :options="mapOptions"
           @on-initialized="(val) => (map = val)"
           @on-zoom="onMapZoom"
@@ -320,7 +342,7 @@ useSeoMeta({
         >
           <v-card
             class="w-100 h-100 rounded-te-0"
-            :style="`opacity: ${settings.opacity};`"
+            :style="`opacity: ${mapSettingsData.opacity};`"
           >
             <map-panel :counter @on-markers="(val) => onFilterMarkers(val)" />
           </v-card>
@@ -329,7 +351,7 @@ useSeoMeta({
           <v-btn
             class="position-absolute rounded-e rounded-s-0 top-2"
             style="left: 352px"
-            :style="`opacity: ${settings.opacity};`"
+            :style="`opacity: ${mapSettingsData.opacity};`"
             :icon="panel ? mdiArrowLeft : mdiArrowRight"
             @click="() => (panel = !panel)"
           />
@@ -345,7 +367,7 @@ useSeoMeta({
               <v-btn
                 v-bind="tooltip.props"
                 class="rounded"
-                :style="`opacity: ${settings.opacity};`"
+                :style="`opacity: ${mapSettingsData.opacity};`"
                 :icon="mdiCogs"
                 @click="() => (showSettings = true)"
               />
@@ -361,7 +383,7 @@ useSeoMeta({
               <v-btn
                 v-bind="tooltip.props"
                 class="mt-2 rounded"
-                :style="`opacity: ${settings.opacity};`"
+                :style="`opacity: ${mapSettingsData.opacity};`"
                 :icon="mdiMapMarkerPlus"
                 :disabled="true"
               />
@@ -377,7 +399,7 @@ useSeoMeta({
               <v-btn
                 v-bind="tooltip.props"
                 class="mt-2 rounded"
-                :style="`opacity: ${settings.opacity};`"
+                :style="`opacity: ${mapSettingsData.opacity};`"
                 :icon="mdiVectorPolyline"
                 :disabled="true"
               />
@@ -393,9 +415,9 @@ useSeoMeta({
       <!-- settings dialog -->
       <v-dialog v-model="showSettings" :scrollable="true" :width="480">
         <map-settings
-          :default-value="settings"
+          :default-value="mapSettingsData"
           @on-close="() => (showSettings = false)"
-          @on-updated="(val) => (settings = val)"
+          @on-updated="(val) => (mapSettingsData = val)"
         />
       </v-dialog>
     </client-only>

@@ -383,6 +383,9 @@
     "guides": {
       "multipleAccounts": {
         "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+      },
+      "pinCluster": {
+        "description": "By default, the Pin Cluster feature will be enabled. You can turn it off in settings."
       }
     },
     "pins": {
