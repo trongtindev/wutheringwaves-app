@@ -4,7 +4,7 @@ interface IScript {
   ensure?: () => Promise<boolean> | boolean;
 }
 
-export const useScript = defineStore('useScript', () => {
+export const useLoadJS = defineStore('useLoadJS', () => {
   const loadScript = async (e: IScript) => {
     const id = e.src.split('/')[e.src.split('/').length - 1];
     const ensure = async (resolve: any) => {

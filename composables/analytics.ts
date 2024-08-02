@@ -1,78 +1,54 @@
 export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
   const auth = useAuth();
-  const { GOOGLE_TAG_ID } = useRuntimeConfig().public;
+  const device = useDevice();
 
-  // states
-  const optOut = useLocalStorage('analytics.optOut', false);
+  const { GOOGLE_TAG_ID, CLARITY_ID } = useRuntimeConfig().public;
+  const { gtag } = import.meta.dev
+    ? { gtag: undefined }
+    : useScriptGoogleAnalytics({
+        id: GOOGLE_TAG_ID,
+      });
+  const { clarity } = import.meta.dev
+    ? { clarity: undefined }
+    : useScriptClarity({
+        id: CLARITY_ID,
+      });
 
   // functions
   const initialize = () => {
-    if (optOut.value) {
-      console.warn('useAnalytics', 'skip');
-      return;
-    }
-    console.debug('useAnalytics', 'initialize');
+    if (device.isCrawler) return;
 
-    if (auth.user) {
-      config({
-        user_id: auth.user.id,
-      });
+    if (gtag) {
+      gtag('js', new Date());
+      gtag('config', GOOGLE_TAG_ID);
+    }
+
+    // if (clarity) { }
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const logEvent = async (eventName: any, eventParams?: any) => {
+    if (gtag) {
+      gtag('event', eventName, eventParams);
     }
   };
 
-  const config = async (
-    config?:
-      | Gtag.ControlParams
-      | Gtag.EventParams
-      | Gtag.CustomParams
-      | Gtag.ConfigParams
-      | undefined,
-  ) => {
-    if (typeof window.gtag === 'undefined') {
-      if (!import.meta.dev && !optOut.value) {
-        console.warn('useAnalytics', 'gtag is not initialized!');
-      }
-      return;
-    }
-
-    console.debug('useAnalytics', 'config', config);
-    window.gtag('config', GOOGLE_TAG_ID, config);
-  };
-
-  const logEvent = async (
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    eventName: Gtag.EventNames | (string & {}),
-    eventParams?:
-      | Gtag.ControlParams
-      | Gtag.EventParams
-      | Gtag.CustomParams
-      | undefined,
-  ) => {
-    if (typeof window.gtag === 'undefined') {
-      if (!import.meta.dev && !optOut.value) {
-        console.warn('useAnalytics', 'gtag is not initialized!');
-      }
-
-      return;
-    }
-    console.debug('useAnalytics', 'logEvent', eventName, eventParams);
-    window.gtag('event', eventName, eventParams);
-  };
-
-  // changes
+  // watch
   watch(
     () => auth.user,
-    (value) => {
-      config({
-        user_id: value ? value.id : undefined,
-      });
+    () => {
+      if (auth.user) {
+        if (clarity) {
+          clarity('identify', auth.user.email, auth.user.name);
+        }
+      }
     },
   );
 
   // lifecycle
-  onMounted(initialize);
+  onNuxtReady(initialize);
 
   // exports
-  return { optOut, logEvent };
+  return { logEvent };
 });

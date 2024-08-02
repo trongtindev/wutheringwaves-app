@@ -26,7 +26,6 @@ useHead({
         <settings-sync-data class="mt-2" />
         <settings-export-data class="mt-2" />
         <settings-import-data class="mt-2" />
-        <settings-analytics class="mt-2" />
         <settings-roles class="mt-2" />
         <settings-erase-data class="mt-2" />
       </v-col>

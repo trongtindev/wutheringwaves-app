@@ -163,7 +163,7 @@ const renderMarker = async () => {
 
 // lifecycle
 onNuxtReady(() => {
-  useScript()
+  useLoadJS()
     .load([
       {
         src: import.meta.dev

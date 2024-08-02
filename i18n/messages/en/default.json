@@ -455,11 +455,6 @@
       "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
       "empty": "To add an account, you just need to import convene history."
     },
-    "analytics": {
-      "title": "Analytics",
-      "optOut": "Opt-out",
-      "optOutSubtitle": "You can opt-out of Google Analytics"
-    },
     "roles": {
       "title": "Your roles",
       "refreshRoles": "Refresh roles",

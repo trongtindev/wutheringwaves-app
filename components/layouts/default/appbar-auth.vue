@@ -4,7 +4,6 @@ import { mdiLogin } from '@mdi/js';
 // uses
 const auth = useAuth();
 const analytics = useAnalytics();
-const role = useRole();
 
 // events
 const onPressedSignIn = async () => {

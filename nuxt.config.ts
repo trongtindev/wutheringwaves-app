@@ -30,6 +30,8 @@ const {
   // discord
   DISCORD_INVITE_LINK,
   DISCORD_BOT_NAME,
+  // clarity
+  CLARITY_ID,
 } = process.env;
 
 const localesMetadata: LocaleObject[] = [
@@ -83,8 +85,7 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/robots',
     '@nuxtjs/device',
-    // optimization
-    '@nuxtjs/partytown',
+    '@nuxt/scripts',
     // dev
     '@nuxt/eslint',
   ],
@@ -228,10 +229,6 @@ export default defineNuxtConfig({
     storesDirs: ['./composables/**'],
   },
 
-  partytown: {
-    forward: ['dataLayer.push'],
-  },
-
   vueuse: { ssrHandlers: true },
 
   vite: {
@@ -336,6 +333,8 @@ export default defineNuxtConfig({
       // discord
       DISCORD_INVITE_LINK,
       DISCORD_BOT_NAME,
+      // clarity
+      CLARITY_ID,
     },
   },
 

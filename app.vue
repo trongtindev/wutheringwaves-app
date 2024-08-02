@@ -102,20 +102,6 @@ useHead({
       content: 'yes',
     },
   ],
-  script: [
-    ...(!analytics.optOut && !import.meta.dev
-      ? [
-          {
-            src: 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_TAG_ID,
-            type: 'text/partytown',
-          },
-          {
-            type: 'text/partytown',
-            innerHTML: `window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag(\'js\', new Date()); gtag(\'config\', \'${GOOGLE_TAG_ID}\');`,
-          },
-        ]
-      : []),
-  ],
   style: [
     {
       id: 'preload-css',
