@@ -33,7 +33,6 @@ const useApiFactory = () => {
     axiosRetry(instance, {
       retries: 5,
       retryDelay: (count) => count * 500,
-      retryCondition: () => true,
     });
   }
 
