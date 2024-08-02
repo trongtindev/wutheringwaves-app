@@ -12,8 +12,8 @@ import type { IFile } from '~/interfaces/file';
 
 const props = defineProps<{
   channel: string;
-  flat?: boolean;
-  hideTitle?: boolean;
+  loadMore?: boolean;
+  lite?: boolean;
 }>();
 
 // uses
@@ -199,12 +199,8 @@ onMounted(() => loadData());
 </script>
 
 <template>
-  <v-card
-    :class="{
-      'border-none': props.flat,
-    }"
-  >
-    <v-card-title v-if="!props.hideTitle">
+  <v-card>
+    <v-card-title v-if="!props.lite">
       {{ $t('Comments') }} ({{ total }})
     </v-card-title>
 
@@ -240,6 +236,7 @@ onMounted(() => loadData());
             <v-col class="d-flex justify-end">
               <v-btn
                 type="submit"
+                color="primary"
                 :loading="state == 'submit'"
                 :disabled="!canSubmit || state != '' || !auth.isLoggedIn"
                 :prepend-icon="mdiSend"
@@ -337,6 +334,7 @@ onMounted(() => loadData());
           :class="{
             'mt-2': index > 0,
           }"
+          :lite="props.lite"
         />
       </v-card-text>
 

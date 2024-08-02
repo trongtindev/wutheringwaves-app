@@ -77,31 +77,29 @@ onNuxtReady(() => initialize());
 </script>
 
 <template>
-  <div class="pt-2 pr-2">
-    <v-row>
-      <v-col v-for="(element, index) in data" :key="index" cols="3">
-        <v-card :disabled="!element.material" @click="() => onPressed(index)">
-          <!-- icon -->
-          <v-img
-            :src="`/characters/icons/${element.character.slug}.webp`"
-            :aspect-ratio="1"
-            :class="`bg-rarity${element.character.rarity}`"
-            class="rounded"
+  <v-row>
+    <v-col v-for="(element, index) in data" :key="index" cols="3">
+      <v-card :disabled="!element.material" @click="() => onPressed(index)">
+        <!-- icon -->
+        <v-img
+          :src="`/characters/icons/${element.character.slug}.webp`"
+          :aspect-ratio="1"
+          :class="`bg-rarity${element.character.rarity}`"
+          class="rounded"
+        >
+          <div
+            v-if="selected.includes(element.character.name)"
+            class="w-100 h-100 d-flex align-center justify-center"
           >
-            <div
-              v-if="selected.includes(element.character.name)"
-              class="w-100 h-100 d-flex align-center justify-center"
-            >
-              <v-icon :icon="mdiCheckCircle" color="primary" />
-            </div>
-          </v-img>
+            <v-icon :icon="mdiCheckCircle" color="primary" />
+          </div>
+        </v-img>
 
-          <!-- title -->
-          <v-card-title class="text-caption pa-0 text-center">
-            {{ element.character.name }}
-          </v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
-  </div>
+        <!-- title -->
+        <v-card-title class="text-caption pa-0 text-center">
+          {{ element.character.name }}
+        </v-card-title>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>

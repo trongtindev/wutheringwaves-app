@@ -163,6 +163,9 @@ export default defineNuxtConfig({
       '/privacy-policy',
       '/license',
       '/donation',
+      '/guides/rss',
+      '/guides/editor',
+      '/errors',
     ],
     sources: [
       '/api/__sitemap__/characters',
@@ -203,12 +206,6 @@ export default defineNuxtConfig({
 
   telemetry: false,
 
-  components: ['./components'],
-
-  imports: {
-    dirs: ['./composables', './components'],
-  },
-
   i18n: {
     vueI18n: './i18n/i18n.config.ts',
     defaultLocale: 'en',
@@ -223,10 +220,6 @@ export default defineNuxtConfig({
       strictMessage: false,
     },
     lazy: true,
-  },
-
-  pinia: {
-    storesDirs: ['./composables/**'],
   },
 
   vueuse: { ssrHandlers: true },
@@ -273,16 +266,14 @@ export default defineNuxtConfig({
       warmup: {
         clientFiles: [
           'app.vue',
-          'layouts/default.vue',
-          './composables/database.ts',
-          './composables/resources.ts',
-          './components/convene-history/chart-summary.vue',
+          'layouts/*.vue',
+          './components/**/*.vue',
+          './composables/*.ts',
+          './pages/**/*.vue',
         ],
       },
     },
   },
-
-  build: {},
 
   nitro: {
     prerender: {

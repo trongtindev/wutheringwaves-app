@@ -167,7 +167,9 @@
     "gallery": "Gallery",
     "translateThisPage": "Translate this page",
     "description": "Description",
-    "howToUse": "How to use {0}?"
+    "howToUse": "How to use {0}?",
+    "contributor": "Contributor",
+    "didYouKnow": "Did you know?"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -337,7 +339,18 @@
       "tianguTree": "Tiangu Tree",
       "loongsCrest": "Loong's Crest",
       "loongsRest": "Loong's Rest",
-      "hongzhen": "Hongzhen"
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Nostalgia Isle",
+      "lakeDeerslumber": "Lake Deerslumber"
     },
     "categories": {
       "selfCreatedPin": "Self-Created Pin",
@@ -345,6 +358,7 @@
       "waypoints": "Waypoints",
       "specialItems": "Special Items",
       "chests": "Chests",
+      "experience": "Experience",
       "puzzleChest": "Puzzle Chest",
       "localSpecialties": "Local Specialties",
       "enemies": "Enemies",
@@ -352,6 +366,45 @@
       "animals": "Animals",
       "landmarks": "Landmarks",
       "echoes": "Echoes"
+    },
+    "settings": {
+      "title": "Map settings",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "When enabled, pins of the same category will be clustered to reduce lag."
+      },
+      "hideMarkedPins": {
+        "title": "Hide Marked Pins",
+        "description": "When enabled, marked pins will be hidden on the home page."
+      }
+    },
+    "markAsNotFound": "Mark as Not Found",
+    "markAsFound": "Mark as Found",
+    "guides": {
+      "multipleAccounts": {
+        "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Chest",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Viewpoint",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Book",
+      "sideQuest": "Side Quest",
+      "cave": "Cave",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian"
     }
   },
   "meta": {

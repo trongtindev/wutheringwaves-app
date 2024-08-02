@@ -60,7 +60,6 @@ export const useDatabase = defineStore('useDatabase', () => {
 
   // uses
   const i18n = useI18n();
-  const device = useDevice();
   const onChangedDebounce = useDebounceFn(() => {
     isChanged.value = randomId();
   }, 500);
@@ -72,11 +71,6 @@ export const useDatabase = defineStore('useDatabase', () => {
 
   // functions
   const initialize = async (options?: { override?: boolean }) => {
-    if (device.isCrawler) {
-      console.log('useDatabase', 'ignore', { isCrawler: device.isCrawler });
-      return;
-    }
-
     options ??= {};
     if (!options.override) {
       if (db || state.value != '') {
@@ -101,7 +95,7 @@ export const useDatabase = defineStore('useDatabase', () => {
         .then(async (result) => {
           db = result;
 
-          console.log('database', 'addCollections');
+          console.debug('database', 'addCollections');
           const collections = await db.addCollections({
             convenes: {
               schema: conveneSchema,
@@ -170,6 +164,16 @@ export const useDatabase = defineStore('useDatabase', () => {
               methods: markerDocMethods,
               statics: markerCollectionMethods,
               autoMigrate: false,
+              migrationStrategies: {
+                1: function (oldDoc) {
+                  oldDoc.playerId = null;
+                  return oldDoc;
+                },
+                2: function (oldDoc) {
+                  oldDoc.playerId = null;
+                  return oldDoc;
+                },
+              },
             },
             characters: {
               schema: characterSchema,
@@ -212,7 +216,7 @@ export const useDatabase = defineStore('useDatabase', () => {
           });
 
           // check migration
-          console.log('database', 'check migration');
+          console.debug('database', 'check migration');
           for (const collection of Object.keys(collections)) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if (await (collections as any)[collection].migrationNeeded()) {
@@ -250,7 +254,7 @@ export const useDatabase = defineStore('useDatabase', () => {
           db.accounts.postSave(() => onChangedDebounce(), false);
           // db.accounts.postRemove(() => onChangedDebounce(), false);
 
-          // map
+          // markers
           db.markers.preInsert((plainData) => {
             plainData.createdAt ??= new Date().getTime();
           }, false);

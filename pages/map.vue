@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import type { IMarker } from '~/interfaces/map';
-import type {
-  Marker,
-  Map,
-  MapOptions,
-  TileLayerOptions,
-  TileLayer,
-  MarkerClusterGroup,
-} from 'leaflet';
-import { mdiArrowLeft, mdiArrowRight, mdiArrowUp } from '@mdi/js';
-import { useDisplay } from 'vuetify';
+import type { IMapMarker, IMapSettings } from '~/interfaces/map';
+import type * as L from 'leaflet';
+import {
+  mdiArrowLeft,
+  mdiArrowRight,
+  mdiCogs,
+  mdiMapMarkerPlus,
+  mdiVectorPolyline,
+} from '@mdi/js';
 
 // define
 const { FILE_URL } = useRuntimeConfig().public;
@@ -20,13 +18,18 @@ const i18n = useI18n();
 const route = useRoute();
 const sidebar = useSidebar();
 const database = useDatabase();
-const display = useDisplay();
+const settings = ref<IMapSettings>({
+  opacity: 0.9,
+  pinCluster: false,
+  hideMarkedPins: true,
+});
+const showSettings = ref(false);
+const account = useAccount();
 
 // states
-const map = shallowRef<Map>();
-const tileLayer = shallowRef<TileLayer>();
-const markerClusterGroup = shallowRef<MarkerClusterGroup>();
-const mapOptions: MapOptions = {
+const map = shallowRef<L.Map>();
+const tileLayer = shallowRef<L.TileLayer>();
+const mapOptions: L.MapOptions = {
   zoom: 11,
   center: [0, 0],
   minZoom: 11,
@@ -34,14 +37,18 @@ const mapOptions: MapOptions = {
   zoomControl: false,
 };
 const panel = ref(true);
-const markerData = ref<IMarker[]>([]);
-const addedNormalMarkers = shallowRef<{
-  [key: string]: { type: string; marker: Marker };
-}>({});
-const addedClusterMarkers = shallowRef<{ id: string; marker: Marker }[]>([]);
-const foundMarkers = ref<string[]>(null as any);
-const locationMarkers = shallowRef<Marker[]>([]);
-const subLocationMarkers = shallowRef<Marker[]>([]);
+const locationMarkers = shallowRef<L.Marker[]>([]);
+const subLocationMarkers = shallowRef<L.Marker[]>([]);
+const pins = shallowRef<
+  {
+    id: number;
+    type: string;
+    marker: L.Marker;
+  }[]
+>([]);
+const markedPins = ref<number[]>([]);
+const markers = shallowRef(new Map<number, IMapMarker>());
+const counter = ref<{ [key: string]: number }>({});
 
 // computed
 const urlTemplate = computed(() => {
@@ -52,12 +59,13 @@ const urlTemplate = computed(() => {
 });
 
 // functions
-const loadMarkers = () => {
+const loadPins = () => {
   return new Promise((resolve, reject) => {
     api
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .get<any[][]>('/map/markers')
       .then((result) => {
-        markerData.value = result.data.map((e) => {
+        const items = result.data.map((e) => {
           return {
             id: e[0],
             type: e[1],
@@ -65,24 +73,54 @@ const loadMarkers = () => {
             lng: e[3],
           };
         });
+
+        items.forEach((e) => {
+          counter.value[e.type] ??= 0;
+          counter.value[e.type] += 1;
+        });
+
+        pins.value = items.map((e) => {
+          const icon = (() => {
+            if (['z1', 'z2'].includes(e.type)) {
+              return `/map/icons/${e.type}.webp`;
+            }
+            return `/map/pins/${e.type}.webp`;
+          })();
+          const latLng = window.leaflet.latLng(e.lat, e.lng);
+          const marker = window.leaflet.marker(latLng, {
+            icon: window.leaflet.icon({
+              iconUrl: icon,
+              iconSize: [28, 28],
+            }),
+          });
+
+          return {
+            id: e.id,
+            type: e.type,
+            marker,
+          };
+        });
+
         resolve(true);
       })
       .catch(reject);
   });
 };
 
-const loadMarked = () => {
+const loadMarkedPins = () => {
   return new Promise((resolve, reject) => {
     database
       .getInstance()
       .then((db) => {
         db.markers
-          .find()
+          .find({
+            selector: {
+              playerId: account.active,
+            },
+          })
           .exec()
-          .then((documents) => {
-            foundMarkers.value = documents
-              .filter((e) => !e.type)
-              .map((e) => e.key);
+          .then((docs) => {
+            markedPins.value = docs.map((e) => parseInt(e.key));
             resolve(true);
           })
           .catch(reject);
@@ -114,6 +152,7 @@ const addLocations = () => {
           iconSize: [200, 32],
           className: 'marker',
         }),
+        opacity: 0.9,
       })
       .addTo(map.value!);
     locationMarkers.value.push(marker);
@@ -130,131 +169,15 @@ const addLocations = () => {
             iconSize: [200, 32],
             className: 'marker',
           }),
-          opacity: 0.1,
+          opacity: 0,
         })
         .addTo(map.value!);
       subLocationMarkers.value.push(marker);
     });
 };
 
-const newMarker = (e: any) => {
-  const icon = (() => {
-    if (['z1', 'z2'].includes(e.type)) {
-      return `/map/icons/${e.type}.webp`;
-    }
-    return `/map/pins/${e.type}.webp`;
-  })();
-  const latLng = window.leaflet.latLng(e.lat, e.lng);
-  const marker = window.leaflet.marker(latLng, {
-    icon: window.leaflet.icon({
-      iconUrl: icon,
-      iconSize: [28, 28],
-    }),
-  });
-  return {
-    id: `${e.type}-${e.id}`,
-    type: e.type,
-    marker,
-  };
-};
-
-const addNormalMarkers = (types: string[]) => {
-  const normalMarkers = types
-    .map((type) => {
-      return markerData.value.filter((e) => {
-        return e.type === type;
-      });
-    })
-    .flatMap((e) => e)
-    .map(newMarker);
-
-  const normalMarkerAdded = normalMarkers.filter((e) => {
-    return !addedNormalMarkers.value[e.id];
-  });
-  normalMarkerAdded.forEach((e) => {
-    addedNormalMarkers.value[e.id] = e;
-    e.marker.addTo(map.value!);
-  });
-
-  const normalMarkerRemoved = Object.keys(addedNormalMarkers.value).filter(
-    (key) => {
-      return !normalMarkers.find((e) => e.id === key);
-    },
-  );
-  normalMarkerRemoved.forEach((e) => {
-    addedNormalMarkers.value[e].marker.remove();
-    delete addedNormalMarkers.value[e];
-  });
-};
-
-const addClusterMarkers = (types: string[]) => {
-  // create cluster group
-  if (!markerClusterGroup.value) {
-    markerClusterGroup.value = window.leaflet.markerClusterGroup({
-      iconCreateFunction: (cluster) => {
-        const childMarkers = cluster.getAllChildMarkers();
-        const childCount = childMarkers.length;
-        const firstChild = cluster.getAllChildMarkers()[0];
-        const tooltip = cluster.getTooltip();
-        if (tooltip) {
-          tooltip.setTooltipContent(`${childCount}`);
-        } else {
-          cluster.bindTooltip(`${childCount}`, {
-            permanent: true,
-            direction: 'top',
-          });
-        }
-        cluster.setIcon(firstChild.getIcon());
-        return cluster.getIcon();
-      },
-    });
-    map.value!.addLayer(markerClusterGroup.value!);
-  }
-
-  const markers = types
-    .map((type) => {
-      return markerData.value.filter((e) => {
-        return e.type === type;
-      });
-    })
-    .flatMap((e) => e)
-    .map(newMarker);
-
-  const added = markers.filter((marker) => {
-    return !addedClusterMarkers.value.find((e) => e.id === marker.id);
-  });
-  added.forEach((e) => {
-    addedClusterMarkers.value.push({
-      id: e.id,
-      marker: e.marker,
-    });
-    markerClusterGroup.value!.addLayer(e.marker);
-  });
-
-  const removed = addedClusterMarkers.value.filter((addedClusterMarker) => {
-    return !markers.find((e) => e.id === addedClusterMarker.id);
-  });
-  markerClusterGroup.value!.removeLayers(removed.map((e) => e.marker));
-  while (removed.length > 0) {
-    const index = addedClusterMarkers.value.findIndex(
-      (e) => e.id === removed[0].id,
-    );
-    if (index < 0) break;
-
-    removed.splice(0, 1);
-    addedClusterMarkers.value[index].marker.remove();
-    addedClusterMarkers.value.splice(index, 1);
-  }
-};
-
-const addMarkers = (types: string[]) => {
-  const normalTypes = ['z1', 'z2', 'z13'];
-  addNormalMarkers(types.filter((type) => normalTypes.includes(type)));
-  addClusterMarkers(types.filter((type) => !normalTypes.includes(type)));
-};
-
 const addTiles = () => {
-  const tileOptions: TileLayerOptions & {
+  const tileOptions: L.TileLayerOptions & {
     getX: typeof leafletGetX;
     getY: typeof leafletGetY;
   } = {
@@ -270,7 +193,7 @@ const addTiles = () => {
      * Tiles and markers copied from appsample
      */
     attribution:
-      '&copy; <a href="https://genshin-impact-map.appsample.com/wuthering-waves-map/">Appsample</a>',
+      '&copy; <a href="https://genshin-impact-map.appsample.com/wuthering-waves-map/" target="_blank" rel="nofollow">Appsample</a>',
   };
 
   tileLayer.value = window.leaflet
@@ -279,8 +202,8 @@ const addTiles = () => {
 };
 
 const initialize = async () => {
-  // wait all loaded
-  await Promise.all([loadMarkers(), loadMarked(), loadLeaflet()]);
+  await Promise.all([loadLeaflet(), loadMarkedPins()]);
+  await loadPins();
 
   // hide sidebar
   if (sidebar.open) sidebar.open = false;
@@ -291,10 +214,10 @@ const initialize = async () => {
 
 const updateLocations = (level: number) => {
   locationMarkers.value.forEach((location) => {
-    location.setOpacity(level <= 12 ? 1 : 0.1);
+    location.setOpacity(level <= 12 ? 0.9 : 0);
   });
   subLocationMarkers.value.forEach((location) => {
-    location.setOpacity(level <= 12 ? 0.1 : 1);
+    location.setOpacity(level <= 12 ? 0 : 0.9);
   });
 };
 
@@ -304,15 +227,44 @@ const onMapZoom = (level: number) => updateLocations(level);
 const onFilterMarkers = (values: string[]) => {
   if (!map.value) return;
 
-  const items = values.map((e) => {
+  const types: string[] = values.map((e) => {
     if (!e.startsWith('z') && mapSlugMarker[e]) {
       return mapSlugMarker[e];
     }
     return e;
   });
 
-  addMarkers(items);
+  const newMap = new Map<number, IMapMarker>();
+  pins.value
+    .filter((e) => {
+      return types.includes(e.type);
+    })
+    .forEach((e) => {
+      newMap.set(e.id, {
+        type: e.type,
+        marker: e.marker,
+      });
+    });
+  markers.value = newMap;
 };
+
+const onMarked = (id: number, value: boolean) => {
+  const index = markedPins.value.findIndex((e) => e === id);
+  if (index < 0 && value) {
+    markedPins.value = [...markedPins.value, id];
+  } else if (!value) {
+    markedPins.value.splice(index, 1);
+  }
+};
+
+// changes
+watch(settings, (newValue, oldValue) => {
+  if (newValue.pinCluster !== oldValue.pinCluster) {
+    console.debug('pinCluster', 'changed', newValue.pinCluster);
+  }
+});
+
+watch(() => account.active, loadMarkedPins);
 
 // lifecycle
 onNuxtReady(() => initialize());
@@ -330,78 +282,122 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <v-fab
-      v-if="display.mdAndUp.value"
-      :prepend-icon="panel ? mdiArrowLeft : mdiArrowRight"
-      color="primary"
-      location="top start"
-      size="48"
-      fixed
-      app
-      appear
-      @click="() => (panel = !panel)"
-    />
+  <v-card>
+    <client-only>
+      <template #fallback>
+        <div class="leaflet-map pa-4">
+          {{ $t('common.loading') }}
+        </div>
+      </template>
 
-    <v-fab
-      v-else
-      :prepend-icon="mdiArrowUp"
-      color="primary"
-      location="bottom right"
-      size="48"
-      fixed
-      app
-      appear
-      @click="() => (panel = !panel)"
-    />
+      <base-screen v-slot="{ height }" class="position-relative">
+        <map-leaflet
+          :height="height"
+          :marked="markedPins"
+          :markers="markers"
+          :exclude="markedPins"
+          :cluster="settings.pinCluster"
+          :options="mapOptions"
+          @on-initialized="(val) => (map = val)"
+          @on-zoom="onMapZoom"
+        >
+          <template #popup="{ active }">
+            <map-popup
+              v-if="active"
+              :id="active.id"
+              :marker="active.marker"
+              @on-marked="(val) => onMarked(active.id, val)"
+            />
+          </template>
+        </map-leaflet>
 
-    <v-card>
-      <client-only>
-        <template #fallback>
-          <div class="leaflet-map pa-4">
-            {{ $t('common.loading') }}
-          </div>
-        </template>
+        <div
+          class="position-absolute position-relative top-0 z-9999 pa-2"
+          style="width: 360px; transition: left 0.25s linear"
+          :style="
+            (panel ? 'left:0px;' : 'left: -352px;') + `height: ${height}px;`
+          "
+        >
+          <v-card
+            class="w-100 h-100 rounded-te-0"
+            :style="`opacity: ${settings.opacity};`"
+          >
+            <map-panel :counter @on-markers="(val) => onFilterMarkers(val)" />
+          </v-card>
 
-        <div>
-          <base-screen :ratio="0.95">
-            <template #default="{ height }">
-              <map-leaflet
-                :height="height"
-                :options="mapOptions"
-                @on-initialized="(val) => (map = val)"
-                @on-zoom="onMapZoom"
+          <!-- menu -->
+          <v-btn
+            class="position-absolute rounded-e rounded-s-0 top-2"
+            style="left: 352px"
+            :style="`opacity: ${settings.opacity};`"
+            :icon="panel ? mdiArrowLeft : mdiArrowRight"
+            @click="() => (panel = !panel)"
+          />
+        </div>
+
+        <!-- right button -->
+        <div
+          class="position-absolute top-2 right-2 z-9999 h-100"
+          style="width: 48px"
+        >
+          <v-tooltip location="left">
+            <template #activator="tooltip">
+              <v-btn
+                v-bind="tooltip.props"
+                class="rounded"
+                :style="`opacity: ${settings.opacity};`"
+                :icon="mdiCogs"
+                @click="() => (showSettings = true)"
               />
             </template>
-          </base-screen>
 
-          <!-- panel -->
-          <base-panel v-model="panel" location="left">
-            <template #default="props">
-              <v-card :min-height="props.height" class="h-100">
-                <map-panel @on-markers="(val) => onFilterMarkers(val)" />
-              </v-card>
+            <div>
+              {{ $t('map.settings.title') }}
+            </div>
+          </v-tooltip>
+
+          <v-tooltip location="left">
+            <template #activator="tooltip">
+              <v-btn
+                v-bind="tooltip.props"
+                class="mt-2 rounded"
+                :style="`opacity: ${settings.opacity};`"
+                :icon="mdiMapMarkerPlus"
+                :disabled="true"
+              />
             </template>
-          </base-panel>
+
+            <div>
+              {{ $t('map.settings.newPin') }}
+            </div>
+          </v-tooltip>
+
+          <v-tooltip location="left">
+            <template #activator="tooltip">
+              <v-btn
+                v-bind="tooltip.props"
+                class="mt-2 rounded"
+                :style="`opacity: ${settings.opacity};`"
+                :icon="mdiVectorPolyline"
+                :disabled="true"
+              />
+            </template>
+
+            <div>
+              {{ $t('map.settings.route') }}
+            </div>
+          </v-tooltip>
         </div>
-      </client-only>
-    </v-card>
+      </base-screen>
 
-    <v-card class="mt-2">
-      <v-card-title tag="h1">
-        {{ $t('map.title') }}
-      </v-card-title>
-      <v-card-text>
-        {{ $t('meta.map.description') }}
-      </v-card-text>
-    </v-card>
-
-    <!-- howToUse -->
-    <v-card class="mt-2">
-      <v-card-title tag="h2">
-        {{ $t('common.howToUse', [$t('map.title')]) }}
-      </v-card-title>
-      <v-card-text> </v-card-text>
-    </v-card>
-  </div>
+      <!-- settings dialog -->
+      <v-dialog v-model="showSettings" :scrollable="true" :width="480">
+        <map-settings
+          :default-value="settings"
+          @on-close="() => (showSettings = false)"
+          @on-updated="(val) => (settings = val)"
+        />
+      </v-dialog>
+    </client-only>
+  </v-card>
 </template>

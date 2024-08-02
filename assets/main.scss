@@ -86,4 +86,17 @@
   .marker {
     transition: opacity 0.5s;
   }
+
+  .leaflet-popup-content-wrapper {
+    background-color: unset !important;
+  }
+
+  .leaflet-popup-content {
+    margin: 0 !important;
+  }
+}
+
+/* utils */
+.no-select {
+  user-select: none;
 }

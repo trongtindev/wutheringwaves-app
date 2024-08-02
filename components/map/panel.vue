@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { mdiMapMarker, mdiComment, mdiAccount } from '@mdi/js';
-import type { IMapCategory, IMarker } from '~/interfaces/map';
+import type { IMapCategory } from '~/interfaces/map';
 
 // define
 const emits = defineEmits<{
   (e: 'on-markers', values: string[]);
+}>();
+
+const props = defineProps<{
+  counter: { [key: string]: number };
 }>();
 
 // uses
@@ -45,12 +48,12 @@ const onMarkers = (key: string, values: string[]) => {
 };
 
 // lifecycle
-onMounted(initialize);
+onNuxtReady(initialize);
 </script>
 
 <template>
-  <v-row class="h-100">
-    <v-col cols="4">
+  <v-row :no-gutters="true" class="h-100">
+    <v-col cols="4" class="h-100 overflow-y-auto">
       <v-list :nav="true" :lines="false" class="border-e h-100">
         <v-tooltip v-for="(element, index) in categories" :key="index">
           <template #activator="tooltip">
@@ -70,7 +73,7 @@ onMounted(initialize);
       </v-list>
     </v-col>
 
-    <v-col cols="8">
+    <v-col cols="8" class="pa-2 h-100 overflow-y-auto">
       <div v-for="(element, index) in categories" :key="index">
         <v-sheet
           :style="tab === element.name ? '' : `display:none`"
@@ -84,6 +87,7 @@ onMounted(initialize);
           <map-panel-markers
             v-else
             :item="element"
+            :counter="props.counter"
             :default-value="defaultValues[element.name]"
             @on-markers="(val) => onMarkers(element.name, val)"
           />

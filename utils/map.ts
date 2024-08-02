@@ -1,5 +1,3 @@
-import type { IMapCategory } from '~/interfaces/map';
-
 export const mapLocations: {
   latLng: number[];
   name: string;
@@ -11,10 +9,54 @@ export const mapLocations: {
   {
     latLng: [-0.1802979375160789, 0.005358165696494056],
     name: 'dimForest',
+    items: [
+      {
+        name: 'wenyeBeach',
+        latLng: [-0.20822479188886867, 0.0487518310546875],
+      },
+      {
+        name: 'giantBanyan',
+        latLng: [-0.20985556411611564, 0.006351470947265625],
+      },
+      {
+        name: 'thornyPassage',
+        latLng: [-0.1702020049273401, 0.008411407470703127],
+      },
+      {
+        name: 'violetBanyan',
+        latLng: [-0.17191861104620967, -0.01708030700683594],
+      },
+      {
+        name: 'forbiddenForest',
+        latLng: [-0.18341986798643484, -0.040426254272460944],
+      },
+    ],
   },
   {
     latLng: [-0.1043966774304988, -0.08855785140656548],
     name: 'portCityOfGuixu',
+    items: [
+      {
+        latLng: [-0.1375006309563936, -0.02424991512912867],
+        name: 'settleRange',
+      },
+      {
+        latLng: [-0.11286728234915563, -0.09066003752060904],
+        name: 'seaOfFlames',
+      },
+      {
+        latLng: [-0.09475703688265369, -0.04602807951279653],
+        name: 'dongluResearchStation',
+      },
+      {
+        latLng: [-0.06969450185600264, -0.10025024414062501],
+        name: 'nostalgiaIsle',
+      },
+      {
+        latLng: [-0.05373000311125703, -0.06093978881835938],
+        name: 'lakeDeerslumber',
+      },
+    ],
   },
   {
     latLng: [-0.17925832303895856, 0.10233278374131238],
@@ -53,6 +95,12 @@ export const mapLocations: {
   {
     latLng: [-0.07934367718692747, 0.020808950602875246],
     name: 'tigersMaw',
+    items: [
+      {
+        name: 'hermitSettlement',
+        latLng: [-0.15295010520762323, 0.050385082296737785],
+      },
+    ],
   },
   {
     latLng: [-0.070414096600129, 0.07094327783158327],
@@ -125,4 +173,27 @@ export const mapSlugMarker = {
   'gloom-slough': 'z162',
   'pavo-plum': 'z163',
   coriolus: 'z202',
+};
+
+export const mapPinName = {
+  z1: 'resonanceNexus',
+  z2: 'resonanceBeacon',
+  z3: 'sonanceCasket',
+  z4: 'viewpoint',
+  z6: 'bolbfly',
+  z7: 'chest',
+  z10: 'inspectableBox',
+  z11: 'book',
+  z12: 'sideQuest',
+  z13: 'cave',
+  z14: 'frostbug',
+  z15: 'tidalHeritages',
+  z16: 'windchimer',
+  z228: 'babyViridblazeSaurian',
+  z251: 'exileMember',
+  z401: 'scarletthorn',
+  z402: 'lampylumen',
+  z403: 'fragipurple',
+  z404: 'floramber',
+  z405: 'lampylumen',
 };

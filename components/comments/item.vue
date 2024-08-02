@@ -5,6 +5,7 @@ import type { IComment } from '~/interfaces/comment';
 
 const props = defineProps<{
   data: IComment;
+  lite?: boolean;
 }>();
 
 // uses
@@ -55,17 +56,18 @@ const createdAt = computed(() => {
     <v-hover>
       <template #default="hover">
         <v-list-item v-bind="hover.props">
-          <v-list-item-title>
-            <span>{{ props.data.user.name }}</span>
-            <span> • </span>
-            <span class="text-caption text-grey">{{ createdAt }}</span>
-          </v-list-item-title>
-          <template #prepend>
+          <template v-if="!props.lite" #prepend>
             <v-avatar class="border">
               <v-img v-if="photoUrl" :src="photoUrl" />
               <span v-else>?</span>
             </v-avatar>
           </template>
+
+          <v-list-item-title>
+            <span>{{ props.data.user.name }}</span>
+            <span> • </span>
+            <span class="text-caption text-grey">{{ createdAt }}</span>
+          </v-list-item-title>
 
           <template #append>
             <v-btn
@@ -76,13 +78,13 @@ const createdAt = computed(() => {
             />
           </template>
         </v-list-item>
-        <div class="pl-16">
+        <div :class="props.lite ? 'pl-2' : 'pl-16'">
           <div class="pl-2" :innerHTML="props.data.content" />
         </div>
       </template>
     </v-hover>
 
-    <div class="pl-15 mt-2">
+    <div class="mt-2" :class="props.lite ? '' : 'pl-15'">
       <v-btn
         size="small"
         variant="text"

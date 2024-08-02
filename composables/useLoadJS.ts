@@ -18,7 +18,9 @@ export const useLoadJS = defineStore('useLoadJS', () => {
       resolve(true);
     };
 
-    if (document.querySelector(`script#${id}`)) return;
+    if (document.querySelector(`script#${id}`)) {
+      return;
+    }
 
     return new Promise((resolve, reject) => {
       const element = document.createElement('script');

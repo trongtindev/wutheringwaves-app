@@ -1,9 +1,15 @@
-import type { RxDocument, RxCollection, RxJsonSchema } from 'rxdb';
+import type {
+  RxDocument,
+  RxCollection,
+  RxJsonSchema,
+  MangoQuerySelector,
+} from 'rxdb';
 
 export type MarkerDocType = {
   key: string;
   type?: string;
   note?: string;
+  playerId?: string;
   createdAt: number;
 };
 
@@ -15,6 +21,7 @@ export type MarkerDocument = RxDocument<MarkerDocType, MarkerDocMethods>;
 
 export type MarkerCollectionMethods = {
   countAllDocuments: () => Promise<number>;
+  deleteOne: (selector: MangoQuerySelector<MarkerDocType>) => Promise<void>;
 };
 
 export type MarkerCollection = RxCollection<
@@ -34,10 +41,19 @@ export const markerCollectionMethods: MarkerCollectionMethods = {
     const allDocs = await this.find().exec();
     return allDocs.length;
   },
+  deleteOne: async function (
+    this: MarkerCollection,
+    selector: MangoQuerySelector<MarkerDocType>,
+  ) {
+    const doc = await this.findOne({
+      selector,
+    }).exec();
+    if (doc) await doc.remove();
+  },
 };
 
 export const markerSchema: RxJsonSchema<MarkerDocType> = {
-  version: 0,
+  version: 2,
   keyCompression: false,
   primaryKey: 'key',
   type: 'object',
@@ -51,6 +67,10 @@ export const markerSchema: RxJsonSchema<MarkerDocType> = {
       default: null,
     },
     note: {
+      type: 'string',
+      default: null,
+    },
+    playerId: {
       type: 'string',
       default: null,
     },

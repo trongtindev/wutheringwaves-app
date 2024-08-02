@@ -139,16 +139,6 @@ const onPressedSearch = () => {
     <v-main>
       <!-- container -->
       <v-container :fluid="true">
-        <router-link :to="localePath('/convene-history')">
-          <base-alert
-            v-if="!route.path.includes('convene')"
-            id="convene.message"
-            color="warning"
-            class="mb-2"
-            :text="$t('convene.message')"
-            :closable="true"
-          />
-        </router-link>
         <slot />
       </v-container>
 

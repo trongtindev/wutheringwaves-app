@@ -238,8 +238,10 @@ useSeoMeta({
           <div ref="card" class="card-container rounded">
             <div
               class="background position-absolute"
-              :style="`background-image: url(${background})`"
-            ></div>
+              :style="
+                background ? `background-image: url(${background})` : undefined
+              "
+            />
 
             <div class="left pt-4 pl-4 pr-4">
               <div

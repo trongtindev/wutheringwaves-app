@@ -17,7 +17,14 @@
             "type": "array",
             "items": {
               "type": "string",
-              "$ref": "./item.components.json#/components/schemas/slug"
+              "anyOf": [
+                {
+                  "$ref": "./item.components.json#/components/schemas/slug"
+                },
+                {
+                  "type": "string"
+                }
+              ]
             }
           }
         },

@@ -4,9 +4,14 @@
     { "type": "self", "name": "selfCreatedPin" },
     { "type": "characters", "name": "levelUpMaterial" },
     { "type": "markers", "name": "waypoints", "items": ["z1", "z2"] },
-    { "type": "markers", "name": "specialItems", "items": [] },
+    { "type": "markers", "name": "specialItems", "items": ["z3", "z16"] },
     { "type": "markers", "name": "chests", "items": ["z7", "z15"] },
-    { "type": "markers", "name": "puzzleChest", "items": [] },
+    { "type": "markers", "name": "puzzleChest", "items": ["z14"] },
+    {
+      "type": "markers",
+      "name": "experience",
+      "items": ["z4", "z6", "z10", "z11", "z12"]
+    },
     { "type": "markers", "name": "localSpecialties", "items": [] },
     {
       "type": "markers",
@@ -67,7 +72,7 @@
     {
       "type": "markers",
       "name": "animals",
-      "markers": [""]
+      "markers": []
     },
     { "type": "markers", "name": "landmarks", "items": ["z13"] }
   ]

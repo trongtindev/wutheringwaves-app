@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "types": [
-      "@pinia/nuxt",
       "@nuxtjs/sitemap",
       "@nuxtjs/i18n",
       "@types/google.accounts",
