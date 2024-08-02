@@ -59,9 +59,9 @@
   "birthplace": "Huanglong",
   "description": "Yangyang is an Outrider of the Midnight Rangers.\nOnce sheltered, now a fighter. She soars with the wind to protect others, like a skylark in flight.",
   "descriptionLocalized": {
-    "vi": "Yangyang là một Kỵ Sĩ của Lữ Đoàn Bóng Đêm.Từng được che chở, giờ đây là một chiến binh. Cô bay lượn như chim sơn ca, với gió để bảo vệ người khác.",
+    "id": "Yangyang adalah seorang Outrider dari Midnight Rangers.Dulu terlindungi, sekarang seorang pejuang. Dia terbang bersama angin untuk melindungi orang lain, seperti burung pipit yang terbang.",
     "th": "หยางหยางเป็นนักเดินทางกลางคืนของ Midnight Rangersครั้งหนึ่งเคยถูกปกป้อง แต่ตอนนี้กลายเป็นนักสู้ เธอโบยบินไปกับสายลมเพื่อปกป้องผู้อื่น เหมือนนกกระจอกเทศที่โบยบิน",
-    "id": "Yangyang adalah seorang Outrider dari Midnight Rangers.Dulu terlindungi, sekarang seorang pejuang. Dia terbang bersama angin untuk melindungi orang lain, seperti burung pipit yang terbang."
+    "vi": "Yangyang là một Kỵ Sĩ của Lữ Đoàn Bóng Đêm. Từng được che chở, giờ đây là một chiến binh. Cô bay lượn như chim sơn ca, với gió để bảo vệ người khác."
   },
   "forte": [
     {
@@ -143,9 +143,9 @@
   ],
   "quote": "I hope I can be the one to embrace all that you are, and share with you all that you carry.",
   "quoteLocalized": {
-    "vi": "Tôi hy vọng mình có thể là người ôm trọn tất cả những gì bạn là, và chia sẻ với bạn tất cả những gì bạn mang theo.",
     "id": "Semoga akulah yang bisa merangkul semua dirimu, dan berbagi semua beban yang kau pikul.",
-    "th": "ฉันหวังว่าจะเป็นคนที่กอดทุกอย่างที่คุณเป็น และแบ่งปันทุกสิ่งที่คุณแบก"
+    "th": "ฉันหวังว่าจะเป็นคนที่กอดทุกอย่างที่คุณเป็น และแบ่งปันทุกสิ่งที่คุณแบก",
+    "vi": "Tôi hy vọng mình có thể là người ôm trọn tất cả những gì bạn là, và chia sẻ với bạn tất cả những gì bạn mang theo."
   },
   "resonanceChain": [
     {
