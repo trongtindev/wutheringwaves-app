@@ -1,1 +1,249 @@
-{"$schema":"../public/schema/characters.schema.json","items":[{"id":1102,"slug":"sanhua","name":"Sanhua","rarity":4,"attribute":"Glacio","weapon":"Sword","publishedTime":"2024-06-28T15:43:21.818Z","modifiedTime":"2024-08-03T06:13:38.078Z"},{"id":1103,"slug":"baizhi","name":"Baizhi","rarity":4,"attribute":"Glacio","weapon":"Rectifier","publishedTime":"2024-06-28T15:43:21.813Z","modifiedTime":"2024-08-03T06:13:37.950Z"},{"id":1104,"slug":"lingyang","name":"Lingyang","rarity":5,"attribute":"Glacio","weapon":"Gauntlets","publishedTime":"2024-06-28T15:43:21.817Z","modifiedTime":"2024-08-03T06:13:38.039Z"},{"id":1202,"slug":"chixia","name":"Chixia","rarity":4,"attribute":"Fusion","weapon":"Pistols","publishedTime":"2024-06-28T15:43:21.814Z","modifiedTime":"2024-08-03T06:13:37.986Z"},{"id":1203,"slug":"encore","name":"Encore","rarity":5,"attribute":"Fusion","weapon":"Rectifier","publishedTime":"2024-06-28T15:43:21.815Z","modifiedTime":"2024-08-03T06:13:38.003Z"},{"id":1204,"slug":"mortefi","name":"Mortefi","rarity":4,"attribute":"Fusion","weapon":"Pistols","publishedTime":"2024-06-28T15:43:21.817Z","modifiedTime":"2024-08-03T06:13:38.050Z"},{"id":1205,"slug":"changli","name":"Changli","rarity":5,"attribute":"Fusion","weapon":"Sword","publishedTime":"2024-06-28T15:43:21.814Z","modifiedTime":"2024-08-03T06:13:37.977Z"},{"id":1301,"slug":"calcharo","name":"Calcharo","rarity":5,"attribute":"Electro","weapon":"Broadblade","publishedTime":"2024-06-28T15:43:21.814Z","modifiedTime":"2024-08-03T06:13:37.961Z"},{"id":1302,"slug":"yinlin","name":"Yinlin","rarity":5,"attribute":"Electro","weapon":"Rectifier","publishedTime":"2024-06-28T15:43:21.819Z","modifiedTime":"2024-08-03T06:13:38.114Z"},{"id":1303,"slug":"yuanwu","name":"Yuanwu","rarity":4,"attribute":"Electro","weapon":"Gauntlets","publishedTime":"2024-06-28T15:43:21.820Z","modifiedTime":"2024-08-03T06:13:38.121Z"},{"id":1304,"slug":"jinhsi","name":"Jinhsi","rarity":5,"attribute":"Spectro","weapon":"Broadblade","version":1.1,"publishedTime":"2024-06-28T15:43:21.816Z","modifiedTime":"2024-08-03T06:13:38.022Z"},{"id":1402,"slug":"yangyang","name":"Yangyang","rarity":4,"attribute":"Aero","weapon":"Sword","publishedTime":"2024-06-28T15:43:21.819Z","modifiedTime":"2024-08-03T06:13:38.104Z"},{"id":1403,"slug":"aalto","name":"Aalto","rarity":4,"attribute":"Aero","weapon":"Pistols","publishedTime":"2024-06-28T15:43:21.813Z","modifiedTime":"2024-08-03T06:06:19.543Z"},{"id":1404,"slug":"jiyan","name":"Jiyan","rarity":5,"attribute":"Aero","weapon":"Broadblade","publishedTime":"2024-06-28T15:43:21.816Z","modifiedTime":"2024-08-03T06:13:38.031Z"},{"id":1405,"slug":"jianxin","name":"Jianxin","rarity":5,"attribute":"Aero","weapon":"Gauntlets","publishedTime":"2024-06-28T15:43:21.816Z","modifiedTime":"2024-08-03T06:13:38.011Z"},{"id":1503,"slug":"verina","name":"Verina","rarity":5,"attribute":"Spectro","weapon":"Rectifier","publishedTime":"2024-06-28T15:43:21.819Z","modifiedTime":"2024-08-03T06:13:38.093Z"},{"id":1601,"slug":"taoqi","name":"Taoqi","rarity":4,"attribute":"Havoc","weapon":"Broadblade","publishedTime":"2024-06-28T15:43:21.818Z","modifiedTime":"2024-08-03T06:13:38.085Z"},{"id":1602,"slug":"danjin","name":"Danjin","rarity":4,"attribute":"Havoc","weapon":"Sword","publishedTime":"2024-06-28T15:43:21.815Z","modifiedTime":"2024-08-03T06:13:37.994Z"},{"id":-1,"slug":"xiangli-yao","name":"Xiangli Yao","rarity":5,"upcoming":true,"version":1.2,"attribute":"Electro","publishedTime":"2024-07-08T11:43:02.856Z","modifiedTime":"2024-08-03T06:13:38.096Z"},{"id":-1,"slug":"zhezhi","name":"Zhezhi","rarity":5,"upcoming":true,"attribute":"Glacio","version":1.2,"publishedTime":"2024-07-08T11:49:39.662Z","modifiedTime":"2024-08-03T06:13:38.125Z"},{"id":-1,"slug":"camellya","name":"Camellya","rarity":5,"upcoming":true,"hidden":true,"publishedTime":"2024-07-08T11:44:36.125Z","modifiedTime":"2024-08-03T06:13:37.965Z"},{"id":0,"slug":"rover","name":"Rover","weapon":"Sword","rarity":5,"attribute":"Spectro","publishedTime":"2024-06-28T15:43:21.818Z","modifiedTime":"2024-08-03T06:13:38.069Z"},{"id":0,"slug":"rover-havoc","name":"Rover (Havoc)","rarity":5,"weapon":"Sword","attribute":"Havoc","modifiedTime":"2024-08-03T06:13:38.061Z","publishedTime":"2024-05-23T00:00"},{"id":0,"slug":"rover-electro","name":"Rover (Electro)","rarity":5,"weapon":"Sword","attribute":"Electro","upcoming":true,"publishedTime":"2024-07-08T12:10:50.660Z","modifiedTime":"2024-08-03T06:13:38.053Z"}]}
+{
+  "$schema": "../public/schema/characters.schema.json",
+  "items": [
+    {
+      "id": 1102,
+      "slug": "sanhua",
+      "name": "Sanhua",
+      "rarity": 4,
+      "attribute": "Glacio",
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.818Z",
+      "modifiedTime": "2024-08-03T06:13:38.078Z"
+    },
+    {
+      "id": 1103,
+      "slug": "baizhi",
+      "name": "Baizhi",
+      "rarity": 4,
+      "attribute": "Glacio",
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.813Z",
+      "modifiedTime": "2024-08-03T06:13:37.950Z"
+    },
+    {
+      "id": 1104,
+      "slug": "lingyang",
+      "name": "Lingyang",
+      "rarity": 5,
+      "attribute": "Glacio",
+      "weapon": "Gauntlets",
+      "publishedTime": "2024-06-28T15:43:21.817Z",
+      "modifiedTime": "2024-08-03T06:13:38.039Z"
+    },
+    {
+      "id": 1202,
+      "slug": "chixia",
+      "name": "Chixia",
+      "rarity": 4,
+      "attribute": "Fusion",
+      "weapon": "Pistols",
+      "publishedTime": "2024-06-28T15:43:21.814Z",
+      "modifiedTime": "2024-08-03T06:13:37.986Z"
+    },
+    {
+      "id": 1203,
+      "slug": "encore",
+      "name": "Encore",
+      "rarity": 5,
+      "attribute": "Fusion",
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.815Z",
+      "modifiedTime": "2024-08-03T06:13:38.003Z"
+    },
+    {
+      "id": 1204,
+      "slug": "mortefi",
+      "name": "Mortefi",
+      "rarity": 4,
+      "attribute": "Fusion",
+      "weapon": "Pistols",
+      "publishedTime": "2024-06-28T15:43:21.817Z",
+      "modifiedTime": "2024-08-03T06:13:38.050Z"
+    },
+    {
+      "id": 1205,
+      "slug": "changli",
+      "name": "Changli",
+      "rarity": 5,
+      "attribute": "Fusion",
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.814Z",
+      "modifiedTime": "2024-08-03T06:13:37.977Z"
+    },
+    {
+      "id": 1301,
+      "slug": "calcharo",
+      "name": "Calcharo",
+      "rarity": 5,
+      "attribute": "Electro",
+      "weapon": "Broadblade",
+      "publishedTime": "2024-06-28T15:43:21.814Z",
+      "modifiedTime": "2024-08-03T06:13:37.961Z"
+    },
+    {
+      "id": 1302,
+      "slug": "yinlin",
+      "name": "Yinlin",
+      "rarity": 5,
+      "attribute": "Electro",
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.819Z",
+      "modifiedTime": "2024-08-03T06:13:38.114Z"
+    },
+    {
+      "id": 1303,
+      "slug": "yuanwu",
+      "name": "Yuanwu",
+      "rarity": 4,
+      "attribute": "Electro",
+      "weapon": "Gauntlets",
+      "publishedTime": "2024-06-28T15:43:21.820Z",
+      "modifiedTime": "2024-08-03T06:13:38.121Z"
+    },
+    {
+      "id": 1304,
+      "slug": "jinhsi",
+      "name": "Jinhsi",
+      "rarity": 5,
+      "attribute": "Spectro",
+      "weapon": "Broadblade",
+      "version": 1.1,
+      "publishedTime": "2024-06-28T15:43:21.816Z",
+      "modifiedTime": "2024-08-03T06:13:38.022Z"
+    },
+    {
+      "id": 1402,
+      "slug": "yangyang",
+      "name": "Yangyang",
+      "rarity": 4,
+      "attribute": "Aero",
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.819Z",
+      "modifiedTime": "2024-08-03T06:13:38.104Z"
+    },
+    {
+      "id": 1403,
+      "slug": "aalto",
+      "name": "Aalto",
+      "rarity": 4,
+      "attribute": "Aero",
+      "weapon": "Pistols",
+      "publishedTime": "2024-06-28T15:43:21.813Z",
+      "modifiedTime": "2024-08-03T06:06:19.543Z"
+    },
+    {
+      "id": 1404,
+      "slug": "jiyan",
+      "name": "Jiyan",
+      "rarity": 5,
+      "attribute": "Aero",
+      "weapon": "Broadblade",
+      "publishedTime": "2024-06-28T15:43:21.816Z",
+      "modifiedTime": "2024-08-03T06:13:38.031Z"
+    },
+    {
+      "id": 1405,
+      "slug": "jianxin",
+      "name": "Jianxin",
+      "rarity": 5,
+      "attribute": "Aero",
+      "weapon": "Gauntlets",
+      "publishedTime": "2024-06-28T15:43:21.816Z",
+      "modifiedTime": "2024-08-03T06:13:38.011Z"
+    },
+    {
+      "id": 1503,
+      "slug": "verina",
+      "name": "Verina",
+      "rarity": 5,
+      "attribute": "Spectro",
+      "weapon": "Rectifier",
+      "publishedTime": "2024-06-28T15:43:21.819Z",
+      "modifiedTime": "2024-08-03T06:13:38.093Z"
+    },
+    {
+      "id": 1601,
+      "slug": "taoqi",
+      "name": "Taoqi",
+      "rarity": 4,
+      "attribute": "Havoc",
+      "weapon": "Broadblade",
+      "publishedTime": "2024-06-28T15:43:21.818Z",
+      "modifiedTime": "2024-08-03T06:13:38.085Z"
+    },
+    {
+      "id": 1602,
+      "slug": "danjin",
+      "name": "Danjin",
+      "rarity": 4,
+      "attribute": "Havoc",
+      "weapon": "Sword",
+      "publishedTime": "2024-06-28T15:43:21.815Z",
+      "modifiedTime": "2024-08-03T06:13:37.994Z"
+    },
+    {
+      "id": -1,
+      "slug": "xiangli-yao",
+      "name": "Xiangli Yao",
+      "rarity": 5,
+      "upcoming": true,
+      "version": 1.2,
+      "attribute": "Electro",
+      "publishedTime": "2024-07-08T11:43:02.856Z",
+      "modifiedTime": "2024-08-03T06:13:38.096Z"
+    },
+    {
+      "id": -1,
+      "slug": "zhezhi",
+      "name": "Zhezhi",
+      "rarity": 5,
+      "upcoming": true,
+      "attribute": "Glacio",
+      "version": 1.2,
+      "publishedTime": "2024-07-08T11:49:39.662Z",
+      "modifiedTime": "2024-08-03T06:13:38.125Z"
+    },
+    {
+      "id": -1,
+      "slug": "camellya",
+      "name": "Camellya",
+      "rarity": 5,
+      "upcoming": true,
+      "hidden": true,
+      "publishedTime": "2024-07-08T11:44:36.125Z",
+      "modifiedTime": "2024-08-03T06:13:37.965Z"
+    },
+    {
+      "id": 0,
+      "slug": "rover",
+      "name": "Rover",
+      "weapon": "Sword",
+      "rarity": 5,
+      "attribute": "Spectro",
+      "publishedTime": "2024-06-28T15:43:21.818Z",
+      "modifiedTime": "2024-08-03T06:13:38.069Z"
+    },
+    {
+      "id": 0,
+      "slug": "rover-havoc",
+      "name": "Rover (Havoc)",
+      "rarity": 5,
+      "weapon": "Sword",
+      "attribute": "Havoc",
+      "modifiedTime": "2024-08-03T06:13:38.061Z",
+      "publishedTime": "2024-05-23T00:00"
+    },
+    {
+      "id": 0,
+      "slug": "rover-electro",
+      "name": "Rover (Electro)",
+      "rarity": 5,
+      "weapon": "Sword",
+      "attribute": "Electro",
+      "upcoming": true,
+      "publishedTime": "2024-07-08T12:10:50.660Z",
+      "modifiedTime": "2024-08-03T06:13:38.053Z"
+    }
+  ]
+}
