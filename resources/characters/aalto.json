@@ -58,9 +58,9 @@
   "birthplace": "New Federation",
   "description": "Aalto is an enigmatic Information Broker, known for his elusive nature and welcoming smile. Rumor has it he'll provide any information at the right price.",
   "descriptionLocalized": {
-    "vi": "Aalto là một người môi giới thông tin bí ẩn, nổi tiếng với tính cách khó nắm bắt và nụ cười thân thiện. Lời đồn cho rằng anh ta sẽ cung cấp bất kỳ thông tin nào với giá phù hợp.",
     "id": "Aalto adalah seorang Broker Informasi yang misterius, terkenal karena sifatnya yang sulit ditangkap dan senyumnya yang ramah. Desas-desus mengatakan bahwa dia akan memberikan informasi apa pun dengan harga yang tepat.",
-    "th": "Aalto เป็นนายหน้าข้อมูลลึกลับ รู้จักกันในเรื่องบุคลิกภาพที่ลึกลับและรอยยิ้มที่เป็นมิตร คำบอกเล่ากล่าวขานกันว่าเขาจะให้ข้อมูลใดๆ ตราบใดที่ราคาถูกต้อง"
+    "th": "Aalto เป็นนายหน้าข้อมูลลึกลับ รู้จักกันในเรื่องบุคลิกภาพที่ลึกลับและรอยยิ้มที่เป็นมิตร คำบอกเล่ากล่าวขานกันว่าเขาจะให้ข้อมูลใดๆ ตราบใดที่ราคาถูกต้อง",
+    "vi": "Aalto là một người môi giới thông tin bí ẩn, nổi tiếng với tính cách khó nắm bắt và nụ cười thân thiện. Lời đồn cho rằng anh ta sẽ cung cấp bất kỳ thông tin nào với giá phù hợp."
   },
   "forte": [
     {
@@ -140,11 +140,12 @@
       "name": "Aero DMG Bonus+4.20%"
     }
   ],
-  "quote": "Well, if it isn't my loyal patron! What do you wish to inquire about today?\"",
+  "quote": "Well, if it isn't my loyal patron! What do you wish to inquire about today?",
   "quoteLocalized": {
-    "vi": "Ồ, nếu không phải là người bảo trợ trung thành của tôi! Hôm nay ngài muốn hỏi gì vậy?",
     "id": "Wah, kalau bukan pelindungku yang setia! Apa yang ingin kau tanyakan hari ini?",
-    "th": "ดีแล้วนี่นา คุณผู้มีพระคุณที่รัก! วันนี้คุณอยากถามอะไร?"
+    "th": "ดีแล้วนี่นา คุณผู้มีพระคุณที่รัก! วันนี้คุณอยากถามอะไร?",
+    "vi": "Ồ, nếu không phải là người bảo trợ trung thành của tôi! Hôm nay ngài muốn hỏi gì vậy?",
+    "uk": "Ну, якщо це не мій вірний покровитель! Про що ти хочеш запитати сьогодні?"
   },
   "resonanceChain": [
     {
@@ -237,13 +238,15 @@
       "slug": "skillful-cooking",
       "name": "Skillful Cooking",
       "type": "Inherent Skill",
-      "description": "Has a chance to produce special dishes when cooking"
+      "description": "Has a chance to produce special dishes when cooking",
+      "nameLocalized": { "en": "Skillful Cooking", "uk": "Майстерне готування" }
     },
     {
       "slug": "dissolving-mist",
       "name": "Dissolving Mist",
       "type": "Outro Skill",
-      "description": ""
+      "description": "",
+      "nameLocalized": { "en": "Dissolving Mist", "uk": "Розчиняючий туман" }
     }
   ],
   "stats": { "hp": 788, "def": 88, "atk": 21, "energy": 15000 }
