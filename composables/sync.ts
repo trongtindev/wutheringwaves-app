@@ -64,14 +64,8 @@ export const useSync = defineStore('useSync', () => {
   const push = async () => {
     console.debug('useSync', 'push');
 
-    if (database.isInitialized === false) {
-      throw new Error('database not initialized');
-    }
-
-    const db = await database.getInstance();
-    const json = await db.exportJSON();
     const response = await api.post<ISyncPush>('sync/push', {
-      data: JSON.stringify(json),
+      data: database.exportJson(),
     });
 
     const time = new Date(response.data.createdAt).getTime();
@@ -86,10 +80,6 @@ export const useSync = defineStore('useSync', () => {
   const pull = async () => {
     console.debug('useSync', 'pull');
 
-    if (database.isInitialized === false) {
-      throw new Error('database not initialized');
-    }
-
     state.value = 'restore';
     const response = await api.get<ISyncPull>('sync/pull', {
       params: {
@@ -98,22 +88,7 @@ export const useSync = defineStore('useSync', () => {
     });
 
     try {
-      // remove
-      let db = await database.getInstance();
-      await db.remove();
-
-      // recreate
-      await database.initialize({ override: true });
-      db = await database.getInstance();
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await db.importJSON(JSON.parse(response.data.content as any));
-
-      if (response.data.createdAt) {
-        const time = new Date(response.data.createdAt).getTime();
-        lastLocalChanged.value = time;
-      }
-      setTimeout(() => window.location.reload(), 250);
+      database.importJson(response.data.content);
     } catch (error) {
       console.error(error);
 
@@ -125,14 +100,10 @@ export const useSync = defineStore('useSync', () => {
   };
 
   const eraseAll = async () => {
-    if (auth.isLoggedIn === false) {
-      throw new Error('not logged in');
-    } else if (database.isInitialized === false) {
-      throw new Error('database not initialized');
+    database.eraseAllData();
+    if (auth.isLoggedIn) {
+      await api.delete('sync');
     }
-
-    await api.delete('sync');
-
     lastCloudChanged.value = new Date().getTime();
   };
 
@@ -140,19 +111,12 @@ export const useSync = defineStore('useSync', () => {
   watch(
     () => auth.isLoggedIn,
     () => {
-      if (auth.isLoggedIn && database.isInitialized) checkDebounce();
+      if (auth.isLoggedIn) checkDebounce();
     },
   );
 
   watch(
-    () => database.isInitialized,
-    () => {
-      if (database.isInitialized && auth.isLoggedIn) checkDebounce();
-    },
-  );
-
-  watch(
-    () => database.isChanged,
+    () => database.onChanged,
     () => {
       lastLocalChanged.value = new Date().getTime();
       if (auth.isLoggedIn) checkDebounce();

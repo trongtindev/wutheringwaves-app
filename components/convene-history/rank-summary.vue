@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ConveneDocType } from '~/collections/convene';
+import type { ConveneDocument } from '~/composables/database';
 import type { IBannerSummary } from '~/interfaces/convene';
 
 // define
 const props = defineProps<{
-  convenes: ConveneDocType[];
+  convenes: ConveneDocument[];
 }>();
 const emits = defineEmits<{
   (e: 'on-updated'): void;

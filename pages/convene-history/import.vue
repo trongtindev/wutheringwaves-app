@@ -25,10 +25,7 @@ const onImport = (url: string) => {
   importConvene
     .start(url)
     .then((result) => {
-      if (account.active != result.playerId) {
-        account.active = result.playerId;
-      }
-
+      account.setActive(result.playerId);
       sidebar.setNotify('/characters', 1, 'resetOnVisit');
       router.push(localePath('/convene-history'));
     })
@@ -53,12 +50,9 @@ const resetState = () => {
 };
 
 const loadConveneHistoryUrl = () => {
-  account
-    .getConveneHistoryUrl()
-    .then((result) => {
-      conveneHistoryUrl.value = result;
-    })
-    .catch(console.warn);
+  if (!account.active) return;
+  if (!account.active.conveneHistoryUrl) return;
+  conveneHistoryUrl.value = account.active.conveneHistoryUrl;
 };
 
 // changes

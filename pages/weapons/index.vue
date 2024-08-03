@@ -5,6 +5,7 @@ const i18n = useI18n();
 const resources = useResources();
 const database = useDatabase();
 const account = useAccount();
+const importConvene = useImportConvene();
 
 // states
 const weapons = ref<IWeapon[]>(await resources.weapons());
@@ -53,25 +54,19 @@ const categories = computed(() => {
 const calculatorOwned = () => {
   if (!account.active) return;
 
-  database.getInstance().then((db) => {
-    db.weapons
-      .find({
-        selector: {
-          playerId: account.active,
-        },
-      })
-      .exec()
-      .then((documents) => {
-        obtainedCount.value = Object.fromEntries(
-          documents.map((doc) => [doc.resourceId, doc.count]),
-        );
-      });
-  });
+  const docs = database.weapons
+    .find({
+      playerId: account.active.playerId,
+    })
+    .map((e) => e[1]);
+  obtainedCount.value = Object.fromEntries(
+    docs.map((doc) => [doc.resourceId, doc.count]),
+  );
 };
 
 // changes
 watch(
-  () => database.isChanged,
+  () => importConvene.onImported,
   () => calculatorOwned(),
 );
 

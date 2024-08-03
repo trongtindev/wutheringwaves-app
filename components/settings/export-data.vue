@@ -10,6 +10,7 @@ const emits = defineEmits<{
 // uses
 const i18n = useI18n();
 const dialog = useDialog();
+const account = useAccount();
 const database = useDatabase();
 
 // states
@@ -17,14 +18,19 @@ const state = ref<'' | 'export'>('');
 
 // functions
 const startExports = async () => {
+  if (!account.active) return;
+
   try {
     state.value = 'export';
 
     // load libs
     const { mkConfig, generateCsv, download } = await import('export-to-csv');
 
-    const db = await database.getInstance();
-    const convenes = await db.convenes.find().exec();
+    const convenes = database.convenes
+      .find({
+        playerId: account.active.playerId,
+      })
+      .map((e) => e[1]);
     const convenesData = convenes.map((e) => {
       return {
         time: e.time,

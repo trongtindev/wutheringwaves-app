@@ -24,6 +24,7 @@ const emits = defineEmits<{
 const zoom = ref(props.options.zoom ?? 1);
 const center = ref([0, 0]);
 const active = shallowRef<{ id: number; marker: L.Marker }>();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const map = shallowRef<L.Map>(null as any);
 const container = ref();
 const popupElement = ref();
@@ -87,8 +88,6 @@ const initialize = async () => {
 };
 
 const renderMarker = async () => {
-  console.log('renderMarker', { cluster: props.cluster }, props.markers.keys());
-
   if (props.cluster) {
     // remove from normal
     for (const [key, marker] of addedMarkers) {

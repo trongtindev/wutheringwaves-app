@@ -19,35 +19,24 @@ const filterBanner = ref<IBanner | null>(null);
 const filterRarity = ref<number[]>([5]);
 const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);
-const bannerListHeight = ref();
 
 // functions
 const initialize = () => {
-  updateBannerListHeight();
-  window.addEventListener('resize', updateBannerListHeight);
+  if (!account.active) return;
 
-  database.getInstance().then((db) => {
-    db.convenes
-      .find({
-        selector: {
-          playerId: account.active,
-        },
-      })
-      .sort({
-        createdAt: 'desc',
-      })
-      .exec()
-      .then((result) => {
-        convenes.value = result.map((e) => {
-          const newObject: any = e;
-          newObject.timeConverted = dayjs(e.time).utcOffset(account.timeOffset);
-          return newObject;
-        }) as any;
+  const result = database.convenes
+    .find({
+      playerId: account.active.playerId,
+    })
+    .map((e) => e[1]);
 
-        updateFilter();
-      })
-      .catch(console.error);
-  });
+  convenes.value = result.map((e) => {
+    const newObject: any = e;
+    newObject.timeConverted = dayjs(e.time).utcOffset(account.timeOffset);
+    return newObject;
+  }) as any;
+
+  updateFilter();
 };
 
 const updateFilter = () => {
@@ -92,11 +81,6 @@ const updateFilter = () => {
     });
 };
 
-const updateBannerListHeight = () => {
-  const toolbar = document.querySelector('.v-toolbar__content')!;
-  bannerListHeight.value = window.innerHeight - toolbar.clientHeight - 16;
-};
-
 // changes
 watch(
   () => account.active,
@@ -104,16 +88,13 @@ watch(
 );
 watch(() => filterBanner.value, updateFilter);
 watch(() => filterRarity.value, updateFilter);
-watch(
-  () => account.onConveneChanged,
-  () => initialize(),
-);
+// watch(
+//   () => account.onConveneChanged,
+//   () => initialize(),
+// );
 
 // lifecycle
 onMounted(() => initialize());
-onUnmounted(() => {
-  window.removeEventListener('resize', updateBannerListHeight);
-});
 
 // seo meta
 const title = i18n.t('meta.convene.history.title');

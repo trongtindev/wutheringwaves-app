@@ -1,5 +1,5 @@
 import type dayjs from 'dayjs';
-import type { ConveneDocType } from '~/collections/convene';
+import type { ConveneDocument } from '~/composables/database';
 
 export interface IConvene {
   time: string;
@@ -36,6 +36,6 @@ export interface IBannerSummary {
   fourStarWinRate: number[];
 }
 
-export type ConveneDocumentConverted = ConveneDocType & {
+export type ConveneDocumentConverted = ConveneDocument & {
   timeConverted: dayjs.Dayjs;
 };

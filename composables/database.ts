@@ -1,345 +1,365 @@
-import type { RxDatabase } from 'rxdb';
+export class AccountDocument {
+  name?: string;
+  playerId: string;
+  serverId: string;
+  conveneHistoryUrl?: string;
+  autoImport?: boolean;
+  lastImport?: number;
+  createdAt: number;
 
-import {
-  accountCollectionMethods,
-  accountDocMethods,
-  accountSchema,
-  type AccountCollection,
-} from '@/collections/account';
-import {
-  conveneCollectionMethods,
-  conveneDocMethods,
-  conveneSchema,
-  type ConveneCollection,
-} from '@/collections/convene';
-import {
-  settingCollectionMethods,
-  settingDocMethods,
-  settingSchema,
-  type SettingCollection,
-} from '@/collections/setting';
+  constructor(args: Partial<AccountDocument>) {
+    this.name = args.name;
+    this.playerId = args.playerId || 'undefined';
+    this.serverId = args.serverId || 'undefined';
+    this.conveneHistoryUrl = args.conveneHistoryUrl;
+    this.autoImport = args.autoImport;
+    this.lastImport = args.lastImport;
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
 
-import {
-  markerSchema,
-  markerDocMethods,
-  markerCollectionMethods,
-  type MarkerCollection,
-} from '~/collections/marker';
-import {
-  characterCollectionMethods,
-  characterDocMethods,
-  characterSchema,
-  type CharacterCollection,
-} from '~/collections/character';
-import {
-  trophyCollectionMethods,
-  trophyDocMethods,
-  trophySchema,
-  type TrophyCollection,
-} from '~/collections/trophy';
-import {
-  weaponCollectionMethods,
-  weaponDocMethods,
-  weaponSchema,
-  type WeaponCollection,
-} from '~/collections/weapon';
+export class CharacterDocument {
+  playerId: string;
+  resourceId: number;
+  sequences: number;
+  obtainedAt: number;
+  createdAt: number;
 
-export type DatabaseCollections = {
-  convenes: ConveneCollection;
-  settings: SettingCollection;
-  accounts: AccountCollection;
-  markers: MarkerCollection;
-  characters: CharacterCollection;
-  trophies: TrophyCollection;
-  weapons: WeaponCollection;
+  constructor(args: Partial<CharacterDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.resourceId = args.resourceId || 0;
+    this.sequences = args.sequences || 0;
+    this.obtainedAt = args.obtainedAt || 0;
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class ConveneDocument {
+  playerId: string;
+  name: string;
+  time: string;
+  qualityLevel: number;
+  cardPoolType: number;
+  resourceId: number;
+  resourceType: string;
+  pity: number;
+  createdAt: number;
+
+  constructor(args: Partial<ConveneDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.name = args.name || 'undefined';
+    this.time = args.time || 'undefined';
+    this.cardPoolType = args.cardPoolType || -1;
+    this.qualityLevel = args.qualityLevel || -1;
+    this.resourceId = args.resourceId || -1;
+    this.resourceType = args.resourceType || 'undefined';
+    this.pity = args.pity || -1;
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class MapPinDocument {
+  playerId?: string;
+  name: string;
+  type: string;
+  latLng: number[];
+  createdAt: number;
+
+  constructor(args: Partial<MapPinDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.name = args.name || 'undefined';
+    this.type = args.type || 'undefined';
+    this.latLng = args.latLng || [0, 0];
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class MapMarkedDocument {
+  playerId?: string;
+  pinId: number;
+  createdAt: number;
+
+  constructor(args: Partial<MapMarkedDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.pinId = args.pinId || -1;
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class SettingDocument {
+  playerId?: string;
+  key: string;
+  value: string;
+  createdAt: number;
+
+  constructor(args: Partial<SettingDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.key = args.key || 'undefined';
+    this.value = args.value || 'undefined';
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class AchievementDocument {
+  playerId: string;
+  slug: string;
+  createdAt: number;
+
+  constructor(args: Partial<AchievementDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.slug = args.slug || 'undefined';
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class WeaponDocument {
+  playerId: string;
+  count: number;
+  resourceId: number;
+  createdAt: number;
+
+  constructor(args: Partial<WeaponDocument>) {
+    this.playerId = args.playerId || 'undefined';
+    this.count = args.count || -1;
+    this.resourceId = args.resourceId || -1;
+    this.createdAt = args.createdAt || new Date().getTime();
+  }
+}
+
+export class Collection<T> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private readonly parser: any;
+
+  items: Map<string, T>;
+  onChanged: () => void;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  constructor(parser: any, onChanged: () => void) {
+    this.items = new Map<string, T>();
+    this.parser = parser;
+    this.onChanged = onChanged;
+  }
+
+  erase() {
+    this.items.clear();
+    this.onChanged();
+  }
+
+  toObject() {
+    return [...this.items.entries()].map(([id, doc]) => {
+      return { id, doc };
+    });
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fromJson(elements: { id: string; doc: any }[]) {
+    this.items.clear();
+    for (const element of elements) {
+      this.items.set(element.id, new this.parser(element.doc));
+    }
+  }
+
+  insert(document: T) {
+    this.items.set(randomId(), document);
+    this.onChanged();
+  }
+
+  bulkInsert(documents: T[]) {
+    for (const document of documents) {
+      this.insert(document);
+    }
+    this.onChanged();
+  }
+
+  find(selector?: Partial<T>): [string, T][] {
+    selector ??= {};
+
+    return [...this.items.entries()].filter(([_, value]) => {
+      return Object.entries(selector).every(
+        ([selectorKey, selectorValue]) => value[selectorKey] === selectorValue,
+      );
+    });
+  }
+
+  findOne(selector: Partial<T>): [string | undefined, T] {
+    const result = [...this.items.entries()].find(([_, value]) => {
+      return Object.entries(selector).every(
+        ([selectorKey, selectorValue]) => value[selectorKey] === selectorValue,
+      );
+    });
+    if (!result) return [undefined, null as T];
+    return [result[0], result[1]];
+  }
+
+  updateOne(
+    selector: Partial<T>,
+    update: Partial<T>,
+    options?: { upsert?: boolean },
+  ) {
+    options ??= {};
+
+    const [id, doc] = this.findOne(selector);
+    if (!id) {
+      if (options.upsert) {
+        const newDoc = new this.parser({
+          ...selector,
+          ...update,
+        });
+        this.insert(newDoc);
+      }
+      return;
+    }
+
+    Object.keys(update).forEach((key) => {
+      doc[key] = update[key];
+    });
+    this.items.set(id, doc);
+    this.onChanged();
+  }
+
+  deleteMany(selector: Partial<T>) {
+    const docs = this.find(selector);
+    docs.forEach(([id]) => {
+      this.items.delete(id);
+    });
+    this.onChanged();
+  }
+
+  deleteOne(selector: Partial<T> | string) {
+    if (typeof selector === 'string') {
+      this.items.delete(selector);
+      this.onChanged();
+      return;
+    }
+
+    const [id] = this.findOne(selector);
+    if (!id) return;
+
+    this.items.delete(id);
+    this.onChanged();
+  }
+}
+
+export type Collections = {
+  accounts: Collection<AccountDocument>;
+  characters: Collection<CharacterDocument>;
+  convenes: Collection<ConveneDocument>;
+  mapPins: Collection<MapPinDocument>;
+  mapMarked: Collection<MapMarkedDocument>;
+  settings: Collection<SettingDocument>;
+  achievements: Collection<AchievementDocument>;
+  weapons: Collection<WeaponDocument>;
 };
-export type MyDatabase = RxDatabase<DatabaseCollections>;
 
 export const useDatabase = defineStore('useDatabase', () => {
-  let db: MyDatabase;
-
-  // uses
-  const i18n = useI18n();
-  const onChangedDebounce = useDebounceFn(() => {
-    isChanged.value = randomId();
-  }, 500);
+  const collections: Collections = {
+    accounts: new Collection<AccountDocument>(
+      AccountDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    characters: new Collection<CharacterDocument>(
+      CharacterDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    convenes: new Collection<ConveneDocument>(
+      ConveneDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    mapPins: new Collection<MapPinDocument>(
+      MapPinDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    mapMarked: new Collection<MapMarkedDocument>(
+      MapMarkedDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    settings: new Collection<SettingDocument>(
+      SettingDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    achievements: new Collection<AchievementDocument>(
+      AchievementDocument,
+      () => (onChanged.value = randomId()),
+    ),
+    weapons: new Collection<WeaponDocument>(
+      WeaponDocument,
+      () => (onChanged.value = randomId()),
+    ),
+  };
 
   // states
-  const state = ref<'' | 'initializing' | 'migration'>('');
-  const isChanged = ref();
+  const onChanged = ref<string>();
   const isInitialized = ref(false);
 
   // functions
-  const initialize = async (options?: { override?: boolean }) => {
-    options ??= {};
-    if (!options.override) {
-      if (db || state.value != '') {
-        return;
-      }
+  const initialize = () => {
+    try {
+      importJson(localStorage.getItem('collections') || '[]');
+      isInitialized.value = true;
+    } catch (error) {
+      alert(error);
     }
+  };
 
-    state.value = 'initializing';
+  const importJson = (data: string) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const json: { [key: string]: any[] } = JSON.parse(data);
 
-    // dynamic imports
-    const { createRxDatabase } = await import('rxdb');
-    const { getRxStorageDexie } = await import('rxdb/plugins/storage-dexie');
+    collections.accounts.fromJson(json.accounts ?? []);
+    collections.characters.fromJson(json.characters ?? []);
+    collections.convenes.fromJson(json.convenes ?? []);
+    collections.mapPins.fromJson(json.mapPins ?? []);
+    collections.mapMarked.fromJson(json.mapMarked ?? []);
+    collections.settings.fromJson(json.settings ?? []);
+    collections.achievements.fromJson(json.achievements ?? []);
+    collections.weapons.fromJson(json.weapons ?? []);
 
-    // create database
-    return new Promise((resolve, reject) => {
-      // LINK: https://rxdb.info/migration-schema.html
-      createRxDatabase<DatabaseCollections>({
-        name: 'default',
-        storage: getRxStorageDexie(),
-        multiInstance: false,
-      })
-        .then(async (result) => {
-          db = result;
+    if (isInitialized.value) {
+      onChanged.value = randomId();
+    }
+  };
 
-          console.debug('database', 'addCollections');
-          const collections = await db.addCollections({
-            convenes: {
-              schema: conveneSchema,
-              methods: conveneDocMethods,
-              statics: conveneCollectionMethods,
-              autoMigrate: false,
-              migrationStrategies: {
-                1: function (oldDoc) {
-                  oldDoc._id = randomId();
-                  oldDoc.key = undefined;
-                  oldDoc.resourceId = undefined;
-                  return oldDoc;
-                },
-                2: function (oldDoc) {
-                  oldDoc.pity = 0;
-                  return oldDoc;
-                },
-                3: function (oldDoc) {
-                  oldDoc.win = false;
-                  return oldDoc;
-                },
-                4: function (oldDoc) {
-                  if (oldDoc.resourceType === 'Resonators') {
-                    // Kuro has change Resonators => Resonator
-                    oldDoc.resourceType = 'Resonator';
-                  } else if (oldDoc.resourceType === 'Weapons') {
-                    // Kuro has change Weapons => Weapon
-                    oldDoc.resourceType = 'Weapon';
-                  }
-                  return oldDoc;
-                },
-                5: function (oldDoc) {
-                  return oldDoc;
-                },
-                6: function (oldDoc) {
-                  oldDoc.resourceId = 0;
-                  return oldDoc;
-                },
-              },
-            },
-            settings: {
-              schema: settingSchema,
-              methods: settingDocMethods,
-              statics: settingCollectionMethods,
-              autoMigrate: false,
-            },
-            accounts: {
-              schema: accountSchema,
-              methods: accountDocMethods,
-              statics: accountCollectionMethods,
-              autoMigrate: false,
-              migrationStrategies: {
-                1: function (oldDoc) {
-                  oldDoc.serverId = '86d52186155b148b5c138ceb41be9650';
-                  return oldDoc;
-                },
-                2: function (oldDoc) {
-                  oldDoc.name = '';
-                  return oldDoc;
-                },
-                3: function (oldDoc) {
-                  oldDoc.autoImport = true;
-                  return oldDoc;
-                },
-                4: function (oldDoc) {
-                  oldDoc.lastImport = 0;
-                  return oldDoc;
-                },
-              },
-            },
-            markers: {
-              schema: markerSchema,
-              methods: markerDocMethods,
-              statics: markerCollectionMethods,
-              autoMigrate: false,
-              migrationStrategies: {
-                1: function (oldDoc) {
-                  oldDoc.playerId = null;
-                  return oldDoc;
-                },
-                2: function (oldDoc) {
-                  oldDoc.playerId = null;
-                  return oldDoc;
-                },
-              },
-            },
-            characters: {
-              schema: characterSchema,
-              methods: characterDocMethods,
-              statics: characterCollectionMethods,
-              autoMigrate: false,
-              migrationStrategies: {
-                1: function (oldDoc) {
-                  oldDoc.playerId = '';
-                  return oldDoc;
-                },
-                2: function (oldDoc) {
-                  oldDoc.key = `${oldDoc.name}${oldDoc.playerId}`;
-                  return oldDoc;
-                },
-                3: function (oldDoc) {
-                  return oldDoc;
-                },
-              },
-            },
-            trophies: {
-              schema: trophySchema,
-              methods: trophyDocMethods,
-              statics: trophyCollectionMethods,
-              autoMigrate: false,
-              migrationStrategies: {
-                1: function (oldDoc) {
-                  oldDoc.playerId = '';
-                  return oldDoc;
-                },
-              },
-            },
-            weapons: {
-              schema: weaponSchema,
-              methods: weaponDocMethods,
-              statics: weaponCollectionMethods,
-              autoMigrate: false,
-              migrationStrategies: {},
-            },
-          });
-
-          // check migration
-          console.debug('database', 'check migration');
-          for (const collection of Object.keys(collections)) {
+  const exportJson = (): string => {
+    return JSON.stringify(
+      Object.fromEntries(
+        Object.keys(collections)
+          .map((key) => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            if (await (collections as any)[collection].migrationNeeded()) {
-              state.value = 'migration';
-              console.info('database', collection, 'startMigration');
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              await (collections as any)[collection].startMigration();
-              console.info('database', collection, 'startMigration', 'done');
-            }
-          }
-          if (state.value === 'migration') state.value = '';
+            const collection = collections[key] as Collection<any>;
+            return { key, docs: collection.toObject() };
+          })
+          .map((e) => [e.key, e.docs]),
+      ),
+    );
+  };
 
-          // convenes
-          db.convenes.preInsert((plainData) => {
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.convenes.postInsert(() => onChangedDebounce(), false);
-          db.convenes.postSave(() => onChangedDebounce(), false);
-          // db.convenes.postRemove(() => onChangedDebounce(), false);
+  const save = () => {
+    const json = exportJson();
+    localStorage.setItem('collections', json);
+  };
 
-          // settings
-          db.settings.preInsert((plainData) => {
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.settings.postInsert(() => onChangedDebounce(), false);
-          db.settings.postSave(() => onChangedDebounce(), false);
-          db.settings.postRemove(() => onChangedDebounce(), false);
+  const saveDebounce = useDebounceFn(() => save(), 500);
 
-          // accounts
-          db.accounts.preInsert((plainData) => {
-            plainData.autoImport ??= true;
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.accounts.postInsert(() => onChangedDebounce(), false);
-          db.accounts.postSave(() => onChangedDebounce(), false);
-          // db.accounts.postRemove(() => onChangedDebounce(), false);
-
-          // markers
-          db.markers.preInsert((plainData) => {
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.markers.postInsert(() => onChangedDebounce(), false);
-          db.markers.postSave(() => onChangedDebounce(), false);
-          db.markers.postRemove(() => onChangedDebounce(), false);
-
-          // character
-          db.characters.preInsert((plainData) => {
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.characters.postInsert(() => onChangedDebounce(), false);
-          db.characters.postSave(() => onChangedDebounce(), false);
-          db.characters.postRemove(() => onChangedDebounce(), false);
-
-          // trophies
-          db.trophies.preInsert((plainData) => {
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.trophies.postInsert(() => onChangedDebounce(), false);
-          db.trophies.postSave(() => onChangedDebounce(), false);
-          db.trophies.postRemove(() => onChangedDebounce(), false);
-
-          // weapons
-          db.weapons.preInsert((plainData) => {
-            plainData.createdAt ??= new Date().getTime();
-          }, false);
-          db.weapons.postInsert(() => onChangedDebounce(), false);
-          db.weapons.postSave(() => onChangedDebounce(), false);
-          db.weapons.postRemove(() => onChangedDebounce(), false);
-
-          state.value = '';
-          isInitialized.value = true;
-
-          resolve(db);
-        })
-        .catch(async (error) => {
-          console.error(error);
-
-          if (import.meta.dev) {
-            alert(error);
-          } else {
-            // TODO: native confirm
-            if (confirm(i18n.t('Data is corrupted, all data will be erase?'))) {
-              await eraseAllData();
-              window.location.reload();
-            }
-          }
-
-          reject(error);
-        })
-        .finally(() => {
-          state.value = '';
-        });
+  const eraseAllData = async () => {
+    Object.keys(collections).forEach((key) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const collection = collections[key] as Collection<any>;
+      collection.erase();
     });
   };
 
-  const getInstance = async () => {
-    while (!db || !isInitialized.value) {
-      await new Promise((resolve) => setTimeout(resolve, 50));
-    }
-    return db;
-  };
-
-  const eraseAllData = async () => {
-    console.warn('eraseAllData', await db.remove());
-    console.warn('eraseAllData', await db.destroy());
-  };
+  // changes
+  watch(() => onChanged.value, saveDebounce);
 
   // lifecycle
-  onMounted(() => initialize());
+  onBeforeMount(() => initialize());
 
   return {
-    state,
-    isInitialized,
-    isChanged,
-    initialize,
-    getInstance,
+    ...collections,
+    importJson,
+    exportJson,
+    save,
     eraseAllData,
+    onChanged,
   };
 });

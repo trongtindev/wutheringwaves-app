@@ -41,7 +41,7 @@ export const calculateWinRate = (args: {
       continue;
     }
 
-    const banner = matchBanners.first();
+    const banner = matchBanners[0];
     if (!banner.featuredRare) {
       console.warn(banner.name, 'featuredRare', undefined);
       continue;

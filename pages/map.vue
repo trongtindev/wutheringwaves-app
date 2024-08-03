@@ -76,14 +76,10 @@ const urlTemplate = computed(() => {
 
 // functions
 const checkAndClusterShowTip = async () => {
-  const ignore = await new Promise<boolean>((resolve) => {
-    if (skipClusterShowTip.value) {
-      resolve(true);
-      return;
-    }
-    settings.get('map.guides.pinCluster', false).then(resolve);
-  });
-  if (ignore) return;
+  if (skipClusterShowTip.value) {
+    return;
+  }
+  if (settings.get('map.guides.pinCluster', false)) return;
 
   dialog.show({
     title: i18n.t('common.didYouKnow'),
@@ -143,25 +139,12 @@ const loadPins = () => {
 };
 
 const loadMarkedPins = () => {
-  return new Promise((resolve, reject) => {
-    database
-      .getInstance()
-      .then((db) => {
-        db.markers
-          .find({
-            selector: {
-              playerId: account.active,
-            },
-          })
-          .exec()
-          .then((docs) => {
-            markedPins.value = docs.map((e) => parseInt(e.key));
-            resolve(true);
-          })
-          .catch(reject);
-      })
-      .catch(reject);
-  });
+  markedPins.value = database.mapMarked
+    .find({
+      playerId: account.active ? account.active.playerId : undefined,
+    })
+    .map((e) => e[1])
+    .map((e) => e.pinId);
 };
 
 const loadLeaflet = () => {

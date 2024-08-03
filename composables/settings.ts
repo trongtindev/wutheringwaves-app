@@ -3,7 +3,7 @@ export const useSettings = defineStore('useSettings', () => {
   const database = useDatabase();
 
   // functions
-  const get = async (
+  const get = (
     key: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     defaultValue: any,
@@ -13,32 +13,28 @@ export const useSettings = defineStore('useSettings', () => {
   ) => {
     options ??= {};
 
-    const db = await database.getInstance();
-    const result = await db.settings
-      .findOne({
-        selector: {
-          key,
-        },
-      })
-      .exec();
-
-    if (result) {
-      return JSON.parse(result.value);
+    const [id, doc] = database.settings.findOne({ key });
+    if (id) {
+      return JSON.parse(doc.value);
     }
+    if (options.upsert) set(key, defaultValue);
 
-    if (options.upsert) {
-      await set(key, defaultValue);
-    }
     return defaultValue;
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const set = async (key: string, value: any) => {
-    const db = await database.getInstance();
-    return db.settings.upsert({
-      key,
-      value: JSON.stringify(value),
-    });
+    return database.settings.updateOne(
+      {
+        key,
+      },
+      {
+        value: JSON.stringify(value),
+      },
+      {
+        upsert: true,
+      },
+    );
   };
 
   return { get, set };

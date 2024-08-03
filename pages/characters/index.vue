@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { CharacterDocument } from '~/collections/character';
 import { mdiMagnify, mdiFilterCog } from '@mdi/js';
+import type { CharacterDocument } from '~/composables/database';
 
 const i18n = useI18n();
 const resources = useResources();
@@ -22,29 +22,20 @@ const filterAttributes = ref<string[]>([]);
 // functions
 const loadOwned = () => {
   // console.log(JSON.stringify(characters.map((e) => e.name)));
+  if (!account.active) return;
 
-  database
-    .getInstance()
-    .then((db) => {
-      db.characters
-        .find({
-          selector: {
-            playerId: account.active,
-          },
-        })
-        .exec()
-        .then((result) => {
-          if (result.length > 0) {
-            owned.value = result.reduce(
-              (acc, e) => ((acc[e.name] = e), acc),
-              {},
-            );
-          } else {
-            owned.value = {};
-          }
-        });
+  const docs = database.characters
+    .find({
+      playerId: account.active.playerId,
     })
-    .catch(console.error);
+    .map((e) => e[1]);
+
+  if (docs.length > 0) {
+    owned.value = docs.reduce((acc, e) => ((acc[e.resourceId] = e), acc), {});
+  } else {
+    owned.value = {};
+  }
+  console.log('owned', owned.value);
 };
 
 // events
@@ -86,12 +77,7 @@ const items = computed(() => {
 });
 
 // changes
-watch(
-  () => account.active,
-  (value) => {
-    if (value) loadOwned();
-  },
-);
+watch(() => account.active, loadOwned);
 
 // lifecycle
 onMounted(() => loadOwned());
@@ -154,9 +140,7 @@ useSeoMeta({
           :item="element"
           :portrait="true"
           :sequences="
-            owned && owned[element.name]
-              ? owned[element.name].resonanceChain
-              : undefined
+            owned && owned[element.id] ? owned[element.id].sequences : undefined
           "
         />
       </v-col>

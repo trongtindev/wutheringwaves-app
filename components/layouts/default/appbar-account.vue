@@ -25,14 +25,14 @@ const localePath = useLocalePath();
             v-for="(element, index) in account.items"
             :key="index"
             :value="index"
-            :active="element.playerId == account.active"
-            :disabled="element.playerId == account.active"
+            :active="account.isActive(element.playerId)"
+            :disabled="account.isActive(element.playerId)"
             :title="element.name || element.playerId"
-            @click="() => (account.active = element.playerId)"
+            @click="() => account.setActive(element.playerId)"
           >
             <template #append>
               <v-chip
-                v-if="element.playerId == account.active"
+                v-if="account.isActive(element.playerId)"
                 :text="$t('common.active')"
               />
               <v-icon v-else :icon="mdiChevronRight" />

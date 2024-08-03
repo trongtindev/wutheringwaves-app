@@ -57,7 +57,9 @@ const localesMetadata: LocaleObject[] = [
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  $development: {},
+  $development: {
+    devtools: { enabled: false },
+  },
 
   $production: {
     i18n: {
@@ -166,6 +168,7 @@ export default defineNuxtConfig({
       '/guides/rss',
       '/guides/editor',
       '/errors',
+      '/commit',
     ],
     sources: [
       '/api/__sitemap__/characters',

@@ -27,17 +27,11 @@ const summary = ref<IMapPinSummary>();
 
 // functions
 const checkMarked = () => {
-  database.getInstance().then(async (db) => {
-    const doc = await db.markers
-      .findOne({
-        selector: {
-          key: `${props.id}`,
-          playerId: account.active,
-        },
-      })
-      .exec();
-    isMarked.value = doc != null;
+  const [id] = database.mapMarked.findOne({
+    pinId: props.id,
+    playerId: account.active ? account.active.playerId : undefined,
   });
+  isMarked.value = typeof id !== 'undefined';
 };
 
 const loadPinSummary = () => {
@@ -48,10 +42,7 @@ const loadPinSummary = () => {
 };
 
 const checkAndShowTip = async () => {
-  const show = await new Promise<boolean>((resolve) => {
-    settings.get('map.guides.multipleAccounts', false).then(resolve);
-  });
-  if (show) return;
+  if (settings.get('map.guides.multipleAccounts', false)) return;
 
   dialog.show({
     title: i18n.t('common.didYouKnow'),
@@ -67,12 +58,14 @@ const onPressedMarkAsFound = async () => {
   isMarked.value = true;
   props.marker.setOpacity(0.25);
 
-  database.getInstance().then((db) => {
-    db.markers.upsert({
-      key: `${props.id}`,
-      playerId: account.active,
-    });
-  });
+  database.mapMarked.updateOne(
+    {
+      pinId: props.id,
+      playerId: account.active ? account.active.playerId : undefined,
+    },
+    {},
+    { upsert: true },
+  );
 
   emits('on-marked', isMarked.value);
   checkAndShowTip();
@@ -82,11 +75,9 @@ const onPressedMarkAsNotFound = async () => {
   isMarked.value = false;
   props.marker.setOpacity(1);
 
-  database.getInstance().then((db) => {
-    db.markers.deleteOne({
-      key: `${props.id}`,
-      playerId: account.active,
-    });
+  database.mapMarked.deleteOne({
+    pinId: props.id,
+    playerId: account.active ? account.active.playerId : undefined,
   });
 
   emits('on-marked', isMarked.value);

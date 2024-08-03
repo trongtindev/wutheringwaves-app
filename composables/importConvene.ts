@@ -1,10 +1,13 @@
 import dayjs from 'dayjs';
+import { CharacterDocument } from './database';
 
 export const useImportConvene = defineStore('useImportConvene', () => {
   // uses
   const api = useApi();
-  const account = useAccount();
   const database = useDatabase();
+
+  // states
+  const onImported = ref<string>();
 
   // functions
   const start = async (url: string) => {
@@ -28,20 +31,17 @@ export const useImportConvene = defineStore('useImportConvene', () => {
 
     // initial account
     const playerId = response.data.playerId.toString();
-    await account.upsert(playerId, response.data.serverId, url);
-
-    // get database instance
-    const db = await database.getInstance();
+    database.accounts.updateOne(
+      { playerId },
+      {
+        serverId: response.data.serverId,
+        conveneHistoryUrl: url,
+      },
+      { upsert: true },
+    );
 
     // remove previous history
-    const conveneDeletes = await db.convenes
-      .find({
-        selector: {
-          playerId,
-        },
-      })
-      .exec();
-    await db.convenes.bulkRemove(conveneDeletes.map((e) => e._id));
+    database.convenes.deleteMany({ playerId });
 
     // data calculator
     const conveneWrites = response.data.items.map((e, i) => {
@@ -68,56 +68,56 @@ export const useImportConvene = defineStore('useImportConvene', () => {
         }
       }
 
-      return {
-        _id: randomId(),
+      return new ConveneDocument({
         playerId: playerId,
         cardPoolType: e.cardPoolType,
         qualityLevel: e.qualityLevel,
-        resourceType: e.resourceType as any,
+        resourceType: e.resourceType,
         name: e.name,
         time: e.time,
         pity,
         createdAt: new Date(e.time).getTime() - i,
-      };
+      });
     });
-    await db.convenes.bulkInsert(conveneWrites);
+    database.convenes.bulkInsert(conveneWrites);
 
-    // calculator characters
+    // calculate characters
     const resonators = response.data.items.filter((e) => {
       return e.resourceType.startsWith('R');
     });
     const characterObjects = (() => {
-      const output = {};
+      const output: { [key: number]: CharacterDocument } = {};
       for (const element of resonators) {
-        output[element.name] ??= {
-          name: element.name,
-          resonanceChain: -1,
+        output[element.resourceId] ??= new CharacterDocument({
+          resourceId: element.resourceId,
+          sequences: -1,
           obtainedAt: 0,
-        };
-        output[element.name].resonanceChain += 1;
-        output[element.name].obtainedAt = (() => {
-          return resonators
+        });
+        output[element.resourceId].sequences += 1;
+        output[element.resourceId].obtainedAt = (() => {
+          const time = resonators
             .filter((e) => e.name === element.name)
             .sort((a, b) => {
               const timeA = dayjs(a.time);
               const timeB = dayjs(b.time);
               return timeA.toDate().getTime() - timeB.toDate().getTime();
             })[0].time;
+          return new Date(time).getTime();
         })();
       }
 
       return output;
     })();
     const characterWrites = Object.keys(characterObjects).flatMap((e) => {
-      return {
+      return new CharacterDocument({
         ...characterObjects[e],
         playerId: playerId,
         key: `${characterObjects[e].name}${playerId}`,
-      };
+      });
     });
 
-    await db.characters.deleteMany({ playerId });
-    await db.characters.bulkUpsert(characterWrites);
+    database.characters.deleteMany({ playerId });
+    database.characters.bulkInsert(characterWrites);
 
     // calculator weapons
     const weaponCounts: {
@@ -136,22 +136,20 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     }
 
     const weaponsWrites = Object.keys(weaponCounts).map((e) => {
-      return {
+      return new WeaponDocument({
         ...weaponCounts[e],
         playerId,
-        key: `${weaponCounts[e].resourceId}${playerId}`,
-      };
+      });
     });
 
-    await db.weapons.deleteMany({ playerId });
-    await db.weapons.bulkUpsert(weaponsWrites);
+    database.weapons.deleteMany({ playerId });
+    database.weapons.bulkInsert(weaponsWrites);
 
-    return {
-      playerId,
-      changes: conveneWrites.length - conveneDeletes.length,
-    };
+    onImported.value = randomId();
+
+    return { playerId };
   };
 
   // exports
-  return { start };
+  return { start, onImported };
 });

@@ -11,20 +11,20 @@ const account = useAccount();
 const database = useDatabase();
 
 // events
-const onPressedDelete = async (playerId: string, isConfirmed?: boolean) => {
-  if (isConfirmed) {
-    const db = await database.getInstance();
-    await db.accounts.deleteOne({ playerId });
-    await db.convenes.deleteMany({ playerId });
-  } else {
+const onPressedDelete = async (playerId: string, confirm?: boolean) => {
+  if (!confirm) {
     dialog.show({
       color: 'error',
-      title: i18n.t('settings.accounts.deleteConfirm'),
-      content: i18n.t('settings.accounts.deleteConfirmMessage'),
+      title: i18n.t('settings.accounts.delete.title'),
+      content: i18n.t('settings.accounts.delete.message'),
       onConfirm: () => onPressedDelete(playerId, true),
       confirmButtonText: i18n.t('common.delete'),
     });
+    return;
   }
+
+  database.accounts.deleteOne({ playerId });
+  database.convenes.deleteMany({ playerId });
 };
 
 // lifecycle

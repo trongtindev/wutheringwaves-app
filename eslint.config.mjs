@@ -21,6 +21,8 @@ export default withNuxt({}).append({
     '@typescript-eslint/unified-signatures': 0,
     'vue/valid-v-for': 1,
     'no-useless-escape': 0,
+    '@typescript-eslint/no-useless-constructor': 1,
+    '@typescript-eslint/no-extraneous-class': 1,
   },
   ignores: ['**/*.js'],
 });

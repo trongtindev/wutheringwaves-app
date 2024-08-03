@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { type ConveneDocument } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
 import { toBlob } from 'html-to-image';
 import { saveAs } from 'file-saver';
 import { mdiDownload, mdiUpload, mdiCogs, mdiViewGallery } from '@mdi/js';
 import urlSlug from 'url-slug';
+import type { ConveneDocument } from '~/composables/database';
 
 // uses
 const i18n = useI18n();
@@ -28,28 +28,14 @@ const backgroundGallery = ref(false);
 
 // functions
 const initialize = () => {
-  if (!account.active) {
-    setTimeout(initialize, 250);
-    return;
-  }
+  if (!account.active) return;
 
-  database.getInstance().then((db) => {
-    db.convenes
-      .find({
-        selector: {
-          playerId: account.active,
-        },
-      })
-      .sort({
-        createdAt: 'desc',
-      })
-      .exec()
-      .then((result) => {
-        convenes.value = result as any;
-        totalPull.value = convenes.value.length;
-      })
-      .catch(console.error);
-  });
+  convenes.value = database.convenes
+    .find({
+      playerId: account.active.playerId,
+    })
+    .map((e) => e[1]);
+  totalPull.value = convenes.value.length;
 };
 
 const downloadImage = async () => {

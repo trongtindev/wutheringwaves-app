@@ -36,19 +36,14 @@ const refreshStatisticThrottle = useThrottleFn(() => {
 
 // functions
 const initialize = () => {
-  database.getInstance().then((db) => {
-    db.trophies
-      .find({
-        selector: {
-          playerId: account.active,
-        },
-      })
-      .exec()
-      .then((result) => {
-        checkedItems.value = result.map((e) => e.slug);
-        refreshStatisticThrottle();
-      });
-  });
+  const result = database.achievements
+    .find({
+      playerId: account.active ? account.active.playerId : undefined,
+    })
+    .map((e) => e[1]);
+
+  checkedItems.value = result.map((e) => e.slug);
+  refreshStatisticThrottle();
 
   matchItems.value = items.filter((e) => {
     if (filterText.value) {
@@ -69,24 +64,20 @@ const initialize = () => {
 // events
 const onItemChecked = async (slug: string, value: boolean) => {
   console.log('onItemChecked', slug, value);
+  const playerId = account.active ? account.active.playerId : undefined;
 
-  const db = await database.getInstance();
   if (value) {
     checkedItems.value.push(slug);
-    await db.trophies.upsert({ slug, playerId: account.active });
+    database.achievements.updateOne({ slug, playerId }, {}, { upsert: true });
   } else {
     const index = checkedItems.value.findIndex((e) => e === slug);
     if (index >= 0) checkedItems.value.splice(index, 1);
 
-    const doc = await db.trophies
-      .findOne({
-        selector: {
-          slug,
-          playerId: account.active,
-        },
-      })
-      .exec();
-    if (doc) doc.remove();
+    const [id] = database.achievements.findOne({
+      slug,
+      playerId,
+    });
+    if (id) database.achievements.deleteOne(id);
   }
   refreshStatisticThrottle();
 };

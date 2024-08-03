@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import dayjs from 'dayjs';
-import type { ConveneDocType } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
+import type { ConveneDocument } from '~/composables/database';
 
 // define
 const props = defineProps<{
@@ -19,7 +18,7 @@ const database = useDatabase();
 const resources = useResources();
 
 // states
-const convenes = ref<ConveneDocType[]>([]);
+const convenes = ref<ConveneDocument[]>([]);
 const guaranteedAt = ref(0);
 const winRate = ref(0);
 
@@ -49,35 +48,27 @@ const showLuckWinRateOff = computed(() => {
 const initialize = async () => {
   if (!account.active) return;
 
-  const db = await database.getInstance();
-  db.convenes
+  convenes.value = database.convenes
     .find({
-      selector: {
-        playerId: account.active,
-        cardPoolType: props.type,
-      },
+      playerId: account.active.playerId,
+      cardPoolType: props.type,
     })
-    .sort({
-      createdAt: 'desc',
-    })
-    .exec()
-    .then((result) => {
-      console.debug('initialize', result.length, 'docs');
+    .map((e) => e[1]);
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      convenes.value = result as any;
-      guaranteedAt.value = 80;
+  console.debug('initialize', convenes.value.length, 'docs');
 
-      updateStatistics();
+  guaranteedAt.value = 80;
 
-      setTimeout(() => {
-        emits('on-updated');
-      }, 250);
-    })
-    .catch(console.warn);
+  updateStatistics();
+
+  setTimeout(() => {
+    emits('on-updated');
+  }, 250);
 };
 
 const updateStatistics = async () => {
+  if (!account.active) return;
+
   const banners = await resources.getBanners();
   const timeOffset = account.timeOffset;
 

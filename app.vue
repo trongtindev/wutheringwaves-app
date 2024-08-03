@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import './prototypes/array.ts';
 import dayjs from 'dayjs';
 import { useLocale } from 'vuetify';
 

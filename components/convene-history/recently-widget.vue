@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { type ConveneDocument } from '@/collections/convene';
 import urlSlug from 'url-slug';
+import type { ConveneDocument } from '~/composables/database';
 
 // define
 const emits = defineEmits<{
@@ -16,37 +16,22 @@ const items = ref<ConveneDocument[]>();
 
 // functions
 const initialize = () => {
-  if (!account.active) {
-    // items.value = [];
-    return;
-  }
+  if (!account.active) return;
 
-  database.getInstance().then((db) => {
-    db.convenes
-      .find({
-        selector: {
-          playerId: account.active,
-          qualityLevel: {
-            $gte: 4,
-          },
-        },
-      })
-      .sort({
-        createdAt: 'desc',
-      })
-      .limit(5)
-      .exec()
-      .then((result) => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        items.value = result as any;
-        setTimeout(() => emits('on-done'), 50);
-      });
-  });
+  items.value = database.convenes
+    .find({
+      playerId: account.active.playerId,
+    })
+    .filter((e) => e[1].qualityLevel >= 4)
+    .splice(0, 5)
+    .map((e) => e[1]);
+
+  emits('on-done');
 };
 
 // changes
 watch(() => account.active, initialize);
-watch(() => account.onConveneChanged, initialize);
+// watch(() => account.onConveneChanged, initialize);
 
 // lifecycle
 onMounted(initialize);

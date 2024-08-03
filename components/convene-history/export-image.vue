@@ -1,15 +1,9 @@
 <script setup lang="ts">
 import { toBlob } from 'html-to-image';
 import { saveAs } from 'file-saver';
-import type { ConveneDocument } from '~/collections/convene';
 import urlSlug from 'url-slug';
-import {
-  mdiImport,
-  mdiChevronRight,
-  mdiGrid,
-  mdiViewList,
-  mdiDownload,
-} from '@mdi/js';
+import { mdiGrid, mdiViewList, mdiDownload } from '@mdi/js';
+import type { ConveneDocument } from '~/composables/database';
 
 // define
 const props = defineProps<{

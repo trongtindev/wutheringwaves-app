@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { AccountDocType } from '@/collections/account';
+import type { AccountDocument } from '~/composables/database';
 
 // define
 const props = defineProps<{
-  data: AccountDocType;
+  data: AccountDocument;
 }>();
 const emits = defineEmits<{
   (e: 'on-delete'): void;
@@ -19,16 +19,14 @@ const autoImport = ref(props.data.autoImport);
 watch(
   () => autoImport.value,
   (value) => {
-    database.getInstance().then((result) => {
-      result.accounts.updateOne(
-        {
-          playerId: props.data.playerId,
-        },
-        {
-          autoImport: value,
-        },
-      );
-    });
+    database.accounts.updateOne(
+      {
+        playerId: props.data.playerId,
+      },
+      {
+        autoImport: value,
+      },
+    );
   },
 );
 </script>
