@@ -54,6 +54,92 @@
       "minLevel": 80
     }
   ],
+  "bestEchoSets": [
+    {
+      "different": 100,
+      "items": ["Moonlit Clouds"]
+    }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "name": "#1",
+      "items": [
+        {
+          "cost": 4,
+          "stats": ["Crit DMG", "Crit Rate"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Aero DMG"]
+        },
+        {
+          "cost": 3,
+          "stats": ["Aero DMG", "Energy Regen"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        },
+        {
+          "cost": 1,
+          "stats": ["ATK%"]
+        }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["impermanence-heron"],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        {
+          "role": "Main DPS",
+          "items": ["jiyan"]
+        },
+        {
+          "role": "Sub DPS",
+          "items": ["aalto"]
+        },
+        {
+          "role": "Healer",
+          "items": ["verina"]
+        }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    {
+      "item": "static-mist",
+
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "novaburst",
+
+      "rank": 1,
+      "different": 80.5
+    },
+    {
+      "item": "pistols-26",
+
+      "rank": 1,
+      "different": 79.8
+    },
+    {
+      "item": "undying-flame",
+
+      "rank": 1,
+      "different": 78.6
+    },
+    {
+      "item": "thunderbolt",
+
+      "rank": 1,
+      "different": 76.5
+    }
+  ],
   "birthday": "June 11th",
   "birthplace": "New Federation",
   "description": "Aalto is an enigmatic Information Broker, known for his elusive nature and welcoming smile. Rumor has it he'll provide any information at the right price.",
@@ -249,5 +335,5 @@
       "nameLocalized": { "en": "Dissolving Mist", "uk": "Розчиняючий туман" }
     }
   ],
-  "stats": { "hp": 788, "def": 88, "atk": 21, "energy": 15000 }
+  "stats": { "hp": 9850, "def": 1076, "atk": 263, "energy": 150 }
 }

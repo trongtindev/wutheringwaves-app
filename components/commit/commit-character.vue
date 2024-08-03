@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ICharacterData } from '~/interfaces/character';
 import type { ILocalized } from '~/interfaces/common';
 
 // uses
@@ -6,13 +7,21 @@ const api = useApi();
 const i18n = useI18n();
 const route = useRoute();
 const router = useRouter();
-const resources = useResources();
 const localePath = useLocalePath();
 const dialog = useDialog();
 
 // fetch
 const slug = `${route.query.slug}`;
-const data = await resources.getCharacterData(slug);
+const { data: result, error } = await useFetch<string>(
+  `https://raw.githubusercontent.com/trongtindev/wutheringwaves-app/main/resources/characters/${slug}.json`,
+);
+if (error.value) {
+  throw createError({
+    message: error.value?.message,
+    statusCode: error.value?.statusCode,
+  });
+}
+const data = JSON.parse(result.value!);
 
 // states
 const status = ref<'' | 'submit'>('');
@@ -114,7 +123,7 @@ const onSubmit = () => {
     <v-app-bar location="bottom" class="pr-2 border-t">
       <v-spacer />
       <v-btn
-        :text="$t('commit.submit')"
+        :text="$t('common.submit')"
         :disabled="status != ''"
         :loading="status === 'submit'"
         variant="tonal"

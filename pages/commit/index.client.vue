@@ -9,6 +9,6 @@ useAppBar().title = i18n.t('commit.title');
 
 <template>
   <div>
-    <commit-character v-if="route.query.type == 'character'" />
+    <lazy-commit-character v-if="route.query.type == 'character'" />
   </div>
 </template>

@@ -170,7 +170,8 @@
     "howToUse": "How to use {0}?",
     "contributor": "Contributor",
     "didYouKnow": "Did you know?",
-    "aiGenerated": "AI generated"
+    "aiGenerated": "AI generated",
+    "submit": "Submit"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
