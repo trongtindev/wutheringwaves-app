@@ -12,7 +12,35 @@
       "name": "experience",
       "items": ["z4", "z6", "z10", "z11", "z12"]
     },
-    { "type": "markers", "name": "localSpecialties", "items": [] },
+    {
+      "type": "markers",
+      "name": "localSpecialties",
+      "items": [
+        "z109",
+        "z110",
+        "z111",
+        "z112",
+        "z113",
+        "z114",
+        "z115",
+        "z116",
+        "z117",
+        "z118",
+        "z119",
+        "z120",
+        "z121",
+        "z122",
+        "z123",
+        "z124",
+        "z125",
+        "z126",
+        "z127",
+        "z128",
+        "z129",
+        "z130",
+        "z131"
+      ]
+    },
     {
       "type": "markers",
       "name": "echoes",
@@ -72,7 +100,23 @@
     {
       "type": "markers",
       "name": "animals",
-      "markers": []
+      "items": [
+        "z132",
+        "z133",
+        "z134",
+        "z135",
+        "z136",
+        "z137",
+        "z138",
+        "z139",
+        "z140",
+        "z141",
+        "z142",
+        "z143",
+        "z144",
+        "z145",
+        "z146"
+      ]
     },
     { "type": "markers", "name": "landmarks", "items": ["z13"] }
   ]

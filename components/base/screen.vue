@@ -8,8 +8,9 @@ const props = defineProps<{
 const windowSize = useWindowSize();
 
 // states
+const width = ref(0);
 const height = ref(0);
-const padding = ref(16);
+const padding = ref(17);
 
 // functions
 const calculator = () => {
@@ -25,6 +26,7 @@ const calculator = () => {
     return;
   }
 
+  width.value = window.innerWidth;
   const windowHeight = window.innerHeight * (props.ratio || 1);
   height.value = windowHeight - toolbar.clientHeight - padding.value;
 };
@@ -39,6 +41,6 @@ onMounted(calculator);
 
 <template>
   <div :style="`height: ${height}px`">
-    <slot :height="height" />
+    <slot :width :height />
   </div>
 </template>

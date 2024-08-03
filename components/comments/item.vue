@@ -52,11 +52,20 @@ const createdAt = computed(() => {
 </script>
 
 <template>
-  <div>
+  <v-list-item v-if="props.lite">
+    <v-list-item-title>
+      {{ props.data.user.name }}
+    </v-list-item-title>
+    <v-list-item-subtitle>
+      {{ props.data.content }}
+    </v-list-item-subtitle>
+  </v-list-item>
+
+  <div v-else>
     <v-hover>
       <template #default="hover">
         <v-list-item v-bind="hover.props">
-          <template v-if="!props.lite" #prepend>
+          <template #prepend>
             <v-avatar class="border">
               <v-img v-if="photoUrl" :src="photoUrl" />
               <span v-else>?</span>

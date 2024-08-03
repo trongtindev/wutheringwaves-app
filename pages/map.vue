@@ -25,6 +25,7 @@ const account = useAccount();
 const dialog = useDialog();
 const loading = ref(true);
 const display = useDisplay();
+const windowSize = useWindowSize();
 
 // states
 const map = shallowRef<L.Map>();
@@ -57,8 +58,13 @@ const counter = ref<{ [key: string]: number }>({});
 const skipClusterShowTip = ref();
 
 // computed
-const panelWidth = computed(() => {
-  return display.smAndDown.value ? 300 : 360;
+const panelBaseWidth = computed(() => {
+  return display.lgAndUp.value ? 400 : 360;
+});
+const panelResponsiveWidth = computed(() => {
+  const padding = 8 * 4;
+  const freeWidth = windowSize.width.value - padding - 56;
+  return freeWidth < panelBaseWidth.value ? freeWidth : panelBaseWidth.value;
 });
 
 const urlTemplate = computed(() => {
@@ -319,7 +325,7 @@ useSeoMeta({
         </div>
       </template>
 
-      <base-screen v-slot="{ height }" class="position-relative">
+      <base-screen v-slot="{ width, height }" class="position-relative">
         <map-leaflet
           :height="height"
           :marked="markedPins"
@@ -344,14 +350,14 @@ useSeoMeta({
           class="position-absolute position-relative top-0 z-9999 pa-2"
           style="transition: left 0.25s linear"
           :style="
-            `width: ${panelWidth}px;` +
-            (panel ? 'left:0px;' : `left: -${panelWidth - 8}px;`) +
+            `width: ${panelResponsiveWidth}px;` +
+            (panel ? 'left:0px;' : `left: -${panelResponsiveWidth - 8}px;`) +
             `height: ${height}px;`
           "
         >
           <v-card
             class="w-100 h-100"
-            :class="display.smAndDown.value ? 'rounded-be-0' : 'rounded-te-0'"
+            :class="width < 496 ? 'rounded-be-0' : 'rounded-te-0'"
             :style="`opacity: ${mapSettingsData.opacity};`"
           >
             <map-panel :counter @on-markers="(val) => onFilterMarkers(val)" />
@@ -360,8 +366,8 @@ useSeoMeta({
           <!-- menu -->
           <v-btn
             class="position-absolute rounded-e rounded-s-0"
-            :class="display.smAndDown.value ? 'bottom-2' : 'top-2'"
-            :style="`left: ${panelWidth - 8}px; opacity: ${mapSettingsData.opacity};`"
+            :class="width < 496 ? 'bottom-2' : 'top-2'"
+            :style="`left: ${panelResponsiveWidth - 8}px; opacity: ${mapSettingsData.opacity};`"
             :icon="panel ? mdiArrowLeft : mdiArrowRight"
             @click="() => (panel = !panel)"
           />

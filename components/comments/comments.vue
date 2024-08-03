@@ -200,11 +200,13 @@ onMounted(() => loadData());
 
 <template>
   <v-card>
+    <!-- title -->
     <v-card-title v-if="!props.lite">
       {{ $t('Comments') }} ({{ total }})
     </v-card-title>
 
-    <v-card-text>
+    <!-- form -->
+    <v-card-text class="pb-0">
       <client-only>
         <v-form @submit.prevent="onSubmit">
           <v-textarea
@@ -319,14 +321,19 @@ onMounted(() => loadData());
     </v-card-text>
 
     <client-only>
-      <v-list v-if="!data">
-        <v-skeleton-loader type="list-item-avatar-two-line" />
-      </v-list>
-      <v-card-text v-else-if="data.total === 0">
-        <base-alert :text="$t('comments.empty')" />
-      </v-card-text>
+      <!-- loading -->
+      <v-skeleton-loader v-if="props.lite && !data" type="list-item-two-line" />
+      <v-skeleton-loader v-else-if="!data" type="list-item-avatar-two-line" />
 
-      <v-card-text v-else>
+      <!-- list -->
+      <v-list v-else>
+        <slot name="prepend-list" />
+
+        <!-- empty -->
+        <div v-if="data && data.total === 0" class="pl-4 pr-4">
+          <base-alert :text="$t('comments.empty')" />
+        </div>
+
         <comments-item
           v-for="(element, index) in data.items"
           :key="index"
@@ -336,9 +343,13 @@ onMounted(() => loadData());
           }"
           :lite="props.lite"
         />
-      </v-card-text>
+        <slot name="append-list" />
+      </v-list>
 
-      <v-card-actions v-if="pages > 0" class="d-flex justify-center">
+      <v-card-actions
+        v-if="!props.lite && pages > 0"
+        class="d-flex justify-center"
+      >
         <v-pagination v-model="page" :length="pages" />
       </v-card-actions>
     </client-only>

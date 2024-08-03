@@ -25,3 +25,7 @@ export interface IMapMarker {
   opacity?: number;
   hidden?: boolean;
 }
+
+export interface IMapPinSummary {
+  content?: string;
+}
