@@ -53,14 +53,14 @@ const onPressedImport = () => emits('on-import', extractedUrl.value!);
           :aspect-ratio="16 / 9"
           :max-width="500"
         >
-          <!-- <iframe
+          <iframe
             class="w-100 h-100"
-            src="https://www.youtube.com/embed/ZB_v3LkampE"
+            src="https://www.youtube.com/embed/HiFXNgsZx6g"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
-          ></iframe> -->
+          ></iframe>
         </v-responsive>
 
         <template #next>
