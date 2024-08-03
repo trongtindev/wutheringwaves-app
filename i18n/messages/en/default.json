@@ -181,6 +181,16 @@
       "processing": "Processing...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
+        "android": {
+          "default": {
+            "1": {
+              "title": "Follow our Video Tutorial"
+            },
+            "2": {
+              "title": "Paste the copied text here"
+            }
+          }
+        },
         "pc": {
           "default": {
             "1": {

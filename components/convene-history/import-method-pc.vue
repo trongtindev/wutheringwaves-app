@@ -91,137 +91,127 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <v-stepper-vertical v-model="step">
-      <template #default>
-        <!-- step1 -->
-        <v-stepper-vertical-item
-          :complete="step > 1"
-          :title="$t('convene.import.guides.pc.default.1.title')"
-          :value="1"
+  <v-stepper-vertical v-model="step">
+    <template #default>
+      <!-- step1 -->
+      <v-stepper-vertical-item
+        :complete="step > 1"
+        :title="$t('convene.import.guides.pc.default.1.title')"
+        :value="1"
+      >
+        <v-responsive
+          class="border rounded"
+          :aspect-ratio="18 / 9"
+          :max-width="500"
         >
-          <v-responsive
-            class="border rounded"
-            :aspect-ratio="18 / 9"
-            :max-width="500"
-          >
-            <v-img src="/screenshots/in-game-convene-history.webp" />
-          </v-responsive>
+          <v-img src="/screenshots/in-game-convene-history.webp" />
+        </v-responsive>
 
-          <template #next>
-            <v-btn color="primary" :text="$t('common.next')" @click="next" />
-          </template>
-          <template #prev></template>
-        </v-stepper-vertical-item>
+        <template #next>
+          <v-btn color="primary" :text="$t('common.next')" @click="next" />
+        </template>
+        <template #prev></template>
+      </v-stepper-vertical-item>
 
-        <!-- step2 -->
-        <v-stepper-vertical-item
-          :complete="step > 2"
-          :title="$t('convene.import.guides.pc.default.2.title')"
-          :value="2"
+      <!-- step2 -->
+      <v-stepper-vertical-item
+        :complete="step > 2"
+        :title="$t('convene.import.guides.pc.default.2.title')"
+        :value="2"
+      >
+        <i18n-t
+          keypath="convene.import.guides.pc.default.2.content"
+          tag="p"
+          class="mb-4"
         >
-          <i18n-t
-            keypath="convene.import.guides.pc.default.2.content"
-            tag="p"
-            class="mb-4"
-          >
-            <template #windowsPowerShell>
-              <v-chip :append-icon="mdiOpenInNew" @click="onPressedPowerShell">
-                Windows PowerShell
-              </v-chip>
-            </template>
-          </i18n-t>
-
-          <v-responsive
-            class="border rounded mb-4"
-            :aspect-ratio="18 / 9"
-            :max-width="500"
-          >
-            <v-img src="/screenshots/windows-powershell.webp" />
-          </v-responsive>
-
-          <v-text-field
-            :readonly="true"
-            :value="powershellScript"
-            :max-width="500"
-            onclick="this.select()"
-          >
-            <template #append-inner>
-              <v-btn
-                size="small"
-                variant="text"
-                :icon="isCopied ? mdiCheck : mdiContentCopy"
-                @click="onPressedCopyScript"
-              />
-            </template>
-          </v-text-field>
-
-          <div>
-            You can review the script
-            <a
-              ref="nofollow"
-              :href="powershellUrl"
-              target="_blank"
-              class="font-weight-bold"
-            >
-              here
-            </a>
-          </div>
-
-          <template #next>
-            <v-btn color="primary" :text="$t('common.next')" @click="next" />
+          <template #windowsPowerShell>
+            <v-chip :append-icon="mdiOpenInNew" @click="onPressedPowerShell">
+              Windows PowerShell
+            </v-chip>
           </template>
+        </i18n-t>
 
-          <template #prev>
+        <v-responsive
+          class="border rounded mb-4"
+          :aspect-ratio="18 / 9"
+          :max-width="500"
+        >
+          <v-img src="/screenshots/windows-powershell.webp" />
+        </v-responsive>
+
+        <v-text-field
+          :readonly="true"
+          :value="powershellScript"
+          :max-width="500"
+          onclick="this.select()"
+        >
+          <template #append-inner>
             <v-btn
-              variant="plain"
-              :text="$t('common.previous')"
-              @click="prev"
+              size="small"
+              variant="text"
+              :icon="isCopied ? mdiCheck : mdiContentCopy"
+              @click="onPressedCopyScript"
             />
           </template>
-        </v-stepper-vertical-item>
+        </v-text-field>
 
-        <!-- step3 -->
-        <v-stepper-vertical-item
-          :title="$t('convene.import.guides.pc.default.3.title')"
-          :value="3"
-          @click:next="onPressedImport"
-        >
-          <v-responsive
-            class="border rounded mb-4"
-            :aspect-ratio="18 / 9"
-            :max-width="500"
+        <div>
+          You can review the script
+          <a
+            ref="nofollow"
+            :href="powershellUrl"
+            target="_blank"
+            class="font-weight-bold"
           >
-            <v-img src="/screenshots/convene-record-url-result.webp" />
-          </v-responsive>
+            here
+          </a>
+        </div>
 
-          <v-text-field
-            v-model="url"
-            type="url"
-            :hide-details="true"
-            :error="urlError.length > 0"
-            placeholder="https://aki-gm-resources-oversea.aki-game.net/aki/gacha/index.html"
+        <template #next>
+          <v-btn color="primary" :text="$t('common.next')" @click="next" />
+        </template>
+
+        <template #prev>
+          <v-btn variant="plain" :text="$t('common.previous')" @click="prev" />
+        </template>
+      </v-stepper-vertical-item>
+
+      <!-- step3 -->
+      <v-stepper-vertical-item
+        :title="$t('convene.import.guides.pc.default.3.title')"
+        :value="3"
+        @click:next="onPressedImport"
+      >
+        <v-responsive
+          class="border rounded mb-4"
+          :aspect-ratio="18 / 9"
+          :max-width="500"
+        >
+          <v-img src="/screenshots/convene-record-url-result.webp" />
+        </v-responsive>
+
+        <v-text-field
+          v-model="url"
+          type="url"
+          :hide-details="true"
+          :error="urlError.length > 0"
+          placeholder="https://aki-gm-resources-oversea.aki-game.net/aki/gacha/index.html"
+        />
+
+        <template #next>
+          <v-btn
+            color="primary"
+            :disabled="!canImport"
+            :prepend-icon="mdiImport"
+            :text="$t('convene.import.title')"
+            @click="onPressedImport"
           />
+        </template>
 
-          <template #next>
-            <v-btn
-              color="primary"
-              :disabled="!canImport"
-              :prepend-icon="mdiImport"
-              :text="$t('convene.import.title')"
-              @click="onPressedImport"
-            />
-          </template>
-
-          <template #prev>
-            <v-btn
-              variant="plain"
-              :text="$t('common.previous')"
-              @click="prev"
-            />
-          </template>
-        </v-stepper-vertical-item>
-      </template>
-    </v-stepper-vertical>
-  </div>
+        <template #prev>
+          <v-btn variant="plain" :text="$t('common.previous')" @click="prev" />
+        </template>
+      </v-stepper-vertical-item>
+    </template>
+  </v-stepper-vertical>
 </template>
