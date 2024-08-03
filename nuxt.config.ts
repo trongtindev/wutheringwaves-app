@@ -22,7 +22,7 @@ const {
   // REDIS_USER,
   // REDIS_PASS,
   // google
-  GOOGLE_TAG_ID,
+  GOOGLE_ANALYTICS_ID,
   GOOGLE_CLIENT_ID,
   // adsense
   GOOGLE_ADSENSE_TEST_MODE,
@@ -60,14 +60,21 @@ const localesMetadata: LocaleObject[] = [
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  $development: {
-    // ssr: false,
-    // debug: true,
-  },
+  $development: {},
 
   $production: {
     i18n: {
       baseUrl: NUXT_PUBLIC_SITE_URL,
+    },
+    scripts: {
+      registry: {
+        clarity: {
+          id: CLARITY_ID!,
+        },
+        googleAnalytics: {
+          id: GOOGLE_ANALYTICS_ID!,
+        },
+      },
     },
   },
 
@@ -275,26 +282,11 @@ export default defineNuxtConfig({
     },
   },
 
-  nitro: {
-    prerender: {
-      routes: ['/sitemap.xml'],
-      concurrency: 25,
-    },
-    // storage: {
-    //   redis: {
-    //     driver: 'redis',
-    //     host: REDIS_HOST,
-    //     port: REDIS_PORT,
-    //     username: REDIS_USER,
-    //     password: REDIS_PASS
-    //   }
-    // }
-  },
-
   hooks: {
     'nitro:build:before': (nitro) => {
       if (['bun', 'node-server'].includes(nitro.options.preset)) {
         nitro.options.prerender.crawlLinks = true;
+        nitro.options.prerender.routes.push('/sitemap.xml');
       }
     },
   },
@@ -316,7 +308,7 @@ export default defineNuxtConfig({
       // file
       FILE_URL,
       // google
-      GOOGLE_TAG_ID,
+      GOOGLE_ANALYTICS_ID,
       GOOGLE_CLIENT_ID,
       // Adsense
       GOOGLE_ADSENSE_ID,
