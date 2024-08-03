@@ -78,7 +78,7 @@ onNuxtReady(() => initialize());
 
 <template>
   <v-row>
-    <v-col v-for="(element, index) in data" :key="index" cols="3">
+    <v-col v-for="(element, index) in data" :key="index" cols="4" md="3">
       <v-card :disabled="!element.material" @click="() => onPressed(index)">
         <!-- icon -->
         <v-img

@@ -8,6 +8,7 @@ import {
   mdiMapMarkerPlus,
   mdiVectorPolyline,
 } from '@mdi/js';
+import { useDisplay } from 'vuetify';
 
 // define
 const { FILE_URL } = useRuntimeConfig().public;
@@ -22,11 +23,13 @@ const settings = useSettings();
 const showSettings = ref(false);
 const account = useAccount();
 const dialog = useDialog();
+const loading = ref(true);
+const display = useDisplay();
 
 // states
 const map = shallowRef<L.Map>();
 const mapSettingsData = ref<IMapSettings>({
-  opacity: 0.9,
+  opacity: 1,
   pinCluster: true,
   hideMarkedPins: true,
 });
@@ -54,6 +57,10 @@ const counter = ref<{ [key: string]: number }>({});
 const skipClusterShowTip = ref();
 
 // computed
+const panelWidth = computed(() => {
+  return display.smAndDown.value ? 300 : 360;
+});
+
 const urlTemplate = computed(() => {
   if (import.meta.dev && route.query.localTiles) {
     return '/map/tiles/{z}/{getX}_{getY}.webp';
@@ -227,11 +234,11 @@ const initialize = async () => {
   await Promise.all([loadLeaflet(), loadMarkedPins()]);
   await loadPins();
 
-  // hide sidebar
-  if (sidebar.open) sidebar.open = false;
-
   addLocations();
   addTiles();
+
+  loading.value = false;
+  if (sidebar.open) sidebar.open = false;
 };
 
 const updateLocations = (level: number) => {
@@ -335,13 +342,16 @@ useSeoMeta({
 
         <div
           class="position-absolute position-relative top-0 z-9999 pa-2"
-          style="width: 360px; transition: left 0.25s linear"
+          style="transition: left 0.25s linear"
           :style="
-            (panel ? 'left:0px;' : 'left: -352px;') + `height: ${height}px;`
+            `width: ${panelWidth}px;` +
+            (panel ? 'left:0px;' : `left: -${panelWidth - 8}px;`) +
+            `height: ${height}px;`
           "
         >
           <v-card
-            class="w-100 h-100 rounded-te-0"
+            class="w-100 h-100"
+            :class="display.smAndDown.value ? 'rounded-be-0' : 'rounded-te-0'"
             :style="`opacity: ${mapSettingsData.opacity};`"
           >
             <map-panel :counter @on-markers="(val) => onFilterMarkers(val)" />
@@ -349,9 +359,9 @@ useSeoMeta({
 
           <!-- menu -->
           <v-btn
-            class="position-absolute rounded-e rounded-s-0 top-2"
-            style="left: 352px"
-            :style="`opacity: ${mapSettingsData.opacity};`"
+            class="position-absolute rounded-e rounded-s-0"
+            :class="display.smAndDown.value ? 'bottom-2' : 'top-2'"
+            :style="`left: ${panelWidth - 8}px; opacity: ${mapSettingsData.opacity};`"
             :icon="panel ? mdiArrowLeft : mdiArrowRight"
             @click="() => (panel = !panel)"
           />
@@ -421,5 +431,15 @@ useSeoMeta({
         />
       </v-dialog>
     </client-only>
+
+    <!-- loading -->
+    <v-overlay
+      v-model="loading"
+      :contained="true"
+      :persistent="true"
+      class="d-flex align-center justify-center"
+    >
+      <v-progress-circular :indeterminate="true" />
+    </v-overlay>
   </v-card>
 </template>

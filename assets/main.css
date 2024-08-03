@@ -193,6 +193,11 @@ a {
   top: 8px;
 }
 
+/* bottom */
+.bottom-2 {
+  bottom: 8px;
+}
+
 /* right*/
 .right-2 {
   right: 8px;

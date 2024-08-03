@@ -55,7 +55,7 @@ onMounted(initialize);
 
 <template>
   <v-row>
-    <v-col v-for="(element, index) in items" :key="index" cols="3">
+    <v-col v-for="(element, index) in items" :key="index" cols="4" md="3">
       <v-tooltip location="bottom">
         <template #activator="tooltip">
           <v-card v-bind="tooltip.props" @click="() => onPressed(element.type)">
