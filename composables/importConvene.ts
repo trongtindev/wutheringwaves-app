@@ -5,7 +5,6 @@ export const useImportConvene = defineStore('useImportConvene', () => {
   const api = useApi();
   const account = useAccount();
   const database = useDatabase();
-  const resources = useResources();
 
   // functions
   const start = async (url: string) => {
@@ -45,10 +44,8 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     await db.convenes.bulkRemove(conveneDeletes.map((e) => e._id));
 
     // data calculator
-    const banners = await resources.getBanners();
     const conveneWrites = response.data.items.map((e, i) => {
       let pity = 1;
-      let win = false;
 
       // calc pity
       if (response.data.items[i].qualityLevel >= 4) {
@@ -71,27 +68,6 @@ export const useImportConvene = defineStore('useImportConvene', () => {
         }
       }
 
-      // calc win
-      if (response.data.items[i].qualityLevel >= 5) {
-        const conveneTime = dayjs(response.data.items[i].time);
-        const matchBanners = banners
-          .filter((e) => {
-            return e.type === response.data.items[i].cardPoolType && e.time;
-          })
-          .filter((banner) => {
-            const timeStart = dayjs(banner.time!.start);
-            const timeEnd = dayjs(banner.time!.end);
-            return timeStart < conveneTime && timeEnd > conveneTime;
-          });
-
-        if (matchBanners.length) {
-          win =
-            matchBanners.findIndex((e) => {
-              return e.featuredRare === response.data.items[i].name;
-            }) >= 0;
-        }
-      }
-
       return {
         _id: randomId(),
         playerId: playerId,
@@ -101,7 +77,6 @@ export const useImportConvene = defineStore('useImportConvene', () => {
         name: e.name,
         time: e.time,
         pity,
-        win,
         createdAt: new Date(e.time).getTime() - i,
       };
     });

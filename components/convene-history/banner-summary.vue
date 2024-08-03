@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { type ConveneDocument } from '@/collections/convene';
+import dayjs from 'dayjs';
+import type { ConveneDocType } from '@/collections/convene';
 import { CardPoolType } from '@/interfaces/banner';
 
 // define
@@ -15,13 +16,14 @@ const emits = defineEmits<{
 // uses
 const account = useAccount();
 const database = useDatabase();
+const resources = useResources();
 
 // states
-const convenes = ref<ConveneDocument[]>();
+const convenes = ref<ConveneDocType[]>([]);
 const guaranteedAt = ref(0);
+const winRate = ref(0);
 
 // computed
-
 const guaranteedAt4 = computed<number>(() => {
   if (!convenes.value) return 0;
   const last = convenes.value.findIndex((e) => e.qualityLevel >= 4);
@@ -43,15 +45,10 @@ const showLuckWinRateOff = computed(() => {
   return [CardPoolType['featured-resonator']].includes(props.type);
 });
 
-const luckWinRateOff = computed(() => {
-  const total = guaranteedAt5List.value.length;
-  if (total == 0) return '~';
-  const wins = guaranteedAt5List.value.filter((e) => e.win).length;
-  return formatNumber((wins / total) * 100);
-});
-
 // functions
 const initialize = async () => {
+  if (!account.active) return;
+
   const db = await database.getInstance();
   db.convenes
     .find({
@@ -65,15 +62,41 @@ const initialize = async () => {
     })
     .exec()
     .then((result) => {
+      console.debug('initialize', result.length, 'docs');
+
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       convenes.value = result as any;
       guaranteedAt.value = 80;
+
+      updateStatistics();
 
       setTimeout(() => {
         emits('on-updated');
       }, 250);
     })
     .catch(console.warn);
+};
+
+const updateStatistics = async () => {
+  const banners = await resources.getBanners();
+  const timeOffset = account.timeOffset;
+
+  if (showLuckWinRateOff.value) {
+    winRate.value = calculateWinRate({
+      type: props.type,
+      convenes: convenes.value.map((e) => {
+        return {
+          time: e.time,
+          name: e.name,
+          resourceId: e.resourceId,
+          resourceType: e.resourceType,
+          qualityLevel: e.qualityLevel,
+        };
+      }),
+      banners,
+      timeOffset,
+    });
+  }
 };
 
 // changes
@@ -83,9 +106,7 @@ watch(
 );
 
 // lifecycle
-if (import.meta.client) {
-  onMounted(() => initialize());
-}
+onMounted(() => initialize());
 </script>
 
 <template>
@@ -120,7 +141,7 @@ if (import.meta.client) {
         </v-list-item>
       </v-alert>
 
-      <!-- luckWinRateOff -->
+      <!-- winRate -->
       <v-alert v-if="showLuckWinRateOff" class="mb-4">
         <v-list-item class="pa-0">
           <v-list-item-title>
@@ -129,7 +150,7 @@ if (import.meta.client) {
 
           <template #append>
             <span class="text-h6 text-legendary font-weight-bold">
-              {{ luckWinRateOff }}%
+              {{ formatNumber(winRate) }}%
             </span>
           </template>
         </v-list-item>

@@ -21,5 +21,6 @@ export interface IBanner {
   };
   featured?: string[];
   featuredRare?: string;
+  featuredSecondaryRare?: string;
   version?: string;
 }

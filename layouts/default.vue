@@ -9,7 +9,7 @@ import {
 import { useDisplay, useTheme } from 'vuetify';
 
 // define
-const { APP_NAME } = useRuntimeConfig().public;
+const { SITE_NAME } = useRuntimeConfig().public;
 
 // uses
 const appBar = useAppBar();
@@ -18,7 +18,6 @@ const localePath = useLocalePath();
 const search = useSearch();
 const theme = useTheme();
 const analytics = useAnalytics();
-const route = useRoute();
 const display = useDisplay();
 
 // events
@@ -52,7 +51,7 @@ const onPressedSearch = () => {
           </template>
 
           <v-list-item-title>
-            {{ APP_NAME }}
+            {{ SITE_NAME }}
           </v-list-item-title>
           <v-list-item-subtitle> www.wutheringwaves.app </v-list-item-subtitle>
         </v-list-item>
@@ -77,6 +76,7 @@ const onPressedSearch = () => {
             :to="localePath('/settings')"
             :title="$t('settings.title')"
             :append-icon="mdiCogs"
+            :active="false"
           />
         </v-list>
       </template>

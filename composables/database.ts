@@ -127,6 +127,13 @@ export const useDatabase = defineStore('useDatabase', () => {
                   }
                   return oldDoc;
                 },
+                5: function (oldDoc) {
+                  return oldDoc;
+                },
+                6: function (oldDoc) {
+                  oldDoc.resourceId = 0;
+                  return oldDoc;
+                },
               },
             },
             settings: {

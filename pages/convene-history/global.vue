@@ -97,7 +97,7 @@ const pbdDatasets = computed(() => {
 });
 
 const rateRange = computed(() => {
-  return Array.from(Array(90).keys()).map((i) => {
+  return Array.from(Array(80).keys()).map((i) => {
     return i + 1;
   });
 });

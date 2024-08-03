@@ -47,6 +47,17 @@
               }
             ]
           },
+          "featuredSecondaryRare": {
+            "type": "string",
+            "anyOf": [
+              {
+                "$ref": "./character.components.json#/components/schemas/name"
+              },
+              {
+                "$ref": "./weapon.components.json#/components/schemas/name"
+              }
+            ]
+          },
           "featured": {
             "type": "array",
             "items": {

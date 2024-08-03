@@ -2,7 +2,7 @@
 import { mdiGithub, mdiOpenInNew, mdiBug, mdiTranslate } from '@mdi/js';
 
 // define
-const { DISCORD_INVITE_LINK, APP_REPO } = useRuntimeConfig().public;
+const { DISCORD_INVITE_LINK, SITE_REPO } = useRuntimeConfig().public;
 
 const props = defineProps<{
   github?: string;
@@ -16,7 +16,7 @@ const localePath = useLocalePath();
 <template>
   <div class="d-flex flex-wrap ga-2 justify-center">
     <v-chip
-      :href="`${APP_REPO}/issues/new/choose`"
+      :href="`${SITE_REPO}/issues/new/choose`"
       :text="$t('common.openIssues')"
       :prepend-icon="mdiBug"
       :append-icon="mdiOpenInNew"
@@ -40,7 +40,7 @@ const localePath = useLocalePath();
 
     <v-chip
       v-if="props.github"
-      :href="`${APP_REPO}/${props.github}`"
+      :href="`${SITE_REPO}/${props.github}`"
       :text="$t('common.editThisPage')"
       :prepend-icon="mdiGithub"
       :append-icon="mdiOpenInNew"

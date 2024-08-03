@@ -1,4 +1,5 @@
 interface IScript {
+  id?: string;
   src: string;
   onLoaded?: Promise<void> | void;
   ensure?: () => Promise<boolean> | boolean;
@@ -6,7 +7,7 @@ interface IScript {
 
 export const useLoadJS = defineStore('useLoadJS', () => {
   const loadScript = async (e: IScript) => {
-    const id = e.src.split('/')[e.src.split('/').length - 1];
+    const id = e.id || e.src.split('/')[e.src.split('/').length - 1];
     const ensure = async (resolve: any) => {
       if (e.ensure) {
         const result = await e.ensure();

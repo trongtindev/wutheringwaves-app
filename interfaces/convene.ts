@@ -1,7 +1,13 @@
 import type dayjs from 'dayjs';
 import type { ConveneDocType } from '~/collections/convene';
 
-export interface IConvene {}
+export interface IConvene {
+  time: string;
+  name: string;
+  resourceId: number;
+  resourceType: string;
+  qualityLevel: number;
+}
 
 export interface IBannerSummaryListItem {
   item: string;

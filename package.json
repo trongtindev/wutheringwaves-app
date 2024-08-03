@@ -56,6 +56,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nuxt dev",
     "build": "nuxt build",
+    "build-only": "cross-env NITRO_PRERENDER=false nuxt build",
     "lint": "eslint . --ignore-pattern \"**/*.js\"",
     "lint:fix": "eslint . --fix --ignore-pattern \"**/*.js\"",
     "format": "prettier --write ./",

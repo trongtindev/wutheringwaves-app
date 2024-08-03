@@ -2,7 +2,7 @@
 import { mdiGithub, mdiChevronRight, mdiOpenInNew, mdiDownload } from '@mdi/js';
 
 // define
-const { APP_NAME, APP_REPO, DISCORD_INVITE_LINK } = useRuntimeConfig().public;
+const { SITE_NAME, SITE_REPO, DISCORD_INVITE_LINK } = useRuntimeConfig().public;
 
 // uses
 const i18n = useI18n();
@@ -37,7 +37,7 @@ useSeoMeta({
             <v-chip
               :prepend-icon="mdiGithub"
               :text="$t('common.viewOnGithub')"
-              :href="APP_REPO"
+              :href="SITE_REPO"
               target="_blank"
             />
 
@@ -165,7 +165,7 @@ useSeoMeta({
       <v-row :no-gutters="true">
         <v-col cols="12" md="6" class="d-flex align-center">
           <h2>
-            {{ APP_NAME }}
+            {{ SITE_NAME }}
           </h2>
         </v-col>
 
@@ -176,7 +176,7 @@ useSeoMeta({
           </div>
 
           <div>
-            <a :href="APP_REPO" target="_blank" title="Github"> Github </a>
+            <a :href="SITE_REPO" target="_blank" title="Github"> Github </a>
           </div>
           <div>
             <a :href="DISCORD_INVITE_LINK" target="_blank" title="Discord">
@@ -185,7 +185,7 @@ useSeoMeta({
           </div>
           <div>
             <a
-              :href="`${APP_REPO}/issues`"
+              :href="`${SITE_REPO}/issues`"
               target="_blank"
               :title="$t('Report a Bug')"
             >
@@ -235,7 +235,7 @@ useSeoMeta({
       <div class="d-flex flex-column">
         <div class="d-flex w-100 align-center">
           <div>
-            <div>© 2024 {{ APP_NAME }}</div>
+            <div>© 2024 {{ SITE_NAME }}</div>
             <div>
               All game assets and trademarks are the property of their
               respective owners.

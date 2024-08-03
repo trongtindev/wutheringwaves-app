@@ -183,8 +183,17 @@ export const useAccount = defineStore('useAccount', () => {
 
   return {
     items,
+    /**
+     * @deprecated
+     */
     active,
+    /**
+     * @deprecated
+     */
     timeOffset,
+    /**
+     * @deprecated
+     */
     onConveneChanged,
     upsert,
     getDocument,

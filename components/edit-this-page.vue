@@ -7,11 +7,11 @@ const props = defineProps<{
 }>();
 
 // define
-const { APP_REPO } = useRuntimeConfig().public;
+const { SITE_REPO } = useRuntimeConfig().public;
 
 // events
 const onPressedContribute = () => {
-  window.open(`${APP_REPO}${props.path || ''}`);
+  window.open(`${SITE_REPO}${props.path || ''}`);
 };
 </script>
 

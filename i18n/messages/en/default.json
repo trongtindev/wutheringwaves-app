@@ -266,6 +266,18 @@
     "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
     "download": "Download"
   },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Thank you! Hope you find it useful.",
+      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
+      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": {
+      "kofi": "Support me on Ko-fi"
+    }
+  },
   "echoes": {
     "title": "Echoes",
     "cost": "Cost",
@@ -431,17 +443,17 @@
       "fowlMeat": "Fowl Meat",
       "craneFeathers": "Crane feathers",
       "rawMeat": "Raw Meat",
-      "Dewvetch": "dewvetch"
+      "dewvetch": "Dewvetch"
     }
   },
   "meta": {
-    "title": "Wuthering Waves",
+    "title": "WutheringWaves.app",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
     "index": {
       "title": "Your personal tracker"
     },
     "timeline": {
-      "title": "Event timeline calendar",
+      "title": "Event Schedule Timeline",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
     },
     "echoes": {
@@ -449,18 +461,18 @@
       "id": {
         "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
       },
-      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
+      "description": "Explore the world of Echoes for Wuthering Waves. Our site helps you find the best Echo builds for your characters."
     },
     "characters": {
       "id": {
         "title": "{name} Guide and Build",
         "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
       },
-      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
+      "description": "Discover the complete Wuthering Waves character guides. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more."
     },
     "weapons": {
       "id": {
-        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. Finding ascension materials and tracking your weapon's rank."
       },
       "title": "Weapons",
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
@@ -472,7 +484,7 @@
     "convene": {
       "history": {
         "title": "Pity Tracker",
-        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the history and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
         "title": "Global Convene Stats",
@@ -490,7 +502,7 @@
     },
     "trophies": {
       "title": "Achievements",
-      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+      "description": "Track your Wuthering Waves achievements easily! Complete list of all achievements and their details."
     },
     "map": {
       "title": "Interactive Map",
@@ -498,7 +510,7 @@
     },
     "items": {
       "title": "All items",
-      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes.",
       "id": {
         "title": "Item: {name}",
         "description": {
@@ -579,7 +591,7 @@
     "conveneHistory": "Pity Tracker",
     "tierList": "Tier list",
     "todoList": "Todo list",
-    "trophies": "Trophies",
+    "trophies": "Achievements",
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
@@ -640,7 +652,7 @@
     }
   },
   "trophies": {
-    "title": "Trophies"
+    "title": "Achievements"
   },
   "updater": {
     "title": "New update!",

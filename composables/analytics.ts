@@ -9,16 +9,13 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     : useScriptClarity();
 
   // functions
-  const initialize = () => {
-    // if (gtag) { }
-    // if (clarity) { }
-  };
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const logEvent = async (eventName: any, eventParams?: any) => {
-    console.debug('logEvent', eventName, eventParams);
     if (gtag) {
       gtag('event', eventName, eventParams);
+    }
+    if (clarity) {
+      clarity('event', eventName, eventParams);
     }
   };
 
@@ -27,15 +24,15 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     () => auth.user,
     () => {
       if (auth.user) {
+        if (gtag) {
+          gtag('set', { email: auth.user.email, name: auth.user.name });
+        }
         if (clarity) {
           clarity('identify', auth.user.email, auth.user.name);
         }
       }
     },
   );
-
-  // lifecycle
-  onNuxtReady(initialize);
 
   // exports
   return { logEvent };

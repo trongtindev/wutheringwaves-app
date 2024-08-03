@@ -29,6 +29,7 @@
         "end": "2024-06-13 09:59"
       },
       "featuredRare": "Jiyan",
+      "featuredSecondaryRare": "Yinlin",
       "featured": ["Chixia", "Danjin", "Mortefi"],
       "thumbnail": "/events/covers/prevail-the-lasting-night.webp"
     },
@@ -51,6 +52,7 @@
         "end": "2024-06-26 11:59"
       },
       "featuredRare": "Yinlin",
+      "featuredSecondaryRare": "Jiyan",
       "featured": ["Aalto", "Taoqi", "Yuanwu"],
       "thumbnail": "/events/covers/when-thunder-pours.webp"
     },

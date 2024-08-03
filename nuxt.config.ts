@@ -10,29 +10,26 @@ dotenv.config({ path: './.env', override: true });
 
 const {
   // general
-  NUXT_PUBLIC_SITE_URL,
+  SITE_URL,
+  SITE_NAME,
+  SITE_REPO,
   // api
   API_URL,
   API_TIMEOUT,
   // file
   FILE_URL,
-  // redis
-  // REDIS_HOST,
-  // REDIS_PORT,
-  // REDIS_USER,
-  // REDIS_PASS,
   // google
-  GOOGLE_ANALYTICS_ID,
+  GOOGLE_TAG_ID,
   GOOGLE_CLIENT_ID,
-  // adsense
-  GOOGLE_ADSENSE_TEST_MODE,
-  GOOGLE_ADSENSE_ID,
   // discord
   DISCORD_INVITE_LINK,
   DISCORD_BOT_NAME,
   // clarity
   CLARITY_ID,
-} = process.env;
+  // donate
+  DONATE_URL,
+  DONATE_DISABLED,
+} = import.meta.env;
 
 const localesMetadata: LocaleObject[] = [
   {
@@ -64,22 +61,18 @@ export default defineNuxtConfig({
 
   $production: {
     i18n: {
-      baseUrl: NUXT_PUBLIC_SITE_URL,
+      baseUrl: SITE_URL,
     },
     scripts: {
       registry: {
+        googleAnalytics: {
+          id: GOOGLE_TAG_ID!,
+        },
         clarity: {
           id: CLARITY_ID!,
         },
-        googleAnalytics: {
-          id: GOOGLE_ANALYTICS_ID!,
-        },
       },
     },
-  },
-
-  devtools: {
-    enabled: false,
   },
 
   modules: [
@@ -190,7 +183,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: NUXT_PUBLIC_SITE_URL,
+    url: SITE_URL,
   },
 
   robots: {
@@ -211,8 +204,6 @@ export default defineNuxtConfig({
     client: false,
   },
 
-  telemetry: false,
-
   i18n: {
     vueI18n: './i18n/i18n.config.ts',
     defaultLocale: 'en',
@@ -228,8 +219,6 @@ export default defineNuxtConfig({
     },
     lazy: true,
   },
-
-  vueuse: { ssrHandlers: true },
 
   vite: {
     esbuild: {
@@ -260,14 +249,6 @@ export default defineNuxtConfig({
           },
         },
       },
-      terserOptions: {
-        format: {
-          comments: false,
-        },
-        compress: {
-          drop_console: false,
-        },
-      },
     },
     server: {
       warmup: {
@@ -284,6 +265,9 @@ export default defineNuxtConfig({
 
   hooks: {
     'nitro:build:before': (nitro) => {
+      if (import.meta.env.NITRO_PRERENDER === 'false') {
+        return;
+      }
       if (['bun', 'node-server'].includes(nitro.options.preset)) {
         nitro.options.prerender.crawlLinks = true;
         nitro.options.prerender.routes.push('/sitemap.xml');
@@ -299,25 +283,25 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       // general
-      SITE_URL: NUXT_PUBLIC_SITE_URL,
-      APP_NAME: 'WutheringWaves.app',
-      APP_REPO: 'https://github.com/trongtindev/wutheringwaves-app',
+      SITE_URL,
+      SITE_NAME,
+      SITE_REPO,
       // api
       API_URL,
       API_TIMEOUT: parseInt(API_TIMEOUT!),
       // file
       FILE_URL,
       // google
-      GOOGLE_ANALYTICS_ID,
+      GOOGLE_TAG_ID,
       GOOGLE_CLIENT_ID,
-      // Adsense
-      GOOGLE_ADSENSE_ID,
-      GOOGLE_ADSENSE_TEST_MODE: GOOGLE_ADSENSE_TEST_MODE === 'true',
       // discord
       DISCORD_INVITE_LINK,
       DISCORD_BOT_NAME,
       // clarity
       CLARITY_ID,
+      // donate
+      DONATE_URL,
+      DONATE_DISABLED,
     },
   },
 

@@ -10,11 +10,11 @@ export type ConveneDocType = {
   playerId: string;
   cardPoolType: number;
   qualityLevel: number;
+  resourceId: number;
   resourceType: string;
   name: string;
   time: string;
   pity: number;
-  win: boolean;
   createdAt: number;
 };
 
@@ -62,7 +62,7 @@ export const conveneCollectionMethods: ConveneCollectionMethods = {
 };
 
 export const conveneSchema: RxJsonSchema<ConveneDocType> = {
-  version: 4,
+  version: 6,
   keyCompression: false,
   primaryKey: '_id',
   type: 'object',
@@ -80,6 +80,9 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     qualityLevel: {
       type: 'number',
     },
+    resourceId: {
+      type: 'number',
+    },
     resourceType: {
       type: 'string',
     },
@@ -92,9 +95,6 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     pity: {
       type: 'number',
     },
-    win: {
-      type: 'boolean',
-    },
     createdAt: {
       type: 'number',
     },
@@ -104,6 +104,7 @@ export const conveneSchema: RxJsonSchema<ConveneDocType> = {
     'playerId',
     'cardPoolType',
     'qualityLevel',
+    'resourceId',
     'resourceType',
     'name',
     'time',
