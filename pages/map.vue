@@ -308,6 +308,7 @@ onNuxtReady(() => initialize());
 const title = i18n.t('map.title');
 const description = i18n.t('meta.map.description');
 
+useHead({ title });
 useAppBar().setTitle(i18n.t('map.title'));
 useSeoMeta({
   ogTitle: title,

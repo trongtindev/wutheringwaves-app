@@ -10,7 +10,7 @@ export const useAnalytics = defineStore('useAnalytics', () => {
 
   // functions
   const initialize = () => {
-    // if (dataLayer) { }
+    // if (gtag) { }
     // if (clarity) { }
   };
 
