@@ -6,7 +6,10 @@
   },
   "autoImport": {
     "notificationTitle": "Importing history...",
-    "notificationMessage": "Fetching history for account {0}."
+    "notificationMessage": "Fetching history for account {0}.",
+    "done": {
+      "title": "Import successfully!"
+    }
   },
   "banner": {
     "featuredResonator": "Featured resonator",
@@ -166,7 +169,12 @@
     "upload": "Upload",
     "gallery": "Gallery",
     "translateThisPage": "Translate this page",
-    "description": "Description"
+    "description": "Description",
+    "howToUse": "How to use {0}?",
+    "contributor": "Contributor",
+    "didYouKnow": "Did you know?",
+    "aiGenerated": "AI generated",
+    "submit": "Submit"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -176,6 +184,16 @@
       "processing": "Processing...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
+        "android": {
+          "default": {
+            "1": {
+              "title": "Follow our Video Tutorial"
+            },
+            "2": {
+              "title": "Paste the copied text here"
+            }
+          }
+        },
         "pc": {
           "default": {
             "1": {
@@ -251,6 +269,18 @@
     "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
     "download": "Download"
   },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Thank you! Hope you find it useful.",
+      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
+      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": {
+      "kofi": "Support me on Ko-fi"
+    }
+  },
   "echoes": {
     "title": "Echoes",
     "cost": "Cost",
@@ -310,7 +340,114 @@
     "title": "Leaderboards"
   },
   "map": {
-    "title": "Interactive Map"
+    "title": "Interactive Map",
+    "locations": {
+      "dimForest": "Dim Forest",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Fallen Grave",
+      "frostingHarbor": "Frosting Harbor",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Tiger's Maw",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Central Plains",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Lollo Warehouse",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Nostalgia Isle",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "Self-Created Pin",
+      "levelUpMaterial": "Level-Up Material",
+      "waypoints": "Waypoints",
+      "specialItems": "Special Items",
+      "chests": "Chests",
+      "experience": "Experience",
+      "puzzleChest": "Puzzle Chest",
+      "localSpecialties": "Local Specialties",
+      "enemies": "Enemies",
+      "ores": "Ores",
+      "animals": "Animals",
+      "landmarks": "Landmarks",
+      "echoes": "Echoes"
+    },
+    "settings": {
+      "title": "Map settings",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "When enabled, pins of the same category will be clustered to reduce lag."
+      },
+      "hideMarkedPins": {
+        "title": "Hide Marked Pins",
+        "description": "When enabled, marked pins will be hidden on the home page."
+      }
+    },
+    "markAsNotFound": "Mark as Not Found",
+    "markAsFound": "Mark as Found",
+    "guides": {
+      "multipleAccounts": {
+        "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+      },
+      "pinCluster": {
+        "description": "By default, the Pin Cluster feature will be enabled. You can turn it off in settings."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Chest",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Viewpoint",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Book",
+      "sideQuest": "Side Quest",
+      "cave": "Cave",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "Fish",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "Bird Egg",
+      "fowlMeat": "Fowl Meat",
+      "craneFeathers": "Crane feathers",
+      "rawMeat": "Raw Meat",
+      "dewvetch": "Dewvetch"
+    }
   },
   "meta": {
     "title": "Wuthering Waves",
@@ -412,11 +549,6 @@
       "autoImportConveneHistory": "Auto import convene history",
       "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
       "empty": "To add an account, you just need to import convene history."
-    },
-    "analytics": {
-      "title": "Analytics",
-      "optOut": "Opt-out",
-      "optOutSubtitle": "You can opt-out of Google Analytics"
     },
     "roles": {
       "title": "Your roles",
@@ -538,6 +670,7 @@
     "alert": "Import convene history to see already owned weapons.",
     "lastUpdatedOn": "{name} weapon has been last updated on {time}.",
     "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> weapon.",
-    "skill": "{name} Skill"
+    "skill": "{name} Skill",
+    "obtainedTooltip": "Number of times obtained via convene."
   }
 }

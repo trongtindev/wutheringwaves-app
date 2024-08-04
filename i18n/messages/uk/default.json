@@ -6,7 +6,10 @@
   },
   "autoImport": {
     "notificationTitle": "Імпортуємо історію...",
-    "notificationMessage": "Витягаємо історію для облікового запису {0}."
+    "notificationMessage": "Витягаємо історію для облікового запису {0}.",
+    "done": {
+      "title": "Import successfully!"
+    }
   },
   "banner": {
     "featuredResonator": "Особливий резонатор",
@@ -166,7 +169,12 @@
     "upload": "Вивантажити",
     "gallery": "Галерея",
     "translateThisPage": "Перекласти цю сторінку",
-    "description": "Опис"
+    "description": "Опис",
+    "howToUse": "Як користуватися {0}?",
+    "contributor": "Редактор",
+    "didYouKnow": "Чи знали?",
+    "aiGenerated": "Згенеровано ШІ",
+    "submit": "Підтвердити"
   },
   "convene": {
     "message": "Wuthering Waves видалить історію скликань через 6 місяців, створіть резервну копію історії скликань зараз!",
@@ -176,6 +184,16 @@
       "processing": "Обробка...",
       "invalidLink": "Невірне посилання, будь ласка, перевірте його знову",
       "guides": {
+        "android": {
+          "default": {
+            "1": {
+              "title": "Дотримуйтесь нашої відеоінструкції"
+            },
+            "2": {
+              "title": "Вставте сюди скопійований текст"
+            }
+          }
+        },
         "pc": {
           "default": {
             "1": {
@@ -251,6 +269,18 @@
     "introduce": "За допомогою програми ви можете автоматично імпортувати історію скликань, переглядати мапи в грі в реальному часі, переглядати інформацію про предмети та багато іншого.",
     "download": "Завантажити"
   },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Thank you! Hope you find it useful.",
+      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
+      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": {
+      "kofi": "Support me on Ko-fi"
+    }
+  },
   "echoes": {
     "title": "Відлуння",
     "cost": "Вартість",
@@ -310,7 +340,114 @@
     "title": "Таблиці лідерів"
   },
   "map": {
-    "title": "Інтерактивна мапа"
+    "title": "Інтерактивна мапа",
+    "locations": {
+      "dimForest": "Тьмяний ліс",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Полегла могила",
+      "frostingHarbor": "Крижана гавань",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Тигрова паща",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Центральні рівнини",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Лоло Склад",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Острів Ностальгії",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "Self-Created Pin",
+      "levelUpMaterial": "Матеріал підняття рівня",
+      "waypoints": "Waypoints",
+      "specialItems": "Special Items",
+      "chests": "Скрині",
+      "experience": "Досвід",
+      "puzzleChest": "Puzzle Chest",
+      "localSpecialties": "Local Specialties",
+      "enemies": "Вороги",
+      "ores": "Руди",
+      "animals": "Тварини",
+      "landmarks": "Landmarks",
+      "echoes": "Відлуння"
+    },
+    "settings": {
+      "title": "Налаштування мапи",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "When enabled, pins of the same category will be clustered to reduce lag."
+      },
+      "hideMarkedPins": {
+        "title": "Hide Marked Pins",
+        "description": "When enabled, marked pins will be hidden on the home page."
+      }
+    },
+    "markAsNotFound": "Позначити як не знайдено",
+    "markAsFound": "Позначити як знайдене",
+    "guides": {
+      "multipleAccounts": {
+        "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+      },
+      "pinCluster": {
+        "description": "By default, the Pin Cluster feature will be enabled. You can turn it off in settings."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Скриня",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Точка огляду",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Книга",
+      "sideQuest": "Побічне завдання",
+      "cave": "Печера",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "Риба",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "Пташине яйце",
+      "fowlMeat": "М'ясо птиці",
+      "craneFeathers": "Журавлеві пера",
+      "rawMeat": "Сире м'ясо",
+      "dewvetch": "Dewvetch"
+    }
   },
   "meta": {
     "title": "Wuthering Waves Вікі",
@@ -410,13 +547,8 @@
     "accounts": {
       "title": "Аккаунти",
       "autoImportConveneHistory": "Автоматичний імпорт історії скликань",
-      "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
+      "autoImportConveneHistorySubtitle": "Ваші скликання автоматично оновлятимуться коли ви відвідуєте сайт.",
       "empty": "Щоб додати обліковий запис, вам потрібно просто імпортувати історію."
-    },
-    "analytics": {
-      "title": "Аналітика",
-      "optOut": "Відмовитись від участі",
-      "optOutSubtitle": "Ви можете відмовитися від Google Аналітики"
     },
     "roles": {
       "title": "Ваші ролі",
@@ -538,6 +670,7 @@
     "alert": "Імпортуй історію Скликання та побач свою зброю.",
     "lastUpdatedOn": "Профіль {name} був востаннє оновлений {time}.",
     "introduction": "В Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> це <span class='text-rarity{rarity}'>{rarity}★</span> зброя.",
-    "skill": "Навичка {name}"
+    "skill": "Навичка {name}",
+    "obtainedTooltip": "Кількість разів отримано зі скликань."
   }
 }
