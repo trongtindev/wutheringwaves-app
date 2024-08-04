@@ -17,15 +17,17 @@ export const useAccount = defineStore('useAccount', () => {
     loadItems();
 
     if (items.value.length > 0) {
-      active.value = items.value[0];
       startImport();
-    } else {
-      active.value = undefined;
     }
   };
 
   const loadItems = () => {
     items.value = database.accounts.find().map((e) => e[1]);
+    if (items.value.length > 0) {
+      active.value = items.value[0];
+    } else {
+      active.value = undefined;
+    }
   };
 
   // computed
