@@ -153,7 +153,7 @@
     "reset": "Reset",
     "none": "None",
     "related": "Related",
-    "lastUpdatedOn": "Last updated {time}",
+    "lastUpdatedOn": "Last updated on: {time}",
     "views": "Views",
     "signInRequired": "Sign in Required",
     "signInRequiredMessage": "This feature which require sign in.",

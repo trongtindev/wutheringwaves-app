@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import dayjs from 'dayjs';
 import type { AccountDocument } from '~/composables/database';
 
 // define
@@ -10,10 +11,19 @@ const emits = defineEmits<{
 }>();
 
 // uses
+const i18n = useI18n();
 const database = useDatabase();
 
 // states
 const autoImport = ref(props.data.autoImport);
+
+// computed
+const lastUpdatedOn = computed(() => {
+  if (props.data.lastImport) {
+    return dayjs(props.data.lastImport).fromNow();
+  }
+  return i18n.t('common.none');
+});
 
 // changes
 watch(
@@ -51,7 +61,7 @@ watch(
 
     <v-list-item
       :title="$t('settings.accounts.autoImportConveneHistory')"
-      :subtitle="$t('settings.accounts.autoImportConveneHistorySubtitle')"
+      :subtitle="$t('common.lastUpdatedOn', { time: lastUpdatedOn })"
     >
       <template #append>
         <v-switch v-model="autoImport" :hide-details="true" />

@@ -5,6 +5,7 @@ const props = defineProps<{
   text?: string;
   closable?: boolean;
   class?: string;
+  color?: string;
 }>();
 
 // states
@@ -25,6 +26,7 @@ const onPressed = () => {
       v-model="enabled"
       class="pa-2 mb-2"
       :class="{ 'cursor-pointer': typeof props.id !== 'undefined' }"
+      :color="props.color"
       @click="onPressed"
     >
       <template #title>
