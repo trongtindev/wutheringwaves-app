@@ -9,7 +9,6 @@ export const useSync = defineStore('useSync', () => {
   const dialog = useDialog();
   const snackbar = useSnackbar();
   const database = useDatabase();
-  const checkDebounce = useDebounceFn(() => check(), 2500);
 
   // states
   const state = ref<'' | 'syncing' | 'synced' | 'restore'>('');
@@ -30,9 +29,11 @@ export const useSync = defineStore('useSync', () => {
       lastLocalChanged: lastLocalChanged.value,
       lastCloudChanged: lastCloudChanged.value,
     });
+    check();
   };
 
   const check = async () => {
+    if (!auth.user) return;
     console.debug('useSync', 'check');
 
     const response = await api.get<ISyncPull>('sync/pull');
@@ -60,6 +61,8 @@ export const useSync = defineStore('useSync', () => {
       push();
     }
   };
+
+  const checkDebounce = useDebounceFn(() => check(), 2500);
 
   const push = async () => {
     console.debug('useSync', 'push');
@@ -109,10 +112,8 @@ export const useSync = defineStore('useSync', () => {
 
   // changes
   watch(
-    () => auth.isLoggedIn,
-    () => {
-      if (auth.isLoggedIn) checkDebounce();
-    },
+    () => auth.user,
+    () => checkDebounce(),
   );
 
   watch(
@@ -124,7 +125,7 @@ export const useSync = defineStore('useSync', () => {
   );
 
   // lifecycle
-  onMounted(() => initialize());
+  onMounted(initialize);
 
   // exports
   return {
