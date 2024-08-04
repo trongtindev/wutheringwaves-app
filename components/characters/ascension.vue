@@ -2,6 +2,9 @@
 import type { ICharacter, ICharacterData } from '~/interfaces/character';
 import type { IItem } from '~/interfaces/item';
 
+// Property 'formatNumber' does not exist on type
+const format = formatNumber;
+
 const props = defineProps<{
   item: ICharacter;
   data: ICharacterData;
@@ -82,7 +85,7 @@ if (props.data.ascensions) {
             <v-divider />
 
             <v-card-title class="text-center">
-              x{{ formatNumber(cost.quantity) }}
+              x{{ format(cost.quantity) }}
             </v-card-title>
           </v-card>
         </v-col>

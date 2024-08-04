@@ -6,7 +6,10 @@
   },
   "autoImport": {
     "notificationTitle": "Importing history...",
-    "notificationMessage": "Fetching history for account {0}."
+    "notificationMessage": "Fetching history for account {0}.",
+    "done": {
+      "title": "Import successfully!"
+    }
   },
   "banner": {
     "featuredResonator": "Featured resonator",

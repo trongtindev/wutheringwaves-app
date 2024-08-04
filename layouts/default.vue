@@ -6,7 +6,7 @@ import {
   mdiMenuOpen,
   mdiThemeLightDark,
 } from '@mdi/js';
-import { useDisplay, useTheme } from 'vuetify';
+import { useTheme } from 'vuetify';
 
 // define
 const { SITE_NAME } = useRuntimeConfig().public;
@@ -18,7 +18,6 @@ const localePath = useLocalePath();
 const search = useSearch();
 const theme = useTheme();
 const analytics = useAnalytics();
-const display = useDisplay();
 
 // events
 const onPressedToggleTheme = () => {
@@ -65,7 +64,7 @@ const onPressedSearch = () => {
       </v-list>
 
       <template #append>
-        <v-divider v-if="display.smAndDown.value" />
+        <v-divider />
         <v-list :nav="true" :lines="false">
           <!-- language -->
           <layouts-language-switcher />

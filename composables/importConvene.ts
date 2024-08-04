@@ -7,7 +7,7 @@ export const useImportConvene = defineStore('useImportConvene', () => {
   const database = useDatabase();
 
   // states
-  const onImported = ref<string>();
+  const onImported = ref<string[]>();
 
   // functions
   const start = async (url: string) => {
@@ -31,14 +31,26 @@ export const useImportConvene = defineStore('useImportConvene', () => {
 
     // initial account
     const playerId = response.data.playerId.toString();
-    database.accounts.updateOne(
-      { playerId },
-      {
+    const [id] = database.accounts.findOne({ playerId });
+    if (id) {
+      database.accounts.updateOne(
+        { playerId },
+        {
+          serverId: response.data.serverId,
+          conveneHistoryUrl: url,
+          lastImport: Date.now(),
+        },
+      );
+    } else {
+      database.accounts.insert({
+        playerId,
         serverId: response.data.serverId,
         conveneHistoryUrl: url,
-      },
-      { upsert: true },
-    );
+        autoImport: true,
+        lastImport: Date.now(),
+        createdAt: Date.now(),
+      });
+    }
 
     // remove previous history
     database.convenes.deleteMany({ playerId });
@@ -145,7 +157,8 @@ export const useImportConvene = defineStore('useImportConvene', () => {
     database.weapons.deleteMany({ playerId });
     database.weapons.bulkInsert(weaponsWrites);
 
-    onImported.value = randomId();
+    // trigger event
+    onImported.value = [playerId, randomId()];
 
     return { playerId };
   };

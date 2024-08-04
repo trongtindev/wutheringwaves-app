@@ -3,6 +3,7 @@ import { CardPoolType, type IBanner } from '@/interfaces/banner';
 import urlSlug from 'url-slug';
 import dayjs from 'dayjs';
 import type { ConveneDocumentConverted } from '~/interfaces/convene';
+import { mdiDotsGrid, mdiFormatListBulleted, mdiStar } from '@mdi/js';
 
 // uses
 const i18n = useI18n();
@@ -11,6 +12,7 @@ const localePath = useLocalePath();
 const resources = useResources();
 const database = useDatabase();
 const account = useAccount();
+const importConvene = useImportConvene();
 
 // states
 const banners = await resources.banners();
@@ -47,7 +49,7 @@ const updateFilter = () => {
           return false;
         }
       }
-      if (filterRarity.value) {
+      if (filterRarity.value.length > 0) {
         if (!filterRarity.value.includes(e.qualityLevel)) {
           return false;
         }
@@ -81,17 +83,27 @@ const updateFilter = () => {
     });
 };
 
+// events
+const onToggleRarity = (rarity: number) => {
+  const index = filterRarity.value.findIndex((e) => e === rarity);
+  if (index >= 0) {
+    filterRarity.value.splice(index, 1);
+  } else {
+    filterRarity.value.push(rarity);
+  }
+  updateFilter();
+};
+
 // changes
 watch(
   () => account.active,
   () => initialize(),
 );
 watch(() => filterBanner.value, updateFilter);
-watch(() => filterRarity.value, updateFilter);
-// watch(
-//   () => account.onConveneChanged,
-//   () => initialize(),
-// );
+watch(
+  () => importConvene.onImported,
+  () => initialize(),
+);
 
 // lifecycle
 onMounted(() => initialize());
@@ -120,7 +132,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
     <client-only>
       <!-- filter -->
       <v-row class="mb-1">
-        <v-col cols="12" md="8">
+        <v-col>
           <v-select
             v-model="filterBanner"
             :placeholder="$t('Select banner')"
@@ -143,16 +155,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             </template>
           </v-select>
         </v-col>
-
-        <v-col cols="12" md="4">
-          <v-select
-            v-model="filterRarity"
-            :label="$t('common.rarity')"
-            :items="[5, 4, 3]"
-            :multiple="true"
-            :hide-details="true"
-          />
-        </v-col>
       </v-row>
 
       <v-card v-if="convenes.length === 0">
@@ -167,6 +169,48 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </v-card>
 
       <v-card v-else>
+        <v-card-actions>
+          <v-btn
+            text="3"
+            class="text-rarity3"
+            :append-icon="mdiStar"
+            :active="filterRarity.includes(3)"
+            @click="() => onToggleRarity(3)"
+          />
+
+          <v-btn
+            text="4"
+            class="text-rarity4"
+            :append-icon="mdiStar"
+            :active="filterRarity.includes(4)"
+            @click="() => onToggleRarity(4)"
+          />
+
+          <v-btn
+            text="5"
+            class="text-rarity5"
+            :append-icon="mdiStar"
+            :active="filterRarity.includes(5)"
+            @click="() => onToggleRarity(5)"
+          />
+
+          <v-spacer />
+
+          <v-btn
+            :active="displayType === 'grid'"
+            @click="() => (displayType = 'grid')"
+          >
+            <v-icon :icon="mdiDotsGrid" />
+          </v-btn>
+
+          <v-btn
+            :active="displayType === 'list'"
+            @click="() => (displayType = 'list')"
+          >
+            <v-icon :icon="mdiFormatListBulleted" />
+          </v-btn>
+        </v-card-actions>
+
         <v-card-text>
           <div v-if="displayType === 'list'">
             <v-data-table
@@ -233,7 +277,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
                 location="bottom right"
               >
                 <v-avatar
-                  class="border"
                   :class="`bg-rarity${element.qualityLevel}`"
                   :size="64"
                   :image="`/${element.resourceType.startsWith('R') ? 'characters' : 'weapons'}/icons/${urlSlug(element.name)}.webp`"
@@ -248,6 +291,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         <masonry col-width="minmax(Min(22.5em, 100%), 1fr)">
           <template #default="masonry">
             <convene-history-rank-summary
+              :banners="banners"
               :convenes="convenes"
               @on-updated="() => masonry.refreshLayout()"
             />

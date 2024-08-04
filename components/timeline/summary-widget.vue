@@ -73,7 +73,7 @@ await initialize();
 
     <v-list>
       <!-- current -->
-      <v-list-subheader>
+      <v-list-subheader v-if="current.length > 0">
         {{ $t('timeline.current') }}
       </v-list-subheader>
 
@@ -98,7 +98,7 @@ await initialize();
       </v-list-item>
 
       <!-- upcoming -->
-      <v-list-subheader>
+      <v-list-subheader v-if="upcoming.length > 0">
         {{ $t('timeline.upcoming') }}
       </v-list-subheader>
 

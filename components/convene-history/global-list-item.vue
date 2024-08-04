@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import type { IBannerSummaryListItem } from '~/interfaces/convene';
 
+// Property 'formatNumber' does not exist on type
+const format = formatNumber;
+
 const props = defineProps<{
   data: IBannerSummaryListItem & { icon: string };
   rarity: number;
@@ -18,7 +21,7 @@ const props = defineProps<{
     </v-list-item-title>
 
     <template #append>
-      {{ formatNumber(props.data.total) }} ({{ props.data.percentage }}%)
+      {{ format(props.data.total) }} ({{ props.data.percentage }}%)
     </template>
   </v-list-item>
   <div class="mt-2 mb-2 pl-2 pr-2">

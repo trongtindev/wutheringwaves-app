@@ -7,6 +7,9 @@ const runtimeConfig = useRuntimeConfig();
 const headers = useRequestHeaders(['If-Modified-Since']);
 const event = useRequestEvent();
 
+// Property 'formatNumber' does not exist on type
+const parse = parseContent;
+
 // states
 const items = await resources.getItems();
 const itemDict = items.reduce((acc, e) => ((acc[e.name] = e), acc), {});
@@ -168,7 +171,7 @@ if (headers['if-modified-since']) {
           </v-card-title>
           <v-divider />
           <v-card-text>
-            <div :innerHTML="parseContent(obtainDescriptionLocalized)"></div>
+            <div :innerHTML="parse(obtainDescriptionLocalized)"></div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -181,7 +184,7 @@ if (headers['if-modified-since']) {
           </v-card-title>
           <v-divider />
           <v-card-text>
-            <div :innerHTML="parseContent(data.unlockDescription)"></div>
+            <div :innerHTML="parse(data.unlockDescription)"></div>
           </v-card-text>
         </v-card>
       </v-col>

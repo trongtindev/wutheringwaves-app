@@ -7,8 +7,9 @@ export const calculateWinRate = (args: {
   banners: IBanner[];
   convenes: IConvene[];
   timeOffset: number;
+  qualityLevel: number;
 }) => {
-  const { type, banners, convenes, timeOffset } = args;
+  const { type, banners, convenes, timeOffset, qualityLevel } = args;
 
   let win = 0;
   let lastLoss = false;
@@ -16,7 +17,7 @@ export const calculateWinRate = (args: {
 
   for (let i = convenes.length - 1; i >= 0; i -= 1) {
     const convene = convenes[i];
-    if (convene.qualityLevel < 5) continue;
+    if (convene.qualityLevel !== qualityLevel) continue;
 
     const matchBanners = banners.filter((banner) => {
       if (banner.time) {

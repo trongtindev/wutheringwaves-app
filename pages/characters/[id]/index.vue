@@ -3,6 +3,9 @@ import dayjs from 'dayjs';
 import { mdiCake, mdiMapMarker, mdiSword, mdiPistol } from '@mdi/js';
 import { useGoTo } from 'vuetify';
 
+// Property 'formatNumber' does not exist on type
+const format = formatNumber;
+
 // uses
 const i18n = useI18n();
 const route = useRoute();
@@ -287,7 +290,7 @@ if (headers['if-modified-since']) {
                   <v-col cols="3">
                     {{ $t(`common.${element.label}`) }}
                   </v-col>
-                  <v-col> {{ formatNumber(element.value) }} </v-col>
+                  <v-col> {{ format(element.value) }} </v-col>
                 </v-row>
               </v-sheet>
             </div>

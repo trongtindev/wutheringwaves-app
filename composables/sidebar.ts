@@ -59,6 +59,7 @@ export const useSidebar = defineStore('useSidebar', () => {
         {
           url: '/convene-history/share',
           title: 'sidebar.conveneShare',
+          upcoming: true,
         },
         {
           url: '/convene-history/global',

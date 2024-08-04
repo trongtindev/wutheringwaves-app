@@ -15,7 +15,11 @@ const { DONATE_URL } = useRuntimeConfig().public;
 
     <v-card-actions>
       <v-spacer />
-      <v-card-btn :href="DONATE_URL" :text="$t('donate.buttons.kofi')" target="_blank" />
+      <v-card-btn
+        :href="DONATE_URL"
+        :text="$t('donate.buttons.kofi')"
+        target="_blank"
+      />
     </v-card-actions>
   </v-card>
 </template>

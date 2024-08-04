@@ -3,6 +3,10 @@ import dayjs from 'dayjs';
 import { mdiPlus } from '@mdi/js';
 import type { IItem } from '~/interfaces/item';
 
+// Property 'formatNumber' does not exist on type
+const format = formatNumber;
+
+// uses
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
@@ -292,7 +296,7 @@ if (headers['if-modified-since']) {
               <v-divider />
 
               <v-card-title class="text-center">
-                x{{ formatNumber(cost.quantity) }}
+                x{{ format(cost.quantity) }}
               </v-card-title>
             </v-card>
           </v-col>

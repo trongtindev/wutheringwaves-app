@@ -57,10 +57,10 @@ const inDev = import.meta.dev;
         />
       </client-only>
 
-      <v-chip v-if="props.data.beta && !props.submenu" color="info">
+      <v-chip v-if="props.data.beta" color="info">
         {{ $t('common.beta') }}
       </v-chip>
-      <v-chip v-else-if="props.data.upcoming && !props.submenu" color="warning">
+      <v-chip v-else-if="props.data.upcoming" color="warning">
         {{ $t('common.upcoming') }}
       </v-chip>
     </template>

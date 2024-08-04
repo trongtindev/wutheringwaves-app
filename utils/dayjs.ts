@@ -38,3 +38,9 @@ export const dayjsFormat = (
 export const getServerTime = () => {
   return dayjs().utcOffset(8);
 };
+
+export const toServerTime = (time: string, timeOffset: number) => {
+  return dayjs(time)
+    .utcOffset(8)
+    .add(timeOffset - 8, 'hours');
+};

@@ -5,6 +5,9 @@ import { CardPoolType, type IBanner } from '~/interfaces/banner';
 import { Bar, Line } from 'vue-chartjs';
 import type { IBannerSummary } from '~/interfaces/convene';
 
+// Property 'formatNumber' does not exist on type
+const format = formatNumber;
+
 // uses
 const api = useApi();
 const i18n = useI18n();
@@ -340,7 +343,7 @@ useSeoMeta({
 
                         <td class="pl-2 pr-2 text-h3" style="width: 50%">
                           <div class="d-flex justify-end w-100">
-                            {{ formatNumber(totalSummoned) }}
+                            {{ format(totalSummoned) }}
                           </div>
                         </td>
 
@@ -380,11 +383,7 @@ useSeoMeta({
                           <div>★★★★★</div>
                           <div>
                             Total
-                            {{
-                              fiveStarList
-                                ? formatNumber(fiveStarList.length)
-                                : 0
-                            }}
+                            {{ fiveStarList ? format(fiveStarList.length) : 0 }}
                           </div>
                         </td>
                       </tr>
@@ -400,11 +399,7 @@ useSeoMeta({
                           <div>★★★★</div>
                           <div>
                             Total
-                            {{
-                              fourStarList
-                                ? formatNumber(fourStarList.length)
-                                : 0
-                            }}
+                            {{ fourStarList ? format(fourStarList.length) : 0 }}
                           </div>
                         </td>
                       </tr>
@@ -423,17 +418,17 @@ useSeoMeta({
                 </v-list-item>
                 <v-list-item :title="$t('convene.global.totalUsers')">
                   <template #append>
-                    {{ formatNumber(totalUsers) }}
+                    {{ format(totalUsers) }}
                   </template>
                 </v-list-item>
                 <v-list-item :title="$t('convene.global.conveneTotal')">
                   <template #append>
-                    {{ formatNumber(totalPull) }}
+                    {{ format(totalPull) }}
                   </template>
                 </v-list-item>
                 <v-list-item :title="$t('common.astrite')">
                   <template #append>
-                    {{ formatNumber(totalPull * 160) }}
+                    {{ format(totalPull * 160) }}
                   </template>
                 </v-list-item>
               </v-list>

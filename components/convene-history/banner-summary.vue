@@ -20,7 +20,8 @@ const resources = useResources();
 // states
 const convenes = ref<ConveneDocument[]>([]);
 const guaranteedAt = ref(0);
-const winRate = ref(0);
+const luckiness = ref(0);
+const luckinessPercentage = ref<string>('~');
 
 // computed
 const guaranteedAt4 = computed<number>(() => {
@@ -55,10 +56,7 @@ const initialize = async () => {
     })
     .map((e) => e[1]);
 
-  console.debug('initialize', convenes.value.length, 'docs');
-
   guaranteedAt.value = 80;
-
   updateStatistics();
 
   setTimeout(() => {
@@ -70,10 +68,8 @@ const updateStatistics = async () => {
   if (!account.active) return;
 
   const banners = await resources.getBanners();
-  const timeOffset = account.timeOffset;
-
   if (showLuckWinRateOff.value) {
-    winRate.value = calculateWinRate({
+    luckiness.value = calculateWinRate({
       type: props.type,
       convenes: convenes.value.map((e) => {
         return {
@@ -85,8 +81,11 @@ const updateStatistics = async () => {
         };
       }),
       banners,
-      timeOffset,
+      timeOffset: account.timeOffset,
+      qualityLevel: 5,
     });
+    if (isNaN(luckiness.value)) luckiness.value = 0;
+    luckinessPercentage.value = formatNumber(luckiness.value);
   }
 };
 
@@ -97,7 +96,9 @@ watch(
 );
 
 // lifecycle
-onMounted(() => initialize());
+onNuxtReady(initialize);
+
+onUpdated(() => emits('on-updated'));
 </script>
 
 <template>
@@ -133,25 +134,34 @@ onMounted(() => initialize());
       </v-alert>
 
       <!-- winRate -->
-      <v-alert v-if="showLuckWinRateOff" class="mb-4">
-        <v-list-item class="pa-0">
-          <v-list-item-title>
-            {{ $t('convene.rank.luckWinRateOff') }}
-          </v-list-item-title>
+      <div v-if="showLuckWinRateOff">
+        <v-alert class="rounded-be-0 rounded-bs-0">
+          <v-list-item class="pa-0">
+            <v-list-item-title>
+              {{ $t('convene.rank.luckWinRateOff') }}
+            </v-list-item-title>
 
-          <template #append>
-            <span class="text-h6 text-legendary font-weight-bold">
-              {{ formatNumber(winRate) }}%
-            </span>
-          </template>
-        </v-list-item>
-      </v-alert>
+            <template #append>
+              <span
+                class="text-h6 text-legendary font-weight-bold"
+                :style="`color: hsl(${(luckiness / 100) * 100}, 100%, 50%);`"
+              >
+                {{ luckinessPercentage }}%
+              </span>
+            </template>
+          </v-list-item>
+        </v-alert>
+        <v-progress-linear
+          :model-value="luckiness"
+          class="mb-4 rounded-be-lg rounded-bs-lg bg-background"
+        />
+      </div>
 
       <!-- 5 star pity -->
-      <v-alert class="mb-4">
+      <v-alert class="rounded-be-0 rounded-bs-0">
         <v-list-item class="pa-0">
-          <v-list-item-title>
-            {{ $t('5 ★ Pity') }}
+          <v-list-item-title class="text-rarity5">
+            5★ {{ $t('convene.pity') }}
           </v-list-item-title>
 
           <v-list-item-subtitle>
@@ -167,12 +177,17 @@ onMounted(() => initialize());
           </template>
         </v-list-item>
       </v-alert>
+      <v-progress-linear
+        :model-value="guaranteedAt5"
+        :max="guaranteedAt"
+        class="mb-4 rounded-be-lg rounded-bs-lg bg-background"
+      />
 
       <!-- 4 star pity -->
-      <v-alert>
+      <v-alert class="rounded-be-0 rounded-bs-0">
         <v-list-item class="pa-0">
-          <v-list-item-title>
-            {{ $t('4 ★ Pity') }}
+          <v-list-item-title class="text-rarity4">
+            4★ {{ $t('convene.pity') }}
           </v-list-item-title>
 
           <v-list-item-subtitle>
@@ -180,12 +195,17 @@ onMounted(() => initialize());
           </v-list-item-subtitle>
 
           <template #append>
-            <span class="text-h6 text-rare font-weight-bold">
+            <span class="text-h6 font-weight-bold">
               {{ guaranteedAt4 }}
             </span>
           </template>
         </v-list-item>
       </v-alert>
+      <v-progress-linear
+        :model-value="guaranteedAt4"
+        :max="10"
+        class="rounded-be-lg rounded-bs-lg bg-background"
+      />
     </v-card-text>
 
     <div v-if="guaranteedAt5List.length > 0">

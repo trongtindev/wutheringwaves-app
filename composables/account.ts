@@ -1,9 +1,6 @@
 import type { AccountDocument } from './database';
 
 export const useAccount = defineStore('useAccount', () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let interval: any = null;
-
   // uses
   const i18n = useI18n();
   const route = useRoute();
@@ -17,11 +14,18 @@ export const useAccount = defineStore('useAccount', () => {
 
   // functions
   const initialize = () => {
-    items.value = database.accounts.find().map((e) => e[1]);
+    loadItems();
+
     if (items.value.length > 0) {
       active.value = items.value[0];
+      startImport();
+    } else {
+      active.value = undefined;
     }
-    console.debug('account', items.value.length, active.value);
+  };
+
+  const loadItems = () => {
+    items.value = database.accounts.find().map((e) => e[1]);
   };
 
   // computed
@@ -29,7 +33,10 @@ export const useAccount = defineStore('useAccount', () => {
     return active.value && active.value.playerId === playerId;
   };
 
-  const timeOffset = computed(() => {
+  const timeOffset = computed<number>(() => {
+    if (active.value) {
+      return timeOffsetIds[active.value.serverId];
+    }
     return 0;
   });
 
@@ -41,66 +48,56 @@ export const useAccount = defineStore('useAccount', () => {
   };
 
   // events
-  const onSchedule = () => {
-    // items.value.forEach(async (account) => {
-    //   if (!account.conveneHistoryUrl) return;
-    //   if (typeof route.query.forceAutoImport === 'undefined') {
-    //     if (!account.autoImport) {
-    //       console.debug('autoImport', account.playerId, 'disabled');
-    //       return;
-    //     }
-    //     if (
-    //       account.lastImport &&
-    //       Date.now() - 60 * 15 * 1000 < account.lastImport
-    //     ) {
-    //       console.debug('autoImport', account.playerId, 'skip');
-    //       return;
-    //     }
-    //   }
-    //   const nid = notification.create({
-    //     title: i18n.t('autoImport.notificationTitle'),
-    //     message: i18n.t('autoImport.notificationMessage', [account.playerId]),
-    //     persistent: true,
-    //   });
-    //   console.debug('autoImport', account.playerId, 'start');
-    //   importConvene
-    //     .start(account.conveneHistoryUrl)
-    //     .then((result) => {
-    //       console.debug('autoImport', account.playerId, 'done', result);
-    //       conveneChangedDebounce(account.playerId);
-    //     })
-    //     .catch((error) => {
-    //       console.error(error);
-    //       console.warn('autoImport', account.playerId, error.message);
-    //     })
-    //     .finally(() => {
-    //       console.debug('autoImport', account.playerId, 'finally');
-    //       notification.remove(nid);
-    //     });
-    // });
+  const startImport = () => {
+    console.debug('startImport');
+    items.value.forEach(async (account) => {
+      if (!account.conveneHistoryUrl) return;
+      if (typeof route.query.forceAutoImport === 'undefined') {
+        if (!account.autoImport) {
+          console.debug('autoImport', account.playerId, 'disabled');
+          return;
+        }
+        if (
+          account.lastImport &&
+          Date.now() - 60 * 15 * 1000 < account.lastImport
+        ) {
+          console.debug('autoImport', account.playerId, 'skip');
+          return;
+        }
+      }
+      const nid = notification.create({
+        title: i18n.t('autoImport.notificationTitle'),
+        message: i18n.t('autoImport.notificationMessage', [account.playerId]),
+        persistent: true,
+      });
+
+      console.debug('autoImport', account.playerId, 'start');
+      importConvene
+        .start(account.conveneHistoryUrl)
+        .then((result) => {
+          console.debug('autoImport', account.playerId, 'done', result);
+          notification.create({
+            title: i18n.t('autoImport.done.title'),
+            message: i18n.t('autoImport.done.message', [account.playerId]),
+            color: 'success',
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+          console.warn('autoImport', account.playerId, error.message);
+        })
+        .finally(() => {
+          console.debug('autoImport', account.playerId, 'finally');
+          notification.remove(nid);
+        });
+    });
   };
 
   // changes
-  watch(
-    () => database.onChanged,
-    () => {
-      console.log('account', 'database changed');
-      initialize();
-    },
-  );
+  watch(() => database.onChanged, loadItems);
 
   // lifecycle
   onMounted(initialize);
-
-  onNuxtReady(() => {
-    // schedule
-    const timer = 60 * 5 * 1000;
-    interval = setInterval(() => onSchedule, timer);
-  });
-
-  onUnmounted(() => {
-    if (interval) clearInterval(interval);
-  });
 
   return {
     items,
