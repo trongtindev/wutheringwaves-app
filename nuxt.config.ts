@@ -10,6 +10,7 @@ const {
   SITE_URL,
   SITE_NAME,
   SITE_REPO,
+  SITE_PREVIEW,
   // api
   API_URL,
   API_TIMEOUT,
@@ -185,19 +186,7 @@ export default defineNuxtConfig({
 
   site: {
     url: SITE_URL,
-  },
-
-  robots: {
-    groups: [
-      {
-        userAgent: 'AhrefsBot',
-        disallow: ['*'],
-      },
-      {
-        userAgent: 'SemrushBot',
-        disallow: ['*'],
-      },
-    ],
+    indexable: SITE_PREVIEW !== 'true',
   },
 
   sourcemap: {
@@ -250,6 +239,11 @@ export default defineNuxtConfig({
           },
         },
       },
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
     },
     server: {
       warmup: {
@@ -282,6 +276,7 @@ export default defineNuxtConfig({
       SITE_URL,
       SITE_NAME,
       SITE_REPO,
+      SITE_PREVIEW,
       // api
       API_URL,
       API_TIMEOUT: parseInt(API_TIMEOUT!),

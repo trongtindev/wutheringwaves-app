@@ -1,12 +1,14 @@
 export const useAnalytics = defineStore('useAnalytics', () => {
   // uses
   const auth = useAuth();
-  const { gtag } = import.meta.dev
-    ? { gtag: undefined }
-    : useScriptGoogleAnalytics();
-  const { clarity } = import.meta.dev
-    ? { clarity: undefined }
-    : useScriptClarity();
+  const site = useSite();
+
+  const { gtag } = site.isProduction
+    ? useScriptGoogleAnalytics()
+    : { gtag: undefined };
+  const { clarity } = site.isProduction
+    ? useScriptClarity()
+    : { clarity: undefined };
 
   // functions
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
