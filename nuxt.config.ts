@@ -3,9 +3,6 @@ import type { LocaleObject } from '@nuxtjs/i18n';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
-if (process.env.NODE_ENV === 'development') {
-  dotenv.config({ path: './.env.development', override: true });
-}
 dotenv.config({ path: './.env', override: true });
 
 const {
