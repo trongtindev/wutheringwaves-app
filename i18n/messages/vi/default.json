@@ -2,11 +2,14 @@
   "accounts": {
     "title": "Danh sách tài khoản",
     "newAccountDetected": "Đã phát hiện tài khoản mới",
-    "successfullySwitched": "Successfully switch to {0}"
+    "successfullySwitched": "Chuyển thành công sang {0}"
   },
   "autoImport": {
     "notificationTitle": "Đang nhập Lịch sử...",
-    "notificationMessage": "Fetching history for account {0}."
+    "notificationMessage": "Đang tìm nạp lịch sử tài khoản {0}.",
+    "done": {
+      "title": "Đã nhập thành công!"
+    }
   },
   "banner": {
     "featuredResonator": "Nhân vật giới hạn",
@@ -17,7 +20,7 @@
   "characters": {
     "title": "Nhân vật",
     "message": "Nhập lịch sử triệu hồi để xem các nhân vật đã sở hữu.",
-    "resonanceChain": "Resonance Chain",
+    "resonanceChain": "Chuỗi cộng hưởng",
     "skills": "Kỹ năng",
     "introduction": "Trong Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> là nhân vật <span class='text-rarity{rarity}'>{rarity}★</span> sao có thuộc tính {attribute} sử dụng vũ khí loại {weaponType}.",
     "lastUpdatedOn": "Hồ sơ {name} đã được cập nhật lần cuối lúc {time}.",
@@ -26,42 +29,42 @@
     "overview": "Tổng quan",
     "bestMainEchoes": "Best Main Echoes {name}",
     "moreBuildGuides": "More Build Guides",
-    "bestWeapons": "Best Weapons {name}",
+    "bestWeapons": "Vũ khí tốt nhất cho {name}",
     "bestEchoSets": "Best Echo Sets",
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
-    "ascensionMaterialsMap": "Ascension Materials Map",
+    "ascensionMaterialsMap": "Bản đồ tài liệu đột phá",
     "skillPriority": "{name} Skill Priority",
-    "teams": "Teams",
+    "teams": "Đội hình",
     "notOwned": "Not owned"
   },
   "codes": {
     "title": "Mã quà tặng",
-    "expiry": "Expiry",
+    "expiry": "Hết hạn",
     "code": "Mã",
     "rewards": "Phần thưởng",
     "expired": "Đã hết hạn",
     "howToRedeem": "How to Redeem Wuthering Waves Codes",
     "howToRedeemGuide": "In-game menu, click the settings icon in the bottom right corner. Select the \"Other Settings\" tab with the spanner symbol. Hit the \"Redeem\" button next to the \"Redemption Code\" under Account.",
-    "redeemRequirement": "How to unlock Redemption",
+    "redeemRequirement": "Cách mở khóa Đổi quà",
     "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
-    "redemptionStep": "Redemption Step"
+    "redemptionStep": "Bước quy đổi"
   },
   "comments": {
-    "empty": "Leave a comment so your voice will be heard first.",
+    "empty": "Hãy để lại bình luận để tiếng nói của bạn được lắng nghe đầu tiên.",
     "form": {
-      "submit": "Post comment"
+      "submit": "Đăng bình luận"
     },
-    "replies": "Replies"
+    "replies": "Trả lời"
   },
   "commit": {
     "character": {
-      "overview": "Overview",
-      "quote": "Quote",
-      "description": "Description",
-      "skills": "Skills"
+      "overview": "Tổng quan",
+      "quote": "Trích dẫn",
+      "description": "Miêu tả",
+      "skills": "Kỹ năng"
     },
-    "successfully": "Thank you for your contribution, your request has been sent and is being reviewed.",
+    "successfully": "Cảm ơn sự đóng góp của bạn, yêu cầu của bạn đã được gửi và đang được xem xét.",
     "viewPullRequest": "View Pull Request"
   },
   "common": {
@@ -77,29 +80,29 @@
     "back": "Quay lại",
     "cancel": "Hủy bỏ",
     "import": "Nhập",
-    "search": "Search",
-    "all": "All",
+    "search": "Tìm kiếm",
+    "all": "Tất cả",
     "echo": "Echo",
-    "any": "Any",
-    "skill": "Skill",
+    "any": "Bất kì",
+    "skill": "Kỹ năng",
     "create": "Create",
     "save": "Save",
-    "copyLink": "Copy link",
-    "exportAsImage": "Export as Image",
-    "saveChanges": "Save changes",
+    "copyLink": "Sao chép đường dẫn",
+    "exportAsImage": "Xuất dưới dạng hình ảnh",
+    "saveChanges": "Lưu thay đổi",
     "weapon": "Weapon",
     "character": "Character",
     "type": "Loại",
     "sort": "Sort",
-    "title": "Title",
+    "title": "Tiêu đề",
     "draft": "Draft",
     "level": "Level",
     "shortcuts": "Shortcuts",
     "copy": "Sao chép",
     "copied": "Đã sao chép",
     "download": "Tải xuống",
-    "ascensionMaterials": "Ascension Materials",
-    "successfully": "Successfully!",
+    "ascensionMaterials": "Nguyên Liệu Đột Phá",
+    "successfully": "Thành công!",
     "checkAll": "Check all",
     "clear": "Clear",
     "retry": "Retry",
@@ -163,10 +166,15 @@
     "confirm": "Confirm",
     "background": "Background",
     "foreground": "Foreground",
-    "upload": "Upload",
-    "gallery": "Gallery",
-    "translateThisPage": "Translate this page",
-    "description": "Description"
+    "upload": "Tải lên",
+    "gallery": "Thư viện",
+    "translateThisPage": "Dịch trang này",
+    "description": "Description",
+    "howToUse": "Làm thế nào để sử dụng {0}?",
+    "contributor": "Người đóng góp",
+    "didYouKnow": "Bạn có biết không?",
+    "aiGenerated": "AI generated",
+    "submit": "Submit"
   },
   "convene": {
     "message": "Wuthering Waves sẽ xoá lịch sử triệu hồi sau 6 tháng, hãy sao lưu ngay!",
@@ -176,6 +184,16 @@
       "processing": "Đang xử lý...",
       "invalidLink": "Link không hợp lệ, vui lòng kiểm tra lại",
       "guides": {
+        "android": {
+          "default": {
+            "1": {
+              "title": "Thực hiện theo Video hướng dẫn"
+            },
+            "2": {
+              "title": "Dán văn bản đã sao chép vào đây"
+            }
+          }
+        },
         "pc": {
           "default": {
             "1": {
@@ -217,23 +235,23 @@
       "title": "Xếp hạng toàn cầu của bạn",
       "level": "Your Total Pulls Rank",
       "current": "Current {banner} median is {median} pulls",
-      "more": "You have more pull than {percentage}% users",
-      "less": "You have less pull than {percentage}% users",
+      "more": "Bạn có nhiều lượt hơn {percentage}% người dùng",
+      "less": "Bạn có ít lượt hơn {percentage}% người dùng",
       "currentLuck": "Current {banner} median is {median}%",
       "luck5": "Độ may mắn 5★",
       "luck4": "Độ may mắn 4★",
       "luckWinRateOff": "Tỉ lệ thắng 50:50",
       "medianTotal": "Global Median {median} pulls",
       "medianLuck": "Global Median {median}%",
-      "moreTotal": "More pulls than {percentage}% users",
-      "lessTotal": "Less pulls than {percentage}% users",
+      "moreTotal": "Bạn có nhiều lượt hơn {percentage}% người dùng",
+      "lessTotal": "Bạn có ít lượt hơn {percentage}% người dùng",
       "moreLuck": "May mắn hơn {percentage}% người dùng",
       "lessLuck": "Kém may mắn hơn {percentage}% người dùng",
       "top": "TOP",
-      "bottom": "BOTTOM"
+      "bottom": "ĐÁY"
     },
     "global": {
-      "title": "Global Convene Stats",
+      "title": "Thống kê triệu hồi toàn cầu",
       "fiveStar": "Danh sách 5★",
       "fourStar": "Danh sách 4★",
       "median": "Trung bình ra 5★ ở lượt",
@@ -248,8 +266,20 @@
   },
   "desktopApp": {
     "title": "Ứng dụng máy tính",
-    "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
+    "introduce": "Với ứng dụng dành cho máy tính để bàn, bạn có thể tự động nhập lịch sử triệu tập của mình, xem bản đồ trực tiếp trong trò chơi, xem thông tin vật phẩm, v. v.",
     "download": "Tải xuống"
+  },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Cảm ơn! Hi vọng bạn tìm được thứ hữu dụng.",
+      "2": "Mình lập trang web này để giải trí khi có thời gian rảnh. Tôi sẽ bổ sung thêm nhiều tính năng hơn và cập nhật dữ liệu mỗi lần cập nhật vì tôi thích khám phá trò chơi và tôi đang tối đa hóa nó.",
+      "3": "Nếu bạn muốn quyên góp, khoản quyên góp của bạn chắc chắn sẽ giúp cải thiện trang web và thúc đẩy tôi bổ sung thêm nhiều thứ hơn cho mình! Cảm ơn bạn rất nhiều và chúc bạn vui vẻ, hy vọng bạn thích nó!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": {
+      "kofi": "Hỗ trợ tôi trên Ko-fi"
+    }
   },
   "echoes": {
     "title": "Echoes",
@@ -304,22 +334,129 @@
     "howToObtain": "Làm sao để có được {0}?",
     "howToUnlock": "Làm sao để mở khóa {0}?",
     "cookingIngredients": "Công thức nấu ăn",
-    "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
+    "obtainedFromConvenes": "{item} là Nguyên liệu kích hoạt Resonance Chain thu được từ <b>Triệu hồi</b> dùng để thăng cấp {character} Resonance Chain."
   },
   "leaderboards": {
     "title": "Bảng xếp hạng"
   },
   "map": {
-    "title": "Interactive Map"
+    "title": "Bản đồ tương tác",
+    "locations": {
+      "dimForest": "Dim Forest",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Fallen Grave",
+      "frostingHarbor": "Frosting Harbor",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Tiger's Maw",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Central Plains",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Lollo Warehouse",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Nostalgia Isle",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "Ghim tự tạo",
+      "levelUpMaterial": "Nguyên liệu tăng cấp",
+      "waypoints": "Điểm dịch chuyển",
+      "specialItems": "Vật phẩm đặc biệt",
+      "chests": "Rương",
+      "experience": "Experience",
+      "puzzleChest": "Rương giải đố",
+      "localSpecialties": "Đặc sản địa phương",
+      "enemies": "Kẻ thù",
+      "ores": "Quặng",
+      "animals": "Động vật",
+      "landmarks": "Địa hình",
+      "echoes": "Echoes"
+    },
+    "settings": {
+      "title": "Cài đặt bản đồ",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "Khi được bật, các ghim cùng loại sẽ được nhóm lại để giảm độ trễ."
+      },
+      "hideMarkedPins": {
+        "title": "Ẩn các ghim đã đánh dấu",
+        "description": "Khi được bật, các ghim được đánh dấu sẽ bị ẩn trên trang chủ."
+      }
+    },
+    "markAsNotFound": "Đánh dấu là không tìm thấy",
+    "markAsFound": "Đánh dấu là đã tìm thấy",
+    "guides": {
+      "multipleAccounts": {
+        "description": "Để lưu trữ đánh dấu giữa các tài khoản khác nhau, bạn chỉ cần nhập dữ liệu triệu hồi vào sẽ thấy nút chuyển đổi tài khoản xuất hiện."
+      },
+      "pinCluster": {
+        "description": "Theo mặc định, tính năng Pin Cluster sẽ được bật. Bạn có thể tắt nó trong cài đặt."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Rương",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Điểm quan sát",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Sách",
+      "sideQuest": "Nhiệm vụ phụ",
+      "cave": "Hang động",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "Cá",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "Trứng chim",
+      "fowlMeat": "Thịt gà",
+      "craneFeathers": "Lông hạc",
+      "rawMeat": "Thịt sống",
+      "dewvetch": "Dewvetch"
+    }
   },
   "meta": {
-    "title": "Wuthering Waves",
-    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "title": "WutheringWaves.app",
+    "description": "Theo dõi Pity, danh sách việc cần làm, cơ sở dữ liệu, phân tích và hơn thế nữa cho Wuthering Waves!",
     "index": {
       "title": "Your personal tracker"
     },
     "timeline": {
-      "title": "Event timeline calendar",
+      "title": "Event Schedule Timeline",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
     },
     "echoes": {
@@ -327,18 +464,18 @@
       "id": {
         "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
       },
-      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
+      "description": "Explore the world of Echoes for Wuthering Waves. Our site helps you find the best Echo builds for your characters."
     },
     "characters": {
       "id": {
         "title": "{name} hướng dẫn chơi và build",
         "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
       },
-      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
+      "description": "Discover the complete Wuthering Waves character guides. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more."
     },
     "weapons": {
       "id": {
-        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. Finding ascension materials and tracking your weapon's rank."
       },
       "title": "Vũ khí",
       "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
@@ -349,8 +486,8 @@
     },
     "convene": {
       "history": {
-        "title": "Pity Tracker",
-        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+        "title": "Lịch sử triệu hồi",
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the history and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
       },
       "global": {
         "title": "Thống kê triệu hồi toàn cầu",
@@ -367,8 +504,8 @@
       "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
     },
     "trophies": {
-      "title": "Achievements",
-      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+      "title": "Thành tựu",
+      "description": "Track your Wuthering Waves achievements easily! Complete list of all achievements and their details."
     },
     "map": {
       "title": "Bản đồ tương tác",
@@ -376,7 +513,7 @@
     },
     "items": {
       "title": "All items",
-      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes.",
       "id": {
         "title": "Vật phẩm: {name}",
         "description": {
@@ -398,11 +535,11 @@
   },
   "privacyPolicy": {
     "title": "Chính sách bảo mật",
-    "message": "What we collects and what it is used for"
+    "message": "Những gì chúng tôi thu thập và nó được sử dụng cho mục đích gì"
   },
   "search": {
     "title": "Tìm kiếm nhanh",
-    "tooltip": "Press slash to open quickly."
+    "tooltip": "Nhấn dấu gạch chéo để mở nhanh."
   },
   "settings": {
     "title": "Cài đặt",
@@ -412,11 +549,6 @@
       "autoImportConveneHistory": "Tự động nhập",
       "autoImportConveneHistorySubtitle": "Lịch sử sẽ tự động nhập khi bạn truy cập website.",
       "empty": "Để thêm tài khoản, bạn chỉ cần nhập lịch sử triệu hồi."
-    },
-    "analytics": {
-      "title": "Analytics",
-      "optOut": "Opt-out",
-      "optOutSubtitle": "You can opt-out of Google Analytics"
     },
     "roles": {
       "title": "Vai trò của bạn",
@@ -430,26 +562,26 @@
       "emptyRoles": "Bạn chưa có quyền nào!"
     },
     "syncData": {
-      "title": "Sync data",
+      "title": "Đồng bộ dữ liệu",
       "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
     },
     "exportData": {
-      "title": "Export data",
-      "introduce": "You can download your convene data for backup or move it to another site.",
-      "export": "Export"
+      "title": "Xuất dữ liệu",
+      "introduce": "Bạn có thể tải xuống dữ liệu triệu hồi của mình để lưu trữ hoặc di chuyển sang một trang web khác.",
+      "export": "Xuất"
     },
     "importData": {
-      "title": "Import data",
-      "introduce": "You can import data from other sites.",
-      "import": "Import"
+      "title": "Nhập dữ liệu",
+      "introduce": "Bạn có thể nhập dữ liệu từ các trang web khác.",
+      "import": "Nhập"
     },
     "eraseData": {
-      "title": "Erase All Data",
-      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
-      "eraseNow": "Erase Now",
+      "title": "Xóa tất cả dữ liệu",
+      "introduce": "Dữ liệu của bạn sẽ xóa trong trình duyệt và đồng bộ hóa trên đám mây. Nếu website không hoạt động hoặc có lỗi, bạn có thể sử dụng tính năng này để khắc phục.",
+      "eraseNow": "Xóa ngay",
       "confirm": {
-        "title": "DANGER!!!",
-        "message": "Your data will clear in your browser and cloud sync."
+        "title": "NGUY HIỂM!!!",
+        "message": "Dữ liệu của bạn sẽ xóa trong trình duyệt và đồng bộ hóa trên đám mây."
       }
     }
   },
@@ -477,16 +609,16 @@
     "conveneShare": "Chia sẻ lịch sử"
   },
   "sync": {
-    "title": "Cloud Sync",
+    "title": "Đồng bộ đám mây",
     "conflict": {
       "title": "Dữ liệu xung đột",
       "message": "Dữ liệu trên trình duyệt của bạn đang xung đột với dữ liệu được lưu trên đám mây!",
       "cloudData": "Cloud Data",
-      "localData": "Local Browser Data",
-      "older": "OLDER",
-      "newer": "NEWER",
-      "useCloudData": "Use Cloud Data",
-      "useLocalData": "Use Local Data",
+      "localData": "Dữ liệu trên máy",
+      "older": "Cũ hơn",
+      "newer": "Mới hơn",
+      "useCloudData": "Sử dụng dữ liệu trên mây",
+      "useLocalData": "Sử dụng dữ liệu trên máy",
       "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
     "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
@@ -511,7 +643,7 @@
     "summary": "Tóm tắt hoạt động",
     "localTime": "Dùng giờ địa phương",
     "checkoutOfficialUrl": "Xem trang chính thức",
-    "ended": "Ended"
+    "ended": "Đã kết thúc"
   },
   "todoList": {
     "title": "Việc cần làm",
@@ -538,6 +670,7 @@
     "alert": "Nhập lịch sử triệu hồi để xem các nhân vật đã sở hữu.",
     "lastUpdatedOn": "Hồ sơ {name} đã được cập nhật lần cuối lúc {time}.",
     "introduction": "Trong Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> là một vũ khí <span class='text-rarity{rarity}'>{rarity}★</span>.",
-    "skill": "{name} Skill"
+    "skill": "{name} Skill",
+    "obtainedTooltip": "Number of times obtained via convene."
   }
 }
