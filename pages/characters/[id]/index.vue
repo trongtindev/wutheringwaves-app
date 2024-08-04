@@ -5,6 +5,7 @@ import { useGoTo } from 'vuetify';
 
 // Property 'formatNumber' does not exist on type
 const format = formatNumber;
+const { SITE_URL } = useRuntimeConfig().public;
 
 // uses
 const i18n = useI18n();
@@ -114,7 +115,7 @@ const description = i18n.t('meta.characters.id.description', {
   name: nameLocalized.value,
   attribute: item.attribute.name,
 });
-const ogImage = `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`;
+const ogImage = `${SITE_URL}/characters/icons/${item.slug}.webp`;
 
 useAppBar().title = i18n.t('characters.title');
 useHead({ title });
@@ -139,9 +140,9 @@ useJsonld({
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: `${runtimeConfig.public.SITE_URL}/characters/icons/${item.slug}.webp`,
-  license: `${runtimeConfig.public.SITE_URL}/license`,
-  acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
+  contentUrl: `${SITE_URL}/characters/icons/${item.slug}.webp`,
+  license: `${SITE_URL}/license`,
+  acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
@@ -154,9 +155,9 @@ if (data.splashArt) {
   useJsonld(() => ({
     '@context': 'https://schema.org',
     '@type': 'ImageObject',
-    contentUrl: `${runtimeConfig.public.SITE_URL}/characters/splash-art/${item.slug}.webp`,
-    license: `${runtimeConfig.public.SITE_URL}/license`,
-    acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
+    contentUrl: `${SITE_URL}/characters/splash-art/${item.slug}.webp`,
+    license: `${SITE_URL}/license`,
+    acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
     creditText: 'WutheringWaves.app',
     creator: {
       '@type': 'Organization',

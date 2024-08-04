@@ -11,7 +11,7 @@ const props = defineProps<{
 // uses
 // const i18n = useI18n();
 const localePath = useLocalePath();
-const runtimeConfig = useRuntimeConfig();
+const { SITE_URL } = useRuntimeConfig().public;
 
 // seo meta
 useJsonld({
@@ -22,7 +22,7 @@ useJsonld({
       '@type': 'ListItem',
       position: i + 1,
       name: e.title,
-      item: `${runtimeConfig.public.SITE_URL}${e.to ? localePath(e.to) : ''}`,
+      item: `${SITE_URL}${e.to ? localePath(e.to) : ''}`,
     };
   }),
 });

@@ -5,6 +5,7 @@ import type { IItem } from '~/interfaces/item';
 
 // Property 'formatNumber' does not exist on type
 const format = formatNumber;
+const { SITE_URL } = useRuntimeConfig().public;
 
 // uses
 const i18n = useI18n();
@@ -56,7 +57,7 @@ const description = i18n.t('meta.weapons.id.description', {
   name: nameLocalized.value,
   type: item.type,
 });
-const ogImage = `${runtimeConfig.public.SITE_URL}/weapons/icons/${item.slug}.webp`;
+const ogImage = `${SITE_URL}/weapons/icons/${item.slug}.webp`;
 
 useAppBar().title = i18n.t('weapons.title');
 useHead({ title });
@@ -81,9 +82,9 @@ useJsonld({
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: `${runtimeConfig.public.SITE_URL}/weapons/icons/${item.slug}.webp`,
-  license: `${runtimeConfig.public.SITE_URL}/license`,
-  acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
+  contentUrl: `${SITE_URL}/weapons/icons/${item.slug}.webp`,
+  license: `${SITE_URL}/license`,
+  acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',

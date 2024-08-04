@@ -1,4 +1,9 @@
 <script setup lang="ts">
+// Property 'formatNumber' does not exist on type
+const parse = parseContent;
+const { SITE_URL } = useRuntimeConfig().public;
+
+// uses
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
@@ -6,9 +11,6 @@ const localePath = useLocalePath();
 const runtimeConfig = useRuntimeConfig();
 const headers = useRequestHeaders(['If-Modified-Since']);
 const event = useRequestEvent();
-
-// Property 'formatNumber' does not exist on type
-const parse = parseContent;
 
 // states
 const items = await resources.getItems();
@@ -64,7 +66,7 @@ const relatedItems = computed(() => {
 });
 
 // seo meta
-const ogImage = `${runtimeConfig.public.SITE_URL}/items/icons/${item.slug}.webp`;
+const ogImage = `${SITE_URL}/items/icons/${item.slug}.webp`;
 
 useAppBar().title = i18n.t('items.title');
 useHead({ title: title.value });
@@ -90,8 +92,8 @@ useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
   contentUrl: ogImage,
-  license: `${runtimeConfig.public.SITE_URL}/license`,
-  acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
+  license: `${SITE_URL}/license`,
+  acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',

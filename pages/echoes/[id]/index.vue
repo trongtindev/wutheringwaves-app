@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { SITE_URL } = useRuntimeConfig().public;
+
 // uses
 const i18n = useI18n();
 const route = useRoute();
@@ -40,7 +42,7 @@ const description = i18n.t('meta.echoes.id.description', {
   name: nameLocalized.value,
   rarity: item.class,
 });
-const ogImage = `${runtimeConfig.public.SITE_URL}/echoes/icons/${item.slug}.webp`;
+const ogImage = `${SITE_URL}/echoes/icons/${item.slug}.webp`;
 
 useAppBar().title = i18n.t('echoes.title');
 useHead({ title });

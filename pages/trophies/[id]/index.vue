@@ -1,8 +1,10 @@
 <script setup lang="ts">
+const { SITE_URL } = useRuntimeConfig().public;
+
+// uses
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
-const runtimeConfig = useRuntimeConfig();
 const headers = useRequestHeaders(['If-Modified-Since']);
 const event = useRequestEvent();
 
@@ -18,7 +20,7 @@ const nameLocalized = computed(() => {
 // seo meta
 const title = `${i18n.t('common.trophy')}: ${nameLocalized.value}`;
 const description = i18n.t(item.description);
-const ogImage = `${runtimeConfig.public.SITE_URL}/trophies/icons/${item.slug}.webp`;
+const ogImage = `${SITE_URL}/trophies/icons/${item.slug}.webp`;
 
 useAppBar().title = i18n.t('trophies.title');
 useHead({ title });
@@ -33,8 +35,8 @@ useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
   contentUrl: ogImage,
-  license: `${runtimeConfig.public.SITE_URL}/license`,
-  acquireLicensePage: `${runtimeConfig.public.SITE_URL}/license/#how-to-use`,
+  license: `${SITE_URL}/license`,
+  acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
   creditText: 'WutheringWaves.app',
   creator: {
     '@type': 'Organization',
