@@ -12,19 +12,33 @@ import type { ITimeline } from '~/interfaces/timeline';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
 
 export const useResources = defineStore('useResources', () => {
-  const getBanners = async () => {
+  const getBanners = async (selector?: IBanner) => {
     const data = await import('~/resources/banners.json');
-    return data.default.items.reverse().map((e) => {
-      return {
-        ...e,
-        type: CardPoolType[e.type],
-      };
-    }) as IBanner[];
+    const clone = cloneObject(data.default.items);
+    const items = clone
+      .reverse()
+      .map((e) => {
+        return {
+          ...e,
+          type: CardPoolType[e.type],
+        };
+      })
+      .filter((e) => {
+        if (selector) {
+          return Object.entries(selector).every(
+            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+          );
+        }
+        return true;
+      });
+
+    return items;
   };
 
   const weapons = async (): Promise<IWeapon[]> => {
     const data = await import('~/resources/weapons.json');
-    return data.default.items as IWeapon[];
+    const clone = cloneObject(data.default.items);
+    return clone as IWeapon[];
   };
 
   const getWeaponData = async (slug: string): Promise<IWeaponData> => {
@@ -32,18 +46,26 @@ export const useResources = defineStore('useResources', () => {
     return data.default;
   };
 
-  const getCharacters = async (options?: {
-    ignoreHidden?: boolean;
-  }): Promise<ICharacter[]> => {
-    options ??= {};
-
+  const getCharacters = async (
+    selector?: Partial<ICharacter>,
+  ): Promise<ICharacter[]> => {
     const data = await import('~/resources/characters.json');
+    const clone = cloneObject(data.default.items);
     const attributes = await getAttributes();
 
-    return data.default.items
+    const items = clone
+      .map((e) => {
+        return {
+          ...e,
+          hidden: typeof e.hidden === 'undefined' ? false : e.hidden,
+          upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
+        };
+      })
       .filter((e) => {
-        if (!options.ignoreHidden && e.hidden) {
-          return false;
+        if (selector) {
+          return Object.entries(selector).every(
+            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+          );
         }
         return true;
       })
@@ -56,27 +78,27 @@ export const useResources = defineStore('useResources', () => {
           attribute: attribute || attributes[0],
         };
       });
+    return items;
   };
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {
     const data = await import(`~/resources/characters/${slug}.json`);
-    return data.default;
+    const clone = JSON.parse(JSON.stringify(data.default));
+    return clone;
   };
 
-  const getEchoes = async (options?: {
-    ignoreHidden?: boolean;
-  }): Promise<IEcho[]> => {
-    options ??= {};
-
-    const data: { default: { items: IEcho[] } } = await import(
-      '~/resources/echoes.json'
-    );
-    return data.default.items.filter((e) => {
-      if (!options.ignoreHidden && e.hidden) {
-        return false;
+  const getEchoes = async (selector?: Partial<IEcho>): Promise<IEcho[]> => {
+    const data = await import('~/resources/echoes.json');
+    const clone = cloneObject(data.default.items);
+    const items = clone.filter((e) => {
+      if (selector) {
+        return Object.entries(selector).every(
+          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+        );
       }
       return true;
     });
+    return items;
   };
 
   const getEchoData = async (slug: string): Promise<IEchoData> => {
@@ -89,9 +111,18 @@ export const useResources = defineStore('useResources', () => {
     return data.default.items;
   };
 
-  const getItems = async (): Promise<IItem[]> => {
+  const getItems = async (selector?: Partial<IItem>): Promise<IItem[]> => {
     const data = await import('~/resources/items.json');
-    return data.default.items as IItem[];
+    const clone = cloneObject(data.default.items);
+    const items = clone.filter((e) => {
+      if (selector) {
+        return Object.entries(selector).every(
+          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+        );
+      }
+      return true;
+    });
+    return JSON.parse(JSON.stringify(items));
   };
 
   const getItemData = async (slug: string): Promise<IItemData> => {

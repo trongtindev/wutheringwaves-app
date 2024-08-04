@@ -1,7 +1,6 @@
 {
   "$schema": "../../public/schema/character.schema.json",
   "ascensions": [
-    { "cost": [], "minLevel": 0 },
     {
       "cost": [
         { "item": 41100011, "quantity": 4 },

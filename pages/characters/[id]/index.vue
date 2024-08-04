@@ -11,7 +11,6 @@ const { SITE_URL } = useRuntimeConfig().public;
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
-const runtimeConfig = useRuntimeConfig();
 const goTo = useGoTo({ offset: -72, duration: 500 });
 const showPicture = ref(0);
 const headers = useRequestHeaders(['If-Modified-Since']);
@@ -20,7 +19,7 @@ const event = useRequestEvent();
 // fetch
 const echoes = await resources.getEchoes();
 const weapons = await resources.getWeapons();
-const characters = await resources.getCharacters({ ignoreHidden: true });
+const characters = await resources.getCharacters();
 const item = characters.find((e) => e.slug === route.params.id)!;
 if (!item) throw createError({ message: '1', statusCode: 404 });
 
@@ -99,6 +98,10 @@ const moreBuildGuides = computed(() => {
   return characters.filter((e) => {
     return e.attribute && e.attribute == item.attribute && !e.hidden;
   });
+});
+
+const lastUpdatedOn = computed(() => {
+  return dayjs(item.modifiedTime);
 });
 
 // changes
@@ -210,7 +213,14 @@ if (headers['if-modified-since']) {
       <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
         {{ title }}
       </v-card-title>
-      <v-divider />
+      <v-card-subtitle class="lastUpdatedOn">
+        {{
+          $t('characters.lastUpdatedOn', {
+            name: nameLocalized,
+            time: lastUpdatedOn,
+          })
+        }}
+      </v-card-subtitle>
 
       <v-card-text>
         <v-row>
@@ -318,18 +328,6 @@ if (headers['if-modified-since']) {
           </v-col>
         </v-row>
       </v-card-text>
-
-      <v-divider v-if="item.modifiedTime" />
-      <v-card-actions v-if="item.modifiedTime">
-        <h2 class="text-center text-body-2 w-100">
-          {{
-            $t('characters.lastUpdatedOn', {
-              name: nameLocalized,
-              time: dayjs(item.modifiedTime),
-            })
-          }}
-        </h2>
-      </v-card-actions>
     </v-card>
 
     <!-- Tab views -->
@@ -358,7 +356,6 @@ if (headers['if-modified-since']) {
       <v-card-title>
         {{ $t('characters.moreBuildGuides') }}
       </v-card-title>
-      <v-divider />
 
       <v-card-text>
         <v-row>

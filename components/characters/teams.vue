@@ -8,11 +8,13 @@ const props = defineProps<{
 }>();
 
 // uses
-const localePath = useLocalePath();
 const resources = useResources();
 
 // fetch
-const characters = await resources.getCharacters();
+const characters = await resources.getCharacters({
+  hidden: false,
+  upcoming: false,
+});
 const characterDict = Object.fromEntries(characters.map((e) => [e.slug, e]));
 
 // computed

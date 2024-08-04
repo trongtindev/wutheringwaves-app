@@ -22,9 +22,12 @@ const selected = ref<string[]>([]);
 
 // functions
 const initialize = async () => {
-  const items = await resource.getItems();
+  const items = await resource.getItems({ category: 'Resources' });
   const itemsDict: { [key: string]: IItem } = {};
-  const characters = await resource.getCharacters();
+  const characters = await resource.getCharacters({
+    hidden: false,
+    upcoming: false,
+  });
 
   data.value = await Promise.all(
     characters.map(async (character) => {
@@ -36,10 +39,12 @@ const initialize = async () => {
         })
         .filter((e) => {
           const item = items.find((item) => {
-            return item.id === e.item || item.name === e.item;
+            return (
+              item.id === e.item || item.slug === e.item || item.name === e.item
+            );
           });
           if (item) itemsDict[e.item] = item;
-          return item && item.category === 'Resources';
+          return typeof item !== 'undefined';
         })
         .map((e) => {
           return { item: itemsDict[e.item] };
@@ -73,7 +78,7 @@ const onPressed = (index: number) => {
 };
 
 // lifecycle
-onNuxtReady(() => initialize());
+onMounted(() => initialize());
 </script>
 
 <template>

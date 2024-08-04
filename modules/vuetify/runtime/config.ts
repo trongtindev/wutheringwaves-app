@@ -1,4 +1,5 @@
 import { createVuetify } from 'vuetify';
+import { en, fr, id, it, ja, ko, th, tr, uk, vi, zhHans } from 'vuetify/locale';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import {
   VStepperVertical,
@@ -12,6 +13,7 @@ export const vuetifyConfig = createVuetify({
   locale: {
     locale: 'en',
     fallback: 'en',
+    messages: { en, fr, id, it, ja, ko, th, tr, uk, vi, zhHans },
   },
   icons: {
     defaultSet: 'mdi',

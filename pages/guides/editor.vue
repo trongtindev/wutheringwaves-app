@@ -306,7 +306,7 @@ useHead({
       </v-col>
     </v-row>
 
-    <v-app-bar location="bottom" class="pl-1 pr-1">
+    <v-app-bar location="bottom" class="pl-1 pr-1 border-t">
       <v-spacer />
       <v-btn
         v-if="!auth.isSignedIn"

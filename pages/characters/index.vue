@@ -8,8 +8,7 @@ const database = useDatabase();
 const account = useAccount();
 
 // fetch
-const result = await resources.getCharacters();
-const attributes = await resources.getAttributes();
+const result = await resources.getCharacters({ hidden: false });
 const characters = result.sort((a, b) => a.name.localeCompare(b.name));
 
 // states
@@ -35,7 +34,6 @@ const loadOwned = () => {
   } else {
     owned.value = {};
   }
-  console.log('owned', owned.value);
 };
 
 // events
