@@ -180,7 +180,6 @@
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
     "import": {
       "title": "Import Convenes",
-      "success": "Import successfully!",
       "processing": "Processing...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
@@ -621,7 +620,6 @@
       "useLocalData": "Use Local Data",
       "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
-    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "Data has been synced!",
     "lastModified": "Last modified: {0}",
     "lastSynced": "Last synced: {0}",
