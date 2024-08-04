@@ -30,6 +30,7 @@ const {
   DONATE_URL,
   DONATE_DISABLED,
 } = import.meta.env;
+const NITRO_PRERENDER = import.meta.env.NITRO_PRERENDER !== 'false';
 
 const localesMetadata: LocaleObject[] = [
   {
@@ -149,8 +150,8 @@ export default defineNuxtConfig({
       proxy: '/api/rss/guides',
       prerender: false,
     },
-    '/commit': { robots: false },
-    '/commit/**': { robots: false },
+    '/commit': { robots: false, prerender: false },
+    '/commit/**': { robots: false, prerender: false },
     // TODO: remove soon
     '/echos/**': {
       redirect: '/echoes/**',
@@ -266,15 +267,10 @@ export default defineNuxtConfig({
     },
   },
 
-  hooks: {
-    'nitro:build:before': (nitro) => {
-      if (import.meta.env.NITRO_PRERENDER === 'false') {
-        return;
-      }
-      if (['bun', 'node-server'].includes(nitro.options.preset)) {
-        nitro.options.prerender.crawlLinks = true;
-        nitro.options.prerender.routes.push('/sitemap.xml');
-      }
+  nitro: {
+    prerender: {
+      crawlLinks: NITRO_PRERENDER,
+      routes: NITRO_PRERENDER ? ['/sitemap.xml'] : [],
     },
   },
 

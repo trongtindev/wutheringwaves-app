@@ -358,10 +358,7 @@ useSeoMeta({
         </div>
 
         <!-- right button -->
-        <div
-          class="position-absolute top-2 right-2 z-9999 h-100"
-          style="width: 48px"
-        >
+        <div class="position-absolute top-2 right-2 z-9999" style="width: 48px">
           <v-tooltip location="left">
             <template #activator="tooltip">
               <v-btn
