@@ -127,7 +127,7 @@ watch(
   () => localizationTab.value,
   (locale) => {
     const content = contentLocalized.value[locale];
-    editor.value?.setContent(content);
+    editor.value?.setContent(content || '');
   },
 );
 

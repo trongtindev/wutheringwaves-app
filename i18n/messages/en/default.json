@@ -17,6 +17,22 @@
     "standardResonator": "Standard resonator",
     "standardWeapon": "Standard weapon"
   },
+  "calculator": {
+    "title": "Damage Calculator",
+    "builder": {
+      "title": "Builder",
+      "rotation": {
+        "title": "Rotation"
+      }
+    },
+    "import": {
+      "title": "Import",
+      "introduce": "Scanners are Wuthering tools that can automatically scan game data from screenshots or directly from the game."
+    },
+    "inventory": {
+      "title": "Inventory"
+    }
+  },
   "characters": {
     "title": "Characters",
     "message": "Import convene history to see already owned characters.",
@@ -181,7 +197,16 @@
     "submit": "Submit",
     "attribute": "Attribute",
     "birthday": "Birthday",
-    "birthplace": "Birthplace"
+    "birthplace": "Birthplace",
+    "echoes": "Echoes",
+    "teams": "Teams",
+    "share": "Share",
+    "sequences": "Sequences",
+    "team": "Team",
+    "mainDPS": "Main DPS",
+    "subDPS": "Sub DPS",
+    "healer": "Healer",
+    "uploadData": "Upload data"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -537,6 +562,10 @@
     "leaderboards": {
       "title": "Leaderboards",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
+    },
+    "calculator": {
+      "title": "Damage Calculator Tools",
+      "description": "Damage calculator for Wuthering Waves with damage calculations, build creation and comparison tools available. You can also save your builds and echoes!"
     }
   },
   "privacyPolicy": {
@@ -612,7 +641,8 @@
     "convene": "Convene",
     "conveneGlobalStats": "Global Stats",
     "conveneImport": "Import history",
-    "conveneShare": "Share history"
+    "conveneShare": "Share history",
+    "calculator": "Calculator"
   },
   "sync": {
     "title": "Cloud Sync",

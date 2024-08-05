@@ -40,6 +40,7 @@ export interface ICharacter {
   hidden?: boolean;
   images: {
     icon: string;
+    cover?: string;
     portrait: string;
   };
 }

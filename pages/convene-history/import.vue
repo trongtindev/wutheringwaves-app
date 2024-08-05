@@ -27,7 +27,10 @@ const onImport = (url: string) => {
     .then((result) => {
       account.setActive(result.playerId);
       sidebar.setNotify('/characters', 1, 'resetOnVisit');
-      router.push(localePath('/convene-history'));
+      router.push({
+        path: localePath('/convene-history'),
+        query: { addConfetti: 'true' },
+      });
     })
     .catch((error) => {
       console.error(error);

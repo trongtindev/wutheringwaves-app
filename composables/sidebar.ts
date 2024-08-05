@@ -12,6 +12,7 @@ import {
   mdiGrid,
   mdiCompareHorizontal,
   mdiBagPersonal,
+  mdiCalculatorVariant,
 } from '@mdi/js';
 
 export interface IMenu {
@@ -88,6 +89,12 @@ export const useSidebar = defineStore('useSidebar', () => {
       title: 'sidebar.codes',
     },
     {
+      url: '/calculator',
+      icon: mdiCalculatorVariant,
+      title: 'sidebar.calculator',
+      upcoming: true,
+    },
+    {
       url: '/teams',
       icon: mdiAccountGroup,
       title: 'sidebar.teams',
@@ -116,12 +123,12 @@ export const useSidebar = defineStore('useSidebar', () => {
       icon: mdiMap,
       title: 'sidebar.guides',
     },
-    {
-      url: '/comparison',
-      icon: mdiCompareHorizontal,
-      title: 'sidebar.comparison',
-      upcoming: true,
-    },
+    // {
+    //   url: '/comparison',
+    //   icon: mdiCompareHorizontal,
+    //   title: 'sidebar.comparison',
+    //   upcoming: true,
+    // },
     {
       icon: mdiBagPersonal,
       title: 'sidebar.database',

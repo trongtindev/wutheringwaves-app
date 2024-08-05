@@ -53,6 +53,9 @@ export const vuetifyConfig = createVuetify({
     VSelect: {
       variant: 'solo-filled',
     },
+    VAutocomplete: {
+      variant: 'solo-filled',
+    },
     VTextarea: {
       variant: 'solo-filled',
     },

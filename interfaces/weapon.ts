@@ -15,6 +15,7 @@ export type WeaponAcquisitionMethod =
 export interface IWeapon {
   id: number;
   slug: string;
+  icon: string;
   name: string;
   nameLocalized?: ILocalized;
   type: WeaponType;

@@ -36,10 +36,26 @@ export const useResources = defineStore('useResources', () => {
     return items;
   };
 
-  const weapons = async (): Promise<IWeapon[]> => {
+  const weapons = async (selector?: Partial<IWeapon>): Promise<IWeapon[]> => {
     const data = await import('~/resources/weapons.json');
     const clone = cloneObject(data.default.items);
-    return clone as IWeapon[];
+    const items = clone
+      .map((e) => {
+        return {
+          ...e,
+          icon: `/weapons/icons/${e.slug}.webp`,
+          upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
+        };
+      })
+      .filter((e) => {
+        if (selector) {
+          return Object.entries(selector).every(
+            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+          );
+        }
+        return true;
+      });
+    return items as IWeapon[];
   };
 
   const getWeaponData = async (slug: string): Promise<IWeaponData> => {
@@ -78,14 +94,37 @@ export const useResources = defineStore('useResources', () => {
           ...e,
           attribute: attribute || attributes[0],
           images: {
-            icon: e.images ? e.images.icon : `/characters/icons/${e.slug}.webp`,
-            portrait: e.images
-              ? e.images.portrait
-              : `/characters/portraits/${e.slug}.webp`,
+            icon: (() => {
+              if (e.images && e.images.icon) {
+                const icon = e.images.icon;
+                if (typeof icon === 'string') {
+                  return icon;
+                }
+              }
+              return `/characters/icons/${e.slug}.webp`;
+            })(),
+            cover: (() => {
+              if (e.images && e.images.cover) {
+                const cover = e.images.cover;
+                if (typeof cover === 'string') {
+                  return cover;
+                }
+              }
+              return `/characters/cover/${e.slug}.webp`;
+            })(),
+            portrait: (() => {
+              if (e.images && e.images.portrait) {
+                const portrait = e.images.portrait;
+                if (typeof portrait === 'string') {
+                  return portrait;
+                }
+              }
+              return `/characters/portraits/${e.slug}.webp`;
+            })(),
           },
         };
       });
-    return items;
+    return items as ICharacter[];
   };
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {

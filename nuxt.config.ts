@@ -92,68 +92,29 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
-    '/': {
-      prerender: true,
-    },
-    '/characters': {
-      prerender: true,
-    },
-    '/characters/**': {
-      prerender: true,
-    },
-    '/echoes': {
-      prerender: true,
-    },
-    '/echoes/**': {
-      prerender: true,
-    },
-    '/items': {
-      prerender: true,
-    },
-    '/items/**': {
-      prerender: true,
-    },
-    '/weapons': {
-      prerender: true,
-    },
-    '/weapons/**': {
-      prerender: true,
-    },
-    '/trophies': {
-      prerender: true,
-    },
-    '/trophies/**': {
-      prerender: true,
-    },
-    '/settings': {
-      robots: false,
-    },
-    '/convene-history/import': {
-      robots: false,
-    },
-    '/license': {
-      robots: false,
-    },
-    '/donation': {
-      robots: false,
-    },
-    '/guides': {
-      prerender: false,
-    },
-    '/guides/editor': {
-      robots: false,
-      prerender: false,
-    },
-    '/guides/rss': {
-      proxy: '/api/rss/guides',
-      prerender: false,
-    },
+    '/': { prerender: true },
+    '/characters': { prerender: true },
+    '/characters/**': { prerender: true },
+    '/echoes': { prerender: true },
+    '/echoes/**': { prerender: true },
+    '/items': { prerender: true },
+    '/items/**': { prerender: true },
+    '/weapons': { prerender: true },
+    '/weapons/**': { prerender: true },
+    '/trophies': { prerender: true },
+    '/trophies/**': { prerender: true },
+    '/settings': { robots: false },
+    '/convene-history/import': { robots: false },
+    '/license': { robots: false },
+    '/guides': { prerender: false },
+    '/guides/editor': { robots: false, prerender: false },
+    '/guides/rss': { proxy: '/api/rss/guides', prerender: false },
     '/commit': { robots: false, prerender: false },
     '/commit/**': { robots: false, prerender: false },
+    '/calculator/import': { robots: false, prerender: false },
+    '/calculator/inventory': { robots: false, prerender: false },
     // TODO: remove soon
-    '/echos/**': {
-      redirect: '/echoes/**',
-    },
+    '/echos/**': { redirect: '/echoes/**' },
   },
 
   sitemap: {
@@ -168,6 +129,8 @@ export default defineNuxtConfig({
       '/guides/editor',
       '/errors',
       '/commit',
+      '/calculator/import',
+      '/calculator/inventory',
     ],
     sources: [
       '/api/__sitemap__/characters',
@@ -260,7 +223,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: NITRO_PRERENDER,
-      routes: NITRO_PRERENDER ? ['/sitemap.xml'] : [],
+      routes: NITRO_PRERENDER ? ['/', '/sitemap.xml'] : [],
     },
   },
 

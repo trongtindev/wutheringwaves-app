@@ -4,9 +4,11 @@ import urlSlug from 'url-slug';
 import dayjs from 'dayjs';
 import type { ConveneDocumentConverted } from '~/interfaces/convene';
 import { mdiDotsGrid, mdiFormatListBulleted, mdiStar } from '@mdi/js';
+import JSConfetti from 'js-confetti';
 
 // uses
 const i18n = useI18n();
+const route = useRoute();
 const router = useRouter();
 const localePath = useLocalePath();
 const resources = useResources();
@@ -21,9 +23,19 @@ const filterBanner = ref();
 const filterRarity = ref<number[]>([5]);
 const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);
-
+const confetti = ref<JSConfetti>();
 // functions
+
 const initialize = () => {
+  if (route.query.addConfetti) {
+    confetti.value = new JSConfetti();
+    confetti.value.addConfetti();
+  }
+
+  loadStatistics();
+};
+
+const loadStatistics = () => {
   if (!account.active) return;
 
   const result = database.convenes
@@ -97,16 +109,17 @@ const onToggleRarity = (rarity: number) => {
 // changes
 watch(
   () => account.active,
-  () => initialize(),
+  () => loadStatistics(),
 );
 watch(() => filterBanner.value, updateFilter);
 watch(
   () => importConvene.onImported,
-  () => initialize(),
+  () => loadStatistics(),
 );
 
 // lifecycle
 onMounted(() => initialize());
+onBeforeUnmount(() => confetti.value?.destroyCanvas());
 
 // seo meta
 const title = i18n.t('meta.convene.history.title');

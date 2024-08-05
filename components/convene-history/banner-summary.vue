@@ -58,10 +58,6 @@ const initialize = async () => {
 
   guaranteedAt.value = 80;
   updateStatistics();
-
-  setTimeout(() => {
-    emits('on-updated');
-  }, 250);
 };
 
 const updateStatistics = async () => {
@@ -87,6 +83,10 @@ const updateStatistics = async () => {
     if (isNaN(luckiness.value)) luckiness.value = 0;
     luckinessPercentage.value = formatNumber(luckiness.value);
   }
+
+  setTimeout(() => {
+    emits('on-updated');
+  }, 250);
 };
 
 // changes
@@ -97,8 +97,6 @@ watch(
 
 // lifecycle
 onNuxtReady(initialize);
-
-onUpdated(() => emits('on-updated'));
 </script>
 
 <template>

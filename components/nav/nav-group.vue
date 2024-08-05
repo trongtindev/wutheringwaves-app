@@ -16,22 +16,16 @@ const title = computed(() => {
 <template>
   <v-list-group :value="title" :fluid="true">
     <template #activator="group">
-      <v-list-item v-bind="group.props" :title="title">
+      <v-list-item v-bind="group.props" :title="title" :nav="true">
         <template #prepend>
-          <v-sheet
-            class="mr-4 d-flex align-center justify-center"
-            :width="32"
-            :height="32"
-          >
+          <v-avatar :size="24">
             <v-img
               v-if="props.data.icon && props.data.icon.startsWith('/')"
               :src="props.data.icon"
               :alt="title"
-              :width="28"
-              :height="28"
             />
-            <v-icon v-else :icon="props.data.icon" :width="28" :height="28" />
-          </v-sheet>
+            <v-icon v-else :icon="props.data.icon" />
+          </v-avatar>
         </template>
       </v-list-item>
     </template>
