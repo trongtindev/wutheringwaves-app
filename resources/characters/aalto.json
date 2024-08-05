@@ -54,37 +54,17 @@
       "minLevel": 80
     }
   ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Moonlit Clouds"]
-    }
-  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Moonlit Clouds"] }],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "name": "#1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit DMG", "Crit Rate"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Aero DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Aero DMG", "Energy Regen"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Aero DMG"] },
+        { "cost": 3, "stats": ["Aero DMG", "Energy Regen"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -93,52 +73,18 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["jiyan"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["aalto"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina"]
-        }
+        { "role": "Main DPS", "items": ["jiyan"] },
+        { "role": "Sub DPS", "items": ["aalto"] },
+        { "role": "Healer", "items": ["verina"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "static-mist",
-
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "novaburst",
-
-      "rank": 1,
-      "different": 80.5
-    },
-    {
-      "item": "pistols-26",
-
-      "rank": 1,
-      "different": 79.8
-    },
-    {
-      "item": "undying-flame",
-
-      "rank": 1,
-      "different": 78.6
-    },
-    {
-      "item": "thunderbolt",
-
-      "rank": 1,
-      "different": 76.5
-    }
+    { "item": "static-mist", "rank": 1, "different": 100 },
+    { "item": "novaburst", "rank": 1, "different": 80.5 },
+    { "item": "pistols-26", "rank": 1, "different": 79.8 },
+    { "item": "undying-flame", "rank": 1, "different": 78.6 },
+    { "item": "thunderbolt", "rank": 1, "different": 76.5 }
   ],
   "birthday": "June 11th",
   "birthplace": "New Federation",
@@ -146,7 +92,8 @@
   "descriptionLocalized": {
     "id": "Aalto adalah seorang Broker Informasi yang misterius, terkenal karena sifatnya yang sulit ditangkap dan senyumnya yang ramah. Desas-desus mengatakan bahwa dia akan memberikan informasi apa pun dengan harga yang tepat.",
     "th": "Aalto เป็นนายหน้าข้อมูลลึกลับ รู้จักกันในเรื่องบุคลิกภาพที่ลึกลับและรอยยิ้มที่เป็นมิตร คำบอกเล่ากล่าวขานกันว่าเขาจะให้ข้อมูลใดๆ ตราบใดที่ราคาถูกต้อง",
-    "vi": "Aalto là một người môi giới thông tin bí ẩn, nổi tiếng với tính cách khó nắm bắt và nụ cười thân thiện. Lời đồn cho rằng anh ta sẽ cung cấp bất kỳ thông tin nào với giá phù hợp."
+    "vi": "Aalto là một người môi giới thông tin bí ẩn, nổi tiếng với tính cách khó nắm bắt và nụ cười thân thiện. Lời đồn cho rằng anh ta sẽ cung cấp bất kỳ thông tin nào với giá phù hợp.",
+    "uk": "Аалто - загадковий інформаційний брокер, відомий своїм невловимим характером і привітною посмішкою. Подейкують, що він надасть будь-яку інформацію за адекватною ціною."
   },
   "forte": [
     {
