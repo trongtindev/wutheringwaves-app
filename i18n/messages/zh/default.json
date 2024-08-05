@@ -35,8 +35,12 @@
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
     "skillPriority": "{name} Skill Priority",
+    "skillPriorityDescription": "Below you can find the order of leveling the abilities for {name}.",
     "teams": "Teams",
-    "notOwned": "Not owned"
+    "notOwned": "Not owned",
+    "information": "Character Information",
+    "stats": "Character Stats",
+    "ascensionMaterial": "{name} Ascension Material"
   },
   "codes": {
     "title": "Gift Codes",
@@ -153,7 +157,7 @@
     "reset": "Reset",
     "none": "None",
     "related": "Related",
-    "lastUpdatedOn": "Last updated {time}",
+    "lastUpdatedOn": "Last updated on: {time}",
     "views": "Views",
     "signInRequired": "Sign in Required",
     "signInRequiredMessage": "This feature which require sign in.",
@@ -174,13 +178,15 @@
     "contributor": "Contributor",
     "didYouKnow": "Did you know?",
     "aiGenerated": "AI generated",
-    "submit": "Submit"
+    "submit": "Submit",
+    "attribute": "Attribute",
+    "birthday": "Birthday",
+    "birthplace": "Birthplace"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
     "import": {
       "title": "Import Convenes",
-      "success": "导入成功",
       "processing": "处理中...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
@@ -598,7 +604,7 @@
     "teams": "团队",
     "leaderboards": "排行榜",
     "codes": "赠品代码",
-    "map": "地图",
+    "map": "Interactive Map",
     "guides": "教程",
     "items": "项目",
     "comparison": "比较",
@@ -621,7 +627,6 @@
       "useLocalData": "Use Local Data",
       "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
-    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "数据已同步！",
     "lastModified": "Last modified",
     "lastSynced": "Last synced: {0}",
