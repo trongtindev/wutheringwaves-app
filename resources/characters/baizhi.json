@@ -54,36 +54,16 @@
       "minLevel": 80
     }
   ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Rejuvenating Glow"]
-    }
-  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Rejuvenating Glow"] }],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Healing Bonus", "HP%"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Energy Regen"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Energy Regen"]
-        },
-        {
-          "cost": 1,
-          "stats": ["HP%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["HP%"]
-        }
+        { "cost": 4, "stats": ["Healing Bonus", "HP%"] },
+        { "cost": 3, "stats": ["Energy Regen"] },
+        { "cost": 3, "stats": ["Energy Regen"] },
+        { "cost": 1, "stats": ["HP%"] },
+        { "cost": 1, "stats": ["HP%"] }
       ]
     }
   ],
@@ -92,45 +72,25 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["jiyan"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["mortefi", "sanhua", "aalto"]
-        },
-        {
-          "role": "Healer",
-          "items": ["baizhi"]
-        }
+        { "role": "Main DPS", "items": ["jiyan"] },
+        { "role": "Sub DPS", "items": ["mortefi", "sanhua", "aalto"] },
+        { "role": "Healer", "items": ["baizhi"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "different": 100,
-      "item": "variation",
-      "rank": 1
-    },
-    {
-      "different": 100,
-      "item": "rectifier-25",
-      "rank": 1
-    },
-    {
-      "different": 100,
-      "item": "rectifier-of-voyager",
-      "rank": 5
-    }
+    { "different": 100, "item": "variation", "rank": 1 },
+    { "different": 100, "item": "rectifier-25", "rank": 1 },
+    { "different": 100, "item": "rectifier-of-voyager", "rank": 5 }
   ],
   "birthday": "September 10th",
   "birthplace": "Huanglong",
   "description": "Baizhi is a researcher in Remnant Ecoacoustics.\nBaizhi's once unfulfilled wish has now manifested as her loyal companion. The Remnant Creature You'tan is her source of healing powers, and a lifelong research focus.",
   "descriptionLocalized": {
-    "vi": "Bạch Chỉ là một nhà nghiên cứu tại Viện Sinh thái học Remnant.Ước mơ dang dở của Bạch Chỉ giờ đây đã trở thành người bạn đồng hành trung thành của cô. Sinh vật Remnant You'tan là nguồn gốc của sức mạnh chữa bệnh của cô, và cũng là tâm điểm nghiên cứu suốt đời của cô.",
     "id": "Baizhi adalah seorang peneliti di Ekokustik Sisa.Keinginan Baizhi yang dulunya tak terpenuhi kini telah menjadi kenyataan sebagai teman setianya. Makhluk Sisa You'tan adalah sumber kekuatan penyembuhannya, dan fokus penelitian seumur hidupnya.",
-    "th": "ไบจือ เป็นนักวิจัยด้านนิเวศวิทยาเสียงใน Remnantความปรารถนาที่ครั้งหนึ่งไม่สำเร็จของไบจือได้กลายเป็นเพื่อนคู่ใจของเธอแล้ว สัตว์ประหลาดจาก Remnant คุณตัน เป็นแหล่งที่มาของพลังรักษาของเธอ และเป็นหัวข้อการวิจัยตลอดชีวิตของเธอ"
+    "th": "ไบจือ เป็นนักวิจัยด้านนิเวศวิทยาเสียงใน Remnantความปรารถนาที่ครั้งหนึ่งไม่สำเร็จของไบจือได้กลายเป็นเพื่อนคู่ใจของเธอแล้ว สัตว์ประหลาดจาก Remnant คุณตัน เป็นแหล่งที่มาของพลังรักษาของเธอ และเป็นหัวข้อการวิจัยตลอดชีวิตของเธอ",
+    "vi": "Bạch Chỉ là một nhà nghiên cứu tại Viện Sinh thái học Remnant.Ước mơ dang dở của Bạch Chỉ giờ đây đã trở thành người bạn đồng hành trung thành của cô. Sinh vật Remnant You'tan là nguồn gốc của sức mạnh chữa bệnh của cô, và cũng là tâm điểm nghiên cứu suốt đời của cô.",
+    "uk": "Байчжі є дослідницею у сфері залишкової екоакустики. \nЇї колись нездійснене бажання тепер втілилося у її вірного супутника.Залишкова істота Ютан є джерелом її цілющих сил і об’єктом її довічних досліджень."
   },
   "forte": [
     {
@@ -212,9 +172,10 @@
   ],
   "quote": "No, I cannot place my faith in it, but my anticipation stems precisely from this distrust. A claim is always verifiable before it is discredited entirely.",
   "quoteLocalized": {
-    "vi": "Không, tôi không thể đặt niềm tin vào nó, nhưng sự háo hức của tôi xuất phát chính từ sự ngờ vực này. Một lời khẳng định luôn có thể được xác minh trước khi nó bị bác bỏ hoàn toàn.",
     "id": "Tidak, aku tidak bisa mempercayainya, tetapi antisipasiku berasal dari ketidakpercayaan ini. Klaim selalu dapat diverifikasi sebelum benar-benar didiskreditkan.",
-    "th": "Tidak, aku tidak bisa menaruh kepercayaanku padanya, tapi antisipasi ku muncul justru dari ketidakpercayaan ini. Klaim selalu dapat diverifikasi sebelum sepenuhnya didiskreditkan."
+    "th": "Tidak, aku tidak bisa menaruh kepercayaanku padanya, tapi antisipasi ku muncul justru dari ketidakpercayaan ini. Klaim selalu dapat diverifikasi sebelum sepenuhnya didiskreditkan.",
+    "vi": "Không, tôi không thể đặt niềm tin vào nó, nhưng sự háo hức của tôi xuất phát chính từ sự ngờ vực này. Một lời khẳng định luôn có thể được xác minh trước khi nó bị bác bỏ hoàn toàn.",
+    "uk": "Ні, я не можу повірити в це, але моє передчуття випливає саме з цієї недовіри. Твердження завжди піддається перевірці, перш ніж воно буде повністю дискредитоване."
   },
   "resonanceChain": [
     {
@@ -260,67 +221,78 @@
       "description": "When <strong>Euphonia</strong> is picked up, increase the Glacio DMG Bonus of all characters nearby by {0} for {1}s."
     }
   ],
-  "skillPriority": [
-    "Resonance Liberation",
-    "Resonance Skill",
-    "Forte Circuit",
-    "Intro Skill",
-    "Basic Attack"
-  ],
   "skills": [
     {
       "slug": "destined-promise",
       "name": "Destined Promise",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nBaizhi instructs You'tan to perform up to 4 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Heavy Attack</strong>\nBaizhi continuously consumes STA to command You'tan to attack enemies, dealing <strong class=\"color-glacio\">Glacio DMG</strong>. During Heavy Attack, Baizhi can command You'tan to move.\n \n<strong>Mid-air Attack</strong>\nBaizhi consumes STA and summons You’tan in mid-air to perform a Plunging Attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+      "description": "<strong>Basic Attack</strong>\nBaizhi instructs You'tan to perform up to 4 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Heavy Attack</strong>\nBaizhi continuously consumes STA to command You'tan to attack enemies, dealing <strong class=\"color-glacio\">Glacio DMG</strong>. During Heavy Attack, Baizhi can command You'tan to move.\n \n<strong>Mid-air Attack</strong>\nBaizhi consumes STA and summons You’tan in mid-air to perform a Plunging Attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.",
+      "nameLocalized": { "en": "Destined Promise", "uk": "Приречена обіцянка" }
     },
     {
       "slug": "emergency-plan",
       "name": "Emergency Plan",
       "type": "Resonance Skill",
-      "description": "Baizhi calls You'tan to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong> while immediately healing all characters on nearby teams."
+      "description": "Baizhi calls You'tan to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong> while immediately healing all characters on nearby teams.",
+      "nameLocalized": {
+        "en": "Emergency Plan",
+        "uk": "План надзвичайних ситуацій"
+      }
     },
     {
       "slug": "momentary-union",
       "name": "Momentary Union",
       "type": "Resonance Liberation",
-      "description": "Baizhi summons You'tan to heal all characters on nearby teams, generating <strong class=\"color-glacio\">4</strong> stacks of <strong>Remnant Entities</strong>.\n \n<strong>Remnant Entities</strong>\nRemnant Entities follow the active team members. <strong class=\"color-glacio\">1</strong> stacks of <strong>Remnant Entities</strong> are automatically consumed to attack the targets every <strong class=\"color-glacio\">2.5</strong>s, dealing <strong class=\"color-glacio\">Glacio DMG</strong> on hit while healing the active character on a nearby team."
+      "description": "Baizhi summons You'tan to heal all characters on nearby teams, generating <strong class=\"color-glacio\">4</strong> stacks of <strong>Remnant Entities</strong>.\n \n<strong>Remnant Entities</strong>\nRemnant Entities follow the active team members. <strong class=\"color-glacio\">1</strong> stacks of <strong>Remnant Entities</strong> are automatically consumed to attack the targets every <strong class=\"color-glacio\">2.5</strong>s, dealing <strong class=\"color-glacio\">Glacio DMG</strong> on hit while healing the active character on a nearby team.",
+      "nameLocalized": { "en": "Momentary Union", "uk": "Миттєвий союз" }
     },
     {
       "slug": "harmonic-range",
       "name": "Harmonic Range",
       "type": "Inherent Skill",
-      "description": "When Baizhi casts Resonance Skill <strong>Emergency Plan</strong>, You'tan generates a field of <strong>Euphonia</strong> that lasts for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s.\n \n<strong>Euphonia</strong>\nATK of the Resonators who picks up Euphonia is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."
+      "description": "When Baizhi casts Resonance Skill <strong>Emergency Plan</strong>, You'tan generates a field of <strong>Euphonia</strong> that lasts for <strong style=\"color: var(--theme-palette-color-1);\">15</strong>s.\n \n<strong>Euphonia</strong>\nATK of the Resonators who picks up Euphonia is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s.",
+      "nameLocalized": { "en": "Harmonic Range", "uk": "Гармонічний діапазон" }
     },
     {
       "slug": "stimulus-feedback",
       "name": "Stimulus Feedback",
       "type": "Inherent Skill",
-      "description": "Baizhi's <strong>Heavy Attack</strong> on hit heals the character with the lowest HP on a nearby team by <strong style=\"color: var(--theme-palette-color-1);\">0.25%</strong> of her Max HP."
+      "description": "Baizhi's <strong>Heavy Attack</strong> on hit heals the character with the lowest HP on a nearby team by <strong style=\"color: var(--theme-palette-color-1);\">0.25%</strong> of her Max HP.",
+      "nameLocalized": {
+        "en": "Stimulus Feedback",
+        "uk": "Зворотний зв'язок стимулу"
+      }
     },
     {
       "slug": "overflowing-frost",
       "name": "Overflowing Frost",
       "type": "Intro Skill",
-      "description": "Baizhi calls You'tan to perform 1 plunging attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong> while healing all characters on a nearby team."
+      "description": "Baizhi calls You'tan to perform 1 plunging attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong> while healing all characters on a nearby team.",
+      "nameLocalized": { "en": "Overflowing Frost", "uk": "Надмірний Лід" }
     },
     {
       "slug": "cycle-of-life",
       "name": "Cycle of Life",
       "type": "Forte Circuit",
-      "description": "<strong>You'tan</strong>\nA Remnant Creature that answers to Baizhi’s mind and desires while sharing all her stats. You’tan goes back to Baizhi when Baizhi dodges.\n \n<strong>Concentration</strong>\nBaizhi consumes all \"Concentrations\" when casting <strong>Heavy Attack</strong> or Resonance Skill <strong>Emergency Plan</strong> to continuously heal all characters on nearby teams. Each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" consumed provides 1 healing. The healings happen every <strong style=\"color: var(--theme-palette-color-1);\">2</strong>s.\nWhen Baizhi consumes \"Concentration\" to cast <strong>Heavy Attack</strong>, Baizhi additionally restores Concerto Energy and Resonance Energy;\nWhen Baizhi consumes \"Concentration\" to cast Resonance Skill <strong>Emergency Plan</strong>, Baizhi additionally restores Concerto Energy.\n \n<strong>Forte Gauge: Concentration</strong>\nBaizhi can hold up to <strong style=\"color: var(--theme-palette-color-1);\">4</strong> \"Concentrations\".\nBaizhi obtains <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" for every <strong>Basic Attack</strong> on hit."
+      "description": "<strong>You'tan</strong>\nA Remnant Creature that answers to Baizhi’s mind and desires while sharing all her stats. You’tan goes back to Baizhi when Baizhi dodges.\n \n<strong>Concentration</strong>\nBaizhi consumes all \"Concentrations\" when casting <strong>Heavy Attack</strong> or Resonance Skill <strong>Emergency Plan</strong> to continuously heal all characters on nearby teams. Each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" consumed provides 1 healing. The healings happen every <strong style=\"color: var(--theme-palette-color-1);\">2</strong>s.\nWhen Baizhi consumes \"Concentration\" to cast <strong>Heavy Attack</strong>, Baizhi additionally restores Concerto Energy and Resonance Energy;\nWhen Baizhi consumes \"Concentration\" to cast Resonance Skill <strong>Emergency Plan</strong>, Baizhi additionally restores Concerto Energy.\n \n<strong>Forte Gauge: Concentration</strong>\nBaizhi can hold up to <strong style=\"color: var(--theme-palette-color-1);\">4</strong> \"Concentrations\".\nBaizhi obtains <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Concentration\" for every <strong>Basic Attack</strong> on hit.",
+      "nameLocalized": { "en": "Cycle of Life", "uk": "Цикл Життя" }
     },
     {
       "slug": "skillful-cooking",
       "name": "Skillful Cooking",
       "type": "Inherent Skill",
-      "description": "Has a chance to produce special dishes when cooking"
+      "description": "Has a chance to produce special dishes when cooking",
+      "nameLocalized": {
+        "en": "Skillful Cooking",
+        "uk": "Майстерне Приготування"
+      }
     },
     {
       "slug": "rejuvinating-flow",
       "name": "Rejuvinating Flow",
       "type": "Outro Skill",
-      "description": ""
+      "description": "",
+      "nameLocalized": { "en": "Rejuvinating Flow", "uk": "Потік Оновлення" }
     }
   ],
   "stats": { "hp": 12812, "def": 1002, "atk": 212, "energy": 175 }
