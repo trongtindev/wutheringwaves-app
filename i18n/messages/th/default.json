@@ -8,7 +8,7 @@
     "notificationTitle": "กำลังนำเข้าประวัติ...",
     "notificationMessage": "กำลังดึงประวัติสำหรับบัญชี {0}",
     "done": {
-      "title": "Import successfully!"
+      "title": "นำเข้าสำเร็จ!"
     }
   },
   "banner": {
@@ -25,18 +25,22 @@
     "introduction": "ใน Wuthering Waves <span class='text-rarity{rarity}'>{name}</span> เป็น <span class='text-rarity{rarity}'>{rarity}★</span> ตัวละครหายากจากองค์ประกอบ {attribute} ที่ใช้ อาวุธประเภท {weaponType}",
     "lastUpdatedOn": "{name} โปรไฟล์ได้รับการอัปเดตครั้งล่าสุดเมื่อ {time}",
     "build": "{name} Build",
-    "calculations": "Calculations",
+    "calculations": "การคำนวณ",
     "overview": "ภาพรวม",
     "bestMainEchoes": "Best Main Echoes {name}",
-    "moreBuildGuides": "More Build Guides",
-    "bestWeapons": "Best Weapons {name}",
+    "moreBuildGuides": "คำแนะนำการสร้างเพิ่มเติม",
+    "bestWeapons": "อาวุธที่ดีที่สุด {name}",
     "bestEchoSets": "Best Echo Sets",
     "bestEchoStats": "Best Echo Stats",
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "แผนที่วัสดุเสด็จขึ้นสู่สวรรค์",
     "skillPriority": "{name} ลำดับความสำคัญของทักษะ",
+    "skillPriorityDescription": "ด้านล่างนี้คุณจะพบลำดับการปรับระดับความสามารถของ {name}",
     "teams": "ทีม",
-    "notOwned": "Not owned"
+    "notOwned": "Not owned",
+    "information": "ข้อมูลตัวละคร",
+    "stats": "สถิติตัวละคร",
+    "ascensionMaterial": "{name} Ascension Material"
   },
   "codes": {
     "title": "รหัสของขวัญ",
@@ -75,11 +79,11 @@
     "timeout": "Connection timeout, please wait a moment and try again later",
     "invalidLink": "Invalid link, please check it again",
     "invalidData": "Invalid data returned from API, try again later",
-    "signIn": "Sign in",
-    "signOut": "Sign out",
+    "signIn": "เข้าสู่ระบบ",
+    "signOut": "ออกจากระบบ",
     "back": "Back",
     "cancel": "Cancel",
-    "import": "Import",
+    "import": "นำเข้า",
     "search": "Search",
     "all": "All",
     "echo": "Echo",
@@ -90,8 +94,8 @@
     "copyLink": "Copy link",
     "exportAsImage": "Export as Image",
     "saveChanges": "Save changes",
-    "weapon": "Weapon",
-    "character": "Character",
+    "weapon": "อาวุธ",
+    "character": "อักขระ",
     "type": "Type",
     "sort": "Sort",
     "title": "Title",
@@ -153,82 +157,84 @@
     "reset": "ตั้งใหม่",
     "none": "ไม่มี",
     "related": "ที่เกี่ยวข้อง",
-    "lastUpdatedOn": "อัปเดตล่าสุด {time}",
+    "lastUpdatedOn": "อัปเดตล่าสุดเมื่อ: {time}",
     "views": "Views",
-    "signInRequired": "Sign in Required",
-    "signInRequiredMessage": "This feature which require sign in.",
+    "signInRequired": "จำเป็นต้องลงชื่อเข้าใช้",
+    "signInRequiredMessage": "คุณลักษณะนี้ซึ่งต้องลงชื่อเข้าใช้",
     "error": "Error",
-    "rolesRequired": "Roles required",
-    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "rolesRequired": "บทบาทที่จำเป็น",
+    "rolesRequiredAnyMessage": "คุณต้องมีบทบาทอย่างใดอย่างหนึ่งต่อไปนี้เพื่อใช้ฟีเจอร์นี้",
     "getRoles": "Get roles",
-    "recent": "Recent",
+    "recent": "ล่าสุด",
     "banner": "Banner",
     "confirm": "Confirm",
     "background": "Background",
     "foreground": "Foreground",
     "upload": "Upload",
     "gallery": "Gallery",
-    "translateThisPage": "Translate this page",
-    "description": "Description",
-    "howToUse": "How to use {0}?",
+    "translateThisPage": "แปลภาษาหน้านี้",
+    "description": "คำอธิบาย",
+    "howToUse": "{0} ใช้งานอย่างไร?",
     "contributor": "Contributor",
-    "didYouKnow": "Did you know?",
+    "didYouKnow": "เธอรู้รึเปล่า?",
     "aiGenerated": "AI generated",
-    "submit": "Submit"
+    "submit": "Submit",
+    "attribute": "คุณลักษณะ",
+    "birthday": "วันเกิด",
+    "birthplace": "บ้านเกิด"
   },
   "convene": {
-    "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
+    "message": "Wuthering Waves จะลบประวัติการประชุมหลังจากผ่านไป 6 เดือน สำรองข้อมูลประวัติการประชุมของคุณทันที!",
     "import": {
-      "title": "Import Convenes",
-      "success": "Import successfully!",
-      "processing": "Processing...",
+      "title": "นำเข้าคอนเวนชั่น",
+      "processing": "กำลังประมวลผล...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
         "android": {
           "default": {
             "1": {
-              "title": "Follow our Video Tutorial"
+              "title": "ปฏิบัติตามวิดีโอสอนของเรา"
             },
             "2": {
-              "title": "Paste the copied text here"
+              "title": "วางข้อความที่คัดลอกไว้ที่นี่"
             }
           }
         },
         "pc": {
           "default": {
             "1": {
-              "title": "Open Wuthering Waves in this PC then open the convene history in the game and wait it to load."
+              "title": "เปิด Wuthering Waves ในพีซีเครื่องนี้ จากนั้นเปิดประวัติการประชุมในเกมและรอให้โหลด"
             },
             "2": {
-              "title": "Press START on your keyboard, then search for Powershell",
-              "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
+              "title": "กด START บนแป้นพิมพ์ของคุณ จากนั้นค้นหา Powershell",
+              "content": "เปิด {windowsPowerShell} และเรียกใช้คำสั่งต่อไปนี้ (วางเส้นทางเกมของคุณหากถูกถาม)"
             },
             "3": {
-              "title": "Paste the Convene Record URL into the box below."
+              "title": "วาง URL บันทึกการประชุมลงในช่องด้านล่าง"
             }
           }
         }
       },
       "faqs": {
         "1": {
-          "title": "What if I import many different accounts?",
-          "content": "Don't worry, when you import multiple accounts we will automatically split them and you will see an account switch button appear."
+          "title": "จะเกิดอะไรขึ้นถ้าฉันนำเข้าบัญชีที่แตกต่างกันหลายบัญชี?",
+          "content": "ไม่ต้องกังวล เมื่อคุณนำเข้าหลายบัญชี เราจะแยกบัญชีเหล่านั้นโดยอัตโนมัติ และคุณจะเห็นปุ่มเปลี่ยนบัญชีปรากฏขึ้น"
         },
         "2": {
           "title": "Why not updating the record?",
           "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
         },
         "3": {
-          "title": "Is my account safe?",
-          "content": "Yes, through this import method it will not be possible to interfere with your account. And finally, this website is open source on github you can see and evaluate it yourself, if you still don't trust you can skip this feature and use other features."
+          "title": "บัญชีของฉันปลอดภัยหรือไม่?",
+          "content": "ใช่ ด้วยวิธีนำเข้านี้ จะไม่สามารถรบกวนบัญชีของคุณได้ และสุดท้าย เว็บไซต์นี้เป็นโอเพ่นซอร์สบน GitHub คุณสามารถดูและประเมินได้ด้วยตัวเอง หากคุณยังไม่ไว้วางใจ คุณสามารถข้ามคุณสมบัตินี้และใช้คุณสมบัติอื่น ๆ ได้"
         }
       }
     },
     "history": {
       "title": "Pity Tracker",
-      "empty": "You currently have no Convene History."
+      "empty": "ขณะนี้คุณไม่มีประวัติการประชุม"
     },
-    "guaranteedAt": "Guaranteed at {0}",
+    "guaranteedAt": "รับประกันที่ {0}",
     "lifetimePulls": "Lifetime Pulls",
     "pity": "Pity",
     "rank": {
@@ -331,16 +337,16 @@
   },
   "items": {
     "title": "Items",
-    "howToObtain": "How to obtain {0}?",
-    "howToUnlock": "How to unlock {0}?",
-    "cookingIngredients": "Cooking Ingredients",
-    "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
+    "howToObtain": "จะรับ {0} ได้อย่างไร?",
+    "howToUnlock": "จะปลดล็อค {0} ได้อย่างไร?",
+    "cookingIngredients": "ส่วนผสมในการทำอาหาร",
+    "obtainedFromConvenes": "{item} เป็นวัสดุเปิดใช้งาน Resonance Chain ที่ได้รับจาก <b>Convenes</b> ใช้เพื่อปรับระดับ {character} Resonance Chain"
   },
   "leaderboards": {
-    "title": "Leaderboards"
+    "title": "ลีดเดอร์บอร์ด"
   },
   "map": {
-    "title": "Interactive Map",
+    "title": "แผนที่เชิงโต้ตอบ",
     "locations": {
       "dimForest": "Dim Forest",
       "portCityOfGuixu": "Port City of Guixu",
@@ -382,7 +388,7 @@
     "categories": {
       "selfCreatedPin": "พินที่สร้างขึ้นเอง",
       "levelUpMaterial": "วัสดุยกระดับ",
-      "waypoints": "Waypoints",
+      "waypoints": "เวย์พอยต์",
       "specialItems": "รายการพิเศษ",
       "chests": "ทรวงอก",
       "experience": "ประสบการณ์",
@@ -405,28 +411,28 @@
         "description": "เมื่อเปิดใช้งาน หมุดที่ทำเครื่องหมายไว้จะถูกซ่อนไว้ในหน้าแรก"
       }
     },
-    "markAsNotFound": "Mark as Not Found",
-    "markAsFound": "Mark as Found",
+    "markAsNotFound": "ทำเครื่องหมายว่าไม่พบ",
+    "markAsFound": "ทำเครื่องหมายว่าพบแล้ว",
     "guides": {
       "multipleAccounts": {
-        "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+        "description": "หากต้องการจัดเก็บที่ทำเครื่องหมายไว้ระหว่างบัญชีต่างๆ คุณเพียงแค่ต้องนำเข้าข้อมูลการประชุม จากนั้นคุณจะเห็นปุ่มสลับบัญชีปรากฏขึ้น"
       },
       "pinCluster": {
-        "description": "By default, the Pin Cluster feature will be enabled. You can turn it off in settings."
+        "description": "ตามค่าเริ่มต้น คุณลักษณะ Pin Cluster จะถูกเปิดใช้งาน คุณสามารถปิดได้ในการตั้งค่า"
       }
     },
     "pins": {
       "resonanceNexus": "Resonance Nexus",
       "resonanceBeacon": "Resonance Beacon",
-      "chest": "Chest",
+      "chest": "หน้าอก",
       "tidalHeritages": "Tidal Heritages",
       "sonanceCasket": "Sonance Casket",
       "windchimer": "Windchimer",
       "viewpoint": "Viewpoint",
       "bolbfly": "Bolbfly",
       "inspectableBox": "Inspectable Box",
-      "book": "Book",
-      "sideQuest": "Side Quest",
+      "book": "หนังสือ",
+      "sideQuest": "เควสด้านข้าง",
       "cave": "ถ้ำ",
       "frostbug": "Frostbug",
       "exileMember": "Exile Member",
@@ -440,24 +446,24 @@
       "greenPitLizard": "Green Pit Lizard",
       "azureLizard": "Azure Lizard",
       "silverBandedLizard": "Silver-Banded Lizard",
-      "fish": "Fish",
+      "fish": "ปลา",
       "goldenRingedDragonfly": "Golden-ringed Dragonfly",
-      "birdEgg": "Bird Egg",
-      "fowlMeat": "Fowl Meat",
-      "craneFeathers": "Crane feathers",
-      "rawMeat": "Raw Meat",
+      "birdEgg": "ไข่นก",
+      "fowlMeat": "เนื้อไก่",
+      "craneFeathers": "ขนเครน",
+      "rawMeat": "เนื้อดิบ",
       "dewvetch": "Dewvetch"
     }
   },
   "meta": {
     "title": "Wuthering Waves",
-    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "description": "ตัวติดตามที่น่าสงสาร รายการสิ่งที่ต้องทำ ฐานข้อมูล การวิเคราะห์ สถิติทั่วโลก และอีกมากมายสำหรับ Wuthering Waves!",
     "index": {
       "title": "Your personal tracker"
     },
     "timeline": {
       "title": "Event timeline calendar",
-      "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
+      "description": "ปฏิทินไทม์ไลน์ของกิจกรรม Wuthering Waves ดูเมื่อลำดับกิจกรรมจะเริ่มและสิ้นสุดด้วยไทม์ไลน์ที่เรียบร้อย"
     },
     "echoes": {
       "title": "Echoes",
@@ -530,7 +536,7 @@
     },
     "leaderboards": {
       "title": "กระดานผู้นำ",
-      "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
+      "description": "กระดานจัดอันดับความเสียหายของ Wuthering Waves การแชร์โปรไฟล์ การสร้างการ์ดตัวละคร และอีกมากมาย"
     }
   },
   "privacyPolicy": {
@@ -548,21 +554,21 @@
       "title": "บัญชี",
       "autoImportConveneHistory": "ประวัติการประชุมนำเข้าอัตโนมัติ",
       "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
-      "empty": "To add an account, you just need to import convene history."
+      "empty": "หากต้องการเพิ่มบัญชี คุณเพียงแค่ต้องนำเข้าประวัติการประชุม"
     },
     "roles": {
-      "title": "Your roles",
-      "refreshRoles": "Refresh roles",
-      "link": "Verify and Link",
-      "unlink": "Unlink",
-      "message": "You have successfully linked to Discord.",
+      "title": "บทบาทของคุณ",
+      "refreshRoles": "รีเฟรชบทบาท",
+      "link": "ยืนยันและเชื่อมโยง",
+      "unlink": "ยกเลิกการเชื่อมโยง",
+      "message": "คุณเชื่อมโยงกับ Discord สำเร็จแล้ว",
       "setupGuide1": "After joining Discord, you need to send a direct message with the content below to the BOT named \"{name}\".",
-      "setupGuide2": "You will receive the verify code from BOT, copy and paste it here.",
-      "verifyCode": "Verify code",
-      "emptyRoles": "You don't have any roles yet!"
+      "setupGuide2": "คุณจะได้รับรหัสยืนยันจาก BOT คัดลอกและวางที่นี่",
+      "verifyCode": "ตรวจสอบรหัส",
+      "emptyRoles": "คุณยังไม่มีบทบาทใดๆ เลย!"
     },
     "syncData": {
-      "title": "Sync data",
+      "title": "ซิงค์ข้อมูล",
       "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
     },
     "exportData": {
@@ -573,14 +579,14 @@
     "importData": {
       "title": "Import data",
       "introduce": "You can import data from other sites.",
-      "import": "Import"
+      "import": "นำเข้า"
     },
     "eraseData": {
       "title": "Erase All Data",
       "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
       "eraseNow": "Erase Now",
       "confirm": {
-        "title": "DANGER!!!",
+        "title": "อันตราย!!!",
         "message": "Your data will clear in your browser and cloud sync."
       }
     }
@@ -598,7 +604,7 @@
     "teams": "Teams",
     "leaderboards": "ลีดเดอร์บอร์ด",
     "codes": "โค้ดแพ็ก",
-    "map": "แผนที่",
+    "map": "แผนที่เชิงโต้ตอบ",
     "guides": "คู่มือแนะนำ",
     "items": "ไอเทม",
     "comparison": "Comparison",
@@ -606,10 +612,10 @@
     "convene": "Convene",
     "conveneGlobalStats": "Global Stats",
     "conveneImport": "นำเข้าประวัติ",
-    "conveneShare": "Share history"
+    "conveneShare": "แบ่งปันประวัติ"
   },
   "sync": {
-    "title": "Cloud Sync",
+    "title": "การซิงค์บนคลาวด์",
     "conflict": {
       "title": "ความขัดแย้งของข้อมูลของคุณ",
       "message": "ข้อมูลในเครื่องของคุณในเบราว์เซอร์นี้ขัดแย้งกับข้อมูลที่จัดเก็บไว้ใน Cloud!",
@@ -621,7 +627,6 @@
       "useLocalData": "Use Local Data",
       "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
-    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "ซิงค์ข้อมูลแล้ว!",
     "lastModified": "Last modified",
     "lastSynced": "ซิงค์ครั้งล่าสุด: {0}",
@@ -629,18 +634,18 @@
     "pull": "Pull"
   },
   "teams": {
-    "title": "Teams"
+    "title": "ทีม"
   },
   "tierList": {
-    "title": "Tier list"
+    "title": "เทียร์ลิสต์"
   },
   "timeline": {
-    "title": "Timeline",
-    "startsIn": "Starts {0}",
-    "endsIn": "Ends {0}",
+    "title": "ไทม์ไลน์",
+    "startsIn": "เริ่ม {0}",
+    "endsIn": "สิ้นสุด {0}",
     "current": "กิจกรรมปัจจุบัน",
     "upcoming": "กิจกรรมที่กำลังจะมาถึง",
-    "summary": "Events summary",
+    "summary": "รายละเอียดกิจกรรม",
     "localTime": "Show as local time",
     "checkoutOfficialUrl": "ตรวจสอบเว็บไซต์อย่างเป็นทางการ",
     "ended": "จบแล้ว"
@@ -658,14 +663,14 @@
     "title": "Trophies"
   },
   "updater": {
-    "title": "New update!",
-    "message": "Click refresh to get the new update",
+    "title": "อัพเดทใหม่!",
+    "message": "คลิกรีเฟรชเพื่อรับการอัปเดตใหม่",
     "whatsNew": "What's new",
     "later": "Later",
-    "refresh": "Refresh"
+    "refresh": "รีเฟรช"
   },
   "weapons": {
-    "title": "Weapons",
+    "title": "อาวุธ",
     "ranks": "Ranks",
     "alert": "นำเข้าประวัติการประชุมเพื่อดูอาวุธที่มีอยู่แล้ว",
     "lastUpdatedOn": "{name} อาวุธได้รับการอัปเดตครั้งล่าสุดเมื่อ {time}",
