@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useDisplay } from 'vuetify';
 import type { ICharacter, ICharacterData } from '~/interfaces/character';
 import type { IEcho } from '~/interfaces/echo';
 import type { IWeapon } from '~/interfaces/weapon';
@@ -11,7 +12,11 @@ const props = defineProps<{
 }>();
 
 // uses
+const display = useDisplay();
 const localePath = useLocalePath();
+const skillDict = Object.fromEntries(
+  (props.data.skills || []).map((e) => [e.type, e]),
+);
 
 // computed
 const nameLocalized = computed(() => {
@@ -54,113 +59,144 @@ const bestEchoStats = computed(() => {
 
 <template>
   <div>
-    <!-- Best Echo Sets -->
-    <v-card v-if="props.data.skillPriority" class="mt-2">
-      <v-card-title tag="h2">
+    <!-- skillPriority -->
+    <section-title>
+      <template #title>
         {{ $t('characters.skillPriority', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+      </template>
 
-      <v-card-text>
+      <template #subtitle>
+        {{ $t('characters.skillPriorityDescription', { name: nameLocalized }) }}
+      </template>
+    </section-title>
+
+    <div class="mt-2">
+      <div v-if="props.data.skillPriority">
         <v-row>
-          <v-col v-for="(element, index) in skillPriority" :key="index">
-            <v-card class="rounded border fill-height">
-              <v-card-text
-                class="d-flex align-center justify-center w-100 h-100 text-center"
-              >
-                {{ element }}
-              </v-card-text>
+          <v-col
+            v-for="(element, index) in skillPriority"
+            :key="index"
+            :cols="display.smAndDown.value ? 12 : undefined"
+          >
+            <v-card class="pt-1 pb-1">
+              <v-list-item>
+                <template #prepend>
+                  <v-avatar class="rounded border">
+                    <v-img>
+                      <v-sheet
+                        class="bg-info position-absolute bottom-0 right-0 pl-1 pr-1 rounded-ts"
+                      >
+                        {{ (index + 1).toString() }}
+                      </v-sheet>
+                    </v-img>
+                  </v-avatar>
+                </template>
+
+                <v-list-item-title>
+                  {{ element }}
+                </v-list-item-title>
+                <v-list-item-subtitle v-if="skillDict[element]">
+                  {{ skillDict[element].name }}
+                </v-list-item-subtitle>
+              </v-list-item>
             </v-card>
           </v-col>
         </v-row>
-      </v-card-text>
-    </v-card>
+      </div>
+      <v-alert v-else :text="$t('common.upcoming')" />
+    </div>
 
     <!-- Best Weapons -->
-    <v-card v-if="props.data.bestWeapons" class="mt-2">
-      <v-card-title tag="h2">
+    <section-title>
+      <template #title>
         {{ $t('characters.bestWeapons', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+      </template>
+    </section-title>
 
-      <v-card-text class="pa-0 pt-2 pb-2">
-        <v-row>
-          <v-col
-            v-for="(element, index) in bestWeapons"
-            :key="index"
-            cols="12"
-            md="6"
-          >
-            <v-list-item :to="localePath(`/weapons/${element.item.slug}`)">
-              <template #prepend>
-                <v-avatar
-                  :class="`border-rarity${element.item.rarity}`"
-                  :image="`/weapons/icons/${element.item.slug}.webp`"
-                  class="border"
-                  rounded
-                />
-              </template>
-              <v-list-item-title :class="`text-rarity${element.item.rarity}`">
-                {{ element.item.name }} (S{{ element.rank }})
-              </v-list-item-title>
+    <div class="mt-2">
+      <div v-if="props.data.bestWeapons">
+        <v-card class="pt-2 pb-2">
+          <v-row>
+            <v-col
+              v-for="(element, index) in bestWeapons"
+              :key="index"
+              cols="12"
+              md="6"
+            >
+              <v-list-item :to="localePath(`/weapons/${element.item.slug}`)">
+                <template #prepend>
+                  <v-avatar
+                    :class="`border-rarity${element.item.rarity}`"
+                    :image="`/weapons/icons/${element.item.slug}.webp`"
+                    class="border"
+                    rounded
+                  />
+                </template>
+                <v-list-item-title :class="`text-rarity${element.item.rarity}`">
+                  {{ element.item.name }} (S{{ element.rank }})
+                </v-list-item-title>
 
-              <template #append>
-                <v-chip
-                  :color="element.different >= 100 ? 'success' : undefined"
-                >
-                  {{ element.different }}%
-                </v-chip>
-              </template>
-            </v-list-item>
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+                <template #append>
+                  <v-chip
+                    :color="element.different >= 100 ? 'success' : undefined"
+                  >
+                    {{ element.different }}%
+                  </v-chip>
+                </template>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-card>
+      </div>
+      <v-alert v-else :text="$t('common.upcoming')" />
+    </div>
 
     <!-- Best Echo Sets -->
-    <v-card class="mt-2">
-      <v-card-title tag="h2">
+    <div class="mt-2">
+      <h2 class="text-h6 mb-2">
         {{ $t('characters.bestEchoSets', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+      </h2>
 
-      <v-card-text v-if="props.data.bestEchoSets" class="pa-0 pt-2 pb-2">
-        <v-row v-for="(element, index) in bestEchoSets" :key="index">
-          <v-col v-for="(subElement, j) in element.items" :key="j">
-            <v-list-item>
-              <template #prepend>
-                <v-avatar class="border" rounded />
-              </template>
+      <div v-if="props.data.bestEchoSets">
+        <v-card class="pt-2 pb-2">
+          <v-row v-for="(element, index) in bestEchoSets" :key="index">
+            <v-col v-for="(subElement, j) in element.items" :key="j">
+              <v-list-item>
+                <template #prepend>
+                  <v-avatar rounded>
+                    <v-img
+                      :src="subElement.icon"
+                      :style="`background: ${subElement.colors.background}; border: 3px solid ${subElement.colors.border};`"
+                    />
+                  </v-avatar>
+                </template>
 
-              <v-list-item-title>
-                {{ subElement }}
-              </v-list-item-title>
+                <v-list-item-title>
+                  {{ subElement.name }}
+                </v-list-item-title>
 
-              <template #append>
-                <v-chip
-                  :color="element.different >= 100 ? 'success' : undefined"
-                >
-                  {{ element.different }}%
-                </v-chip>
-              </template>
-            </v-list-item>
-          </v-col>
-        </v-row>
-      </v-card-text>
-
-      <v-card-text v-else>
-        {{ $t('common.upcoming') }}
-      </v-card-text>
-    </v-card>
+                <template #append>
+                  <v-chip
+                    :color="element.different >= 100 ? 'success' : undefined"
+                  >
+                    {{ element.different }}%
+                  </v-chip>
+                </template>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-card>
+      </div>
+      <v-alert v-else :text="$t('common.upcoming')" />
+    </div>
 
     <!-- Best Echo Stats -->
-    <v-card class="mt-2">
-      <v-card-title tag="h2">
+    <div class="mt-2">
+      <h2 class="text-h6 mb-2">
         {{ $t('characters.bestEchoStats', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+      </h2>
 
-      <v-card-text v-if="props.data.bestEchoStats">
+      <div v-if="props.data.bestEchoStats">
         <div
           v-for="(element, index) in bestEchoStats"
           :key="index"
@@ -172,28 +208,28 @@ const bestEchoStats = computed(() => {
                 <v-card-title>
                   {{ subElement.cost }} {{ $t('common.cost') }}
                 </v-card-title>
-                <v-card-text>
-                  {{ subElement.stats }}
+                <v-card-text class="d-flex ga-2">
+                  <v-chip
+                    v-for="(e, k) in subElement.stats"
+                    :key="k"
+                    :text="e"
+                  />
                 </v-card-text>
               </v-card>
             </v-col>
           </v-row>
         </div>
-      </v-card-text>
-
-      <v-card-text v-else>
-        {{ $t('common.upcoming') }}
-      </v-card-text>
-    </v-card>
+      </div>
+      <v-alert v-else :text="$t('common.upcoming')" />
+    </div>
 
     <!-- Suggested Echos -->
-    <v-card class="mt-2">
-      <v-card-title tag="h2">
+    <div class="mt-2">
+      <h2 class="text-h6 mb-2">
         {{ $t('characters.bestMainEchoes', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+      </h2>
 
-      <v-card-text v-if="props.data.bestMainEchoes">
+      <div v-if="props.data.bestMainEchoes">
         <v-row>
           <v-col
             v-for="(element, index) in bestMainEchoes"
@@ -205,11 +241,9 @@ const bestEchoStats = computed(() => {
             <echo-card :item="element" />
           </v-col>
         </v-row>
-      </v-card-text>
+      </div>
 
-      <v-card-text v-else>
-        {{ $t('common.upcoming') }}
-      </v-card-text>
-    </v-card>
+      <v-alert v-else :text="$t('common.upcoming')" />
+    </div>
   </div>
 </template>

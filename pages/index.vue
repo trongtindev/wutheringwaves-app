@@ -11,10 +11,11 @@ const localePath = useLocalePath();
 
 // fetch
 const weapons = await resources.getWeapons();
-const characters = await resources.getCharacters();
-
 const upcomingWeapons = weapons.filter((e) => e.upcoming);
-const upcomingCharacters = characters.filter((e) => e.upcoming);
+const upcomingCharacters = await resources.getCharacters({
+  hidden: false,
+  upcoming: true,
+});
 
 // seo meta
 const title = i18n.t('meta.index.title');

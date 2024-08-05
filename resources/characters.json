@@ -231,6 +231,10 @@
       "rarity": 5,
       "weapon": "Sword",
       "attribute": "Havoc",
+      "images": {
+        "icon": "/characters/icons/rover.webp",
+        "portrait": "/characters/portraits/rover.webp"
+      },
       "modifiedTime": "2024-08-04T13:32:01.446Z",
       "publishedTime": "2024-05-23T00:00"
     },
@@ -242,6 +246,10 @@
       "weapon": "Sword",
       "attribute": "Electro",
       "upcoming": true,
+      "images": {
+        "icon": "/characters/icons/rover.webp",
+        "portrait": "/characters/portraits/rover.webp"
+      },
       "publishedTime": "2024-07-08T12:10:50.660Z",
       "modifiedTime": "2024-08-04T13:32:01.446Z"
     },
@@ -250,6 +258,8 @@
       "slug": "the-shorekeeper",
       "name": "The Shorekeeper",
       "rarity": 5,
+      "weapon": "Rectifier",
+      "attribute": "Spectro",
       "version": 1.3,
       "upcoming": true,
       "publishedTime": "2024-07-08T12:10:50.660Z",
@@ -262,6 +272,7 @@
       "rarity": 4,
       "version": 1.3,
       "upcoming": true,
+      "attribute": "Glacio",
       "publishedTime": "2024-07-08T12:10:50.660Z",
       "modifiedTime": "2024-08-04T13:32:01.446Z"
     }

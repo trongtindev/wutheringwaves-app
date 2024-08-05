@@ -2,6 +2,7 @@
 import type { ICharacterRCData } from '~/interfaces/character';
 
 const props = defineProps<{
+  index: number;
   data: ICharacterRCData;
 }>();
 
@@ -23,13 +24,19 @@ const descriptionLocalized = computed(() => {
 <template>
   <v-card class="fill-height">
     <v-sheet class="pt-2">
-      <v-list-item :title="$t(props.data.name)" :subtitle="$t(props.data.idx)">
+      <v-list-item :title="$t(props.data.name)">
         <template #prepend>
           <v-avatar class="border rounded">
             <v-img
               :src="`/resonance_chain/icons/${props.data.slug}.webp`"
               :alt="props.data.name"
-            />
+            >
+              <v-sheet
+                class="bg-info position-absolute bottom-0 right-0 pl-1 pr-1 rounded-ts"
+              >
+                {{ (props.index + 1).toString() }}
+              </v-sheet>
+            </v-img>
           </v-avatar>
         </template>
       </v-list-item>

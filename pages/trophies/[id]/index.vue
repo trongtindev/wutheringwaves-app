@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { SITE_URL } = useRuntimeConfig().public;
+const { SITE_URL, SITE_NAME } = useRuntimeConfig().public;
 
 // uses
 const i18n = useI18n();
@@ -30,6 +30,28 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
+});
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  author: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon-512-maskable.png`,
+  },
+  url: `${SITE_URL}/trophies/${item.slug}`,
+  image: ogImage,
+  thumbnailUrl: ogImage,
+  description,
+  dateCreated: item.publishedTime,
+  datePublished: item.publishedTime,
+  dateModified: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',

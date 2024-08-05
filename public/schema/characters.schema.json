@@ -9,6 +9,17 @@
           "id": { "type": "integer" },
           "slug": { "type": "string" },
           "name": { "type": "string" },
+          "images": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "type": "string"
+              },
+              "portrait": {
+                "type": "string"
+              }
+            }
+          },
           "nameLocalized": { "type": "object" },
           "rarity": { "type": "integer" },
           "weapon": {

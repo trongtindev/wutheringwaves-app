@@ -1,11 +1,8 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
-import { mdiCake, mdiMapMarker, mdiSword, mdiPistol } from '@mdi/js';
 import { useGoTo } from 'vuetify';
 
-// Property 'formatNumber' does not exist on type
-const format = formatNumber;
-const { SITE_URL } = useRuntimeConfig().public;
+const { SITE_URL, SITE_NAME } = useRuntimeConfig().public;
 
 // uses
 const i18n = useI18n();
@@ -31,44 +28,10 @@ const tab = ref('overview');
 
 // computed
 const pictures = [
-  `/characters/portraits/${item.slug}.webp`,
+  item.images.portrait,
   ...(data.splashArt ? [`/characters/splash-art/${item.slug}.webp`] : []),
+  item.images.icon,
 ];
-
-const stats = computed(() => {
-  if (!data.stats) return [];
-
-  return [
-    {
-      label: 'atk',
-      value: data.stats.atk,
-    },
-    {
-      label: 'def',
-      value: data.stats.def,
-    },
-    {
-      label: 'hp',
-      value: data.stats.hp,
-    },
-    {
-      label: 'critRate',
-      value: 5,
-    },
-    {
-      label: 'critDMG',
-      value: 150,
-    },
-  ];
-});
-
-const weaponIcon = computed(() => {
-  switch (item.weapon) {
-    case 'Pistols':
-      return mdiPistol;
-  }
-  return mdiSword;
-});
 
 const nameLocalized = computed(() => {
   // if (data.nameLocalized && data.nameLocalized[i18n.locale.value]) {
@@ -118,7 +81,7 @@ const description = i18n.t('meta.characters.id.description', {
   name: nameLocalized.value,
   attribute: item.attribute.name,
 });
-const ogImage = `${SITE_URL}/characters/icons/${item.slug}.webp`;
+const ogImage = `${SITE_URL}${item.images.icon}`;
 
 useAppBar().title = i18n.t('characters.title');
 useHead({ title });
@@ -128,14 +91,25 @@ useSeoMeta({
   ogImage: ogImage,
   description,
   ogDescription: description,
-  articlePublishedTime: item.publishedTime,
-  articleModifiedTime: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: title,
+  author: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon-512-maskable.png`,
+  },
+  url: `${SITE_URL}/characters/${item.slug}`,
+  image: ogImage,
   thumbnailUrl: ogImage,
+  description,
   dateCreated: item.publishedTime,
   datePublished: item.publishedTime,
   dateModified: item.modifiedTime,
@@ -143,7 +117,7 @@ useJsonld({
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: `${SITE_URL}/characters/icons/${item.slug}.webp`,
+  contentUrl: `${SITE_URL}/${item.images.icon}`,
   license: `${SITE_URL}/license`,
   acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
   creditText: 'WutheringWaves.app',
@@ -224,45 +198,47 @@ if (headers['if-modified-since']) {
 
       <v-card-text>
         <v-row>
-          <v-col cols="12" md="5">
-            <a
-              :href="pictures[showPicture]"
-              :title="nameLocalized"
-              target="_blank"
-            >
-              <v-img
-                :aspect-ratio="4 / 3"
-                :src="pictures[showPicture]"
-                :alt="nameLocalized"
-              />
-            </a>
-
-            <v-slide-group
-              v-if="pictures.length > 1"
-              v-model="showPicture"
-              show-arrows
-            >
-              <v-slide-group-item
-                v-for="(image, index) in pictures"
-                :key="index"
-                v-slot="{ isSelected, toggle, selectedClass }"
+          <v-col cols="12" md="6">
+            <div>
+              <a
+                :href="pictures[showPicture]"
+                :title="nameLocalized"
+                target="_blank"
               >
-                <v-card
-                  :class="['ma-2', selectedClass]"
-                  :height="100"
-                  :width="100"
-                  :disabled="isSelected"
-                  @click="toggle"
+                <v-img
+                  :aspect-ratio="4 / 3"
+                  :src="pictures[showPicture]"
+                  :alt="nameLocalized"
+                />
+              </a>
+
+              <v-slide-group
+                v-if="pictures.length > 1"
+                v-model="showPicture"
+                show-arrows
+              >
+                <v-slide-group-item
+                  v-for="(image, index) in pictures"
+                  :key="index"
+                  v-slot="{ isSelected, toggle, selectedClass }"
                 >
-                  <v-scale-transition>
-                    <v-img :src="image" :cover="true" :aspect-ratio="1" />
-                  </v-scale-transition>
-                </v-card>
-              </v-slide-group-item>
-            </v-slide-group>
+                  <v-card
+                    :class="['ma-2', selectedClass]"
+                    :height="100"
+                    :width="100"
+                    :disabled="isSelected"
+                    @click="toggle"
+                  >
+                    <v-scale-transition>
+                      <v-img :src="image" :cover="true" :aspect-ratio="1" />
+                    </v-scale-transition>
+                  </v-card>
+                </v-slide-group-item>
+              </v-slide-group>
+            </div>
           </v-col>
 
-          <v-col cols="12" md="7">
+          <v-col cols="12" md="6">
             <div>
               <h2
                 class="text-body-2"
@@ -289,42 +265,8 @@ if (headers['if-modified-since']) {
               :innerHTML="descriptionLocalized"
             />
 
-            <!-- stats -->
-            <div v-if="stats.length > 0" class="mt-2">
-              <v-sheet
-                v-for="(element, index) in stats"
-                :key="index"
-                :class="{ 'mt-2': index > 0 }"
-                class="pa-2 border rounded"
-              >
-                <v-row>
-                  <v-col cols="3">
-                    {{ $t(`common.${element.label}`) }}
-                  </v-col>
-                  <v-col> {{ format(element.value) }} </v-col>
-                </v-row>
-              </v-sheet>
-            </div>
-
-            <!-- summary -->
-            <div class="d-flex flex-wrap ga-2 mt-2">
-              <v-chip
-                v-if="data.birthplace"
-                :text="$t(data.birthplace)"
-                :prepend-icon="mdiMapMarker"
-              />
-              <v-chip
-                v-if="data.birthday"
-                :text="data.birthday"
-                :prepend-icon="mdiCake"
-              />
-              <v-chip
-                v-if="item.weapon"
-                :text="$t(item.weapon)"
-                :prepend-icon="weaponIcon"
-              />
-              <v-chip :text="$t(item.attribute.name)" />
-            </div>
+            <!-- information -->
+            <characters-information :item :data />
           </v-col>
         </v-row>
       </v-card-text>
@@ -332,7 +274,7 @@ if (headers['if-modified-since']) {
 
     <!-- Tab views -->
     <div id="overview">
-      <characters-profile :item="item" :data="data" />
+      <characters-overview :item="item" :data="data" />
     </div>
     <div id="build">
       <characters-build
@@ -352,28 +294,28 @@ if (headers['if-modified-since']) {
     <characters-ascension :item="item" :data="data" />
 
     <!-- moreBuildGuides -->
-    <v-card class="mt-2">
-      <v-card-title>
+    <section-title>
+      <template #title>
         {{ $t('characters.moreBuildGuides') }}
-      </v-card-title>
+      </template>
+    </section-title>
 
-      <v-card-text>
-        <v-row>
-          <v-col
-            v-for="(element, index) in moreBuildGuides"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="2"
-          >
-            <character-card
-              :item="element"
-              :custom-name="`${element.name} Build`"
-            />
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+    <div>
+      <v-row>
+        <v-col
+          v-for="(element, index) in moreBuildGuides"
+          :key="index"
+          cols="6"
+          sm="4"
+          md="2"
+        >
+          <character-card
+            :item="element"
+            :custom-name="`${element.name} Build`"
+          />
+        </v-col>
+      </v-row>
+    </div>
 
     <!-- comments -->
     <comments class="mt-2" :channel="`character.${item.slug}`" />

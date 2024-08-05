@@ -10,6 +10,7 @@ import type { IEcho, IEchoData } from '~/interfaces/echo';
 import type { ITrophy } from '~/interfaces/trophy';
 import type { ITimeline } from '~/interfaces/timeline';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
+import type { ISonata } from '~/interfaces/sonata';
 
 export const useResources = defineStore('useResources', () => {
   const getBanners = async (selector?: IBanner) => {
@@ -76,6 +77,12 @@ export const useResources = defineStore('useResources', () => {
         return {
           ...e,
           attribute: attribute || attributes[0],
+          images: {
+            icon: e.images ? e.images.icon : `/characters/icons/${e.slug}.webp`,
+            portrait: e.images
+              ? e.images.portrait
+              : `/characters/portraits/${e.slug}.webp`,
+          },
         };
       });
     return items;
@@ -83,7 +90,18 @@ export const useResources = defineStore('useResources', () => {
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {
     const data = await import(`~/resources/characters/${slug}.json`);
-    const clone = JSON.parse(JSON.stringify(data.default));
+    const clone = cloneObject(data.default);
+    const sonataEffects = await getSonataEffects();
+
+    if (clone.bestEchoSets) {
+      clone.bestEchoSets = clone.bestEchoSets.map((bestEchoSet) => {
+        bestEchoSet.items = bestEchoSet.items.map((e) => {
+          return sonataEffects.find((sonataEffect) => sonataEffect.name === e);
+        });
+
+        return bestEchoSet;
+      });
+    }
     return clone;
   };
 
@@ -169,6 +187,22 @@ export const useResources = defineStore('useResources', () => {
     return data.default.items;
   };
 
+  const getSonataEffects = async (
+    selector?: Partial<ISonata>,
+  ): Promise<ISonata[]> => {
+    const data = await import('~/resources/sonata.json');
+    const clone = cloneObject(data.default.items);
+    const items = clone.filter((e) => {
+      if (selector) {
+        return Object.entries(selector).every(
+          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+        );
+      }
+      return true;
+    });
+    return items;
+  };
+
   return {
     banners: getBanners,
     getBanners,
@@ -187,5 +221,6 @@ export const useResources = defineStore('useResources', () => {
     getTrophyData,
     getTimeline,
     getAttributes,
+    getSonataEffects,
   };
 });

@@ -22,7 +22,7 @@ const descriptionLocalized = computed(() => {
 </script>
 
 <template>
-  <v-card class="fill-height">
+  <v-card>
     <v-sheet class="pt-2">
       <v-list-item :title="$t(props.data.name)" :subtitle="$t(props.data.type)">
         <template #prepend>

@@ -30,17 +30,16 @@ const bestTeams = computed(() => {
 
 <template>
   <!-- Suggested Echos -->
-  <v-card class="mt-2">
-    <v-card-title tag="h2">
+  <div class="mt-2">
+    <h2 class="text-h6 mb-2">
       {{ $t('characters.bestTeams', { name: nameLocalized }) }}
-    </v-card-title>
-    <v-divider />
+    </h2>
 
-    <v-card-text v-if="props.data.bestTeams">
-      <v-sheet
+    <div v-if="props.data.bestTeams">
+      <div
         v-for="(element, index) in bestTeams"
         :key="index"
-        class="d-flex flex-wrap ga-2 justify-center"
+        class="d-flex flex-wrap ga-2"
       >
         <v-sheet
           v-for="(subElement, j) in element.items"
@@ -65,21 +64,9 @@ const bestTeams = computed(() => {
             </v-sheet>
           </v-sheet>
         </v-sheet>
-      </v-sheet>
+      </div>
+    </div>
 
-      <!-- <v-table class="border rounded">
-        <thead>
-          <tr>
-            <td class="text-center">Main DPS</td>
-            <td class="text-center">Sub DPS</td>
-            <td class="text-center">Healer</td>
-          </tr>
-        </thead>
-      </v-table> -->
-    </v-card-text>
-
-    <v-card-text v-else>
-      {{ $t('common.upcoming') }}
-    </v-card-text>
-  </v-card>
+    <v-alert v-else :text="$t('common.upcoming')" />
+  </div>
 </template>

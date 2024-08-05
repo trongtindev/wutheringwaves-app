@@ -35,8 +35,12 @@
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
     "skillPriority": "{name} Skill Priority",
+    "skillPriorityDescription": "Below you can find the order of leveling the abilities for {name}.",
     "teams": "Teams",
-    "notOwned": "Not owned"
+    "notOwned": "Not owned",
+    "information": "Character Information",
+    "stats": "Character Stats",
+    "ascensionMaterial": "{name} Ascension Material"
   },
   "codes": {
     "title": "Gift Codes",
@@ -174,7 +178,10 @@
     "contributor": "Contributor",
     "didYouKnow": "Did you know?",
     "aiGenerated": "AI generated",
-    "submit": "Submit"
+    "submit": "Submit",
+    "attribute": "Attribute",
+    "birthday": "Birthday",
+    "birthplace": "Birthplace"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -597,7 +604,7 @@
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "Gift Codes",
-    "map": "Map",
+    "map": "Interactive Map",
     "guides": "Guides",
     "items": "Items",
     "comparison": "Comparison",

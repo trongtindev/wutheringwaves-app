@@ -1,4 +1,5 @@
 import type { ILocalized } from './common';
+import type { ISonata } from './sonata';
 import type { WeaponType } from './weapon';
 
 export interface IAttribute {
@@ -37,6 +38,10 @@ export interface ICharacter {
   modifiedTime: string;
   publishedTime: string;
   hidden?: boolean;
+  images: {
+    icon: string;
+    portrait: string;
+  };
 }
 
 export interface ICharacterSkillData {
@@ -102,7 +107,7 @@ export interface ICharacterData {
     different: number;
   }[];
   bestEchoSets?: {
-    items: string[];
+    items: ISonata[];
     different: number;
   }[];
   bestMainEchoes?: string[];

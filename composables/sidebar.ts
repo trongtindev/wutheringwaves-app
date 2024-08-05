@@ -76,7 +76,6 @@ export const useSidebar = defineStore('useSidebar', () => {
       url: '/map',
       icon: mdiMap,
       title: 'sidebar.map',
-      beta: true,
     },
     {
       url: '/characters',
@@ -116,7 +115,6 @@ export const useSidebar = defineStore('useSidebar', () => {
       url: '/guides',
       icon: mdiMap,
       title: 'sidebar.guides',
-      beta: true,
     },
     {
       url: '/comparison',

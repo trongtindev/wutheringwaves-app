@@ -22,7 +22,7 @@ const nameLocalized = computed(() => {
   <v-card :to="localePath(`/characters/${props.item.slug}`)">
     <v-img
       :aspect-ratio="portrait ? 3 / 4 : 1"
-      :src="`/characters/${portrait ? 'portraits' : 'icons'}/${props.item.slug}.webp`"
+      :src="portrait ? item.images.portrait : item.images.icon"
       :alt="item.name"
       class="align-end h-100"
       cover

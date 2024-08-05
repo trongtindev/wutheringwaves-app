@@ -1,14 +1,13 @@
 <script setup lang="ts">
 // Property 'formatNumber' does not exist on type
 const parse = parseContent;
-const { SITE_URL } = useRuntimeConfig().public;
+const { SITE_URL, SITE_NAME } = useRuntimeConfig().public;
 
 // uses
 const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
 const localePath = useLocalePath();
-const runtimeConfig = useRuntimeConfig();
 const headers = useRequestHeaders(['If-Modified-Since']);
 const event = useRequestEvent();
 
@@ -76,14 +75,25 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage,
-  articlePublishedTime: item.publishedTime,
-  articleModifiedTime: item.modifiedTime,
 });
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: title.value,
+  author: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon-512-maskable.png`,
+  },
+  url: `${SITE_URL}/items/${item.slug}`,
+  image: ogImage,
   thumbnailUrl: ogImage,
+  description: description.value,
   dateCreated: item.publishedTime,
   datePublished: item.publishedTime,
   dateModified: item.modifiedTime,

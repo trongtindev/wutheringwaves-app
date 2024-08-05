@@ -66,6 +66,9 @@ export const vuetifyConfig = createVuetify({
       class: 'text-body-2',
       variant: 'tonal',
     },
+    VTable: {
+      density: 'comfortable',
+    },
   },
   aliases: {
     VCardBtn: VBtn,

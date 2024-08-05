@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CardPoolType, type IBanner } from '@/interfaces/banner';
+import { CardPoolType } from '@/interfaces/banner';
 import urlSlug from 'url-slug';
 import dayjs from 'dayjs';
 import type { ConveneDocumentConverted } from '~/interfaces/convene';
@@ -17,7 +17,7 @@ const importConvene = useImportConvene();
 // states
 const banners = await resources.banners();
 const convenes = ref<ConveneDocumentConverted[]>([]);
-const filterBanner = ref<IBanner | null>(null);
+const filterBanner = ref();
 const filterRarity = ref<number[]>([5]);
 const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);

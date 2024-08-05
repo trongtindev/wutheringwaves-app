@@ -207,7 +207,6 @@ export default defineNuxtConfig({
     compilation: {
       strictMessage: false,
     },
-    lazy: true,
   },
 
   vite: {
