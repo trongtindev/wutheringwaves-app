@@ -8,7 +8,7 @@
     "notificationTitle": "Імпортуємо історію...",
     "notificationMessage": "Витягаємо історію для облікового запису {0}.",
     "done": {
-      "title": "Import successfully!"
+      "title": "Імпортовано успішно!"
     }
   },
   "banner": {
@@ -35,8 +35,12 @@
     "bestTeams": "Кращі команди з {name}",
     "ascensionMaterialsMap": "Мапа матеріалів піднесення",
     "skillPriority": "Пріоритет навичок {name}",
+    "skillPriorityDescription": "Below you can find the order of leveling the abilities for {name}.",
     "teams": "Команди",
-    "notOwned": "Немає"
+    "notOwned": "Немає",
+    "information": "Інформація про персонажа",
+    "stats": "Характеристики персонажа",
+    "ascensionMaterial": "{name} Ascension Material"
   },
   "codes": {
     "title": "Подарункові коди",
@@ -106,7 +110,7 @@
     "checkAll": "Відзначити все",
     "clear": "Очистити",
     "retry": "Повторити",
-    "upcoming": "Незабаром",
+    "upcoming": "Скоро",
     "upcomingContent": "Ця сторінка про майбутній контент.",
     "upcomingContentMessage": "Майбутній контент може бути змінений і може не відображати кінцевий продукт.",
     "upcomingWeapons": "Майбутня зброя",
@@ -153,7 +157,7 @@
     "reset": "Скинути",
     "none": "Нічого",
     "related": "Схожі",
-    "lastUpdatedOn": "Останнє оновлення: {time}",
+    "lastUpdatedOn": "Востаннє оновлено: {time}",
     "views": "Переглянути",
     "signInRequired": "Необхідно ввійти",
     "signInRequiredMessage": "Ця функція потребує входу в систему.",
@@ -174,13 +178,15 @@
     "contributor": "Редактор",
     "didYouKnow": "Чи знали?",
     "aiGenerated": "Згенеровано ШІ",
-    "submit": "Підтвердити"
+    "submit": "Підтвердити",
+    "attribute": "Attribute",
+    "birthday": "День народження",
+    "birthplace": "Birthplace"
   },
   "convene": {
     "message": "Wuthering Waves видалить історію скликань через 6 місяців, створіть резервну копію історії скликань зараз!",
     "import": {
       "title": "Імпортувати Скликання",
-      "success": "Імпорт успішний!",
       "processing": "Обробка...",
       "invalidLink": "Невірне посилання, будь ласка, перевірте його знову",
       "guides": {
@@ -270,15 +276,15 @@
     "download": "Завантажити"
   },
   "donate": {
-    "title": "Donate",
+    "title": "Підтримати",
     "messages": {
-      "1": "Thank you! Hope you find it useful.",
-      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
-      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
-      "4": "If you like coding, you can also contributing to the project on Github."
+      "1": "Дякую! Сподіваюся, це проєкт вам стане в пригоді.",
+      "2": "Я роблю цей сайт для розваги, коли у мене є вільний час. Я буду додавати нові функції та оновлювати дані з кожним оновленням, тому що мені подобається досліджувати гру, і я намагаюся максимально ефективно використовувати її можливості.",
+      "3": "Якщо ви хочете зробити пожертву, вона обов'язково допоможе покращити сайт і мотивуватиме мене додавати більше контенту! Дуже дякую, сподіваюся, вам сподобається!",
+      "4": "Якщо ви любите кодування, ви також можете зробити внесок до проєкту на Github."
     },
     "buttons": {
-      "kofi": "Support me on Ko-fi"
+      "kofi": "Підтримати мене на Ko-fi"
     }
   },
   "echoes": {
@@ -380,39 +386,39 @@
       "lakeDeerslumber": "Lake Deerslumber"
     },
     "categories": {
-      "selfCreatedPin": "Self-Created Pin",
+      "selfCreatedPin": "Свої відмітки",
       "levelUpMaterial": "Матеріал підняття рівня",
-      "waypoints": "Waypoints",
-      "specialItems": "Special Items",
+      "waypoints": "Точки маршруту",
+      "specialItems": "Особливі предмети",
       "chests": "Скрині",
       "experience": "Досвід",
-      "puzzleChest": "Puzzle Chest",
-      "localSpecialties": "Local Specialties",
+      "puzzleChest": "Скриня з головоломки",
+      "localSpecialties": "Місцеві дивинки",
       "enemies": "Вороги",
       "ores": "Руди",
       "animals": "Тварини",
-      "landmarks": "Landmarks",
+      "landmarks": "Орієнтири",
       "echoes": "Відлуння"
     },
     "settings": {
       "title": "Налаштування мапи",
       "pinCluster": {
-        "title": "Pin Cluster",
-        "description": "When enabled, pins of the same category will be clustered to reduce lag."
+        "title": "Об'єднання міток",
+        "description": "Якщо ввімкнено, мітки однієї категорії будуть групуватися, щоб зменшити навантаження."
       },
       "hideMarkedPins": {
-        "title": "Hide Marked Pins",
-        "description": "When enabled, marked pins will be hidden on the home page."
+        "title": "Приховати позначені мітки",
+        "description": "Якщо ввімкнено, позначені мітки будуть приховані на домашній сторінці."
       }
     },
     "markAsNotFound": "Позначити як не знайдено",
     "markAsFound": "Позначити як знайдене",
     "guides": {
       "multipleAccounts": {
-        "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+        "description": "Щоб зберегти позначки між різними обліковими записами, вам просто потрібно імпортувати дані скликання, після чого ви побачите кнопку перемикання облікових записів."
       },
       "pinCluster": {
-        "description": "By default, the Pin Cluster feature will be enabled. You can turn it off in settings."
+        "description": "За замовчуванням функцію Об'єднання міток буде ввімкнено. Ви можете вимкнути її в налаштуваннях."
       }
     },
     "pins": {
@@ -598,7 +604,7 @@
     "teams": "Команди",
     "leaderboards": "Таблиці лідерів",
     "codes": "Подарункові коди",
-    "map": "Мапа",
+    "map": "Інтерактивна мапа",
     "guides": "Ґайди",
     "items": "Предмети",
     "comparison": "Порівняння",
@@ -621,7 +627,6 @@
       "useLocalData": "Використовувати локальні дані",
       "smallSizeWarning": "ОБЕРЕЖНО, РОЗМІР НАБАГАТО МЕНШИЙ!"
     },
-    "introduce": "Ми використовуємо хмарне сховище Google для збереження та синхронізації ваших даних. Ми можемо читати і записувати лише файли, створені цим сайтом.",
     "dataSynced": "Дані синхронізовано!",
     "lastModified": "Остання зміна: {0}",
     "lastSynced": "Востаннє синхронізовано: {0}",
@@ -639,7 +644,7 @@
     "startsIn": "Починається {0}",
     "endsIn": "Завершується {0}",
     "current": "Поточна версія",
-    "upcoming": "Незабаром",
+    "upcoming": "Скоро",
     "summary": "Підсумок подій",
     "localTime": "Показувати як місцевий час",
     "checkoutOfficialUrl": "Переглянути офіційний сайт",

@@ -35,8 +35,12 @@
     "bestTeams": "{name} Best Teams",
     "ascensionMaterialsMap": "Ascension Materials Map",
     "skillPriority": "{name} Skill Priority",
+    "skillPriorityDescription": "Below you can find the order of leveling the abilities for {name}.",
     "teams": "Teams",
-    "notOwned": "Not owned"
+    "notOwned": "Not owned",
+    "information": "Character Information",
+    "stats": "Character Stats",
+    "ascensionMaterial": "{name} Ascension Material"
   },
   "codes": {
     "title": "Gift Codes",
@@ -153,7 +157,7 @@
     "reset": "Reset",
     "none": "None",
     "related": "Related",
-    "lastUpdatedOn": "Last updated {time}",
+    "lastUpdatedOn": "Last updated on: {time}",
     "views": "Views",
     "signInRequired": "Sign in Required",
     "signInRequiredMessage": "This feature which require sign in.",
@@ -174,13 +178,15 @@
     "contributor": "Contributor",
     "didYouKnow": "Did you know?",
     "aiGenerated": "AI generated",
-    "submit": "Submit"
+    "submit": "Submit",
+    "attribute": "Attribute",
+    "birthday": "Birthday",
+    "birthplace": "Birthplace"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
     "import": {
       "title": "Import Convenes",
-      "success": "Import successfully!",
       "processing": "Processing...",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
@@ -598,7 +604,7 @@
     "teams": "Teams",
     "leaderboards": "Leaderboards",
     "codes": "선물 코드",
-    "map": "맵",
+    "map": "Interactive Map",
     "guides": "안내선",
     "items": "아이템",
     "comparison": "Comparison",
@@ -621,7 +627,6 @@
       "useLocalData": "Use Local Data",
       "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
     },
-    "introduce": "We uses the Google Cloud Storage to save and sync your data. We can only read and write files that this site created.",
     "dataSynced": "Data has been synced!",
     "lastModified": "Last modified",
     "lastSynced": "Last synced: {0}",
