@@ -6,7 +6,7 @@ const calculator = useCalculator();
 const levels = ref<{ [key: number]: number }>({ 0: 0, 1: 0, 2: 0 });
 
 const setLevel = (index: number, value: number) => {
-  calculator.participants[index].sequences = value;
+  calculator.participants[index].characterSequences = value;
 };
 </script>
 
@@ -36,7 +36,13 @@ const setLevel = (index: number, value: number) => {
           thumb-label
           hide-details
           @update:model-value="(val) => setLevel(index, val)"
-        />
+        >
+          <template #label>
+            <div style="width: 100px">
+              {{ $t('common.level') }}
+            </div>
+          </template>
+        </v-slider>
 
         <v-expansion-panels
           v-if="!element.character || !element.character.data.resonanceChain"
@@ -52,7 +58,7 @@ const setLevel = (index: number, value: number) => {
             v-for="(item, j) in element.character.data.resonanceChain"
             :key="j"
             :item
-            :disabled="j >= element.sequences"
+            :disabled="j >= element.characterSequences"
           />
         </v-expansion-panels>
       </v-col>

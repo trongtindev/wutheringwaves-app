@@ -16,7 +16,8 @@ const resource = useResources();
 const calculator = useCalculator();
 
 // states
-const level = ref(props.item.level);
+const level = ref(props.item.weaponLevel);
+const rank = ref(props.item.weaponRank);
 const weapon = ref(props.item.weapon ? props.item.weapon.item : null);
 
 // computed
@@ -46,12 +47,18 @@ const stats = computed(() => {
   ];
 });
 
+const description = computed(() => {
+  if (!props.item.weapon) return null;
+  if (!props.item.weapon.data.skill) return null;
+  return props.item.weapon.data.skill.description;
+});
+
 // changes
 watch(
   () => weapon.value,
   async (value) => {
     if (!value) {
-      calculator.participants[props.index].character = undefined;
+      calculator.participants[props.index].weapon = undefined;
       return;
     }
 
@@ -63,12 +70,12 @@ watch(
   },
 );
 
-// watch(
-//   () => level.value,
-//   (value) => {
-//     calculator.participants[props.index].level = value;
-//   },
-// );
+watch(
+  () => level.value,
+  (value) => {
+    calculator.participants[props.index].weaponLevel = value;
+  },
+);
 </script>
 
 <template>
@@ -95,35 +102,67 @@ watch(
       :item-title="(e) => e.name"
       :return-object="true"
       :clearable="true"
+      :placeholder="$t('common.selectWeapon')"
       hide-details
       class="mt-4 mb-2"
     >
-      <template #item="{ item, props }">
-        <v-list-item v-bind="props">
+      <template #item="{ item: element, props: _props }">
+        <v-list-item v-bind="_props">
           <template #prepend>
             <v-avatar
-              :image="item.raw.icon"
-              :class="`bg-rarity${item.raw.rarity}`"
+              :image="element.raw.icon"
+              :class="`bg-rarity${element.raw.rarity}`"
             />
           </template>
 
           <template #append>
-            {{ item.raw.type }}
+            {{ element.raw.type }}
           </template>
         </v-list-item>
       </template>
     </v-autocomplete>
 
-    <!-- <v-slider
+    <!-- level -->
+    <v-slider
       v-model="level"
       :step="1"
       :min="1"
       :max="90"
       :label="$t('common.level')"
-      :disabled="!item.character"
+      :disabled="!item.weapon"
       thumb-label
       hide-details
-    /> -->
+    >
+      <template #label>
+        <div style="width: 100px">
+          {{ $t('common.level') }}
+        </div>
+      </template>
+    </v-slider>
+
+    <!-- rank -->
+    <v-slider
+      v-model="rank"
+      :step="1"
+      :min="1"
+      :max="5"
+      :disabled="!item.weapon"
+      thumb-label
+      hide-details
+    >
+      <template #label>
+        <div style="width: 100px">
+          {{ $t('common.rank') }}
+        </div>
+      </template>
+    </v-slider>
+
+    <!-- description -->
+    <v-card v-if="description" class="mt-2">
+      <v-card-text>
+        <div :innerHTML="description" />
+      </v-card-text>
+    </v-card>
 
     <!-- stats -->
     <!-- <v-table class="border rounded mt-2">

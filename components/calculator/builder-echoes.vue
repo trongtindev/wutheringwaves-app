@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { mdiPlus } from '@mdi/js';
-import type { ICharacter } from '~/interfaces/character';
-
 // uses
 const resource = useResources();
 const calculator = useCalculator();
+
+// fetch
+const echoes = await resource.getEchoes();
 </script>
 
 <template>
@@ -21,6 +21,10 @@ const calculator = useCalculator();
       </v-col>
     </v-row>
 
-    <v-row> </v-row>
+    <v-row>
+      <v-col v-for="(item, index) in calculator.participants" :key="index">
+        <calculator-builder-echo-item :index :item :echoes />
+      </v-col>
+    </v-row>
   </div>
 </template>

@@ -38,6 +38,7 @@ export interface IWeaponData {
   skill: {
     params: string[];
     description: string;
+    descriptionLocalized: ILocalized;
   };
   ascensions: {
     cost: {

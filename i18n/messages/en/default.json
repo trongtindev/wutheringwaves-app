@@ -206,7 +206,10 @@
     "mainDPS": "Main DPS",
     "subDPS": "Sub DPS",
     "healer": "Healer",
-    "uploadData": "Upload data"
+    "uploadData": "Upload data",
+    "selectWeapon": "Select weapon",
+    "selectCharacter": "Select character",
+    "rank": "Rank"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",

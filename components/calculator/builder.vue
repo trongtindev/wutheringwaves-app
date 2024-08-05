@@ -9,7 +9,7 @@
     <!-- weapons -->
     <calculator-builder-weapon />
 
-    <!-- weapons -->
+    <!-- echoes -->
     <calculator-builder-echoes />
 
     <!-- rotation -->

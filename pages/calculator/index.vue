@@ -21,5 +21,7 @@ onNuxtReady(() => {
   <div>
     <calculator-drawer />
     <calculator-builder />
+
+    <roles-required :roles="['Owner', 'Moderator']" type="any" />
   </div>
 </template>

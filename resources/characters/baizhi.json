@@ -260,6 +260,13 @@
       "description": "When <strong>Euphonia</strong> is picked up, increase the Glacio DMG Bonus of all characters nearby by {0} for {1}s."
     }
   ],
+  "skillPriority": [
+    "Resonance Liberation",
+    "Resonance Skill",
+    "Forte Circuit",
+    "Intro Skill",
+    "Basic Attack"
+  ],
   "skills": [
     {
       "slug": "destined-promise",

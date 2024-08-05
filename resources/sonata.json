@@ -69,7 +69,7 @@
     },
     {
       "name": "Rejuvenating Glow",
-      "icon": "/sonata-effects/rejuvenating.webp",
+      "icon": "/sonata-effects/rejuvenating-glow.webp",
       "colors": {
         "background": "#2b3a17",
         "border": "#87bd29"

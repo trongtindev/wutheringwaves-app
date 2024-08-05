@@ -16,7 +16,7 @@ const resource = useResources();
 const calculator = useCalculator();
 
 // states
-const level = ref(props.item.level);
+const level = ref(props.item.characterLevel);
 const character = ref(props.item.character ? props.item.character.item : null);
 
 // computed
@@ -81,7 +81,7 @@ watch(
 watch(
   () => level.value,
   (value) => {
-    calculator.participants[props.index].level = value;
+    calculator.participants[props.index].characterLevel = value;
   },
 );
 </script>
@@ -111,17 +111,18 @@ watch(
       :item-title="(e) => e.name"
       :return-object="true"
       :clearable="true"
+      :placeholder="$t('common.selectCharacter')"
       hide-details
       class="mt-4 mb-2"
     >
-      <template #item="{ item, props }">
-        <v-list-item v-bind="props">
+      <template #item="{ item: element, props: _props }">
+        <v-list-item v-bind="_props">
           <template #prepend>
-            <v-avatar :image="item.raw.images.icon" />
+            <v-avatar :image="element.raw.images.icon" />
           </template>
 
           <template #append>
-            <v-avatar :size="24" :image="item.raw.attribute.icon" />
+            <v-avatar :size="24" :image="element.raw.attribute.icon" />
           </template>
         </v-list-item>
       </template>
@@ -136,7 +137,13 @@ watch(
       :disabled="!item.character"
       thumb-label
       hide-details
-    />
+    >
+      <template #label>
+        <div style="width: 100px">
+          {{ $t('common.level') }}
+        </div>
+      </template>
+    </v-slider>
 
     <!-- stats -->
     <v-table class="border rounded mt-2">

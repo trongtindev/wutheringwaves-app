@@ -99,7 +99,7 @@ const updateOrPublish = () => {
     )
     .then((result) => {
       if (item) {
-        router.push(localePath(`/posts/${item.id}`));
+        router.push(localePath(`/posts/${item.slug}`));
       } else {
         router.push(localePath(`/posts/${result.data.slug}`));
       }
