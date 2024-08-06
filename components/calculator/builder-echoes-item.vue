@@ -58,24 +58,37 @@ const totalCost = computed(() => {
         class="d-flex justify-center"
       >
         <div class="position-relative">
-          <v-badge>
-            <template v-if="echo.item" #badge>
-              {{ echo.item.cost }}
+          <v-tooltip location="top">
+            <template #activator="tooltip">
+              <v-badge v-bind="tooltip.props">
+                <template v-if="echo.item" #badge>
+                  {{ echo.item.cost }}
+                </template>
+
+                <v-card
+                  v-bind="props"
+                  :border="true"
+                  :active="j === show"
+                  class="rounded-circle"
+                  @click="() => onPressed(j)"
+                >
+                  <v-avatar :size="64">
+                    <v-img v-if="echo.item" :src="echo.item.icon" />
+                    <span v-else>+</span>
+                  </v-avatar>
+                </v-card>
+              </v-badge>
             </template>
 
-            <v-card
-              v-bind="props"
-              :border="true"
-              :active="j === show"
-              class="rounded-circle"
-              @click="() => onPressed(j)"
-            >
-              <v-avatar :size="64">
-                <v-img v-if="echo.item" :src="echo.item.icon" />
-                <span v-else>+</span>
-              </v-avatar>
-            </v-card>
-          </v-badge>
+            <div>
+              <span v-if="echo.item">
+                {{ $t('calculator.builder.echoes.pressToActive') }}
+              </span>
+              <span v-else>
+                {{ $t('calculator.builder.echoes.pressToSet') }}
+              </span>
+            </div>
+          </v-tooltip>
 
           <div class="position-absolute" style="right: -8px; bottom: -8px">
             <v-btn
@@ -92,10 +105,20 @@ const totalCost = computed(() => {
     </v-row>
 
     <!-- warning cost -->
-    <div v-if="totalCost > 12" class="mt-2">
+    <div class="mt-2">
       <base-alert
+        v-if="totalCost > 12"
         :text="$t('calculator.builder.echoes.costCapped')"
         color="warning"
+      />
+      <base-alert
+        v-else
+        :text="
+          $t('calculator.builder.echoes.costRemaining', {
+            current: totalCost,
+            total: 12,
+          })
+        "
       />
     </div>
 

@@ -25,7 +25,13 @@
         "title": "Rotation"
       },
       "echoes": {
-        "costCapped": "The Echo cost limit is capped at 12."
+        "guides": {
+          "active": "After set an Echo, you can click on the avatar of the Echo whose stats need to be changed or the change button next to it to change another Echo."
+        },
+        "costCapped": "The Echo cost limit is capped at 12.",
+        "costRemaining": "You used {current}/{total} cost.",
+        "pressToSet": "Press to set Echo",
+        "pressToActive": "Press to custom this Echo"
       },
       "disclaimer": "The collected indicators may not be exact or approximate, so it is normal that the results will not match those in the game."
     },
@@ -214,7 +220,8 @@
     "selectWeapon": "Select weapon",
     "selectCharacter": "Select character",
     "rank": "Rank",
-    "stats": "Stats"
+    "stats": "Stats",
+    "energyRegen": "Energy Regen"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -366,7 +373,8 @@
     "next": "Next Posts",
     "deleted": {
       "title": "This post has been deleted!"
-    }
+    },
+    "latest": "Latest Guides"
   },
   "items": {
     "title": "Items",

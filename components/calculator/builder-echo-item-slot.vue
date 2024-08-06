@@ -37,7 +37,7 @@ const stats = computed(() => {
       :min="1"
       :max="20"
       :label="$t('common.level')"
-      :disabled="!item.item || true"
+      :disabled="!item.item"
       thumb-label
       hide-details
     />
@@ -47,6 +47,8 @@ const stats = computed(() => {
       <thead>
         <tr>
           <th colspan="3" class="ma-2 text-center font-weight-bold">
+            <span v-if="item.item"> [{{ item.item.name }}] </span>
+            <span v-else> [{{ $t('common.none') }}] </span>
             {{ $t('common.stats') }}
           </th>
         </tr>

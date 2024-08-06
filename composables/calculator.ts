@@ -19,6 +19,7 @@ export const useCalculator = defineStore('useCalculator', () => {
   });
 
   // states
+  const participant = ref(0);
   const participants = ref<ICalculatorParticipant[]>(INITIAL_PARTICIPANTS);
 
   // functions
@@ -27,5 +28,5 @@ export const useCalculator = defineStore('useCalculator', () => {
   };
 
   // exports
-  return { participants, clear };
+  return { participant, participants, clear };
 });

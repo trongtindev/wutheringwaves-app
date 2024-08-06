@@ -20,7 +20,7 @@ const props = defineProps<{
 const api = useApi();
 const auth = useAuth();
 const fileChoose = useFileDialog({
-  accept: 'image/png, image/jpg, image/webp, image/jpeg',
+  accept: 'image/png, image/jpg, image/webp, image/jpeg, image/gif',
 });
 
 // states

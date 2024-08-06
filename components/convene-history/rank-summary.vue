@@ -57,7 +57,7 @@ const updatePulls = () => {
 
   for (const data of pullData.value) {
     totalPlayers += data[1];
-    if (data[0] < props.convenes.length) {
+    if (data[0] <= props.convenes.length) {
       playersWithFewer += data[1];
     }
   }
@@ -92,7 +92,7 @@ const updateWinRate = () => {
 
   for (const data of luckinessData.value) {
     totalPlayers += data[1];
-    if (data[0] < winRate) {
+    if (data[0] <= winRate) {
       playersWithFewer += data[1];
     }
   }

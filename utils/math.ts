@@ -123,6 +123,12 @@ const weapon = [
   ],
 ];
 
+const echo = [
+  10000, 11600, 13200, 14800, 16400, 18000, 19600, 21200, 22800, 24400, 26000,
+  27600, 29200, 30800, 32400, 34000, 35600, 37200, 38800, 40400, 42000, 43600,
+  45200, 46800, 48400, 50000,
+];
+
 export const getCharacterStats = (
   level: number,
   stats: ICharacterDataStats,
@@ -140,8 +146,29 @@ export const getWeaponStats = (
   stats: IWeaponDataStats,
   rarity: number,
 ) => {
-  const ratio = weapon[rarity === 5 ? 0 : 1][level - 1];
   return {
-    atkFlat: Math.round(stats.atkFlat * (ratio / 1e4)),
+    hp: stats.hp
+      ? parseFloat((stats.hp * (weapon[1][level - 1] / 1e4)).toFixed(2))
+      : undefined,
+    def: stats.def
+      ? parseFloat((stats.def * (weapon[1][level - 1] / 1e4)).toFixed(2))
+      : undefined,
+    atk: stats.atk
+      ? parseFloat((stats.atk * (weapon[1][level - 1] / 1e4)).toFixed(2))
+      : undefined,
+    atkFlat: parseFloat(
+      (stats.atkFlat * (weapon[0][level - 1] / 1e4)).toFixed(2),
+    ),
+    critRate: stats.critRate
+      ? parseFloat((stats.critRate * (weapon[1][level - 1] / 1e4)).toFixed(2))
+      : undefined,
+    critDMG: stats.critDMG
+      ? parseFloat((stats.critDMG * (weapon[1][level - 1] / 1e4)).toFixed(2))
+      : undefined,
+    energyRegen: stats.energyRegen
+      ? parseFloat(
+          (stats.energyRegen * (weapon[1][level - 1] / 1e4)).toFixed(2),
+        )
+      : undefined,
   };
 };

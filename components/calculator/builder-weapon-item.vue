@@ -46,12 +46,50 @@ const updateStats = () => {
 
 // computed
 const stats = computed(() => {
-  return [
+  const items = [
     {
       label: 'atk',
-      value: previewStats.value ? previewStats.value.atkFlat : 0,
+      value: previewStats.value ? formatNumber(previewStats.value.atkFlat) : 0,
     },
   ];
+
+  if (previewStats.value) {
+    if (previewStats.value.atk) {
+      items.push({
+        label: 'atk',
+        value: `${previewStats.value.atk}%`,
+      });
+    }
+
+    if (previewStats.value.def) {
+      items.push({
+        label: 'def',
+        value: `${previewStats.value.def}%`,
+      });
+    }
+
+    if (previewStats.value.critRate) {
+      items.push({
+        label: 'critRate',
+        value: `${previewStats.value.critRate}%`,
+      });
+    }
+
+    if (previewStats.value.critDMG) {
+      items.push({
+        label: 'critDMG',
+        value: `${previewStats.value.critDMG}%`,
+      });
+    }
+
+    if (previewStats.value.energyRegen) {
+      items.push({
+        label: 'energyRegen',
+        value: `${previewStats.value.energyRegen}%`,
+      });
+    }
+  }
+  return items;
 });
 
 const filterWeapons = computed(() => {
@@ -194,7 +232,7 @@ onMounted(initialize);
             {{ $t(`common.${element.label}`) }}
           </td>
           <td class="w-50 text-center">
-            {{ format(element.value) }}
+            {{ element.value }}
           </td>
         </tr>
       </tbody>

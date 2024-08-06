@@ -2,6 +2,7 @@
 import { mdiPlus } from '@mdi/js';
 import dayjs from 'dayjs';
 import type { IItem } from '~/interfaces/item';
+import type { IWeaponDataStats } from '~/interfaces/weapon';
 
 // Property 'formatNumber' does not exist on type
 const format = formatNumber;
@@ -16,9 +17,6 @@ const runtimeConfig = useRuntimeConfig();
 const headers = useRequestHeaders(['If-Modified-Since']);
 const event = useRequestEvent();
 
-// states
-const dictItems = ref<{ [key: number]: IItem }>({});
-
 // fetch
 const items = await resources.getItems();
 const weapons = await resources.weapons();
@@ -27,6 +25,10 @@ if (!item) throw createError({ statusCode: 404 });
 
 const data = await resources.getWeaponData(item.slug);
 if (!data) throw createError({ statusCode: 404 });
+
+// states
+const dictItems = ref<{ [key: number]: IItem }>({});
+const previewStats = ref<IWeaponDataStats>();
 
 // computed
 const nameLocalized = computed(() => {

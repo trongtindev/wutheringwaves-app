@@ -18,6 +18,10 @@
   --color-highlight: orange;
 }
 
+img {
+  max-width: 100%;
+}
+
 .color-electro {
   color: var(--color-attribute-electro);
 }

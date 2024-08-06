@@ -83,6 +83,9 @@ useSeoMeta({
           </v-card-actions>
         </v-card>
 
+        <!-- latest posts -->
+        <guides-editor-latest-posts />
+
         <!-- current event -->
         <timeline-summary-widget @on-done="masonry.refreshLayout" />
 

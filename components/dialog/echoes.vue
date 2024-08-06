@@ -47,10 +47,6 @@ onMounted(initialize);
 
 <template>
   <v-card>
-    <v-card-title>
-      {{ $t('dialog.echoes.title') }}
-    </v-card-title>
-
     <v-card-item class="pa-2">
       <div class="d-flex flex-wrap ga-2 justify-center">
         <v-chip
