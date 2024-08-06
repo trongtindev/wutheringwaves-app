@@ -3,10 +3,12 @@ import dayjs from 'dayjs';
 import type { IListResponse } from '~/interfaces/api';
 import type { IPost } from '~/interfaces/post';
 
+const emits = defineEmits<{
+  'on-updated': [];
+}>();
 const { API_URL } = useRuntimeConfig().public;
 
 // uses
-const api = useApi();
 const { locale } = useI18n();
 const localePath = useLocalePath();
 
@@ -17,6 +19,9 @@ const { data: posts, error } = useFetch<IListResponse<IPost>>('posts', {
   },
   baseURL: API_URL,
 });
+
+// changes
+watch(posts, () => emits('on-updated'));
 </script>
 
 <template>

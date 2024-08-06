@@ -141,11 +141,7 @@ export const getCharacterStats = (
   };
 };
 
-export const getWeaponStats = (
-  level: number,
-  stats: IWeaponDataStats,
-  rarity: number,
-) => {
+export const getWeaponStats = (level: number, stats: IWeaponDataStats) => {
   return {
     hp: stats.hp
       ? parseFloat((stats.hp * (weapon[1][level - 1] / 1e4)).toFixed(2))

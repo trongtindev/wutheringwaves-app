@@ -42,7 +42,7 @@ const title = computed(() => {
     </template>
   </v-list-item>
 
-  <v-list-group :value="title" :fluid="true">
+  <v-list-group v-else :value="title" :fluid="true">
     <template #activator="group">
       <v-list-item v-bind="group.props" :title="title" :nav="true">
         <template #prepend>

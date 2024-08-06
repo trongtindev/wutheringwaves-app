@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IListResponse } from '@/interfaces/api';
-import { type ITierList } from '@/interfaces/tier-list';
+import type { ITierList } from '@/interfaces/tier-list';
 
 // uses
 const api = useApi();

@@ -58,6 +58,13 @@ const localesMetadata: LocaleObject[] = [
 export default defineNuxtConfig({
   $development: {
     devtools: { enabled: false },
+    typescript: {
+      strict: true,
+      typeCheck: true,
+    },
+    eslint: {
+      checker: true,
+    },
   },
 
   $production: {

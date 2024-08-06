@@ -45,6 +45,7 @@
     "tinymce": "^7.2.1",
     "typescript": "^5.5.4",
     "url-slug": "^4.0.1",
+    "vite-plugin-eslint2": "^4.4.0",
     "vite-plugin-vuetify": "^2.0.4",
     "vue": "latest",
     "vue-chartjs": "^5.3.1",

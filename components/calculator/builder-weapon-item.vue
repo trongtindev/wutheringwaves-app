@@ -8,8 +8,6 @@ const props = defineProps<{
   weapons: IWeapon[];
 }>();
 
-const format = formatNumber;
-
 // uses
 const { t } = useI18n();
 const resource = useResources();
@@ -40,7 +38,6 @@ const updateStats = () => {
   previewStats.value = getWeaponStats(
     level.value,
     props.item.weapon.data.stats,
-    props.item.weapon.item.rarity,
   );
 };
 
