@@ -38,7 +38,10 @@ if (props.data.ascensions) {
 
 <template>
   <!-- Ascension Material -->
-  <v-card v-if="data.ascensions" class="mt-2">
+  <v-card
+    v-if="data.ascensions"
+    class="mt-2"
+  >
     <v-card-title tag="h2">
       {{ props.item.name }} {{ $t('common.ascensionMaterial') }}
     </v-card-title>
@@ -51,7 +54,11 @@ if (props.data.ascensions) {
       :key="index"
     >
       <v-row>
-        <v-col cols="12" sm="3" md="2">
+        <v-col
+          cols="12"
+          sm="3"
+          md="2"
+        >
           <v-card
             class="d-flex align-center justify-center text-center text-h6 fill-height pa-2"
           >

@@ -61,7 +61,10 @@ const props = defineProps<{
     <v-divider />
     <v-card-actions>
       <v-spacer />
-      <v-btn :text="$t('common.close')" @click="() => emits('on-close')" />
+      <v-btn
+        :text="$t('common.close')"
+        @click="() => emits('on-close')"
+      />
     </v-card-actions>
   </v-card>
 </template>

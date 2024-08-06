@@ -101,7 +101,10 @@ if (device.isCrawler) throw createError({ statusCode: 404 });
 
 <template>
   <v-row>
-    <v-col cols="12" md="8">
+    <v-col
+      cols="12"
+      md="8"
+    >
       <v-card>
         <client-only>
           <v-tabs v-model="method">
@@ -130,9 +133,15 @@ if (device.isCrawler) throw createError({ statusCode: 404 });
       </v-card>
     </v-col>
 
-    <v-col cols="12" md="4">
+    <v-col
+      cols="12"
+      md="4"
+    >
       <v-expansion-panels>
-        <v-expansion-panel v-for="index in 3" :key="index">
+        <v-expansion-panel
+          v-for="index in 3"
+          :key="index"
+        >
           <v-expansion-panel-title>
             {{ $t(`convene.import.faqs.${index}.title`) }}
           </v-expansion-panel-title>
@@ -149,7 +158,11 @@ if (device.isCrawler) throw createError({ statusCode: 404 });
       :persistent="true"
       class="d-flex align-center justify-center"
     >
-      <v-sheet rounded class="pa-4 text-center" :min-width="200">
+      <v-sheet
+        rounded
+        class="pa-4 text-center"
+        :min-width="200"
+      >
         <v-progress-circular :indeterminate="true" />
 
         <div class="mt-4">

@@ -98,9 +98,15 @@ const onPressedRefreshRoles = () => {
 <template>
   <div>
     <!-- verified -->
-    <v-card v-if="role.verified" :title="$t('settings.roles.title')">
+    <v-card
+      v-if="role.verified"
+      :title="$t('settings.roles.title')"
+    >
       <v-card-text>
-        <base-alert :text="$t('settings.roles.message')" class="mb-2" />
+        <base-alert
+          :text="$t('settings.roles.message')"
+          class="mb-2"
+        />
 
         <!-- empty roles -->
         <base-alert
@@ -111,7 +117,10 @@ const onPressedRefreshRoles = () => {
         />
 
         <!-- list roles -->
-        <div v-else class="d-flex align-center justify-center flex-wrap ga-2">
+        <div
+          v-else
+          class="d-flex align-center justify-center flex-wrap ga-2"
+        >
           <v-chip
             v-for="(item, index) in role.roles"
             :key="index"
@@ -145,7 +154,10 @@ const onPressedRefreshRoles = () => {
     </v-card>
 
     <!-- verify -->
-    <v-card v-else :title="$t('settings.roles.title')">
+    <v-card
+      v-else
+      :title="$t('settings.roles.title')"
+    >
       <v-card-text>
         <base-alert
           :text="
@@ -174,7 +186,10 @@ const onPressedRefreshRoles = () => {
           </template>
         </v-text-field>
 
-        <base-alert :text="$t('settings.roles.setupGuide2')" class="mb-2" />
+        <base-alert
+          :text="$t('settings.roles.setupGuide2')"
+          class="mb-2"
+        />
         <v-text-field
           v-model="verifyCode"
           :label="$t('settings.roles.verifyCode')"

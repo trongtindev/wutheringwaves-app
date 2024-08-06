@@ -92,7 +92,12 @@ watch(
           :image="item.weapon.item.icon"
           :class="`bg-rarity${item.weapon.item.rarity}`"
         />
-        <v-avatar v-else :size="96"> ? </v-avatar>
+        <v-avatar
+          v-else
+          :size="96"
+        >
+          ?
+        </v-avatar>
       </v-sheet>
     </div>
 
@@ -158,7 +163,10 @@ watch(
     </v-slider>
 
     <!-- description -->
-    <v-card v-if="description" class="mt-2">
+    <v-card
+      v-if="description"
+      class="mt-2"
+    >
       <v-card-text>
         <div :innerHTML="description" />
       </v-card-text>

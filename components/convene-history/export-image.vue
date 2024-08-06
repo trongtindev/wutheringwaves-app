@@ -50,7 +50,10 @@ const downloadImage = async () => {
 
     <v-card-text>
       <v-sheet class="w-100 border rounded pa-1">
-        <v-tabs v-model="type" fixed-tabs>
+        <v-tabs
+          v-model="type"
+          fixed-tabs
+        >
           <v-tab value="list">
             <v-icon :icon="mdiViewList" />
           </v-tab>
@@ -77,7 +80,10 @@ const downloadImage = async () => {
           </thead>
 
           <tbody>
-            <tr v-for="(element, index) in props.items" :key="index">
+            <tr
+              v-for="(element, index) in props.items"
+              :key="index"
+            >
               <td>
                 <v-avatar
                   class="border mr-2"

@@ -62,7 +62,10 @@ const nameLocalized = computed(() => {
           S{{ props.sequences }}
         </span>
 
-        <span v-if="props.item.upcoming" class="font-weight-bold ml-1 pr-1">
+        <span
+          v-if="props.item.upcoming"
+          class="font-weight-bold ml-1 pr-1"
+        >
           {{ $t('common.upcoming') }}
         </span>
       </v-chip>

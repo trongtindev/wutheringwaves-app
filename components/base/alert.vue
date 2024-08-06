@@ -30,13 +30,19 @@ const onPressed = () => {
       @click="onPressed"
     >
       <template #title>
-        <div v-if="title" class="text-center w-100 text-body-1">
+        <div
+          v-if="title"
+          class="text-center w-100 text-body-1"
+        >
           {{ title }}
         </div>
       </template>
 
       <template #text>
-        <div v-if="text" class="text-center text-subtitle-2">
+        <div
+          v-if="text"
+          class="text-center text-subtitle-2"
+        >
           {{ text }}
         </div>
       </template>

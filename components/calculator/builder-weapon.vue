@@ -22,8 +22,15 @@ const weapons = await resource.getWeapons({ upcoming: false });
     </v-row>
 
     <v-row>
-      <v-col v-for="(item, index) in calculator.participants" :key="index">
-        <calculator-builder-weapon-item :index :item :weapons />
+      <v-col
+        v-for="(item, index) in calculator.participants"
+        :key="index"
+      >
+        <calculator-builder-weapon-item
+          :index
+          :item
+          :weapons
+        />
       </v-col>
     </v-row>
   </div>

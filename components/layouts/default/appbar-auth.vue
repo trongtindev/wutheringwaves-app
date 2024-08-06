@@ -52,9 +52,15 @@ const onPressedSignOut = async () => {
 
     <v-menu v-if="auth.user && auth.isLoggedIn">
       <template #activator="{ props }">
-        <v-btn :border="true" :icon="true">
+        <v-btn
+          :border="true"
+          :icon="true"
+        >
           <v-avatar v-bind="props">
-            <v-img v-if="auth.user.photoUrl" :src="auth.user.photoUrl">
+            <v-img
+              v-if="auth.user.photoUrl"
+              :src="auth.user.photoUrl"
+            >
               <template #error>
                 <div class="d-flex align-center justify-center w-100 h-100">
                   ?
@@ -66,9 +72,15 @@ const onPressedSignOut = async () => {
         </v-btn>
       </template>
 
-      <v-card :min-width="300" :elevation="3">
+      <v-card
+        :min-width="300"
+        :elevation="3"
+      >
         <v-card-text class="text-center">
-          <v-avatar :size="64" class="border pa-1">
+          <v-avatar
+            :size="64"
+            class="border pa-1"
+          >
             <v-img
               v-if="auth.user.photoUrl"
               :src="auth.user.photoUrl"

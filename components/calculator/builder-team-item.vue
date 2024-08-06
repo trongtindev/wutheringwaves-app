@@ -94,13 +94,22 @@ watch(
         :height="96"
         class="border rounded-circle d-flex justify-center align-center"
       >
-        <v-badge location="bottom" :color="role.color" :content="role.text">
+        <v-badge
+          location="bottom"
+          :color="role.color"
+          :content="role.text"
+        >
           <v-avatar
             v-if="item.character"
             :image="item.character.item.images.icon"
             :size="96"
           />
-          <v-avatar v-else :size="96"> ? </v-avatar>
+          <v-avatar
+            v-else
+            :size="96"
+          >
+            ?
+          </v-avatar>
         </v-badge>
       </v-sheet>
     </div>
@@ -122,7 +131,10 @@ watch(
           </template>
 
           <template #append>
-            <v-avatar :size="24" :image="element.raw.attribute.icon" />
+            <v-avatar
+              :size="24"
+              :image="element.raw.attribute.icon"
+            />
           </template>
         </v-list-item>
       </template>
@@ -149,14 +161,20 @@ watch(
     <v-table class="border rounded mt-2">
       <thead>
         <tr>
-          <th colspan="3" class="ma-2 text-center font-weight-bold">
+          <th
+            colspan="3"
+            class="ma-2 text-center font-weight-bold"
+          >
             {{ $t('characters.stats') }}
           </th>
         </tr>
       </thead>
 
       <tbody>
-        <tr v-for="(element, j) in stats" :key="j">
+        <tr
+          v-for="(element, j) in stats"
+          :key="j"
+        >
           <td class="w-50 text-center">
             {{ $t(`common.${element.label}`) }}
           </td>

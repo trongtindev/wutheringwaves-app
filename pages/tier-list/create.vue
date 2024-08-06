@@ -326,14 +326,31 @@ useHead({
         </div>
 
         <div class="mt-4">
-          <v-btn-toggle v-model="type" variant="outlined" divided>
-            <v-btn value="character" :text="$t('common.character')" />
-            <v-btn value="weapon" :text="$t('common.weapon')" />
-            <v-btn value="echo" :text="$t('common.echo')" />
+          <v-btn-toggle
+            v-model="type"
+            variant="outlined"
+            divided
+          >
+            <v-btn
+              value="character"
+              :text="$t('common.character')"
+            />
+            <v-btn
+              value="weapon"
+              :text="$t('common.weapon')"
+            />
+            <v-btn
+              value="echo"
+              :text="$t('common.echo')"
+            />
           </v-btn-toggle>
         </div>
 
-        <div v-for="(element, index) in rows" :key="index" class="mt-4">
+        <div
+          v-for="(element, index) in rows"
+          :key="index"
+          class="mt-4"
+        >
           <tier-list-row
             :type="type"
             :data="element"

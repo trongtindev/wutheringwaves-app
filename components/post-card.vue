@@ -38,7 +38,10 @@ const localePath = useLocalePath();
     </div>
 
     <v-card-item>
-      <div class="text-body-1 line-clamp-2 mb-2" tag="h2">
+      <div
+        class="text-body-1 line-clamp-2 mb-2"
+        tag="h2"
+      >
         {{ item.title }}
       </div>
 

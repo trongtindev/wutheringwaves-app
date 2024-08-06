@@ -13,7 +13,10 @@ const props = defineProps<{
 <template>
   <v-list-item class="mt-1">
     <template #prepend>
-      <v-avatar class="border" :image="props.data.icon" />
+      <v-avatar
+        class="border"
+        :image="props.data.icon"
+      />
     </template>
 
     <v-list-item-title :class="`text-rarity${props.rarity}`">

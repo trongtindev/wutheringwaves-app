@@ -38,7 +38,11 @@ onNuxtReady(() => {
 
     <!-- list -->
     <v-row>
-      <v-col v-for="(element, index) in providers" :key="index" cols="4">
+      <v-col
+        v-for="(element, index) in providers"
+        :key="index"
+        cols="4"
+      >
         <v-card>
           <v-img :aspect-ratio="16 / 9" />
 

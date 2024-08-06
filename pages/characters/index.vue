@@ -145,7 +145,10 @@ useSeoMeta({
     </v-row>
 
     <!-- filter -->
-    <v-bottom-sheet v-model="filter" :inset="true">
+    <v-bottom-sheet
+      v-model="filter"
+      :inset="true"
+    >
       <v-card>
         <v-card-title>
           {{ $t('common.filter') }}

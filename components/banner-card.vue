@@ -12,7 +12,10 @@ const emits = defineEmits<{
 </script>
 
 <template>
-  <v-card :disabled="disabled" @click="() => emits('onClick')">
+  <v-card
+    :disabled="disabled"
+    @click="() => emits('onClick')"
+  >
     <v-img
       class="align-end"
       :src="item.thumbnail ? item.thumbnail : undefined"

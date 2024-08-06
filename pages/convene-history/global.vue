@@ -287,7 +287,10 @@ useSeoMeta({
       <div v-if="chartInitialized">
         <!-- filter -->
         <v-row>
-          <v-col cols="12" sm="6">
+          <v-col
+            cols="12"
+            sm="6"
+          >
             <v-select
               v-model="filterType"
               :items="types"
@@ -298,7 +301,10 @@ useSeoMeta({
             />
           </v-col>
 
-          <v-col cols="12" sm="6">
+          <v-col
+            cols="12"
+            sm="6"
+          >
             <v-select
               v-model="filterBanner"
               :items="activeBanners"
@@ -311,8 +317,14 @@ useSeoMeta({
         </v-row>
 
         <!-- thumbnails -->
-        <v-row v-if="displayBanner && displayBanner.thumbnail" class="mt-2">
-          <v-col cols="12" md="6">
+        <v-row
+          v-if="displayBanner && displayBanner.thumbnail"
+          class="mt-2"
+        >
+          <v-col
+            cols="12"
+            md="6"
+          >
             <v-card>
               <base-image
                 :src="displayBanner.thumbnail"
@@ -325,15 +337,24 @@ useSeoMeta({
 
         <!-- summary -->
         <v-row class="mt-1">
-          <v-col cols="12" sm="9">
+          <v-col
+            cols="12"
+            sm="9"
+          >
             <v-row>
-              <v-col cols="12" sm="7">
+              <v-col
+                cols="12"
+                sm="7"
+              >
                 <v-card class="fill-height d-flex">
                   <v-card-text>
                     <table>
                       <tr>
                         <td class="py-4 pl-4 pr-2 text-center">
-                          <v-avatar :size="128" rounded>
+                          <v-avatar
+                            :size="128"
+                            rounded
+                          >
                             <v-img
                               v-if="displayBanner && displayBanner.featuredRare"
                               :src="`/${bannerType}/icons/${urlSlug(displayBanner.featuredRare)}.webp`"
@@ -341,13 +362,19 @@ useSeoMeta({
                           </v-avatar>
                         </td>
 
-                        <td class="pl-2 pr-2 text-h3" style="width: 50%">
+                        <td
+                          class="pl-2 pr-2 text-h3"
+                          style="width: 50%"
+                        >
                           <div class="d-flex justify-end w-100">
                             {{ format(totalSummoned) }}
                           </div>
                         </td>
 
-                        <td class="pr-4" style="width: 30%">
+                        <td
+                          class="pr-4"
+                          style="width: 30%"
+                        >
                           <div class="w-100">
                             <div class="text-h6">
                               <span v-if="displayBanner">
@@ -367,7 +394,10 @@ useSeoMeta({
                 </v-card>
               </v-col>
 
-              <v-col cols="12" sm="5">
+              <v-col
+                cols="12"
+                sm="5"
+              >
                 <v-card class="fill-height d-flex align-center">
                   <div class="w-100">
                     <table class="w-100">
@@ -379,7 +409,10 @@ useSeoMeta({
                           <div class="w-100 text-h3">0%</div>
                         </td>
 
-                        <td style="width: 40%" class="text-rarity5 py-4 pr-4">
+                        <td
+                          style="width: 40%"
+                          class="text-rarity5 py-4 pr-4"
+                        >
                           <div>★★★★★</div>
                           <div>
                             Total
@@ -395,7 +428,10 @@ useSeoMeta({
                         >
                           <div class="w-100 text-h3">0%</div>
                         </td>
-                        <td style="width: 40%" class="text-rarity4 py-4 pr-4">
+                        <td
+                          style="width: 40%"
+                          class="text-rarity4 py-4 pr-4"
+                        >
                           <div>★★★★</div>
                           <div>
                             Total
@@ -410,7 +446,10 @@ useSeoMeta({
             </v-row>
           </v-col>
 
-          <v-col cols="12" sm="3">
+          <v-col
+            cols="12"
+            sm="3"
+          >
             <v-card class="fill-height">
               <v-list>
                 <v-list-item :title="$t('convene.global.median')">
@@ -563,7 +602,10 @@ useSeoMeta({
         </v-card>
 
         <v-row class="mt-1">
-          <v-col cols="12" md="6">
+          <v-col
+            cols="12"
+            md="6"
+          >
             <v-card>
               <v-card-title class="text-rarity5">
                 {{ $t('convene.global.fiveStar') }}
@@ -584,7 +626,10 @@ useSeoMeta({
             </v-card>
           </v-col>
 
-          <v-col cols="12" md="6">
+          <v-col
+            cols="12"
+            md="6"
+          >
             <v-card>
               <v-card-title class="text-rarity4">
                 {{ $t('convene.global.fourStar') }}

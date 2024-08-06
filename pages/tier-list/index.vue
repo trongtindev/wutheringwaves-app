@@ -122,7 +122,10 @@ useSeoMeta({
       <client-only>
         <v-card-text>
           <v-row class="mb-4">
-            <v-col cols="12" sm="4">
+            <v-col
+              cols="12"
+              sm="4"
+            >
               <v-text-field
                 v-model="search"
                 :label="$t('common.search')"
@@ -130,16 +133,31 @@ useSeoMeta({
               />
             </v-col>
 
-            <v-col cols="6" sm="4">
-              <v-select v-model="filterType" :label="$t('common.type')" />
+            <v-col
+              cols="6"
+              sm="4"
+            >
+              <v-select
+                v-model="filterType"
+                :label="$t('common.type')"
+              />
             </v-col>
 
-            <v-col cols="6" sm="4">
-              <v-select v-model="sortBy" :label="$t('common.sort')" />
+            <v-col
+              cols="6"
+              sm="4"
+            >
+              <v-select
+                v-model="sortBy"
+                :label="$t('common.sort')"
+              />
             </v-col>
           </v-row>
 
-          <v-sheet v-if="!data" class="text-center">
+          <v-sheet
+            v-if="!data"
+            class="text-center"
+          >
             <v-progress-circular :indeterminate="true" />
           </v-sheet>
           <v-alert
@@ -159,8 +177,14 @@ useSeoMeta({
         </v-card-text>
 
         <v-divider v-if="pages > 0" />
-        <v-card-actions v-if="pages > 0" class="d-flex justify-center">
-          <v-pagination v-model="page" :length="pages" />
+        <v-card-actions
+          v-if="pages > 0"
+          class="d-flex justify-center"
+        >
+          <v-pagination
+            v-model="page"
+            :length="pages"
+          />
         </v-card-actions>
       </client-only>
     </v-card>

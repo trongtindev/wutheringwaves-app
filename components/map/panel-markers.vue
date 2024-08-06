@@ -55,10 +55,18 @@ onMounted(initialize);
 
 <template>
   <v-row>
-    <v-col v-for="(element, index) in items" :key="index" cols="4" md="3">
+    <v-col
+      v-for="(element, index) in items"
+      :key="index"
+      cols="4"
+      md="3"
+    >
       <v-tooltip location="bottom">
         <template #activator="tooltip">
-          <v-card v-bind="tooltip.props" @click="() => onPressed(element.type)">
+          <v-card
+            v-bind="tooltip.props"
+            @click="() => onPressed(element.type)"
+          >
             <!-- icon -->
             <v-img
               :src="`/map/icons/${element.type}.webp`"
@@ -70,7 +78,10 @@ onMounted(initialize);
                 v-if="selected.includes(element.type)"
                 class="w-100 h-100 d-flex align-center justify-center"
               >
-                <v-icon :icon="mdiCheckCircle" color="primary" />
+                <v-icon
+                  :icon="mdiCheckCircle"
+                  color="primary"
+                />
               </div>
 
               <v-sheet

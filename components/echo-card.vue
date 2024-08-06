@@ -25,7 +25,10 @@ const nameLocalized = computed(() => {
       />
     </v-responsive>
 
-    <v-card-title class="text-center" tag="h2">
+    <v-card-title
+      class="text-center"
+      tag="h2"
+    >
       {{ nameLocalized }}
     </v-card-title>
   </v-card>

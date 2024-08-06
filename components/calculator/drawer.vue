@@ -6,14 +6,24 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <v-navigation-drawer :permanent="true" :expand-on-hover="true" rail>
-    <v-list density="compact" nav>
+  <v-navigation-drawer
+    :permanent="true"
+    :expand-on-hover="true"
+    rail
+  >
+    <v-list
+      density="compact"
+      nav
+    >
       <v-list-item
         :to="localePath(`/calculator`)"
         :title="$t('calculator.builder.title')"
       >
         <template #prepend>
-          <v-avatar :size="24" rounded>
+          <v-avatar
+            :size="24"
+            rounded
+          >
             <v-icon :icon="mdiAccountGroup" />
           </v-avatar>
         </template>
@@ -24,7 +34,10 @@ const localePath = useLocalePath();
         :title="$t('calculator.import.title')"
       >
         <template #prepend>
-          <v-avatar :size="24" rounded>
+          <v-avatar
+            :size="24"
+            rounded
+          >
             <v-icon :icon="mdiLineScan" />
           </v-avatar>
         </template>
@@ -35,7 +48,10 @@ const localePath = useLocalePath();
         :title="$t('calculator.inventory.title')"
       >
         <template #prepend>
-          <v-avatar :size="24" rounded>
+          <v-avatar
+            :size="24"
+            rounded
+          >
             <v-icon :icon="mdiBagPersonal" />
           </v-avatar>
         </template>

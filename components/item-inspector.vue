@@ -19,7 +19,11 @@ const onPressed = () => {
     :text="$t(props.name)"
     @click="onPressed"
   />
-  <span v-else class="cursor-pointer" @click="onPressed">
+  <span
+    v-else
+    class="cursor-pointer"
+    @click="onPressed"
+  >
     {{ $t(props.name) }}
   </span>
 </template>

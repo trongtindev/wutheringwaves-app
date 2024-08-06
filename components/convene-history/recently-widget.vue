@@ -62,7 +62,10 @@ onMounted(initialize);
     </v-card-text>
 
     <v-list v-else>
-      <v-list-item v-for="(element, index) in items" :key="index">
+      <v-list-item
+        v-for="(element, index) in items"
+        :key="index"
+      >
         <template #prepend>
           <v-badge
             :color="`hsl(${100 - (element.pity / (element.qualityLevel === 5 ? 80 : 10)) * 100}, 100%, 50%)`"

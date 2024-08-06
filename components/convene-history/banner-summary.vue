@@ -219,7 +219,10 @@ onNuxtReady(initialize);
         </v-col>
       </v-row>
       <v-card-actions class="d-flex flex-wrap ga-2 justify-center">
-        <v-chip v-for="(element, index) in guaranteedAt5List" :key="index">
+        <v-chip
+          v-for="(element, index) in guaranteedAt5List"
+          :key="index"
+        >
           <span>{{ $t(element.name) }}</span>
           <span
             class="ml-2 font-weight-bold"

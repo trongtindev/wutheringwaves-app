@@ -64,7 +64,11 @@ const onPressedImport = () => emits('on-import', extractedUrl.value!);
         </v-responsive>
 
         <template #next>
-          <v-btn color="primary" :text="$t('common.next')" @click="next" />
+          <v-btn
+            color="primary"
+            :text="$t('common.next')"
+            @click="next"
+          />
         </template>
         <template #prev></template>
       </v-stepper-vertical-item>
@@ -93,7 +97,11 @@ The webpage at https://aki-gm-resources-oversea.aki-game.net"
         </template>
 
         <template #prev>
-          <v-btn variant="plain" :text="$t('common.previous')" @click="prev" />
+          <v-btn
+            variant="plain"
+            :text="$t('common.previous')"
+            @click="prev"
+          />
         </template>
       </v-stepper-vertical-item>
     </template>

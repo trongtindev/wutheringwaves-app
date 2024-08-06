@@ -80,7 +80,10 @@ useSeoMeta({
   <div>
     <!-- filter -->
     <v-row>
-      <v-col cols="12" sm="4">
+      <v-col
+        cols="12"
+        sm="4"
+      >
         <v-text-field
           v-model="filterText"
           :label="$t('common.search')"
@@ -88,7 +91,10 @@ useSeoMeta({
         />
       </v-col>
 
-      <v-col cols="6" sm="4">
+      <v-col
+        cols="6"
+        sm="4"
+      >
         <v-select
           v-model="filterCost"
           :label="$t('echoes.cost')"
@@ -98,7 +104,10 @@ useSeoMeta({
         />
       </v-col>
 
-      <v-col cols="6" sm="4">
+      <v-col
+        cols="6"
+        sm="4"
+      >
         <v-select
           v-model="filterSonataEffect"
           :label="$t('echoes.sonataEffect')"

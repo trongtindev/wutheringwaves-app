@@ -213,7 +213,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 <template>
   <div>
     <!-- chips -->
-    <header-chips class="mb-2" :github="`tree/main/resources/timeline.json`" />
+    <header-chips
+      class="mb-2"
+      :github="`tree/main/resources/timeline.json`"
+    />
 
     <v-card>
       <!-- TODO: [WARN] Added non-passive event listener to a scroll-blocking 'wheel' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952 -->
@@ -261,7 +264,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             </div>
 
             <!-- EVENT STRIP -->
-            <div v-for="(event, i) in events" :key="i">
+            <div
+              v-for="(event, i) in events"
+              :key="i"
+            >
               <timeline-event-item
                 v-for="(item, j) in event"
                 :key="j"
@@ -295,7 +301,11 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </client-only>
     </v-card>
 
-    <v-dialog v-model="dialog" :width="720" :scrollable="true">
+    <v-dialog
+      v-model="dialog"
+      :width="720"
+      :scrollable="true"
+    >
       <timeline-event-dialog
         v-if="dialogData"
         :data="dialogData"

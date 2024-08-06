@@ -60,7 +60,10 @@ useJsonld(() => ({
 <template>
   <div>
     <!-- chips -->
-    <header-chips class="mb-2" :github="`tree/main/resources/codes.json`" />
+    <header-chips
+      class="mb-2"
+      :github="`tree/main/resources/codes.json`"
+    />
 
     <!-- list -->
     <v-card>
@@ -73,13 +76,22 @@ useJsonld(() => ({
         <v-table class="border rounded">
           <thead>
             <tr>
-              <td class="border-b" style="width: 40%">
+              <td
+                class="border-b"
+                style="width: 40%"
+              >
                 {{ $t('codes.code') }}
               </td>
-              <td class="border-b" style="width: 40%">
+              <td
+                class="border-b"
+                style="width: 40%"
+              >
                 {{ $t('codes.rewards') }}
               </td>
-              <td class="border-b" style="width: 20%">
+              <td
+                class="border-b"
+                style="width: 20%"
+              >
                 {{ $t('codes.expiry') }}
               </td>
             </tr>
@@ -123,6 +135,9 @@ useJsonld(() => ({
     </v-card>
 
     <!-- comments -->
-    <comments channel="codes" class="mt-2" />
+    <comments
+      channel="codes"
+      class="mt-2"
+    />
   </div>
 </template>

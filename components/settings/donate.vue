@@ -8,7 +8,11 @@ const { DONATE_URL } = useRuntimeConfig().public;
       {{ $t('donate.title') }}
     </v-card-title>
     <v-card-text>
-      <div v-for="index in 4" :key="index" :class="{ 'mt-2': index > 0 }">
+      <div
+        v-for="index in 4"
+        :key="index"
+        :class="{ 'mt-2': index > 0 }"
+      >
         {{ $t(`donate.messages.${index}`) }}
       </div>
     </v-card-text>

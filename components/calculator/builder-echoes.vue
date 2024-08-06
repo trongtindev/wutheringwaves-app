@@ -22,8 +22,15 @@ const echoes = await resource.getEchoes();
     </v-row>
 
     <v-row>
-      <v-col v-for="(item, index) in calculator.participants" :key="index">
-        <calculator-builder-echo-item :index :item :echoes />
+      <v-col
+        v-for="(item, index) in calculator.participants"
+        :key="index"
+      >
+        <calculator-builder-echo-item
+          :index
+          :item
+          :echoes
+        />
       </v-col>
     </v-row>
   </div>

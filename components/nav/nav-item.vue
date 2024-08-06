@@ -29,14 +29,23 @@ const inDev = import.meta.dev;
     }"
     @click="() => sidebar.onOpened(props.data.url!)"
   >
-    <template v-if="!props.submenu" #prepend>
-      <v-avatar :size="24" rounded>
+    <template
+      v-if="!props.submenu"
+      #prepend
+    >
+      <v-avatar
+        :size="24"
+        rounded
+      >
         <v-img
           v-if="props.data.icon && props.data.icon.startsWith('/')"
           :src="props.data.icon"
           :alt="$t(props.data.title)"
         />
-        <v-icon v-else :icon="props.data.icon" />
+        <v-icon
+          v-else
+          :icon="props.data.icon"
+        />
       </v-avatar>
     </template>
 
@@ -54,14 +63,24 @@ const inDev = import.meta.dev;
         />
       </client-only>
 
-      <v-chip v-if="props.data.beta" color="info">
+      <v-chip
+        v-if="props.data.beta"
+        color="info"
+      >
         {{ $t('common.beta') }}
       </v-chip>
-      <v-chip v-else-if="props.data.upcoming" color="warning">
+      <v-chip
+        v-else-if="props.data.upcoming"
+        color="warning"
+      >
         {{ $t('common.upcoming') }}
       </v-chip>
     </template>
   </v-list-item>
 
-  <nav-group v-else :data="props.data" :index="props.index" />
+  <nav-group
+    v-else
+    :data="props.data"
+    :index="props.index"
+  />
 </template>

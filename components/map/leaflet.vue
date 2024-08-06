@@ -223,9 +223,15 @@ useHead({
 </script>
 
 <template>
-  <div ref="container" class="w-100 h-100">
+  <div
+    ref="container"
+    class="w-100 h-100"
+  >
     <div ref="popupElement">
-      <slot :active="active" name="popup" />
+      <slot
+        :active="active"
+        name="popup"
+      />
     </div>
   </div>
 </template>

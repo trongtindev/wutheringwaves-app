@@ -126,7 +126,10 @@ if (headers['if-modified-since']) {
       <v-card-text>
         <v-row>
           <v-col cols="4">
-            <v-img :src="`/echoes/icons/${item.slug}.webp`" :height="256" />
+            <v-img
+              :src="`/echoes/icons/${item.slug}.webp`"
+              :height="256"
+            />
           </v-col>
 
           <v-col>
@@ -157,7 +160,10 @@ if (headers['if-modified-since']) {
     </v-card>
 
     <!-- related -->
-    <v-card v-if="relatedEchoes.length > 0" class="mt-2">
+    <v-card
+      v-if="relatedEchoes.length > 0"
+      class="mt-2"
+    >
       <v-card-title tag="h2">
         {{ $t('echoes.related', { name: nameLocalized }) }}
       </v-card-title>

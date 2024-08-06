@@ -105,11 +105,21 @@ onMounted(() => {
   <v-card>
     <!-- <v-card-title> #{{ props.id }} </v-card-title> -->
 
-    <v-sheet :max-height="480" class="overflow-y-auto">
-      <comments :lite="true" :load-more="true" :channel="`mapPin.${props.id}`">
+    <v-sheet
+      :max-height="480"
+      class="overflow-y-auto"
+    >
+      <comments
+        :lite="true"
+        :load-more="true"
+        :channel="`mapPin.${props.id}`"
+      >
         <!-- summary -->
         <template #prepend-list>
-          <v-skeleton-loader v-if="!summary" type="sentences" />
+          <v-skeleton-loader
+            v-if="!summary"
+            type="sentences"
+          />
           <v-alert
             v-else-if="summary.content"
             color="info"

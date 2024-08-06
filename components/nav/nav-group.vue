@@ -14,9 +14,16 @@ const title = computed(() => {
 </script>
 
 <template>
-  <v-list-group :value="title" :fluid="true">
+  <v-list-group
+    :value="title"
+    :fluid="true"
+  >
     <template #activator="group">
-      <v-list-item v-bind="group.props" :title="title" :nav="true">
+      <v-list-item
+        v-bind="group.props"
+        :title="title"
+        :nav="true"
+      >
         <template #prepend>
           <v-avatar :size="24">
             <v-img
@@ -24,7 +31,10 @@ const title = computed(() => {
               :src="props.data.icon"
               :alt="title"
             />
-            <v-icon v-else :icon="props.data.icon" />
+            <v-icon
+              v-else
+              :icon="props.data.icon"
+            />
           </v-avatar>
         </template>
       </v-list-item>

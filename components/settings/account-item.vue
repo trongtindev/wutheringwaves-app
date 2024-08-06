@@ -64,7 +64,10 @@ watch(
       :subtitle="$t('common.lastUpdatedOn', { time: lastUpdatedOn })"
     >
       <template #append>
-        <v-switch v-model="autoImport" :hide-details="true" />
+        <v-switch
+          v-model="autoImport"
+          :hide-details="true"
+        />
       </template>
     </v-list-item>
   </div>

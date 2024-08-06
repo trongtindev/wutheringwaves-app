@@ -11,7 +11,11 @@ const currentLanguage = computed(() => {
 <template>
   <v-menu>
     <template #activator="{ props }">
-      <v-list-item rounded :title="currentLanguage.name" v-bind="props">
+      <v-list-item
+        rounded
+        :title="currentLanguage.name"
+        v-bind="props"
+      >
         <template #append>
           <v-avatar
             class="border"

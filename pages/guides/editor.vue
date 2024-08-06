@@ -151,9 +151,15 @@ useHead({
 <template>
   <client-only>
     <v-row>
-      <v-col cols="12" md="8">
+      <v-col
+        cols="12"
+        md="8"
+      >
         <v-card>
-          <v-tabs v-model="localizationTab" :disabled="state != ''">
+          <v-tabs
+            v-model="localizationTab"
+            :disabled="state != ''"
+          >
             <v-tab
               v-for="(localization, index) in localizations"
               :key="index"
@@ -200,7 +206,10 @@ useHead({
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="4">
+      <v-col
+        cols="12"
+        md="4"
+      >
         <!-- thumbnail -->
         <guides-editor-thumbnail
           :default-value="thumbnail"
@@ -306,7 +315,10 @@ useHead({
       </v-col>
     </v-row>
 
-    <v-app-bar location="bottom" class="pl-1 pr-1 border-t">
+    <v-app-bar
+      location="bottom"
+      class="pl-1 pr-1 border-t"
+    >
       <v-spacer />
       <v-btn
         v-if="!auth.isSignedIn"

@@ -43,7 +43,10 @@ watch(hideMarkedPins, emitChanged);
       :subtitle="$t('map.settings.pinCluster.description')"
     >
       <template #append>
-        <v-switch v-model="pinCluster" :hide-details="true" />
+        <v-switch
+          v-model="pinCluster"
+          :hide-details="true"
+        />
       </template>
     </v-list-item>
 
@@ -52,7 +55,10 @@ watch(hideMarkedPins, emitChanged);
       :subtitle="$t('map.settings.hideMarkedPins.description')"
     >
       <template #append>
-        <v-switch v-model="hideMarkedPins" :hide-details="true" />
+        <v-switch
+          v-model="hideMarkedPins"
+          :hide-details="true"
+        />
       </template>
     </v-list-item>
 
@@ -69,7 +75,10 @@ watch(hideMarkedPins, emitChanged);
     <v-divider />
     <v-card-actions>
       <v-spacer />
-      <v-btn :text="$t('common.close')" @click="() => emits('on-close')" />
+      <v-btn
+        :text="$t('common.close')"
+        @click="() => emits('on-close')"
+      />
     </v-card-actions>
   </v-card>
 </template>

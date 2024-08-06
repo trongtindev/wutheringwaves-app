@@ -194,7 +194,10 @@ if (headers['if-modified-since']) {
 <template>
   <div>
     <v-row>
-      <v-col cols="12" md="8">
+      <v-col
+        cols="12"
+        md="8"
+      >
         <!-- main -->
         <v-card>
           <!-- thumbnail -->
@@ -220,14 +223,20 @@ if (headers['if-modified-since']) {
           </div>
 
           <v-card-item>
-            <v-card-title class="text-wrap" tag="h1">
+            <v-card-title
+              class="text-wrap"
+              tag="h1"
+            >
               {{ titleLocalized }}
             </v-card-title>
             <v-card-subtitle tag="h2">
               {{ $t('common.lastUpdatedOn', { time: lastUpdated }) }}
             </v-card-subtitle>
 
-            <template v-if="!item.deleted" #append>
+            <template
+              v-if="!item.deleted"
+              #append
+            >
               <client-only>
                 <v-menu>
                   <template #activator="{ props }">
@@ -276,13 +285,19 @@ if (headers['if-modified-since']) {
         <v-card class="mt-2 pt-2 pb-2">
           <v-list-item :title="item.user.name">
             <template #prepend>
-              <v-avatar :image="item.user.photoUrl" class="border" />
+              <v-avatar
+                :image="item.user.photoUrl"
+                class="border"
+              />
             </template>
           </v-list-item>
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="4">
+      <v-col
+        cols="12"
+        md="4"
+      >
         <!-- relate -->
         <v-card>
           <v-card-title>

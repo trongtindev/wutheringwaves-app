@@ -20,10 +20,16 @@ watch(
 <template>
   {{ date }}
   {{ time }}
-  <v-menu :close-on-content-click="false" :close-on-back="false">
+  <v-menu
+    :close-on-content-click="false"
+    :close-on-back="false"
+  >
     <template #activator="menu">
       <!-- <slot v-bind="menu.props" /> -->
-      <v-btn v-bind="menu.props" text="OK" />
+      <v-btn
+        v-bind="menu.props"
+        text="OK"
+      />
     </template>
 
     <v-card class="border"> </v-card>

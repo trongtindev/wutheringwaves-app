@@ -15,7 +15,10 @@ const calculator = useCalculator();
 <template>
   <div>
     <v-row>
-      <v-col v-for="(element, j) in item.echoes" :key="j">
+      <v-col
+        v-for="(element, j) in item.echoes"
+        :key="j"
+      >
         <div class="d-flex justify-center">
           <v-sheet
             class="border rounded-circle d-flex justify-center align-center"

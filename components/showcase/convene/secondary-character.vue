@@ -26,7 +26,10 @@ const imageUrl = computed(() => {
     cols="2"
     class="rounded-circle position-absolute"
   >
-    <v-badge :content="props.data.chain" class="w-100 h-100">
+    <v-badge
+      :content="props.data.chain"
+      class="w-100 h-100"
+    >
       <v-img
         v-if="props.data.slug"
         :src="imageUrl"

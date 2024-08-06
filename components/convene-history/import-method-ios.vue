@@ -65,28 +65,43 @@ const onPressedImport = () => {
       <!-- step1 -->
       <v-list-item>
         <template #prepend>
-          <v-avatar text="1" class="bg-grey-darken-3" />
+          <v-avatar
+            text="1"
+            class="bg-grey-darken-3"
+          />
         </template>
 
         <span v-if="i18n.locale.value == 'vi'">
           Tương tự như việc lấy lịch sử của bạn trong Genshin Impact hoặc Honkai
           Star Rail, hãy làm theo
-          <v-chip :prepend-icon="mdiOpenInNew" @click="onPressedDownload">
+          <v-chip
+            :prepend-icon="mdiOpenInNew"
+            @click="onPressedDownload"
+          >
             video hướng dẫn này của paimon.moe
           </v-chip>
           để tải xuống và sử dụng
-          <v-chip :prepend-icon="mdiDownload" @click="onPressedDownload">
+          <v-chip
+            :prepend-icon="mdiDownload"
+            @click="onPressedDownload"
+          >
             Stream - Network Debug Tool
           </v-chip>
         </span>
         <span v-else>
           Similar to getting your history in Genshin Impact or Honkai Star Rail,
           follow
-          <v-chip :prepend-icon="mdiOpenInNew" @click="onPressedDownload">
+          <v-chip
+            :prepend-icon="mdiOpenInNew"
+            @click="onPressedDownload"
+          >
             this video tutorial by paimon.moe
           </v-chip>
           to download and use
-          <v-chip :prepend-icon="mdiDownload" @click="onPressedDownload">
+          <v-chip
+            :prepend-icon="mdiDownload"
+            @click="onPressedDownload"
+          >
             Stream - Network Debug Tool
           </v-chip>
         </span>
@@ -120,7 +135,10 @@ const onPressedImport = () => {
       <!-- step2 -->
       <v-list-item>
         <template #prepend>
-          <v-avatar text="2" class="bg-grey-darken-3" />
+          <v-avatar
+            text="2"
+            class="bg-grey-darken-3"
+          />
         </template>
 
         <span v-if="i18n.locale.value == 'vi'"> Dán nội dung JSON vào đây</span>
@@ -135,7 +153,10 @@ const onPressedImport = () => {
         :placeholder="JSON.stringify(sampleJSON)"
       />
 
-      <v-alert color="info" class="mt-2">
+      <v-alert
+        color="info"
+        class="mt-2"
+      >
         <span v-if="i18n.locale.value == 'vi'">
           JSON này không có tác dụng như là một token hoặc cookie nên không có
           quyền truy cập vào tài khoản của bạn.

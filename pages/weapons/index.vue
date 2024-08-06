@@ -93,11 +93,17 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 <template>
   <div>
     <!-- alert -->
-    <base-alert id="weapons.alert" :text="$t('weapons.alert')" />
+    <base-alert
+      id="weapons.alert"
+      :text="$t('weapons.alert')"
+    />
 
     <!-- filter -->
     <v-row>
-      <v-col cols="12" md="4">
+      <v-col
+        cols="12"
+        md="4"
+      >
         <v-text-field
           v-model="filterText"
           :label="$t('common.search')"
@@ -105,7 +111,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         />
       </v-col>
 
-      <v-col cols="6" md="4">
+      <v-col
+        cols="6"
+        md="4"
+      >
         <v-select
           v-model="filterType"
           :label="$t('Type')"
@@ -115,7 +124,10 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         />
       </v-col>
 
-      <v-col cols="6" md="4">
+      <v-col
+        cols="6"
+        md="4"
+      >
         <v-select
           v-model="filterRarity"
           :label="$t('common.rarity')"
