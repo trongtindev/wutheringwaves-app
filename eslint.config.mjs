@@ -11,7 +11,6 @@ export default withNuxt({}).append({
     'vue/valid-template-root': 1,
     'vue/return-in-computed-property': 1,
     'no-empty': 1,
-    '@typescript-eslint/ban-types': 1,
     'vue/no-side-effects-in-computed-properties': 1,
     'vue/html-self-closing': 0,
     'vue/no-unused-vars': 1,
