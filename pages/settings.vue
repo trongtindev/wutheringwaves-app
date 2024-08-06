@@ -21,10 +21,7 @@ useHead({
   <client-only>
     <template #fallback></template>
     <v-row>
-      <v-col
-        cols="12"
-        md="7"
-      >
+      <v-col cols="12" md="7">
         <settings-account />
         <settings-roles class="mt-2" />
         <settings-donate class="mt-2" />
@@ -34,11 +31,7 @@ useHead({
         <settings-erase-data class="mt-2" />
       </v-col>
 
-      <v-col
-        cols="12"
-        md="5"
-        lg="4"
-      >
+      <v-col cols="12" md="5" lg="4">
         <iframe
           src="https://discordapp.com/widget?id=1249656911167750144&theme=dark"
           width="100%"

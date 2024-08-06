@@ -6,6 +6,7 @@ const props = defineProps<{
 
 // uses
 const i18n = useI18n();
+const site = useSite();
 
 // computed
 const title = computed(() => {
@@ -14,16 +15,36 @@ const title = computed(() => {
 </script>
 
 <template>
-  <v-list-group
-    :value="title"
-    :fluid="true"
+  <v-list-item
+    v-if="props.data.upcoming && !site.inDev"
+    :title="title"
+    :nav="true"
+    :disabled="true"
   >
+    <template #prepend>
+      <v-avatar :size="24">
+        <v-img
+          v-if="props.data.icon && props.data.icon.startsWith('/')"
+          :src="props.data.icon"
+          :alt="title"
+        />
+        <v-icon v-else :icon="props.data.icon" />
+      </v-avatar>
+    </template>
+
+    <template #append>
+      <v-chip v-if="props.data.beta" color="info">
+        {{ $t('common.beta') }}
+      </v-chip>
+      <v-chip v-else-if="props.data.upcoming" color="warning">
+        {{ $t('common.upcoming') }}
+      </v-chip>
+    </template>
+  </v-list-item>
+
+  <v-list-group :value="title" :fluid="true">
     <template #activator="group">
-      <v-list-item
-        v-bind="group.props"
-        :title="title"
-        :nav="true"
-      >
+      <v-list-item v-bind="group.props" :title="title" :nav="true">
         <template #prepend>
           <v-avatar :size="24">
             <v-img
@@ -31,10 +52,7 @@ const title = computed(() => {
               :src="props.data.icon"
               :alt="title"
             />
-            <v-icon
-              v-else
-              :icon="props.data.icon"
-            />
+            <v-icon v-else :icon="props.data.icon" />
           </v-avatar>
         </template>
       </v-list-item>

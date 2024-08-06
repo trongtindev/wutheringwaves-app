@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { ICharacterData } from '~/interfaces/character';
 import type { ILocalized } from '~/interfaces/common';
 
 // uses
@@ -112,10 +111,7 @@ const onSubmit = () => {
       {{ $t('commit.character.skills') }}
     </div>
 
-    <v-expansion-panels
-      v-for="(element, index) in skills"
-      :key="index"
-    >
+    <v-expansion-panels v-for="(element, index) in skills" :key="index">
       <commit-character-skills
         :data="element"
         :index="index"
@@ -123,10 +119,7 @@ const onSubmit = () => {
       />
     </v-expansion-panels>
 
-    <v-app-bar
-      location="bottom"
-      class="pr-2 border-t"
-    >
+    <v-app-bar location="bottom" class="pr-2 border-t">
       <v-spacer />
       <v-btn
         :text="$t('common.submit')"

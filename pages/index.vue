@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiGithub, mdiChevronRight, mdiOpenInNew, mdiDownload } from '@mdi/js';
+import { mdiChevronRight, mdiDownload, mdiGithub, mdiOpenInNew } from '@mdi/js';
 
 // define
 const { SITE_NAME, SITE_REPO, DISCORD_INVITE_LINK } = useRuntimeConfig().public;
@@ -164,40 +164,23 @@ useSeoMeta({
 
     <v-footer class="pa-4 d-block mt-2">
       <v-row :no-gutters="true">
-        <v-col
-          cols="12"
-          md="6"
-          class="d-flex align-center"
-        >
+        <v-col cols="12" md="6" class="d-flex align-center">
           <h2>
             {{ SITE_NAME }}
           </h2>
         </v-col>
 
         <!-- Developers -->
-        <v-col
-          cols="12"
-          md="2"
-        >
+        <v-col cols="12" md="2">
           <div class="font-weight-bold">
             {{ $t('Developers') }}
           </div>
 
           <div>
-            <a
-              :href="SITE_REPO"
-              target="_blank"
-              title="Github"
-            >
-              Github
-            </a>
+            <a :href="SITE_REPO" target="_blank" title="Github"> Github </a>
           </div>
           <div>
-            <a
-              :href="DISCORD_INVITE_LINK"
-              target="_blank"
-              title="Discord"
-            >
+            <a :href="DISCORD_INVITE_LINK" target="_blank" title="Discord">
               Discord
             </a>
           </div>
@@ -213,38 +196,24 @@ useSeoMeta({
         </v-col>
 
         <!-- Resources -->
-        <v-col
-          cols="12"
-          md="2"
-        >
+        <v-col cols="12" md="2">
           <div class="font-weight-bold">
             {{ $t('Resources') }}
           </div>
 
           <div>
-            <a
-              href="https://wutheringwaves.kurogames.com/"
-              target="_blank"
-            >
+            <a href="https://wutheringwaves.kurogames.com/" target="_blank">
               Wuthering Waves
             </a>
           </div>
 
           <div>
-            <a
-              href="https://kurogames.com/"
-              target="_blank"
-            >
-              Kuro Games
-            </a>
+            <a href="https://kurogames.com/" target="_blank"> Kuro Games </a>
           </div>
         </v-col>
 
         <!-- Legal -->
-        <v-col
-          cols="12"
-          md="2"
-        >
+        <v-col cols="12" md="2">
           <div class="font-weight-bold">
             {{ $t('Legal') }}
           </div>

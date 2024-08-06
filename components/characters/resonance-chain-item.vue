@@ -51,9 +51,6 @@ const descriptionLocalized = computed(() => {
         "
       />
     </v-card-text>
-    <v-sheet
-      v-else
-      class="pb-2"
-    />
+    <v-sheet v-else class="pb-2" />
   </v-card>
 </template>

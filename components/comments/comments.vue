@@ -2,11 +2,11 @@
 import type { IListResponse } from '@/interfaces/api';
 import type { IComment } from '@/interfaces/comment';
 import {
-  mdiSend,
-  mdiImageOutline,
   mdiAlert,
-  mdiTrashCan,
   mdiEmoticon,
+  mdiImageOutline,
+  mdiSend,
+  mdiTrashCan,
 } from '@mdi/js';
 import type { IFile } from '~/interfaces/file';
 
@@ -228,19 +228,10 @@ onMounted(() => loadData());
                 :disabled="state != '' || !auth.isLoggedIn"
                 @click="onPressedAddAttachment"
               >
-                <v-icon
-                  :icon="mdiImageOutline"
-                  color="white"
-                />
+                <v-icon :icon="mdiImageOutline" color="white" />
               </v-btn>
-              <v-btn
-                variant="tonal"
-                :disabled="true"
-              >
-                <v-icon
-                  :icon="mdiEmoticon"
-                  color="white"
-                />
+              <v-btn variant="tonal" :disabled="true">
+                <v-icon :icon="mdiEmoticon" color="white" />
               </v-btn>
             </v-col>
 
@@ -258,10 +249,7 @@ onMounted(() => loadData());
         </v-form>
 
         <div>
-          <v-row
-            v-if="attachments.length > 0"
-            class="mt-2"
-          >
+          <v-row v-if="attachments.length > 0" class="mt-2">
             <v-col
               v-for="(element, index) in attachments"
               :key="index"
@@ -269,10 +257,7 @@ onMounted(() => loadData());
               sm="3"
               md="2"
             >
-              <v-responsive
-                class="border rounded"
-                :aspect-ratio="1"
-              >
+              <v-responsive class="border rounded" :aspect-ratio="1">
                 <!-- uploaded -->
                 <v-hover v-if="element.status === 'uploaded' && element.result">
                   <template #default="hover">
@@ -304,11 +289,7 @@ onMounted(() => loadData());
                 >
                   <div>
                     <div class="text-center">
-                      <v-icon
-                        :icon="mdiAlert"
-                        color="error"
-                        class="mb-2"
-                      />
+                      <v-icon :icon="mdiAlert" color="error" class="mb-2" />
                     </div>
                     <div class="text-center">
                       {{ element.error }}
@@ -341,24 +322,15 @@ onMounted(() => loadData());
 
     <client-only>
       <!-- loading -->
-      <v-skeleton-loader
-        v-if="props.lite && !data"
-        type="list-item-two-line"
-      />
-      <v-skeleton-loader
-        v-else-if="!data"
-        type="list-item-avatar-two-line"
-      />
+      <v-skeleton-loader v-if="props.lite && !data" type="list-item-two-line" />
+      <v-skeleton-loader v-else-if="!data" type="list-item-avatar-two-line" />
 
       <!-- list -->
       <v-list v-else>
         <slot name="prepend-list" />
 
         <!-- empty -->
-        <div
-          v-if="data && data.total === 0"
-          class="pl-4 pr-4"
-        >
+        <div v-if="data && data.total === 0" class="pl-4 pr-4">
           <base-alert :text="$t('comments.empty')" />
         </div>
 
@@ -378,10 +350,7 @@ onMounted(() => loadData());
         v-if="!props.lite && pages > 0"
         class="d-flex justify-center"
       >
-        <v-pagination
-          v-model="page"
-          :length="pages"
-        />
+        <v-pagination v-model="page" :length="pages" />
       </v-card-actions>
     </client-only>
   </v-card>

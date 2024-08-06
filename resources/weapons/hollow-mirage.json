@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Resonance Liberation is released, grants {0} stack(s) of Iron Armor. Each stack increases ATK and DEF by {1}, stacking up to {2} time(s). When the Resonator takes damage, reduces the number of stacks by {3}."
   },
   "slug": "hollow-mirage",
-  "stats": { "atk": 33 }
+  "stats": { "atkFlat": 33, "atk": 6.8 }
 }

@@ -2,10 +2,6 @@ import {
   DesktopAppGameType,
   type IDesktopAppActor,
 } from '~/interfaces/desktopApp';
-import {
-  ElectronEventType,
-  ElectronInvokeType,
-} from '~/interfaces/electron.types';
 
 export const useDesktopApp = defineStore('useDesktopApp', () => {
   // states

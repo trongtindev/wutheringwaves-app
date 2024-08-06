@@ -41,9 +41,6 @@ onMounted(calculator);
 
 <template>
   <div :style="`height: ${height}px`">
-    <slot
-      :width
-      :height
-    />
+    <slot :width :height />
   </div>
 </template>

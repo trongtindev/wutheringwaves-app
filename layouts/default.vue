@@ -38,15 +38,9 @@ const onPressedSearch = () => {
   <v-app>
     <v-navigation-drawer v-model="sidebar.open">
       <!-- sidebar -->
-      <v-list
-        :nav="true"
-        :lines="false"
-      >
+      <v-list :nav="true" :lines="false">
         <!-- logo -->
-        <v-list-item
-          :to="localePath('/')"
-          :active="false"
-        >
+        <v-list-item :to="localePath('/')" :active="false">
           <template #prepend>
             <v-avatar
               rounded
@@ -71,10 +65,7 @@ const onPressedSearch = () => {
 
       <template #append>
         <v-divider />
-        <v-list
-          :nav="true"
-          :lines="false"
-        >
+        <v-list :nav="true" :lines="false">
           <!-- language -->
           <layouts-language-switcher />
 
@@ -91,10 +82,7 @@ const onPressedSearch = () => {
     </v-navigation-drawer>
 
     <!-- app bar -->
-    <v-app-bar
-      class="border-b pl-1"
-      :elevation="0"
-    >
+    <v-app-bar class="border-b pl-1" :elevation="0">
       <v-app-bar-nav-icon
         :icon="sidebar.open ? mdiMenuOpen : mdiMenuClose"
         @click="sidebar.open = !sidebar.open"
@@ -107,10 +95,7 @@ const onPressedSearch = () => {
             {{ $t('common.loading') }}
           </template>
 
-          <v-sheet
-            v-if="appBar.title"
-            class="text-h6"
-          >
+          <v-sheet v-if="appBar.title" class="text-h6">
             {{ appBar.title }}
           </v-sheet>
         </client-only>
@@ -124,10 +109,7 @@ const onPressedSearch = () => {
             <layouts-default-appbar-account />
 
             <!-- search -->
-            <v-tooltip
-              :text="$t('search.tooltip')"
-              location="bottom"
-            >
+            <v-tooltip :text="$t('search.tooltip')" location="bottom">
               <template #activator="{ props }">
                 <v-btn
                   v-bind="props"
@@ -146,10 +128,7 @@ const onPressedSearch = () => {
           </div>
 
           <!-- account -->
-          <v-divider
-            :vertical="true"
-            class="mr-4 ml-2"
-          />
+          <v-divider :vertical="true" class="mr-4 ml-2" />
           <layouts-default-appbar-auth />
         </div>
       </template>

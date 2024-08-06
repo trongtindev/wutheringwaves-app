@@ -25,10 +25,7 @@ const setLevel = (index: number, value: number) => {
     </v-row>
 
     <v-row>
-      <v-col
-        v-for="(element, index) in calculator.participants"
-        :key="index"
-      >
+      <v-col v-for="(element, index) in calculator.participants" :key="index">
         <v-slider
           v-model="levels[index]"
           :step="1"
@@ -51,19 +48,12 @@ const setLevel = (index: number, value: number) => {
           v-if="!element.character || !element.character.data.resonanceChain"
           class="mt-2"
         >
-          <v-expansion-panel
-            v-for="(item, j) in 6"
-            :key="j"
-            :disabled="true"
-          >
+          <v-expansion-panel v-for="(item, j) in 6" :key="j" :disabled="true">
             <v-expansion-panel-title></v-expansion-panel-title>
           </v-expansion-panel>
         </v-expansion-panels>
 
-        <v-expansion-panels
-          v-else
-          class="mt-2"
-        >
+        <v-expansion-panels v-else class="mt-2">
           <calculator-builder-sequence-item
             v-for="(item, j) in element.character.data.resonanceChain"
             :key="j"

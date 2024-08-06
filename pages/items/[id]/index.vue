@@ -152,14 +152,8 @@ if (headers['if-modified-since']) {
 
       <v-card-text>
         <v-row>
-          <v-col
-            cols="12"
-            md="4"
-          >
-            <v-img
-              :src="`/items/icons/${item.slug}.webp`"
-              :height="256"
-            />
+          <v-col cols="12" md="4">
+            <v-img :src="`/items/icons/${item.slug}.webp`" :height="256" />
           </v-col>
 
           <v-col>
@@ -172,10 +166,7 @@ if (headers['if-modified-since']) {
               {{ data.description }}
             </div>
 
-            <div
-              v-if="data.bgDescription"
-              class="mt-2"
-            >
+            <div v-if="data.bgDescription" class="mt-2">
               <div :innerHTML="data.bgDescription"></div>
             </div>
           </v-col>
@@ -184,11 +175,7 @@ if (headers['if-modified-since']) {
     </v-card>
 
     <v-row class="mt-1">
-      <v-col
-        v-if="obtainDescriptionLocalized"
-        cols="12"
-        md="6"
-      >
+      <v-col v-if="obtainDescriptionLocalized" cols="12" md="6">
         <!-- obtain -->
         <v-card class="fill-height">
           <v-card-title tag="h2">
@@ -201,11 +188,7 @@ if (headers['if-modified-since']) {
         </v-card>
       </v-col>
 
-      <v-col
-        v-if="data.unlockDescription"
-        cols="12"
-        md="6"
-      >
+      <v-col v-if="data.unlockDescription" cols="12" md="6">
         <!-- unlock -->
         <v-card class="fill-height">
           <v-card-title tag="h2">
@@ -218,11 +201,7 @@ if (headers['if-modified-since']) {
         </v-card>
       </v-col>
 
-      <v-col
-        v-if="data.cookingIngredients"
-        cols="12"
-        md="6"
-      >
+      <v-col v-if="data.cookingIngredients" cols="12" md="6">
         <!-- cookingIngredients -->
         <v-card class="fill-height">
           <v-card-title tag="h2">
@@ -240,10 +219,7 @@ if (headers['if-modified-since']) {
               target="_blank"
             >
               <template #prepend>
-                <v-avatar
-                  class="border"
-                  rounded
-                >
+                <v-avatar class="border" rounded>
                   <v-img
                     v-if="itemDict[element.item]"
                     :src="`/items/icons/${itemDict[element.item].slug}.webp`"

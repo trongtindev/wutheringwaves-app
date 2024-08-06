@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Intro Skill is released, increases Resonance Skill DMG Bonus by {0} for {1}s."
   },
   "slug": "undying-flame",
-  "stats": { "atk": 33 }
+  "stats": { "atkFlat": 33, "atk": 6.8 }
 }

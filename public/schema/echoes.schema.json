@@ -15,24 +15,25 @@
             "type": "string",
             "enum": ["Common", "Elite", "Overlord", "Calamity"]
           },
-          "attribute": {
-            "type": "string",
-            "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "./attribute.components.json#/components/schemas/slug"
+            }
           },
           "sonataEffects": {
             "type": "array",
             "items": {
-              "type": "string",
-              "enum": [
-                "Lingering Tunes",
-                "Rejuvenating Glow",
-                "Sierra Gale",
-                "Celestial Light",
-                "Void Thunder",
-                "Freezing Frost",
-                "Molten Rift",
-                "Moonlit Clouds",
-                "Sun-sinking Eclipse"
+              "anyOf": [
+                {
+                  "type": "string",
+                  "$ref": "./sonata.components.json#/components/schemas/slug"
+                },
+                {
+                  "type": "string",
+                  "$ref": "./sonata.components.json#/components/schemas/name"
+                }
               ]
             }
           },

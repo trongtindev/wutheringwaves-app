@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiGithub, mdiOpenInNew, mdiBug, mdiTranslate } from '@mdi/js';
+import { mdiBug, mdiGithub, mdiOpenInNew, mdiTranslate } from '@mdi/js';
 
 // define
 const { DISCORD_INVITE_LINK, SITE_REPO } = useRuntimeConfig().public;

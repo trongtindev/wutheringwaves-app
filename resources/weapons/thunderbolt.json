@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by {0}, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
   },
   "slug": "thunderbolt",
-  "stats": { "atk": 31 }
+  "stats": { "atkFlat": 31, "atk": 8.1 }
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import dayjs from 'dayjs';
 import { mdiPlus } from '@mdi/js';
+import dayjs from 'dayjs';
 import type { IItem } from '~/interfaces/item';
 
 // Property 'formatNumber' does not exist on type
@@ -39,6 +39,55 @@ const skillDescription = computed(() => {
     /\{(\d+)\}/g,
     (_, j) => data.skill.params[lastIndex][j] || '',
   );
+});
+
+const stats = computed(() => {
+  return [
+    ...(data.stats.hp
+      ? [
+          {
+            label: 'hp',
+            value: `${data.stats.hp}%`,
+          },
+        ]
+      : []),
+    ...(data.stats.def
+      ? [
+          {
+            label: 'def',
+            value: `${data.stats.def}%`,
+          },
+        ]
+      : []),
+    ...(data.stats.atk
+      ? [
+          {
+            label: 'atk',
+            value: `${data.stats.atk}%`,
+          },
+        ]
+      : []),
+    {
+      label: 'atk',
+      value: `${data.stats.atkFlat}`,
+    },
+    ...(data.stats.critRate
+      ? [
+          {
+            label: 'critRate',
+            value: `${data.stats.critRate}%`,
+          },
+        ]
+      : []),
+    ...(data.stats.critDMG
+      ? [
+          {
+            label: 'critDMG',
+            value: `${data.stats.critDMG}%`,
+          },
+        ]
+      : []),
+  ];
 });
 
 // lifecycle
@@ -119,10 +168,7 @@ if (headers['if-modified-since']) {
 <template>
   <div>
     <!-- chips -->
-    <header-chips
-      class="mb-2"
-      :github="`tree/main/resources/weapons.json`"
-    />
+    <header-chips class="mb-2" :github="`tree/main/resources/weapons.json`" />
 
     <!-- upcoming -->
     <v-alert
@@ -134,20 +180,21 @@ if (headers['if-modified-since']) {
     />
 
     <v-card>
-      <v-card-title
-        tag="h1"
-        :class="`text-rarity${item.rarity}`"
-      >
+      <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
         {{ nameLocalized }}
       </v-card-title>
-      <v-divider />
+      <v-card-subtitle tag="h2">
+        {{
+          $t('weapons.lastUpdatedOn', {
+            name: nameLocalized,
+            time: dayjs(item.modifiedTime),
+          })
+        }}
+      </v-card-subtitle>
 
       <v-card-text>
         <v-row>
-          <v-col
-            cols="12"
-            md="4"
-          >
+          <v-col cols="12" md="4">
             <v-sheet class="d-flex align-center justify-center">
               <v-img
                 :src="`/weapons/icons/${item.slug}.webp`"
@@ -158,10 +205,7 @@ if (headers['if-modified-since']) {
             </v-sheet>
           </v-col>
 
-          <v-col
-            cols="12"
-            md="8"
-          >
+          <v-col cols="12" md="8">
             <!-- introduction -->
             <div>
               <h2
@@ -175,91 +219,38 @@ if (headers['if-modified-since']) {
               />
             </div>
 
-            <div
-              v-if="data.description"
-              class="mt-2"
-            >
+            <div v-if="data.description" class="mt-2">
               {{ data.description }}
             </div>
 
             <!-- stats -->
-            <div>
-              <v-sheet
-                v-if="data.stats.atk"
-                class="border rounded mt-2 pa-2"
-              >
-                <v-row>
-                  <v-col cols="6"> ATK </v-col>
-                  <v-col cols="6">
-                    {{ data.stats.atk }}
-                  </v-col>
-                </v-row>
-              </v-sheet>
+            <v-table class="border rounded mt-2">
+              <thead>
+                <tr>
+                  <th colspan="3" class="ma-2 text-center font-weight-bold">
+                    {{ $t('common.stats') }}
+                  </th>
+                </tr>
+              </thead>
 
-              <v-sheet
-                v-if="data.stats.atkRate"
-                class="border rounded mt-2 pa-2"
-              >
-                <v-row>
-                  <v-col cols="6"> ATK </v-col>
-                  <v-col cols="6"> {{ data.stats.atkRate }}% </v-col>
-                </v-row>
-              </v-sheet>
-
-              <v-sheet
-                v-if="data.stats.critRate"
-                class="border rounded mt-2 pa-2"
-              >
-                <v-row>
-                  <v-col cols="6"> {{ $t('common.critRate') }} </v-col>
-                  <v-col cols="6"> {{ data.stats.critRate }}% </v-col>
-                </v-row>
-              </v-sheet>
-
-              <v-sheet
-                v-if="data.stats.critDMG"
-                class="border rounded mt-2 pa-2"
-              >
-                <v-row>
-                  <v-col cols="6"> {{ $t('common.critDMG') }} </v-col>
-                  <v-col cols="6"> {{ data.stats.critDMG }}% </v-col>
-                </v-row>
-              </v-sheet>
-
-              <v-sheet
-                v-if="data.stats.energy"
-                class="border rounded mt-2 pa-2"
-              >
-                <v-row>
-                  <v-col cols="6"> {{ $t('common.energy') }} </v-col>
-                  <v-col cols="6">
-                    {{ data.stats.energy }}
-                  </v-col>
-                </v-row>
-              </v-sheet>
-            </div>
+              <tbody>
+                <tr v-for="(element, j) in stats" :key="j">
+                  <td class="w-50 text-center">
+                    {{ $t(`common.${element.label}`) }}
+                  </td>
+                  <td class="w-50 text-center">
+                    {{ element.value }}
+                  </td>
+                </tr>
+              </tbody>
+            </v-table>
           </v-col>
         </v-row>
       </v-card-text>
-
-      <v-divider v-if="item.modifiedTime" />
-      <v-card-actions v-if="item.modifiedTime">
-        <h2 class="text-center text-body-2 w-100">
-          {{
-            $t('weapons.lastUpdatedOn', {
-              name: nameLocalized,
-              time: dayjs(item.modifiedTime),
-            })
-          }}
-        </h2>
-      </v-card-actions>
     </v-card>
 
     <!-- Skill -->
-    <v-card
-      v-if="data.skill"
-      class="mt-2"
-    >
+    <v-card v-if="data.skill" class="mt-2">
       <v-card-title tag="h2">
         {{ $t('weapons.skill', { name: nameLocalized }) }}
       </v-card-title>
@@ -284,11 +275,7 @@ if (headers['if-modified-since']) {
         :key="index"
       >
         <v-row>
-          <v-col
-            cols="12"
-            sm="3"
-            md="2"
-          >
+          <v-col cols="12" sm="3" md="2">
             <v-card
               class="d-flex align-center justify-center text-center text-h6 fill-height pa-2"
             >

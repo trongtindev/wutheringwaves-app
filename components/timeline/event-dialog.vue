@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { mdiOpenInNew } from '@mdi/js';
 import dayjs from 'dayjs';
-import { mdiOpenInNew, mdiLink } from '@mdi/js';
 import type { ITimelineEvent } from '~/interfaces/timeline';
 
 // define
@@ -70,10 +70,7 @@ const descriptionLocalized = computed(() => {
           color="info"
         />
 
-        <v-chip
-          v-else
-          :text="$t('timeline.ended')"
-        />
+        <v-chip v-else :text="$t('timeline.ended')" />
       </div>
 
       <v-card
@@ -90,10 +87,7 @@ const descriptionLocalized = computed(() => {
 
     <v-card-actions>
       <v-spacer />
-      <v-btn
-        :text="$t('common.close')"
-        @click="() => emits('on-close')"
-      />
+      <v-btn :text="$t('common.close')" @click="() => emits('on-close')" />
     </v-card-actions>
   </v-card>
 </template>

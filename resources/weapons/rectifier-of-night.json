@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
   },
   "slug": "rectifier-of-night",
-  "stats": { "atk": 26 }
+  "stats": { "atkFlat": 26, "atk": 5.4 }
 }

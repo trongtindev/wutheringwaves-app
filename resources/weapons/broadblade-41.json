@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When the Resonator's HP is above {0}, increases ATK by {1}. When the Resonator's HP is below {2}, restores their HP by {3} for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered {5} time(s) every {4}s."
   },
   "slug": "broadblade-41",
-  "stats": { "atk": 33, "energy": 720 }
+  "stats": { "atkFlat": 33, "energyRegen": 7.2 }
 }

@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
 import type { LocaleObject } from '@nuxtjs/i18n';
+import dotenv from 'dotenv';
 
 // environment
 dotenv.config({ path: './.env.production', override: true });
@@ -170,6 +170,7 @@ export default defineNuxtConfig({
     compilation: {
       strictMessage: false,
     },
+    lazy: false,
   },
 
   vite: {

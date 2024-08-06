@@ -1,6 +1,6 @@
-import type { IUser } from '~/interfaces/user';
-import { jwtDecode } from 'jwt-decode';
 import { AxiosError } from 'axios';
+import { jwtDecode } from 'jwt-decode';
+import type { IUser } from '~/interfaces/user';
 
 export const useAuth = defineStore('useAuth', () => {
   // uses

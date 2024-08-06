@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiPlus, mdiMagnify, mdiFilterCog } from '@mdi/js';
+import { mdiFilterCog, mdiMagnify, mdiPlus } from '@mdi/js';
 import type { IListResponse } from '~/interfaces/api';
 import type { IPost, IPostCategory } from '~/interfaces/post';
 

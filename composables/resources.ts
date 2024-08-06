@@ -5,12 +5,12 @@ import type {
 } from '@/interfaces/character';
 import type { ICode } from '@/interfaces/code';
 import type { IWeapon, IWeaponData } from '@/interfaces/weapon';
-import type { IItem, IItemData } from '~/interfaces/item';
-import type { IEcho, IEchoData } from '~/interfaces/echo';
-import type { ITrophy } from '~/interfaces/trophy';
-import type { ITimeline } from '~/interfaces/timeline';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
+import type { IEcho, IEchoData } from '~/interfaces/echo';
+import type { IItem, IItemData } from '~/interfaces/item';
 import type { ISonata } from '~/interfaces/sonata';
+import type { ITimeline } from '~/interfaces/timeline';
+import type { ITrophy } from '~/interfaces/trophy';
 
 export const useResources = defineStore('useResources', () => {
   const getBanners = async (selector?: IBanner) => {
@@ -54,6 +54,9 @@ export const useResources = defineStore('useResources', () => {
           );
         }
         return true;
+      })
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
       });
     return items as IWeapon[];
   };
@@ -88,7 +91,9 @@ export const useResources = defineStore('useResources', () => {
       })
       .map((e) => {
         const attribute = attributes.find((attribute) => {
-          return attribute.id === e.attribute || attribute.name === e.attribute;
+          return (
+            attribute.slug === e.attribute || attribute.name === e.attribute
+          );
         });
         return {
           ...e,
@@ -123,6 +128,9 @@ export const useResources = defineStore('useResources', () => {
             })(),
           },
         };
+      })
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
       });
     return items as ICharacter[];
   };
@@ -147,14 +155,34 @@ export const useResources = defineStore('useResources', () => {
   const getEchoes = async (selector?: Partial<IEcho>): Promise<IEcho[]> => {
     const data = await import('~/resources/echoes.json');
     const clone = cloneObject(data.default.items);
-    const items = clone.filter((e) => {
-      if (selector) {
-        return Object.entries(selector).every(
-          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
-        );
-      }
-      return true;
-    });
+    const attrs = await getAttributes();
+    const sonataEffects = await getSonataEffects();
+    const items = clone
+      .filter((e) => {
+        if (selector) {
+          return Object.entries(selector).every(
+            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+          );
+        }
+        return true;
+      })
+      .map((e) => {
+        return {
+          ...e,
+          icon: `/echoes/icons/${e.slug}.webp`,
+          attribute: attrs.find((item) => {
+            return item.slug === e.attribute || item.name === e.attribute;
+          })!,
+          sonataEffects: e.sonataEffects.map((sonataEffect) => {
+            return sonataEffects.find((item) => {
+              return item.slug === sonataEffect || item.name === sonataEffect;
+            })!;
+          }),
+        };
+      })
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });
     return items;
   };
 
@@ -171,14 +199,18 @@ export const useResources = defineStore('useResources', () => {
   const getItems = async (selector?: Partial<IItem>): Promise<IItem[]> => {
     const data = await import('~/resources/items.json');
     const clone = cloneObject(data.default.items);
-    const items = clone.filter((e) => {
-      if (selector) {
-        return Object.entries(selector).every(
-          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
-        );
-      }
-      return true;
-    });
+    const items = clone
+      .filter((e) => {
+        if (selector) {
+          return Object.entries(selector).every(
+            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+          );
+        }
+        return true;
+      })
+      .sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });
     return JSON.parse(JSON.stringify(items));
   };
 

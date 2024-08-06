@@ -6,6 +6,9 @@
       "items": {
         "type": "object",
         "properties": {
+          "slug": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
@@ -47,7 +50,13 @@
             "required": ["type", "value"]
           }
         },
-        "required": ["name", "icon", "twoPieceEffect", "fivePieceEffect"]
+        "required": [
+          "slug",
+          "name",
+          "icon",
+          "twoPieceEffect",
+          "fivePieceEffect"
+        ]
       }
     }
   },

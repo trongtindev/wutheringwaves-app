@@ -1,5 +1,5 @@
 {
-  "$schema": "./.schema.json",
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -63,5 +63,5 @@
     ],
     "description": "Increases the DMG Bonus of all Resonance Attributes by {0}. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by {1}, stacking up to {2} time(s). This effect lasts for {3}s."
   },
-  "stats": { "atk": 587.5, "critDMG": 48.6 }
+  "stats": { "atkFlat": 47, "critDMG": 10.8 }
 }

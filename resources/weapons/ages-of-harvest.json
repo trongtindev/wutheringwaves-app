@@ -1,5 +1,5 @@
 {
-  "$schema": "./.schema.json",
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -63,5 +63,5 @@
     "description": "Grants {0} Attribute DMG Bonus.\nCasting Intro Skill gives the equipper Ageless Marking, which grants {1} Resonance Skill DMG Bonus for {2}s. Casting Resonance Skill gives the equipper Ethereal Endowment, which grants {1} Resonance Skill DMG Bonus for {2}s."
   },
   "slug": "ages-of-harvest",
-  "stats": { "atk": 587.5, "critRate": 24.3 }
+  "stats": { "atkFlat": 47, "critRate": 5.4 }
 }

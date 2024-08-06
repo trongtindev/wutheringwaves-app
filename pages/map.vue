@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { IMapMarker, IMapSettings } from '~/interfaces/map';
-import type * as L from 'leaflet';
 import {
   mdiArrowLeft,
   mdiArrowRight,
@@ -8,7 +6,9 @@ import {
   mdiMapMarkerPlus,
   mdiVectorPolyline,
 } from '@mdi/js';
+import type * as L from 'leaflet';
 import { useDisplay } from 'vuetify';
+import type { IMapMarker, IMapSettings } from '~/interfaces/map';
 
 // define
 const { FILE_URL } = useRuntimeConfig().public;
@@ -309,10 +309,7 @@ useSeoMeta({
         </div>
       </template>
 
-      <base-screen
-        v-slot="{ width, height }"
-        class="position-relative"
-      >
+      <base-screen v-slot="{ width, height }" class="position-relative">
         <map-leaflet
           :height="height"
           :marked="markedPins"
@@ -347,10 +344,7 @@ useSeoMeta({
             :class="width < 496 ? 'rounded-be-0' : 'rounded-te-0'"
             :style="`opacity: ${mapSettingsData.opacity};`"
           >
-            <map-panel
-              :counter
-              @on-markers="(val) => onFilterMarkers(val)"
-            />
+            <map-panel :counter @on-markers="(val) => onFilterMarkers(val)" />
           </v-card>
 
           <!-- menu -->
@@ -364,10 +358,7 @@ useSeoMeta({
         </div>
 
         <!-- right button -->
-        <div
-          class="position-absolute top-2 right-2 z-9999"
-          style="width: 48px"
-        >
+        <div class="position-absolute top-2 right-2 z-9999" style="width: 48px">
           <v-tooltip location="left">
             <template #activator="tooltip">
               <v-btn
@@ -419,11 +410,7 @@ useSeoMeta({
       </base-screen>
 
       <!-- settings dialog -->
-      <v-dialog
-        v-model="showSettings"
-        :scrollable="true"
-        :width="480"
-      >
+      <v-dialog v-model="showSettings" :scrollable="true" :width="480">
         <map-settings
           :default-value="mapSettingsData"
           @on-close="() => (showSettings = false)"

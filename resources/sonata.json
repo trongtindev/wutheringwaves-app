@@ -2,6 +2,7 @@
   "$schema": "../public/schema/sonata.schema.json",
   "items": [
     {
+      "slug": "freezing-frost",
       "name": "Freezing Frost",
       "icon": "/sonata-effects/freezing-frost.webp",
       "colors": {
@@ -13,6 +14,7 @@
       }
     },
     {
+      "slug": "molten-rift",
       "name": "Molten Rift",
       "icon": "/sonata-effects/molten-rift.webp",
       "colors": {
@@ -24,6 +26,7 @@
       }
     },
     {
+      "slug": "void-thunder",
       "name": "Void Thunder",
       "icon": "/sonata-effects/void-thunder.webp",
       "colors": {
@@ -35,6 +38,7 @@
       }
     },
     {
+      "slug": "sierra-gale",
       "name": "Sierra Gale",
       "icon": "/sonata-effects/sierra-gale.webp",
       "colors": {
@@ -46,6 +50,7 @@
       }
     },
     {
+      "slug": "celestial-light",
       "name": "Celestial Light",
       "icon": "/sonata-effects/celestial-light.webp",
       "colors": {
@@ -57,6 +62,7 @@
       }
     },
     {
+      "slug": "sun-sinking-eclipse",
       "name": "Sun-sinking Eclipse",
       "icon": "/sonata-effects/sun-sinking-eclipse.webp",
       "colors": {
@@ -68,6 +74,7 @@
       }
     },
     {
+      "slug": "rejuvenating-glow",
       "name": "Rejuvenating Glow",
       "icon": "/sonata-effects/rejuvenating-glow.webp",
       "colors": {
@@ -79,6 +86,7 @@
       }
     },
     {
+      "slug": "moonlit-clouds",
       "name": "Moonlit Clouds",
       "icon": "/sonata-effects/moonlit-clouds.webp",
       "colors": {
@@ -90,6 +98,7 @@
       }
     },
     {
+      "slug": "lingering-tunes",
       "name": "Lingering Tunes",
       "icon": "/sonata-effects/lingering-tunes.webp",
       "colors": {

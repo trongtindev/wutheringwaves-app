@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { toBlob } from 'html-to-image';
+import { mdiDownload, mdiGrid, mdiViewList } from '@mdi/js';
 import { saveAs } from 'file-saver';
+import { toBlob } from 'html-to-image';
 import urlSlug from 'url-slug';
-import { mdiGrid, mdiViewList, mdiDownload } from '@mdi/js';
 import type { ConveneDocument } from '~/composables/database';
 
 // define
@@ -50,10 +50,7 @@ const downloadImage = async () => {
 
     <v-card-text>
       <v-sheet class="w-100 border rounded pa-1">
-        <v-tabs
-          v-model="type"
-          fixed-tabs
-        >
+        <v-tabs v-model="type" fixed-tabs>
           <v-tab value="list">
             <v-icon :icon="mdiViewList" />
           </v-tab>
@@ -80,10 +77,7 @@ const downloadImage = async () => {
           </thead>
 
           <tbody>
-            <tr
-              v-for="(element, index) in props.items"
-              :key="index"
-            >
+            <tr v-for="(element, index) in props.items" :key="index">
               <td>
                 <v-avatar
                   class="border mr-2"

@@ -22,17 +22,11 @@ const props = defineProps<{
           cols="12"
           md="6"
         >
-          <characters-resonance-chain-item
-            :index
-            :data="element"
-          />
+          <characters-resonance-chain-item :index :data="element" />
         </v-col>
       </v-row>
     </div>
-    <v-alert
-      v-else
-      :text="$t('common.upcoming')"
-    />
+    <v-alert v-else :text="$t('common.upcoming')" />
   </div>
 
   <!-- Skills -->
@@ -48,9 +42,6 @@ const props = defineProps<{
         :data="element"
       />
     </masonry>
-    <v-alert
-      v-else
-      :text="$t('common.upcoming')"
-    />
+    <v-alert v-else :text="$t('common.upcoming')" />
   </div>
 </template>

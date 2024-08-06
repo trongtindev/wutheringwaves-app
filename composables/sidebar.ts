@@ -1,18 +1,17 @@
 import {
-  mdiHomeOutline,
-  mdiChartBarStacked,
-  mdiCounter,
   mdiAccountGroup,
-  mdiTrophy,
-  mdiListStatus,
-  mdiChartTimeline,
-  mdiWalletGiftcard,
-  mdiMap,
-  mdiCalendar,
-  mdiGrid,
-  mdiCompareHorizontal,
   mdiBagPersonal,
   mdiCalculatorVariant,
+  mdiCalendar,
+  mdiChartBarStacked,
+  mdiChartTimeline,
+  mdiCounter,
+  mdiGrid,
+  mdiHomeOutline,
+  mdiListStatus,
+  mdiMap,
+  mdiTrophy,
+  mdiWalletGiftcard,
 } from '@mdi/js';
 
 export interface IMenu {
@@ -92,6 +91,20 @@ export const useSidebar = defineStore('useSidebar', () => {
       url: '/calculator',
       icon: mdiCalculatorVariant,
       title: 'sidebar.calculator',
+      items: [
+        {
+          url: '/calculator',
+          title: 'sidebar.calculatorBuilder',
+        },
+        {
+          url: '/calculator/import',
+          title: 'sidebar.calculatorImport',
+        },
+        {
+          url: '/calculator/inventory',
+          title: 'sidebar.calculatorInventory',
+        },
+      ],
       upcoming: true,
     },
     {

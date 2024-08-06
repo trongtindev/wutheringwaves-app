@@ -24,10 +24,7 @@ const localePath = useLocalePath();
       />
     </v-responsive>
 
-    <v-card-title
-      class="text-center"
-      tag="h2"
-    >
+    <v-card-title class="text-center" tag="h2">
       {{ $t(item.name) }}
     </v-card-title>
   </v-card>

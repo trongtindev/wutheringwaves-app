@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { mdiOpenInNew } from '@mdi/js';
-
 const props = defineProps<{
   title: string;
 }>();

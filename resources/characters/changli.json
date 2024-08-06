@@ -301,5 +301,5 @@
     }
   ],
   "splashArt": true,
-  "stats": { "hp": 10388, "def": 1100, "atk": 463 }
+  "stats": { "hp": 831, "def": 90, "atk": 37, "energy": 100 }
 }

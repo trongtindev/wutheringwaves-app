@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { CardPoolType } from '@/interfaces/banner';
-import urlSlug from 'url-slug';
-import dayjs from 'dayjs';
-import type { ConveneDocumentConverted } from '~/interfaces/convene';
 import { mdiDotsGrid, mdiFormatListBulleted, mdiStar } from '@mdi/js';
+import dayjs from 'dayjs';
 import JSConfetti from 'js-confetti';
+import urlSlug from 'url-slug';
+import type { ConveneDocumentConverted } from '~/interfaces/convene';
 
 // uses
 const i18n = useI18n();
@@ -156,19 +156,13 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
             :hide-details="true"
           >
             <template #item="{ item, props }">
-              <v-list-item
-                v-bind="props"
-                :title="item.title"
-              >
+              <v-list-item v-bind="props" :title="item.title">
                 <!-- <template #prepend>
               <v-avatar class="border" rounded />
             </template> -->
 
                 <v-list-item-subtitle v-if="item.raw.featuredRare">
-                  <v-chip
-                    class="text-rarity5"
-                    :text="item.raw.featuredRare"
-                  />
+                  <v-chip class="text-rarity5" :text="item.raw.featuredRare" />
                 </v-list-item-subtitle>
               </v-list-item>
             </template>
@@ -284,10 +278,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           </div>
 
           <!-- grid -->
-          <div
-            v-else
-            class="d-flex flex-wrap justify-center"
-          >
+          <div v-else class="d-flex flex-wrap justify-center">
             <div
               v-for="(element, index) in displayConvenes"
               :key="index"

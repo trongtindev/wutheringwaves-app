@@ -1,9 +1,8 @@
 import type { ILocalized } from './common';
 import type { ISonata } from './sonata';
-import type { WeaponType } from './weapon';
 
 export interface IAttribute {
-  id: string;
+  slug: string;
   name: string;
   icon: string;
 }
@@ -30,7 +29,7 @@ export interface ICharacter {
   name: string;
   nameLocalized?: ILocalized;
   attribute: IAttribute;
-  weapon?: string;
+  weapon: string;
   rarity?: number;
   upcoming?: boolean;
   version?: number;
@@ -71,17 +70,19 @@ export interface ICharacterRCData {
   descriptionLocalized?: ILocalized;
 }
 
+export interface ICharacterDataStats {
+  hp: number;
+  atk: number;
+  def: number;
+}
+
 export interface ICharacterData {
   description?: string;
   descriptionLocalized?: ILocalized;
   skillPriority?: CharacterSkill[];
   skills?: ICharacterSkillData[];
   resonanceChain?: ICharacterRCData[];
-  stats?: {
-    hp: number;
-    atk: number;
-    def: number;
-  };
+  stats?: ICharacterDataStats;
   ascensions?: {
     cost: {
       item: number | string;

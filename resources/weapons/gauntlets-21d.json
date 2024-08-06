@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -62,5 +63,5 @@
     "description": "When the Resonator dashes or dodges, increases ATK by {0}. Increases Counter Attack DMG by {1}, lasting for {2}s. When Counter Attack is performed, restores the Resonator's HP by {3}. This effect can be triggered {5} time(s) every {4}s."
   },
   "slug": "gauntlets-21d",
-  "stats": { "atk": 31, "energy": 864 }
+  "stats": { "atkFlat": 31, "energyRegen": 8.64 }
 }

@@ -246,5 +246,5 @@
       "description": "Chixia releases a shock wave surrounding the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong> equal to <strong class=\"color-fusion\">530.00%</strong> of Chixia's ATK to enemies within the range."
     }
   ],
-  "stats": { "hp": 727, "def": 78, "atk": 24, "energy": 15000 }
+  "stats": { "hp": 9099, "def": 953, "atk": 300, "energy": 150 }
 }

@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="mt-2">
     <h2 class="text-h6">

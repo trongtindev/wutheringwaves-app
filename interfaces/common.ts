@@ -1,7 +1,7 @@
 export type ILocalized = { [key: string]: string };
 
 export interface IAttribute {
-  id: string;
+  slug: string;
   name: string;
   icon: string;
 }

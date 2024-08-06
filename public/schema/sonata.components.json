@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "components": {
+    "schemas": {
+      "slug": {
+        "type": "string",
+        "enum": [
+          "lingering-tunes",
+          "rejuvenating-glow",
+          "sierra-gale",
+          "celestial-light",
+          "void-thunder",
+          "freezing-frost",
+          "molten-rift",
+          "moonlit-clouds",
+          "sun-sinking-eclipse"
+        ]
+      },
+      "name": {
+        "type": "string",
+        "enum": [
+          "Lingering Tunes",
+          "Rejuvenating Glow",
+          "Sierra Gale",
+          "Celestial Light",
+          "Void Thunder",
+          "Freezing Frost",
+          "Molten Rift",
+          "Moonlit Clouds",
+          "Sun-sinking Eclipse"
+        ]
+      }
+    }
+  }
+}

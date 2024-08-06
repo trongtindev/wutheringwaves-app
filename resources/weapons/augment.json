@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Resonance Liberation is released, increases the caster's ATK by {0}, lasting for {1}s."
   },
   "slug": "augment",
-  "stats": { "atk": 33, "critRate": 450 }
+  "stats": { "atkFlat": 33, "critRate": 4.5 }
 }

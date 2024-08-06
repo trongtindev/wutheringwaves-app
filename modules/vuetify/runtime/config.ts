@@ -1,12 +1,12 @@
 import { createVuetify } from 'vuetify';
-import { en, fr, id, it, ja, ko, th, tr, uk, vi, zhHans } from 'vuetify/locale';
+import { VBtn } from 'vuetify/components';
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import {
   VStepperVertical,
-  VStepperVerticalItem,
   VStepperVerticalActions,
+  VStepperVerticalItem,
 } from 'vuetify/labs/VStepperVertical';
-import { VBtn } from 'vuetify/components';
+import { en, fr, id, it, ja, ko, th, tr, uk, vi, zhHans } from 'vuetify/locale';
 
 export const vuetifyConfig = createVuetify({
   ssr: true,

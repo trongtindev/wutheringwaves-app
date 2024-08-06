@@ -462,8 +462,8 @@
     },
     {
       "id": 390070078,
-      "slug": "young-geohide-saurian",
-      "name": "Young Geohide Saurian",
+      "slug": "baby-viridblaze-saurian",
+      "name": "Baby Viridblaze Saurian",
       "cost": 1,
       "class": "Common",
       "attribute": "Fusion",
@@ -635,8 +635,8 @@
     },
     {
       "id": 390077028,
-      "slug": "geohide-saurian",
-      "name": "Geohide Saurian",
+      "slug": "viridblaze-saurian",
+      "name": "Viridblaze Saurian",
       "cost": 3,
       "class": "Elite",
       "attribute": "Fusion",

@@ -67,9 +67,6 @@ const bestTeams = computed(() => {
       </div>
     </div>
 
-    <v-alert
-      v-else
-      :text="$t('common.upcoming')"
-    />
+    <v-alert v-else :text="$t('common.upcoming')" />
   </div>
 </template>

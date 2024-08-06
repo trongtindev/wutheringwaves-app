@@ -8,11 +8,11 @@ import 'dayjs/locale/tr';
 import 'dayjs/locale/uk';
 import 'dayjs/locale/vi';
 
-import utc from 'dayjs/plugin/utc';
-import timezone from 'dayjs/plugin/timezone';
-import relativeTime from 'dayjs/plugin/relativeTime';
-import duration from 'dayjs/plugin/duration';
 import calendar from 'dayjs/plugin/calendar';
+import duration from 'dayjs/plugin/duration';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 
 export default defineNuxtPlugin(() => {
   dayjs.extend(utc);

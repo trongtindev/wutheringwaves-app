@@ -17,15 +17,8 @@ const localePath = useLocalePath();
     :append-icon="mdiChevronRight"
     @click="() => (search.active = false)"
   >
-    <template
-      v-if="props.data.icon"
-      #prepend
-    >
-      <v-avatar
-        :image="props.data.icon"
-        class="border"
-        rounded
-      />
+    <template v-if="props.data.icon" #prepend>
+      <v-avatar :image="props.data.icon" class="border" rounded />
     </template>
 
     <v-list-item-title>

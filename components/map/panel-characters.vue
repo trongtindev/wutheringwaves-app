@@ -83,16 +83,8 @@ onMounted(() => initialize());
 
 <template>
   <v-row>
-    <v-col
-      v-for="(element, index) in data"
-      :key="index"
-      cols="4"
-      md="3"
-    >
-      <v-card
-        :disabled="!element.material"
-        @click="() => onPressed(index)"
-      >
+    <v-col v-for="(element, index) in data" :key="index" cols="4" md="3">
+      <v-card :disabled="!element.material" @click="() => onPressed(index)">
         <!-- icon -->
         <v-img
           :src="`/characters/icons/${element.character.slug}.webp`"
@@ -104,10 +96,7 @@ onMounted(() => initialize());
             v-if="selected.includes(element.character.name)"
             class="w-100 h-100 d-flex align-center justify-center"
           >
-            <v-icon
-              :icon="mdiCheckCircle"
-              color="primary"
-            />
+            <v-icon :icon="mdiCheckCircle" color="primary" />
           </div>
         </v-img>
 

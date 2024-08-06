@@ -29,10 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-bottom-sheet
-    v-if="bottomSheet"
-    v-model="model"
-  >
+  <v-bottom-sheet v-if="bottomSheet" v-model="model">
     <slot :height="height" />
   </v-bottom-sheet>
 

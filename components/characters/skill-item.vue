@@ -24,10 +24,7 @@ const descriptionLocalized = computed(() => {
 <template>
   <v-card>
     <v-sheet class="pt-2">
-      <v-list-item
-        :title="$t(props.data.name)"
-        :subtitle="$t(props.data.type)"
-      >
+      <v-list-item :title="$t(props.data.name)" :subtitle="$t(props.data.type)">
         <template #prepend>
           <v-avatar class="border rounded">
             <v-img
@@ -42,9 +39,6 @@ const descriptionLocalized = computed(() => {
     <v-card-text v-if="descriptionLocalized">
       <div :innerHTML="descriptionLocalized.replaceAll('\n', '<br/>')" />
     </v-card-text>
-    <v-sheet
-      v-else
-      class="pb-2"
-    />
+    <v-sheet v-else class="pb-2" />
   </v-card>
 </template>

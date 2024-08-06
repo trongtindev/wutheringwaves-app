@@ -103,10 +103,7 @@ const bestEchoStats = computed(() => {
           </v-col>
         </v-row>
       </div>
-      <v-alert
-        v-else
-        :text="$t('common.upcoming')"
-      />
+      <v-alert v-else :text="$t('common.upcoming')" />
     </div>
 
     <!-- Best Weapons -->
@@ -151,10 +148,7 @@ const bestEchoStats = computed(() => {
           </v-row>
         </v-card>
       </div>
-      <v-alert
-        v-else
-        :text="$t('common.upcoming')"
-      />
+      <v-alert v-else :text="$t('common.upcoming')" />
     </div>
 
     <!-- Best Echo Sets -->
@@ -165,14 +159,8 @@ const bestEchoStats = computed(() => {
 
       <div v-if="props.data.bestEchoSets">
         <v-card class="pt-2 pb-2">
-          <v-row
-            v-for="(element, index) in bestEchoSets"
-            :key="index"
-          >
-            <v-col
-              v-for="(subElement, j) in element.items"
-              :key="j"
-            >
+          <v-row v-for="(element, index) in bestEchoSets" :key="index">
+            <v-col v-for="(subElement, j) in element.items" :key="j">
               <v-list-item>
                 <template #prepend>
                   <v-avatar rounded>
@@ -199,10 +187,7 @@ const bestEchoStats = computed(() => {
           </v-row>
         </v-card>
       </div>
-      <v-alert
-        v-else
-        :text="$t('common.upcoming')"
-      />
+      <v-alert v-else :text="$t('common.upcoming')" />
     </div>
 
     <!-- Best Echo Stats -->
@@ -218,10 +203,7 @@ const bestEchoStats = computed(() => {
           :class="{ 'mt-2': index > 0 }"
         >
           <v-row>
-            <v-col
-              v-for="(subElement, j) in element.items"
-              :key="j"
-            >
+            <v-col v-for="(subElement, j) in element.items" :key="j">
               <v-card class="fill-height border">
                 <v-card-title>
                   {{ subElement.cost }} {{ $t('common.cost') }}
@@ -238,10 +220,7 @@ const bestEchoStats = computed(() => {
           </v-row>
         </div>
       </div>
-      <v-alert
-        v-else
-        :text="$t('common.upcoming')"
-      />
+      <v-alert v-else :text="$t('common.upcoming')" />
     </div>
 
     <!-- Suggested Echos -->
@@ -264,10 +243,7 @@ const bestEchoStats = computed(() => {
         </v-row>
       </div>
 
-      <v-alert
-        v-else
-        :text="$t('common.upcoming')"
-      />
+      <v-alert v-else :text="$t('common.upcoming')" />
     </div>
   </div>
 </template>

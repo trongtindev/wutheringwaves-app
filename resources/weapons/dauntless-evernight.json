@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Intro Skill is released, increases ATK by {0} and DEF by {1}, lasting for {2}s."
   },
   "slug": "dauntless-evernight",
-  "stats": { "atk": 27 }
+  "stats": { "atkFlat": 27, "def": 13.7 }
 }

@@ -22,17 +22,10 @@ const description = t('meta.calculator.import.description');
 useAppBar().setTitle(t('calculator.import.title'));
 useHead({ title });
 useSeoMeta({ ogTitle: title, description, ogDescription: description });
-
-// lifecycle
-onNuxtReady(() => {
-  if (sidebar.open) sidebar.open = false;
-});
 </script>
 
 <template>
   <div>
-    <calculator-drawer />
-
     <!-- page -->
     <base-alert :text="$t('calculator.import.introduce')" />
 
@@ -41,7 +34,9 @@ onNuxtReady(() => {
       <v-col
         v-for="(element, index) in providers"
         :key="index"
-        cols="4"
+        cols="12"
+        sm="6"
+        md="4"
       >
         <v-card>
           <v-img :aspect-ratio="16 / 9" />

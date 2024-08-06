@@ -52,23 +52,10 @@ onNuxtReady(initialize);
 </script>
 
 <template>
-  <v-row
-    :no-gutters="true"
-    class="h-100"
-  >
-    <v-col
-      cols="4"
-      class="h-100 overflow-y-auto"
-    >
-      <v-list
-        :nav="true"
-        :lines="false"
-        class="border-e h-100"
-      >
-        <v-tooltip
-          v-for="(element, index) in categories"
-          :key="index"
-        >
+  <v-row :no-gutters="true" class="h-100">
+    <v-col cols="4" class="h-100 overflow-y-auto">
+      <v-list :nav="true" :lines="false" class="border-e h-100">
+        <v-tooltip v-for="(element, index) in categories" :key="index">
           <template #activator="tooltip">
             <v-list-item
               v-bind="tooltip.props"
@@ -86,14 +73,8 @@ onNuxtReady(initialize);
       </v-list>
     </v-col>
 
-    <v-col
-      cols="8"
-      class="pa-2 h-100 overflow-y-auto"
-    >
-      <div
-        v-for="(element, index) in categories"
-        :key="index"
-      >
+    <v-col cols="8" class="pa-2 h-100 overflow-y-auto">
+      <div v-for="(element, index) in categories" :key="index">
         <v-sheet
           :style="tab === element.name ? '' : `display:none`"
           :value="element.name"

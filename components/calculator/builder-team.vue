@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { mdiPlus } from '@mdi/js';
-import type { ICharacter } from '~/interfaces/character';
-
 // uses
 const resource = useResources();
 const calculator = useCalculator();
@@ -28,15 +25,8 @@ const characters = await resource.getCharacters({
     </v-row>
 
     <v-row>
-      <v-col
-        v-for="(item, index) in calculator.participants"
-        :key="index"
-      >
-        <calculator-builder-team-item
-          :index
-          :item
-          :characters
-        />
+      <v-col v-for="(item, index) in calculator.participants" :key="index">
+        <calculator-builder-team-item :index :item :characters />
       </v-col>
     </v-row>
   </div>

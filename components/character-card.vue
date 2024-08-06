@@ -44,7 +44,7 @@ const nameLocalized = computed(() => {
           class="bg-grey-darken-3 rounded-circle"
           :width="16"
           :height="16"
-          :src="`/attributes/icons/${props.item.attribute.id}.webp`"
+          :src="props.item.attribute.icon"
           :alt="props.item.attribute.name"
         />
         <v-sheet
@@ -62,10 +62,7 @@ const nameLocalized = computed(() => {
           S{{ props.sequences }}
         </span>
 
-        <span
-          v-if="props.item.upcoming"
-          class="font-weight-bold ml-1 pr-1"
-        >
+        <span v-if="props.item.upcoming" class="font-weight-bold ml-1 pr-1">
           {{ $t('common.upcoming') }}
         </span>
       </v-chip>

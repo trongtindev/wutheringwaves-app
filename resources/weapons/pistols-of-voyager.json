@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Resonance Skill is released, restores Resonance Energy by {0}. This effect can be triggered {2} time(s) every {1}s."
   },
   "slug": "pistols-of-voyager",
-  "stats": { "atk": 24 }
+  "stats": { "atkFlat": 24, "atk": 6.8 }
 }

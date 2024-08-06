@@ -1,8 +1,8 @@
-import RSS from 'rss';
 import axios from 'axios';
 import axiosRetry from 'axios-retry';
-import type { IPost } from '~/interfaces/post';
+import RSS from 'rss';
 import type { IListResponse } from '~/interfaces/api';
+import type { IPost } from '~/interfaces/post';
 
 export default defineEventHandler(async (event) => {
   const { SITE_URL, API_URL } = useRuntimeConfig().public;

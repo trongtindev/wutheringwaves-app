@@ -184,10 +184,7 @@ if (headers['if-modified-since']) {
 
     <!-- page -->
     <v-card>
-      <v-card-title
-        tag="h1"
-        :class="`text-rarity${item.rarity}`"
-      >
+      <v-card-title tag="h1" :class="`text-rarity${item.rarity}`">
         {{ title }}
       </v-card-title>
       <v-card-subtitle class="lastUpdatedOn">
@@ -201,10 +198,7 @@ if (headers['if-modified-since']) {
 
       <v-card-text>
         <v-row>
-          <v-col
-            cols="12"
-            md="6"
-          >
+          <v-col cols="12" md="6">
             <div>
               <a
                 :href="pictures[showPicture]"
@@ -236,11 +230,7 @@ if (headers['if-modified-since']) {
                     @click="toggle"
                   >
                     <v-scale-transition>
-                      <v-img
-                        :src="image"
-                        :cover="true"
-                        :aspect-ratio="1"
-                      />
+                      <v-img :src="image" :cover="true" :aspect-ratio="1" />
                     </v-scale-transition>
                   </v-card>
                 </v-slide-group-item>
@@ -248,23 +238,18 @@ if (headers['if-modified-since']) {
             </div>
           </v-col>
 
-          <v-col
-            cols="12"
-            md="6"
-          >
-            <div>
-              <h2
-                class="text-body-2"
-                :innerHTML="
-                  $t('characters.introduction', {
-                    name: nameLocalized,
-                    rarity: item.rarity,
-                    attribute: item.attribute.name,
-                    weaponType: item.weapon,
-                  })
-                "
-              />
-            </div>
+          <v-col cols="12" md="6">
+            <h2
+              class="text-body-2"
+              :innerHTML="
+                $t('characters.introduction', {
+                  name: nameLocalized,
+                  rarity: item.rarity,
+                  attribute: item.attribute.name,
+                  weaponType: item.weapon,
+                })
+              "
+            />
 
             <div
               v-if="quoteLocalized"
@@ -279,10 +264,7 @@ if (headers['if-modified-since']) {
             />
 
             <!-- information -->
-            <characters-information
-              :item
-              :data
-            />
+            <characters-information :item :data />
           </v-col>
         </v-row>
       </v-card-text>
@@ -290,10 +272,7 @@ if (headers['if-modified-since']) {
 
     <!-- Tab views -->
     <div id="overview">
-      <characters-overview
-        :item="item"
-        :data="data"
-      />
+      <characters-overview :item="item" :data="data" />
     </div>
     <div id="build">
       <characters-build
@@ -310,10 +289,7 @@ if (headers['if-modified-since']) {
         :name-localized="nameLocalized"
       />
     </div>
-    <characters-ascension
-      :item="item"
-      :data="data"
-    />
+    <characters-ascension :item="item" :data="data" />
 
     <!-- moreBuildGuides -->
     <section-title>
@@ -340,33 +316,17 @@ if (headers['if-modified-since']) {
     </div>
 
     <!-- comments -->
-    <comments
-      class="mt-2"
-      :channel="`character.${item.slug}`"
-    />
+    <comments class="mt-2" :channel="`character.${item.slug}`" />
 
     <!-- navigation -->
-    <v-bottom-navigation
-      v-model="tab"
-      :grow="true"
-      class="border-t"
-    >
-      <v-btn
-        value="overview"
-        :text="$t('characters.overview')"
-      />
+    <v-bottom-navigation v-model="tab" :grow="true" class="border-t">
+      <v-btn value="overview" :text="$t('characters.overview')" />
       <v-btn
         value="build"
         :text="$t('characters.build', { name: nameLocalized })"
       />
-      <v-btn
-        value="teams"
-        :text="$t('characters.teams')"
-      />
-      <v-btn
-        value="calculations"
-        :text="$t('characters.calculations')"
-      />
+      <v-btn value="teams" :text="$t('characters.teams')" />
+      <v-btn value="calculations" :text="$t('characters.calculations')" />
     </v-bottom-navigation>
   </div>
 </template>

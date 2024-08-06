@@ -12,6 +12,16 @@ export type WeaponAcquisitionMethod =
   | 'Crafting'
   | 'Chests';
 
+export interface IWeaponDataStats {
+  def?: number;
+  hp?: number;
+  atk?: number;
+  atkFlat: number;
+  critRate?: number;
+  critDMG?: number;
+  energyRegen?: number;
+}
+
 export interface IWeapon {
   id: number;
   slug: string;
@@ -28,13 +38,7 @@ export interface IWeapon {
 export interface IWeaponData {
   description?: string;
   descriptionLocalized?: ILocalized;
-  stats: {
-    atk?: number;
-    atkRate?: number;
-    critRate?: number;
-    critDMG?: number;
-    energy?: number;
-  };
+  stats: IWeaponDataStats;
   skill: {
     params: string[];
     description: string;

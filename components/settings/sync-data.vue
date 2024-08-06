@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiUpload, mdiDownload, mdiCheck } from '@mdi/js';
+import { mdiCheck, mdiDownload, mdiUpload } from '@mdi/js';
 import dayjs from 'dayjs';
 
 // uses

@@ -2,32 +2,32 @@
   "$schema": "../public/schema/attributes.schema.json",
   "items": [
     {
-      "id": "aero",
+      "slug": "aero",
       "name": "Aero",
       "icon": "/attributes/icons/aero.webp"
     },
     {
-      "id": "fusion",
+      "slug": "fusion",
       "name": "Fusion",
       "icon": "/attributes/icons/fusion.webp"
     },
     {
-      "id": "glacio",
+      "slug": "glacio",
       "name": "Glacio",
       "icon": "/attributes/icons/glacio.webp"
     },
     {
-      "id": "electro",
+      "slug": "electro",
       "name": "Electro",
       "icon": "/attributes/icons/electro.webp"
     },
     {
-      "id": "spectro",
+      "slug": "spectro",
       "name": "Spectro",
       "icon": "/attributes/icons/spectro.webp"
     },
     {
-      "id": "havoc",
+      "slug": "havoc",
       "name": "Havoc",
       "icon": "/attributes/icons/havoc.webp"
     }

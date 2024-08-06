@@ -93,10 +93,7 @@ if (headers['if-modified-since']) {
 <template>
   <div>
     <!-- chips -->
-    <header-chips
-      class="mb-2"
-      :github="`tree/main/resources/trophies.json`"
-    />
+    <header-chips class="mb-2" :github="`tree/main/resources/trophies.json`" />
 
     <v-card>
       <v-card-title tag="h2">
@@ -106,14 +103,8 @@ if (headers['if-modified-since']) {
 
       <v-card-text>
         <v-row>
-          <v-col
-            cols="12"
-            md="4"
-          >
-            <v-img
-              :src="`/trophies/icons/${item.slug}.webp`"
-              :height="256"
-            />
+          <v-col cols="12" md="4">
+            <v-img :src="`/trophies/icons/${item.slug}.webp`" :height="256" />
           </v-col>
 
           <v-col>

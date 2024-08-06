@@ -13,6 +13,7 @@ export interface ICalculatorWeapon {
 }
 
 export interface ICalculatorEcho {
+  level: number;
   item?: IEcho;
   data?: IEchoData;
 }
@@ -26,5 +27,3 @@ export interface ICalculatorParticipant {
   weaponRank: number;
   echoes: ICalculatorEcho[];
 }
-
-export interface ICalculatorEcho {}

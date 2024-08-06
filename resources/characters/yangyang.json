@@ -246,5 +246,5 @@
       "description": ""
     }
   ],
-  "stats": { "hp": 816, "def": 90, "atk": 20, "energy": 10000 }
+  "stats": { "hp": 10200, "def": 110, "atk": 250, "energy": 100 }
 }

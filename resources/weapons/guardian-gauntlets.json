@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -56,5 +57,5 @@
     "description": "Increases Resonance Liberation DMG Bonus by {0}."
   },
   "slug": "guardian-gauntlets",
-  "stats": { "atk": 24 }
+  "stats": { "atkFlat": 24, "def": 8.6 }
 }

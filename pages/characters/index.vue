@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiMagnify, mdiFilterCog } from '@mdi/js';
+import { mdiFilterCog, mdiMagnify } from '@mdi/js';
 import type { CharacterDocument } from '~/composables/database';
 
 const i18n = useI18n();
@@ -145,10 +145,7 @@ useSeoMeta({
     </v-row>
 
     <!-- filter -->
-    <v-bottom-sheet
-      v-model="filter"
-      :inset="true"
-    >
+    <v-bottom-sheet v-model="filter" :inset="true">
       <v-card>
         <v-card-title>
           {{ $t('common.filter') }}

@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "Increases Energy Regen by {0}. When Outro Skill is released, increases the switched-in Resonator's ATK by {1}, stacking up to {2} time(s). This effect lasts for {3}s."
   },
   "slug": "static-mist",
-  "stats": { "atk": 47, "critRate": 540 }
+  "stats": { "atkFlat": 47, "critRate": 5.4 }
 }

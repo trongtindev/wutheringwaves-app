@@ -117,7 +117,7 @@ if (headers['if-modified-since']) {
     />
 
     <!-- page -->
-    <v-card>
+    <v-card class="mt-2">
       <v-card-title tag="h1">
         {{ nameLocalized }}
       </v-card-title>
@@ -126,22 +126,73 @@ if (headers['if-modified-since']) {
       <v-card-text>
         <v-row>
           <v-col cols="4">
-            <v-img
-              :src="`/echoes/icons/${item.slug}.webp`"
-              :height="256"
-            />
+            <v-img :src="`/echoes/icons/${item.slug}.webp`" :height="256" />
           </v-col>
 
           <v-col>
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip :text="`${item.cost} ${$t('echoes.cost')}`" />
-              <v-chip :text="$t(item.class)" />
-              <v-chip :text="$t(item.attribute)" />
-            </div>
+            <h2
+              :innerHTML="
+                $t('echoes.introduction', {
+                  name: nameLocalized,
+                  cost: item.cost,
+                })
+              "
+              class="text-body-2"
+            />
+            <div :innerHTML="skillDescription" class="mt-2"></div>
 
-            <div class="mt-2">
-              <div :innerHTML="skillDescription"></div>
-            </div>
+            <v-table class="border rounded mt-2">
+              <thead>
+                <tr>
+                  <th colspan="3" class="ma-2 text-center font-weight-bold">
+                    {{ $t('characters.information') }}
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <!-- rarity -->
+                <tr class="rarity">
+                  <td class="w-50 text-center">
+                    {{ $t('common.cost') }}
+                  </td>
+                  <td class="w-50 text-center">
+                    {{ item.cost }}
+                  </td>
+                </tr>
+
+                <!-- attribute -->
+                <tr class="attribute">
+                  <td class="w-50 text-center">
+                    {{ $t('common.attribute') }}
+                  </td>
+                  <td class="w-50 text-center">
+                    <span v-if="item.attribute">
+                      <img :src="item.attribute.icon" :width="16" />
+                      {{ item.attribute.name }}
+                    </span>
+                    <span v-else>
+                      {{ $t('common.none') }}
+                    </span>
+                  </td>
+                </tr>
+
+                <!-- attribute -->
+                <tr class="attribute">
+                  <td class="w-50 text-center">
+                    {{ $t('common.attribute') }}
+                  </td>
+                  <td class="w-50 text-center">
+                    <span v-if="item.attribute">
+                      {{ item.attribute.name }}
+                    </span>
+                    <span v-else>
+                      {{ $t('common.none') }}
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </v-table>
           </v-col>
         </v-row>
       </v-card-text>
@@ -160,29 +211,25 @@ if (headers['if-modified-since']) {
     </v-card>
 
     <!-- related -->
-    <v-card
-      v-if="relatedEchoes.length > 0"
-      class="mt-2"
-    >
-      <v-card-title tag="h2">
+    <section-title>
+      <template #title>
         {{ $t('echoes.related', { name: nameLocalized }) }}
-      </v-card-title>
-      <v-divider />
+      </template>
+    </section-title>
 
-      <v-card-text>
-        <v-row>
-          <v-col
-            v-for="(element, index) in relatedEchoes"
-            :key="index"
-            cols="6"
-            sm="4"
-            md="2"
-          >
-            <echo-card :item="element" />
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
+    <div v-if="relatedEchoes.length > 0" class="mt-2">
+      <v-row>
+        <v-col
+          v-for="(element, index) in relatedEchoes"
+          :key="index"
+          cols="6"
+          sm="4"
+          md="2"
+        >
+          <echo-card :item="element" />
+        </v-col>
+      </v-row>
+    </div>
 
     <!-- comments -->
     <div class="mt-2">

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { mdiPlus } from '@mdi/js';
-import type { ICharacter } from '~/interfaces/character';
-
 // uses
 const resource = useResources();
 const calculator = useCalculator();

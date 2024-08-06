@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { CardPoolType } from '@/interfaces/banner';
-import { toBlob } from 'html-to-image';
+import { mdiCogs, mdiDownload, mdiUpload, mdiViewGallery } from '@mdi/js';
 import { saveAs } from 'file-saver';
-import { mdiDownload, mdiUpload, mdiCogs, mdiViewGallery } from '@mdi/js';
+import { toBlob } from 'html-to-image';
 import urlSlug from 'url-slug';
 import type { ConveneDocument } from '~/composables/database';
 
@@ -221,10 +221,7 @@ useSeoMeta({
           class="card-wrapper"
           :style="`width: ${width}px; height: ${height}px;`"
         >
-          <div
-            ref="card"
-            class="card-container rounded"
-          >
+          <div ref="card" class="card-container rounded">
             <div
               class="background position-absolute"
               :style="
@@ -258,10 +255,7 @@ useSeoMeta({
                     <v-col cols="6">
                       {{ $t('common.totalPull') }}
                     </v-col>
-                    <v-col
-                      cols="3"
-                      class="d-flex justify-center"
-                    >
+                    <v-col cols="3" class="d-flex justify-center">
                       {{ totalPull }}
                     </v-col>
                     <v-col class="d-flex justify-end">
@@ -277,12 +271,7 @@ useSeoMeta({
                     <v-col cols="6">
                       {{ $t('convene.rank.luckWinRateOff') }}
                     </v-col>
-                    <v-col
-                      cols="3"
-                      class="d-flex justify-center"
-                    >
-                      0
-                    </v-col>
+                    <v-col cols="3" class="d-flex justify-center"> 0 </v-col>
                     <v-col class="d-flex justify-end">
                       <span class="mr-2">{{ $t('convene.rank.top') }}</span>
                       <span>{{ luckWinRateOff }}%</span>
@@ -296,12 +285,7 @@ useSeoMeta({
                     <v-col cols="6">
                       {{ $t('convene.rank.luck5') }}
                     </v-col>
-                    <v-col
-                      cols="3"
-                      class="d-flex justify-center"
-                    >
-                      0
-                    </v-col>
+                    <v-col cols="3" class="d-flex justify-center"> 0 </v-col>
                     <v-col class="d-flex justify-end">
                       <span class="mr-2">{{ $t('convene.rank.top') }}</span>
                       <span>0%</span>
@@ -315,12 +299,7 @@ useSeoMeta({
                     <v-col cols="6">
                       {{ $t('convene.rank.luck4') }}
                     </v-col>
-                    <v-col
-                      cols="3"
-                      class="d-flex justify-center"
-                    >
-                      0
-                    </v-col>
+                    <v-col cols="3" class="d-flex justify-center"> 0 </v-col>
                     <v-col class="d-flex justify-end">
                       <span class="mr-2">{{ $t('convene.rank.top') }}</span>
                       <span>0%</span>
@@ -355,10 +334,7 @@ useSeoMeta({
         </div>
       </div>
 
-      <v-app-bar
-        location="bottom"
-        class="border-t"
-      >
+      <v-app-bar location="bottom" class="border-t">
         <v-spacer />
         <v-btn
           :prepend-icon="mdiCogs"
@@ -387,10 +363,7 @@ useSeoMeta({
           </v-card-title>
 
           <v-form class="pl-2 pr-2">
-            <v-select
-              :label="$t('common.banner')"
-              class="pl-2 pr-2"
-            />
+            <v-select :label="$t('common.banner')" class="pl-2 pr-2" />
             <v-checkbox
               v-model="showUID"
               :label="$t('showcase.convene.showUID')"
@@ -449,11 +422,7 @@ useSeoMeta({
         </v-card>
       </base-panel>
 
-      <v-dialog
-        v-model="backgroundGallery"
-        :scrollable="true"
-        :width="1080"
-      >
+      <v-dialog v-model="backgroundGallery" :scrollable="true" :width="1080">
         <dialog-gallery
           type="cards"
           @on-close="() => (backgroundGallery = false)"

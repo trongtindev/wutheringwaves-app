@@ -23,7 +23,11 @@
       "title": "Builder",
       "rotation": {
         "title": "Rotation"
-      }
+      },
+      "echoes": {
+        "costCapped": "The Echo cost limit is capped at 12."
+      },
+      "disclaimer": "The collected indicators may not be exact or approximate, so it is normal that the results will not match those in the game."
     },
     "import": {
       "title": "Import",
@@ -209,7 +213,8 @@
     "uploadData": "Upload data",
     "selectWeapon": "Select weapon",
     "selectCharacter": "Select character",
-    "rank": "Rank"
+    "rank": "Rank",
+    "stats": "Stats"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -317,10 +322,10 @@
   },
   "echoes": {
     "title": "Echoes",
-    "cost": "Cost",
     "sonataEffect": "Sonata effect",
     "sameElementCharacters": "Same Element Characters",
-    "related": "Related Echo {name}"
+    "related": "Related Echo {name}",
+    "introduction": "In Wuthering Waves, <b>{name}</b> is a cost {cost} echo."
   },
   "guides": {
     "title": "Game Guides",
@@ -645,7 +650,10 @@
     "conveneGlobalStats": "Global Stats",
     "conveneImport": "Import history",
     "conveneShare": "Share history",
-    "calculator": "Calculator"
+    "calculator": "Calculator",
+    "calculatorBuilder": "Builder",
+    "calculatorImport": "Import",
+    "calculatorInventory": "Inventory"
   },
   "sync": {
     "title": "Cloud Sync",

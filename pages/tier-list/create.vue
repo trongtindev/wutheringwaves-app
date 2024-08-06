@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { mdiFileExport, mdiShare } from '@mdi/js';
+import type { ICharacter } from '@/interfaces/character';
+import type { IEcho } from '@/interfaces/echo';
 import {
   type ITierList,
   type ITierListRow,
   type TierListItem,
   type TierListType,
 } from '@/interfaces/tier-list';
-import type { ICharacter } from '@/interfaces/character';
 import type { IWeapon } from '@/interfaces/weapon';
-import type { IEcho } from '@/interfaces/echo';
+import { mdiFileExport, mdiShare } from '@mdi/js';
 
 // uses
 const api = useApi();
@@ -326,31 +326,14 @@ useHead({
         </div>
 
         <div class="mt-4">
-          <v-btn-toggle
-            v-model="type"
-            variant="outlined"
-            divided
-          >
-            <v-btn
-              value="character"
-              :text="$t('common.character')"
-            />
-            <v-btn
-              value="weapon"
-              :text="$t('common.weapon')"
-            />
-            <v-btn
-              value="echo"
-              :text="$t('common.echo')"
-            />
+          <v-btn-toggle v-model="type" variant="outlined" divided>
+            <v-btn value="character" :text="$t('common.character')" />
+            <v-btn value="weapon" :text="$t('common.weapon')" />
+            <v-btn value="echo" :text="$t('common.echo')" />
           </v-btn-toggle>
         </div>
 
-        <div
-          v-for="(element, index) in rows"
-          :key="index"
-          class="mt-4"
-        >
+        <div v-for="(element, index) in rows" :key="index" class="mt-4">
           <tier-list-row
             :type="type"
             :data="element"

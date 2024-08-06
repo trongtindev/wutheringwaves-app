@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { mdiDotsVertical, mdiThumbDown, mdiThumbUp } from '@mdi/js';
 import dayjs from 'dayjs';
-import { mdiThumbUp, mdiThumbDown, mdiDotsVertical } from '@mdi/js';
 import type { IComment } from '~/interfaces/comment';
 
 const props = defineProps<{
@@ -67,10 +67,7 @@ const createdAt = computed(() => {
         <v-list-item v-bind="hover.props">
           <template #prepend>
             <v-avatar class="border">
-              <v-img
-                v-if="photoUrl"
-                :src="photoUrl"
-              />
+              <v-img v-if="photoUrl" :src="photoUrl" />
               <span v-else>?</span>
             </v-avatar>
           </template>
@@ -91,18 +88,12 @@ const createdAt = computed(() => {
           </template>
         </v-list-item>
         <div :class="props.lite ? 'pl-2' : 'pl-16'">
-          <div
-            class="pl-2"
-            :innerHTML="props.data.content"
-          />
+          <div class="pl-2" :innerHTML="props.data.content" />
         </div>
       </template>
     </v-hover>
 
-    <div
-      class="mt-2"
-      :class="props.lite ? '' : 'pl-15'"
-    >
+    <div class="mt-2" :class="props.lite ? '' : 'pl-15'">
       <v-btn
         size="small"
         variant="text"

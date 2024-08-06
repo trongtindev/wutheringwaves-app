@@ -36,11 +36,7 @@ const isExpired = computed(() => {
       {{ props.data.code }}
     </span>
 
-    <v-chip
-      v-if="isExpired"
-      type="warning"
-      :text="$t('codes.expired')"
-    />
+    <v-chip v-if="isExpired" type="warning" :text="$t('codes.expired')" />
     <v-chip
       v-else
       color="success"
@@ -51,10 +47,7 @@ const isExpired = computed(() => {
 
   <td>
     <ul class="pl-4">
-      <li
-        v-for="(element, index) in props.data.rewards"
-        :key="index"
-      >
+      <li v-for="(element, index) in props.data.rewards" :key="index">
         {{ element.quantity }} {{ element.item }}
       </li>
     </ul>

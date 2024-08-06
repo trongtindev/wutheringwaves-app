@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When hitting a target with Basic Attacks, restores HP by {0}. This effect can be triggered {2} time(s) every {1}s."
   },
   "slug": "originite-type-iv",
-  "stats": { "atk": 24, "critDMG": 900 }
+  "stats": { "atkFlat": 24, "critDMG": 9 }
 }

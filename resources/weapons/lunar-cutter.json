@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "Equipped Resonator gains {0} stack(s) of Oath upon entering the battlefield. Each stack increases ATK by {1}, up to {2} stacks. This effect can be triggered {4} time(s) every {3}s. Oath reduces by {6} stack(s) every {5}s. Equipped Resonator gains an additional {7} stack(s) of Oath upon defeating an enemy."
   },
   "slug": "lunar-cutter",
-  "stats": { "atk": 33 }
+  "stats": { "atkFlat": 33, "atk": 6.8 }
 }

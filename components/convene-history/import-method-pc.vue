@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { mdiOpenInNew, mdiImport, mdiContentCopy, mdiCheck } from '@mdi/js';
+import { mdiCheck, mdiContentCopy, mdiImport, mdiOpenInNew } from '@mdi/js';
 
 const props = defineProps<{
   conveneHistoryUrl?: string;
@@ -108,11 +108,7 @@ onMounted(() => {
         </v-responsive>
 
         <template #next>
-          <v-btn
-            color="primary"
-            :text="$t('common.next')"
-            @click="next"
-          />
+          <v-btn color="primary" :text="$t('common.next')" @click="next" />
         </template>
         <template #prev></template>
       </v-stepper-vertical-item>
@@ -129,10 +125,7 @@ onMounted(() => {
           class="mb-4"
         >
           <template #windowsPowerShell>
-            <v-chip
-              :append-icon="mdiOpenInNew"
-              @click="onPressedPowerShell"
-            >
+            <v-chip :append-icon="mdiOpenInNew" @click="onPressedPowerShell">
               Windows PowerShell
             </v-chip>
           </template>
@@ -175,19 +168,11 @@ onMounted(() => {
         </div>
 
         <template #next>
-          <v-btn
-            color="primary"
-            :text="$t('common.next')"
-            @click="next"
-          />
+          <v-btn color="primary" :text="$t('common.next')" @click="next" />
         </template>
 
         <template #prev>
-          <v-btn
-            variant="plain"
-            :text="$t('common.previous')"
-            @click="prev"
-          />
+          <v-btn variant="plain" :text="$t('common.previous')" @click="prev" />
         </template>
       </v-stepper-vertical-item>
 
@@ -224,11 +209,7 @@ onMounted(() => {
         </template>
 
         <template #prev>
-          <v-btn
-            variant="plain"
-            :text="$t('common.previous')"
-            @click="prev"
-          />
+          <v-btn variant="plain" :text="$t('common.previous')" @click="prev" />
         </template>
       </v-stepper-vertical-item>
     </template>

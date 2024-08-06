@@ -1,4 +1,5 @@
 export interface ISonata {
+  slug: string;
   name: string;
   icon: string;
   colors: {

@@ -42,10 +42,7 @@ const stats = computed(() => {
     <v-table class="border rounded mt-2">
       <thead>
         <tr>
-          <th
-            colspan="3"
-            class="ma-2 text-center font-weight-bold"
-          >
+          <th colspan="3" class="ma-2 text-center font-weight-bold">
             {{ $t('characters.information') }}
           </th>
         </tr>
@@ -70,10 +67,7 @@ const stats = computed(() => {
           </td>
           <td class="w-50 text-center">
             <span v-if="item.attribute">
-              <img
-                :src="item.attribute.icon"
-                :width="16"
-              />
+              <img :src="item.attribute.icon" :width="16" />
               {{ item.attribute.name }}
             </span>
             <span v-else>
@@ -132,20 +126,14 @@ const stats = computed(() => {
     <v-table class="border rounded mt-2">
       <thead>
         <tr>
-          <th
-            colspan="3"
-            class="ma-2 text-center font-weight-bold"
-          >
+          <th colspan="3" class="ma-2 text-center font-weight-bold">
             {{ $t('characters.stats') }}
           </th>
         </tr>
       </thead>
 
       <tbody>
-        <tr
-          v-for="(element, index) in stats"
-          :key="index"
-        >
+        <tr v-for="(element, index) in stats" :key="index">
           <td class="w-50 text-center">
             {{ $t(`common.${element.label}`) }}
           </td>

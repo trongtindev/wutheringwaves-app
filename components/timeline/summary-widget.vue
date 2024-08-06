@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { mdiChevronRight } from '@mdi/js';
 import dayjs from 'dayjs';
 import type { ITimeline } from '~/interfaces/timeline';
-import { mdiChevronRight } from '@mdi/js';
 
 // define
 const emits = defineEmits<{

@@ -1,5 +1,5 @@
 {
-  "$schema": "./.schema.json",
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -112,5 +112,5 @@
     ],
     "description": "ATK increased by {0}. The wielder gains 1 stack of Searing Feather upon dealing damage, which can be triggered once every 0.5s, and gains 5 stacks of the same effect upon casting Resonance Skill. Each stack of Searing Feather gives {1} additional Resonance Skill DMG Bonus for up to 14 stacks.\nAfter reaching the max stacks, all stacks will be removed in 12s."
   },
-  "stats": { "atk": 587, "critDMG": 48.6 }
+  "stats": { "atkFlat": 47, "critDMG": 10.8 }
 }

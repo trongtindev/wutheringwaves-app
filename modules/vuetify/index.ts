@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver } from 'nuxt/kit';
+import { addPlugin, createResolver, defineNuxtModule } from 'nuxt/kit';
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 
 export default defineNuxtModule({

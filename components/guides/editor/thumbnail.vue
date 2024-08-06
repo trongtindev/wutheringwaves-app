@@ -151,10 +151,7 @@ watch(
               v-if="!thumbnail.progress || thumbnail.progress >= 100"
               :indeterminate="true"
             />
-            <v-progress-circular
-              v-else
-              :model-value="thumbnail.progress"
-            />
+            <v-progress-circular v-else :model-value="thumbnail.progress" />
           </div>
 
           <div

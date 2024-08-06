@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -56,5 +57,5 @@
     "description": "Increases Basic Attack DMG and Heavy Attack DMG by {0}."
   },
   "slug": "guardian-broadblade",
-  "stats": { "atk": 26 }
+  "stats": { "atkFlat": 26, "atk": 5.4 }
 }

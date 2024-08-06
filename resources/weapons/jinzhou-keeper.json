@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Intro Skill is released, increases the caster's ATK by {0} and HP by {1}, lasting for {2}s."
   },
   "slug": "jinzhou-keeper",
-  "stats": { "atk": 31 }
+  "stats": { "atkFlat": 31, "atk": 8.1 }
 }

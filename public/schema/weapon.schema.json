@@ -4,10 +4,16 @@
     "stats": {
       "type": "object",
       "properties": {
+        "def": {
+          "type": "number"
+        },
+        "hp": {
+          "type": "number"
+        },
         "atk": {
           "type": "number"
         },
-        "atkRate": {
+        "atkFlat": {
           "type": "number"
         },
         "critRate": {
@@ -15,8 +21,12 @@
         },
         "critDMG": {
           "type": "number"
+        },
+        "energyRegen": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["atk"]
     },
     "description": { "type": "string" },
     "descriptionLocalized": { "type": "object" },

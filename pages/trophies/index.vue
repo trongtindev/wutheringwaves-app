@@ -110,10 +110,7 @@ useSeoMeta({
 <template>
   <div>
     <v-row>
-      <v-col
-        cols="12"
-        md="4"
-      >
+      <v-col cols="12" md="4">
         <v-card>
           <v-list rounded>
             <v-list-item
@@ -143,14 +140,8 @@ useSeoMeta({
         </v-card>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="8"
-      >
-        <div
-          v-for="(element, index) in displayItems"
-          :key="index"
-        >
+      <v-col cols="12" md="8">
+        <div v-for="(element, index) in displayItems" :key="index">
           <trophy-item-group
             v-if="element.items.length > 0"
             :data="element"
@@ -159,10 +150,7 @@ useSeoMeta({
             :checked-items="checkedItems"
             @on-checked="(slug, val) => onItemChecked(slug, val)"
           />
-          <v-card
-            v-else
-            :class="{ 'mt-2': index > 0 }"
-          >
+          <v-card v-else :class="{ 'mt-2': index > 0 }">
             <trophy-item
               :data="element"
               :checked-items="checkedItems"

@@ -133,11 +133,7 @@ watch(() => keyword.value, submitDebounce);
 </script>
 
 <template>
-  <v-dialog
-    v-model="search.active"
-    :scrollable="true"
-    :width="720"
-  >
+  <v-dialog v-model="search.active" :scrollable="true" :width="720">
     <v-card>
       <v-form>
         <v-text-field

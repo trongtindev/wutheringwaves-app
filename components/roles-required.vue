@@ -44,10 +44,7 @@ const show = computed(() => {
       </v-card-text>
 
       <v-card-actions>
-        <v-btn
-          :text="$t('common.back')"
-          :to="localePath('/guides')"
-        />
+        <v-btn :text="$t('common.back')" :to="localePath('/guides')" />
         <v-spacer />
         <v-btn
           :text="$t('common.getRoles')"

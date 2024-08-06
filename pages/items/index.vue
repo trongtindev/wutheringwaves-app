@@ -111,17 +111,11 @@ useSeoMeta({
     </v-row>
 
     <client-only>
-      <v-pagination
-        v-model="page"
-        :length="pages"
-      />
+      <v-pagination v-model="page" :length="pages" />
     </client-only>
 
     <!-- filter -->
-    <v-bottom-sheet
-      v-model="filter"
-      :inset="true"
-    >
+    <v-bottom-sheet v-model="filter" :inset="true">
       <v-card>
         <v-card-title>
           {{ $t('common.filter') }}
@@ -134,10 +128,7 @@ useSeoMeta({
         <v-card-actions>
           <v-btn :text="$t('common.reset')" />
           <v-spacer />
-          <v-btn
-            variant="flat"
-            :text="$t('common.apply')"
-          />
+          <v-btn variant="flat" :text="$t('common.apply')" />
         </v-card-actions>
       </v-card>
     </v-bottom-sheet>

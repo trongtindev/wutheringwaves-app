@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When Resonance Skill is released, if the Resonator's HP is below {0}, restores their HP by {1}. This effect can be triggered {3} time(s) every {2}s; if the Resonator's HP is above {4}, increases ATK by {5}, lasting for {6}s."
   },
   "slug": "rectifier-25",
-  "stats": { "atk": 27, "energy": 1152 }
+  "stats": { "atkFlat": 27, "energyRegen": 11.52 }
 }

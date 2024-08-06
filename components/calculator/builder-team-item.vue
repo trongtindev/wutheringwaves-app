@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ICalculatorParticipant } from '~/interfaces/calculator';
-import type { ICharacter } from '~/interfaces/character';
+import type { ICharacterDataStats, ICharacter } from '~/interfaces/character';
 
 const props = defineProps<{
   index: number;
@@ -18,6 +18,21 @@ const calculator = useCalculator();
 // states
 const level = ref(props.item.characterLevel);
 const character = ref(props.item.character ? props.item.character.item : null);
+const previewStats = ref<ICharacterDataStats>();
+
+// functions
+const initialize = () => {
+  updateStats();
+};
+
+const updateStats = () => {
+  if (props.item.character?.data.stats) {
+    previewStats.value = getCharacterStats(
+      level.value,
+      props.item.character?.data.stats,
+    );
+  }
+};
 
 // computed
 const role = computed(() => {
@@ -36,19 +51,18 @@ const role = computed(() => {
 });
 
 const stats = computed(() => {
-  const data = props.item.character?.data.stats;
   return [
     {
       label: 'atk',
-      value: data ? data.atk : 0,
+      value: previewStats.value ? previewStats.value.atk : 0,
     },
     {
       label: 'def',
-      value: data ? data.def : 0,
+      value: previewStats.value ? previewStats.value.def : 0,
     },
     {
       label: 'hp',
-      value: data ? data.hp : 0,
+      value: previewStats.value ? previewStats.value.hp : 0,
     },
     {
       label: 'critRate',
@@ -75,6 +89,8 @@ watch(
       item: value,
       data,
     };
+
+    updateStats();
   },
 );
 
@@ -82,8 +98,12 @@ watch(
   () => level.value,
   (value) => {
     calculator.participants[props.index].characterLevel = value;
+    updateStats();
   },
 );
+
+// lifecycle
+onMounted(initialize);
 </script>
 
 <template>
@@ -94,22 +114,13 @@ watch(
         :height="96"
         class="border rounded-circle d-flex justify-center align-center"
       >
-        <v-badge
-          location="bottom"
-          :color="role.color"
-          :content="role.text"
-        >
+        <v-badge location="bottom" :color="role.color" :content="role.text">
           <v-avatar
             v-if="item.character"
             :image="item.character.item.images.icon"
             :size="96"
           />
-          <v-avatar
-            v-else
-            :size="96"
-          >
-            ?
-          </v-avatar>
+          <v-avatar v-else :size="96"> ? </v-avatar>
         </v-badge>
       </v-sheet>
     </div>
@@ -131,10 +142,7 @@ watch(
           </template>
 
           <template #append>
-            <v-avatar
-              :size="24"
-              :image="element.raw.attribute.icon"
-            />
+            <v-avatar :size="24" :image="element.raw.attribute.icon" />
           </template>
         </v-list-item>
       </template>
@@ -161,20 +169,14 @@ watch(
     <v-table class="border rounded mt-2">
       <thead>
         <tr>
-          <th
-            colspan="3"
-            class="ma-2 text-center font-weight-bold"
-          >
+          <th colspan="3" class="ma-2 text-center font-weight-bold">
             {{ $t('characters.stats') }}
           </th>
         </tr>
       </thead>
 
       <tbody>
-        <tr
-          v-for="(element, j) in stats"
-          :key="j"
-        >
+        <tr v-for="(element, j) in stats" :key="j">
           <td class="w-50 text-center">
             {{ $t(`common.${element.label}`) }}
           </td>

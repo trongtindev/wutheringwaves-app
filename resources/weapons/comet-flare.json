@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -70,5 +71,5 @@
     "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by {0}, stacking up to {2} time(s). This effect lasts for {1}s and can be triggered {4} time(s) every {3}s."
   },
   "slug": "comet-flare",
-  "stats": { "atk": 33 }
+  "stats": { "atkFlat": 33, "hp": 6.8 }
 }

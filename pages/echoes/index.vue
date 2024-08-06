@@ -8,37 +8,15 @@ const resources = useResources();
 const echoes = await resources.getEchoes();
 const filterText = ref<string>();
 const filterCost = ref<number>(0);
-const filterSonataEffect = ref<string>('All');
 const items = ref<IEcho[]>([]);
-const sonataEffects = ref<string[]>([]);
 
 // functions
 const initialize = () => {
-  const effects: string[] = [];
-  echoes.forEach((e) => {
-    e.sonataEffects.forEach((effect) => {
-      if (effects.includes(effect) === false) {
-        effects.push(effect);
-      }
-    });
-  });
-  sonataEffects.value = effects;
-
-  loadData();
-};
-
-const loadData = () => {
   items.value = echoes.filter((e) => {
     if (filterText.value && filterText.value.length > 0) {
       if (
         e.name.toLowerCase().includes(filterText.value.toLowerCase()) == false
       ) {
-        return false;
-      }
-    }
-
-    if (filterSonataEffect.value && filterSonataEffect.value != 'All') {
-      if (e.sonataEffects.includes(filterSonataEffect.value)) {
         return false;
       }
     }
@@ -55,12 +33,10 @@ const loadData = () => {
 };
 
 // changes
-watch(filterText, loadData);
-watch(filterCost, loadData);
-watch(filterSonataEffect, loadData);
+watch(filterText, initialize);
 
 // lifecycle
-onMounted(() => initialize());
+onMounted(initialize);
 
 // seo meta
 const title = i18n.t('meta.echoes.title');
@@ -79,44 +55,11 @@ useSeoMeta({
 <template>
   <div>
     <!-- filter -->
-    <v-row>
-      <v-col
-        cols="12"
-        sm="4"
-      >
-        <v-text-field
-          v-model="filterText"
-          :label="$t('common.search')"
-          :hide-details="true"
-        />
-      </v-col>
-
-      <v-col
-        cols="6"
-        sm="4"
-      >
-        <v-select
-          v-model="filterCost"
-          :label="$t('echoes.cost')"
-          :items="[0, 1, 3, 4]"
-          :item-title="(e: number) => (e === 0 ? i18n.t('common.all') : e)"
-          :hide-details="true"
-        />
-      </v-col>
-
-      <v-col
-        cols="6"
-        sm="4"
-      >
-        <v-select
-          v-model="filterSonataEffect"
-          :label="$t('echoes.sonataEffect')"
-          :items="['All', ...sonataEffects]"
-          :item-title="(e: number) => i18n.t(e)"
-          :hide-details="true"
-        />
-      </v-col>
-    </v-row>
+    <v-text-field
+      v-model="filterText"
+      :label="$t('common.search')"
+      :hide-details="true"
+    />
 
     <!-- list -->
     <v-row class="mt-1">

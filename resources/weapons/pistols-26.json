@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/weapon.schema.json",
   "ascensions": [
     {
       "cost": [
@@ -62,5 +63,5 @@
     "description": "When the Resonator takes no damage, increases ATK by {1} every {0}s, stacking up to {2} time(s). This effect lasts for {3}s. When the Resonator takes damage, reduces the number of stacks by {4} and restores their HP by {5}."
   },
   "slug": "pistols-26",
-  "stats": { "atk": 31 }
+  "stats": { "atkFlat": 31, "atk": 8.1 }
 }

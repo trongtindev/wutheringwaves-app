@@ -16,10 +16,7 @@ const localePath = useLocalePath();
       :min-width="200"
     >
       <template #activator="{ props }">
-        <v-btn
-          v-bind="props"
-          :icon="mdiAccountConvert"
-        />
+        <v-btn v-bind="props" :icon="mdiAccountConvert" />
       </template>
 
       <v-sheet :min-width="250">
@@ -38,10 +35,7 @@ const localePath = useLocalePath();
                 v-if="account.isActive(element.playerId)"
                 :text="$t('common.active')"
               />
-              <v-icon
-                v-else
-                :icon="mdiChevronRight"
-              />
+              <v-icon v-else :icon="mdiChevronRight" />
             </template>
           </v-list-item>
         </v-list>
