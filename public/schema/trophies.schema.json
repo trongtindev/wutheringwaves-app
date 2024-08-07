@@ -5,37 +5,19 @@
       "type": "array",
       "items": {
         "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "group": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "publishedTime": {
-            "type": "string"
-          },
-          "modifiedTime": {
-            "type": "string"
-          }
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "group": { "type": "string" },
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "publishedTime": { "type": "string" },
+          "modifiedTime": { "type": "string" }
         },
         "required": ["slug", "name", "group", "category", "description"]
       }
     },
-    "publishedTime": {
-      "type": "string"
-    },
-    "modifiedTime": {
-      "type": "string"
-    }
+    "publishedTime": { "type": "string" },
+    "modifiedTime": { "type": "string" }
   },
   "required": ["items", "publishedTime", "modifiedTime"],
   "type": "object"

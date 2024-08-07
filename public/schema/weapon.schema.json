@@ -4,29 +4,15 @@
     "stats": {
       "type": "object",
       "properties": {
-        "def": {
-          "type": "number"
-        },
-        "hp": {
-          "type": "number"
-        },
-        "atk": {
-          "type": "number"
-        },
-        "atkFlat": {
-          "type": "number"
-        },
-        "critRate": {
-          "type": "number"
-        },
-        "critDMG": {
-          "type": "number"
-        },
-        "energyRegen": {
-          "type": "number"
-        }
+        "def": { "type": "number" },
+        "hp": { "type": "number" },
+        "atk": { "type": "number" },
+        "atkFlat": { "type": "number" },
+        "critRate": { "type": "number" },
+        "critDMG": { "type": "number" },
+        "energyRegen": { "type": "number" }
       },
-      "required": ["atk"]
+      "required": ["atkFlat"]
     },
     "description": { "type": "string" },
     "descriptionLocalized": { "type": "object" },

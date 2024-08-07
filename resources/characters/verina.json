@@ -54,56 +54,24 @@
       "minLevel": 80
     }
   ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Rejuvenating Glow"]
-    }
-  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Rejuvenating Glow"] }],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Healing Bonus", "ATK%"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Energy Regen"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Energy Regen"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Healing Bonus", "ATK%"] },
+        { "cost": 3, "stats": ["Energy Regen"] },
+        { "cost": 3, "stats": ["Energy Regen"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
   "bestMainEchoes": ["bell-borne-geochelone"],
   "bestWeapons": [
-    {
-      "item": "variation",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "rectifier-of-voyager",
-      "rank": 5,
-      "different": 100
-    },
-    {
-      "item": "rectifier-25",
-      "rank": 1,
-      "different": 100
-    }
+    { "item": "variation", "rank": 1, "different": 100 },
+    { "item": "rectifier-of-voyager", "rank": 5, "different": 100 },
+    { "item": "rectifier-25", "rank": 1, "different": 100 }
   ],
   "birthday": "May 18th",
   "birthplace": "New Federation",

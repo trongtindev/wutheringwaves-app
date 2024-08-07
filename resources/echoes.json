@@ -5,15 +5,13 @@
       "id": 6000038,
       "slug": "hooscamp",
       "name": "Hooscamp",
-      "nameLocalized": {
-        "vi": "Hooscamp"
-      },
+      "nameLocalized": { "vi": "Hooscamp" },
       "cost": 1,
       "class": "Common",
       "attribute": "Aero",
       "sonataEffects": ["Lingering Tunes", "Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.831Z",
-      "modifiedTime": "2024-08-03T06:13:38.265Z"
+      "modifiedTime": "2024-08-07T15:28:03.259Z"
     },
     {
       "id": 6000039,
@@ -24,7 +22,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Void Thunder"],
       "publishedTime": "2024-06-28T15:43:21.838Z",
-      "modifiedTime": "2024-08-03T06:13:38.346Z"
+      "modifiedTime": "2024-08-07T15:28:03.309Z"
     },
     {
       "id": 6000040,
@@ -35,7 +33,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Rejuvenating Glow", "Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.831Z",
-      "modifiedTime": "2024-08-03T06:13:38.260Z"
+      "modifiedTime": "2024-08-07T15:28:03.257Z"
     },
     {
       "id": 6000041,
@@ -46,7 +44,7 @@
       "attribute": "0",
       "sonataEffects": ["Moonlit Clouds", "Lingering Tunes"],
       "publishedTime": "2024-06-28T15:43:21.825Z",
-      "modifiedTime": "2024-08-03T06:13:38.186Z"
+      "modifiedTime": "2024-08-07T15:28:03.227Z"
     },
     {
       "id": 6000042,
@@ -57,7 +55,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.824Z",
-      "modifiedTime": "2024-08-03T06:13:38.176Z"
+      "modifiedTime": "2024-08-07T15:28:03.223Z"
     },
     {
       "id": 6000043,
@@ -68,7 +66,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.826Z",
-      "modifiedTime": "2024-08-03T06:13:38.203Z"
+      "modifiedTime": "2024-08-07T15:28:03.233Z"
     },
     {
       "id": 6000044,
@@ -79,7 +77,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.833Z",
-      "modifiedTime": "2024-08-03T06:13:38.281Z"
+      "modifiedTime": "2024-08-07T15:28:03.270Z"
     },
     {
       "id": 6000045,
@@ -90,7 +88,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.834Z",
-      "modifiedTime": "2024-08-03T06:13:38.295Z"
+      "modifiedTime": "2024-08-07T15:28:03.277Z"
     },
     {
       "id": 6000046,
@@ -101,7 +99,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Moonlit Clouds", "Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.823Z",
-      "modifiedTime": "2024-08-03T06:13:38.163Z"
+      "modifiedTime": "2024-08-07T15:28:03.217Z"
     },
     {
       "id": 6000047,
@@ -112,7 +110,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Sun-sinking Eclipse", "Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.824Z",
-      "modifiedTime": "2024-08-03T06:13:38.170Z"
+      "modifiedTime": "2024-08-07T15:28:03.219Z"
     },
     {
       "id": 6000048,
@@ -123,7 +121,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Lingering Tunes"],
       "publishedTime": "2024-06-28T15:43:21.833Z",
-      "modifiedTime": "2024-08-03T06:13:38.292Z"
+      "modifiedTime": "2024-08-07T15:28:03.275Z"
     },
     {
       "id": 6000049,
@@ -134,7 +132,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.822Z",
-      "modifiedTime": "2024-08-03T06:13:38.157Z"
+      "modifiedTime": "2024-08-07T15:28:03.213Z"
     },
     {
       "id": 6000050,
@@ -145,7 +143,7 @@
       "attribute": "0",
       "sonataEffects": ["Void Thunder", "Sierra Gale", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.839Z",
-      "modifiedTime": "2024-08-03T06:13:38.357Z"
+      "modifiedTime": "2024-08-07T15:28:03.315Z"
     },
     {
       "id": 6000051,
@@ -156,7 +154,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.824Z",
-      "modifiedTime": "2024-08-03T06:13:38.173Z"
+      "modifiedTime": "2024-08-07T15:28:03.221Z"
     },
     {
       "id": 6000052,
@@ -167,7 +165,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Moonlit Clouds"],
       "publishedTime": "2024-06-28T15:43:21.832Z",
-      "modifiedTime": "2024-08-03T06:13:38.269Z"
+      "modifiedTime": "2024-08-07T15:28:03.261Z"
     },
     {
       "id": 6000053,
@@ -178,7 +176,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.825Z",
-      "modifiedTime": "2024-08-03T06:13:38.189Z"
+      "modifiedTime": "2024-08-07T15:28:03.228Z"
     },
     {
       "id": 6000054,
@@ -189,7 +187,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Lingering Tunes", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.827Z",
-      "modifiedTime": "2024-08-03T06:13:38.206Z"
+      "modifiedTime": "2024-08-07T15:28:03.234Z"
     },
     {
       "id": 6000055,
@@ -200,7 +198,7 @@
       "attribute": "0",
       "sonataEffects": ["Sierra Gale", "Rejuvenating Glow"],
       "publishedTime": "2024-06-28T15:43:21.825Z",
-      "modifiedTime": "2024-08-03T06:13:38.192Z"
+      "modifiedTime": "2024-08-07T15:28:03.230Z"
     },
     {
       "id": 6000056,
@@ -211,7 +209,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Moonlit Clouds", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.829Z",
-      "modifiedTime": "2024-08-03T06:13:38.228Z"
+      "modifiedTime": "2024-08-07T15:28:03.244Z"
     },
     {
       "id": 6000057,
@@ -222,7 +220,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Void Thunder", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.833Z",
-      "modifiedTime": "2024-08-03T06:13:38.289Z"
+      "modifiedTime": "2024-08-07T15:28:03.274Z"
     },
     {
       "id": 6000058,
@@ -233,7 +231,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.833Z",
-      "modifiedTime": "2024-08-03T06:13:38.285Z"
+      "modifiedTime": "2024-08-07T15:28:03.272Z"
     },
     {
       "id": 6000059,
@@ -244,7 +242,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.832Z",
-      "modifiedTime": "2024-08-03T06:13:38.276Z"
+      "modifiedTime": "2024-08-07T15:28:03.268Z"
     },
     {
       "id": 6000145,
@@ -255,7 +253,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.835Z",
-      "modifiedTime": "2024-08-03T06:13:38.307Z"
+      "modifiedTime": "2024-08-07T15:28:03.287Z"
     },
     {
       "id": 6010051,
@@ -266,7 +264,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.822Z",
-      "modifiedTime": "2024-08-03T06:13:38.151Z"
+      "modifiedTime": "2024-08-07T15:28:03.210Z"
     },
     {
       "id": 6010052,
@@ -277,7 +275,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Moonlit Clouds"],
       "publishedTime": "2024-06-28T15:43:21.835Z",
-      "modifiedTime": "2024-08-03T06:13:38.304Z"
+      "modifiedTime": "2024-08-07T15:28:03.285Z"
     },
     {
       "id": 6010058,
@@ -288,7 +286,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.822Z",
-      "modifiedTime": "2024-08-03T06:13:38.154Z"
+      "modifiedTime": "2024-08-07T15:28:03.211Z"
     },
     {
       "id": 390070051,
@@ -299,7 +297,7 @@
       "attribute": "0",
       "sonataEffects": ["Rejuvenating Glow", "Void Thunder", "Lingering Tunes"],
       "publishedTime": "2024-06-28T15:43:21.839Z",
-      "modifiedTime": "2024-08-03T06:13:38.360Z"
+      "modifiedTime": "2024-08-07T15:28:03.317Z"
     },
     {
       "id": 390070052,
@@ -310,7 +308,7 @@
       "attribute": "0",
       "sonataEffects": ["Moonlit Clouds", "Void Thunder", "Rejuvenating Glow"],
       "publishedTime": "2024-06-28T15:43:21.827Z",
-      "modifiedTime": "2024-08-03T06:13:38.209Z"
+      "modifiedTime": "2024-08-07T15:28:03.236Z"
     },
     {
       "id": 390070053,
@@ -321,7 +319,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Molten Rift", "Void Thunder"],
       "publishedTime": "2024-06-28T15:43:21.826Z",
-      "modifiedTime": "2024-08-03T06:13:38.196Z"
+      "modifiedTime": "2024-08-07T15:28:03.231Z"
     },
     {
       "id": 390070064,
@@ -332,7 +330,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Sierra Gale", "Void Thunder", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.828Z",
-      "modifiedTime": "2024-08-03T06:13:38.223Z"
+      "modifiedTime": "2024-08-07T15:28:03.242Z"
     },
     {
       "id": 390070065,
@@ -343,7 +341,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Celestial Light", "Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.830Z",
-      "modifiedTime": "2024-08-03T06:13:38.252Z"
+      "modifiedTime": "2024-08-07T15:28:03.254Z"
     },
     {
       "id": 390070066,
@@ -354,7 +352,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.837Z",
-      "modifiedTime": "2024-08-03T06:13:38.328Z"
+      "modifiedTime": "2024-08-07T15:28:03.298Z"
     },
     {
       "id": 390070067,
@@ -365,7 +363,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Moonlit Clouds", "Lingering Tunes", "Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.841Z",
-      "modifiedTime": "2024-08-03T06:13:38.377Z"
+      "modifiedTime": "2024-08-07T15:28:03.333Z"
     },
     {
       "id": 390070068,
@@ -376,7 +374,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds", "Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.840Z",
-      "modifiedTime": "2024-08-03T06:13:38.368Z"
+      "modifiedTime": "2024-08-07T15:28:03.328Z"
     },
     {
       "id": 390070069,
@@ -391,7 +389,7 @@
         "Sun-sinking Eclipse"
       ],
       "publishedTime": "2024-06-28T15:43:21.839Z",
-      "modifiedTime": "2024-08-03T06:13:38.354Z"
+      "modifiedTime": "2024-08-07T15:28:03.314Z"
     },
     {
       "id": 390070070,
@@ -402,7 +400,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.829Z",
-      "modifiedTime": "2024-08-03T06:13:38.232Z"
+      "modifiedTime": "2024-08-07T15:28:03.246Z"
     },
     {
       "id": 390070071,
@@ -413,7 +411,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Void Thunder", "Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.821Z",
-      "modifiedTime": "2024-08-03T06:13:38.147Z"
+      "modifiedTime": "2024-08-07T15:28:03.208Z"
     },
     {
       "id": 390070074,
@@ -428,7 +426,7 @@
         "Celestial Light"
       ],
       "publishedTime": "2024-06-28T15:43:21.824Z",
-      "modifiedTime": "2024-08-03T06:13:38.179Z"
+      "modifiedTime": "2024-08-07T15:28:03.224Z"
     },
     {
       "id": 390070075,
@@ -439,7 +437,7 @@
       "attribute": "0",
       "sonataEffects": ["Moonlit Clouds", "Sierra Gale", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.836Z",
-      "modifiedTime": "2024-08-03T06:13:38.325Z"
+      "modifiedTime": "2024-08-07T15:28:03.296Z"
     },
     {
       "id": 390070076,
@@ -450,7 +448,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.829Z",
-      "modifiedTime": "2024-08-03T06:13:38.238Z"
+      "modifiedTime": "2024-08-07T15:28:03.249Z"
     },
     {
       "id": 390070077,
@@ -461,7 +459,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.826Z",
-      "modifiedTime": "2024-08-03T06:13:38.200Z"
+      "modifiedTime": "2024-08-07T15:28:03.232Z"
     },
     {
       "id": 390070078,
@@ -472,7 +470,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Lingering Tunes", "Void Thunder", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.840Z",
-      "modifiedTime": "2024-08-03T06:13:38.371Z"
+      "modifiedTime": "2024-08-07T15:28:03.214Z"
     },
     {
       "id": 390070079,
@@ -483,7 +481,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Sierra Gale", "Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.840Z",
-      "modifiedTime": "2024-08-03T06:13:38.374Z"
+      "modifiedTime": "2024-08-07T15:28:03.330Z"
     },
     {
       "id": 390070100,
@@ -494,7 +492,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Rejuvenating Glow", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.827Z",
-      "modifiedTime": "2024-08-03T06:13:38.216Z"
+      "modifiedTime": "2024-08-07T15:28:03.239Z"
     },
     {
       "id": 390070105,
@@ -505,7 +503,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.830Z",
-      "modifiedTime": "2024-08-03T06:13:38.256Z"
+      "modifiedTime": "2024-08-07T15:28:03.256Z"
     },
     {
       "id": 390077004,
@@ -516,7 +514,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Molten Rift", "Void Thunder"],
       "publishedTime": "2024-06-28T15:43:21.840Z",
-      "modifiedTime": "2024-08-03T06:13:38.364Z"
+      "modifiedTime": "2024-08-07T15:28:03.323Z"
     },
     {
       "id": 390077005,
@@ -527,7 +525,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Sierra Gale", "Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.825Z",
-      "modifiedTime": "2024-08-03T06:13:38.183Z"
+      "modifiedTime": "2024-08-07T15:28:03.226Z"
     },
     {
       "id": 390077012,
@@ -538,7 +536,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Freezing Frost", "Lingering Tunes", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.828Z",
-      "modifiedTime": "2024-08-03T06:13:38.219Z"
+      "modifiedTime": "2024-08-07T15:28:03.241Z"
     },
     {
       "id": 390077013,
@@ -553,7 +551,7 @@
         "Freezing Frost"
       ],
       "publishedTime": "2024-06-28T15:43:21.829Z",
-      "modifiedTime": "2024-08-03T06:13:38.235Z"
+      "modifiedTime": "2024-08-07T15:28:03.247Z"
     },
     {
       "id": 390077016,
@@ -564,7 +562,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Molten Rift", "Void Thunder", "Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.837Z",
-      "modifiedTime": "2024-08-03T06:13:38.335Z"
+      "modifiedTime": "2024-08-07T15:28:03.302Z"
     },
     {
       "id": 390077017,
@@ -579,7 +577,7 @@
         "Sun-sinking Eclipse"
       ],
       "publishedTime": "2024-06-28T15:43:21.830Z",
-      "modifiedTime": "2024-08-03T06:13:38.246Z"
+      "modifiedTime": "2024-08-07T15:28:03.252Z"
     },
     {
       "id": 390077021,
@@ -590,7 +588,7 @@
       "attribute": "0",
       "sonataEffects": ["Rejuvenating Glow", "Moonlit Clouds"],
       "publishedTime": "2024-06-28T15:43:21.838Z",
-      "modifiedTime": "2024-08-03T06:13:38.339Z"
+      "modifiedTime": "2024-08-07T15:28:03.304Z"
     },
     {
       "id": 390077022,
@@ -601,7 +599,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Lingering Tunes", "Void Thunder"],
       "publishedTime": "2024-06-28T15:43:21.827Z",
-      "modifiedTime": "2024-08-03T06:13:38.212Z"
+      "modifiedTime": "2024-08-07T15:28:03.237Z"
     },
     {
       "id": 390077023,
@@ -612,7 +610,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.838Z",
-      "modifiedTime": "2024-08-03T06:13:38.342Z"
+      "modifiedTime": "2024-08-07T15:28:03.307Z"
     },
     {
       "id": 390077024,
@@ -623,7 +621,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Rejuvenating Glow", "Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.836Z",
-      "modifiedTime": "2024-08-03T06:13:38.318Z"
+      "modifiedTime": "2024-08-07T15:28:03.293Z"
     },
     {
       "id": 390077025,
@@ -634,7 +632,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Lingering Tunes", "Rejuvenating Glow"],
       "publishedTime": "2024-06-28T15:43:21.823Z",
-      "modifiedTime": "2024-08-03T06:13:38.167Z"
+      "modifiedTime": "2024-08-07T15:28:03.218Z"
     },
     {
       "id": 390077028,
@@ -645,7 +643,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Moonlit Clouds", "Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.828Z",
-      "modifiedTime": "2024-08-03T06:13:38.225Z"
+      "modifiedTime": "2024-08-07T15:28:03.325Z"
     },
     {
       "id": 390077029,
@@ -656,7 +654,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Freezing Frost", "Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.836Z",
-      "modifiedTime": "2024-08-03T06:13:38.322Z"
+      "modifiedTime": "2024-08-07T15:28:03.295Z"
     },
     {
       "id": 390077033,
@@ -667,7 +665,7 @@
       "attribute": "Havoc",
       "sonataEffects": ["Molten Rift", "Sun-sinking Eclipse"],
       "publishedTime": "2024-06-28T15:43:21.830Z",
-      "modifiedTime": "2024-08-03T06:13:38.241Z"
+      "modifiedTime": "2024-08-07T15:28:03.251Z"
     },
     {
       "id": 390077038,
@@ -678,7 +676,7 @@
       "attribute": "0",
       "sonataEffects": ["Lingering Tunes", "Moonlit Clouds"],
       "publishedTime": "2024-06-28T15:43:21.837Z",
-      "modifiedTime": "2024-08-03T06:13:38.332Z"
+      "modifiedTime": "2024-08-07T15:28:03.300Z"
     },
     {
       "id": 390080003,
@@ -689,7 +687,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Void Thunder"],
       "publishedTime": "2024-06-28T15:43:21.838Z",
-      "modifiedTime": "2024-08-03T06:13:38.351Z"
+      "modifiedTime": "2024-08-07T15:28:03.311Z"
     },
     {
       "id": 390080005,
@@ -700,7 +698,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Moonlit Clouds", "Rejuvenating Glow"],
       "publishedTime": "2024-06-28T15:43:21.823Z",
-      "modifiedTime": "2024-08-03T06:13:38.160Z"
+      "modifiedTime": "2024-08-07T15:28:03.215Z"
     },
     {
       "id": 390080007,
@@ -711,7 +709,7 @@
       "attribute": "Fusion",
       "sonataEffects": ["Molten Rift"],
       "publishedTime": "2024-06-28T15:43:21.832Z",
-      "modifiedTime": "2024-08-03T06:13:38.273Z"
+      "modifiedTime": "2024-08-07T15:28:03.265Z"
     },
     {
       "id": 390180010,
@@ -722,7 +720,7 @@
       "attribute": "Aero",
       "sonataEffects": ["Sierra Gale"],
       "publishedTime": "2024-06-28T15:43:21.834Z",
-      "modifiedTime": "2024-08-03T06:13:38.298Z"
+      "modifiedTime": "2024-08-07T15:28:03.280Z"
     },
     {
       "id": 391070105,
@@ -733,7 +731,7 @@
       "attribute": "Glacio",
       "sonataEffects": ["Celestial Light", "Freezing Frost"],
       "publishedTime": "2024-06-28T15:43:21.834Z",
-      "modifiedTime": "2024-08-03T06:13:38.301Z"
+      "modifiedTime": "2024-08-07T15:28:03.282Z"
     },
     {
       "id": 391077024,
@@ -744,7 +742,7 @@
       "attribute": "Spectro",
       "sonataEffects": ["Rejuvenating Glow", "Celestial Light"],
       "publishedTime": "2024-06-28T15:43:21.835Z",
-      "modifiedTime": "2024-08-03T06:13:38.312Z"
+      "modifiedTime": "2024-08-07T15:28:03.289Z"
     },
     {
       "id": 391080003,
@@ -755,7 +753,7 @@
       "attribute": "Electro",
       "sonataEffects": ["Void Thunder"],
       "publishedTime": "2024-06-28T15:43:21.836Z",
-      "modifiedTime": "2024-08-03T06:13:38.315Z"
+      "modifiedTime": "2024-08-07T15:28:03.291Z"
     }
   ]
 }

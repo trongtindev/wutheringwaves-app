@@ -55,31 +55,11 @@
     }
   ],
   "bestWeapons": [
-    {
-      "item": "static-mist",
-      "different": 100,
-      "rank": 1
-    },
-    {
-      "item": "novaburst",
-      "different": 82.5,
-      "rank": 1
-    },
-    {
-      "item": "pistols-26",
-      "different": 82.2,
-      "rank": 1
-    },
-    {
-      "item": "undying-flame",
-      "different": 82,
-      "rank": 1
-    },
-    {
-      "item": "thunderbolt",
-      "different": 79.9,
-      "rank": 1
-    }
+    { "item": "static-mist", "different": 100, "rank": 1 },
+    { "item": "novaburst", "different": 82.5, "rank": 1 },
+    { "item": "pistols-26", "different": 82.2, "rank": 1 },
+    { "item": "undying-flame", "different": 82, "rank": 1 },
+    { "item": "thunderbolt", "different": 79.9, "rank": 1 }
   ],
   "birthday": "April 18th",
   "birthplace": "Huanglong",

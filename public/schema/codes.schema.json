@@ -6,9 +6,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "code": {
-            "type": "string"
-          },
+          "code": { "type": "string" },
           "rewards": {
             "type": "array",
             "items": {
@@ -18,19 +16,12 @@
                   "type": "string",
                   "$ref": "./item.components.json#/components/schemas/slug"
                 },
-                "quantity": {
-                  "type": "integer",
-                  "minimum": 1
-                }
+                "quantity": { "type": "integer", "minimum": 1 }
               }
             }
           },
-          "expiredAt": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string"
-          }
+          "expiredAt": { "type": "string" },
+          "createdAt": { "type": "string" }
         },
         "required": ["code"]
       }

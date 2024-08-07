@@ -6,20 +6,11 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "cd": {
-            "type": "integer"
-          },
+          "id": { "type": "integer" },
+          "cd": { "type": "integer" },
           "params": {
             "type": "array",
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
+            "items": { "type": "array", "items": { "type": "string" } }
           },
           "description": { "type": "string" },
           "descriptionLocalized": { "type": "object" }

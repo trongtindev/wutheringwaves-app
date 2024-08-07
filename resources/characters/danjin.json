@@ -55,31 +55,11 @@
     }
   ],
   "bestWeapons": [
-    {
-      "item": "emerald-of-genesis",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "commando-of-conviction",
-      "rank": 1,
-      "different": 79.5
-    },
-    {
-      "item": "lumingloss",
-      "rank": 1,
-      "different": 77.5
-    },
-    {
-      "item": "lunar-cutter",
-      "rank": 1,
-      "different": 76.9
-    },
-    {
-      "item": "sword-18",
-      "rank": 1,
-      "different": 76.9
-    }
+    { "item": "emerald-of-genesis", "rank": 1, "different": 100 },
+    { "item": "commando-of-conviction", "rank": 1, "different": 79.5 },
+    { "item": "lumingloss", "rank": 1, "different": 77.5 },
+    { "item": "lunar-cutter", "rank": 1, "different": 76.9 },
+    { "item": "sword-18", "rank": 1, "different": 76.9 }
   ],
   "birthday": "August 31st",
   "birthplace": "Huanglong",

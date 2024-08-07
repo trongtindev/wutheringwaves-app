@@ -54,36 +54,16 @@
       "minLevel": 80
     }
   ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Moonlit Clouds"]
-    }
-  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Moonlit Clouds"] }],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit DMG", "Crit Rate"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Fusion DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Fusion DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -92,52 +72,19 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["jiyan", "jinhsi", "jianxin"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["mortefi"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina"]
-        }
+        { "role": "Main DPS", "items": ["jiyan", "jinhsi", "jianxin"] },
+        { "role": "Sub DPS", "items": ["mortefi"] },
+        { "role": "Healer", "items": ["verina"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "different": 100,
-      "rank": 1,
-      "item": "static-mist"
-    },
-    {
-      "different": 80.4,
-      "rank": 1,
-      "item": "novaburst"
-    },
-    {
-      "different": 78.5,
-      "rank": 1,
-      "item": "undying-flame"
-    },
-    {
-      "different": 78.1,
-      "rank": 1,
-      "item": "pistols-26"
-    },
-    {
-      "different": 77.4,
-      "rank": 1,
-      "item": "thunderbolt"
-    },
-    {
-      "different": 70.4,
-      "rank": 5,
-      "item": "pistols-of-night"
-    }
+    { "different": 100, "rank": 1, "item": "static-mist" },
+    { "different": 80.4, "rank": 1, "item": "novaburst" },
+    { "different": 78.5, "rank": 1, "item": "undying-flame" },
+    { "different": 78.1, "rank": 1, "item": "pistols-26" },
+    { "different": 77.4, "rank": 1, "item": "thunderbolt" },
+    { "different": 70.4, "rank": 5, "item": "pistols-of-night" }
   ],
   "birthday": "November 6th",
   "birthplace": "New Federation",

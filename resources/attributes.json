@@ -1,11 +1,7 @@
 {
   "$schema": "../public/schema/attributes.schema.json",
   "items": [
-    {
-      "slug": "aero",
-      "name": "Aero",
-      "icon": "/attributes/icons/aero.webp"
-    },
+    { "slug": "aero", "name": "Aero", "icon": "/attributes/icons/aero.webp" },
     {
       "slug": "fusion",
       "name": "Fusion",
@@ -26,10 +22,6 @@
       "name": "Spectro",
       "icon": "/attributes/icons/spectro.webp"
     },
-    {
-      "slug": "havoc",
-      "name": "Havoc",
-      "icon": "/attributes/icons/havoc.webp"
-    }
+    { "slug": "havoc", "name": "Havoc", "icon": "/attributes/icons/havoc.webp" }
   ]
 }

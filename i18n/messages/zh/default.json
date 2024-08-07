@@ -7,9 +7,7 @@
   "autoImport": {
     "notificationTitle": "Importing history...",
     "notificationMessage": "Fetching history for account {0}.",
-    "done": {
-      "title": "Import successfully!"
-    }
+    "done": { "title": "Import successfully!" }
   },
   "banner": {
     "featuredResonator": "Featured resonator",
@@ -56,9 +54,7 @@
   },
   "comments": {
     "empty": "Leave a comment so your voice will be heard first.",
-    "form": {
-      "submit": "Post comment"
-    },
+    "form": { "submit": "Post comment" },
     "replies": "Replies"
   },
   "commit": {
@@ -192,12 +188,8 @@
       "guides": {
         "android": {
           "default": {
-            "1": {
-              "title": "Follow our Video Tutorial"
-            },
-            "2": {
-              "title": "Paste the copied text here"
-            }
+            "1": { "title": "Follow our Video Tutorial" },
+            "2": { "title": "Paste the copied text here" }
           }
         },
         "pc": {
@@ -209,9 +201,7 @@
               "title": "打开 Windows 的“开始”菜单，搜索 PowerShell",
               "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
             },
-            "3": {
-              "title": "将召集记录URL粘贴到下面的框中。"
-            }
+            "3": { "title": "将召集记录URL粘贴到下面的框中。" }
           }
         }
       },
@@ -230,10 +220,7 @@
         }
       }
     },
-    "history": {
-      "title": "Pity Tracker",
-      "empty": "您目前没有召集历史记录。"
-    },
+    "history": { "title": "Pity Tracker", "empty": "您目前没有召集历史记录。" },
     "guaranteedAt": "保底 {0} 抽",
     "lifetimePulls": "总抽卡次数",
     "pity": "可惜",
@@ -266,9 +253,7 @@
       "worth": "Worth",
       "chance": "Chance"
     },
-    "share": {
-      "title": "Share history"
-    }
+    "share": { "title": "Share history" }
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -283,9 +268,7 @@
       "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
       "4": "If you like coding, you can also contributing to the project on Github."
     },
-    "buttons": {
-      "kofi": "Support me on Ko-fi"
-    }
+    "buttons": { "kofi": "Support me on Ko-fi" }
   },
   "echoes": {
     "title": "Echoes",
@@ -307,33 +290,20 @@
         "primary": "Primary",
         "secondary": "Secondary"
       },
-      "_title": {
-        "label": "Title"
-      },
+      "_title": { "label": "Title" },
       "description": {
         "label": "Description",
         "placeholder": "Provide a short description of the post."
       },
-      "seo": {
-        "keywords": {
-          "label": "Keywords"
-        }
-      },
-      "categories": {
-        "title": "Categories"
-      },
-      "options": {
-        "title": "Options",
-        "schedule": "Schedule publish"
-      },
+      "seo": { "keywords": { "label": "Keywords" } },
+      "categories": { "title": "Categories" },
+      "options": { "title": "Options", "schedule": "Schedule publish" },
       "update": "Save changes"
     },
     "related": "Related Posts",
     "previous": "Previous Posts",
     "next": "Next Posts",
-    "deleted": {
-      "title": "This post has been deleted!"
-    }
+    "deleted": { "title": "This post has been deleted!" }
   },
   "items": {
     "title": "素材道具",
@@ -342,9 +312,7 @@
     "cookingIngredients": "Cooking Ingredients",
     "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
   },
-  "leaderboards": {
-    "title": "Leaderboards"
-  },
+  "leaderboards": { "title": "Leaderboards" },
   "map": {
     "title": "Interactive Map",
     "locations": {
@@ -458,9 +426,7 @@
   "meta": {
     "title": "Wuthering Waves",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
-    "index": {
-      "title": "Your personal tracker"
-    },
+    "index": { "title": "Your personal tracker" },
     "timeline": {
       "title": "Event timeline calendar",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
@@ -499,9 +465,7 @@
         "title": "Global Convene Stats",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       },
-      "share": {
-        "title": "Convene history card generator"
-      }
+      "share": { "title": "Convene history card generator" }
     },
     "todoList": {
       "description": "Wuthering Waves Todo List to plan and track items and mora you need, you can also see resin approximation needed to farm the items!"
@@ -528,12 +492,8 @@
         }
       }
     },
-    "settings": {
-      "title": "设置"
-    },
-    "guides": {
-      "title": "Game Guides"
-    },
+    "settings": { "title": "设置" },
+    "guides": { "title": "Game Guides" },
     "leaderboards": {
       "title": "排行榜",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
@@ -633,12 +593,8 @@
     "push": "Push",
     "pull": "Pull"
   },
-  "teams": {
-    "title": "Teams"
-  },
-  "tierList": {
-    "title": "Tier list"
-  },
+  "teams": { "title": "Teams" },
+  "tierList": { "title": "Tier list" },
   "timeline": {
     "title": "Timeline",
     "startsIn": "Starts {0}",
@@ -659,9 +615,7 @@
       "delete": "Delete"
     }
   },
-  "trophies": {
-    "title": "Trophies"
-  },
+  "trophies": { "title": "Trophies" },
   "updater": {
     "title": "新的更新",
     "message": "点击“刷新”进行更新",

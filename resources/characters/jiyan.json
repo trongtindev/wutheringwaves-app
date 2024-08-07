@@ -55,43 +55,19 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Sierra Gale"]
-    },
-    {
-      "different": 95.7,
-      "items": ["Lingering Tunes"]
-    },
-    {
-      "different": 87.7,
-      "items": ["Sierra Gale", "Lingering Tunes"]
-    }
+    { "different": 100, "items": ["Sierra Gale"] },
+    { "different": 95.7, "items": ["Lingering Tunes"] },
+    { "different": 87.7, "items": ["Sierra Gale", "Lingering Tunes"] }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Crit DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Aero DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Aero DMG", "Energy Regen"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate", "Crit DMG"] },
+        { "cost": 3, "stats": ["Aero DMG"] },
+        { "cost": 3, "stats": ["Aero DMG", "Energy Regen"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -100,57 +76,20 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["jiyan"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["mortefi", "sanhua", "aalto"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
+        { "role": "Main DPS", "items": ["jiyan"] },
+        { "role": "Sub DPS", "items": ["mortefi", "sanhua", "aalto"] },
+        { "role": "Healer", "items": ["verina", "baizhi"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "verdant-summit",
-      "rank": 1,
-      "different": 117.4
-    },
-    {
-      "item": "lustrous-razor",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "autumntrace",
-      "rank": 1,
-      "different": 86.3
-    },
-    {
-      "item": "helios-cleaver",
-      "rank": 1,
-      "different": 82.9
-    },
-    {
-      "item": "broadblade-41",
-      "rank": 1,
-      "different": 78.1
-    },
-    {
-      "item": "guardian-broadblade",
-      "rank": 5,
-      "different": 77.3
-    },
-    {
-      "item": "broadblade-of-night",
-      "rank": 5,
-      "different": 75.5
-    }
+    { "item": "verdant-summit", "rank": 1, "different": 117.4 },
+    { "item": "lustrous-razor", "rank": 1, "different": 100 },
+    { "item": "autumntrace", "rank": 1, "different": 86.3 },
+    { "item": "helios-cleaver", "rank": 1, "different": 82.9 },
+    { "item": "broadblade-41", "rank": 1, "different": 78.1 },
+    { "item": "guardian-broadblade", "rank": 5, "different": 77.3 },
+    { "item": "broadblade-of-night", "rank": 5, "different": 75.5 }
   ],
   "birthday": "December 14th",
   "birthplace": "Huanglong",

@@ -55,74 +55,29 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Molten Rift"]
-    },
-    {
-      "different": 100,
-      "items": ["Molten Rift", "Lingering Tunes"]
-    }
+    { "different": 100, "items": ["Molten Rift"] },
+    { "different": 100, "items": ["Molten Rift", "Lingering Tunes"] }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Aero DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Fusion DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Fusion DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate", "Aero DMG"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
   "bestMainEchoes": ["inferno-rider", "mech-abomination"],
   "bestWeapons": [
-    {
-      "item": "stringmaster",
-      "different": 114.5,
-      "rank": 1
-    },
-    {
-      "item": "cosmic-ripples",
-      "different": 100,
-      "rank": 1
-    },
-    {
-      "item": "augment",
-      "different": 88.6,
-      "rank": 1
-    },
-    {
-      "item": "jinzhou-keeper",
-      "different": 84.9,
-      "rank": 1
-    },
-    {
-      "item": "rectifier-of-night",
-      "different": 77.2,
-      "rank": 5
-    },
-    {
-      "item": "guardian-rectifier",
-      "different": 76.8,
-      "rank": 5
-    }
+    { "item": "stringmaster", "different": 114.5, "rank": 1 },
+    { "item": "cosmic-ripples", "different": 100, "rank": 1 },
+    { "item": "augment", "different": 88.6, "rank": 1 },
+    { "item": "jinzhou-keeper", "different": 84.9, "rank": 1 },
+    { "item": "rectifier-of-night", "different": 77.2, "rank": 5 },
+    { "item": "guardian-rectifier", "different": 76.8, "rank": 5 }
   ],
   "birthday": "March 21st",
   "birthplace": "New Federation",

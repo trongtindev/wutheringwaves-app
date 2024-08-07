@@ -21,30 +21,20 @@
           "time": {
             "type": "object",
             "properties": {
-              "start": {
-                "type": "string"
-              },
-              "end": {
-                "type": "string"
-              }
+              "start": { "type": "string" },
+              "end": { "type": "string" }
             },
             "required": ["start", "end"]
           },
-          "name": {
-            "type": "string"
-          },
-          "nameLocalized": {
-            "type": "object"
-          },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" },
           "featuredRare": {
             "type": "string",
             "anyOf": [
               {
                 "$ref": "./character.components.json#/components/schemas/name"
               },
-              {
-                "$ref": "./weapon.components.json#/components/schemas/name"
-              }
+              { "$ref": "./weapon.components.json#/components/schemas/name" }
             ]
           },
           "featuredSecondaryRare": {
@@ -53,9 +43,7 @@
               {
                 "$ref": "./character.components.json#/components/schemas/name"
               },
-              {
-                "$ref": "./weapon.components.json#/components/schemas/name"
-              }
+              { "$ref": "./weapon.components.json#/components/schemas/name" }
             ]
           },
           "featured": {
@@ -66,15 +54,11 @@
                 {
                   "$ref": "./character.components.json#/components/schemas/name"
                 },
-                {
-                  "$ref": "./weapon.components.json#/components/schemas/name"
-                }
+                { "$ref": "./weapon.components.json#/components/schemas/name" }
               ]
             }
           },
-          "thumbnail": {
-            "type": "string"
-          }
+          "thumbnail": { "type": "string" }
         },
         "required": ["type", "name", "thumbnail"]
       }

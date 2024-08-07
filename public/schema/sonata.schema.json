@@ -6,24 +6,14 @@
       "items": {
         "type": "object",
         "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "icon": {
-            "type": "string"
-          },
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "icon": { "type": "string" },
           "colors": {
             "type": "object",
             "properties": {
-              "background": {
-                "type": "string"
-              },
-              "border": {
-                "type": "string"
-              }
+              "background": { "type": "string" },
+              "border": { "type": "string" }
             }
           },
           "twoPieceEffect": {
@@ -43,9 +33,7 @@
                   "Healing Bonus"
                 ]
               },
-              "value": {
-                "type": "number"
-              }
+              "value": { "type": "number" }
             },
             "required": ["type", "value"]
           }

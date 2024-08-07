@@ -1,9 +1,30 @@
 {
   "name": "@trongtindev/wutheringwaves-app",
+  "description": "A collection of tools to help playing Wuthering Waves.",
   "author": {
-    "url": "https://trongtin.dev",
     "name": "trongtindev",
-    "email": "me@trongtin.dev"
+    "email": "me@trongtin.dev",
+    "url": "https://trongtin.dev"
+  },
+  "type": "module",
+  "scripts": {
+    "analyze": "nuxi analyze",
+    "build": "nuxt build",
+    "release": "git checkout production && git merge main && git push && git checkout main",
+    "build-only": "cross-env NITRO_PRERENDER=false nuxt build",
+    "check-updates": "bunx npm-check-updates",
+    "cleanup": "nuxi cleanup",
+    "dev": "cross-env NODE_ENV=development nuxt dev",
+    "format": "bun run prettier.ts ./",
+    "generate": "nuxt generate",
+    "preinstall": "npx only-allow bun",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
+    "upgrade": "nuxt upgrade"
   },
   "devDependencies": {
     "@mdi/js": "git+https://github.com/trongtindev/mdi-js-es",
@@ -13,6 +34,7 @@
     "@nuxtjs/i18n": "^8.3.3",
     "@nuxtjs/robots": "4.0.2",
     "@nuxtjs/sitemap": "^5.3.5",
+    "@pinia/nuxt": "^0.5.3",
     "@types/file-saver": "^2.0.7",
     "@types/google.accounts": "^0.0.14",
     "@types/leaflet": "^1.9.12",
@@ -39,7 +61,6 @@
     "nuxt-schema-org": "^3.3.9",
     "only-allow": "^1.2.1",
     "pinia": "^2.2.1",
-    "@pinia/nuxt": "^0.5.3",
     "prettier": "^3.3.3",
     "prettier-plugin-sort-json": "^4.0.0",
     "rss": "^1.2.2",
@@ -54,29 +75,9 @@
     "vue-tsc": "^2.0.29",
     "vuetify": "^3.6.14"
   },
-  "description": "A collection of tools to help playing Wuthering Waves.",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development nuxt dev",
-    "build": "nuxt build",
-    "build-only": "cross-env NITRO_PRERENDER=false nuxt build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write ./",
-    "preview": "nuxt preview",
-    "cleanup": "nuxi cleanup",
-    "analyze": "nuxi analyze",
-    "typecheck": "nuxt typecheck",
-    "upgrade": "nuxt upgrade",
-    "generate": "nuxt generate",
-    "postinstall": "nuxt prepare",
-    "preinstall": "npx only-allow bun",
-    "check-updates": "bunx npm-check-updates",
-    "prepare": "husky"
-  },
   "trustedDependencies": [
     "esbuild",
     "protobufjs",
     "vue-demi"
-  ],
-  "type": "module"
+  ]
 }

@@ -57,10 +57,7 @@
           "Zhezhi"
         ]
       },
-      "role": {
-        "type": "string",
-        "enum": ["Main DPS", "Sub DPS", "Healer"]
-      }
+      "role": { "type": "string", "enum": ["Main DPS", "Sub DPS", "Healer"] }
     }
   }
 }

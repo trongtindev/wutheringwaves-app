@@ -7,9 +7,7 @@
   "autoImport": {
     "notificationTitle": "Đang nhập Lịch sử...",
     "notificationMessage": "Đang tìm nạp lịch sử tài khoản {0}.",
-    "done": {
-      "title": "Đã nhập thành công!"
-    }
+    "done": { "title": "Đã nhập thành công!" }
   },
   "banner": {
     "featuredResonator": "Nhân vật giới hạn",
@@ -56,9 +54,7 @@
   },
   "comments": {
     "empty": "Hãy để lại bình luận để tiếng nói của bạn được lắng nghe đầu tiên.",
-    "form": {
-      "submit": "Đăng bình luận"
-    },
+    "form": { "submit": "Đăng bình luận" },
     "replies": "Trả lời"
   },
   "commit": {
@@ -192,12 +188,8 @@
       "guides": {
         "android": {
           "default": {
-            "1": {
-              "title": "Thực hiện theo Video hướng dẫn"
-            },
-            "2": {
-              "title": "Dán văn bản đã sao chép vào đây"
-            }
+            "1": { "title": "Thực hiện theo Video hướng dẫn" },
+            "2": { "title": "Dán văn bản đã sao chép vào đây" }
           }
         },
         "pc": {
@@ -209,9 +201,7 @@
               "title": "Nhấn START trên bàn phím của bạn, sau đó tìm kiếm Powershell",
               "content": "Mở {windowsPowerShell} sau đó dán đoạn mã bên dưới và chạy nó (Dán đường dẫn của game nếu được hỏi)."
             },
-            "3": {
-              "title": "Dán Convene Record URL vào ô bên dưới."
-            }
+            "3": { "title": "Dán Convene Record URL vào ô bên dưới." }
           }
         }
       },
@@ -266,9 +256,7 @@
       "worth": "Worth",
       "chance": "Tỉ lệ"
     },
-    "share": {
-      "title": "Chia sẻ lịch sử"
-    }
+    "share": { "title": "Chia sẻ lịch sử" }
   },
   "desktopApp": {
     "title": "Ứng dụng máy tính",
@@ -283,9 +271,7 @@
       "3": "Nếu bạn muốn quyên góp, khoản quyên góp của bạn chắc chắn sẽ giúp cải thiện trang web và thúc đẩy tôi bổ sung thêm nhiều thứ hơn cho mình! Cảm ơn bạn rất nhiều và chúc bạn vui vẻ, hy vọng bạn thích nó!",
       "4": "If you like coding, you can also contributing to the project on Github."
     },
-    "buttons": {
-      "kofi": "Hỗ trợ tôi trên Ko-fi"
-    }
+    "buttons": { "kofi": "Hỗ trợ tôi trên Ko-fi" }
   },
   "echoes": {
     "title": "Echoes",
@@ -307,33 +293,20 @@
         "primary": "Chính",
         "secondary": "Phụ"
       },
-      "_title": {
-        "label": "Tiêu đề"
-      },
+      "_title": { "label": "Tiêu đề" },
       "description": {
         "label": "Miêu tả",
         "placeholder": "Provide a short description of the post."
       },
-      "seo": {
-        "keywords": {
-          "label": "Từ khoá"
-        }
-      },
-      "categories": {
-        "title": "Danh mục"
-      },
-      "options": {
-        "title": "Tùy chỉnh",
-        "schedule": "Schedule publish"
-      },
+      "seo": { "keywords": { "label": "Từ khoá" } },
+      "categories": { "title": "Danh mục" },
+      "options": { "title": "Tùy chỉnh", "schedule": "Schedule publish" },
       "update": "Save changes"
     },
     "related": "Các bài viết liên quan",
     "previous": "Bài đăng trước",
     "next": "Bài đăng tiếp theo",
-    "deleted": {
-      "title": "Bài đăng này đã bị xóa!"
-    }
+    "deleted": { "title": "Bài đăng này đã bị xóa!" }
   },
   "items": {
     "title": "Vật phẩm",
@@ -342,9 +315,7 @@
     "cookingIngredients": "Công thức nấu ăn",
     "obtainedFromConvenes": "{item} là Nguyên liệu kích hoạt Resonance Chain thu được từ <b>Triệu hồi</b> dùng để thăng cấp {character} Resonance Chain."
   },
-  "leaderboards": {
-    "title": "Bảng xếp hạng"
-  },
+  "leaderboards": { "title": "Bảng xếp hạng" },
   "map": {
     "title": "Bản đồ tương tác",
     "locations": {
@@ -458,9 +429,7 @@
   "meta": {
     "title": "Wuthering Waves",
     "description": "Theo dõi Pity, danh sách việc cần làm, cơ sở dữ liệu, phân tích và hơn thế nữa cho Wuthering Waves!",
-    "index": {
-      "title": "Your personal tracker"
-    },
+    "index": { "title": "Your personal tracker" },
     "timeline": {
       "title": "Event Schedule Timeline",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
@@ -499,9 +468,7 @@
         "title": "Thống kê triệu hồi toàn cầu",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       },
-      "share": {
-        "title": "Convene history card generator"
-      }
+      "share": { "title": "Convene history card generator" }
     },
     "todoList": {
       "description": "Wuthering Waves Todo List to plan and track items and mora you need, you can also see resin approximation needed to farm the items!"
@@ -528,12 +495,8 @@
         }
       }
     },
-    "settings": {
-      "title": "Cài đặt"
-    },
-    "guides": {
-      "title": "Hướng dẫn"
-    },
+    "settings": { "title": "Cài đặt" },
+    "guides": { "title": "Hướng dẫn" },
     "leaderboards": {
       "title": "Bảng xếp hạng",
       "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
@@ -633,12 +596,8 @@
     "push": "Push",
     "pull": "Pull"
   },
-  "teams": {
-    "title": "Đội hình"
-  },
-  "tierList": {
-    "title": "Tier list"
-  },
+  "teams": { "title": "Đội hình" },
+  "tierList": { "title": "Tier list" },
   "timeline": {
     "title": "Lịch hoạt động",
     "startsIn": "Bắt đầu {0}",
@@ -659,9 +618,7 @@
       "delete": "Delete"
     }
   },
-  "trophies": {
-    "title": "Trophies"
-  },
+  "trophies": { "title": "Trophies" },
   "updater": {
     "title": "Bản cập nhật mới!",
     "message": "Nhấn tải lại để nhận cập nhật mới",

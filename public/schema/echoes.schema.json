@@ -37,15 +37,9 @@
               ]
             }
           },
-          "hidden": {
-            "type": "boolean"
-          },
-          "publishedTime": {
-            "type": "string"
-          },
-          "modifiedTime": {
-            "type": "string"
-          }
+          "hidden": { "type": "boolean" },
+          "publishedTime": { "type": "string" },
+          "modifiedTime": { "type": "string" }
         },
         "required": [
           "id",

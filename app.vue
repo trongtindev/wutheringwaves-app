@@ -7,7 +7,7 @@ const i18nHead = useLocaleHead({
   identifierAttribute: 'default',
 });
 
-const { SITE_URL } = useRuntimeConfig().public;
+const { SITE_URL, SITE_NAME } = useRuntimeConfig().public;
 
 // seo meta
 useHead({
@@ -15,9 +15,7 @@ useHead({
     lang: i18nHead.value.htmlAttrs!.lang,
   },
   titleTemplate: (titleChunk) => {
-    return titleChunk
-      ? `${titleChunk} | Wuthering Waves`
-      : i18n.t('meta.title');
+    return titleChunk ? `${titleChunk} | ${SITE_NAME}` : i18n.t('meta.title');
   },
   link: [
     {

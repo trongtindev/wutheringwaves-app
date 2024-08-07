@@ -55,68 +55,29 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Void Thunder"]
-    },
-    {
-      "different": 88.7,
-      "items": ["Void Thunder", "Lingering Tunes"]
-    },
-    {
-      "different": 88.4,
-      "items": ["Void Thunder", "Moonlit Clouds"]
-    }
+    { "different": 100, "items": ["Void Thunder"] },
+    { "different": 88.7, "items": ["Void Thunder", "Lingering Tunes"] },
+    { "different": 88.4, "items": ["Void Thunder", "Moonlit Clouds"] }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit DMG", "Crit Rate"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG", "ATK%"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG", "ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Electro DMG", "ATK%"] },
+        { "cost": 3, "stats": ["Electro DMG", "ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     },
     {
       "type": "4-4-1-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate"]
-        },
-        {
-          "cost": 4,
-          "stats": ["Crit DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate"] },
+        { "cost": 4, "stats": ["Crit DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -130,52 +91,19 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["calcharo", "encore"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["yinlin"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
+        { "role": "Main DPS", "items": ["calcharo", "encore"] },
+        { "role": "Sub DPS", "items": ["yinlin"] },
+        { "role": "Healer", "items": ["verina", "baizhi"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "stringmaster",
-      "rank": 1,
-      "different": 117.2
-    },
-    {
-      "item": "cosmic-ripples",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "augment",
-      "rank": 1,
-      "different": 84.5
-    },
-    {
-      "item": "jinzhou-keeper",
-      "rank": 1,
-      "different": 83.3
-    },
-    {
-      "item": "rectifier-of-night",
-      "rank": 5,
-      "different": 75.8
-    },
-    {
-      "item": "guardian-rectifier",
-      "rank": 5,
-      "different": 73.6
-    }
+    { "item": "stringmaster", "rank": 1, "different": 117.2 },
+    { "item": "cosmic-ripples", "rank": 1, "different": 100 },
+    { "item": "augment", "rank": 1, "different": 84.5 },
+    { "item": "jinzhou-keeper", "rank": 1, "different": 83.3 },
+    { "item": "rectifier-of-night", "rank": 5, "different": 75.8 },
+    { "item": "guardian-rectifier", "rank": 5, "different": 73.6 }
   ],
   "birthday": "September 17th",
   "birthplace": "Huanglong",

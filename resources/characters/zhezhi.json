@@ -62,9 +62,5 @@
   "quoteLocalized": {
     "vi": "Điều tôi muốn nói là, ánh nắng trên bạn lúc này thật đẹp. Tôi có thể... vẽ bạn chứ?"
   },
-  "stats": {
-    "atk": 375,
-    "def": 1198,
-    "hp": 12250
-  }
+  "stats": { "atk": 375, "def": 1198, "hp": 12250 }
 }

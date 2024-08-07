@@ -1,3 +1,1 @@
-{
-  "$schema": "../../public/schema/character.schema.json"
-}
+{ "$schema": "../../public/schema/character.schema.json" }

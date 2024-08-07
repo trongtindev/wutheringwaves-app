@@ -5,9 +5,7 @@
       "id": 21010011,
       "slug": "training-broadblade",
       "name": "Training Broadblade",
-      "nameLocalized": {
-        "vi": "Training Broadblade"
-      },
+      "nameLocalized": { "vi": "Training Broadblade" },
       "type": "Broadblade",
       "rarity": 1,
       "upcoming": false,

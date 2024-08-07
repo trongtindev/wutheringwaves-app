@@ -10,18 +10,10 @@
     "stats": {
       "type": "object",
       "properties": {
-        "atk": {
-          "type": "number"
-        },
-        "def": {
-          "type": "number"
-        },
-        "hp": {
-          "type": "number"
-        },
-        "energy": {
-          "type": "number"
-        }
+        "atk": { "type": "number" },
+        "def": { "type": "number" },
+        "hp": { "type": "number" },
+        "energy": { "type": "number" }
       },
       "required": ["atk", "def", "hp", "energy"]
     },
@@ -30,9 +22,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "slug": {
-            "type": "string"
-          },
+          "slug": { "type": "string" },
           "type": {
             "type": "string",
             "enum": [
@@ -66,16 +56,12 @@
                   "type": "string",
                   "$ref": "./item.components.json#/components/schemas/slug"
                 },
-                "quantity": {
-                  "type": "integer"
-                }
+                "quantity": { "type": "integer" }
               },
               "required": ["item", "quantity"]
             }
           },
-          "minLevel": {
-            "type": "integer"
-          }
+          "minLevel": { "type": "integer" }
         },
         "required": ["cost", "minLevel"]
       }
@@ -88,12 +74,8 @@
           "item": {
             "$ref": "./weapon.components.json#/components/schemas/slug"
           },
-          "rank": {
-            "type": "integer"
-          },
-          "different": {
-            "type": "number"
-          }
+          "rank": { "type": "integer" },
+          "different": { "type": "number" }
         },
         "required": ["item", "rank", "different"]
       }
@@ -112,9 +94,7 @@
             "minItems": 1,
             "maxItems": 2
           },
-          "different": {
-            "type": "number"
-          }
+          "different": { "type": "number" }
         },
         "required": ["items", "different"]
       },
@@ -132,23 +112,14 @@
       "items": {
         "type": "object",
         "properties": {
-          "type": {
-            "type": "string",
-            "enum": ["4-3-3-1-1", "4-4-1-1-1"]
-          },
-          "name": {
-            "type": "string"
-          },
+          "type": { "type": "string", "enum": ["4-3-3-1-1", "4-4-1-1-1"] },
+          "name": { "type": "string" },
           "items": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "cost": {
-                  "type": "integer",
-                  "maximum": 4,
-                  "minimum": 1
-                },
+                "cost": { "type": "integer", "maximum": 4, "minimum": 1 },
                 "stats": {
                   "type": "array",
                   "items": {
@@ -186,9 +157,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": {
-            "type": "string"
-          },
+          "name": { "type": "string" },
           "items": {
             "type": "array",
             "items": {
@@ -215,16 +184,7 @@
       },
       "minItems": 1
     },
-    "splashArt": {
-      "anyOf": [
-        {
-          "type": "boolean"
-        },
-        {
-          "type": "string"
-        }
-      ]
-    }
+    "splashArt": { "anyOf": [{ "type": "boolean" }, { "type": "string" }] }
   },
   "title": "Character",
   "type": "object"

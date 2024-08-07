@@ -55,47 +55,20 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Celestial Light"]
-    },
-    {
-      "different": 92.1,
-      "items": ["Celestial Light", "Lingering Tunes"]
-    },
-    {
-      "different": 88.6,
-      "items": ["Celestial Light", "Moonlit Clouds"]
-    },
-    {
-      "different": 88.1,
-      "items": ["Lingering Tunes", "Moonlit Clouds"]
-    }
+    { "different": 100, "items": ["Celestial Light"] },
+    { "different": 92.1, "items": ["Celestial Light", "Lingering Tunes"] },
+    { "different": 88.6, "items": ["Celestial Light", "Moonlit Clouds"] },
+    { "different": 88.1, "items": ["Lingering Tunes", "Moonlit Clouds"] }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Crit DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Spectro DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Spectro DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate", "Crit DMG"] },
+        { "cost": 3, "stats": ["Spectro DMG"] },
+        { "cost": 3, "stats": ["Spectro DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -104,52 +77,19 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": []
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["rover-havoc"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina"]
-        }
+        { "role": "Main DPS", "items": [] },
+        { "role": "Sub DPS", "items": ["rover-havoc"] },
+        { "role": "Healer", "items": ["verina"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "emerald-of-genesis",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "commando-of-conviction",
-      "rank": 1,
-      "different": 80.5
-    },
-    {
-      "item": "lunar-cutter",
-      "rank": 1,
-      "different": 78.7
-    },
-    {
-      "item": "lumingloss",
-      "rank": 1,
-      "different": 76.1
-    },
-    {
-      "item": "sword-18",
-      "rank": 1,
-      "different": 76.1
-    },
-    {
-      "item": "sword-of-night",
-      "rank": 5,
-      "different": 71.9
-    }
+    { "item": "emerald-of-genesis", "rank": 1, "different": 100 },
+    { "item": "commando-of-conviction", "rank": 1, "different": 80.5 },
+    { "item": "lunar-cutter", "rank": 1, "different": 78.7 },
+    { "item": "lumingloss", "rank": 1, "different": 76.1 },
+    { "item": "sword-18", "rank": 1, "different": 76.1 },
+    { "item": "sword-of-night", "rank": 5, "different": 71.9 }
   ],
   "birthday": "Player's Choice",
   "birthplace": "Unknown",

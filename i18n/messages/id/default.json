@@ -7,9 +7,7 @@
   "autoImport": {
     "notificationTitle": "Mengimpor riwayat...",
     "notificationMessage": "Mengambil riwayat untuk akun {0}.",
-    "done": {
-      "title": "Impor berhasil!"
-    }
+    "done": { "title": "Impor berhasil!" }
   },
   "banner": {
     "featuredResonator": "Resonator unggulan",
@@ -56,9 +54,7 @@
   },
   "comments": {
     "empty": "Tinggalkan komentar agar suara Anda didengar terlebih dahulu.",
-    "form": {
-      "submit": "Kirim Komentar"
-    },
+    "form": { "submit": "Kirim Komentar" },
     "replies": "Replies"
   },
   "commit": {
@@ -192,12 +188,8 @@
       "guides": {
         "android": {
           "default": {
-            "1": {
-              "title": "Ikuti Video Tutorial kami"
-            },
-            "2": {
-              "title": "Tempel teks yang disalin di sini"
-            }
+            "1": { "title": "Ikuti Video Tutorial kami" },
+            "2": { "title": "Tempel teks yang disalin di sini" }
           }
         },
         "pc": {
@@ -266,9 +258,7 @@
       "worth": "Worth",
       "chance": "Chance"
     },
-    "share": {
-      "title": "Share history"
-    }
+    "share": { "title": "Share history" }
   },
   "desktopApp": {
     "title": "Desktop App",
@@ -283,9 +273,7 @@
       "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
       "4": "If you like coding, you can also contributing to the project on Github."
     },
-    "buttons": {
-      "kofi": "Dukung saya di Ko-fi"
-    }
+    "buttons": { "kofi": "Dukung saya di Ko-fi" }
   },
   "echoes": {
     "title": "Echoes",
@@ -307,33 +295,20 @@
         "primary": "Primary",
         "secondary": "Secondary"
       },
-      "_title": {
-        "label": "Title"
-      },
+      "_title": { "label": "Title" },
       "description": {
         "label": "Description",
         "placeholder": "Provide a short description of the post."
       },
-      "seo": {
-        "keywords": {
-          "label": "Keywords"
-        }
-      },
-      "categories": {
-        "title": "Categories"
-      },
-      "options": {
-        "title": "Options",
-        "schedule": "Schedule publish"
-      },
+      "seo": { "keywords": { "label": "Keywords" } },
+      "categories": { "title": "Categories" },
+      "options": { "title": "Options", "schedule": "Schedule publish" },
       "update": "Save changes"
     },
     "related": "Related Posts",
     "previous": "Previous Posts",
     "next": "Next Posts",
-    "deleted": {
-      "title": "This post has been deleted!"
-    }
+    "deleted": { "title": "This post has been deleted!" }
   },
   "items": {
     "title": "Items",
@@ -342,9 +317,7 @@
     "cookingIngredients": "Bahan Masakan",
     "obtainedFromConvenes": "{item} adalah Bahan Aktivasi Rantai Resonansi yang diperoleh dari <b>Berkumpul</b> yang digunakan untuk menaikkan level {character} Rantai Resonansi."
   },
-  "leaderboards": {
-    "title": "Papan peringkat"
-  },
+  "leaderboards": { "title": "Papan peringkat" },
   "map": {
     "title": "Peta Interaktif",
     "locations": {
@@ -458,9 +431,7 @@
   "meta": {
     "title": "Wuthering Waves",
     "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
-    "index": {
-      "title": "Your personal tracker"
-    },
+    "index": { "title": "Your personal tracker" },
     "timeline": {
       "title": "Event timeline calendar",
       "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
@@ -499,9 +470,7 @@
         "title": "Global Convene Stats",
         "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
       },
-      "share": {
-        "title": "Convene history card generator"
-      }
+      "share": { "title": "Convene history card generator" }
     },
     "todoList": {
       "description": "Daftar Todo Wuthering Waves untuk merencanakan dan melacak item dan mora yang Anda butuhkan, Anda juga dapat melihat perkiraan resin yang diperlukan untuk menanam item!"
@@ -528,12 +497,8 @@
         }
       }
     },
-    "settings": {
-      "title": "Pengaturan"
-    },
-    "guides": {
-      "title": "Game Guides"
-    },
+    "settings": { "title": "Pengaturan" },
+    "guides": { "title": "Game Guides" },
     "leaderboards": {
       "title": "Papan peringkat",
       "description": "Papan peringkat kerusakan Wuthering Waves, berbagi profil, generator kartu karakter, dan banyak lagi."
@@ -633,12 +598,8 @@
     "push": "Push",
     "pull": "Pull"
   },
-  "teams": {
-    "title": "Teams"
-  },
-  "tierList": {
-    "title": "Tier list"
-  },
+  "teams": { "title": "Teams" },
+  "tierList": { "title": "Tier list" },
   "timeline": {
     "title": "Timeline",
     "startsIn": "Starts {0}",
@@ -659,9 +620,7 @@
       "delete": "Delete"
     }
   },
-  "trophies": {
-    "title": "Trophies"
-  },
+  "trophies": { "title": "Trophies" },
   "updater": {
     "title": "Pembaruan baru!",
     "message": "Klik segarkan untuk mendapatkan pembaruan baru",

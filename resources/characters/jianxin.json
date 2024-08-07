@@ -54,51 +54,23 @@
       "minLevel": 80
     }
   ],
-  "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Rejuvenating Glow"]
-    }
-  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Rejuvenating Glow"] }],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Crit DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Aero DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Aero DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate", "Crit DMG"] },
+        { "cost": 3, "stats": ["Aero DMG"] },
+        { "cost": 3, "stats": ["Aero DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
   "bestMainEchoes": ["bell-borne-geochelone"],
   "bestWeapons": [
-    {
-      "different": 100,
-      "item": "marcato",
-      "rank": 1
-    },
-    {
-      "different": 100,
-      "item": "originite-type-iv",
-      "rank": 5
-    }
+    { "different": 100, "item": "marcato", "rank": 1 },
+    { "different": 100, "item": "originite-type-iv", "rank": 5 }
   ],
   "birthday": "April 6th",
   "birthplace": "Huanglong",

@@ -23,12 +23,8 @@
           },
           "name": { "type": "string" },
           "nameLocalized": { "type": "object" },
-          "publishedTime": {
-            "type": "string"
-          },
-          "modifiedTime": {
-            "type": "string"
-          }
+          "publishedTime": { "type": "string" },
+          "modifiedTime": { "type": "string" }
         },
         "required": [
           "id",

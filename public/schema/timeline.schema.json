@@ -8,39 +8,23 @@
         "items": {
           "type": "object",
           "properties": {
-            "url": {
-              "type": "string"
-            },
-            "officialUrl": {
-              "type": "string"
-            },
+            "url": { "type": "string" },
+            "officialUrl": { "type": "string" },
             "time": {
               "type": "object",
               "properties": {
-                "start": {
-                  "type": "string"
-                },
-                "end": {
-                  "type": "string"
-                }
+                "start": { "type": "string" },
+                "end": { "type": "string" }
               },
               "required": ["start", "end"]
             },
-            "name": {
-              "type": "string"
-            },
+            "name": { "type": "string" },
             "nameLocalized": { "type": "object" },
-            "description": {
-              "type": "string"
-            },
+            "description": { "type": "string" },
             "descriptionLocalized": { "type": "object" },
-            "thumbnail": {
-              "type": "string"
-            },
+            "thumbnail": { "type": "string" },
             "thumbnailLocalized": { "type": "object" },
-            "color": {
-              "type": "string"
-            }
+            "color": { "type": "string" }
           },
           "required": ["time", "name", "color"]
         }

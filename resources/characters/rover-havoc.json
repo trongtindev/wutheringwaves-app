@@ -55,68 +55,29 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Sun-sinking Eclipse"]
-    },
-    {
-      "different": 91.3,
-      "items": ["Sun-sinking Eclipse", "Lingering Tunes"]
-    },
-    {
-      "different": 87.8,
-      "items": ["Sun-sinking Eclipse", "Moonlit Clouds"]
-    }
+    { "different": 100, "items": ["Sun-sinking Eclipse"] },
+    { "different": 91.3, "items": ["Sun-sinking Eclipse", "Lingering Tunes"] },
+    { "different": 87.8, "items": ["Sun-sinking Eclipse", "Moonlit Clouds"] }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit DMG", "Crit Rate"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Havoc DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Havoc DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Havoc DMG"] },
+        { "cost": 3, "stats": ["Havoc DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     },
     {
       "type": "4-4-1-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate"]
-        },
-        {
-          "cost": 4,
-          "stats": ["Crit DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate"] },
+        { "cost": 4, "stats": ["Crit DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -125,52 +86,19 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["rover-havoc"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["sanhua", "danjin"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
+        { "role": "Main DPS", "items": ["rover-havoc"] },
+        { "role": "Sub DPS", "items": ["sanhua", "danjin"] },
+        { "role": "Healer", "items": ["verina", "baizhi"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "emerald-of-genesis",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "commando-of-conviction",
-      "rank": 1,
-      "different": 82.4
-    },
-    {
-      "item": "lumingloss",
-      "rank": 1,
-      "different": 80
-    },
-    {
-      "item": "lunar-cutter",
-      "rank": 1,
-      "different": 79.5
-    },
-    {
-      "item": "sword-18",
-      "rank": 1,
-      "different": 77.9
-    },
-    {
-      "item": "sword-of-night",
-      "rank": 1,
-      "different": 71.6
-    }
+    { "item": "emerald-of-genesis", "rank": 1, "different": 100 },
+    { "item": "commando-of-conviction", "rank": 1, "different": 82.4 },
+    { "item": "lumingloss", "rank": 1, "different": 80 },
+    { "item": "lunar-cutter", "rank": 1, "different": 79.5 },
+    { "item": "sword-18", "rank": 1, "different": 77.9 },
+    { "item": "sword-of-night", "rank": 1, "different": 71.6 }
   ],
   "birthday": "Player's Choice",
   "birthplace": "Unknown",

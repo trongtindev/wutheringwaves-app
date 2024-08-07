@@ -55,51 +55,21 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "different": 100,
-      "items": ["Void Thunder"]
-    },
-    {
-      "different": 95,
-      "items": ["Void Thunder", "Lingering Tunes"]
-    },
-    {
-      "different": 95,
-      "items": ["Lingering Tunes"]
-    },
-    {
-      "different": 94.5,
-      "items": ["Void Thunder", "Moonlit Clouds"]
-    },
-    {
-      "different": 93,
-      "items": ["Lingering Tunes", "Moonlit Clouds"]
-    }
+    { "different": 100, "items": ["Void Thunder"] },
+    { "different": 95, "items": ["Void Thunder", "Lingering Tunes"] },
+    { "different": 95, "items": ["Lingering Tunes"] },
+    { "different": 94.5, "items": ["Void Thunder", "Moonlit Clouds"] },
+    { "different": 93, "items": ["Lingering Tunes", "Moonlit Clouds"] }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate", "Crit DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Electro DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate", "Crit DMG"] },
+        { "cost": 3, "stats": ["Electro DMG"] },
+        { "cost": 3, "stats": ["Electro DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -113,57 +83,20 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["calcharo"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["yinlin", "sanhua", "jianxin"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina", "baizhi"]
-        }
+        { "role": "Main DPS", "items": ["calcharo"] },
+        { "role": "Sub DPS", "items": ["yinlin", "sanhua", "jianxin"] },
+        { "role": "Healer", "items": ["verina", "baizhi"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "lustrous-razor",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "verdant-summit",
-      "rank": 1,
-      "different": 96.6
-    },
-    {
-      "item": "autumntrace",
-      "rank": 1,
-      "different": 82.8
-    },
-    {
-      "item": "helios-cleaver",
-      "rank": 1,
-      "different": 78.7
-    },
-    {
-      "item": "broadblade-41",
-      "rank": 1,
-      "different": 76.5
-    },
-    {
-      "item": "broadblade-of-night",
-      "rank": 5,
-      "different": 71.8
-    },
-    {
-      "item": "guardian-broadblade",
-      "rank": 5,
-      "different": 70.2
-    }
+    { "item": "lustrous-razor", "rank": 1, "different": 100 },
+    { "item": "verdant-summit", "rank": 1, "different": 96.6 },
+    { "item": "autumntrace", "rank": 1, "different": 82.8 },
+    { "item": "helios-cleaver", "rank": 1, "different": 78.7 },
+    { "item": "broadblade-41", "rank": 1, "different": 76.5 },
+    { "item": "broadblade-of-night", "rank": 5, "different": 71.8 },
+    { "item": "guardian-broadblade", "rank": 5, "different": 70.2 }
   ],
   "birthday": "July 8th",
   "birthplace": "New Federation",

@@ -3,99 +3,48 @@
   "ascensions": [
     {
       "cost": [
-        {
-          "item": 41100021,
-          "quantity": 6
-        },
-        {
-          "item": 2,
-          "quantity": 10000
-        }
+        { "item": 41100021, "quantity": 6 },
+        { "item": 2, "quantity": 10000 }
       ],
       "minLevel": 20
     },
     {
       "cost": [
-        {
-          "item": 43020011,
-          "quantity": 6
-        },
-        {
-          "item": 41100022,
-          "quantity": 6
-        },
-        {
-          "item": 2,
-          "quantity": 20000
-        }
+        { "item": 43020011, "quantity": 6 },
+        { "item": 41100022, "quantity": 6 },
+        { "item": 2, "quantity": 20000 }
       ],
       "minLevel": 40
     },
     {
       "cost": [
-        {
-          "item": 43020012,
-          "quantity": 8
-        },
-        {
-          "item": 41100023,
-          "quantity": 4
-        },
-        {
-          "item": 2,
-          "quantity": 40000
-        }
+        { "item": 43020012, "quantity": 8 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 40000 }
       ],
       "minLevel": 50
     },
     {
       "cost": [
-        {
-          "item": 43020013,
-          "quantity": 6
-        },
-        {
-          "item": 41100023,
-          "quantity": 6
-        },
-        {
-          "item": 2,
-          "quantity": 60000
-        }
+        { "item": 43020013, "quantity": 6 },
+        { "item": 41100023, "quantity": 6 },
+        { "item": 2, "quantity": 60000 }
       ],
       "minLevel": 60
     },
     {
       "cost": [
-        {
-          "item": 43020014,
-          "quantity": 8
-        },
-        {
-          "item": 41100024,
-          "quantity": 4
-        },
-        {
-          "item": 2,
-          "quantity": 80000
-        }
+        { "item": 43020014, "quantity": 8 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
       ],
       "minLevel": 70
     },
     {
       "cost": [
-        {
-          "item": 43020014,
-          "quantity": 12
-        },
-        {
-          "item": 41100024,
-          "quantity": 8
-        },
-        {
-          "item": 2,
-          "quantity": 120000
-        }
+        { "item": 43020014, "quantity": 12 },
+        { "item": 41100024, "quantity": 8 },
+        { "item": 2, "quantity": 120000 }
       ],
       "minLevel": 80
     }

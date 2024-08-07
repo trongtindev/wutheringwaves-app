@@ -55,68 +55,29 @@
     }
   ],
   "bestEchoSets": [
-    {
-      "items": ["Celestial Light"],
-      "different": 100
-    },
-    {
-      "items": ["Celestial Light", "Lingering Tunes"],
-      "different": 91.2
-    },
-    {
-      "items": ["Celestial Light", "Moonlit Clouds"],
-      "different": 90.8
-    }
+    { "items": ["Celestial Light"], "different": 100 },
+    { "items": ["Celestial Light", "Lingering Tunes"], "different": 91.2 },
+    { "items": ["Celestial Light", "Moonlit Clouds"], "different": 90.8 }
   ],
   "bestEchoStats": [
     {
       "type": "4-3-3-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit DMG", "Crit Rate"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Spectro DMG", "ATK%"]
-        },
-        {
-          "cost": 3,
-          "stats": ["Spectro DMG", "ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Spectro DMG", "ATK%"] },
+        { "cost": 3, "stats": ["Spectro DMG", "ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     },
     {
       "type": "4-4-1-1-1",
       "items": [
-        {
-          "cost": 4,
-          "stats": ["Crit Rate"]
-        },
-        {
-          "cost": 4,
-          "stats": ["Crit DMG"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        },
-        {
-          "cost": 1,
-          "stats": ["ATK%"]
-        }
+        { "cost": 4, "stats": ["Crit Rate"] },
+        { "cost": 4, "stats": ["Crit DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
       ]
     }
   ],
@@ -125,67 +86,22 @@
     {
       "name": "#1",
       "items": [
-        {
-          "role": "Main DPS",
-          "items": ["jinhsi"]
-        },
-        {
-          "role": "Sub DPS",
-          "items": ["yinlin", "mortefi", "yuanwu"]
-        },
-        {
-          "role": "Healer",
-          "items": ["verina"]
-        }
+        { "role": "Main DPS", "items": ["jinhsi"] },
+        { "role": "Sub DPS", "items": ["yinlin", "mortefi", "yuanwu"] },
+        { "role": "Healer", "items": ["verina"] }
       ]
     }
   ],
   "bestWeapons": [
-    {
-      "item": "ages-of-harvest",
-      "rank": 1,
-      "different": 118.1
-    },
-    {
-      "item": "verdant-summit",
-      "rank": 1,
-      "different": 101.3
-    },
-    {
-      "item": "lustrous-razor",
-      "rank": 1,
-      "different": 100
-    },
-    {
-      "item": "broadblade-41",
-      "rank": 1,
-      "different": 85.8
-    },
-    {
-      "item": "helios-cleaver",
-      "rank": 1,
-      "different": 82
-    },
-    {
-      "item": "broadblade-41",
-      "rank": 1,
-      "different": 81.9
-    },
-    {
-      "item": "autumntrace",
-      "rank": 1,
-      "different": 79.8
-    },
-    {
-      "item": "broadblade-of-night",
-      "rank": 5,
-      "different": 75.3
-    },
-    {
-      "item": "guardian-broadblade",
-      "rank": 5,
-      "different": 70.3
-    }
+    { "item": "ages-of-harvest", "rank": 1, "different": 118.1 },
+    { "item": "verdant-summit", "rank": 1, "different": 101.3 },
+    { "item": "lustrous-razor", "rank": 1, "different": 100 },
+    { "item": "broadblade-41", "rank": 1, "different": 85.8 },
+    { "item": "helios-cleaver", "rank": 1, "different": 82 },
+    { "item": "broadblade-41", "rank": 1, "different": 81.9 },
+    { "item": "autumntrace", "rank": 1, "different": 79.8 },
+    { "item": "broadblade-of-night", "rank": 5, "different": 75.3 },
+    { "item": "guardian-broadblade", "rank": 5, "different": 70.3 }
   ],
   "birthday": "None",
   "birthplace": "Huanglong",

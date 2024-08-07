@@ -7,9 +7,7 @@
   "autoImport": {
     "notificationTitle": "กำลังนำเข้าประวัติ...",
     "notificationMessage": "กำลังดึงประวัติสำหรับบัญชี {0}",
-    "done": {
-      "title": "นำเข้าสำเร็จ!"
-    }
+    "done": { "title": "นำเข้าสำเร็จ!" }
   },
   "banner": {
     "featuredResonator": "Featured resonator",
@@ -56,9 +54,7 @@
   },
   "comments": {
     "empty": "แสดงความคิดเห็นเพื่อให้เสียงของคุณได้ยินก่อน",
-    "form": {
-      "submit": "เขียนความคิดเห็น"
-    },
+    "form": { "submit": "เขียนความคิดเห็น" },
     "replies": "ตอบกลับ"
   },
   "commit": {
@@ -192,12 +188,8 @@
       "guides": {
         "android": {
           "default": {
-            "1": {
-              "title": "ปฏิบัติตามวิดีโอสอนของเรา"
-            },
-            "2": {
-              "title": "วางข้อความที่คัดลอกไว้ที่นี่"
-            }
+            "1": { "title": "ปฏิบัติตามวิดีโอสอนของเรา" },
+            "2": { "title": "วางข้อความที่คัดลอกไว้ที่นี่" }
           }
         },
         "pc": {
@@ -209,9 +201,7 @@
               "title": "กด START บนแป้นพิมพ์ของคุณ จากนั้นค้นหา Powershell",
               "content": "เปิด {windowsPowerShell} และเรียกใช้คำสั่งต่อไปนี้ (วางเส้นทางเกมของคุณหากถูกถาม)"
             },
-            "3": {
-              "title": "วาง URL บันทึกการประชุมลงในช่องด้านล่าง"
-            }
+            "3": { "title": "วาง URL บันทึกการประชุมลงในช่องด้านล่าง" }
           }
         }
       },
@@ -266,9 +256,7 @@
       "worth": "Worth",
       "chance": "Chance"
     },
-    "share": {
-      "title": "แบ่งปันประวัติ"
-    }
+    "share": { "title": "แบ่งปันประวัติ" }
   },
   "desktopApp": {
     "title": "แอปป์บนเดสก์ท็อป",
@@ -283,9 +271,7 @@
       "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
       "4": "If you like coding, you can also contributing to the project on Github."
     },
-    "buttons": {
-      "kofi": "Support me on Ko-fi"
-    }
+    "buttons": { "kofi": "Support me on Ko-fi" }
   },
   "echoes": {
     "title": "Echoes",
@@ -307,33 +293,20 @@
         "primary": "Primary",
         "secondary": "Secondary"
       },
-      "_title": {
-        "label": "Title"
-      },
+      "_title": { "label": "Title" },
       "description": {
         "label": "Description",
         "placeholder": "Provide a short description of the post."
       },
-      "seo": {
-        "keywords": {
-          "label": "Keywords"
-        }
-      },
-      "categories": {
-        "title": "Categories"
-      },
-      "options": {
-        "title": "Options",
-        "schedule": "Schedule publish"
-      },
+      "seo": { "keywords": { "label": "Keywords" } },
+      "categories": { "title": "Categories" },
+      "options": { "title": "Options", "schedule": "Schedule publish" },
       "update": "Save changes"
     },
     "related": "Related Posts",
     "previous": "Previous Posts",
     "next": "Next Posts",
-    "deleted": {
-      "title": "This post has been deleted!"
-    }
+    "deleted": { "title": "This post has been deleted!" }
   },
   "items": {
     "title": "Items",
@@ -342,9 +315,7 @@
     "cookingIngredients": "ส่วนผสมในการทำอาหาร",
     "obtainedFromConvenes": "{item} เป็นวัสดุเปิดใช้งาน Resonance Chain ที่ได้รับจาก <b>Convenes</b> ใช้เพื่อปรับระดับ {character} Resonance Chain"
   },
-  "leaderboards": {
-    "title": "ลีดเดอร์บอร์ด"
-  },
+  "leaderboards": { "title": "ลีดเดอร์บอร์ด" },
   "map": {
     "title": "แผนที่เชิงโต้ตอบ",
     "locations": {
@@ -458,9 +429,7 @@
   "meta": {
     "title": "Wuthering Waves",
     "description": "ตัวติดตามที่น่าสงสาร รายการสิ่งที่ต้องทำ ฐานข้อมูล การวิเคราะห์ สถิติทั่วโลก และอีกมากมายสำหรับ Wuthering Waves!",
-    "index": {
-      "title": "Your personal tracker"
-    },
+    "index": { "title": "Your personal tracker" },
     "timeline": {
       "title": "Event timeline calendar",
       "description": "ปฏิทินไทม์ไลน์ของกิจกรรม Wuthering Waves ดูเมื่อลำดับกิจกรรมจะเริ่มและสิ้นสุดด้วยไทม์ไลน์ที่เรียบร้อย"
@@ -499,9 +468,7 @@
         "title": "สถิติการประชุมทั่วโลก",
         "description": "Wuthering Waves Convene เปอร์เซ็นต์ความสงสารโดยเฉลี่ยทั่วโลกจากผู้ใช้ wutheringwaves.app"
       },
-      "share": {
-        "title": "Convene history card generator"
-      }
+      "share": { "title": "Convene history card generator" }
     },
     "todoList": {
       "description": "รายการสิ่งที่ต้องทำของ Wuthering Waves เพื่อวางแผนและติดตามไอเท็มและโมราที่คุณต้องการ คุณยังสามารถดูการประมาณเรซินที่จำเป็นในการทำฟาร์มไอเท็มได้!"
@@ -528,12 +495,8 @@
         }
       }
     },
-    "settings": {
-      "title": "การตั้งค่า"
-    },
-    "guides": {
-      "title": "คำแนะนำ"
-    },
+    "settings": { "title": "การตั้งค่า" },
+    "guides": { "title": "คำแนะนำ" },
     "leaderboards": {
       "title": "กระดานผู้นำ",
       "description": "กระดานจัดอันดับความเสียหายของ Wuthering Waves การแชร์โปรไฟล์ การสร้างการ์ดตัวละคร และอีกมากมาย"
@@ -633,12 +596,8 @@
     "push": "Push",
     "pull": "Pull"
   },
-  "teams": {
-    "title": "ทีม"
-  },
-  "tierList": {
-    "title": "เทียร์ลิสต์"
-  },
+  "teams": { "title": "ทีม" },
+  "tierList": { "title": "เทียร์ลิสต์" },
   "timeline": {
     "title": "ไทม์ไลน์",
     "startsIn": "เริ่ม {0}",
@@ -659,9 +618,7 @@
       "delete": "Delete"
     }
   },
-  "trophies": {
-    "title": "Trophies"
-  },
+  "trophies": { "title": "Trophies" },
   "updater": {
     "title": "อัพเดทใหม่!",
     "message": "คลิกรีเฟรชเพื่อรับการอัปเดตใหม่",

@@ -10,20 +10,14 @@
             "type": "string",
             "enum": ["self", "characters", "markers"]
           },
-          "name": {
-            "type": "string"
-          },
+          "name": { "type": "string" },
           "items": {
             "type": "array",
             "items": {
               "type": "string",
               "anyOf": [
-                {
-                  "$ref": "./item.components.json#/components/schemas/slug"
-                },
-                {
-                  "type": "string"
-                }
+                { "$ref": "./item.components.json#/components/schemas/slug" },
+                { "type": "string" }
               ]
             }
           }

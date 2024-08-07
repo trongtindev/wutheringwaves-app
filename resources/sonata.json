@@ -5,109 +5,64 @@
       "slug": "freezing-frost",
       "name": "Freezing Frost",
       "icon": "/sonata-effects/freezing-frost.webp",
-      "colors": {
-        "background": "#132d40",
-        "border": "#42b2ff"
-      },
-      "twoPieceEffect": {
-        "type": "Glacio DMG"
-      }
+      "colors": { "background": "#132d40", "border": "#42b2ff" },
+      "twoPieceEffect": { "type": "Glacio DMG" }
     },
     {
       "slug": "molten-rift",
       "name": "Molten Rift",
       "icon": "/sonata-effects/molten-rift.webp",
-      "colors": {
-        "background": "#371d17",
-        "border": "#f5764f"
-      },
-      "twoPieceEffect": {
-        "type": "Fusion DMG"
-      }
+      "colors": { "background": "#371d17", "border": "#f5764f" },
+      "twoPieceEffect": { "type": "Fusion DMG" }
     },
     {
       "slug": "void-thunder",
       "name": "Void Thunder",
       "icon": "/sonata-effects/void-thunder.webp",
-      "colors": {
-        "background": "#2b1c3e",
-        "border": "#b66cff"
-      },
-      "twoPieceEffect": {
-        "type": "Electro DMG"
-      }
+      "colors": { "background": "#2b1c3e", "border": "#b66cff" },
+      "twoPieceEffect": { "type": "Electro DMG" }
     },
     {
       "slug": "sierra-gale",
       "name": "Sierra Gale",
       "icon": "/sonata-effects/sierra-gale.webp",
-      "colors": {
-        "background": "#173d2f",
-        "border": "#56ffb7"
-      },
-      "twoPieceEffect": {
-        "type": "Aero DMG"
-      }
+      "colors": { "background": "#173d2f", "border": "#56ffb7" },
+      "twoPieceEffect": { "type": "Aero DMG" }
     },
     {
       "slug": "celestial-light",
       "name": "Celestial Light",
       "icon": "/sonata-effects/celestial-light.webp",
-      "colors": {
-        "background": "#3d3a22",
-        "border": "#f7e46b"
-      },
-      "twoPieceEffect": {
-        "type": "Spectro DMG"
-      }
+      "colors": { "background": "#3d3a22", "border": "#f7e46b" },
+      "twoPieceEffect": { "type": "Spectro DMG" }
     },
     {
       "slug": "sun-sinking-eclipse",
       "name": "Sun-sinking Eclipse",
       "icon": "/sonata-effects/sun-sinking-eclipse.webp",
-      "colors": {
-        "background": "#352a36",
-        "border": "#cc8db5"
-      },
-      "twoPieceEffect": {
-        "type": "Havoc DMG"
-      }
+      "colors": { "background": "#352a36", "border": "#cc8db5" },
+      "twoPieceEffect": { "type": "Havoc DMG" }
     },
     {
       "slug": "rejuvenating-glow",
       "name": "Rejuvenating Glow",
       "icon": "/sonata-effects/rejuvenating-glow.webp",
-      "colors": {
-        "background": "#2b3a17",
-        "border": "#87bd29"
-      },
-      "twoPieceEffect": {
-        "type": "Healing Bonus"
-      }
+      "colors": { "background": "#2b3a17", "border": "#87bd29" },
+      "twoPieceEffect": { "type": "Healing Bonus" }
     },
     {
       "slug": "moonlit-clouds",
       "name": "Moonlit Clouds",
       "icon": "/sonata-effects/moonlit-clouds.webp",
-      "colors": {
-        "background": "#47484c",
-        "border": "#fff"
-      },
-      "twoPieceEffect": {
-        "type": "Energy Regen"
-      }
+      "colors": { "background": "#47484c", "border": "#fff" },
+      "twoPieceEffect": { "type": "Energy Regen" }
     },
     {
       "slug": "lingering-tunes",
       "name": "Lingering Tunes",
       "icon": "/sonata-effects/lingering-tunes.webp",
-      "colors": {
-        "background": "#3c1b1d",
-        "border": "#ca2c25"
-      },
-      "twoPieceEffect": {
-        "type": "ATK%"
-      }
+      "colors": { "background": "#3c1b1d", "border": "#ca2c25" },
+      "twoPieceEffect": { "type": "ATK%" }
     }
   ]
 }

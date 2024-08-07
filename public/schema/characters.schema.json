@@ -13,34 +13,13 @@
             "type": "object",
             "properties": {
               "icon": {
-                "anyOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "boolean"
-                  }
-                ]
+                "anyOf": [{ "type": "string" }, { "type": "boolean" }]
               },
               "cover": {
-                "anyOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "boolean"
-                  }
-                ]
+                "anyOf": [{ "type": "string" }, { "type": "boolean" }]
               },
               "portrait": {
-                "anyOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "boolean"
-                  }
-                ]
+                "anyOf": [{ "type": "string" }, { "type": "boolean" }]
               }
             }
           },
@@ -55,21 +34,10 @@
             "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
           },
           "version": { "type": "number" },
-          "suggestedEchos": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "hidden": {
-            "type": "boolean"
-          },
-          "publishedTime": {
-            "type": "string"
-          },
-          "modifiedTime": {
-            "type": "string"
-          }
+          "suggestedEchos": { "type": "array", "items": { "type": "string" } },
+          "hidden": { "type": "boolean" },
+          "publishedTime": { "type": "string" },
+          "modifiedTime": { "type": "string" }
         },
         "required": [
           "id",

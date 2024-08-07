@@ -28,6 +28,7 @@ const emitChanged = () => {
     ...props.data,
     name: nameLocalized.value['en'],
     nameLocalized: nameLocalized.value,
+    descriptionLocalized: descriptionLocalized.value,
   });
 };
 </script>
