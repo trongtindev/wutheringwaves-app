@@ -13,26 +13,17 @@
         "atk": {
           "type": "number"
         },
-        "atkStep": {
-          "type": "number"
-        },
         "def": {
           "type": "number"
         },
-        "defStep": {
-          "type": "number"
-        },
         "hp": {
-          "type": "number"
-        },
-        "hpStep": {
           "type": "number"
         },
         "energy": {
           "type": "number"
         }
       },
-      "required": ["atk", "atkStep", "def", "defStep", "hp", "hpStep", "energy"]
+      "required": ["atk", "def", "hp", "energy"]
     },
     "skills": {
       "type": "array",

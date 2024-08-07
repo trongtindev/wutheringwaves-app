@@ -41,13 +41,7 @@ const localesMetadata: LocaleObject[] = [
   { name: 'Indonesia', code: 'id', iso: 'id', files: ['id/default.json'] },
   { name: '日本語', code: 'ja', iso: 'ja', files: ['ja/default.json'] },
   { name: '한국어', code: 'ko', iso: 'ko', files: ['ko/default.json'] },
-  {
-    name: 'ภาษาไทย',
-    code: 'th',
-    iso: 'th',
-    rtl: true,
-    files: ['th/default.json'],
-  },
+  { name: 'ภาษาไทย', code: 'th', iso: 'th', files: ['th/default.json'] },
   { name: 'Türkçe', code: 'tr', iso: 'tr', files: ['tr/default.json'] },
   { name: 'Tiếng Việt', code: 'vi', iso: 'vi', files: ['vi/default.json'] },
   { name: 'Ukrainian', code: 'uk', iso: 'uk', files: ['uk/default.json'] },
@@ -60,10 +54,6 @@ export default defineNuxtConfig({
     devtools: { enabled: false },
     typescript: {
       strict: true,
-      typeCheck: true,
-    },
-    eslint: {
-      checker: true,
     },
   },
 

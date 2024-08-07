@@ -246,5 +246,5 @@
       "description": "Yuanwu unleashes thunderbolts in an area centered around the skill target, weakening the Vibration Strength of enemies upon impact."
     }
   ],
-  "stats": { "hp": 8525, "def": 1638, "atk": 225, "energy": 125 }
+  "stats": { "hp": 682, "def": 134, "atk": 18, "energy": 125 }
 }

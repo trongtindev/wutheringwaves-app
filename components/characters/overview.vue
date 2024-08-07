@@ -3,6 +3,7 @@ import type { ICharacter, ICharacterData } from '~/interfaces/character';
 
 const props = defineProps<{
   item: ICharacter;
+  nameLocalized: string;
   data: ICharacterData;
 }>();
 </script>
@@ -11,7 +12,7 @@ const props = defineProps<{
   <!-- Resonance Chain -->
   <div class="mt-2">
     <h2 class="text-h6 mb-2">
-      {{ props.item.name }} {{ $t('characters.resonanceChain') }}
+      {{ nameLocalized }} {{ $t('characters.resonanceChain') }}
     </h2>
 
     <div v-if="data.resonanceChain">
@@ -32,7 +33,7 @@ const props = defineProps<{
   <!-- Skills -->
   <div class="mt-2">
     <h2 class="text-h6 mb-2">
-      {{ props.item.name }} {{ $t('characters.skills') }}
+      {{ nameLocalized }} {{ $t('characters.skills') }}
     </h2>
 
     <masonry v-if="data.skills">

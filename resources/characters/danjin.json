@@ -54,6 +54,33 @@
       "minLevel": 80
     }
   ],
+  "bestWeapons": [
+    {
+      "item": "emerald-of-genesis",
+      "rank": 1,
+      "different": 100
+    },
+    {
+      "item": "commando-of-conviction",
+      "rank": 1,
+      "different": 79.5
+    },
+    {
+      "item": "lumingloss",
+      "rank": 1,
+      "different": 77.5
+    },
+    {
+      "item": "lunar-cutter",
+      "rank": 1,
+      "different": 76.9
+    },
+    {
+      "item": "sword-18",
+      "rank": 1,
+      "different": 76.9
+    }
+  ],
   "birthday": "August 31st",
   "birthplace": "Huanglong",
   "description": "With a vengeful blade of condensed blood in hand, Ranger Danjin hunts down thieves and bandits for retribution. \nShe journeys to distant lands in pursuit of justice.",
@@ -246,5 +273,5 @@
       "description": ""
     }
   ],
-  "stats": { "hp": 9438, "def": 263, "atk": 1149, "energy": 100 }
+  "stats": { "hp": 755, "def": 94, "atk": 21, "energy": 100 }
 }

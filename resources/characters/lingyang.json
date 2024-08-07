@@ -246,5 +246,5 @@
       "description": "Lingyang releases a shock wave centered on the skill target, dealing <strong class=\"color-glacio\">Glacio DMG</strong> equal to <strong class=\"color-glacio\">587.94%</strong> of Lingyang's ATK to targets within the range."
     }
   ],
-  "stats": { "hp": 10388, "def": 1210, "atk": 438, "energy": 125 }
+  "stats": { "hp": 831, "def": 99, "atk": 35, "energy": 125 }
 }

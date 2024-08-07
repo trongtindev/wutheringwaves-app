@@ -17,7 +17,12 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 
 <template>
   <div>
-    <calculator-builder />
+    <client-only>
+      <template #fallback>
+        {{ $t('common.loading') }}
+      </template>
+      <calculator-builder />
+    </client-only>
 
     <roles-required :roles="['Owner', 'Moderator']" type="any" />
   </div>

@@ -6,18 +6,24 @@ import {
   mdiMenuOpen,
   mdiThemeLightDark,
 } from '@mdi/js';
-import { useTheme } from 'vuetify';
+import dayjs from 'dayjs';
+import { useTheme, useLocale } from 'vuetify';
 
 // define
 const { SITE_NAME } = useRuntimeConfig().public;
 
 // uses
+const i18n = useI18n();
 const appBar = useAppBar();
 const sidebar = useSidebar();
 const localePath = useLocalePath();
 const search = useSearch();
 const theme = useTheme();
 const analytics = useAnalytics();
+const vuetifyLocale = useLocale();
+
+dayjs.locale(i18n.locale.value);
+vuetifyLocale.current.value = i18n.locale.value;
 
 // events
 const onPressedToggleTheme = () => {

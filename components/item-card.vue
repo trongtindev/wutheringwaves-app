@@ -2,30 +2,35 @@
 import type { IItem } from '~/interfaces/item';
 
 // define
-defineProps<{
+const props = defineProps<{
   item: IItem;
 }>();
 
 // uses
+const { locale } = useI18n();
 const localePath = useLocalePath();
+
+// statics
+const nameLocalized = (() => {
+  return props.item.nameLocalized[locale.value] || props.item.name;
+})();
 </script>
 
 <template>
   <v-card :to="localePath(`/items/${item.slug}`)">
-    <v-responsive
+    <v-img
       :aspect-ratio="1 / 1"
-      :style="`background-color: var(${item.rarity === 4 ? '--rarity-purple' : '--rarity-yellow'});`"
-    >
-      <v-img
-        :src="`/items/icons/${item.slug}.webp`"
-        :alt="$t(item.name)"
-        class="align-end h-100"
-        cover
-      />
-    </v-responsive>
+      :src="`/items/icons/${item.slug}.webp`"
+      :alt="nameLocalized"
+      cover
+    />
 
-    <v-card-title class="text-center" tag="h2">
-      {{ $t(item.name) }}
+    <v-card-title
+      :class="`text-rarity${item.rarity}`"
+      class="text-center"
+      tag="h2"
+    >
+      {{ nameLocalized }}
     </v-card-title>
   </v-card>
 </template>

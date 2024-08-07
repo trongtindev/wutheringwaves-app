@@ -21,9 +21,8 @@
     "title": "Damage Calculator",
     "builder": {
       "title": "Builder",
-      "rotation": {
-        "title": "Rotation"
-      },
+      "disclaimer": "The collected indicators may not be exact or approximate, so it is normal that the results will not match those in the game.",
+
       "echoes": {
         "guides": {
           "active": "After set an Echo, you can click on the avatar of the Echo whose stats need to be changed or the change button next to it to change another Echo."
@@ -33,7 +32,13 @@
         "pressToSet": "Press to set Echo",
         "pressToActive": "Press to custom this Echo"
       },
-      "disclaimer": "The collected indicators may not be exact or approximate, so it is normal that the results will not match those in the game."
+      "rotation": {
+        "title": "Rotation"
+      },
+      "overall": {
+        "title": "Overall"
+      },
+      "start": "Start calculation"
     },
     "import": {
       "title": "Import",

@@ -366,5 +366,5 @@
       "description": "Calcharo summons <strong>Phantom</strong> to support the on-field Resonator, clearing the targets in front with a slash. The <strong>Phantom's</strong> attack deals <strong class=\"color-electro\">Electro DMG</strong> equal to <strong class=\"color-electro\">195.98%+391.96%</strong> of Calcharo's ATK."
     }
   ],
-  "stats": { "hp": 10500, "def": 1186, "atk": 438 }
+  "stats": { "hp": 840, "def": 97, "atk": 35 }
 }

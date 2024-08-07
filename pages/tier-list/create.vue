@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { ICharacter } from '@/interfaces/character';
 import type { IEcho } from '@/interfaces/echo';
-import {
-  type ITierList,
-  type ITierListRow,
-  type TierListItem,
-  type TierListType,
+import type {
+  ITierList,
+  ITierListRow,
+  TierListItem,
+  TierListType,
 } from '@/interfaces/tier-list';
 import type { IWeapon } from '@/interfaces/weapon';
 import { mdiFileExport, mdiShare } from '@mdi/js';
@@ -72,7 +72,7 @@ const initialize = () => {
       break;
 
     case 'weapon':
-      resources.weapons().then((result) => {
+      resources.getWeapons().then((result) => {
         weapons.value = result;
       });
       break;

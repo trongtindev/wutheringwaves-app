@@ -27,7 +27,7 @@ export interface ICharacter {
   id: number;
   slug: string;
   name: string;
-  nameLocalized?: ILocalized;
+  nameLocalized: ILocalized;
   attribute: IAttribute;
   weapon: string;
   rarity?: number;

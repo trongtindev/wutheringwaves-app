@@ -9,13 +9,12 @@ const props = defineProps<{
 }>();
 
 // uses
-const i18n = useI18n();
+const { locale } = useI18n();
 const localePath = useLocalePath();
 
 // computed
-const nameLocalized = computed(() => {
-  return props.customName || i18n.t(props.item.name);
-});
+const nameLocalized =
+  props.customName || props.item.nameLocalized[locale.value] || props.item.name;
 </script>
 
 <template>
@@ -23,7 +22,7 @@ const nameLocalized = computed(() => {
     <v-img
       :aspect-ratio="portrait ? 3 / 4 : 1"
       :src="portrait ? item.images.portrait : item.images.icon"
-      :alt="item.name"
+      :alt="nameLocalized"
       class="align-end h-100"
       cover
     >
@@ -31,7 +30,7 @@ const nameLocalized = computed(() => {
         <v-img
           :aspect-ratio="portrait ? 3 / 4 : 1"
           :src="`/characters/icons/${props.item.slug}.webp`"
-          :alt="item.name"
+          :alt="nameLocalized"
         />
       </template>
 

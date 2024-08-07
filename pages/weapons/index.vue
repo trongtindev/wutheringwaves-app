@@ -8,7 +8,7 @@ const account = useAccount();
 const importConvene = useImportConvene();
 
 // states
-const weapons = ref<IWeapon[]>(await resources.weapons());
+const weapons = ref<IWeapon[]>(await resources.getWeapons());
 const filterText = ref<string>();
 const filterType = ref<string>('All');
 const filterRarity = ref<number>(0);
@@ -93,7 +93,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
 <template>
   <div>
     <!-- alert -->
-    <base-alert id="weapons.alert" :text="$t('weapons.alert')" />
+    <base-alert id="weapons.alert" :text="$t('weapons.alert')" delay />
 
     <!-- filter -->
     <v-row>
@@ -135,8 +135,7 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         :key="index"
         cols="6"
         sm="4"
-        md="3"
-        lg="2"
+        md="2"
       >
         <weapon-card
           :item="element"

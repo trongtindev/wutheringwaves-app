@@ -5,6 +5,9 @@
       "id": 6000038,
       "slug": "hooscamp",
       "name": "Hooscamp",
+      "nameLocalized": {
+        "vi": "Hooscamp"
+      },
       "cost": 1,
       "class": "Common",
       "attribute": "Aero",

@@ -304,5 +304,5 @@
       "description": "Verina heals the next character by <strong style=\"color: var(--theme-palette-color-1);\">19%</strong> of her ATK per second for <strong style=\"color: var(--theme-palette-color-1);\">6</strong>s. All characters on nearby teams gain <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> All-Type DMG Deepen for <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s."
     }
   ],
-  "stats": { "hp": 14238, "def": 1100, "atk": 338, "energy": 175 }
+  "stats": { "hp": 1139, "def": 90, "atk": 27, "energy": 175 }
 }

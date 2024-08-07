@@ -1,9 +1,10 @@
-import type { IAttribute } from './common';
+import type { IAttribute, ILocalized } from './common';
 import type { ISonata } from './sonata';
 
 export interface IEcho {
   slug: string;
   name: string;
+  nameLocalized: ILocalized;
   cost: number;
   icon: string;
   class: string;

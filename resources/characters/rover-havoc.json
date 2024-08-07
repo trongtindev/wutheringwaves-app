@@ -354,5 +354,5 @@
       "description": "Rover summons a Havoc Field, dealing <strong class=\"color-havoc\">143.3%</strong> <strong class=\"color-havoc\">Havoc DMG</strong> to all targets within range every <strong class=\"color-havoc\">2</strong>s for <strong class=\"color-havoc\">6</strong>s."
     }
   ],
-  "stats": { "hp": 10825, "def": 1259, "atk": 413, "energy": 125 }
+  "stats": { "hp": 866, "def": 103, "atk": 33, "energy": 125 }
 }

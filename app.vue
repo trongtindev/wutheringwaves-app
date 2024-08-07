@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import dayjs from 'dayjs';
-import { useLocale } from 'vuetify';
-
 // uses
 const i18n = useI18n();
 const i18nHead = useLocaleHead({
@@ -9,29 +6,8 @@ const i18nHead = useLocaleHead({
   addSeoAttributes: true,
   identifierAttribute: 'default',
 });
-// const rtl = useRtl();
-const vuetifyLocale = useLocale();
+
 const { SITE_URL } = useRuntimeConfig().public;
-
-// functions
-const initialize = () => {
-  initializeLocalization();
-};
-const initializeLocalization = () => {
-  dayjs.locale(i18n.locale.value);
-  vuetifyLocale.current.value = i18n.locale.value;
-
-  // const isRtl =
-  //   i18n.locales.value.findIndex((e) => {
-  //     return e.code === i18n.locale.value && e.rtl;
-  //   }) >= 0;
-  // rtl.isRtl.value = isRtl;
-};
-
-watch(() => i18n.locale.value, initializeLocalization);
-
-// lifecycle
-onNuxtReady(initialize);
 
 // seo meta
 useHead({

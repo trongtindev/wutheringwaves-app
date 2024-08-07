@@ -16,7 +16,7 @@ const calculator = useCalculator();
           <v-divider />
         </v-col>
         <v-col class="text-h6 text-center">
-          {{ $t('calculator.builder.rotation.title') }}
+          {{ $t('calculator.builder.overall.title') }}
         </v-col>
         <v-col class="d-flex align-center">
           <v-divider />
@@ -24,6 +24,20 @@ const calculator = useCalculator();
       </v-row>
     </div>
 
-    <!-- <v-row> </v-row> -->
+    <div>
+      <div v-if="props.lite">
+        <calculator-builder-overall-item
+          :index="calculator.participant"
+          :item="calculator.participants[calculator.participant]"
+        />
+      </div>
+      <div v-else>
+        <v-row class="ga-4">
+          <v-col v-for="(item, index) in calculator.participants" :key="index">
+            <calculator-builder-overall-item :item :index />
+          </v-col>
+        </v-row>
+      </div>
+    </div>
   </div>
 </template>

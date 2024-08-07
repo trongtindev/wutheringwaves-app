@@ -36,17 +36,12 @@ export const useResources = defineStore('useResources', () => {
     return items;
   };
 
-  const weapons = async (selector?: Partial<IWeapon>): Promise<IWeapon[]> => {
+  const getWeapons = async (
+    selector?: Partial<IWeapon>,
+  ): Promise<IWeapon[]> => {
     const data = await import('~/resources/weapons.json');
     const clone = cloneObject(data.default.items);
     const items = clone
-      .map((e) => {
-        return {
-          ...e,
-          icon: `/weapons/icons/${e.slug}.webp`,
-          upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
-        };
-      })
       .filter((e) => {
         if (selector) {
           return Object.entries(selector).every(
@@ -54,6 +49,14 @@ export const useResources = defineStore('useResources', () => {
           );
         }
         return true;
+      })
+      .map((e) => {
+        return {
+          ...e,
+          icon: `/weapons/icons/${e.slug}.webp`,
+          nameLocalized: e.nameLocalized || {},
+          upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
+        };
       })
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
@@ -77,6 +80,7 @@ export const useResources = defineStore('useResources', () => {
       .map((e) => {
         return {
           ...e,
+          nameLocalized: e.nameLocalized || {},
           hidden: typeof e.hidden === 'undefined' ? false : e.hidden,
           upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
         };
@@ -170,6 +174,7 @@ export const useResources = defineStore('useResources', () => {
         return {
           ...e,
           icon: `/echoes/icons/${e.slug}.webp`,
+          nameLocalized: e.nameLocalized || {},
           attribute: attrs.find((item) => {
             return item.slug === e.attribute || item.name === e.attribute;
           })!,
@@ -207,6 +212,12 @@ export const useResources = defineStore('useResources', () => {
           );
         }
         return true;
+      })
+      .map((e) => {
+        return {
+          ...e,
+          nameLocalized: e.nameLocalized || {},
+        };
       })
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
@@ -277,8 +288,7 @@ export const useResources = defineStore('useResources', () => {
   return {
     banners: getBanners,
     getBanners,
-    weapons,
-    getWeapons: weapons,
+    getWeapons,
     getWeaponData,
     getCharacters,
     getCharacterData,

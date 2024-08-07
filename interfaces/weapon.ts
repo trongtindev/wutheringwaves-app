@@ -27,7 +27,7 @@ export interface IWeapon {
   slug: string;
   icon: string;
   name: string;
-  nameLocalized?: ILocalized;
+  nameLocalized: ILocalized;
   type: WeaponType;
   rarity: number;
   upcoming?: boolean;

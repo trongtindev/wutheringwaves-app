@@ -5702,6 +5702,9 @@
       "id": 9,
       "slug": "activity-points",
       "name": "Activity Points",
+      "nameLocalized": {
+        "vi": "Điểm hoạt động"
+      },
       "rarity": 5,
       "category": "Currency",
       "publishedTime": "2024-06-28T15:43:21.847Z",

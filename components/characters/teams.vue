@@ -18,14 +18,7 @@ const characters = await resources.getCharacters({
 const characterDict = Object.fromEntries(characters.map((e) => [e.slug, e]));
 
 // computed
-const nameLocalized = computed(() => {
-  return props.item.name;
-});
-
-const bestTeams = computed(() => {
-  if (!props.data.bestTeams) return [];
-  return props.data.bestTeams;
-});
+const bestTeams = props.data.bestTeams || [];
 </script>
 
 <template>

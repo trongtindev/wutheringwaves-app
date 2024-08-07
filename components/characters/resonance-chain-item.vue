@@ -10,7 +10,7 @@ const props = defineProps<{
 const i18n = useI18n();
 
 // computed
-const descriptionLocalized = computed(() => {
+const descriptionLocalized = (() => {
   if (
     props.data.descriptionLocalized &&
     props.data.descriptionLocalized[i18n.locale.value]
@@ -18,7 +18,7 @@ const descriptionLocalized = computed(() => {
     return props.data.descriptionLocalized[i18n.locale.value];
   }
   return props.data.description;
-});
+})();
 </script>
 
 <template>

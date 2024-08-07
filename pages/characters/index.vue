@@ -103,6 +103,7 @@ useSeoMeta({
       class="mb-2"
       :text="$t('characters.message')"
       :closable="true"
+      delay
     />
 
     <!-- input -->

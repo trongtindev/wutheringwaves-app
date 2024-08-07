@@ -1,4 +1,4 @@
-import { Collection } from '~/classes/database/collection';
+import { Collection } from '~/database/collection';
 
 export class AccountDocument {
   name?: string;

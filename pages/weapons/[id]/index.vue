@@ -13,13 +13,12 @@ const i18n = useI18n();
 const route = useRoute();
 const resources = useResources();
 const localePath = useLocalePath();
-const runtimeConfig = useRuntimeConfig();
 const headers = useRequestHeaders(['If-Modified-Since']);
 const event = useRequestEvent();
 
 // fetch
 const items = await resources.getItems();
-const weapons = await resources.weapons();
+const weapons = await resources.getWeapons();
 const item = weapons.find((e) => e.slug == route.params.id)!;
 if (!item) throw createError({ statusCode: 404 });
 

@@ -6,6 +6,7 @@ import type { IWeapon } from '~/interfaces/weapon';
 
 const props = defineProps<{
   item: ICharacter;
+  nameLocalized: string;
   data: ICharacterData;
   echoes: IEcho[];
   weapons: IWeapon[];
@@ -19,16 +20,9 @@ const skillDict = Object.fromEntries(
 );
 
 // computed
-const nameLocalized = computed(() => {
-  return props.item.name;
-});
+const skillPriority = props.data.skillPriority || [];
 
-const skillPriority = computed(() => {
-  if (!props.data.skillPriority) return [];
-  return props.data.skillPriority;
-});
-
-const bestWeapons = computed(() => {
+const bestWeapons = (() => {
   if (!props.data.bestWeapons) return [];
   return props.data.bestWeapons.map((e) => {
     return {
@@ -37,24 +31,18 @@ const bestWeapons = computed(() => {
       different: e.different,
     };
   });
-});
+})();
 
-const bestEchoSets = computed(() => {
-  if (!props.data.bestEchoSets) return [];
-  return props.data.bestEchoSets;
-});
+const bestEchoSets = props.data.bestEchoSets || [];
 
-const bestMainEchoes = computed(() => {
+const bestMainEchoes = (() => {
   if (!props.data.bestMainEchoes) return [];
   return props.data.bestMainEchoes.map((e) => {
     return props.echoes.find((echo) => echo.slug == e)!;
   });
-});
+})();
 
-const bestEchoStats = computed(() => {
-  if (!props.data.bestEchoStats) return [];
-  return props.data.bestEchoStats;
-});
+const bestEchoStats = props.data.bestEchoStats || [];
 </script>
 
 <template>

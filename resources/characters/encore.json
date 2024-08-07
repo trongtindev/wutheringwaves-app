@@ -323,5 +323,5 @@
       "description": "Encore generates a Thermal Field centered around skill target, with a radius of <strong class=\"color-fusion\">3</strong>m. Targets inside the Thermal Field are continuously burned, suffering <strong class=\"color-fusion\">Fusion DMG</strong> equal to <strong class=\"color-fusion\">176.76%</strong> of Encore's ATK every <strong class=\"color-fusion\">1.5</strong>s for <strong class=\"color-fusion\">6</strong>s."
     }
   ],
-  "stats": { "hp": 10513, "def": 1247, "atk": 425, "energy": 125 }
+  "stats": { "hp": 841, "def": 102, "atk": 34, "energy": 125 }
 }

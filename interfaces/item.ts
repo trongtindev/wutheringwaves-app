@@ -4,7 +4,7 @@ export interface IItem {
   id: number;
   slug: string;
   name: string;
-  nameLocalized?: ILocalized;
+  nameLocalized: ILocalized;
   rarity: number;
   category: string;
   publishedTime: string;

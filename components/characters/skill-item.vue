@@ -10,7 +10,14 @@ const props = defineProps<{
 const i18n = useI18n();
 
 // computed
-const descriptionLocalized = computed(() => {
+const nameLocalized = (() => {
+  if (props.data.nameLocalized && props.data.nameLocalized[i18n.locale.value]) {
+    return props.data.nameLocalized[i18n.locale.value];
+  }
+  return props.data.name;
+})();
+
+const descriptionLocalized = (() => {
   if (
     props.data.descriptionLocalized &&
     props.data.descriptionLocalized[i18n.locale.value]
@@ -18,18 +25,18 @@ const descriptionLocalized = computed(() => {
     return props.data.descriptionLocalized[i18n.locale.value];
   }
   return props.data.description;
-});
+})();
 </script>
 
 <template>
   <v-card>
     <v-sheet class="pt-2">
-      <v-list-item :title="$t(props.data.name)" :subtitle="$t(props.data.type)">
+      <v-list-item :title="$t(nameLocalized)" :subtitle="$t(props.data.type)">
         <template #prepend>
           <v-avatar class="border rounded">
             <v-img
               :src="`/skills/icons/${props.data.slug}.webp`"
-              :alt="props.data.name"
+              :alt="nameLocalized"
             />
           </v-avatar>
         </template>

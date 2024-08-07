@@ -6,13 +6,11 @@ const props = defineProps<{
 }>();
 
 // uses
-const i18n = useI18n();
+const { locale } = useI18n();
 const localePath = useLocalePath();
 
 // computed
-const nameLocalized = computed(() => {
-  return i18n.t(props.item.name);
-});
+const nameLocalized = props.item.nameLocalized[locale.value] || props.item.name;
 </script>
 
 <template>
@@ -20,6 +18,7 @@ const nameLocalized = computed(() => {
     <v-responsive :aspect-ratio="1">
       <v-img
         :src="`/echoes/icons/${props.item.slug}.webp`"
+        :alt="nameLocalized"
         class="align-end h-100"
         cover
       />

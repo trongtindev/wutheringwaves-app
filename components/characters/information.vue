@@ -2,6 +2,7 @@
 import { mdiStar } from '@mdi/js';
 import type { ICharacter, ICharacterData } from '~/interfaces/character';
 
+// define
 const format = formatNumber;
 
 const props = defineProps<{
@@ -9,7 +10,8 @@ const props = defineProps<{
   data: ICharacterData;
 }>();
 
-const stats = computed(() => {
+// statics
+const stats = (() => {
   if (!props.data.stats) return [];
 
   return [
@@ -34,7 +36,7 @@ const stats = computed(() => {
       value: 150,
     },
   ];
-});
+})();
 </script>
 
 <template>

@@ -33,21 +33,16 @@ const pictures = [
   item.images.icon,
 ];
 
-const nameLocalized = computed(() => {
-  // if (data.nameLocalized && data.nameLocalized[i18n.locale.value]) {
-  //   return data.nameLocalized[i18n.locale.value];
-  // }
-  return i18n.t(item.name);
-});
+const nameLocalized = item.nameLocalized[i18n.locale.value] || item.name;
 
-const quoteLocalized = computed(() => {
+const quoteLocalized = (() => {
   if (data.quoteLocalized && data.quoteLocalized[i18n.locale.value]) {
     return data.quoteLocalized[i18n.locale.value];
   }
   return data.quote;
-});
+})();
 
-const descriptionLocalized = computed(() => {
+const descriptionLocalized = (() => {
   if (
     data.descriptionLocalized &&
     data.descriptionLocalized[i18n.locale.value]
@@ -55,17 +50,15 @@ const descriptionLocalized = computed(() => {
     return data.descriptionLocalized[i18n.locale.value];
   }
   return data.description;
-});
+})();
 
-const moreBuildGuides = computed(() => {
+const moreBuildGuides = (() => {
   return characters.filter((e) => {
     return e.attribute && e.attribute == item.attribute && !e.hidden;
   });
-});
+})();
 
-const lastUpdatedOn = computed(() => {
-  return dayjs(item.modifiedTime);
-});
+const lastUpdatedOn = dayjs(item.modifiedTime);
 
 // changes
 watch(
@@ -76,9 +69,9 @@ watch(
 );
 
 // seo meta
-const title = i18n.t('meta.characters.id.title', { name: nameLocalized.value });
+const title = i18n.t('meta.characters.id.title', { name: nameLocalized });
 const description = i18n.t('meta.characters.id.description', {
-  name: nameLocalized.value,
+  name: nameLocalized,
   attribute: item.attribute.name,
 });
 const ogImage = `${SITE_URL}${item.images.icon}`;
@@ -211,30 +204,6 @@ if (headers['if-modified-since']) {
                   :alt="nameLocalized"
                 />
               </a>
-
-              <v-slide-group
-                v-if="pictures.length > 1"
-                v-model="showPicture"
-                show-arrows
-              >
-                <v-slide-group-item
-                  v-for="(image, index) in pictures"
-                  :key="index"
-                  v-slot="{ isSelected, toggle, selectedClass }"
-                >
-                  <v-card
-                    :class="['ma-2', selectedClass]"
-                    :height="100"
-                    :width="100"
-                    :disabled="isSelected"
-                    @click="toggle"
-                  >
-                    <v-scale-transition>
-                      <v-img :src="image" :cover="true" :aspect-ratio="1" />
-                    </v-scale-transition>
-                  </v-card>
-                </v-slide-group-item>
-              </v-slide-group>
             </div>
           </v-col>
 
@@ -272,16 +241,19 @@ if (headers['if-modified-since']) {
 
     <!-- Tab views -->
     <div id="overview">
-      <characters-overview :item="item" :data="data" />
+      <characters-overview :item="item" :name-localized :data="data" />
     </div>
+
     <div id="build">
       <characters-build
         :item="item"
+        :name-localized
         :data="data"
         :echoes="echoes"
         :weapons="weapons"
       />
     </div>
+
     <div id="teams">
       <characters-teams
         :item="item"
@@ -289,6 +261,7 @@ if (headers['if-modified-since']) {
         :name-localized="nameLocalized"
       />
     </div>
+
     <characters-ascension :item="item" :data="data" />
 
     <!-- moreBuildGuides -->

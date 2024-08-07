@@ -54,6 +54,33 @@
       "minLevel": 80
     }
   ],
+  "bestWeapons": [
+    {
+      "item": "static-mist",
+      "different": 100,
+      "rank": 1
+    },
+    {
+      "item": "novaburst",
+      "different": 82.5,
+      "rank": 1
+    },
+    {
+      "item": "pistols-26",
+      "different": 82.2,
+      "rank": 1
+    },
+    {
+      "item": "undying-flame",
+      "different": 82,
+      "rank": 1
+    },
+    {
+      "item": "thunderbolt",
+      "different": 79.9,
+      "rank": 1
+    }
+  ],
   "birthday": "April 18th",
   "birthplace": "Huanglong",
   "description": "Chixia is a spirited young Patroller who lights up the streets of Jinzhou. She’s always ready to be the hero someone needs.",
@@ -246,5 +273,5 @@
       "description": "Chixia releases a shock wave surrounding the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong> equal to <strong class=\"color-fusion\">530.00%</strong> of Chixia's ATK to enemies within the range."
     }
   ],
-  "stats": { "hp": 9099, "def": 953, "atk": 300, "energy": 150 }
+  "stats": { "hp": 727, "def": 78, "atk": 24, "energy": 150 }
 }

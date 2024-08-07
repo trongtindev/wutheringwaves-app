@@ -6,7 +6,12 @@ const props = defineProps<{
   obtainedCount?: number;
 }>();
 
+// uses
+const { locale } = useI18n();
 const localePath = useLocalePath();
+
+// statics
+const nameLocalized = props.item.nameLocalized[locale.value] || props.item.name;
 </script>
 
 <template>
@@ -15,6 +20,7 @@ const localePath = useLocalePath();
       :aspect-ratio="1"
       :src="`/weapons/icons/${props.item.slug}.webp`"
       :cover="true"
+      :alt="nameLocalized"
       class="align-end h-100"
     >
       <v-sheet class="position-absolute top-0 left-0 pl-2 pt-2">
@@ -38,11 +44,11 @@ const localePath = useLocalePath();
     </v-img>
 
     <v-card-title
+      :class="`text-rarity${props.item.rarity}`"
       tag="h2"
       class="text-center"
-      :class="`text-rarity${props.item.rarity}`"
     >
-      {{ $t(props.item.name) }}
+      {{ nameLocalized }}
     </v-card-title>
   </v-card>
 </template>
