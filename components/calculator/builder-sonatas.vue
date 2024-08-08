@@ -8,7 +8,7 @@ const resource = useResources();
 const calculator = useCalculator();
 
 // fetch
-const weapons = await resource.getWeapons({ upcoming: false });
+const sonatas = await resource.getSonataEffects();
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const weapons = await resource.getWeapons({ upcoming: false });
           <v-divider />
         </v-col>
         <v-col class="text-h6 text-center">
-          {{ $t('common.weapon') }}
+          {{ $t('common.sonataEffects') }}
         </v-col>
         <v-col class="d-flex align-center">
           <v-divider />
@@ -28,16 +28,21 @@ const weapons = await resource.getWeapons({ upcoming: false });
     </div>
 
     <div v-if="props.lite">
-      <calculator-builder-weapon-item
-        :index="calculator.participant"
+      <calculator-builder-sonatas-item
+        :participant="calculator.participant"
         :item="calculator.participants[calculator.participant]"
-        :weapons="[]"
+        :sonatas
       />
     </div>
+
     <div v-else>
       <v-row class="ga-4">
         <v-col v-for="(item, index) in calculator.participants" :key="index">
-          <calculator-builder-weapon-item :index :item :weapons />
+          <calculator-builder-sonatas-item
+            :participant="index"
+            :item
+            :sonatas
+          />
         </v-col>
       </v-row>
     </div>

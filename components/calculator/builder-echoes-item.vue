@@ -36,9 +36,13 @@ const OnsetEchoFor = (index: number) => {
 const onSelectedEcho = async (echo: IEcho) => {
   showEchoes.value = false;
   show.value = setEchoFor.value;
+
   const data = await resources.getEchoData(echo.slug);
   calculator.participants[props.index].echoes[setEchoFor.value].item = echo;
   calculator.participants[props.index].echoes[setEchoFor.value].data = data;
+  calculator.participants[props.index].echoes[setEchoFor.value].mainstats =
+    undefined;
+  calculator.participants[props.index]._echoes = randomId();
 };
 
 // computed

@@ -24,6 +24,6 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       <calculator-builder />
     </client-only>
 
-    <roles-required :roles="['Owner', 'Moderator']" type="any" />
+    <sign-in-required />
   </div>
 </template>

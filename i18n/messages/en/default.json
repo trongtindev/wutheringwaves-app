@@ -29,6 +29,10 @@
         "pressToSet": "Press to set Echo",
         "pressToActive": "Press to custom this Echo"
       },
+      "sonatas": {
+        "activeSonatas": "Active Sonatas",
+        "possibleSonatas": "Possible Sonatas"
+      },
       "rotation": { "title": "Rotation" },
       "overall": { "title": "Overall" },
       "start": "Start calculation"
@@ -221,7 +225,31 @@
     "random": "Random",
     "mainstats": "Mainstats",
     "substats": "Substats",
-    "select": "Select"
+    "select": "Select",
+    "resonanceSkillDMGBonus": "Resonance Skill DMG Bonus",
+    "basicAttackDMGBonus": "Basic Attack DMG Bonus",
+    "heavyAttackDMGBonus": "Heavy Attack DMG Bonus",
+    "resonanceLiberationDMGBonus": "Resonance Liberation DMG Bonus",
+    "physicalDMGBonus": "Physical DMG Bonus",
+    "glacioDMGBonus": "Glacio DMG Bonus",
+    "fusionDMGBonus": "Fusion DMG Bonus",
+    "electroDMGBonus": "Electro DMG Bonus",
+    "aeroDMGBonus": "Aero DMG Bonus",
+    "spectroDMGBonus": "Spectro DMG Bonus",
+    "havocDMGBonus": "Havoc DMG Bonus",
+    "healingBonus": "Healing Bonus",
+    "aeroDMG": "Aero DMG",
+    "glacioDMG": "Glacio DMG",
+    "fusionDMG": "Fusion DMG",
+    "electroDMG": "Electro DMG",
+    "havocDMG": "HavocDMG",
+    "spectroDMG": "Spectro DMG",
+    "outroSkills": "Outro Skills",
+    "skills": "Skills",
+    "sonataEffects": "Sonata Effects",
+    "add": "Add",
+    "remove": "Remove",
+    "upcomingMessage": "Thank you for your interest, this feature is currently under development. Join the Discord to track the progress!"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",

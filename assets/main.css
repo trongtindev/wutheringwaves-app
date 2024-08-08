@@ -204,3 +204,13 @@ a {
 .v-list-item-title {
   user-select: none;
 } */
+
+/* width */
+.w-70 {
+  width: 70%;
+}
+
+/* slider */
+.v-slider.v-input--horizontal {
+  margin-inline: 8px 13px !important;
+}

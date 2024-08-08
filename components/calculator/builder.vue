@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 import { mdiPlay } from '@mdi/js';
+// import introJs from 'intro.js';
+// import 'intro.js/introjs.css';
 
 // uses
+const { t } = useI18n();
 const display = useDisplay();
+const settings = useSettings();
 const calculator = useCalculator();
+
+// states
+const isTours = ref(false);
 
 // computed
 const lite = computed(() => {
@@ -24,10 +31,53 @@ const canStart = computed(() => {
 
   return true;
 });
+
+// functions
+// const showTours = () => {
+//   // const hints = document.querySelectorAll('[data-tour]');
+//   // if (hints.length == 0) {
+//   //   setTimeout(showTours, 25);
+//   //   return;
+//   // }
+//   // console.debug('showTours', 'start');
+//   // introJs
+//   //   .tour()
+//   //   .addStep({
+//   //     title: t('calculator.builder.tours.welcome.title'),
+//   //     intro: t('calculator.builder.tours.welcome.title'),
+//   //     position: 'top',
+//   //   })
+//   //   .addStep({
+//   //     title: t('calculator.builder.tours.teams.title'),
+//   //     intro: t('calculator.builder.tours.teams.title'),
+//   //     element: document.querySelector('#builder-teams'),
+//   //     position: 'top',
+//   //   })
+//   //   .addStep({
+//   //     title: t('calculator.builder.tours.sequences.title'),
+//   //     intro: t('calculator.builder.tours.sequences.title'),
+//   //     element: document.querySelector('#builder-sequences'),
+//   //     position: 'top',
+//   //   })
+//   //   .onStart(() => {
+//   //     isTours.value = true;
+//   //   })
+//   //   .start();
+// };
+
+// lifecycle
+// onNuxtReady(showTours);
+
+// onBeforeUnmount(() => {
+//   if (isTours.value) {
+//     console.debug('showTours', 'exit');
+//     introJs.tour().exit();
+//   }
+// });
 </script>
 
 <template>
-  <div>
+  <div id="builder">
     <!-- disclaimer -->
     <base-alert :text="$t('calculator.builder.disclaimer')" color="warning" />
 
@@ -37,14 +87,20 @@ const canStart = computed(() => {
     <!-- sequences -->
     <calculator-builder-sequences :lite />
 
+    <!-- skills -->
+    <calculator-builder-skills :lite />
+
     <!-- weapons -->
     <calculator-builder-weapon :lite />
 
     <!-- echoes -->
     <calculator-builder-echoes :lite />
 
+    <!-- sonatas -->
+    <calculator-builder-sonatas :lite />
+
     <!-- rotation -->
-    <calculator-builder-rotation :lite />
+    <calculator-builder-rotation />
 
     <!-- overall -->
     <calculator-builder-overall :lite />

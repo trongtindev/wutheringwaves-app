@@ -1,5 +1,10 @@
-import type { ICharacter, ICharacterData } from './character';
+import type {
+  ICharacter,
+  ICharacterData,
+  ICharacterSkillData,
+} from './character';
 import type { IEcho, IEchoData } from './echo';
+import type { ISonata } from './sonata';
 import type { IWeapon, IWeaponData } from './weapon';
 
 export interface ICalculatorCharacter {
@@ -25,8 +30,11 @@ export interface ICalculatorParticipant {
   character?: ICalculatorCharacter;
   characterLevel: number;
   characterSequences: number;
+  characterOutroSkillLevel: number;
   weapon?: ICalculatorWeapon;
   weaponLevel: number;
   weaponRank: number;
   echoes: ICalculatorEcho[];
+  _echoes: string;
+  sonatas: ISonata[];
 }

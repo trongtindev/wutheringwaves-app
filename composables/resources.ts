@@ -42,14 +42,6 @@ export const useResources = defineStore('useResources', () => {
     const data = await import('~/resources/weapons.json');
     const clone = cloneObject(data.default.items);
     const items = clone
-      .filter((e) => {
-        if (selector) {
-          return Object.entries(selector).every(
-            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
-          );
-        }
-        return true;
-      })
       .map((e) => {
         return {
           ...e,
@@ -57,6 +49,14 @@ export const useResources = defineStore('useResources', () => {
           nameLocalized: e.nameLocalized || {},
           upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
         };
+      })
+      .filter((e) => {
+        if (selector) {
+          return Object.entries(selector).every(
+            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+          );
+        }
+        return true;
       })
       .sort((a, b) => {
         return a.name.localeCompare(b.name);
@@ -153,6 +153,18 @@ export const useResources = defineStore('useResources', () => {
         return bestEchoSet;
       });
     }
+
+    if (clone.skills) {
+      clone.skills = clone.skills.map((e) => {
+        return {
+          ...e,
+          icon: `/skills/icons/${e.slug}.webp`,
+          nameLocalized: e.nameLocalized || {},
+          descriptionLocalized: e.descriptionLocalized || {},
+        };
+      });
+    }
+
     return clone;
   };
 

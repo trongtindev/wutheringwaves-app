@@ -1,7 +1,7 @@
 // www.trongtin.dev
 // What are you looking for here :D
 
-export const mainStats = [
+export const echoMainStats: [string, number, number][][] = [
   [
     ['hp', 114, 2280],
     ['hp%', 2.8, 22.8],
@@ -33,7 +33,7 @@ export const mainStats = [
   ],
 ];
 
-export const subStats = [
+export const echoSubStats: [string, number, number][] = [
   ['hp', 320, 580],
   ['atk', 30, 70],
   ['def', 30, 70],
@@ -44,7 +44,7 @@ export const subStats = [
   ['critDMG%', 12.6, 21],
   ['energyRegen%', 6.8, 12.4],
   ['basicAttackDMGBonus', 6.4, 11.6],
-  ['heavyAttack DMGBonus', 6.4, 11.6],
+  ['heavyAttackDMGBonus', 6.4, 11.6],
   ['resonanceSkillDMGBonus', 6.4, 11.6],
   ['resonanceLiberationDMGBonus', 6.4, 11.6],
 ];

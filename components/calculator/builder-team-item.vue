@@ -114,7 +114,15 @@ onMounted(initialize);
         :height="96"
         class="border rounded-circle d-flex justify-center align-center"
       >
-        <v-badge location="bottom" :color="role.color" :content="role.text">
+        <v-badge
+          location="bottom"
+          :data-tour-title="$t('calculator.builder.tours.teams.roles.title')"
+          :data-tour-content="
+            $t('calculator.builder.tours.teams.roles.content')
+          "
+          :color="role.color"
+          :content="role.text"
+        >
           <v-avatar
             v-if="item.character"
             :image="item.character.item.images.icon"
@@ -132,6 +140,10 @@ onMounted(initialize);
       :return-object="true"
       :clearable="true"
       :placeholder="$t('common.selectCharacter')"
+      :data-tour-title="$t('calculator.builder.tours.teams.character.title')"
+      :data-tour-content="
+        $t('calculator.builder.tours.teams.character.content')
+      "
       hide-details
       class="mt-4 mb-2"
     >

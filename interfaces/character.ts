@@ -46,8 +46,9 @@ export interface ICharacter {
 
 export interface ICharacterSkillData {
   slug: string;
+  icon: string;
   name: string;
-  nameLocalized?: ILocalized;
+  nameLocalized: ILocalized;
   type: CharacterSkill;
   levels: {
     cost: {
@@ -57,7 +58,7 @@ export interface ICharacterSkillData {
     level: number;
   }[];
   description: string;
-  descriptionLocalized?: ILocalized;
+  descriptionLocalized: ILocalized;
 }
 
 export interface ICharacterRCData {

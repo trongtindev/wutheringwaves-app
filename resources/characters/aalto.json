@@ -291,7 +291,7 @@
       "slug": "dissolving-mist",
       "name": "Dissolving Mist",
       "type": "Outro Skill",
-      "description": "",
+      "description": "Aalto shows up out of thin air to performs rapid continuous shooting, dealing {0}% <strong class=\"color-aero\">Aero DMG</strong>.",
       "nameLocalized": { "en": "Dissolving Mist", "uk": "Розчиняючий туман" }
     }
   ],

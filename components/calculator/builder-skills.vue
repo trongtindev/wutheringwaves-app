@@ -4,11 +4,7 @@ const props = defineProps<{
 }>();
 
 // uses
-const resource = useResources();
 const calculator = useCalculator();
-
-// fetch
-const weapons = await resource.getWeapons({ upcoming: false });
 </script>
 
 <template>
@@ -19,7 +15,7 @@ const weapons = await resource.getWeapons({ upcoming: false });
           <v-divider />
         </v-col>
         <v-col class="text-h6 text-center">
-          {{ $t('common.weapon') }}
+          {{ $t('common.skills') }}
         </v-col>
         <v-col class="d-flex align-center">
           <v-divider />
@@ -28,16 +24,19 @@ const weapons = await resource.getWeapons({ upcoming: false });
     </div>
 
     <div v-if="props.lite">
-      <calculator-builder-weapon-item
-        :index="calculator.participant"
+      <calculator-builder-skills-item
+        :participant="calculator.participant"
         :item="calculator.participants[calculator.participant]"
-        :weapons="[]"
       />
     </div>
+
     <div v-else>
       <v-row class="ga-4">
-        <v-col v-for="(item, index) in calculator.participants" :key="index">
-          <calculator-builder-weapon-item :index :item :weapons />
+        <v-col
+          v-for="(item, participant) in calculator.participants"
+          :key="participant"
+        >
+          <calculator-builder-skills-item :participant :item />
         </v-col>
       </v-row>
     </div>

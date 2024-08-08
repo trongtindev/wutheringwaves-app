@@ -101,10 +101,10 @@ const stats = computed(() => {
 
       <tbody>
         <tr v-for="(element, j) in stats" :key="j">
-          <td class="w-50 text-center">
+          <td class="w-70">
             {{ $t(`common.${element.label}`) }}
           </td>
-          <td class="w-50 text-center">
+          <td>
             {{ element.value }}
           </td>
         </tr>

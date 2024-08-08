@@ -8,7 +8,7 @@ const calculator = useCalculator();
 </script>
 
 <template>
-  <div class="mb-4">
+  <div id="builder-sequences" data-tour="true" class="mb-4">
     <div class="mb-2">
       <v-row class="ga-4">
         <v-col class="d-flex align-center">

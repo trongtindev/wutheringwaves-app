@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const show = ref(true);
+// uses
+const auth = useAuth();
+
+// computed
+const show = computed(() => {
+  return !auth.isLoggedIn;
+});
 </script>
 
 <template>
