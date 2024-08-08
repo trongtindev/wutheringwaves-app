@@ -249,7 +249,8 @@
     "sonataEffects": "Sonata Effects",
     "add": "Add",
     "remove": "Remove",
-    "upcomingMessage": "Thank you for your interest, this feature is currently under development. Join the Discord to track the progress!"
+    "upcomingMessage": "Thank you for your interest, this feature is currently under development. Join the Discord to track the progress!",
+    "selectBanner": "Select banner"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",

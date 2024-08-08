@@ -2,6 +2,40 @@ import dayjs from 'dayjs';
 import type { IBanner } from '~/interfaces/banner';
 import type { IConvene } from '~/interfaces/convene';
 
+export const calculateAvg = (args: { convenes: IConvene[] }) => {
+  let fourPity = 0;
+  const fourSamples: number[] = [];
+
+  let fivePity = 0;
+  const fiveSamples: number[] = [];
+
+  for (let i = args.convenes.length - 1; i >= 0; i -= 1) {
+    const convene = args.convenes[i];
+
+    fourPity += 1;
+    if (convene.qualityLevel === 4) {
+      fourSamples.push(fourPity);
+      fourPity = 0;
+    }
+
+    fivePity += 1;
+    if (convene.qualityLevel === 5) {
+      fiveSamples.push(fivePity);
+      fivePity = 0;
+    }
+  }
+
+  const fourAvg =
+    fourSamples.reduce((prev, e) => prev + e, 0) / fourSamples.length;
+  const fiveAvg =
+    fiveSamples.reduce((prev, e) => prev + e, 0) / fiveSamples.length;
+
+  return {
+    fourAvg: fourSamples.length >= 2 ? fourAvg : -1,
+    fiveAvg: fiveSamples.length >= 2 ? fiveAvg : -1,
+  };
+};
+
 export const calculateWinRate = (args: {
   type: number;
   banners: IBanner[];
@@ -49,16 +83,16 @@ export const calculateWinRate = (args: {
     }
 
     if (
-      banner.featuredRare !== convene.name &&
-      banner.featuredSecondaryRare &&
-      banner.featuredSecondaryRare !== convene.name
+      banner.featuredRare === convene.name ||
+      (banner.featuredSecondaryRare &&
+        banner.featuredSecondaryRare === convene.name)
     ) {
-      lastLoss = true;
+      win += 1;
       totalExceptGuaranteed += 1;
     } else if (lastLoss) {
       lastLoss = false;
     } else {
-      win += 1;
+      lastLoss = true;
       totalExceptGuaranteed += 1;
     }
   }

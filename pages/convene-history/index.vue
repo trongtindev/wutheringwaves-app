@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { CardPoolType } from '@/interfaces/banner';
-import { mdiDotsGrid, mdiFormatListBulleted, mdiStar } from '@mdi/js';
+import { CardPoolType, type IBanner } from '@/interfaces/banner';
+import {
+  mdiDotsGrid,
+  mdiFormatListBulleted,
+  mdiStar,
+  mdiFilter,
+} from '@mdi/js';
 import dayjs from 'dayjs';
 import JSConfetti from 'js-confetti';
 import urlSlug from 'url-slug';
@@ -19,13 +24,14 @@ const importConvene = useImportConvene();
 // states
 const banners = await resources.banners();
 const convenes = ref<ConveneDocumentConverted[]>([]);
-const filterBanner = ref();
+const filterBanner = ref<IBanner>();
 const filterRarity = ref<number[]>([5]);
 const displayType = ref<'list' | 'grid'>('grid');
 const displayConvenes = ref<ConveneDocumentConverted[]>([]);
 const confetti = ref<JSConfetti>();
-// functions
+const showDrawer = ref();
 
+// functions
 const initialize = () => {
   if (route.query.addConfetti) {
     confetti.value = new JSConfetti();
@@ -106,6 +112,14 @@ const onToggleRarity = (rarity: number) => {
   updateFilter();
 };
 
+const onToggleBanner = (banner: IBanner) => {
+  if (filterBanner.value && filterBanner.value.name === banner.name) {
+    filterBanner.value = undefined;
+  } else {
+    filterBanner.value = banner;
+  }
+};
+
 // changes
 watch(
   () => account.active,
@@ -142,34 +156,35 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       ]"
     />
 
+    <!-- drawer -->
+    <v-navigation-drawer v-model="showDrawer" :width="320" location="left">
+      <div class="bg-background pa-2">
+        <v-card
+          v-for="(item, index) in banners"
+          :key="index"
+          :class="{ 'mt-2': index > 0 }"
+          :color="
+            filterBanner && filterBanner.name === item.name
+              ? 'primary'
+              : undefined
+          "
+          @click="() => onToggleBanner(item)"
+        >
+          <v-img
+            v-if="item.thumbnail"
+            :src="item.thumbnail"
+            :alt="`Banner ${item.name}`"
+          />
+
+          <v-card-title class="text-body-1">
+            {{ item.name }}
+          </v-card-title>
+        </v-card>
+      </div>
+    </v-navigation-drawer>
+
     <client-only>
       <!-- filter -->
-      <v-row class="mb-1">
-        <v-col>
-          <v-select
-            v-model="filterBanner"
-            :placeholder="$t('Select banner')"
-            :items="banners"
-            :return-object="true"
-            :item-title="(e) => $t(e.name)"
-            :clearable="true"
-            :hide-details="true"
-          >
-            <template #item="{ item, props }">
-              <v-list-item v-bind="props" :title="item.title">
-                <!-- <template #prepend>
-              <v-avatar class="border" rounded />
-            </template> -->
-
-                <v-list-item-subtitle v-if="item.raw.featuredRare">
-                  <v-chip class="text-rarity5" :text="item.raw.featuredRare" />
-                </v-list-item-subtitle>
-              </v-list-item>
-            </template>
-          </v-select>
-        </v-col>
-      </v-row>
-
       <v-card v-if="convenes.length === 0">
         <v-empty-state
           :title="$t('convene.history.empty')"
@@ -225,6 +240,11 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
         </v-card-actions>
 
         <v-card-text>
+          <base-alert
+            v-if="displayConvenes.length == 0"
+            :text="$t('common.noRecordsFound')"
+          />
+
           <div v-if="displayType === 'list'">
             <v-data-table
               class="border rounded"
@@ -340,6 +360,17 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
           </template>
         </masonry>
       </div>
+
+      <v-fab
+        :text="$t('common.selectBanner')"
+        :prepend-icon="mdiFilter"
+        class="hidden-lg-and-up"
+        location="bottom right"
+        color="primary"
+        app
+        appear
+        @click="() => (showDrawer = !showDrawer)"
+      />
     </client-only>
   </div>
 </template>
