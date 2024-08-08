@@ -31,7 +31,7 @@ const weapons = await resource.getWeapons({ upcoming: false });
       <calculator-builder-weapon-item
         :index="calculator.participant"
         :item="calculator.participants[calculator.participant]"
-        :weapons="[]"
+        :weapons
       />
     </div>
     <div v-else>

@@ -23,7 +23,5 @@ useSeoMeta({ ogTitle: title, description, ogDescription: description });
       </template>
       <calculator-builder />
     </client-only>
-
-    <sign-in-required />
   </div>
 </template>
