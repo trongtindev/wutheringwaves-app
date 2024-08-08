@@ -1,7 +1,6 @@
-/**
- * www.trongtin.dev
- * What are you looking for here :D
- */
+// www.trongtin.dev
+// What are you looking for here :D
+
 import type { ICharacterDataStats } from '~/interfaces/character';
 import type { IWeaponDataStats } from '~/interfaces/weapon';
 

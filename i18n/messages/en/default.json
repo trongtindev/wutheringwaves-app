@@ -215,7 +215,13 @@
     "selectCharacter": "Select character",
     "rank": "Rank",
     "stats": "Stats",
-    "energyRegen": "Energy Regen"
+    "energyRegen": "Energy Regen",
+    "min": "Min",
+    "max": "Max",
+    "random": "Random",
+    "mainstats": "Mainstats",
+    "substats": "Substats",
+    "select": "Select"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",

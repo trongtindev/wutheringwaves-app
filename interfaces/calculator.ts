@@ -14,8 +14,11 @@ export interface ICalculatorWeapon {
 
 export interface ICalculatorEcho {
   level: number;
+  rarity: number;
   item?: IEcho;
   data?: IEchoData;
+  mainstats?: [string, number];
+  substats?: [string, number][];
 }
 
 export interface ICalculatorParticipant {

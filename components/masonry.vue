@@ -17,7 +17,7 @@ const windowSize = useWindowSize();
 const refreshLayoutDebounce = useDebounceFn(() => refreshLayout(), 150);
 
 // states
-const grids = ref<any[]>([]);
+const grids = ref<any>([]);
 const masonryElement = ref<HTMLElement>();
 const stretchFirst = ref(false);
 const columnCount = ref(0);
@@ -66,10 +66,11 @@ const calcGrid = async (masonryElements: HTMLElement[]) => {
     grids.value = masonryElements.map((grid) => {
       return {
         _el: grid,
-        gap: parseFloat(getComputedStyle(grid).gridRowGap),
-        items: [...grid.childNodes].filter((c) => {
+        gap: parseFloat(getComputedStyle(grid).rowGap),
+        items: [...grid.childNodes].filter((childNode) => {
           return (
-            c.nodeType === 1 && +getComputedStyle(c as any).gridColumnEnd !== -1
+            childNode.nodeType === 1 &&
+            +getComputedStyle(childNode as HTMLElement).gridColumnEnd !== -1
           );
         }),
         ncol: 0,
@@ -82,7 +83,7 @@ const calcGrid = async (masonryElements: HTMLElement[]) => {
 
 const initialize = () => {
   if (!masonryElement.value) {
-    setTimeout(initialize, 50);
+    setTimeout(initialize, 25);
     return;
   }
   calcGrid([masonryElement.value]);

@@ -1,7 +1,4 @@
-import type {
-  ICalculatorEcho,
-  ICalculatorParticipant,
-} from '~/interfaces/calculator';
+import type { ICalculatorParticipant } from '~/interfaces/calculator';
 
 export const useCalculator = defineStore('useCalculator', () => {
   const INITIAL_PARTICIPANTS = () => {
@@ -14,6 +11,7 @@ export const useCalculator = defineStore('useCalculator', () => {
         echoes: Array.from(Array(5).keys()).map(() => {
           return {
             level: 20,
+            rarity: 5,
           };
         }),
       };

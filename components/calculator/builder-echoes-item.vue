@@ -122,7 +122,11 @@ const totalCost = computed(() => {
       />
     </div>
 
-    <calculator-builder-echo-item-slot :item="item.echoes[show]" />
+    <calculator-builder-echo-item-slot
+      :participant="props.index"
+      :item="item.echoes[show]"
+      :index="show"
+    />
 
     <!-- echo dialog -->
     <v-dialog v-model="showEchoes" :scrollable="true" :max-width="600">
