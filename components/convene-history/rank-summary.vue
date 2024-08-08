@@ -255,7 +255,12 @@ onNuxtReady(initialize);
       />
 
       <!-- Luckiness 5★ -->
-      <v-alert class="mb-4">
+      <v-alert
+        :class="{
+          'mb-4': fiveAvg <= 0,
+          'rounded-be-0 rounded-bs-0': fiveAvg > 0,
+        }"
+      >
         <v-list-item class="pa-0">
           <v-list-item-title class="text-rarity5">
             {{ $t('convene.rank.luck5') }}
@@ -273,14 +278,14 @@ onNuxtReady(initialize);
             <div class="d-flex align-center text-legendary">
               <div class="mr-2">
                 {{
-                  fiveAvg < 50
+                  fiveAvg > 50
                     ? $t('convene.rank.bottom')
                     : $t('convene.rank.top')
                 }}
               </div>
               <div
                 class="text-h6 font-weight-bold"
-                :style="`color: hsl(${(fiveAvg / 100) * 100}, 100%, 50%);`"
+                :style="`color: hsl(${100 - (fiveAvg / 100) * 100}, 100%, 50%);`"
               >
                 {{ fiveAvgPercentage }}%
               </div>
@@ -288,9 +293,14 @@ onNuxtReady(initialize);
           </template>
         </v-list-item>
       </v-alert>
+      <v-progress-linear
+        v-if="fiveAvg > 0"
+        :model-value="fiveAvg"
+        class="mb-4 rounded-be-lg rounded-bs-lg bg-background"
+      />
 
       <!-- Luckiness 4★ -->
-      <v-alert>
+      <v-alert :class="{ 'rounded-be-0 rounded-bs-0': fourAvg > 0 }">
         <v-list-item class="pa-0">
           <v-list-item-title class="text-rarity4">
             {{ $t('convene.rank.luck4') }}
@@ -308,14 +318,14 @@ onNuxtReady(initialize);
             <div class="d-flex align-center">
               <div class="mr-2">
                 {{
-                  fourAvg < 50
+                  fourAvg > 50
                     ? $t('convene.rank.bottom')
                     : $t('convene.rank.top')
                 }}
               </div>
               <div
                 class="text-h6 font-weight-bold"
-                :style="`color: hsl(${(fourAvg / 100) * 100}, 100%, 50%);`"
+                :style="`color: hsl(${100 - (fourAvg / 100) * 100}, 100%, 50%);`"
               >
                 {{ fourAvgPercentage }}%
               </div>
@@ -323,6 +333,12 @@ onNuxtReady(initialize);
           </template>
         </v-list-item>
       </v-alert>
+
+      <v-progress-linear
+        v-if="fourAvg > 0"
+        :model-value="fourAvg"
+        class="rounded-be-lg rounded-bs-lg bg-background"
+      />
     </v-card-text>
   </v-card>
 </template>
