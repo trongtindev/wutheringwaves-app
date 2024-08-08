@@ -35,6 +35,15 @@ const fiveAvgData = ref<number[][]>([]);
 const fiveAvgPercentage = ref('~');
 const fiveAvgMoreThanPercentage = ref('~');
 
+// computed
+const fiveAvgProgress = computed(() => {
+  return 100 - fiveAvg.value;
+});
+
+const fourAvgProgress = computed(() => {
+  return 100 - fourAvg.value;
+});
+
 // functions
 const initialize = () => {
   api
@@ -257,8 +266,8 @@ onNuxtReady(initialize);
       <!-- Luckiness 5★ -->
       <v-alert
         :class="{
-          'mb-4': fiveAvg <= 0,
-          'rounded-be-0 rounded-bs-0': fiveAvg > 0,
+          'mb-4': fiveAvgProgress <= 0,
+          'rounded-be-0 rounded-bs-0': fiveAvgProgress > 0,
         }"
       >
         <v-list-item class="pa-0">
@@ -294,13 +303,13 @@ onNuxtReady(initialize);
         </v-list-item>
       </v-alert>
       <v-progress-linear
-        v-if="fiveAvg > 0"
-        :model-value="fiveAvg"
+        v-if="fiveAvgProgress > 0"
+        :model-value="fiveAvgProgress"
         class="mb-4 rounded-be-lg rounded-bs-lg bg-background"
       />
 
       <!-- Luckiness 4★ -->
-      <v-alert :class="{ 'rounded-be-0 rounded-bs-0': fourAvg > 0 }">
+      <v-alert :class="{ 'rounded-be-0 rounded-bs-0': fourAvgProgress > 0 }">
         <v-list-item class="pa-0">
           <v-list-item-title class="text-rarity4">
             {{ $t('convene.rank.luck4') }}
@@ -335,8 +344,8 @@ onNuxtReady(initialize);
       </v-alert>
 
       <v-progress-linear
-        v-if="fourAvg > 0"
-        :model-value="fourAvg"
+        v-if="fourAvgProgress > 0"
+        :model-value="fourAvgProgress"
         class="rounded-be-lg rounded-bs-lg bg-background"
       />
     </v-card-text>
