@@ -28,9 +28,15 @@ export const useCalculator = defineStore('useCalculator', () => {
   const dialog = useDialog();
 
   // states
-  const participant = ref(0);
-  const participants = ref<ICalculatorParticipant[]>(INITIAL_PARTICIPANTS());
-  const rotations = ref<[string, ICharacterSkillData][]>([]);
+  const participant = useLocalStorage('calculator.participant', 0);
+  const participants = useLocalStorage<ICalculatorParticipant[]>(
+    'calculator.participants',
+    INITIAL_PARTICIPANTS(),
+  );
+  const rotations = useLocalStorage<[string, ICharacterSkillData][]>(
+    'calculator.rotations',
+    [],
+  );
 
   // functions
   const reset = () => {
