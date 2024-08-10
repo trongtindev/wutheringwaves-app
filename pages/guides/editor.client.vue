@@ -149,7 +149,7 @@ useHead({
 </script>
 
 <template>
-  <client-only>
+  <div>
     <v-row>
       <v-col cols="12" md="8">
         <v-card>
@@ -332,5 +332,5 @@ useHead({
       :roles="['Owner', 'Manager', 'Moderator', 'Content Writer']"
       type="any"
     />
-  </client-only>
+  </div>
 </template>

@@ -11,6 +11,14 @@ const props = defineProps<{
 
 // uses
 const localePath = useLocalePath();
+
+// events
+const onPressedTranslate = () => {
+  window.location.href = localePath({
+    path: '/commit',
+    query: props.translate,
+  });
+};
 </script>
 
 <template>
@@ -27,15 +35,10 @@ const localePath = useLocalePath();
 
     <v-chip
       v-if="props.translate"
-      :to="
-        localePath({
-          path: '/commit',
-          query: props.translate,
-        })
-      "
       :text="$t('common.translateThisPage')"
       :prepend-icon="mdiTranslate"
       rel="nofollow"
+      @click="onPressedTranslate"
     />
 
     <v-chip

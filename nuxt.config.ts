@@ -28,7 +28,10 @@ const {
   DONATE_URL,
   DONATE_DISABLED,
 } = import.meta.env;
+
 const NITRO_PRERENDER = import.meta.env.NITRO_PRERENDER !== 'false';
+const NITRO_PRERENDER_CRAWL =
+  NITRO_PRERENDER && import.meta.env.NITRO_PRERENDER_CRAWL !== 'false';
 
 const localesMetadata: LocaleObject[] = [
   {
@@ -95,27 +98,15 @@ export default defineNuxtConfig({
           'Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-Width, Sec-CH-Viewport-Width',
       },
     },
-    '/': { prerender: true },
-    '/characters': { prerender: true },
-    '/characters/**': { prerender: true },
-    '/echoes': { prerender: true },
-    '/echoes/**': { prerender: true },
-    '/items': { prerender: true },
-    '/items/**': { prerender: true },
-    '/weapons': { prerender: true },
-    '/weapons/**': { prerender: true },
-    '/trophies': { prerender: true },
-    '/trophies/**': { prerender: true },
     '/settings': { robots: false },
     '/convene-history/import': { robots: false },
     '/license': { robots: false },
     '/guides': { prerender: false },
-    '/guides/editor': { robots: false, prerender: false },
-    '/guides/rss': { proxy: '/api/rss/guides', prerender: false },
+    '/guides/editor': { robots: false },
+    '/guides/rss': { proxy: '/api/rss/guides' },
     '/commit': { robots: false, prerender: false },
-    '/commit/**': { robots: false, prerender: false },
-    '/calculator/import': { robots: false, prerender: false },
-    '/calculator/inventory': { robots: false, prerender: false },
+    '/calculator/import': { robots: false },
+    '/calculator/inventory': { robots: false },
     // TODO: remove soon
     '/echos/**': { redirect: '/echoes/**' },
   },
@@ -127,7 +118,6 @@ export default defineNuxtConfig({
       '/convene-history/import',
       '/privacy-policy',
       '/license',
-      '/donation',
       '/guides/rss',
       '/guides/editor',
       '/errors',
@@ -226,7 +216,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      crawlLinks: NITRO_PRERENDER,
+      crawlLinks: NITRO_PRERENDER_CRAWL,
       routes: NITRO_PRERENDER ? ['/', '/sitemap.xml'] : [],
     },
   },

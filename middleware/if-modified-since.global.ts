@@ -21,7 +21,7 @@ export default defineNuxtRouteMiddleware((to) => {
     return;
   }
 
-  const headers = useRequestHeaders(['If-Modified-Since']);
+  const headers = useRequestHeaders(['if-modified-since']);
   if (headers['if-modified-since']) {
     const { buildNumber } = useAppConfig();
     const modifiedSince = new Date(headers['if-modified-since']);
