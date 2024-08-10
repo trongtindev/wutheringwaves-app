@@ -1,3 +1,3 @@
 [submodule "calculator"]
 	path = calculator
-	url = https://github.com/trongtindev/wutheringwaves-app-calculator
+  url = git@github.com:trongtindev/wutheringwaves-app-calculator.git
