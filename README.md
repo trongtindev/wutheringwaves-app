@@ -68,39 +68,20 @@ disable Vetur).
 
 ### Project Setup
 
+#### Install Bun
+
 ```sh
-bun install
+curl -fsSL https://bun.sh/install | bash
+```
+
+```sh
+powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
 #### Compile and Hot-Reload for Development
 
 ```sh
 bun run dev
-```
-
-#### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-bun test:unit
-```
-
-#### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-bun build
-
-# Runs the end-to-end tests
-bun test:e2e
-# Runs the tests only on Chromium
-bun test:e2e --project=chromium
-# Runs the tests of a specific file
-bun test:e2e tests/example.spec.ts
-# Runs the tests in debug mode
-bun test:e2e --debug
 ```
 
 # License

@@ -148,22 +148,18 @@ export const useSidebar = defineStore('useSidebar', () => {
       items: [
         {
           url: '/items',
-          icon: mdiGrid,
           title: 'sidebar.items',
         },
         {
           url: '/trophies',
-          icon: mdiTrophy,
           title: 'sidebar.trophies',
         },
         {
           url: '/echoes',
-          icon: '/icons/echo.png',
           title: 'sidebar.echoes',
         },
         {
           url: '/weapons',
-          icon: '/icons/weapon.png',
           title: 'sidebar.weapons',
         },
       ],
