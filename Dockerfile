@@ -9,7 +9,6 @@ COPY . .
 ### install and build
 RUN bun i --frozen-lockfile
 ENV NITRO_PRESET=bun
-ENV NITRO_PRERENDER=false
 RUN bun run build
 
 # run-stage
