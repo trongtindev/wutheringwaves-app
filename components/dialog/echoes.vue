@@ -42,7 +42,7 @@ const filterEchoes = computed(() => {
 });
 
 // lifecycle
-onMounted(initialize);
+onNuxtReady(initialize);
 </script>
 
 <template>
@@ -51,6 +51,7 @@ onMounted(initialize);
       <div class="d-flex flex-wrap ga-2 justify-center">
         <v-chip
           v-for="cost in [0, 4, 3, 1]"
+          :key="cost"
           :text="cost === 0 ? $t('common.all') : `${$t('common.cost')} ${cost}`"
           :prepend-icon="filterCost === cost ? mdiCheck : undefined"
           @click="() => (filterCost = cost)"
@@ -66,6 +67,7 @@ onMounted(initialize);
 
         <v-chip
           v-for="sonata in sonataEffects"
+          :key="sonata.name"
           :text="sonata.name"
           :prepend-icon="
             filterSonata && filterSonata === sonata?.slug ? mdiCheck : undefined

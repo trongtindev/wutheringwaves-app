@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type {
   IAttribute,
   ICharacter,
@@ -13,6 +14,18 @@ import type { ITimeline } from '~/interfaces/timeline';
 import type { ITrophy } from '~/interfaces/trophy';
 
 export const useResources = defineStore('useResources', () => {
+  // states
+  const itemList = ref<any[]>();
+  const characterList = ref<any[]>();
+  const weaponList = ref<any[]>();
+  const echoList = ref<any[]>();
+  const trophyList = ref<{
+    items: any[];
+    publishedTime: string;
+    modifiedTime: string;
+  }>();
+
+  // functions
   const getBanners = async (selector?: IBanner) => {
     const data = await import('~/resources/banners.json');
     const clone = cloneObject(data.default.items);
@@ -39,8 +52,11 @@ export const useResources = defineStore('useResources', () => {
   const getWeapons = async (
     selector?: Partial<IWeapon>,
   ): Promise<IWeapon[]> => {
-    const data = await import('~/resources/weapons.json');
-    const clone = cloneObject(data.default.items);
+    if (!weaponList.value) {
+      const { data } = await useFetch('/api/resources/weapons');
+      weaponList.value = data.value!;
+    }
+    const clone = cloneObject(weaponList.value);
     const items = clone
       .map((e) => {
         return {
@@ -72,8 +88,11 @@ export const useResources = defineStore('useResources', () => {
   const getCharacters = async (
     selector?: Partial<ICharacter>,
   ): Promise<ICharacter[]> => {
-    const data = await import('~/resources/characters.json');
-    const clone = cloneObject(data.default.items);
+    if (!characterList.value) {
+      const { data } = await useFetch('/api/resources/characters');
+      characterList.value = data.value!;
+    }
+    const clone = cloneObject(characterList.value);
     const attributes = await getAttributes();
 
     const items = clone
@@ -169,8 +188,11 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getEchoes = async (selector?: Partial<IEcho>): Promise<IEcho[]> => {
-    const data = await import('~/resources/echoes.json');
-    const clone = cloneObject(data.default.items);
+    if (!echoList.value) {
+      const { data } = await useFetch('/api/resources/echoes');
+      echoList.value = data.value!;
+    }
+    const clone = cloneObject(echoList.value);
     const attrs = await getAttributes();
     const sonataEffects = await getSonataEffects();
     const items = clone
@@ -214,8 +236,12 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getItems = async (selector?: Partial<IItem>): Promise<IItem[]> => {
-    const data = await import('~/resources/items.json');
-    const clone = cloneObject(data.default.items);
+    if (!itemList.value) {
+      const { data } = await useFetch('/api/resources/items');
+      itemList.value = data.value!;
+    }
+    const clone = cloneObject(itemList.value);
+
     const items = clone
       .filter((e) => {
         if (selector) {
@@ -243,24 +269,31 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getTrophies = async (): Promise<ITrophy[]> => {
-    const data = await import('~/resources/trophy_items.json');
-    return data.default.items.map((e) => {
+    if (!trophyList.value) {
+      const { data } = await useFetch('/api/resources/trophies');
+      trophyList.value = data.value!;
+    }
+    const clone = cloneObject(trophyList.value!);
+    return clone.items.map((e) => {
       return {
         ...e,
-        publishedTime: e.publishedTime || data.default.publishedTime,
-        modifiedTime: e.modifiedTime || data.default.modifiedTime,
+        publishedTime: e.publishedTime || clone.publishedTime,
+        modifiedTime: e.modifiedTime || clone.modifiedTime,
       };
     });
   };
 
   const getTrophy = async (slug: string): Promise<ITrophy> => {
-    const data = await import('~/resources/trophy_items.json');
-    return data.default.items
+    if (!trophyList.value) {
+      await getTrophies();
+    }
+    const clone = cloneObject(trophyList.value!);
+    return clone.items
       .map((e) => {
         return {
           ...e,
-          publishedTime: e.publishedTime || data.default.publishedTime,
-          modifiedTime: e.modifiedTime || data.default.modifiedTime,
+          publishedTime: e.publishedTime || clone.publishedTime,
+          modifiedTime: e.modifiedTime || clone.modifiedTime,
         };
       })
       .find((e) => e.slug === slug)!;
@@ -298,7 +331,6 @@ export const useResources = defineStore('useResources', () => {
   };
 
   return {
-    banners: getBanners,
     getBanners,
     getWeapons,
     getWeaponData,

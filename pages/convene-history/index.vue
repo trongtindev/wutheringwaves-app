@@ -22,7 +22,7 @@ const account = useAccount();
 const importConvene = useImportConvene();
 
 // states
-const banners = await resources.banners();
+const banners = await resources.getBanners();
 const convenes = ref<ConveneDocumentConverted[]>([]);
 const filterBanner = ref<IBanner>();
 const filterRarity = ref<number[]>([5]);
