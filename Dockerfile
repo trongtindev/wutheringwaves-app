@@ -1,5 +1,5 @@
 # build-stage
-FROM oven/bun:1.1.25 AS build-stage
+FROM oven/bun:latest AS build-stage
 ENV CI=1
 WORKDIR /app
 
@@ -12,7 +12,7 @@ ENV NITRO_PRESET=bun
 RUN bun run build
 
 # run-stage
-FROM oven/bun:1.1.25
+FROM oven/bun:latest
 ENV CI=1
 WORKDIR /app
 EXPOSE 3000
