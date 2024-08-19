@@ -103,7 +103,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/sitemap',
     'nuxt-schema-org',
-    '@nuxtjs/robots',
     '@nuxtjs/device',
     '@nuxt/scripts',
     // dev
@@ -111,20 +110,7 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
-    '/**': {
-      headers: {
-        'Accept-CH':
-          'Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-Width, Sec-CH-Viewport-Width',
-      },
-    },
-    '/settings': { robots: false },
-    '/convene-history/import': { robots: false },
-    '/license': { robots: false },
     '/guides/rss': { proxy: '/api/rss/guides' },
-    '/commit': { robots: false, prerender: false },
-    '/calculator/import': { robots: false },
-    '/calculator/inventory': { robots: false },
-    '/calculator/simulation': { robots: false },
     // TODO: remove soon
     '/echos/**': { redirect: '/echoes/**' },
   },
