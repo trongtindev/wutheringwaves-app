@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020041, "quantity": 5 },
+        { "item": 41100012, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020042, "quantity": 7 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020043, "quantity": 5 },
+        { "item": 41100013, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 7 },
+        { "item": 41100014, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 10 },
+        { "item": 41100014, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "The Broadblade born from the aerial phenomenon. The blacksmith incorporates the feelings of witnessing the alien star into the weapon, making it look hollow and light, but it can exert the invincible gravity of the starfall.",
+  "modifiedTime": "2024-07-09T15:18:08.489Z",
+  "publishedTime": "2024-06-28T15:43:22.055Z",
+  "ranks": [
+    "Within 12s after Resonance Skill is cast, increases ATK by 3% every 2s, stacking up to 4 time(s). This effect can be triggered 1 time(s) every 12s. When the number of stacks reaches 4, all stacks will be reset within 6s.",
+    "Within 12s after Resonance Skill is cast, increases ATK by 3.75% every 2s, stacking up to 4 time(s). This effect can be triggered 1 time(s) every 12s. When the number of stacks reaches 4, all stacks will be reset within 6s.",
+    "Within 12s after Resonance Skill is cast, increases ATK by 4.5% every 2s, stacking up to 4 time(s). This effect can be triggered 1 time(s) every 12s. When the number of stacks reaches 4, all stacks will be reset within 6s.",
+    "Within 12s after Resonance Skill is cast, increases ATK by 5.25% every 2s, stacking up to 4 time(s). This effect can be triggered 1 time(s) every 12s. When the number of stacks reaches 4, all stacks will be reset within 6s.",
+    "Within 12s after Resonance Skill is cast, increases ATK by 6% every 2s, stacking up to 4 time(s). This effect can be triggered 1 time(s) every 12s. When the number of stacks reaches 4, all stacks will be reset within 6s."
+  ],
+  "skill": {
+    "params": [
+      ["12", "2", "3%", "4", "12", "1", "4", "6"],
+      ["12", "2", "3.75%", "4", "12", "1", "4", "6"],
+      ["12", "2", "4.5%", "4", "12", "1", "4", "6"],
+      ["12", "2", "5.25%", "4", "12", "1", "4", "6"],
+      ["12", "2", "6%", "4", "12", "1", "4", "6"]
+    ],
+    "description": "Within {0}s after Resonance Skill is cast, increases ATK by {2} every {1}s, stacking up to {3} time(s). This effect can be triggered {5} time(s) every {4}s. When the number of stacks reaches {6}, all stacks will be reset within {7}s."
+  },
+  "slug": "helios-cleaver",
+  "stats": { "atkFlat": 33, "atk": 6.8 }
+}

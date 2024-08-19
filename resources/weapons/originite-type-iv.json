@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 4 },
+        { "item": 2, "quantity": 6000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020051, "quantity": 4 },
+        { "item": 41100022, "quantity": 4 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020052, "quantity": 5 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020053, "quantity": 4 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 36000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 5 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020054, "quantity": 8 },
+        { "item": 41100024, "quantity": 5 },
+        { "item": 2, "quantity": 72000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "To create new Tacetite weapons, the Huaxu Academy designed these test Gauntlets for technical verification. Their main feature is healing through attacks, improving the physical abilities of Resonators while exhibiting impressive weapon performance.",
+  "modifiedTime": "2024-07-09T15:18:08.511Z",
+  "publishedTime": "2024-06-28T15:43:22.058Z",
+  "ranks": [
+    "When hitting a target with Basic Attacks, restores HP by 0.5%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 0.65%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 0.8%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 0.95%. This effect can be triggered 1 time(s) every 3s.",
+    "When hitting a target with Basic Attacks, restores HP by 1.1%. This effect can be triggered 1 time(s) every 3s."
+  ],
+  "skill": {
+    "params": [
+      ["0.5%", "3", "1"],
+      ["0.65%", "3", "1"],
+      ["0.8%", "3", "1"],
+      ["0.95%", "3", "1"],
+      ["1.1%", "3", "1"]
+    ],
+    "description": "When hitting a target with Basic Attacks, restores HP by {0}. This effect can be triggered {2} time(s) every {1}s."
+  },
+  "slug": "originite-type-iv",
+  "stats": { "atkFlat": 24, "critDMG": 9 }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "./.schema.json",
+  "bgDescription": "A private dish made by digging a hole in the tofu and filling it with special minced meat. The tofu that is dug out should not be wasted and can be made into other tofu snacks.",
+  "cookingIngredients": [
+    { "item": "Premium Incense Oil", "quantity": 1 },
+    { "item": "Clear Soup", "quantity": 1 },
+    { "item": "Tofu", "quantity": 2 },
+    { "item": "Raw Meat", "quantity": 4 }
+  ],
+  "description": "Increase the ATK of all Resonators in the team by 110 points and 25% Crit. Rate for 30 minutes. In multiplayer games, it only affects your own characters.",
+  "modifiedTime": "2024-07-09T15:18:54.296Z",
+  "publishedTime": "2024-06-28T15:43:22.011Z",
+  "unlockDescription": "You need [\"item=Stuffed Tofu Recipe\"] to unlock it."
+}

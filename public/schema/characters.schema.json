@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "images": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "anyOf": [{ "type": "string" }, { "type": "boolean" }]
+              },
+              "cover": {
+                "anyOf": [{ "type": "string" }, { "type": "boolean" }]
+              },
+              "portrait": {
+                "anyOf": [{ "type": "string" }, { "type": "boolean" }]
+              }
+            }
+          },
+          "nameLocalized": { "type": "object" },
+          "rarity": { "type": "integer" },
+          "weapon": {
+            "type": "string",
+            "enum": ["Sword", "Rectifier", "Broadblade", "Gauntlets", "Pistols"]
+          },
+          "attribute": {
+            "type": "string",
+            "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
+          },
+          "version": { "type": "number" },
+          "suggestedEchos": { "type": "array", "items": { "type": "string" } },
+          "hidden": { "type": "boolean" },
+          "publishedTime": { "type": "string" },
+          "modifiedTime": { "type": "string" }
+        },
+        "required": [
+          "id",
+          "slug",
+          "name",
+          "rarity",
+          "publishedTime",
+          "modifiedTime"
+        ]
+      }
+    }
+  },
+  "required": ["items"],
+  "type": "object"
+}

@@ -1,0 +1,328 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 2, "quantity": 5000 },
+        { "item": 41100021, "quantity": 4 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 10000 },
+        { "item": 41100022, "quantity": 4 },
+        { "item": 42310190, "quantity": 4 },
+        { "item": 41400034, "quantity": 3 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 15000 },
+        { "item": 41100022, "quantity": 8 },
+        { "item": 42310190, "quantity": 8 },
+        { "item": 41400034, "quantity": 6 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 20000 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 42310190, "quantity": 12 },
+        { "item": 41400034, "quantity": 9 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 40000 },
+        { "item": 41100023, "quantity": 8 },
+        { "item": 42310190, "quantity": 16 },
+        { "item": 41400034, "quantity": 12 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 80000 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 42310190, "quantity": 20 },
+        { "item": 41400034, "quantity": 16 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "bestEchoSets": [
+    { "items": ["Celestial Light"], "different": 100 },
+    { "items": ["Celestial Light", "Lingering Tunes"], "different": 91.2 },
+    { "items": ["Celestial Light", "Moonlit Clouds"], "different": 90.8 }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Spectro DMG", "ATK%"] },
+        { "cost": 3, "stats": ["Spectro DMG", "ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        { "cost": 4, "stats": ["Crit Rate"] },
+        { "cost": 4, "stats": ["Crit DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["jue", "mourning-aix", "mech-abomination"],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        { "role": "Main DPS", "items": ["jinhsi"] },
+        { "role": "Sub DPS", "items": ["yinlin", "mortefi", "yuanwu"] },
+        { "role": "Healer", "items": ["verina"] }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    { "item": "ages-of-harvest", "rank": 1, "different": 118.1 },
+    { "item": "verdant-summit", "rank": 1, "different": 101.3 },
+    { "item": "lustrous-razor", "rank": 1, "different": 100 },
+    { "item": "broadblade-41", "rank": 1, "different": 85.8 },
+    { "item": "helios-cleaver", "rank": 1, "different": 82 },
+    { "item": "broadblade-41", "rank": 1, "different": 81.9 },
+    { "item": "autumntrace", "rank": 1, "different": 79.8 },
+    { "item": "broadblade-of-night", "rank": 5, "different": 75.3 },
+    { "item": "guardian-broadblade", "rank": 5, "different": 70.3 }
+  ],
+  "birthday": "None",
+  "birthplace": "Huanglong",
+  "description": "Jinhsi, Magistrate of Jinzhou, gently brightens the hopes of her people, like rays of winter sunlight. \nAs the revered Sentinel's Appointed Resonator, she displays humility and wholeheartedly commits herself to guiding her people towards a brilliant future.",
+  "descriptionLocalized": {
+    "vi": "Jinhsi, Thẩm phán Cẩm Châu, nhẹ nhàng thắp sáng niềm hy vọng của người dân, như những tia nắng mùa đông. \nVới tư cách là Người cộng hưởng được chỉ định của Sentinel đáng kính, cô ấy thể hiện sự khiêm tốn và hết lòng cam kết hướng dẫn mọi người của mình hướng tới một tương lai tươi sáng.",
+    "id": "Jinhsi, Hakim Jinzhou, memancarkan harapan bagi rakyatnya dengan lembut, seperti sinar matahari musim dingin. Sebagai Resonator Terpilih dari Sentinel yang dihormati, dia menunjukkan kerendahan hati dan dengan sepenuh hati mengabdikan dirinya untuk membimbing rakyatnya menuju masa depan yang cerah.",
+    "th": "จินซี ผู้พิพากษาแห่งจินโจว ส่องแสงแห่งความหวังให้กับประชาชนของเธอ ดุจดั่งรังสีของดวงอาทิตย์ในฤดูหนาวในฐานะผู้ได้รับการแต่งตั้งจากเซนติเนลที่เคารพนับถือ เธอแสดงความอ่อนน้อมถ่อมตน และทุ่มเทอย่างเต็มที่ในการนำพาประชาชนของเธอไปสู่อนาคตอันสดใส"
+  },
+  "forte": [
+    {
+      "id": 313,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Crit. Rate+1.20%"
+    },
+    {
+      "id": 314,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 315,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 316,
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Crit. Rate+1.20%"
+    },
+    {
+      "id": 317,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Crit. Rate+2.80%"
+    },
+    {
+      "id": 318,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 319,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 320,
+      "cost": [
+        { "item": 43020044, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400144, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Crit. Rate+2.80%"
+    }
+  ],
+  "quote": "There's still much to be done. Please rest assured, I am here to guide you through it.",
+  "quoteLocalized": {
+    "vi": "Vẫn còn nhiều việc phải làm. Hãy yên tâm, tôi ở đây để hướng dẫn bạn thực hiện điều đó.",
+    "id": "Masih banyak yang harus dilakukan. Tenang, aku akan membantumu melewati semuanya.",
+    "th": "ยังมีอีกมากที่ต้องทำ โปรดมั่นใจว่าฉันจะนำทางคุณผ่านมันไป"
+  },
+  "resonanceChain": [
+    {
+      "idx": "ResonantChain_460_NodeIndex",
+      "slug": "abyssal-ascension",
+      "name": "Abyssal Ascension",
+      "params": ["4", "6", "20%"],
+      "description": "When Jinhsi casts Basic Attack <strong>\"Incarnation: Basic Attack\"</strong> or Resonance Skill <strong>\"Crescent Divinity\"</strong>, gain one stack of <strong>Herald of Revival</strong>, which stacks up to {0} times and last for {1}s. When casting Resonance Skill <strong>\"Illuminous Epiphany\"</strong>, Jinhsi consumes all stacks of <strong>Herald of Revival</strong>. Each stack increases the DMG of Resonance Skill <strong>\"Illuminous Epiphany\"</strong> by {2}.",
+      "descriptionLocalized": {
+        "vi": "Khi Jinhsi thi triển Basic Attack <strong>\"Incarnation: Basic Attack\"</strong> hoặc Resonance Skill <strong>\"Crescent Divinity\"</strong>, đạt được một <strong>Herald of Revival</strong>, có thể cộng dồn {0} lần và kéo dài trong {1}s. Khi thi triển Resonance Skill <strong>\"Illuminous Epiphany\"</strong>, Jinhsi tiêu thụ tất cả <strong>Herald of Revival</strong>. Mỗi lượt cộng dồn sẽ tăng DMG của Resonance Skill <strong>\"Illuminous Epiphany\"</strong> bằng {2}."
+      }
+    },
+    {
+      "idx": "ResonantChain_464_NodeIndex",
+      "slug": "chronofrost-repose",
+      "name": "Chronofrost Repose",
+      "params": ["4", "40", "4", "1"],
+      "description": "Jinhsi recovers {1} Incandescence while staying out of combat for more than {0}s. This effect can only be triggered {3} every {2}s.",
+      "descriptionLocalized": {
+        "vi": "Jinhsi hồi phục {1} Incandescence trong khi không tham gia chiến đấu trong hơn {0}s. Hiệu ứng này chỉ có thể được kích hoạt {3} mỗi {2}s."
+      }
+    },
+    {
+      "idx": "ResonantChain_468_NodeIndex",
+      "slug": "celestial-incarnate",
+      "name": "Celestial Incarnate",
+      "params": ["12", "25%", "2", "20"],
+      "description": "Gain {0} Incandescence and a stack of <strong>Immortal's Descendancy</strong> after casting Intro Skill <strong>Loong's Halo</strong>. Every stack of <strong>Immortal's Descendancy</strong> increases ATK by {1}, for up to {2} stacks, lasting for {3}s.",
+      "descriptionLocalized": {
+        "vi": "Nhận được {0} Incandescence và <strong>Immortal's Descendancy</strong> sau khi thi triển Intro Skill <strong>Loong's Halo</strong>. Mỗi <strong>Immortal's Descendancy</strong> sẽ tăng ATK bằng {1}, cồng dồn tối đa {2} lần, kéo dài {3}s."
+      }
+    },
+    {
+      "idx": "ResonantChain_472_NodeIndex",
+      "slug": "benevolent-grace",
+      "name": "Benevolent Grace",
+      "params": ["20%", "20"],
+      "description": "When casting Resonance Liberation <strong>Purge of Light</strong> or Resonance Skill <strong>Illuminous Epiphany</strong>, all nearby Characters in the team gain DMG Bonus for all attributes by {0} for {1}s."
+    },
+    {
+      "idx": "ResonantChain_476_NodeIndex",
+      "slug": "frostfire-illumination",
+      "name": "Frostfire Illumination",
+      "params": ["120%"],
+      "description": "The DMG Multiplier of Resonance Liberation <strong>Purge of Evil</strong> is increased by {0}."
+    },
+    {
+      "idx": "ResonantChain_480_NodeIndex",
+      "slug": "comes-spring-when-chill-exhausts",
+      "name": "Comes Spring when Chill Exhausts",
+      "params": ["45%", "45%"],
+      "description": "DMG Multiplier percentage for Resonance Skill <strong>Illuminous Epiphany</strong> is increased by {0}. The multiplier increase brought by Incandescence is additionally increased by {1}."
+    }
+  ],
+  "skillPriority": [
+    "Forte Circuit",
+    "Resonance Liberation",
+    "Resonance Skill",
+    "Intro Skill",
+    "Basic Attack"
+  ],
+  "skills": [
+    {
+      "slug": "slash-of-breaking-dawn",
+      "name": "Slash of Breaking Dawn",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nPerform up to 4 consecutive strikes, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n\nHeavy Attack</color>\nPerform a charged attack by consuming Stamina, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n\n<strong>Mid-Air Attack</strong>\nPerform a Plunging Attack while in mid-air by consuming Stamina, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n\n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to counterattack, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.",
+      "descriptionLocalized": {
+        "vi": "<strong>Basic Attack</strong>\nThực hiện tối đa 4 đòn liên tiếp, gây sát thương <strong class=\"color-spectro\">Spectro DMG</strong>.\n\nHeavy Attack</color>\nThực hiện đòn tấn công tích điện bằng cách tiêu thụ thể lực, gây sát thương <strong class=\"color-spectro\">Spectro DMG</strong>.\n\n<strong>Mid-Air Attack</strong>\nThực hiện Plunging Attack khi đang ở giữa không trung bằng cách tiêu thụ thể lực, gây sát thương <strong class=\"color-spectro\">Spectro DMG</strong>.\n\n<strong>Dodge Counter</strong>\nSử dụng <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to counterattack, gây sát thương <strong class=\"color-spectro\">Spectro DMG</strong>."
+      }
+    },
+    {
+      "slug": "trailing-lights-of-eons",
+      "name": "Trailing Lights of Eons",
+      "type": "Resonance Skill",
+      "description": "Dash forward and perform consecutive strikes that inflict <strong class=\"color-spectro\">Spectro DMG</strong>.\n\n<strong>Overflowing Radiance</strong>\nAfter Jinhsi uses <strong class=\"color-spectro\">Basic Attack 4</strong> or, while not in <strong>Incarnation</strong>, Intro Skill <strong>Loong's Halo</strong>, an alternative Resonance Skill <strong>Overflowing Radiance</strong> becomes available within <strong class=\"color-spectro\">5</strong>s.\nResonance Skill <strong>Overflowing Radiance</strong> inflicts <strong>Spectro DMG</strong> and sends Jinhsi into <strong> Incarnation</strong>.\nCan be cast in mid-air.",
+      "descriptionLocalized": {
+        "vi": "Lao về phía trước và thực hiện các đòn đánh liên tiếp gây sát thương <strong class=\"color-spectro\">Spectro DMG</strong>.\n\n<strong>Overflowing Radiance</strong>\nSau khi Jinhsi sử dụng <strong class=\"color-spectro\">Basic Attack 4</strong> hoặc, trong khi không ở <strong>Incarnation</strong>, Intro Skill <strong>Loong's Halo</strong>, sẽ thay thế Resonance Skill <strong>Overflowing Radiance</strong> sẽ sẵn sàng trong <strong class=\"color-spectro\">5</strong>s.\n\nResonance Skill <strong>Overflowing Radiance</strong> gây ra <strong>Spectro DMG</strong> and sends Jinhsi into <strong> Incarnation</strong>.\nCó thể thi triển giữa không trung."
+      }
+    },
+    {
+      "slug": "purge-of-light",
+      "name": "Purge of Light",
+      "type": "Resonance Liberation",
+      "description": "Unleash the power of a heart's wish to deal <strong>Spectro DMG</strong>.\nCan be cast in mid-air."
+    },
+    {
+      "slug": "radiant-surge",
+      "name": "Radiant Surge",
+      "type": "Inherent Skill",
+      "description": "Jinhsi's Spectro DMG Bonus is increased by <strong class=\"color-spectro\">20%</strong>."
+    },
+    {
+      "slug": "converged-flash",
+      "name": "Converged Flash",
+      "type": "Inherent Skill",
+      "description": "Intro Skill <strong>Loong's Halo</strong> gains <strong style=\"color: var(--theme-palette-color-1);\">50%</strong> additional DMG."
+    },
+    {
+      "slug": "loong-s-halo",
+      "name": "Loong's Halo",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong>Spectro DMG</strong>."
+    },
+    {
+      "slug": "luminal-synthesis",
+      "name": "Luminal Synthesis",
+      "type": "Forte Circuit",
+      "description": "<strong>Incarnation</strong>\nWhile in <strong>Incarnation</strong>:\n- Alternative Basic Attack <strong>\"Incarnation: Basic Attack\"</strong> becomes available. Perform up to 4 consecutive strikes, dealing <strong class=\"color-spectro\">Spectro DMG</strong>. The basic attack cycle of this will not be reset. Can be cast in mid-air.\n- Alternative Resonance Skill <strong>\"Crescent Divinity\"</strong> becomes available. Deal <strong class=\"color-spectro\">Spectro DMG</strong>. Can be cast in mid-air.\n- Alternative Heavy Attack <strong>\"Incarnation: Heavy Attack\"</strong> becomes available. Attack the target in mid-air at the cost of Stamina, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\n- Alternative Dodge <strong>\"Incarnation: Dodge\"</strong> becomes available while airborne. Can be cast multiple times at the cost of Stamina.\n- Alternative Dodge Counter <strong>\"Incarnation: Dodge Counter\"</strong> becomes available. Deal <strong class=\"color-spectro\">Spectro Damage</strong>.\nCan be cast in mid-air.\n\n<strong>Resonance Skill: Illuminous Epiphany</strong>\nAfter Stage 4 of <strong>Incarnation: Basic Attack</strong>, <strong>Incarnation</strong> terminates and Jinhsi gains <strong>Ordination Glow</strong>. \nCan be cast in mid-air.\nWhile <strong>Ordination Glow</strong> lasts:\n- Basic Attack is replaced with the Alternative Heavy Attack <strong>\"Incarnation: Heavy Attack\"</strong> when airborne. Attack the target in mid-air at the cost of Stamina, dealing <strong class=\"color-spectro\">Spectro DMG</strong>.\nResonance Skill is replaced with Resonance Skill <strong>Illuminous Epiphany</strong>. Send out <strong>Solar Flare</strong> that detonates as <strong>Stella Glamour</strong> that deals <strong class=\"color-spectro\">Spectro Damage</strong> after a short delay. When Jinhsi has \"Incandescence\", consume up to <strong class=\"color-spectro\">40</strong> Incandescence, each point of Incandescence grants an additional DMG multiplier percentage to the <strong>Star Glamour</strong>. Can be cast in mid-air.\nAfter casting Resonance Skill <strong>Illuminous Epiphany</strong>, Jinhsi gains <strong>Unison</strong>. This can be triggered once in <strong class=\"color-spectro\">25</strong>s.\n\n<strong>Unison</strong>\nWhile Jinhsi has <strong>Unison</strong>, switching to other Characters will remove Jinhsi's <strong>Unison</strong> to trigger Jinhsi's Outro Skill and the incoming character's Intro Skill. <strong>Unison</strong> will be consumed in priority in place of Concerto Energy when Concerto Energy is full.\n\n<strong>Incandescence</strong>\nJinhsi can hold up to <strong class=\"color-spectro\">40</strong> Incandescence。\nWhen Jinhsi is on the team, all nearby characters on the team gain <strong>Eras in Unity</strong>. When characters with <strong>Eras in Unity</strong> deal Damage with an attribute, Jinhsi gains <strong class=\"color-spectro\">1</strong> Incandescence. Damage of the same attribute can provide up to <strong class=\"color-spectro\">1</strong> Incandescence every <strong class=\"color-spectro\">3</strong>s."
+    },
+    {
+      "slug": "skill-1002008-skill-name",
+      "name": "Skill_1002008_SkillName",
+      "type": "Inherent Skill",
+      "description": "Skill_1002008_SkillDescribe"
+    },
+    {
+      "slug": "temporal-bender",
+      "name": "Temporal Bender",
+      "type": "Outro Skill",
+      "description": "With the power homologous with the Sentinel, Jinhsi reduces the Cooldown of <strong>Eras in Unity</strong> to <strong style=\"color: var(--theme-palette-color-1);\">1</strong>s. This lasts for <strong style=\"color: var(--theme-palette-color-1);\">20</strong>s."
+    }
+  ],
+  "splashArt": true,
+  "stats": { "hp": 866, "def": 103, "atk": 33, "energy": 125 },
+  "voiceActors": [
+    { "name": "Anna Devlin", "locale": "en" },
+    { "name": "Yoshino Aoyama", "locale": "jp" },
+    { "name": "Jiang Yue", "locale": "zh" },
+    { "name": "Park Ha Jin", "locale": "ko" }
+  ]
+}

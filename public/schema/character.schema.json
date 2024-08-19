@@ -1,0 +1,214 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "voiceActors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "locale": { "type": "string", "enum": ["en", "jp", "zh", "ko"] }
+        }
+      }
+    },
+    "birthday": { "type": "string" },
+    "birthplace": { "type": "string" },
+    "quote": { "type": "string" },
+    "quoteLocalized": { "type": "object" },
+    "description": { "type": "string" },
+    "descriptionLocalized": { "type": "object" },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "atk": { "type": "number" },
+        "def": { "type": "number" },
+        "hp": { "type": "number" },
+        "energy": { "type": "number" }
+      },
+      "required": ["atk", "def", "hp", "energy"]
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Basic Attack",
+              "Resonance Skill",
+              "Resonance Liberation",
+              "Inherent Skill",
+              "Intro Skill",
+              "Outro Skill",
+              "Forte Circuit"
+            ]
+          },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" },
+          "description": { "type": "string" },
+          "descriptionLocalized": { "type": "object" }
+        },
+        "required": ["slug", "type", "name", "description"]
+      }
+    },
+    "ascensions": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "cost": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "type": "string",
+                  "$ref": "./item.components.json#/components/schemas/slug"
+                },
+                "quantity": { "type": "integer" }
+              },
+              "required": ["item", "quantity"]
+            }
+          },
+          "minLevel": { "type": "integer" }
+        },
+        "required": ["cost", "minLevel"]
+      }
+    },
+    "bestWeapons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "./weapon.components.json#/components/schemas/slug"
+          },
+          "rank": { "type": "integer" },
+          "different": { "type": "number" }
+        },
+        "required": ["item", "rank", "different"]
+      }
+    },
+    "bestEchoSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "./echo.components.json#/components/schemas/sonataEffect"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "different": { "type": "number" }
+        },
+        "required": ["items", "different"]
+      },
+      "minItems": 1
+    },
+    "bestMainEchoes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "$ref": "./echo.components.json#/components/schemas/slug"
+      }
+    },
+    "bestEchoStats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["4-3-3-1-1", "4-4-1-1-1"] },
+          "name": { "type": "string" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "cost": { "type": "integer", "maximum": 4, "minimum": 1 },
+                "stats": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "$ref": "./echo.components.json#/components/schemas/echoMainStat"
+                  }
+                }
+              },
+              "required": ["cost", "stats"]
+            },
+            "minItems": 1,
+            "maxItems": 5
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "skillPriority": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Basic Attack",
+          "Resonance Skill",
+          "Resonance Liberation",
+          "Inherent Skill",
+          "Intro Skill",
+          "Outro Skill",
+          "Forte Circuit"
+        ]
+      }
+    },
+    "bestTeams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "$ref": "./character.components.json#/components/schemas/role"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "$ref": "./character.components.json#/components/schemas/slug"
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": ["role", "items"]
+            }
+          }
+        },
+        "required": ["items"]
+      },
+      "minItems": 1
+    },
+    "splashArt": { "anyOf": [{ "type": "boolean" }, { "type": "string" }] },
+    "resonanceChain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string" },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" },
+          "params": { "type": "array", "items": { "type": "string" } },
+          "description": { "type": "string" },
+          "descriptionLocalized": { "type": "object" }
+        }
+      }
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "bgDescription": "The core module of the Waypoint, responsible for collecting, sharing, and updating location information. It connects the Waypoint and the Resonance Beacon, making it essential for initiating and maintaining the functioning of the Waypoint.",
+  "description": "Used to activate the search funcion of Waypoint.",
+  "modifiedTime": "2024-07-09T15:18:54.434Z",
+  "publishedTime": "2024-06-28T15:43:22.038Z"
+}

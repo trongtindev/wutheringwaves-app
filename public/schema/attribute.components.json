@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "components": {
+    "schemas": {
+      "slug": {
+        "type": "string",
+        "enum": ["aero", "fusion", "glacio", "electro", "spectro", "havoc"]
+      },
+      "name": {
+        "type": "string",
+        "enum": ["Aero", "Fusion", "Glacio", "Electro", "Spectro", "Havoc"]
+      }
+    }
+  }
+}

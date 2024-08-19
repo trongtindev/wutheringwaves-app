@@ -1,0 +1,8 @@
+{
+  "$schema": "./.schema.json",
+  "bgDescription": "A recipe that details how to make Stuffed Tofu.",
+  "description": "Used to learn how to cook Stuffed Tofu.",
+  "modifiedTime": "2024-07-09T15:18:54.295Z",
+  "obtainDescription": "The recipe for [item=\"Stuffed Tofu\"] can be bought on the Hongzhen Souvenir Store in Mt. Firmament. It will cost 20 [item=\"Wood-textured Shards\"].\nYou can unlock this shop after completing <b>Chapter 1: Act 7</b> of the main quest.",
+  "publishedTime": "2024-06-28T15:43:22.011Z"
+}

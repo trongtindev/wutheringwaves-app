@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A item in the catalog",
+  "properties": {
+    "description": { "type": "string" },
+    "descriptionLocalized": { "type": "object" },
+    "bgDescription": { "type": "string" },
+    "bgDescriptionLocalized": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "obtainDescription": { "type": "string" },
+    "obtainDescriptionLocalized": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "unlockDescription": { "type": "string" },
+    "unlockDescriptionLocalized": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "cookingIngredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": { "type": "string" },
+          "quantity": { "type": "integer" }
+        }
+      }
+    }
+  },
+  "required": ["description"],
+  "title": "Item",
+  "type": "object"
+}

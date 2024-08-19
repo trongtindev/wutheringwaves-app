@@ -1,0 +1,17 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.022Z",
+  "publishedTime": "2024-06-28T15:43:21.822Z",
+  "skill": {
+    "id": 201052,
+    "cd": 15,
+    "params": [
+      ["84.60%", "6", "9.40%", "15"],
+      ["97.29%", "6", "10.81%", "15"],
+      ["109.98%", "6", "12.22%", "15"],
+      ["122.67%", "6", "13.63%", "15"],
+      ["135.36%", "6", "15.04%", "15"]
+    ],
+    "description": "Transform into a Lightcrusher that lunges forward to attack, dealing {0} Spectro DMG. Generate {1} \"Ablucence(s)\" on hit. When the \"Ablucence(s)\" explode, deal {2} Spectro DMG.\nLong press Echo Skill to stay as the Lightcrusher, lunging forward and walking in mid-air for a certain distance.\n\nCD: {3}s"
+  },
+  "slug": "altered-lightcrusher"
+}

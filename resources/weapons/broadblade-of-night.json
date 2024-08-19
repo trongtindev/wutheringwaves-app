@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 4 },
+        { "item": 2, "quantity": 6000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020041, "quantity": 4 },
+        { "item": 41100012, "quantity": 4 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020042, "quantity": 5 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020043, "quantity": 4 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 36000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 5 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 8 },
+        { "item": 41100014, "quantity": 5 },
+        { "item": 2, "quantity": 72000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "May victory prevail the lasting night. In addition to the sworn oath of protection, this broadblade also carries the resolution of those fighting souls.",
+  "modifiedTime": "2024-07-09T15:18:08.456Z",
+  "publishedTime": "2024-06-28T15:43:22.050Z",
+  "ranks": [
+    "When Intro Skill is released, increases ATK by 8%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 10%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 12%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 14%, lasting for 10s.",
+    "When Intro Skill is released, increases ATK by 16%, lasting for 10s."
+  ],
+  "skill": {
+    "params": [
+      ["8%", "10"],
+      ["10%", "10"],
+      ["12%", "10"],
+      ["14%", "10"],
+      ["16%", "10"]
+    ],
+    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
+  },
+  "slug": "broadblade-of-night",
+  "stats": { "atkFlat": 26, "atk": 5.4 }
+}

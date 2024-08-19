@@ -1,0 +1,17 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.166Z",
+  "publishedTime": "2024-06-28T15:43:21.840Z",
+  "skill": {
+    "id": 200005,
+    "cd": 15,
+    "params": [
+      ["32.10%", "2", "12.48%", "15"],
+      ["36.92%", "2", "14.35%", "15"],
+      ["41.73%", "2", "16.22%", "15"],
+      ["46.55%", "2", "18.10%", "15"],
+      ["51.36%", "2", "19.97%", "15"]
+    ],
+    "description": "Summon a Whiff Whaff that triggers an air explosion, dealing {0} Aero DMG and produce a Low-pressure Zone. The Low-pressure Zone continuously pulls enemies nearby towards the center for {1}s, dealing {2} Aero DMG up to 6 times.\r\n\r\nCD: {3}s"
+  },
+  "slug": "whiff-whaff"
+}

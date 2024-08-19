@@ -1,0 +1,640 @@
+{
+  "accounts": {
+    "title": "Облікові записи",
+    "newAccountDetected": "Виявлено новий обліковий запис",
+    "successfullySwitched": "Успішно змінено на {0}"
+  },
+  "autoImport": {
+    "notificationTitle": "Імпортуємо історію...",
+    "notificationMessage": "Витягаємо історію для облікового запису {0}.",
+    "done": { "title": "Імпортовано успішно!" }
+  },
+  "banner": {
+    "featuredResonator": "Особливий резонатор",
+    "featuredWeapon": "Особлива зброя",
+    "standardResonator": "Стандартний резонатор",
+    "standardWeapon": "Стандартна зброя"
+  },
+  "characters": {
+    "title": "Персонажі",
+    "message": "Імпортуй історію Скликання та побач своїх персонажів.",
+    "resonanceChain": "Ланцюг Резонансу",
+    "skills": "Навички",
+    "introduction": "В Wuthering Waves <span class='text-rarity{rarity}'>{name}</span> - <span class='text-rarity{rarity}'>{rarity}★</span> рідкості персонаж, який володіє {attribute} елементом та використовує {weaponType} тип зброї.",
+    "lastUpdatedOn": "Профіль {name} був востаннє оновлений {time}.",
+    "build": "{name} збірка",
+    "calculations": "Розрахунки",
+    "overview": "Огляд",
+    "bestMainEchoes": "{name} краще Відлуння",
+    "moreBuildGuides": "Дивись більше збірок",
+    "bestWeapons": "Найкраща зброя {name}",
+    "bestEchoSets": "Найкращі сети відлунь",
+    "bestEchoStats": "Найкращі стати відлунь",
+    "bestTeams": "Кращі команди з {name}",
+    "ascensionMaterialsMap": "Мапа матеріалів піднесення",
+    "skillPriority": "Пріоритет навичок {name}",
+    "skillPriorityDescription": "Below you can find the order of leveling the abilities for {name}.",
+    "teams": "Команди",
+    "notOwned": "Немає",
+    "information": "Інформація про персонажа",
+    "stats": "Характеристики персонажа",
+    "ascensionMaterial": "{name} Ascension Material"
+  },
+  "codes": {
+    "title": "Подарункові коди",
+    "expiry": "Термін дії",
+    "code": "Код",
+    "rewards": "Нагороди",
+    "expired": "Застарів",
+    "howToRedeem": "Як активувати подарунковий код?",
+    "howToRedeemGuide": "У меню гри натисніть на іконку налаштувань у правому нижньому куті. Виберіть вкладку «Інші налаштування» із зображенням гайкового ключа. Натисніть кнопку \"Redeem\" поруч з \"Redemption Code\"  який розташований під Обліковим записом.",
+    "redeemRequirement": "Як розблокувати доступ до подарункових кодів?",
+    "redeemRequirementGuide": "Ви повинні бути принаймні Union Level 2 і виконати Главу 1, Акт 1 «Utterance of Marvels: I» основного квесту.",
+    "redemptionStep": "Кроки активування кодів"
+  },
+  "comments": {
+    "empty": "Залишіть коментар, щоб ваш голос був почутим перший.",
+    "form": { "submit": "Опублікувати коментар" },
+    "replies": "Відповіді"
+  },
+  "commit": {
+    "character": {
+      "overview": "Огляд",
+      "quote": "Цитата",
+      "description": "Опис",
+      "skills": "Навички"
+    },
+    "successfully": "Дякуємо за ваш внесок, ваш запит був відправлений і розглядається.",
+    "viewPullRequest": "Перегляд Pull Request"
+  },
+  "common": {
+    "name": "Назва",
+    "time": "Час",
+    "home": "Головна",
+    "delete": "Видалити",
+    "timeout": "Перевищено час очікування з'єднання, зачекайте трохи й спробуйте ще раз пізніше",
+    "invalidLink": "Невірне посилання, будь ласка, перевірте його знову",
+    "invalidData": "Невірні дані з API, повторіть спробу пізніше",
+    "signIn": "Увійти",
+    "signOut": "Вийти",
+    "back": "Назад",
+    "cancel": "Скасувати",
+    "import": "Імпортувати",
+    "search": "Шукати",
+    "all": "Всі",
+    "echo": "Відлуння",
+    "any": "Будь-які",
+    "skill": "Навички",
+    "create": "Створити",
+    "save": "Зберегти",
+    "copyLink": "Скопіювати посилання",
+    "exportAsImage": "Експортувати як зображення",
+    "saveChanges": "Зберегти зміни",
+    "weapon": "Зброя",
+    "character": "Персонаж",
+    "type": "Тип",
+    "sort": "Сортувати",
+    "title": "Назва",
+    "draft": "Чернетка",
+    "level": "Рівень",
+    "shortcuts": "Ярлики",
+    "copy": "Копіювати",
+    "copied": "Скопійовано",
+    "download": "Завантажити",
+    "ascensionMaterials": "Матеріали вознесіння",
+    "successfully": "Успішно!",
+    "checkAll": "Відзначити все",
+    "clear": "Очистити",
+    "retry": "Повторити",
+    "upcoming": "Скоро",
+    "upcomingContent": "Ця сторінка про майбутній контент.",
+    "upcomingContentMessage": "Майбутній контент може бути змінений і може не відображати кінцевий продукт.",
+    "upcomingWeapons": "Майбутня зброя",
+    "upcomingCharacters": "Майбутні персонажі",
+    "energy": "Енергія",
+    "options": "Параметри",
+    "trophy": "Трофей",
+    "noRecords": "Записів не знайдено.",
+    "yourLastConvene": "Останнє скликання",
+    "joinTheDiscord": "Приєднуйтесь до Discord",
+    "viewOnGithub": "Переглянути на GitHub",
+    "rarity": "Рідкість",
+    "category": "Категорія",
+    "editThisPage": "Редагувати цю сторінку",
+    "noRecordsFound": "Записів не знайдено.",
+    "astrite": "Астрит",
+    "beta": "Бета",
+    "notice": "Примітка",
+    "total": "Загалом",
+    "percentage": "Відсоток",
+    "summoned": "Викликано",
+    "hidden": "Приховано",
+    "next": "Наступне",
+    "previous": "Назад",
+    "critRate": "Шанс крит. шкоди",
+    "critDMG": "Критична шкода",
+    "atk": "Атака",
+    "def": "Захист",
+    "hp": "HP",
+    "cost": "Вартість",
+    "close": "Закрити",
+    "loading": "Завантаження...",
+    "localTime": "Місцевий час",
+    "serverTime": "Час серверу",
+    "pullByDay": "Витяги за днями",
+    "totalPull": "Загальна к-сть скликань",
+    "openIssues": "Відкриті питання",
+    "unnamed": "Без назви",
+    "active": "Активований",
+    "inactive": "Неактивний",
+    "searchPlaceholder": "Тип для пошуку",
+    "filter": "Фільтр",
+    "apply": "Застосувати",
+    "reset": "Скинути",
+    "none": "Нічого",
+    "related": "Схожі",
+    "lastUpdatedOn": "Востаннє оновлено: {time}",
+    "views": "Переглянути",
+    "signInRequired": "Необхідно ввійти",
+    "signInRequiredMessage": "Ця функція потребує входу в систему.",
+    "error": "Помилка",
+    "rolesRequired": "Необхідна роль",
+    "rolesRequiredAnyMessage": "Вам потрібна одна з наступних ролей для використання цієї функції.",
+    "getRoles": "Отримати роль",
+    "recent": "Нещодавні",
+    "banner": "Банер",
+    "confirm": "Підтвердити",
+    "background": "Фон",
+    "foreground": "Передній план",
+    "upload": "Вивантажити",
+    "gallery": "Галерея",
+    "translateThisPage": "Перекласти цю сторінку",
+    "description": "Опис",
+    "howToUse": "Як користуватися {0}?",
+    "contributor": "Редактор",
+    "didYouKnow": "Чи знали?",
+    "aiGenerated": "Згенеровано ШІ",
+    "submit": "Підтвердити",
+    "attribute": "Attribute",
+    "birthday": "День народження",
+    "birthplace": "Birthplace"
+  },
+  "convene": {
+    "message": "Wuthering Waves видалить історію скликань через 6 місяців, створіть резервну копію історії скликань зараз!",
+    "import": {
+      "title": "Імпортувати Скликання",
+      "processing": "Обробка...",
+      "invalidLink": "Невірне посилання, будь ласка, перевірте його знову",
+      "guides": {
+        "android": {
+          "default": {
+            "1": { "title": "Дотримуйтесь нашої відеоінструкції" },
+            "2": { "title": "Вставте сюди скопійований текст" }
+          }
+        },
+        "pc": {
+          "default": {
+            "1": {
+              "title": "Відкрийте Wuthering Waves в цьому ПК, потім відкрийте історію скликання у грі й зачекайте, поки вона завантажиться."
+            },
+            "2": {
+              "title": "Натисніть START на клавіатурі, потім шукайте Powershell",
+              "content": "Відкрийте {windowsPowerShell} і виконайте наступну команду (якщо буде запропоновано, вставте шлях до гри)."
+            },
+            "3": { "title": "Вставте ваш URL-посилання з Історією Скликань." }
+          }
+        }
+      },
+      "faqs": {
+        "1": {
+          "title": "Що робити якщо, ви маєте багато облікових записів?",
+          "content": "Не хвилюйтеся, коли ви імпортуєте кілька облікових записів, їх буде автоматично розділимо і побачите кнопку перемикання облікового запису."
+        },
+        "2": {
+          "title": "Чому б не оновити історію?",
+          "content": "Оновлення записів відбувається з 30-хвилинною затримкою. Якщо дані не показуються на цій сторінці, спробуйте пізніше. Виберіть часовий пояс, що показуватися: Америка (UTC-5); Європа (UTC+1); Азія, HMT, SEA (UTC+8)."
+        },
+        "3": {
+          "title": "Мій обліковий запис у безпеці?",
+          "content": "Так, за допомогою цього методу імпорту неможливо буде втрутитися у ваш обліковий запис. І врешті, цей сайт має відкритий вихідний код на github, ви можете побачити та перевірити його самостійно, якщо ви все ще не довіряєте, ви можете пропустити цю функцію і використати інші можливості."
+        }
+      }
+    },
+    "history": {
+      "title": "Лічильник гаранту",
+      "empty": "На цей час у вас немає Історії скликань."
+    },
+    "guaranteedAt": "Гарант на {0}",
+    "lifetimePulls": "Скликань за весь час",
+    "pity": "Гарант",
+    "rank": {
+      "title": "Ваше глобальне місце",
+      "level": "Ваш загальний рейтинг витягувань",
+      "current": "Поточна медіана {banner} дорівнює {median} скликань",
+      "more": "Ви маєте більше скликань, ніж {percentage}% користувачів",
+      "less": "Ви маєте менше скликань, ніж {percentage}% користувачів",
+      "currentLuck": "Поточна медіана {banner} дорівнює {median} скликань",
+      "luck5": "5★ Везіння",
+      "luck4": "4★ Везіння",
+      "luckWinRateOff": "Перемог 50:50",
+      "medianTotal": "Глобальна медіана {median} витягу",
+      "medianLuck": "Глобальна медіана {median}%",
+      "moreTotal": "Більше скликань, ніж {percentage}% користувачів",
+      "lessTotal": "Менше скликань, ніж {percentage}% користувачів",
+      "moreLuck": "Пощастило більше, ніж {percentage}% користувачів",
+      "lessLuck": "Пощастило менше, ніж {percentage}% користувачів",
+      "top": "ТОП",
+      "bottom": "Низ"
+    },
+    "global": {
+      "title": "Глобальна статистика витягів",
+      "fiveStar": "5★ Список",
+      "fourStar": "4★ Список",
+      "median": "5★ Середнє",
+      "totalUsers": "Усього користувачів",
+      "conveneTotal": "Загальна к-сть Скликань",
+      "worth": "Вартість",
+      "chance": "Шанс"
+    },
+    "share": { "title": "Поділитися історією" }
+  },
+  "desktopApp": {
+    "title": "Настільний застосунок",
+    "introduce": "За допомогою програми ви можете автоматично імпортувати історію скликань, переглядати мапи в грі в реальному часі, переглядати інформацію про предмети та багато іншого.",
+    "download": "Завантажити"
+  },
+  "donate": {
+    "title": "Підтримати",
+    "messages": {
+      "1": "Дякую! Сподіваюся, це проєкт вам стане в пригоді.",
+      "2": "Я роблю цей сайт для розваги, коли у мене є вільний час. Я буду додавати нові функції та оновлювати дані з кожним оновленням, тому що мені подобається досліджувати гру, і я намагаюся максимально ефективно використовувати її можливості.",
+      "3": "Якщо ви хочете зробити пожертву, вона обов'язково допоможе покращити сайт і мотивуватиме мене додавати більше контенту! Дуже дякую, сподіваюся, вам сподобається!",
+      "4": "Якщо ви любите кодування, ви також можете зробити внесок до проєкту на Github."
+    },
+    "buttons": { "kofi": "Підтримати мене на Ko-fi" }
+  },
+  "echoes": {
+    "title": "Відлуння",
+    "cost": "Вартість",
+    "sonataEffect": "Ефект сонати",
+    "sameElementCharacters": "Персонажі одного елементу",
+    "related": "Схожі Відлуння {name}"
+  },
+  "guides": {
+    "title": "Ігрові Ґайди",
+    "editor": {
+      "title": "Додати нову публікацію",
+      "thumbnail": {
+        "title": "Мініатюра",
+        "placeholder": "Рекомендований розмір: 1200x628px."
+      },
+      "localization": {
+        "title": "Мова",
+        "primary": "Основний",
+        "secondary": "Додатковий"
+      },
+      "_title": { "label": "Заголовок" },
+      "description": {
+        "label": "Опис",
+        "placeholder": "Вкажіть короткий опис матеріалу."
+      },
+      "seo": { "keywords": { "label": "Ключові слова" } },
+      "categories": { "title": "Категорії" },
+      "options": { "title": "Параметри", "schedule": "Запланувати публікацію" },
+      "update": "Зберегти зміни"
+    },
+    "related": "Пов'язані публікації",
+    "previous": "Попередня публікація",
+    "next": "Наступна публікація",
+    "deleted": { "title": "Цю публікацію було видалено!" }
+  },
+  "items": {
+    "title": "Предмети",
+    "howToObtain": "Як отримати {0}?",
+    "howToUnlock": "Як розблокувати {0}?",
+    "cookingIngredients": "Інгредієнти",
+    "obtainedFromConvenes": "{item} - це матеріали активації резонансного ланцюга, отримані зі <b>Скликань</b>, що використовуються для поліпшення {character}."
+  },
+  "leaderboards": { "title": "Таблиці лідерів" },
+  "map": {
+    "title": "Інтерактивна мапа",
+    "locations": {
+      "dimForest": "Тьмяний ліс",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Полегла могила",
+      "frostingHarbor": "Крижана гавань",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Тигрова паща",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Центральні рівнини",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Лоло Склад",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Острів Ностальгії",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "Свої відмітки",
+      "levelUpMaterial": "Матеріал підняття рівня",
+      "waypoints": "Точки маршруту",
+      "specialItems": "Особливі предмети",
+      "chests": "Скрині",
+      "experience": "Досвід",
+      "puzzleChest": "Скриня з головоломки",
+      "localSpecialties": "Місцеві дивинки",
+      "enemies": "Вороги",
+      "ores": "Руди",
+      "animals": "Тварини",
+      "landmarks": "Орієнтири",
+      "echoes": "Відлуння"
+    },
+    "settings": {
+      "title": "Налаштування мапи",
+      "pinCluster": {
+        "title": "Об'єднання міток",
+        "description": "Якщо ввімкнено, мітки однієї категорії будуть групуватися, щоб зменшити навантаження."
+      },
+      "hideMarkedPins": {
+        "title": "Приховати позначені мітки",
+        "description": "Якщо ввімкнено, позначені мітки будуть приховані на домашній сторінці."
+      }
+    },
+    "markAsNotFound": "Позначити як не знайдено",
+    "markAsFound": "Позначити як знайдене",
+    "guides": {
+      "multipleAccounts": {
+        "description": "Щоб зберегти позначки між різними обліковими записами, вам просто потрібно імпортувати дані скликання, після чого ви побачите кнопку перемикання облікових записів."
+      },
+      "pinCluster": {
+        "description": "За замовчуванням функцію Об'єднання міток буде ввімкнено. Ви можете вимкнути її в налаштуваннях."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Скриня",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Точка огляду",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Книга",
+      "sideQuest": "Побічне завдання",
+      "cave": "Печера",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "Риба",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "Пташине яйце",
+      "fowlMeat": "М'ясо птиці",
+      "craneFeathers": "Журавлеві пера",
+      "rawMeat": "Сире м'ясо",
+      "dewvetch": "Dewvetch"
+    }
+  },
+  "meta": {
+    "title": "Wuthering Waves Вікі",
+    "description": "Лічильник гаранту, планування, аналіз, глобальна статистика та інше для Wuthering Waves!",
+    "index": { "title": "Ваш особистий лічильник" },
+    "timeline": {
+      "title": "Розклад подій",
+      "description": "Розклад подій для Wuthering Waves, переглядайте який порядок подій, коли вони починаються та закінчуються."
+    },
+    "echoes": {
+      "title": "Відлуння",
+      "id": {
+        "description": "{name} має {rarity} клас Відлуння в Wuthering Waves."
+      },
+      "description": "Досліджуйте Відлуння для Wuterhing Waves на wutheringwaves.app! Наш допоможе вам знайти кращі збірки Відлуння / Ехо для ваших персонажів, надаючи детальну інформацію про їхні характеристики, супутні предмети та багато іншого. Оптимізуйте свій ігровий процес, відкривши для себе ідеальні комбінації та стратегії Ехо, щоб підвищити ефективність ваших персонажів у грі!"
+    },
+    "characters": {
+      "id": {
+        "title": "{name} гайд та білд",
+        "description": "{name} - це грабельний {attribute} вроджений Резонатор у грі Wuthering Waves. Знайдіть їхні найкращі білди / збірки, команди, ротації та іншу інформацію тут."
+      },
+      "description": "Відкрийте для себе повне керівництво для персонажів Wuthering Waves на wutheringwaves.app. Тут ви знайдете інформацію про матеріали, які можна викликати, найкращі відлуння, оптимальні командні комбінації та багато іншого."
+    },
+    "weapons": {
+      "id": {
+        "description": "{name} - це {type} зброї в грі Wuthering Waves, яку можна отримати через систему Convene. На wutheringwaves.app наша детальна мапа допоможе вам знайти матеріали для сходження та відстежити ранг вашої зброї. Відкрийте для себе найкращі способи покращення та використання {name} на повну потужність."
+      },
+      "title": "Зброя",
+      "description": "У Wuthering Waves» наявні п'ять видів зброї: меч, широкий меч, рукавиця, пістолети та випрямляч."
+    },
+    "codes": {
+      "title": "Подарункові коди дійсні {time}",
+      "description": "Усі коди, які ви можете використати в Wuthering Waves заради безплатних нагород."
+    },
+    "convene": {
+      "history": {
+        "title": "Лічильник Гаранту",
+        "description": "Лічильник Скликань надає можливість відстежувати лічильник гаранту та відстежувати, коли ви отримуєте персонажа або зброю. Ви також можете автоматично імпортувати журнали та створювати резервні копії з ПК, Android, iOS, PlayStation, а потім зберігати їх більш як 6 місяців."
+      },
+      "global": {
+        "title": "Глобальна статистика витягів",
+        "description": "Глобальний лічильник середнього витягу від користувачів wutheringwaves.app для Wuthering Waves."
+      },
+      "share": {
+        "title": "Створіть своєю карточкою історією витягів wutheringwaves. app для Wuthering Waves, щоб показати її своїм друзям"
+      }
+    },
+    "todoList": {
+      "description": "Wuthering Waves Todo List допоможе планувати й відстежувати потрібні вам предмети та більше, ви також можете бачити приблизну кількість енергії, необхідних для добування предметів!"
+    },
+    "tierList": {
+      "description": "Знайдіть свій найкращий Wuthering Waves Tier list або створіть свій. Дані постійно оновлюється!"
+    },
+    "trophies": {
+      "title": "Досягнення",
+      "description": "Легко відстежуйте свої досягнення Wuthering Waves! Повний список усіх трофеїв та їхня детальна інформація у нас на сайті."
+    },
+    "map": {
+      "title": "Інтерактивна мапа",
+      "description": "Wuthering Waves - це гра з відкритим світом. Наша нова інтерактивна карта вже працює, дозволяючи вам відстежувати свій прогрес і досягти 100% дослідження!"
+    },
+    "items": {
+      "title": "Всі речі",
+      "description": "Дізнайтеся детальну інформацію про предмети для персонажів, зброю, відлуння та багато іншого для Wuthering Waves. Дізнайтеся, де можна отримати необхідні ресурси для прокачування персонажів, покращення зброї та відлуння.",
+      "id": {
+        "title": "Предмет: {name}",
+        "description": {
+          "default": "{name} у Wuthering Waves. Дізнайтеся, де знайти {name} та іншу інформацію в цьому посібнику!",
+          "recipe": "{name} у Wuthering Waves. Дізнайтеся, де знайти рецепт {name} та іншу інформацію в цьому посібнику!"
+        }
+      }
+    },
+    "settings": { "title": "Налаштування" },
+    "guides": { "title": "Ігрові Ґайди" },
+    "leaderboards": {
+      "title": "Таблиці лідерів",
+      "description": "Wuthering Waves лідерські таблиці, обмін профілями, карточки персонажів і багато іншого."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Політика конфіденційності",
+    "message": "Що ми збираємо і для чого це використовується"
+  },
+  "search": {
+    "title": "Загальний пошук",
+    "tooltip": "Для швидкого відкрити натисніть \"/\"."
+  },
+  "settings": {
+    "title": "Налаштування",
+    "eraseAllData": "Стерти всі дані",
+    "accounts": {
+      "title": "Аккаунти",
+      "autoImportConveneHistory": "Автоматичний імпорт історії скликань",
+      "autoImportConveneHistorySubtitle": "Ваші скликання автоматично оновлятимуться коли ви відвідуєте сайт.",
+      "empty": "Щоб додати обліковий запис, вам потрібно просто імпортувати історію."
+    },
+    "roles": {
+      "title": "Ваші ролі",
+      "refreshRoles": "Оновлення ролей",
+      "link": "Перевірити та з'єднати",
+      "unlink": "Відв’язати",
+      "message": "Ви успішно прив'язані до Discord.",
+      "setupGuide1": "Після приєднання до Discord вам потрібно надіслати пряме повідомлення з наведеним нижче змістом боту з ім'ям {name}.",
+      "setupGuide2": "Ви отримаєте код підтвердження від BOT, скопіюйте та вставте його сюди.",
+      "verifyCode": "Код підтвердження",
+      "emptyRoles": "Ви ще не маєте жодної ролі!"
+    },
+    "syncData": {
+      "title": "Синхронізувати дані",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Експортувати дані",
+      "introduce": "Ви можете завантажити дані для резервного копіювання або перенести їх на інший сайт.",
+      "export": "Експортувати"
+    },
+    "importData": {
+      "title": "Імпорт даних",
+      "introduce": "Ви можете імпортувати дані з інших сайтів.",
+      "import": "Імпорт"
+    },
+    "eraseData": {
+      "title": "Стерти всі дані",
+      "introduce": "Ваші дані очистяться у браузері та хмарі. Якщо вебсайт не працює або має помилки, ви можете скористатися цією функцією, щоб виправити їх.",
+      "eraseNow": "Очистити",
+      "confirm": {
+        "title": "ОБЕРЕЖНО!!!",
+        "message": "Ваші дані будуть видалені з вашого браузера та хмари"
+      }
+    }
+  },
+  "sidebar": {
+    "home": "Домашня сторінка",
+    "timeline": "Графік подій",
+    "characters": "Персонажі",
+    "weapons": "Зброя",
+    "echoes": "Відлуння",
+    "conveneHistory": "Лічильник гаранту",
+    "tierList": "Tier list",
+    "todoList": "Список завдань",
+    "trophies": "Трофеї",
+    "teams": "Команди",
+    "leaderboards": "Таблиці лідерів",
+    "codes": "Подарункові коди",
+    "map": "Інтерактивна мапа",
+    "guides": "Ґайди",
+    "items": "Предмети",
+    "comparison": "Порівняння",
+    "database": "База даних",
+    "convene": "Скликання",
+    "conveneGlobalStats": "Глобальна статистика",
+    "conveneImport": "Історія імпорту",
+    "conveneShare": "Поділитися історією"
+  },
+  "sync": {
+    "title": "Синхронізація у хмарі",
+    "conflict": {
+      "title": "Конфлікт даних",
+      "message": "Ваші локальні дані в цьому браузері конфліктують з даними, що зберігаються в хмарі!",
+      "cloudData": "Дані в Хмарі",
+      "localData": "Дані локального браузера",
+      "older": "Старіші",
+      "newer": "Новіші",
+      "useCloudData": "Використовувати дані з хмари",
+      "useLocalData": "Використовувати локальні дані",
+      "smallSizeWarning": "ОБЕРЕЖНО, РОЗМІР НАБАГАТО МЕНШИЙ!"
+    },
+    "dataSynced": "Дані синхронізовано!",
+    "lastModified": "Остання зміна: {0}",
+    "lastSynced": "Востаннє синхронізовано: {0}",
+    "push": "Відправити",
+    "pull": "Отримати"
+  },
+  "teams": { "title": "Команди" },
+  "tierList": { "title": "Tier list" },
+  "timeline": {
+    "title": "Розклад",
+    "startsIn": "Починається {0}",
+    "endsIn": "Завершується {0}",
+    "current": "Поточна версія",
+    "upcoming": "Скоро",
+    "summary": "Підсумок подій",
+    "localTime": "Показувати як місцевий час",
+    "checkoutOfficialUrl": "Переглянути офіційний сайт",
+    "ended": "Закінчено"
+  },
+  "todoList": {
+    "title": "Todo list",
+    "empty": "Поки що нічого немає! Додайте деякі зі сторінки речей або калькулятор.",
+    "delete": {
+      "title": "Видалити це завдання?",
+      "cancel": "Скасувати",
+      "delete": "Видалити"
+    }
+  },
+  "trophies": { "title": "Трофеї" },
+  "updater": {
+    "title": "Нове оновлення!",
+    "message": "Натисніть кнопку Оновити, щоб отримати оновлення",
+    "whatsNew": "Новинки",
+    "later": "Пізніше",
+    "refresh": "Оновити"
+  },
+  "weapons": {
+    "title": "Зброя",
+    "ranks": "Ранги",
+    "alert": "Імпортуй історію Скликання та побач свою зброю.",
+    "lastUpdatedOn": "Профіль {name} був востаннє оновлений {time}.",
+    "introduction": "В Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> це <span class='text-rarity{rarity}'>{rarity}★</span> зброя.",
+    "skill": "Навичка {name}",
+    "obtainedTooltip": "Кількість разів отримано зі скликань."
+  }
+}

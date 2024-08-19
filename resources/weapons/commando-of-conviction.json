@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "A weapon designed to commemorate the Midnight Rangers' courage. \"A thousand echoes carry the war's tale, as spirits unite in resounding gorges of valor.\"",
+  "modifiedTime": "2024-07-09T15:18:08.466Z",
+  "publishedTime": "2024-06-28T15:43:22.051Z",
+  "ranks": [
+    "When Intro Skill is released, increases ATK by 15%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 18.75%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 22.5%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 26.25%, lasting for 15s.",
+    "When Intro Skill is released, increases ATK by 30%, lasting for 15s."
+  ],
+  "skill": {
+    "params": [
+      ["15%", "15"],
+      ["18.75%", "15"],
+      ["22.5%", "15"],
+      ["26.25%", "15"],
+      ["30%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases ATK by {0}, lasting for {1}s."
+  },
+  "slug": "commando-of-conviction",
+  "stats": { "atkFlat": 33, "atk": 6.8 }
+}

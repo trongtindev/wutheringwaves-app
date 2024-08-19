@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "types": ["@types/google.accounts", "@types/leaflet.markercluster"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false
+  },
+  "exclude": ["scripts/**/*.ts"],
+  "extends": "./.nuxt/tsconfig.json"
+}

@@ -1,0 +1,640 @@
+{
+  "accounts": {
+    "title": "Akun",
+    "newAccountDetected": "Penggunaan Akun Baru Terdeteksi",
+    "successfullySwitched": "Berhasil beralih ke {0}"
+  },
+  "autoImport": {
+    "notificationTitle": "Mengimpor riwayat...",
+    "notificationMessage": "Mengambil riwayat untuk akun {0}.",
+    "done": { "title": "Impor berhasil!" }
+  },
+  "banner": {
+    "featuredResonator": "Resonator unggulan",
+    "featuredWeapon": "Featured weapon",
+    "standardResonator": "Standard resonator",
+    "standardWeapon": "Standard weapon"
+  },
+  "characters": {
+    "title": "Karakter",
+    "message": "Impor riwayat pertemuan untuk melihat karakter yang sudah dimiliki.",
+    "resonanceChain": "Resonance Chain",
+    "skills": "Keterampilan",
+    "introduction": "Dalam Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> adalah karakter langka <span class='text-rarity{rarity}'>{rarity}★</span> dari elemen {attribute} yang menggunakan {weaponType} jenis senjata.",
+    "lastUpdatedOn": "{name} profil terakhir diperbarui pada {time}.",
+    "build": "{name} Bangun",
+    "calculations": "Perhitungan",
+    "overview": "Ringkasan",
+    "bestMainEchoes": "Best Main Echoes {name}",
+    "moreBuildGuides": "Panduan Pembuatan Lainnya",
+    "bestWeapons": "Senjata Terbaik {name}",
+    "bestEchoSets": "Best Echo Sets",
+    "bestEchoStats": "Best Echo Stats",
+    "bestTeams": "{name} Tim Terbaik",
+    "ascensionMaterialsMap": "Bahan Peningkatan",
+    "skillPriority": "{name} Prioritas Keterampilan",
+    "skillPriorityDescription": "Di bawah ini Anda dapat menemukan urutan leveling kemampuan untuk {name}.",
+    "teams": "Tim",
+    "notOwned": "Not owned",
+    "information": "Informasi Karakter",
+    "stats": "Statistik Karakter",
+    "ascensionMaterial": "{name} Materi Kenaikan"
+  },
+  "codes": {
+    "title": "Kode Hadiah",
+    "expiry": "Kedaluwarsa",
+    "code": "Kode",
+    "rewards": "Hadiah",
+    "expired": "Kedaluwarsa",
+    "howToRedeem": "How to Redeem Wuthering Waves Codes",
+    "howToRedeemGuide": "In-game menu, click the settings icon in the bottom right corner. Select the \"Other Settings\" tab with the spanner symbol. Hit the \"Redeem\" button next to the \"Redemption Code\" under Account.",
+    "redeemRequirement": "How to unlock Redemption",
+    "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
+    "redemptionStep": "Redemption Step"
+  },
+  "comments": {
+    "empty": "Tinggalkan komentar agar suara Anda didengar terlebih dahulu.",
+    "form": { "submit": "Kirim Komentar" },
+    "replies": "Replies"
+  },
+  "commit": {
+    "character": {
+      "overview": "Ringkasan",
+      "quote": "Quote",
+      "description": "Description",
+      "skills": "Skills"
+    },
+    "successfully": "Thank you for your contribution, your request has been sent and is being reviewed.",
+    "viewPullRequest": "View Pull Request"
+  },
+  "common": {
+    "name": "Name",
+    "time": "Time",
+    "home": "Home",
+    "delete": "Delete",
+    "timeout": "Connection timeout, please wait a moment and try again later",
+    "invalidLink": "Invalid link, please check it again",
+    "invalidData": "Invalid data returned from API, try again later",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "back": "Back",
+    "cancel": "Cancel",
+    "import": "Import",
+    "search": "Search",
+    "all": "All",
+    "echo": "Echo",
+    "any": "Any",
+    "skill": "Skill",
+    "create": "Create",
+    "save": "Save",
+    "copyLink": "Copy link",
+    "exportAsImage": "Export as Image",
+    "saveChanges": "Save changes",
+    "weapon": "Senjata",
+    "character": "Karakter",
+    "type": "Type",
+    "sort": "Sort",
+    "title": "Title",
+    "draft": "Draft",
+    "level": "Level",
+    "shortcuts": "Shortcuts",
+    "copy": "Menyalin",
+    "copied": "Copied",
+    "download": "Download",
+    "ascensionMaterials": "Ascension Materials",
+    "successfully": "Successfully!",
+    "checkAll": "Check all",
+    "clear": "Clear",
+    "retry": "Retry",
+    "upcoming": "Mendatang",
+    "upcomingContent": "Halaman ini berisi tentang konten yang akan datang.",
+    "upcomingContentMessage": "Konten yang akan datang dapat berubah dan mungkin tidak mewakili produk akhir.",
+    "upcomingWeapons": "Senjata yang Akan Datang",
+    "upcomingCharacters": "Karakter yang Akan Datang",
+    "energy": "Energy",
+    "options": "Options",
+    "trophy": "Trophy",
+    "noRecords": "Tidak ada catatan yang ditemukan.",
+    "yourLastConvene": "Your Last Convene",
+    "joinTheDiscord": "Gabung Discord",
+    "viewOnGithub": "Lihat di GitHub",
+    "rarity": "Keanehan",
+    "category": "Category",
+    "editThisPage": "Edit halaman ini",
+    "noRecordsFound": "No records found.",
+    "astrite": "Astrite",
+    "beta": "Beta",
+    "notice": "Notice",
+    "total": "Total",
+    "percentage": "Percentage",
+    "summoned": "Summoned",
+    "hidden": "Hidden",
+    "next": "Next",
+    "previous": "Previous",
+    "critRate": "Crit Rate",
+    "critDMG": "Crit DMG",
+    "atk": "ATK",
+    "def": "DEF",
+    "hp": "HP",
+    "cost": "Cost",
+    "close": "Close",
+    "loading": "Memuat...",
+    "localTime": "Local time",
+    "serverTime": "Server time",
+    "pullByDay": "Tarik di siang hari",
+    "totalPull": "Total Pull",
+    "openIssues": "Open Issues",
+    "unnamed": "Unnamed",
+    "active": "Active",
+    "inactive": "Inactive",
+    "searchPlaceholder": "Ketik untuk mencari",
+    "filter": "Saring",
+    "apply": "Menerapkan",
+    "reset": "Reset",
+    "none": "Tidak ada",
+    "related": "Related",
+    "lastUpdatedOn": "Last updated on: {time}",
+    "views": "Views",
+    "signInRequired": "Sign in Required",
+    "signInRequiredMessage": "This feature which require sign in.",
+    "error": "Error",
+    "rolesRequired": "Roles required",
+    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "getRoles": "Get roles",
+    "recent": "Recent",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery",
+    "translateThisPage": "Terjemahkan halaman ini",
+    "description": "Description",
+    "howToUse": "How to use {0}?",
+    "contributor": "Contributor",
+    "didYouKnow": "Did you know?",
+    "aiGenerated": "AI generated",
+    "submit": "Submit",
+    "attribute": "Atribut",
+    "birthday": "Birthday",
+    "birthplace": "Tempat lahir"
+  },
+  "convene": {
+    "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
+    "import": {
+      "title": "Import Convenes",
+      "processing": "Memproses...",
+      "invalidLink": "Invalid link, please check it again",
+      "guides": {
+        "android": {
+          "default": {
+            "1": { "title": "Ikuti Video Tutorial kami" },
+            "2": { "title": "Tempel teks yang disalin di sini" }
+          }
+        },
+        "pc": {
+          "default": {
+            "1": {
+              "title": "Buka Wuthering Waves di PC ini lalu buka riwayat pertemuan di dalam game dan tunggu hingga dimuat."
+            },
+            "2": {
+              "title": "Tekan MULAI pada keyboard Anda, lalu cari Powershell",
+              "content": "Buka {windowsPowerShell} dan jalankan perintah berikut (Tempel jalur game Anda jika diminta)."
+            },
+            "3": {
+              "title": "Tempelkan URL Convene Record ke dalam kotak di bawah."
+            }
+          }
+        }
+      },
+      "faqs": {
+        "1": {
+          "title": "Bagaimana jika saya mengimpor banyak akun berbeda?",
+          "content": "Jangan khawatir, saat Anda mengimpor beberapa akun, kami akan membaginya secara otomatis dan Anda akan melihat tombol alih akun muncul."
+        },
+        "2": {
+          "title": "Why not updating the record?",
+          "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+        },
+        "3": {
+          "title": "Apakah akun saya aman?",
+          "content": "Ya, melalui cara import ini tidak akan bisa mengganggu akun anda. Dan yang terakhir website ini bersifat open source di github anda bisa melihat dan mengevaluasinya sendiri, jika masih kurang percaya anda bisa melewati fitur ini dan menggunakan fitur lainnya."
+        }
+      }
+    },
+    "history": {
+      "title": "Pity Tracker",
+      "empty": "Saat ini Anda tidak memiliki Riwayat Pertemuan."
+    },
+    "guaranteedAt": "Dijamin {0}",
+    "lifetimePulls": "Lifetime Pulls",
+    "pity": "Pity",
+    "rank": {
+      "title": "Your Global Rank",
+      "level": "Your Total Pulls Rank",
+      "current": "Current {banner} median is {median} pulls",
+      "more": "You have more pull than {percentage}% users",
+      "less": "You have less pull than {percentage}% users",
+      "currentLuck": "Current {banner} median is {median}%",
+      "luck5": "Keberuntungan 5★",
+      "luck4": "Keberuntungan 4★",
+      "luckWinRateOff": "Keberuntungan Menang 50:50",
+      "medianTotal": "Global Median {median} pulls",
+      "medianLuck": "Global Median {median}%",
+      "moreTotal": "Lebih banyak tarikan daripada {percentage}% pengguna",
+      "lessTotal": "Tarikannya lebih sedikit dibandingkan {percentage}% pengguna",
+      "moreLuck": "Luckier than {percentage}% users",
+      "lessLuck": "Less lucky than {percentage}% users",
+      "top": "TOP",
+      "bottom": "BOTTOM"
+    },
+    "global": {
+      "title": "Global Convene Stats",
+      "fiveStar": "5★ List",
+      "fourStar": "4★ List",
+      "median": "5★ Median",
+      "totalUsers": "Total Users",
+      "conveneTotal": "Convene Total",
+      "worth": "Worth",
+      "chance": "Chance"
+    },
+    "share": { "title": "Share history" }
+  },
+  "desktopApp": {
+    "title": "Desktop App",
+    "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
+    "download": "Download"
+  },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Thank you! Hope you find it useful.",
+      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
+      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": { "kofi": "Dukung saya di Ko-fi" }
+  },
+  "echoes": {
+    "title": "Echoes",
+    "cost": "Cost",
+    "sonataEffect": "Sonata effect",
+    "sameElementCharacters": "Same Element Characters",
+    "related": "Related Echo {name}"
+  },
+  "guides": {
+    "title": "Game Guides",
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "_title": { "label": "Title" },
+      "description": {
+        "label": "Description",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": { "keywords": { "label": "Keywords" } },
+      "categories": { "title": "Categories" },
+      "options": { "title": "Options", "schedule": "Schedule publish" },
+      "update": "Save changes"
+    },
+    "related": "Related Posts",
+    "previous": "Previous Posts",
+    "next": "Next Posts",
+    "deleted": { "title": "This post has been deleted!" }
+  },
+  "items": {
+    "title": "Items",
+    "howToObtain": "How to obtain {0}?",
+    "howToUnlock": "How to unlock {0}?",
+    "cookingIngredients": "Bahan Masakan",
+    "obtainedFromConvenes": "{item} adalah Bahan Aktivasi Rantai Resonansi yang diperoleh dari <b>Berkumpul</b> yang digunakan untuk menaikkan level {character} Rantai Resonansi."
+  },
+  "leaderboards": { "title": "Papan peringkat" },
+  "map": {
+    "title": "Peta Interaktif",
+    "locations": {
+      "dimForest": "Dim Forest",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Fallen Grave",
+      "frostingHarbor": "Frosting Harbor",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Tiger's Maw",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Central Plains",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Lollo Warehouse",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Nostalgia Isle",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "Pin yang Dibuat Sendiri",
+      "levelUpMaterial": "Materi Naik Level",
+      "waypoints": "Titik arah",
+      "specialItems": "Barang Khusus",
+      "chests": "Chests",
+      "experience": "Experience",
+      "puzzleChest": "Peti Teka-teki",
+      "localSpecialties": "Spesialisasi Lokal",
+      "enemies": "Musuh",
+      "ores": "Bijih",
+      "animals": "Hewan",
+      "landmarks": "Tengara",
+      "echoes": "Echoes"
+    },
+    "settings": {
+      "title": "Pengaturan peta",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "Saat diaktifkan, pin dari kategori yang sama akan dikelompokkan untuk mengurangi lag."
+      },
+      "hideMarkedPins": {
+        "title": "Sembunyikan Pin yang Ditandai",
+        "description": "Jika diaktifkan, pin yang ditandai akan disembunyikan di halaman beranda."
+      }
+    },
+    "markAsNotFound": "Tandai sebagai Tidak Ditemukan",
+    "markAsFound": "Tandai sebagai Ditemukan",
+    "guides": {
+      "multipleAccounts": {
+        "description": "Untuk menyimpan yang ditandai antar akun yang berbeda, Anda hanya perlu mengimpor data pertemuan lalu Anda akan melihat tombol alih akun muncul."
+      },
+      "pinCluster": {
+        "description": "Secara default, fitur Pin Cluster akan diaktifkan. Anda dapat mematikannya di pengaturan."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Dada",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Sudut pandang",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Buku",
+      "sideQuest": "Misi sampingan",
+      "cave": "Gua",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "Fish",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "Bird Egg",
+      "fowlMeat": "Fowl Meat",
+      "craneFeathers": "Crane feathers",
+      "rawMeat": "Raw Meat",
+      "dewvetch": "Dewvetch"
+    }
+  },
+  "meta": {
+    "title": "Wuthering Waves",
+    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "index": { "title": "Your personal tracker" },
+    "timeline": {
+      "title": "Event timeline calendar",
+      "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
+    },
+    "echoes": {
+      "title": "Echoes",
+      "id": {
+        "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
+      },
+      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
+    },
+    "characters": {
+      "id": {
+        "title": "{name} Guide and Build",
+        "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
+      },
+      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
+    },
+    "weapons": {
+      "id": {
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
+      },
+      "title": "Senjata",
+      "description": "Ada lima jenis senjata di Wuthering Waves, yaitu Sword, Broadblade, Gauntlet, Pistols dan Rectifier."
+    },
+    "codes": {
+      "title": "Kode Hadiah untuk {time}",
+      "description": "Semua kode yang dapat Anda tukarkan di Wuthering Waves untuk mendapatkan hadiah gratis."
+    },
+    "convene": {
+      "history": {
+        "title": "Pity Tracker",
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+      },
+      "global": {
+        "title": "Global Convene Stats",
+        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+      },
+      "share": { "title": "Convene history card generator" }
+    },
+    "todoList": {
+      "description": "Daftar Todo Wuthering Waves untuk merencanakan dan melacak item dan mora yang Anda butuhkan, Anda juga dapat melihat perkiraan resin yang diperlukan untuk menanam item!"
+    },
+    "tierList": {
+      "description": "Temukan daftar Tingkat Wuthering Waves terbaik Anda di sini atau buat daftar tingkat Anda sendiri. Pelajari tentang semua daftar Wuthering Waves Tier versi terbaru."
+    },
+    "trophies": {
+      "title": "Prestasi",
+      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+    },
+    "map": {
+      "title": "Peta Interaktif",
+      "description": "Wuthering Waves adalah game dunia terbuka. Peta interaktif baru kami sekarang sudah aktif, memungkinkan Anda melacak kemajuan Anda dan mencapai eksplorasi 100%!"
+    },
+    "items": {
+      "title": "Semua barang",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
+      "id": {
+        "title": "Barang: {name}",
+        "description": {
+          "default": "{name} di Gelombang Wuthering. Pelajari di mana menemukan {name} dan informasi lainnya dalam panduan ini!",
+          "recipe": "{name} di Gelombang Wuthering. Pelajari di mana resep {name} dan informasi lainnya dalam panduan ini!"
+        }
+      }
+    },
+    "settings": { "title": "Pengaturan" },
+    "guides": { "title": "Game Guides" },
+    "leaderboards": {
+      "title": "Papan peringkat",
+      "description": "Papan peringkat kerusakan Wuthering Waves, berbagi profil, generator kartu karakter, dan banyak lagi."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Kebijakan pribadi",
+    "message": "Apa yang kami kumpulkan dan kegunaannya"
+  },
+  "search": {
+    "title": "Spotlight Search",
+    "tooltip": "Tekan garis miring untuk membuka dengan cepat."
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "eraseAllData": "Hapus semua data",
+    "accounts": {
+      "title": "Akun",
+      "autoImportConveneHistory": "Auto import convene history",
+      "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
+      "empty": "Untuk menambah akun, Anda hanya perlu mengimpor riwayat pertemuan."
+    },
+    "roles": {
+      "title": "Peran Anda",
+      "refreshRoles": "Segarkan peran",
+      "link": "Verifikasi dan Tautkan",
+      "unlink": "Putuskan tautan",
+      "message": "Anda telah berhasil menautkan ke Discord.",
+      "setupGuide1": "Setelah bergabung dengan Discord, Anda perlu mengirim pesan langsung dengan konten di bawah ini ke BOT bernama \"{name}\".",
+      "setupGuide2": "Anda akan menerima kode verifikasi dari BOT, salin dan tempel di sini.",
+      "verifyCode": "Kode verifikasi",
+      "emptyRoles": "Anda belum memiliki peran apa pun!"
+    },
+    "syncData": {
+      "title": "Sync data",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "Import"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "BAHAYA!!!",
+        "message": "Your data will clear in your browser and cloud sync."
+      }
+    }
+  },
+  "sidebar": {
+    "home": "Beranda",
+    "timeline": "Event Timeline",
+    "characters": "Karakter",
+    "weapons": "Senjata",
+    "echoes": "Echoes",
+    "conveneHistory": "Pity Tracker",
+    "tierList": "Tier list",
+    "todoList": "Todo list",
+    "trophies": "Trophies",
+    "teams": "Teams",
+    "leaderboards": "Leaderboards",
+    "codes": "Gift Codes",
+    "map": "Interactive Map",
+    "guides": "Panduan",
+    "items": "Barang",
+    "comparison": "Comparison",
+    "database": "Database",
+    "convene": "Convene",
+    "conveneGlobalStats": "Global Stats",
+    "conveneImport": "Sejarah impor",
+    "conveneShare": "Share history"
+  },
+  "sync": {
+    "title": "Cloud Sync",
+    "conflict": {
+      "title": "Your Data Conflict",
+      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
+      "cloudData": "Cloud Data",
+      "localData": "Local Browser Data",
+      "older": "OLDER",
+      "newer": "NEWER",
+      "useCloudData": "Use Cloud Data",
+      "useLocalData": "Use Local Data",
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
+    },
+    "dataSynced": "Data has been synced!",
+    "lastModified": "Last modified",
+    "lastSynced": "Last synced: {0}",
+    "push": "Push",
+    "pull": "Pull"
+  },
+  "teams": { "title": "Teams" },
+  "tierList": { "title": "Tier list" },
+  "timeline": {
+    "title": "Timeline",
+    "startsIn": "Starts {0}",
+    "endsIn": "Berakhir {0}",
+    "current": "Saat ini",
+    "upcoming": "Mendatang",
+    "summary": "Ringkasan Acara",
+    "localTime": "Show as local time",
+    "checkoutOfficialUrl": "Kunjungi situs resminya",
+    "ended": "Berakhir"
+  },
+  "todoList": {
+    "title": "Todo list",
+    "empty": "Nothing to do yet! Add some from the Items page or the Calculator.",
+    "delete": {
+      "title": "Delete this todo?",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "trophies": { "title": "Trophies" },
+  "updater": {
+    "title": "Pembaruan baru!",
+    "message": "Klik segarkan untuk mendapatkan pembaruan baru",
+    "whatsNew": "What's new",
+    "later": "Later",
+    "refresh": "Menyegarkan"
+  },
+  "weapons": {
+    "title": "Weapons",
+    "ranks": "Ranks",
+    "alert": "Import convene history to see already owned weapons.",
+    "lastUpdatedOn": "{name} senjata terakhir diperbarui pada {time}.",
+    "introduction": "Dalam Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> adalah senjata <span class='text-rarity{rarity}'>{rarity}★</span>.",
+    "skill": "{name} Skill",
+    "obtainedTooltip": "Berapa kali diperoleh melalui pertemuan."
+  }
+}

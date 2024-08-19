@@ -1,0 +1,66 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 6 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 6 },
+        { "item": 41100032, "quantity": 6 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 8 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 6 },
+        { "item": 41100033, "quantity": 6 },
+        { "item": 2, "quantity": 60000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 8 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 12 },
+        { "item": 41100034, "quantity": 8 },
+        { "item": 2, "quantity": 120000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "description": "Stonard opens, the rope triggers, the sky is condensed, the enemy will be oppressed by the invisible momentum and unable to move, the Scar caused by the thousands of rapid electricity will never be able to heal.",
+  "modifiedTime": "2024-07-20T15:18:08.528Z",
+  "publishedTime": "2024-06-28T15:43:22.062Z",
+  "skill": {
+    "params": [
+      ["12%", "12%", "2", "5", "12%"],
+      ["15%", "15%", "2", "5", "15%"],
+      ["18%", "18%", "2", "5", "18%"],
+      ["21%", "21%", "2", "5", "21%"],
+      ["24%", "24%", "2", "5", "24%"]
+    ],
+    "description": "Increases the DMG Bonus of all Resonance Attributes by {0}. When Resonance Skill hits a target, increases ATK by {1}, stacking up to {2}. This effect lasts for {3}s. When the equipped character is not on the field, increases their ATK by an additional {4}."
+  },
+  "stats": { "atkFlat": 40, "critRate": 8 }
+}

@@ -1,0 +1,638 @@
+{
+  "accounts": {
+    "title": "บัญชี",
+    "newAccountDetected": "ตรวจพบการใช้บัญชีใหม่",
+    "successfullySwitched": "เปลี่ยนเป็น {0} สำเร็จ"
+  },
+  "autoImport": {
+    "notificationTitle": "กำลังนำเข้าประวัติ...",
+    "notificationMessage": "กำลังดึงประวัติสำหรับบัญชี {0}",
+    "done": { "title": "นำเข้าสำเร็จ!" }
+  },
+  "banner": {
+    "featuredResonator": "Featured resonator",
+    "featuredWeapon": "Featured weapon",
+    "standardResonator": "Standard resonator",
+    "standardWeapon": "Standard weapon"
+  },
+  "characters": {
+    "title": "ตัวละคร",
+    "message": "นำเข้าประวัติการประชุมเพื่อดูตัวละครที่เป็นเจ้าของแล้ว",
+    "resonanceChain": "Resonance Chain",
+    "skills": "ทักษะ",
+    "introduction": "ใน Wuthering Waves <span class='text-rarity{rarity}'>{name}</span> เป็น <span class='text-rarity{rarity}'>{rarity}★</span> ตัวละครหายากจากองค์ประกอบ {attribute} ที่ใช้ อาวุธประเภท {weaponType}",
+    "lastUpdatedOn": "{name} โปรไฟล์ได้รับการอัปเดตครั้งล่าสุดเมื่อ {time}",
+    "build": "{name} Build",
+    "calculations": "การคำนวณ",
+    "overview": "ภาพรวม",
+    "bestMainEchoes": "Best Main Echoes {name}",
+    "moreBuildGuides": "คำแนะนำการสร้างเพิ่มเติม",
+    "bestWeapons": "อาวุธที่ดีที่สุด {name}",
+    "bestEchoSets": "Best Echo Sets",
+    "bestEchoStats": "Best Echo Stats",
+    "bestTeams": "{name} Best Teams",
+    "ascensionMaterialsMap": "แผนที่วัสดุเสด็จขึ้นสู่สวรรค์",
+    "skillPriority": "{name} ลำดับความสำคัญของทักษะ",
+    "skillPriorityDescription": "ด้านล่างนี้คุณจะพบลำดับการปรับระดับความสามารถของ {name}",
+    "teams": "ทีม",
+    "notOwned": "Not owned",
+    "information": "ข้อมูลตัวละคร",
+    "stats": "สถิติตัวละคร",
+    "ascensionMaterial": "{name} Ascension Material"
+  },
+  "codes": {
+    "title": "รหัสของขวัญ",
+    "expiry": "หมดอายุ",
+    "code": "รหัส",
+    "rewards": "รางวัล",
+    "expired": "หมดอายุแล้ว",
+    "howToRedeem": "วิธีแลกรหัส Wuthering Waves",
+    "howToRedeemGuide": "เมนูในเกม คลิกไอคอนการตั้งค่าที่มุมขวาล่าง เลือกแท็บ \"การตั้งค่าอื่นๆ\" ที่มีสัญลักษณ์ประแจ กดปุ่ม \"แลก\" ถัดจาก \"รหัสแลก\" ใต้บัญชี",
+    "redeemRequirement": "วิธีปลดล็อคการไถ่ถอน",
+    "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
+    "redemptionStep": "ขั้นตอนการไถ่ถอน"
+  },
+  "comments": {
+    "empty": "แสดงความคิดเห็นเพื่อให้เสียงของคุณได้ยินก่อน",
+    "form": { "submit": "เขียนความคิดเห็น" },
+    "replies": "ตอบกลับ"
+  },
+  "commit": {
+    "character": {
+      "overview": "ภาพรวม",
+      "quote": "อ้าง",
+      "description": "คำอธิบาย",
+      "skills": "ทักษะ"
+    },
+    "successfully": "ขอบคุณสำหรับการสนับสนุน คำขอของคุณถูกส่งไปแล้วและกำลังได้รับการตรวจสอบ",
+    "viewPullRequest": "View Pull Request"
+  },
+  "common": {
+    "name": "Name",
+    "time": "Time",
+    "home": "บ้าน",
+    "delete": "Delete",
+    "timeout": "Connection timeout, please wait a moment and try again later",
+    "invalidLink": "Invalid link, please check it again",
+    "invalidData": "Invalid data returned from API, try again later",
+    "signIn": "เข้าสู่ระบบ",
+    "signOut": "ออกจากระบบ",
+    "back": "Back",
+    "cancel": "Cancel",
+    "import": "นำเข้า",
+    "search": "Search",
+    "all": "All",
+    "echo": "Echo",
+    "any": "Any",
+    "skill": "Skill",
+    "create": "Create",
+    "save": "Save",
+    "copyLink": "Copy link",
+    "exportAsImage": "Export as Image",
+    "saveChanges": "Save changes",
+    "weapon": "อาวุธ",
+    "character": "อักขระ",
+    "type": "Type",
+    "sort": "Sort",
+    "title": "Title",
+    "draft": "Draft",
+    "level": "Level",
+    "shortcuts": "Shortcuts",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "ascensionMaterials": "Ascension Materials",
+    "successfully": "Successfully!",
+    "checkAll": "Check all",
+    "clear": "Clear",
+    "retry": "Retry",
+    "upcoming": "ที่กำลังจะมีขึ้น",
+    "upcomingContent": "หน้านี้เกี่ยวกับเนื้อหาที่จะเกิดขึ้น",
+    "upcomingContentMessage": "เนื้อหาที่กำลังจะมีขึ้นอาจมีการเปลี่ยนแปลงและอาจไม่ได้เป็นตัวแทนของผลิตภัณฑ์ขั้นสุดท้าย",
+    "upcomingWeapons": "อาวุธที่จะเกิดขึ้น",
+    "upcomingCharacters": "ตัวละครที่จะเกิดขึ้น",
+    "energy": "พลังงาน",
+    "options": "ตัวเลือก",
+    "trophy": "Trophy",
+    "noRecords": "ไม่พบบันทึก",
+    "yourLastConvene": "การประชุมครั้งสุดท้ายของคุณ",
+    "joinTheDiscord": "Join the Discord",
+    "viewOnGithub": "ดูบน GitHub",
+    "rarity": "ความหายาก",
+    "category": "หมวดหมู่",
+    "editThisPage": "แก้ไขหน้านี้",
+    "noRecordsFound": "ไม่พบบันทึก",
+    "astrite": "Astrite",
+    "beta": "เบต้า",
+    "notice": "สังเกต",
+    "total": "ทั้งหมด",
+    "percentage": "เปอร์เซ็นต์",
+    "summoned": "เรียกตัวแล้ว",
+    "hidden": "ที่ซ่อนอยู่",
+    "next": "ต่อไป",
+    "previous": "ก่อนหน้า",
+    "critRate": "Crit Rate",
+    "critDMG": "Crit DMG",
+    "atk": "ATK",
+    "def": "DEF",
+    "hp": "HP",
+    "cost": "Cost",
+    "close": "ปิด",
+    "loading": "กำลังโหลด...",
+    "localTime": "เวลาท้องถิ่น",
+    "serverTime": "เวลาเซิร์ฟเวอร์",
+    "pullByDay": "ดึงตามวัน",
+    "totalPull": "ดึงทั้งหมด",
+    "openIssues": "เปิดประเด็น",
+    "unnamed": "ไม่มีชื่อ",
+    "active": "คล่องแคล่ว",
+    "inactive": "ไม่ได้ใช้งาน",
+    "searchPlaceholder": "ประเภทสำหรับการค้นหา",
+    "filter": "กรอง",
+    "apply": "นำมาใช้",
+    "reset": "ตั้งใหม่",
+    "none": "ไม่มี",
+    "related": "ที่เกี่ยวข้อง",
+    "lastUpdatedOn": "อัปเดตล่าสุดเมื่อ: {time}",
+    "views": "Views",
+    "signInRequired": "จำเป็นต้องลงชื่อเข้าใช้",
+    "signInRequiredMessage": "คุณลักษณะนี้ซึ่งต้องลงชื่อเข้าใช้",
+    "error": "Error",
+    "rolesRequired": "บทบาทที่จำเป็น",
+    "rolesRequiredAnyMessage": "คุณต้องมีบทบาทอย่างใดอย่างหนึ่งต่อไปนี้เพื่อใช้ฟีเจอร์นี้",
+    "getRoles": "Get roles",
+    "recent": "ล่าสุด",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery",
+    "translateThisPage": "แปลภาษาหน้านี้",
+    "description": "คำอธิบาย",
+    "howToUse": "{0} ใช้งานอย่างไร?",
+    "contributor": "Contributor",
+    "didYouKnow": "เธอรู้รึเปล่า?",
+    "aiGenerated": "AI generated",
+    "submit": "Submit",
+    "attribute": "คุณลักษณะ",
+    "birthday": "วันเกิด",
+    "birthplace": "บ้านเกิด"
+  },
+  "convene": {
+    "message": "Wuthering Waves จะลบประวัติการประชุมหลังจากผ่านไป 6 เดือน สำรองข้อมูลประวัติการประชุมของคุณทันที!",
+    "import": {
+      "title": "นำเข้าคอนเวนชั่น",
+      "processing": "กำลังประมวลผล...",
+      "invalidLink": "Invalid link, please check it again",
+      "guides": {
+        "android": {
+          "default": {
+            "1": { "title": "ปฏิบัติตามวิดีโอสอนของเรา" },
+            "2": { "title": "วางข้อความที่คัดลอกไว้ที่นี่" }
+          }
+        },
+        "pc": {
+          "default": {
+            "1": {
+              "title": "เปิด Wuthering Waves ในพีซีเครื่องนี้ จากนั้นเปิดประวัติการประชุมในเกมและรอให้โหลด"
+            },
+            "2": {
+              "title": "กด START บนแป้นพิมพ์ของคุณ จากนั้นค้นหา Powershell",
+              "content": "เปิด {windowsPowerShell} และเรียกใช้คำสั่งต่อไปนี้ (วางเส้นทางเกมของคุณหากถูกถาม)"
+            },
+            "3": { "title": "วาง URL บันทึกการประชุมลงในช่องด้านล่าง" }
+          }
+        }
+      },
+      "faqs": {
+        "1": {
+          "title": "จะเกิดอะไรขึ้นถ้าฉันนำเข้าบัญชีที่แตกต่างกันหลายบัญชี?",
+          "content": "ไม่ต้องกังวล เมื่อคุณนำเข้าหลายบัญชี เราจะแยกบัญชีเหล่านั้นโดยอัตโนมัติ และคุณจะเห็นปุ่มเปลี่ยนบัญชีปรากฏขึ้น"
+        },
+        "2": {
+          "title": "Why not updating the record?",
+          "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+        },
+        "3": {
+          "title": "บัญชีของฉันปลอดภัยหรือไม่?",
+          "content": "ใช่ ด้วยวิธีนำเข้านี้ จะไม่สามารถรบกวนบัญชีของคุณได้ และสุดท้าย เว็บไซต์นี้เป็นโอเพ่นซอร์สบน GitHub คุณสามารถดูและประเมินได้ด้วยตัวเอง หากคุณยังไม่ไว้วางใจ คุณสามารถข้ามคุณสมบัตินี้และใช้คุณสมบัติอื่น ๆ ได้"
+        }
+      }
+    },
+    "history": {
+      "title": "Pity Tracker",
+      "empty": "ขณะนี้คุณไม่มีประวัติการประชุม"
+    },
+    "guaranteedAt": "รับประกันที่ {0}",
+    "lifetimePulls": "Lifetime Pulls",
+    "pity": "Pity",
+    "rank": {
+      "title": "อันดับโลกของคุณ",
+      "level": "อันดับการดึงทั้งหมดของคุณ",
+      "current": "Current {banner} median is {median} pulls",
+      "more": "คุณมีดึงผู้ใช้มากกว่า {percentage}%",
+      "less": "คุณดึงผู้ใช้น้อยกว่า {percentage}%",
+      "currentLuck": "Current {banner} median is {median}%",
+      "luck5": "โชคลาภ 5 ★",
+      "luck4": "โชคลาภ 4 ★",
+      "luckWinRateOff": "โชคดีชนะ 50:50",
+      "medianTotal": "Global Median {median} pulls",
+      "medianLuck": "Global Median {median}%",
+      "moreTotal": "More pulls than {percentage}% users",
+      "lessTotal": "Less pulls than {percentage}% users",
+      "moreLuck": "Luckier than {percentage}% users",
+      "lessLuck": "Less lucky than {percentage}% users",
+      "top": "TOP",
+      "bottom": "BOTTOM"
+    },
+    "global": {
+      "title": "สถิติการประชุมทั่วโลก",
+      "fiveStar": "5 ★รายการ",
+      "fourStar": "4 ★รายการ",
+      "median": "5★ Median",
+      "totalUsers": "ผู้ใช้ทั้งหมด",
+      "conveneTotal": "Convene Total",
+      "worth": "Worth",
+      "chance": "Chance"
+    },
+    "share": { "title": "แบ่งปันประวัติ" }
+  },
+  "desktopApp": {
+    "title": "แอปป์บนเดสก์ท็อป",
+    "introduce": "ด้วยแอปเดสก์ท็อป คุณสามารถนำเข้าประวัติการประชุมของคุณโดยอัตโนมัติ ดูแผนที่สดในเกม ดูข้อมูลรายการ และอื่นๆ อีกมากมาย",
+    "download": "ดาวน์โหลด"
+  },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Thank you! Hope you find it useful.",
+      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
+      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": { "kofi": "Support me on Ko-fi" }
+  },
+  "echoes": {
+    "title": "Echoes",
+    "cost": "Cost",
+    "sonataEffect": "Sonata effect",
+    "sameElementCharacters": "Same Element Characters",
+    "related": "Related Echo {name}"
+  },
+  "guides": {
+    "title": "Game Guides",
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "_title": { "label": "Title" },
+      "description": {
+        "label": "Description",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": { "keywords": { "label": "Keywords" } },
+      "categories": { "title": "Categories" },
+      "options": { "title": "Options", "schedule": "Schedule publish" },
+      "update": "Save changes"
+    },
+    "related": "Related Posts",
+    "previous": "Previous Posts",
+    "next": "Next Posts",
+    "deleted": { "title": "This post has been deleted!" }
+  },
+  "items": {
+    "title": "Items",
+    "howToObtain": "จะรับ {0} ได้อย่างไร?",
+    "howToUnlock": "จะปลดล็อค {0} ได้อย่างไร?",
+    "cookingIngredients": "ส่วนผสมในการทำอาหาร",
+    "obtainedFromConvenes": "{item} เป็นวัสดุเปิดใช้งาน Resonance Chain ที่ได้รับจาก <b>Convenes</b> ใช้เพื่อปรับระดับ {character} Resonance Chain"
+  },
+  "leaderboards": { "title": "ลีดเดอร์บอร์ด" },
+  "map": {
+    "title": "แผนที่เชิงโต้ตอบ",
+    "locations": {
+      "dimForest": "Dim Forest",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Fallen Grave",
+      "frostingHarbor": "Frosting Harbor",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Tiger's Maw",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Central Plains",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Lollo Warehouse",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Nostalgia Isle",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "พินที่สร้างขึ้นเอง",
+      "levelUpMaterial": "วัสดุยกระดับ",
+      "waypoints": "เวย์พอยต์",
+      "specialItems": "รายการพิเศษ",
+      "chests": "ทรวงอก",
+      "experience": "ประสบการณ์",
+      "puzzleChest": "หน้าอกปริศนา",
+      "localSpecialties": "อาหารพิเศษในท้องถิ่น",
+      "enemies": "ศัตรู",
+      "ores": "แร่",
+      "animals": "สัตว์",
+      "landmarks": "จุดสังเกต",
+      "echoes": "Echoes"
+    },
+    "settings": {
+      "title": "การตั้งค่าแผนที่",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "เมื่อเปิดใช้งาน หมุดประเภทเดียวกันจะถูกรวมกลุ่มเพื่อลดความล่าช้า"
+      },
+      "hideMarkedPins": {
+        "title": "ซ่อนหมุดที่ทำเครื่องหมายไว้",
+        "description": "เมื่อเปิดใช้งาน หมุดที่ทำเครื่องหมายไว้จะถูกซ่อนไว้ในหน้าแรก"
+      }
+    },
+    "markAsNotFound": "ทำเครื่องหมายว่าไม่พบ",
+    "markAsFound": "ทำเครื่องหมายว่าพบแล้ว",
+    "guides": {
+      "multipleAccounts": {
+        "description": "หากต้องการจัดเก็บที่ทำเครื่องหมายไว้ระหว่างบัญชีต่างๆ คุณเพียงแค่ต้องนำเข้าข้อมูลการประชุม จากนั้นคุณจะเห็นปุ่มสลับบัญชีปรากฏขึ้น"
+      },
+      "pinCluster": {
+        "description": "ตามค่าเริ่มต้น คุณลักษณะ Pin Cluster จะถูกเปิดใช้งาน คุณสามารถปิดได้ในการตั้งค่า"
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "หน้าอก",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Viewpoint",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "หนังสือ",
+      "sideQuest": "เควสด้านข้าง",
+      "cave": "ถ้ำ",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "ปลา",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "ไข่นก",
+      "fowlMeat": "เนื้อไก่",
+      "craneFeathers": "ขนเครน",
+      "rawMeat": "เนื้อดิบ",
+      "dewvetch": "Dewvetch"
+    }
+  },
+  "meta": {
+    "title": "Wuthering Waves",
+    "description": "ตัวติดตามที่น่าสงสาร รายการสิ่งที่ต้องทำ ฐานข้อมูล การวิเคราะห์ สถิติทั่วโลก และอีกมากมายสำหรับ Wuthering Waves!",
+    "index": { "title": "Your personal tracker" },
+    "timeline": {
+      "title": "Event timeline calendar",
+      "description": "ปฏิทินไทม์ไลน์ของกิจกรรม Wuthering Waves ดูเมื่อลำดับกิจกรรมจะเริ่มและสิ้นสุดด้วยไทม์ไลน์ที่เรียบร้อย"
+    },
+    "echoes": {
+      "title": "Echoes",
+      "id": {
+        "description": "{name} เป็นคลาส Echo ใน {rarity} ใน Wuthering Waves"
+      },
+      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
+    },
+    "characters": {
+      "id": {
+        "title": "{name} คำแนะนำและสร้าง",
+        "description": "{name} เป็นเครื่องสะท้อนเสียง {attribute} ที่เล่นได้ แต่กำเนิดใน Wuthering Waves ค้นหางานสร้าง ทีม การหมุนเวียน และข้อมูลอื่นๆ ที่ดีที่สุดได้ที่นี่"
+      },
+      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
+    },
+    "weapons": {
+      "id": {
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
+      },
+      "title": "อาวุธ",
+      "description": "อาวุธใน Wuthering Waves มีห้าประเภท ได้แก่ ดาบ, ดาบกว้าง, ถุงมือ, ปืนพก และวงจรเรียงกระแส"
+    },
+    "codes": {
+      "title": "รหัสของขวัญสำหรับ {time}",
+      "description": "รหัสทั้งหมดที่คุณสามารถแลกใน Wuthering Waves เพื่อรับรางวัลฟรี"
+    },
+    "convene": {
+      "history": {
+        "title": "Pity Tracker",
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+      },
+      "global": {
+        "title": "สถิติการประชุมทั่วโลก",
+        "description": "Wuthering Waves Convene เปอร์เซ็นต์ความสงสารโดยเฉลี่ยทั่วโลกจากผู้ใช้ wutheringwaves.app"
+      },
+      "share": { "title": "Convene history card generator" }
+    },
+    "todoList": {
+      "description": "รายการสิ่งที่ต้องทำของ Wuthering Waves เพื่อวางแผนและติดตามไอเท็มและโมราที่คุณต้องการ คุณยังสามารถดูการประมาณเรซินที่จำเป็นในการทำฟาร์มไอเท็มได้!"
+    },
+    "tierList": {
+      "description": "ค้นหารายการระดับ Wuthering Waves ที่ดีที่สุดของคุณที่นี่ หรือสร้างรายการระดับของคุณเอง เรียนรู้เกี่ยวกับรายการ Wuthering Waves Tier เวอร์ชันล่าสุดทั้งหมด"
+    },
+    "trophies": {
+      "title": "ความสำเร็จ",
+      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+    },
+    "map": {
+      "title": "แผนที่เชิงโต้ตอบ",
+      "description": "Wuthering Waves เป็นเกมโอเพนเวิลด์ แผนที่เชิงโต้ตอบใหม่ของเราพร้อมใช้งานแล้ว ช่วยให้คุณติดตามความคืบหน้าและบรรลุการสำรวจ 100%!"
+    },
+    "items": {
+      "title": "สิ่งของทั้งหมด",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
+      "id": {
+        "title": "รายการ: {name}",
+        "description": {
+          "default": "{name} ใน Wuthering Waves เรียนรู้ว่าจะหา {name} ได้ที่ไหน และข้อมูลอื่นๆ ในคู่มือนี้!",
+          "recipe": "{name} ใน Wuthering Waves เรียนรู้สูตรสำหรับ {name} ได้จากที่ไหน และข้อมูลอื่นๆ ในคู่มือนี้!"
+        }
+      }
+    },
+    "settings": { "title": "การตั้งค่า" },
+    "guides": { "title": "คำแนะนำ" },
+    "leaderboards": {
+      "title": "กระดานผู้นำ",
+      "description": "กระดานจัดอันดับความเสียหายของ Wuthering Waves การแชร์โปรไฟล์ การสร้างการ์ดตัวละคร และอีกมากมาย"
+    }
+  },
+  "privacyPolicy": {
+    "title": "ความเป็นส่วนตัว",
+    "message": "สิ่งที่เรารวบรวมและใช้เพื่ออะไร"
+  },
+  "search": {
+    "title": "Spotlight Search",
+    "tooltip": "กดเครื่องหมายทับเพื่อเปิดอย่างรวดเร็ว"
+  },
+  "settings": {
+    "title": "การตั้งค่า",
+    "eraseAllData": "ลบข้อมูลทั้งหมด",
+    "accounts": {
+      "title": "บัญชี",
+      "autoImportConveneHistory": "ประวัติการประชุมนำเข้าอัตโนมัติ",
+      "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
+      "empty": "หากต้องการเพิ่มบัญชี คุณเพียงแค่ต้องนำเข้าประวัติการประชุม"
+    },
+    "roles": {
+      "title": "บทบาทของคุณ",
+      "refreshRoles": "รีเฟรชบทบาท",
+      "link": "ยืนยันและเชื่อมโยง",
+      "unlink": "ยกเลิกการเชื่อมโยง",
+      "message": "คุณเชื่อมโยงกับ Discord สำเร็จแล้ว",
+      "setupGuide1": "After joining Discord, you need to send a direct message with the content below to the BOT named \"{name}\".",
+      "setupGuide2": "คุณจะได้รับรหัสยืนยันจาก BOT คัดลอกและวางที่นี่",
+      "verifyCode": "ตรวจสอบรหัส",
+      "emptyRoles": "คุณยังไม่มีบทบาทใดๆ เลย!"
+    },
+    "syncData": {
+      "title": "ซิงค์ข้อมูล",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "นำเข้า"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "อันตราย!!!",
+        "message": "Your data will clear in your browser and cloud sync."
+      }
+    }
+  },
+  "sidebar": {
+    "home": "หน้าแรก",
+    "timeline": "ไทม์ไลน์",
+    "characters": "ตัวละคร",
+    "weapons": "อาวุธ",
+    "echoes": "Echoes",
+    "conveneHistory": "Pity Tracker",
+    "tierList": "เทียร์ลิสต์",
+    "todoList": "รายการที่ต้องทำ",
+    "trophies": "Trophies",
+    "teams": "Teams",
+    "leaderboards": "ลีดเดอร์บอร์ด",
+    "codes": "โค้ดแพ็ก",
+    "map": "แผนที่เชิงโต้ตอบ",
+    "guides": "คู่มือแนะนำ",
+    "items": "ไอเทม",
+    "comparison": "Comparison",
+    "database": "ฐานข้อมูล",
+    "convene": "Convene",
+    "conveneGlobalStats": "Global Stats",
+    "conveneImport": "นำเข้าประวัติ",
+    "conveneShare": "แบ่งปันประวัติ"
+  },
+  "sync": {
+    "title": "การซิงค์บนคลาวด์",
+    "conflict": {
+      "title": "ความขัดแย้งของข้อมูลของคุณ",
+      "message": "ข้อมูลในเครื่องของคุณในเบราว์เซอร์นี้ขัดแย้งกับข้อมูลที่จัดเก็บไว้ใน Cloud!",
+      "cloudData": "Cloud Data",
+      "localData": "Local Browser Data",
+      "older": "OLDER",
+      "newer": "NEWER",
+      "useCloudData": "Use Cloud Data",
+      "useLocalData": "Use Local Data",
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
+    },
+    "dataSynced": "ซิงค์ข้อมูลแล้ว!",
+    "lastModified": "Last modified",
+    "lastSynced": "ซิงค์ครั้งล่าสุด: {0}",
+    "push": "Push",
+    "pull": "Pull"
+  },
+  "teams": { "title": "ทีม" },
+  "tierList": { "title": "เทียร์ลิสต์" },
+  "timeline": {
+    "title": "ไทม์ไลน์",
+    "startsIn": "เริ่ม {0}",
+    "endsIn": "สิ้นสุด {0}",
+    "current": "กิจกรรมปัจจุบัน",
+    "upcoming": "กิจกรรมที่กำลังจะมาถึง",
+    "summary": "รายละเอียดกิจกรรม",
+    "localTime": "Show as local time",
+    "checkoutOfficialUrl": "ตรวจสอบเว็บไซต์อย่างเป็นทางการ",
+    "ended": "จบแล้ว"
+  },
+  "todoList": {
+    "title": "Todo list",
+    "empty": "Nothing to do yet! Add some from the Items page or the Calculator.",
+    "delete": {
+      "title": "Delete this todo?",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "trophies": { "title": "Trophies" },
+  "updater": {
+    "title": "อัพเดทใหม่!",
+    "message": "คลิกรีเฟรชเพื่อรับการอัปเดตใหม่",
+    "whatsNew": "What's new",
+    "later": "Later",
+    "refresh": "รีเฟรช"
+  },
+  "weapons": {
+    "title": "อาวุธ",
+    "ranks": "Ranks",
+    "alert": "นำเข้าประวัติการประชุมเพื่อดูอาวุธที่มีอยู่แล้ว",
+    "lastUpdatedOn": "{name} อาวุธได้รับการอัปเดตครั้งล่าสุดเมื่อ {time}",
+    "introduction": "ใน Wuthering Waves <span class='text-rarity{rarity}'>{name}</span> เป็นอาวุธ <span class='text-rarity{rarity}'>{rarity}★</span>",
+    "skill": "{name} Skill",
+    "obtainedTooltip": "จำนวนครั้งที่ได้รับผ่านการประชุม"
+  }
+}

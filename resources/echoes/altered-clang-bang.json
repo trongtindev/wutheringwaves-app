@@ -1,0 +1,17 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.019Z",
+  "publishedTime": "2024-06-28T15:43:21.822Z",
+  "skill": {
+    "id": 201050,
+    "cd": 8,
+    "params": [
+      ["20.00%+40", "8"],
+      ["23.00%+46", "8"],
+      ["26.00%+52", "8"],
+      ["29.00%+58", "8"],
+      ["32.00%+64", "8"]
+    ],
+    "description": "Summon a Clang Bang that follows the enemy and eventually self-combusts, dealing {0} Glacio DMG.\n\nCD: {1}s"
+  },
+  "slug": "altered-clang-bang"
+}

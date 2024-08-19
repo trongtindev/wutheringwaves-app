@@ -1,0 +1,11 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.057Z",
+  "publishedTime": "2024-06-28T15:43:21.826Z",
+  "skill": {
+    "id": 200028,
+    "cd": 8,
+    "params": [["8"], ["8"], ["8"], ["8"], ["8"]],
+    "description": "Transform into an Excarat and tunnel underground to advance. In this state, you have the ability to change your direction and are immune to damage.\n\nCD: {0}s"
+  },
+  "slug": "excarat"
+}

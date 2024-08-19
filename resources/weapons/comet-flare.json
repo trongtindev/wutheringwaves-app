@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "The Rectifier born from the aerial phenomenon. The forger integrates the feelings of witnessing the alien stars into the weapon, making it look delicate and light, but it can be stable and constant, and it can be responsive.",
+  "modifiedTime": "2024-07-09T15:18:08.462Z",
+  "publishedTime": "2024-06-28T15:43:22.051Z",
+  "ranks": [
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by 3%, stacking up to 3 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.6s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by 3.5%, stacking up to 3 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.6s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by 4%, stacking up to 3 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.6s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by 4.5%, stacking up to 3 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.6s.",
+    "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by 5%, stacking up to 3 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.6s."
+  ],
+  "skill": {
+    "params": [
+      ["3%", "8", "3", "0.6", "1"],
+      ["3.5%", "8", "3", "0.6", "1"],
+      ["4%", "8", "3", "0.6", "1"],
+      ["4.5%", "8", "3", "0.6", "1"],
+      ["5%", "8", "3", "0.6", "1"]
+    ],
+    "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by {0}, stacking up to {2} time(s). This effect lasts for {1}s and can be triggered {4} time(s) every {3}s."
+  },
+  "slug": "comet-flare",
+  "stats": { "atkFlat": 33, "hp": 6.8 }
+}

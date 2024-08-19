@@ -1,0 +1,638 @@
+{
+  "accounts": {
+    "title": "Accounts",
+    "newAccountDetected": "New Account Use Detected",
+    "successfullySwitched": "Successfully switch to {0}"
+  },
+  "autoImport": {
+    "notificationTitle": "Importing history...",
+    "notificationMessage": "Fetching history for account {0}.",
+    "done": { "title": "Import successfully!" }
+  },
+  "banner": {
+    "featuredResonator": "Featured resonator",
+    "featuredWeapon": "Featured weapon",
+    "standardResonator": "Standard resonator",
+    "standardWeapon": "Standard weapon"
+  },
+  "characters": {
+    "title": "Characters",
+    "message": "Import convene history to see already owned characters.",
+    "resonanceChain": "Resonance Chain",
+    "skills": "Skills",
+    "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> rarity character from the {attribute} element who uses the {weaponType} type weapon.",
+    "lastUpdatedOn": "{name} profile has been last updated on {time}.",
+    "build": "{name} Build",
+    "calculations": "Calculations",
+    "overview": "Overview",
+    "bestMainEchoes": "Best Main Echoes {name}",
+    "moreBuildGuides": "More Build Guides",
+    "bestWeapons": "Best Weapons {name}",
+    "bestEchoSets": "Best Echo Sets",
+    "bestEchoStats": "Best Echo Stats",
+    "bestTeams": "{name} Best Teams",
+    "ascensionMaterialsMap": "Ascension Materials Map",
+    "skillPriority": "{name} Skill Priority",
+    "skillPriorityDescription": "Below you can find the order of leveling the abilities for {name}.",
+    "teams": "Teams",
+    "notOwned": "Not owned",
+    "information": "Character Information",
+    "stats": "Character Stats",
+    "ascensionMaterial": "{name} Ascension Material"
+  },
+  "codes": {
+    "title": "Gift Codes",
+    "expiry": "Expiry",
+    "code": "Code",
+    "rewards": "Rewards",
+    "expired": "Expired",
+    "howToRedeem": "How to Redeem Wuthering Waves Codes",
+    "howToRedeemGuide": "In-game menu, click the settings icon in the bottom right corner. Select the \"Other Settings\" tab with the spanner symbol. Hit the \"Redeem\" button next to the \"Redemption Code\" under Account.",
+    "redeemRequirement": "How to unlock Redemption",
+    "redeemRequirementGuide": "You must be at least Union Level 2 and completing the Chapter 1, Act 1 \"Utterance of Marvels: I\" main quest.",
+    "redemptionStep": "Redemption Step"
+  },
+  "comments": {
+    "empty": "Leave a comment so your voice will be heard first.",
+    "form": { "submit": "Post comment" },
+    "replies": "Replies"
+  },
+  "commit": {
+    "character": {
+      "overview": "Overview",
+      "quote": "Quote",
+      "description": "Description",
+      "skills": "Skills"
+    },
+    "successfully": "Thank you for your contribution, your request has been sent and is being reviewed.",
+    "viewPullRequest": "View Pull Request"
+  },
+  "common": {
+    "name": "Name",
+    "time": "Time",
+    "home": "Home",
+    "delete": "Delete",
+    "timeout": "Connection timeout, please wait a moment and try again later",
+    "invalidLink": "Invalid link, please check it again",
+    "invalidData": "Invalid data returned from API, try again later",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "back": "Back",
+    "cancel": "Cancel",
+    "import": "Import",
+    "search": "Search",
+    "all": "All",
+    "echo": "Echo",
+    "any": "Any",
+    "skill": "Skill",
+    "create": "Create",
+    "save": "Save",
+    "copyLink": "Copy link",
+    "exportAsImage": "Export as Image",
+    "saveChanges": "Save changes",
+    "weapon": "Weapon",
+    "character": "Character",
+    "type": "Type",
+    "sort": "Sort",
+    "title": "Title",
+    "draft": "Draft",
+    "level": "Level",
+    "shortcuts": "Shortcuts",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "ascensionMaterials": "Ascension Materials",
+    "successfully": "Successfully!",
+    "checkAll": "Check all",
+    "clear": "Clear",
+    "retry": "Retry",
+    "upcoming": "Upcoming",
+    "upcomingContent": "This page is about upcoming content.",
+    "upcomingContentMessage": "Upcoming content is subject to change and may not be representative of the final product.",
+    "upcomingWeapons": "Upcoming Weapons",
+    "upcomingCharacters": "Upcoming Characters",
+    "energy": "Energy",
+    "options": "Options",
+    "trophy": "Trophy",
+    "noRecords": "No records found.",
+    "yourLastConvene": "Your Last Convene",
+    "joinTheDiscord": "Join the Discord",
+    "viewOnGithub": "View on GitHub",
+    "rarity": "Rarity",
+    "category": "Category",
+    "editThisPage": "Edit this page",
+    "noRecordsFound": "No records found.",
+    "astrite": "Astrite",
+    "beta": "Beta",
+    "notice": "Notice",
+    "total": "Total",
+    "percentage": "Percentage",
+    "summoned": "Summoned",
+    "hidden": "Hidden",
+    "next": "Next",
+    "previous": "Previous",
+    "critRate": "Crit Rate",
+    "critDMG": "Crit DMG",
+    "atk": "ATK",
+    "def": "DEF",
+    "hp": "HP",
+    "cost": "Cost",
+    "close": "Close",
+    "loading": "Loading...",
+    "localTime": "Local time",
+    "serverTime": "Server time",
+    "pullByDay": "Pull by day",
+    "totalPull": "Total Pull",
+    "openIssues": "Open Issues",
+    "unnamed": "Unnamed",
+    "active": "Active",
+    "inactive": "Inactive",
+    "searchPlaceholder": "Type for searching",
+    "filter": "Filter",
+    "apply": "Apply",
+    "reset": "Reset",
+    "none": "None",
+    "related": "Related",
+    "lastUpdatedOn": "Last updated on: {time}",
+    "views": "Views",
+    "signInRequired": "Sign in Required",
+    "signInRequiredMessage": "This feature which require sign in.",
+    "error": "Error",
+    "rolesRequired": "Roles required",
+    "rolesRequiredAnyMessage": "You need one of the following roles to use this feature.",
+    "getRoles": "Get roles",
+    "recent": "Recent",
+    "banner": "Banner",
+    "confirm": "Confirm",
+    "background": "Background",
+    "foreground": "Foreground",
+    "upload": "Upload",
+    "gallery": "Gallery",
+    "translateThisPage": "Translate this page",
+    "description": "Description",
+    "howToUse": "How to use {0}?",
+    "contributor": "Contributor",
+    "didYouKnow": "Did you know?",
+    "aiGenerated": "AI generated",
+    "submit": "Submit",
+    "attribute": "Attribute",
+    "birthday": "Birthday",
+    "birthplace": "Birthplace"
+  },
+  "convene": {
+    "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
+    "import": {
+      "title": "Import Convenes",
+      "processing": "Processing...",
+      "invalidLink": "Invalid link, please check it again",
+      "guides": {
+        "android": {
+          "default": {
+            "1": { "title": "Follow our Video Tutorial" },
+            "2": { "title": "Paste the copied text here" }
+          }
+        },
+        "pc": {
+          "default": {
+            "1": {
+              "title": "Open Wuthering Waves in this PC then open the convene history in the game and wait it to load."
+            },
+            "2": {
+              "title": "Press START on your keyboard, then search for Powershell",
+              "content": "Open {windowsPowerShell} and run the following command (Paste your game path if asked)."
+            },
+            "3": { "title": "Paste the Convene Record URL into the box below." }
+          }
+        }
+      },
+      "faqs": {
+        "1": {
+          "title": "What if I import many different accounts?",
+          "content": "Don't worry, when you import multiple accounts we will automatically split them and you will see an account switch button appear."
+        },
+        "2": {
+          "title": "Why not updating the record?",
+          "content": "There is a 30-minute delay for record updates. If no data is shown on this page, please try again later. Convene displayed time zone:America(UTC-5); Europe(UTC+1); Asia,HMT, SEA(UTC+8)."
+        },
+        "3": {
+          "title": "Is my account safe?",
+          "content": "Yes, through this import method it will not be possible to interfere with your account. And finally, this website is open source on github you can see and evaluate it yourself, if you still don't trust you can skip this feature and use other features."
+        }
+      }
+    },
+    "history": {
+      "title": "Pity Tracker",
+      "empty": "You currently have no Convene History."
+    },
+    "guaranteedAt": "Guaranteed at {0}",
+    "lifetimePulls": "Lifetime Pulls",
+    "pity": "Pity",
+    "rank": {
+      "title": "Your Global Rank",
+      "level": "Your Total Pulls Rank",
+      "current": "Current {banner} median is {median} pulls",
+      "more": "You have more pull than {percentage}% users",
+      "less": "You have less pull than {percentage}% users",
+      "currentLuck": "Current {banner} median is {median}%",
+      "luck5": "Luckiness 5★",
+      "luck4": "Luckiness 4★",
+      "luckWinRateOff": "Luckiness Win 50:50",
+      "medianTotal": "Global Median {median} pulls",
+      "medianLuck": "Global Median {median}%",
+      "moreTotal": "More pulls than {percentage}% users",
+      "lessTotal": "Less pulls than {percentage}% users",
+      "moreLuck": "Luckier than {percentage}% users",
+      "lessLuck": "Less lucky than {percentage}% users",
+      "top": "TOP",
+      "bottom": "BOTTOM"
+    },
+    "global": {
+      "title": "Global Convene Stats",
+      "fiveStar": "5★ List",
+      "fourStar": "4★ List",
+      "median": "5★ Median",
+      "totalUsers": "Total Users",
+      "conveneTotal": "Convene Total",
+      "worth": "Worth",
+      "chance": "Chance"
+    },
+    "share": { "title": "Share history" }
+  },
+  "desktopApp": {
+    "title": "Desktop App",
+    "introduce": "With the desktop app, you can import your convene history automatically, view live maps in-game, view item information, and more.",
+    "download": "Download"
+  },
+  "donate": {
+    "title": "Donate",
+    "messages": {
+      "1": "Thank you! Hope you find it useful.",
+      "2": "I made this website for fun when I have some spare time. I will add more features and update the data every update, because I like to explore the game and I'm kind of min-maxing it.",
+      "3": "If you want to donate, your donation will definitely help on improving the site and motivating me to add more stuff to me! Thank you very much and have fun, hope you like it!",
+      "4": "If you like coding, you can also contributing to the project on Github."
+    },
+    "buttons": { "kofi": "Support me on Ko-fi" }
+  },
+  "echoes": {
+    "title": "Echoes",
+    "cost": "Cost",
+    "sonataEffect": "Sonata effect",
+    "sameElementCharacters": "Same Element Characters",
+    "related": "Related Echo {name}"
+  },
+  "guides": {
+    "title": "Game Guides",
+    "editor": {
+      "title": "Add new post",
+      "thumbnail": {
+        "title": "Thumbnail",
+        "placeholder": "Recommended size: 1,200x628px."
+      },
+      "localization": {
+        "title": "Localization",
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "_title": { "label": "Title" },
+      "description": {
+        "label": "Description",
+        "placeholder": "Provide a short description of the post."
+      },
+      "seo": { "keywords": { "label": "Keywords" } },
+      "categories": { "title": "Categories" },
+      "options": { "title": "Options", "schedule": "Schedule publish" },
+      "update": "Save changes"
+    },
+    "related": "Related Posts",
+    "previous": "Previous Posts",
+    "next": "Next Posts",
+    "deleted": { "title": "This post has been deleted!" }
+  },
+  "items": {
+    "title": "Items",
+    "howToObtain": "How to obtain {0}?",
+    "howToUnlock": "How to unlock {0}?",
+    "cookingIngredients": "Cooking Ingredients",
+    "obtainedFromConvenes": "{item} is a Resonance Chain Activation Materials obtained from <b>Convenes</b> used to level {character} Resonance Chain."
+  },
+  "leaderboards": { "title": "Leaderboards" },
+  "map": {
+    "title": "Interactive Map",
+    "locations": {
+      "dimForest": "Dim Forest",
+      "portCityOfGuixu": "Port City of Guixu",
+      "whiningAixsMire": "Whining Aix's Mire",
+      "fallenGrave": "Fallen Grave",
+      "frostingHarbor": "Frosting Harbor",
+      "portGunchao": "Port Gunchao",
+      "wavingBattlefield": "Waving Battlefield",
+      "plateauRuins": "Plateau Ruins",
+      "tigersMaw": "Tiger's Maw",
+      "wumingBay": "Wuming Bay",
+      "jinzhou": "Jinzhou",
+      "centralPlains": "Central Plains",
+      "gorgesOfSpirits": "Gorges of Spirits",
+      "desorockHighland": "Desorock Highland",
+      "lolloWarehouse": "Lollo Warehouse",
+      "courtOfSavantaeRuins": "Court of Savantae Ruins",
+      "norfallBarrens": "Norfall Barrens",
+      "mtFirmament": "Mt. Firmament",
+      "luminousShore": "Luminous Shore",
+      "xuanjiRidges": "Xuanji Ridges",
+      "loongsRidge": "Loong's Ridge",
+      "tianguTree": "Tiangu Tree",
+      "loongsCrest": "Loong's Crest",
+      "loongsRest": "Loong's Rest",
+      "hongzhen": "Hongzhen",
+      "wenyeBeach": "Wenye Beach",
+      "giantBanyan": "Giant Banyan",
+      "thornyPassage": "Thorny Passage",
+      "violetBanyan": "Violet Banyan",
+      "forbiddenForest": "Forbidden Forest",
+      "hermitSettlement": "Hermit Settlement",
+      "settleRange": "Settle Range",
+      "seaOfFlames": "Sea of Flames",
+      "dongluResearchStation": "Donglu Research Station",
+      "nostalgiaIsle": "Nostalgia Isle",
+      "lakeDeerslumber": "Lake Deerslumber"
+    },
+    "categories": {
+      "selfCreatedPin": "Self-Created Pin",
+      "levelUpMaterial": "Level-Up Material",
+      "waypoints": "Waypoints",
+      "specialItems": "Special Items",
+      "chests": "Chests",
+      "experience": "Experience",
+      "puzzleChest": "Puzzle Chest",
+      "localSpecialties": "Local Specialties",
+      "enemies": "Enemies",
+      "ores": "Ores",
+      "animals": "Animals",
+      "landmarks": "Landmarks",
+      "echoes": "Echoes"
+    },
+    "settings": {
+      "title": "Map settings",
+      "pinCluster": {
+        "title": "Pin Cluster",
+        "description": "When enabled, pins of the same category will be clustered to reduce lag."
+      },
+      "hideMarkedPins": {
+        "title": "Hide Marked Pins",
+        "description": "When enabled, marked pins will be hidden on the home page."
+      }
+    },
+    "markAsNotFound": "Mark as Not Found",
+    "markAsFound": "Mark as Found",
+    "guides": {
+      "multipleAccounts": {
+        "description": "To store marked between different accounts, you just need to import the convene data then you will see an account switch button appear."
+      },
+      "pinCluster": {
+        "description": "By default, the Pin Cluster feature will be enabled. You can turn it off in settings."
+      }
+    },
+    "pins": {
+      "resonanceNexus": "Resonance Nexus",
+      "resonanceBeacon": "Resonance Beacon",
+      "chest": "Chest",
+      "tidalHeritages": "Tidal Heritages",
+      "sonanceCasket": "Sonance Casket",
+      "windchimer": "Windchimer",
+      "viewpoint": "Viewpoint",
+      "bolbfly": "Bolbfly",
+      "inspectableBox": "Inspectable Box",
+      "book": "Book",
+      "sideQuest": "Side Quest",
+      "cave": "Cave",
+      "frostbug": "Frostbug",
+      "exileMember": "Exile Member",
+      "scarletthorn": "Scarletthorn",
+      "lampylumen": "Lampylumen",
+      "fragipurple": "Fragipurple",
+      "floramber": "Floramber",
+      "babyViridblazeSaurian": "Baby Viridblaze Saurian",
+      "goldenbackFrog": "Goldenback Frog",
+      "blackStripedFrog": "Black-Striped Frog",
+      "greenPitLizard": "Green Pit Lizard",
+      "azureLizard": "Azure Lizard",
+      "silverBandedLizard": "Silver-Banded Lizard",
+      "fish": "Fish",
+      "goldenRingedDragonfly": "Golden-ringed Dragonfly",
+      "birdEgg": "Bird Egg",
+      "fowlMeat": "Fowl Meat",
+      "craneFeathers": "Crane feathers",
+      "rawMeat": "Raw Meat",
+      "dewvetch": "Dewvetch"
+    }
+  },
+  "meta": {
+    "title": "Wuthering Waves",
+    "description": "Pity tracker, todo list, database, analysis, global stats and more for Wuthering Waves!",
+    "index": { "title": "Your personal tracker" },
+    "timeline": {
+      "title": "Event timeline calendar",
+      "description": "Wuthering Waves event timeline calendar, view when an event order will start and end with neat timeline."
+    },
+    "echoes": {
+      "title": "Echoes",
+      "id": {
+        "description": "{name} is a {rarity} Class Echo in Wuthering Waves."
+      },
+      "description": "Explore the world of Echoes on wutheringwaves.app for Wuthering Waves. Our site helps you find the best Echo builds for your characters, providing detailed information on their characteristics, related items, and more. Optimize your gameplay by discovering the perfect Echo combinations and strategies to enhance your characters' performance in the game!"
+    },
+    "characters": {
+      "id": {
+        "title": "{name} Guide and Build",
+        "description": "{name} is a playable {attribute} Congenital Resonator in Wuthering Waves. Find their best builds, teams, rotations, and other information here."
+      },
+      "description": "Discover the complete Wuthering Waves character guides at wutheringwaves.app. Here you'll find information on materials to summon, the best echoes, optimal team combinations, and much more. Our detailed guides will help you find the perfect builds for your characters and optimize your gaming experience, making it even more fun."
+    },
+    "weapons": {
+      "id": {
+        "description": "{name} is a {type} weapon in Wuthering Waves, obtainable through the game's Convene system. On wutheringwaves.app, our detailed map will assist you in finding ascension materials and tracking your weapon's rank. Discover the best ways to upgrade and utilize {name} to its fullest potential."
+      },
+      "title": "Weapons",
+      "description": "There are five types of weapons in Wuthering Waves, they are Sword, Broadblade, Gauntlet, Pistols and Rectifier."
+    },
+    "codes": {
+      "title": "Gift Codes for {time}",
+      "description": "All codes that you can redeem in Wuthering Waves for free rewards."
+    },
+    "convene": {
+      "history": {
+        "title": "Pity Tracker",
+        "description": "Convene Counter to track your pity counter and track when you get the character or weapon. You can also automatically import the logs and backup it from PC, Android, iOS, PlayStation then save it more than 6 months."
+      },
+      "global": {
+        "title": "Global Convene Stats",
+        "description": "Wuthering Waves Convene Global average pity percentage from wutheringwaves.app users."
+      },
+      "share": { "title": "Convene history card generator" }
+    },
+    "todoList": {
+      "description": "Wuthering Waves Todo List to plan and track items and mora you need, you can also see resin approximation needed to farm the items!"
+    },
+    "tierList": {
+      "description": "Find your best Wuthering Waves Tier list here or create your own tier list. Learn about all latest version Wuthering Waves Tier list."
+    },
+    "trophies": {
+      "title": "Achievements",
+      "description": "Track your Wuthering Waves trophies easily! Complete list of all trophies and their details."
+    },
+    "map": {
+      "title": "Interactive Map",
+      "description": "Wuthering Waves is an open-world game. Our new interactive map is now live, allowing you to track your progress and achieve 100% exploration!"
+    },
+    "items": {
+      "title": "All items",
+      "description": "Discover detailed information on items for characters, weapons, echoes, and more. Find out where to obtain the necessary resources to level up your characters, enhance your weapons, and improve your echoes. Our in-depth descriptions will help you make the most of all available items to maximize your gameplay experience.",
+      "id": {
+        "title": "Item: {name}",
+        "description": {
+          "default": "{name} in Wuthering Waves. Learn where to find {name} and other information in this guide!",
+          "recipe": "{name} in Wuthering Waves. Learn where to the recipe for {name} and other information in this guide!"
+        }
+      }
+    },
+    "settings": { "title": "Settings" },
+    "guides": { "title": "Game Guides" },
+    "leaderboards": {
+      "title": "Leaderboards",
+      "description": "Wuthering Waves damage leaderboards, profile sharing, character cards generator and more."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "message": "What we collects and what it is used for"
+  },
+  "search": {
+    "title": "Spotlight Search",
+    "tooltip": "Press slash to open quickly."
+  },
+  "settings": {
+    "title": "Settings",
+    "eraseAllData": "Erase All Data",
+    "accounts": {
+      "title": "Accounts",
+      "autoImportConveneHistory": "Auto import convene history",
+      "autoImportConveneHistorySubtitle": "Your pulls will automatically refresh when you visit website.",
+      "empty": "To add an account, you just need to import convene history."
+    },
+    "roles": {
+      "title": "Your roles",
+      "refreshRoles": "Refresh roles",
+      "link": "Verify and Link",
+      "unlink": "Unlink",
+      "message": "You have successfully linked to Discord.",
+      "setupGuide1": "After joining Discord, you need to send a direct message with the content below to the BOT named \"{name}\".",
+      "setupGuide2": "You will receive the verify code from BOT, copy and paste it here.",
+      "verifyCode": "Verify code",
+      "emptyRoles": "You don't have any roles yet!"
+    },
+    "syncData": {
+      "title": "Sync data",
+      "introduce": "We uses the Cloudflare R2 to save and sync your data on Cloud. We can only read and write files that this site created."
+    },
+    "exportData": {
+      "title": "Export data",
+      "introduce": "You can download your convene data for backup or move it to another site.",
+      "export": "Export"
+    },
+    "importData": {
+      "title": "Import data",
+      "introduce": "You can import data from other sites.",
+      "import": "Import"
+    },
+    "eraseData": {
+      "title": "Erase All Data",
+      "introduce": "Your data will clear in your browser and cloud sync. If website doesn't work or has errors, you can use this feature to fix it.",
+      "eraseNow": "Erase Now",
+      "confirm": {
+        "title": "DANGER!!!",
+        "message": "Your data will clear in your browser and cloud sync."
+      }
+    }
+  },
+  "sidebar": {
+    "home": "Home",
+    "timeline": "Event Timeline",
+    "characters": "Characters",
+    "weapons": "Weapons",
+    "echoes": "Echoes",
+    "conveneHistory": "Pity Tracker",
+    "tierList": "Tier list",
+    "todoList": "Todo list",
+    "trophies": "Trophies",
+    "teams": "Teams",
+    "leaderboards": "Leaderboards",
+    "codes": "Gift Codes",
+    "map": "Interactive Map",
+    "guides": "Guides",
+    "items": "Items",
+    "comparison": "Comparison",
+    "database": "Database",
+    "convene": "Convene",
+    "conveneGlobalStats": "Global Stats",
+    "conveneImport": "Import history",
+    "conveneShare": "Share history"
+  },
+  "sync": {
+    "title": "Cloud Sync",
+    "conflict": {
+      "title": "Your Data Conflict",
+      "message": "Your local data in this browser is conflicting with the one stored in Cloud!",
+      "cloudData": "Cloud Data",
+      "localData": "Local Browser Data",
+      "older": "OLDER",
+      "newer": "NEWER",
+      "useCloudData": "Use Cloud Data",
+      "useLocalData": "Use Local Data",
+      "smallSizeWarning": "CAREFUL, THE SIZE IS MUCH SMALLER!"
+    },
+    "dataSynced": "Data has been synced!",
+    "lastModified": "Last modified",
+    "lastSynced": "Last synced: {0}",
+    "push": "Push",
+    "pull": "Pull"
+  },
+  "teams": { "title": "Teams" },
+  "tierList": { "title": "Tier list" },
+  "timeline": {
+    "title": "Timeline",
+    "startsIn": "Starts {0}",
+    "endsIn": "Ends {0}",
+    "current": "Current",
+    "upcoming": "Upcoming",
+    "summary": "Events summary",
+    "localTime": "Show as local time",
+    "checkoutOfficialUrl": "Check out the official website",
+    "ended": "Ended"
+  },
+  "todoList": {
+    "title": "Todo list",
+    "empty": "Nothing to do yet! Add some from the Items page or the Calculator.",
+    "delete": {
+      "title": "Delete this todo?",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "trophies": { "title": "Trophies" },
+  "updater": {
+    "title": "New update!",
+    "message": "Click refresh to get the new update",
+    "whatsNew": "What's new",
+    "later": "Later",
+    "refresh": "Refresh"
+  },
+  "weapons": {
+    "title": "Weapons",
+    "ranks": "Ranks",
+    "alert": "Import convene history to see already owned weapons.",
+    "lastUpdatedOn": "{name} weapon has been last updated on {time}.",
+    "introduction": "In Wuthering Waves, <span class='text-rarity{rarity}'>{name}</span> is a <span class='text-rarity{rarity}'>{rarity}★</span> weapon.",
+    "skill": "{name} Skill",
+    "obtainedTooltip": "Number of times obtained via convene."
+  }
+}

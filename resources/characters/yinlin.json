@@ -1,0 +1,302 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400084, "quantity": 3 },
+        { "item": 42300080, "quantity": 4 },
+        { "item": 41100012, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400084, "quantity": 6 },
+        { "item": 42300080, "quantity": 8 },
+        { "item": 41100012, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400084, "quantity": 9 },
+        { "item": 42300080, "quantity": 12 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400084, "quantity": 12 },
+        { "item": 42300080, "quantity": 16 },
+        { "item": 41100013, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400084, "quantity": 16 },
+        { "item": 42300080, "quantity": 20 },
+        { "item": 41100014, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "bestEchoSets": [
+    { "different": 100, "items": ["Void Thunder"] },
+    { "different": 88.7, "items": ["Void Thunder", "Lingering Tunes"] },
+    { "different": 88.4, "items": ["Void Thunder", "Moonlit Clouds"] }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Electro DMG", "ATK%"] },
+        { "cost": 3, "stats": ["Electro DMG", "ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    },
+    {
+      "type": "4-4-1-1-1",
+      "items": [
+        { "cost": 4, "stats": ["Crit Rate"] },
+        { "cost": 4, "stats": ["Crit DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    }
+  ],
+  "bestMainEchoes": [
+    "impermanence-heron",
+    "tempest-mephis",
+    "thundering-mephis",
+    "flautist"
+  ],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        { "role": "Main DPS", "items": ["calcharo", "encore"] },
+        { "role": "Sub DPS", "items": ["yinlin"] },
+        { "role": "Healer", "items": ["verina", "baizhi"] }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    { "item": "stringmaster", "rank": 1, "different": 117.2 },
+    { "item": "cosmic-ripples", "rank": 1, "different": 100 },
+    { "item": "augment", "rank": 1, "different": 84.5 },
+    { "item": "jinzhou-keeper", "rank": 1, "different": 83.3 },
+    { "item": "rectifier-of-night", "rank": 5, "different": 75.8 },
+    { "item": "guardian-rectifier", "rank": 5, "different": 73.6 }
+  ],
+  "birthday": "September 17th",
+  "birthplace": "Huanglong",
+  "description": "Yinlin is a skilled Patroller and powerful Natural Resonator. After being suspended from her duties at the Public Security Bureau, she must now pursue hidden evils in secrecy.",
+  "descriptionLocalized": {
+    "vi": "Yinlin là một Patroller tài ba và là một Natural Resonator mạnh mẽ. Sau khi bị đình chỉ nhiệm vụ tại Cục An ninh Công cộng, giờ đây cô phải bí mật truy đuổi những thế lực tà ác ẩn náu.",
+    "id": "Yinlin adalah Patroli yang terampil dan Resonator Alam yang kuat. Setelah ditangguhkan dari tugasnya di Biro Keamanan Publik, dia sekarang harus mengejar kejahatan tersembunyi secara diam-diam.",
+    "th": "ยินหลินเป็นผู้ตรวจการณ์ที่มีฝีมือและเป็นผู้ใช้พลังธรรมชาติที่แข็งแกร่ง หลังจากถูกพักงานจากสำนักงานตำรวจ เธอต้องตามล่าความชั่วร้ายที่ซ่อนอยู่ในความลับ"
+  },
+  "forte": [
+    {
+      "id": 121,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Crit. Rate+1.20%"
+    },
+    {
+      "id": 122,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 123,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 124,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Crit. Rate+1.20%"
+    },
+    {
+      "id": 125,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400124, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Crit. Rate+2.80%"
+    },
+    {
+      "id": 126,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400124, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 127,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400124, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 128,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400124, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Crit. Rate+2.80%"
+    }
+  ],
+  "quote": "Name's Yinlin. As for what I do... Shhh, we don't talk about that in public.",
+  "quoteLocalized": {
+    "id": "Namaku Yinlin. Soal apa yang kulakukan... Shhh, kita tidak membicarakannya di tempat umum.",
+    "th": "ชื่ออินหลิน นะ ส่วนว่าทำอะไรอยู่น่ะ... เงียบๆ ไว้ก่อน เรื่องแบบนี้ไม่ควรพูดกันในที่สาธารณะ",
+    "vi": "Tên tôi là Yinlin. Còn việc tôi làm gì... Shhh, chúng ta không nói về điều đó ở nơi công cộng."
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "morality-s-crossroads",
+      "name": "Morality's Crossroads",
+      "params": ["70%"],
+      "description": "Resonance Skill <strong>Magnetic Roar</strong> and <strong>Lightning Execution</strong> deal {0} more damage."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "ensnarled-by-rapport",
+      "name": "Ensnarled by Rapport",
+      "params": ["100%", "5", "5"],
+      "description": "Resonance Skill <strong>Electromagnetic Blast</strong> recovers an additional {1} \"Judgement Point(s)\" and {2} Resonance Energy on hit."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "unyielding-verdict",
+      "name": "Unyielding Verdict",
+      "params": ["55%"],
+      "description": "Forte Circuit <strong>Judgment Strike</strong>'s DMG multiplier is increased by 55%."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "steadfast-conviction",
+      "name": "Steadfast Conviction",
+      "params": ["20%", "12"],
+      "description": "When Forte Circuit <strong>Judgment Strike</strong> hits a target, the ATK of all team members is increased by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "resounding-will",
+      "name": "Resounding Will",
+      "params": ["100%"],
+      "description": "Resonance Liberation <strong>Thundering Wrath</strong> deals {0} extra damage to targets with Forte Circuit's <strong>Sinner's Mark</strong> or <strong>Punishment Mark</strong>."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "pursuit-of-justice",
+      "name": "Pursuit of Justice",
+      "params": ["10"],
+      "description": "In the first 30s after casting Resonance Liberation <strong>Thundering Wrath</strong>, when Yinlin's <strong>Basic Attack</strong> hits a target, <strong>Furious Thunder</strong> will be triggered, dealing <strong class=\"color-electro\">Electro DMG</strong> equal to 419.59% of Yinlin's ATK. Every <strong>Basic Attack</strong> hit can trigger <strong>Furious Thunder</strong> 1 time, up to 4 times. This is considered Resonance Skill DMG."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "zapstring-s-dance",
+      "name": "Zapstring's Dance",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nYinlin controls the puppet \"Zapstring\" to perform up to 4 attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nYinlin consumes Stamina to control \"Zapstring\", dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nYinlin consumes Stamina to control \"Zapstring\" and perform a Mid-air Plunging Attack, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+    },
+    {
+      "slug": "magnetic-roar",
+      "name": "Magnetic Roar",
+      "type": "Resonance Skill",
+      "description": "<strong>Magnetic Roar</strong>\nThe puppet \"Zapstring\" deals <strong class=\"color-electro\">Electro DMG</strong> to the target, and puts Yinlin into the <strong>Execution Mode</strong>.\n \n<strong>Execution Mode</strong>\n<strong>Basic Attack</strong> and <strong>Dodge Counter</strong> will trigger 1 <strong>Electromagnetic Blast</strong> when hitting a target.\nEach stage of <strong>Basic Attack</strong> or <strong>Dodge Counter</strong> can only trigger 1 <strong>Electromagnetic Blast</strong>, up to 4 times.\n \n<strong>Electromagnetic Blast</strong>\nAttack all targets marked with Resonance Circuit <strong>Sinner's Mark</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Lightning Execution</strong>\nUse Resonance Skill after casting Resonance Skill <strong>Magnetic Roar</strong> to cast <strong>Lightning Execution</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>.\nIf Resonance Skill <strong>Lightning Execution</strong> is not activated in a while or this Character is switched, this Skill will be put on Cooldown."
+    },
+    {
+      "slug": "thundering-wrath",
+      "name": "Thundering Wrath",
+      "type": "Resonance Liberation",
+      "description": "Command \"Zapstring\" to call for thunder to fall upon a large range, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+    },
+    {
+      "slug": "pain-immersion",
+      "name": "Pain Immersion",
+      "type": "Inherent Skill",
+      "description": "After using Resonance Skill <strong>Magnetic Roar</strong>, Yinlin's Crit. Rate is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s."
+    },
+    {
+      "slug": "deadly-focus",
+      "name": "Deadly Focus",
+      "type": "Inherent Skill",
+      "description": "The damage of Resonance Skill <strong>Lightning Execution</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> when hitting targets marked with \"Sinner's Mark\", and Yinlin's ATK is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">4</strong>s when this is triggered."
+    },
+    {
+      "slug": "raging-storm",
+      "name": "Raging Storm",
+      "type": "Intro Skill",
+      "description": "Command puppet \"Zapstring\" to attack, dealing <strong class=\"color-electro\">Electro DMG</strong> in a large range."
+    },
+    {
+      "slug": "chameleon-cipher",
+      "name": "Chameleon Cipher",
+      "type": "Forte Circuit",
+      "description": "<strong>Chameleon Cipher</strong>\nWhen Yinlin's \"Judgment Points\" is full, her <strong>Heavy Attack</strong> is replaced with <strong>Chameleon Cipher</strong>, which consumes all \"Judgment Points\" to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>. When it hits a target marked with <strong>Sinner's Mark</strong>, the <strong>Sinner's Mark</strong> is replaced with <strong>Punishment Mark</strong>, lasting for <strong class=\"color-electro\">18</strong>s.\n \n<strong>Sinner's Mark</strong>\nNormal Attack <strong>Zapstring's Dance</strong>, Resonance Liberation <strong>Thundering Wrath</strong>, and Intro Skill <strong>Roaring Storm</strong> will apply <strong>Sinner's Mark</strong> on hit.\n<strong>Sinner's Mark</strong> is removed when Yinlin exits.\n \n<strong>\"Punishment Mark\"</strong>\nWhen a target marked with <strong>Punishment Mark</strong> is damaged, <strong>Judgement Strike</strong> will fall, dealing <strong class=\"color-electro\">Electro DMG</strong> to all targets marked with <strong>Punishment Mark</strong>. This can be triggered up to once per second.\n \n<strong>Judgment Points</strong>\nYinlin can hold up to <strong class=\"color-electro\">100</strong> Judgement Points.\nWhen Normal Attack <strong>Zapstring's Dance</strong> hits a target, restores \"Judgment Points\".\nUpon casting Resonance Skill <strong>Magnetic Roar</strong>, restores \"Judgment Points\".\nWhen Resonance Skill <strong>Electromagnetic Blast</strong> hits a target, restores \"Judgment Points\".\nUpon casting Resonance Skill <strong>Magnetic Roar</strong>, restores \"Judgment Points\"."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "strategist",
+      "name": "Strategist",
+      "type": "Outro Skill",
+      "description": ""
+    }
+  ],
+  "splashArt": true,
+  "stats": { "hp": 880, "def": 105, "atk": 32, "energy": 125 }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "description": "Youhu, a natural expert in identifying antiques, is a capable speaker with distinctive tastes.\n\nWhen dealing with treasures and antiques, this jubilant dynamo settles into calm perception, tracing their distant past through their wrinkles and textures.",
+  "descriptionLocalized": {
+    "vi": "Youhu có năng khiếu thẩm định bảo vật bẩm sinh, có tài hùng biện và sở hữu khiếu thẩm mỹ khác biệt.\n\nKhi đối mặt với những món cổ vật quý hiếm, cô ấy - người vốn hoạt bát và khác thường, sẽ bình tĩnh nhận định chúng một cách cẩn thận, như thể đang muốn thông qua các vân cùng kết cấu của chúng để truy tìm quá khứ xa xôi nào đó vậy."
+  },
+  "quote": "Here you go, a special edition of my poetry collection, hand-signed by moi! You are welcome!",
+  "quoteLocalized": {
+    "vi": "Đây là tập thơ đặc biệt có chữ ký của ta, tặng cho cậu đấy!"
+  }
+}

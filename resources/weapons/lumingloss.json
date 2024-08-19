@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 5 },
+        { "item": 41100022, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 7 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 5 },
+        { "item": 41100023, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 7 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 10 },
+        { "item": 41100024, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "This Sword is a ceremonial weapon used by the Jinzhou Magistrate of Huanglong at the inauguration ceremony. The golden ginkgo leaf pattern represents that Huanglong should be like ginkgo, although it is left in the world, it is still prosperous and long-lasting.",
+  "modifiedTime": "2024-07-09T15:18:08.495Z",
+  "publishedTime": "2024-06-28T15:43:22.056Z",
+  "ranks": [
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 20%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 31%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 42%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 53%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s.",
+    "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by 64%, stacking up to 1 time(s). This effect lasts for 10s and can be triggered 1 time(s) every 1s."
+  ],
+  "skill": {
+    "params": [
+      ["20%", "1", "10", "1", "1"],
+      ["31%", "1", "10", "1", "1"],
+      ["42%", "1", "10", "1", "1"],
+      ["53%", "1", "10", "1", "1"],
+      ["64%", "1", "10", "1", "1"]
+    ],
+    "description": "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by {0}, stacking up to {1} time(s). This effect lasts for {2}s and can be triggered {4} time(s) every {3}s."
+  },
+  "slug": "lumingloss",
+  "stats": { "atkFlat": 31, "atk": 8.1 }
+}

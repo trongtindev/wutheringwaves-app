@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020021, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020022, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020023, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020024, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020024, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "A weapon designed to commemorate the Midnight Rangers' dedication. \"Let my body ablaze, flames dance to banish all evil's haze.\"",
+  "modifiedTime": "2024-07-09T15:18:08.550Z",
+  "publishedTime": "2024-06-28T15:43:22.067Z",
+  "ranks": [
+    "When Intro Skill is released, increases Resonance Skill DMG Bonus by 20% for 15s.",
+    "When Intro Skill is released, increases Resonance Skill DMG Bonus by 25% for 15s.",
+    "When Intro Skill is released, increases Resonance Skill DMG Bonus by 30% for 15s.",
+    "When Intro Skill is released, increases Resonance Skill DMG Bonus by 35% for 15s.",
+    "When Intro Skill is released, increases Resonance Skill DMG Bonus by 40% for 15s."
+  ],
+  "skill": {
+    "params": [
+      ["20%", "15"],
+      ["25%", "15"],
+      ["30%", "15"],
+      ["35%", "15"],
+      ["40%", "15"]
+    ],
+    "description": "When Intro Skill is released, increases Resonance Skill DMG Bonus by {0} for {1}s."
+  },
+  "slug": "undying-flame",
+  "stats": { "atkFlat": 33, "atk": 6.8 }
+}

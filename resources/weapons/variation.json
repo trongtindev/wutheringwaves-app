@@ -1,0 +1,75 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 5 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 5 },
+        { "item": 41100032, "quantity": 5 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 7 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 5 },
+        { "item": 41100033, "quantity": 5 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 7 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 64000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 10 },
+        { "item": 41100034, "quantity": 7 },
+        { "item": 2, "quantity": 96000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "A descending adagio. This rectifier opens an insightful window into the situation, changing the tune of the intense battle concerto.",
+  "modifiedTime": "2024-07-09T15:18:08.552Z",
+  "publishedTime": "2024-06-28T15:43:22.067Z",
+  "ranks": [
+    "When Resonance Skill is released, restores Concerto Energy by 8. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 10. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 12. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 14. This effect can be triggered 1 time every 20s.",
+    "When Resonance Skill is released, restores Concerto Energy by 16. This effect can be triggered 1 time every 20s."
+  ],
+  "skill": {
+    "params": [
+      ["8", "20", "1"],
+      ["10", "20", "1"],
+      ["12", "20", "1"],
+      ["14", "20", "1"],
+      ["16", "20", "1"]
+    ],
+    "description": "When Resonance Skill is released, restores Concerto Energy by {0}. This effect can be triggered {2} times every {1}s."
+  },
+  "slug": "variation",
+  "stats": { "atkFlat": 27, "energyRegen": 11.52 }
+}

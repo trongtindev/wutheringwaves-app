@@ -1,0 +1,11 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.092Z",
+  "publishedTime": "2024-06-28T15:43:21.830Z",
+  "skill": {
+    "id": 200033,
+    "cd": 8,
+    "params": [["8"], ["8"], ["8"], ["8"], ["8"]],
+    "description": "Transform into Hoartoise and slowly restore HP. Use the Echo skill again to exit the transformation state.\n\nCD: {0}s"
+  },
+  "slug": "hoartoise"
+}

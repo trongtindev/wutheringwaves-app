@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "slug": { "type": "string" },
+          "cost": { "type": "integer" },
+          "name": { "type": "string" },
+          "nameLocalized": { "type": "object" },
+          "class": {
+            "type": "string",
+            "enum": ["Common", "Elite", "Overlord", "Calamity"]
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "$ref": "./attribute.components.json#/components/schemas/slug"
+            }
+          },
+          "sonataEffects": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "$ref": "./sonata.components.json#/components/schemas/slug"
+                },
+                {
+                  "type": "string",
+                  "$ref": "./sonata.components.json#/components/schemas/name"
+                }
+              ]
+            }
+          },
+          "hidden": { "type": "boolean" },
+          "publishedTime": { "type": "string" },
+          "modifiedTime": { "type": "string" }
+        },
+        "required": [
+          "id",
+          "slug",
+          "cost",
+          "name",
+          "class",
+          "attribute",
+          "publishedTime",
+          "modifiedTime"
+        ]
+      }
+    }
+  },
+  "required": ["items"],
+  "title": "Echos",
+  "type": "object"
+}

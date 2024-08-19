@@ -1,0 +1,65 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 6 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020011, "quantity": 6 },
+        { "item": 41100022, "quantity": 6 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020012, "quantity": 8 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020013, "quantity": 6 },
+        { "item": 41100023, "quantity": 6 },
+        { "item": 2, "quantity": 60000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 8 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020014, "quantity": 12 },
+        { "item": 41100024, "quantity": 8 },
+        { "item": 2, "quantity": 120000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "modifiedTime": "2024-07-20T15:18:08.452Z",
+  "publishedTime": "2024-06-28T15:43:22.049Z",
+  "skill": {
+    "params": [
+      ["12%", "4%"],
+      ["15%", "5%"],
+      ["18%", "6%"],
+      ["21%", "7%"],
+      ["14%", "8%"]
+    ],
+    "description": "ATK increased by {0}. The wielder gains 1 stack of Searing Feather upon dealing damage, which can be triggered once every 0.5s, and gains 5 stacks of the same effect upon casting Resonance Skill. Each stack of Searing Feather gives {1} additional Resonance Skill DMG Bonus for up to 14 stacks.\nAfter reaching the max stacks, all stacks will be removed in 12s."
+  },
+  "stats": { "atkFlat": 47, "critDMG": 10.8 }
+}

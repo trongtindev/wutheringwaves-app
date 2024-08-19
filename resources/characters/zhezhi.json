@@ -1,0 +1,139 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": "shell-credit", "quantity": 5000 },
+        { "item": "lf-howler-core", "quantity": 4 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": "shell-credit", "quantity": 10000 },
+        { "item": "mf-howler-core", "quantity": 4 },
+        { "item": "sound-keeping-tacet-core", "quantity": 3 },
+        { "item": "lanternberry", "quantity": 4 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": "shell-credit", "quantity": 15000 },
+        { "item": "mf-howler-core", "quantity": 8 },
+        { "item": "sound-keeping-tacet-core", "quantity": 6 },
+        { "item": "lanternberry", "quantity": 8 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": "shell-credit", "quantity": 20000 },
+        { "item": "hf-howler-core", "quantity": 4 },
+        { "item": "sound-keeping-tacet-core", "quantity": 9 },
+        { "item": "lanternberry", "quantity": 12 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": "shell-credit", "quantity": 40000 },
+        { "item": "hf-howler-core", "quantity": 8 },
+        { "item": "sound-keeping-tacet-core", "quantity": 12 },
+        { "item": "lanternberry", "quantity": 16 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": "shell-credit", "quantity": 80000 },
+        { "item": "ff-howler-core", "quantity": 4 },
+        { "item": "sound-keeping-tacet-core", "quantity": 16 },
+        { "item": "lanternberry", "quantity": 20 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "bestWeapons": [
+    { "item": "rime-draped-sprouts", "rank": 1, "different": 100 }
+  ],
+  "description": "Zhezhi is a commissioned painter, quiet and shy with a dedication to her craft. She's not very eloquent, but her persistence and love for painting speak volumes.",
+  "descriptionLocalized": {
+    "vi": "Zhezhi là một họa sĩ được ủy thác, im lặng và nhút nhát với sự cống hiến cho đồ nghề của mình. Cô ấy không hùng biện lắm, nhưng sự kiên trì và yêu thích hội họa của cô ấy đã nói lên nhiều."
+  },
+  "quote": "What I wanted to say is, the sunlight on you right now is so beautiful. Can I ... paint you?",
+  "quoteLocalized": {
+    "vi": "Điều tôi muốn nói là, ánh nắng trên bạn lúc này thật đẹp. Tôi có thể... vẽ bạn chứ?"
+  },
+  "resonanceChain": [
+    {
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": ["15", "10", "27"],
+      "description": "When casting Resonance Skill Creation's Zenith, Resonance Energy is restored by {0} and Crit. Rate is increased by {1}% for {2}s."
+    },
+    {
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": ["6"],
+      "description": "Max Inklit Spirits summoned by Resonance Liberation Living Canvas increases by {0}."
+    },
+    {
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": ["15", "3", "27"],
+      "description": "When Resonance Skill Manifestation, Resonance Skill Stroke of Genius, or Resonance Skill Creation's Zenith is cast, ATK increases by {0}%, stacking up to {1} time(s) for {2}s."
+    },
+    {
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": ["20", "30"],
+      "description": "When Resonance Liberation Living Canvas is cast, ATK of Resonators on the team increases by {0}% for {1}s."
+    },
+    {
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": ["3", "1", "140"],
+      "description": "For every {0} Inklit Spirits summoned by Resonance Liberation Living Canvas, {1} extra Inklit Spirit is summoned to perform a Coordinated Attack, dealing DMG equal to {2}% of Inklit Spirit's DMG, considered as Basic Attack DMG. This damage dealt will not further summon Inklit Spirit."
+    },
+    {
+      "slug": "complex-simplicity",
+      "name": "Complex Simplicity",
+      "params": ["120"],
+      "description": "When Resonance Skill Stroke of Genius or Resonance Skill Creation's Zenith is cast, an extra Ivory Herald will be summoned to deal DMG equal to {0}% of Resonance Skill Stroke of Genius's DMG, considered as Basic Attack DMG."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "dimming-brush",
+      "name": "Dimming Brush",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nPerform up to 3 consecutive strikes, dealing <strong class='color-glacio'>Glacio DMG</strong>.\n\n<strong>Heavy Attack</strong>\nConsume STA to perform an attack, dealing <strong class='color-glacio'>Glacio DMG</strong>.\n\n<strong>Mid-air Attack</strong>\nConsume STA to perform up to 2 consecutive attacks while in mid-air, dealing <strong class='color-glacio'>Glacio DMG</strong>.\n\nDodge Counter\nUse Basic Attack after a successful Dodge to counterattack, dealing <strong class='color-glacio'>Glacio DMG</strong>."
+    },
+    {
+      "slug": "depiction",
+      "name": "Depiction",
+      "type": "Resonance Skill",
+      "description": "<strong>Press</strong>\nDeal <strong class='color-glacio'>Glacio DMG</strong>. If \"Afflatus\" is higher than 60, additionally consume 60 \"Afflatus\" to summon Spiritual Sketch: Left and Spiritual Sketch: Right on the ground.\n\n<strong>Hold</strong>\nDeal <strong class='color-glacio'>Glacio DMG</strong>. If \"Afflatus\" is higher than 60, additionally consume 60 \"Afflatus\" to summon Spiritual Sketch: Left and Spiritual Sketch: Right in the air.\n\n<strong>Press while in Mid-air</strong>\nDeal <strong class='color-glacio'>Glacio DMG</strong>. If \"Afflatus\" is higher than 60, additionally consume 60 \"Afflatus\" to summon Spiritual Sketch: Left and Spiritual Sketch: Right in the air."
+    },
+    {
+      "slug": "spiritful-animation",
+      "name": "Spiritful Animation",
+      "type": "Resonance Liberation",
+      "description": "Summon Inklit Spirit for assistance.\n\n<strong>Inklit Spirit</strong>\nWhen the active Resonator on the team deals DMG, Inklit Spirit will be summoned to perform a Coordinated Attack, dealing Glacio DMG, considered as Basic Attack DMG.\n\n- Each time DMG is dealt, 3 Inklit Spirit(s) will be summoned. Up to 21 Inklit Spirits can be summoned. Up to 1 Inklit Spirit(s) can be summoned every second.\n- The effect lasts for 30s or until max Inklit Spirits are summoned."
+    },
+    {
+      "slug": "ink-and-wash",
+      "name": "Ink and Wash",
+      "type": "Forte Circuit",
+      "description": "<strong>Spiritual Sketch</strong>\nUp to 1 of each of Spiritual Sketch: Left, Spiritual Sketch: Middle, and Spiritual Sketch: Right can exist at the same time, each lasting for 15s.\n\n<strong>Heavy Attack</strong>\nComposition When performing the 3 moves below, if \"Afflatus\" is higher than 30, consume STA and 30 \"Afflatus\" to attack the target, dealing <strong class='color-glacio'>Glacio DMG</strong>, and summon Spiritual Sketch: Middle.\n\n - Hold the Basic Attack button shortly after Basic Attack Stage 3;\n- Press the Basic Attack button shortly after casting Resonance Skill; or\n- Hold the Basic Attack button while in mid-air.\n\n<strong>Resonance Skill: Stroke of Genius</strong>\nWhen a Spiritual Sketch is nearby, the Resonance Skill is replaced with Stroke of Genius. When it is cast, Zhezhi will: \n- Blink to the location of the Spiritual Sketch and remove it, then summon a crane spirit to attack the target, dealing <strong class='color-glacio'>Glacio DMG</strong>, considered as Basic Attack DMG.\n- Gain 1 stack of \"Painter's Delight\", lasting for 8s and stacking up to 2 times.\n\nResonance Skill: Stroke of Maestro\n\nWhen a Spiritual Sketch is nearby and there are 2 stacks of \"Painter's Delight\", the Resonance Skill is replaced with Stroke of Maestro. When it is cast, Zhezhi will:\n- Blink to the location of the Spiritual Sketch and remove it, then summon a crane spirit to attack the target, dealing greater <strong class='color-glacio'>Glacio DMG</strong>, considered as Basic Attack DMG, and additionally increasing the Basic Attack DMG Multiplier by 18% for 22s.\n\n\"Afflatus\"\nZhezhi can hold up to 90 \"Afflatus\". \nNormal Attacks grant \"Afflatus\".\nIntro Skill grants \"Afflatus\"."
+    }
+  ],
+  "stats": { "atk": 30, "def": 90, "hp": 980, "energy": 100 },
+  "voiceActors": [
+    { "locale": "en", "name": "Shin-Fei Chen" },
+    { "locale": "jp", "name": "Makino Yui" },
+    { "locale": "zh", "name": "Miao Zi" },
+    { "locale": "ko", "name": "Kim Ha Ru" }
+  ]
+}

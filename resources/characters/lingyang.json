@@ -1,0 +1,250 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400074, "quantity": 3 },
+        { "item": 42300080, "quantity": 4 },
+        { "item": 41100012, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400074, "quantity": 6 },
+        { "item": 42300080, "quantity": 8 },
+        { "item": 41100012, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400074, "quantity": 9 },
+        { "item": 42300080, "quantity": 12 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400074, "quantity": 12 },
+        { "item": 42300080, "quantity": 16 },
+        { "item": 41100013, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400074, "quantity": 16 },
+        { "item": 42300080, "quantity": 20 },
+        { "item": 41100014, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "birthday": "August 8th",
+  "birthplace": "Huanglong",
+  "description": "Lingyang is talented and friendly member of the Liondance Troupe in Jinzhou. His passion and courage are evident as he engages with humans, showcasing his impressive physical abilities. With his unique style, he embodies the spirit of Liondancing.",
+  "descriptionLocalized": {
+    "vi": "Lingyang là một thành viên tài năng và thân thiện của Đoàn múa lân ở Tấn Châu. Niềm đam mê và lòng dũng cảm của anh ta thể hiện rõ ràng khi anh ta giao lưu với con người, thể hiện khả năng thể chất ấn tượng của mình. Với phong cách độc đáo của mình, anh ta thể hiện tinh thần của múa lân.",
+    "id": "Lingyang adalah anggota berbakat dan ramah dari Troupe Liondance di Jinzhou. Gairah dan keberaniannya terlihat jelas saat dia berinteraksi dengan manusia, menunjukkan kemampuan fisiknya yang mengesankan. Dengan gayanya yang unik, dia mewujudkan semangat Liondance.",
+    "th": "ลิงหยางเป็นสมาชิกที่มีความสามารถและเป็นมิตรของคณะนักแสดงสิงโตในจินโจว ความหลงใหลและความกล้าหาญของเขาปรากฏชัดเมื่อเขาสื่อสารกับมนุษย์ แสดงให้เห็นถึงความสามารถทางกายภาพที่น่าประทับใจของเขา ด้วยสไตล์ที่เป็นเอกลักษณ์ของเขา เขาเป็นตัวแทนของจิตวิญญาณของการเต้นสิงโต"
+  },
+  "forte": [
+    {
+      "id": 45,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Glacio DMG Bonus+4.20%"
+    },
+    {
+      "id": 46,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 47,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 48,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Glacio DMG Bonus+4.20%"
+    },
+    {
+      "id": 41,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Glacio DMG Bonus+1.80%"
+    },
+    {
+      "id": 42,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 43,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 44,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Glacio DMG Bonus+1.80%"
+    }
+  ],
+  "quote": "Awoo - Lion up! Victory is mine at this year's Greens-plucking Tournament!",
+  "quoteLocalized": {
+    "vi": "Awoo - Sư tử lên! Chiến thắng thuộc về ta trong giải đấu Lượm Cỏ năm nay!",
+    "id": "Awoo - Singa maju! Kemenangan milikku di Turnamen Pemetik Hijau tahun ini!",
+    "th": "Awoo - Singa, bersiap! Kemenangan akan menjadi milikku di Turnamen Pemetik Rumput Hijau tahun ini!"
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "lion-of-light-blessings-abound",
+      "name": "Lion of Light, Blessings Abound",
+      "params": [],
+      "description": "During Resonance Liberation <strong>Lion's Vigor</strong>, Lingyang's Anti-Interruption is enhanced."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "dominant-and-fierce-power-unbound",
+      "name": "Dominant and Fierce, \nPower Unbound",
+      "params": ["10", "20"],
+      "description": "Intro Skill <strong>Lion Awakens</strong> additionally recovers {0} Resonance Energy for Lingyang, triggered once every {1}s."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "jaw-dropping-feats-loud-and-wide",
+      "name": "Jaw-Dropping Feats, \nLoud and Wide",
+      "params": ["20%", "10%"],
+      "description": "During Resonance Liberation <strong>Lion's Vigor</strong>, Lingyang's Basic Attack DMG Bonus is increased by {0}, and Resonance Skill DMG Bonus increased by {1}."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "immortals-bow-in-reverence-flawed",
+      "name": "Immortals Bow, \nin Reverence Flawed",
+      "params": ["20%", "30"],
+      "description": "Outro Skill <strong>Frosty Marks</strong> increases the Glacio DMG Bonus of all team members by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "seven-stars-shine-stepped-upon-high",
+      "name": "Seven Stars Shine, \nStepped upon High",
+      "params": ["200%"],
+      "description": "Resonance Liberation <strong>Strive: Lion's Vigor</strong> additionally deals <strong class=\"color-glacio\">Glacio DMG</strong> equal to {0} of Lingyang's ATK."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "demons-tremble-divine-power-nigh",
+      "name": "Demons Tremble, \nDivine Power Nigh",
+      "params": ["3", "100%"],
+      "description": "In the Forte Circuit <strong>Striding Lion</strong> state, during the first {0}s after every Resonance Skill <strong>Mountain Roamer</strong>, the Basic Attack DMG Bonus for Lingyang's next Basic Attack is increased by {1}."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "majestic-fists",
+      "name": "Majestic Fists",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nLingyang performs up to 5 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Basic Attack: Feral Roars</strong>\nAfter Resonance Skill <strong>Furious Punches</strong> is cast, <strong>Basic Attack 5</strong> is replaced with <strong>Feral Roars</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Heavy Attack</strong>\nLingyang consumes Stamina to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nLingyang consumes Stamina to perform a Mid-air Plunging Attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+    },
+    {
+      "slug": "ancient-arts",
+      "name": "Ancient Arts",
+      "type": "Resonance Skill",
+      "description": "<strong>Ancient Arts</strong>\nAttack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Furious Punches</strong>\nWhen <strong>Basic Attacks 3, 4, or 5</strong> or Basic Attack <strong>Feral Roars</strong> hits the target, Resonance Skill <strong>Ancient Arts</strong> is replaced with Resonance Skill <strong>Swift Punches</strong>.\nIf Lingyang uses <strong>Basic Attack</strong> after casting Basic Attack <strong>Feral Roars</strong> and Resonance Skill <strong>Swift Punches</strong>, he will start from <strong>Basic Attack 3</strong>.\n \nLingyang's Resonance Skill will not reset his Basic Attack stage."
+    },
+    {
+      "slug": "strive-lion-s-vigor",
+      "name": "Strive: Lion's Vigor",
+      "type": "Resonance Liberation",
+      "description": "Attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>, and receive the blessing of <strong>Lion's Vigor</strong>, which lasts for <strong class=\"color-glacio\">50%</strong>s.\n \n<strong>Lion's Vigor</strong>\nLingyang's <strong class=\"color-glacio\">Glacio DMG Bonus</strong> is increased by <strong class=\"color-glacio\">50%</strong>;"
+    },
+    {
+      "slug": "lion-s-pride",
+      "name": "Lion's Pride",
+      "type": "Inherent Skill",
+      "description": "Damage of the Intro Skill <strong>Lion Awakens</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">50%</strong>."
+    },
+    {
+      "slug": "diligent-practice",
+      "name": "Diligent Practice",
+      "type": "Inherent Skill",
+      "description": "Under the <strong>Striding Lion</strong> state, within <strong class=\"color-glacio\">3</strong>s after each <strong>Basic Attack</strong>, the next <strong>Mountain Roamer</strong> will deal an additional <strong class=\"color-glacio\">Glacio DMG</strong>, equal to <strong class=\"color-glacio\">150%</strong> of <strong>Mountain Roamer</strong> damage, considered as Resonance Skill damage."
+    },
+    {
+      "slug": "lion-awakens",
+      "name": "Lion Awakens",
+      "type": "Intro Skill",
+      "description": "Lingyang enters the battlefield, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+    },
+    {
+      "slug": "unification-of-spirits",
+      "name": "Unification of Spirits",
+      "type": "Forte Circuit",
+      "description": "<strong>Heavy Attack: Glorious Plunge</strong>\nWhen Lion's Spirit is full, use <strong>Heavy Attack</strong> to perform <strong>Glorious Plunge</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Mid-air Attack: Tail Strike</strong>\nWhen Lion's Spirit is not full, use <strong>Basic Attack</strong> after <strong>Heavy Attack</strong> to perform <strong>Tail Strike</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Striding Lion</strong>\nAfter casting Heavy Attack <strong>Glorious Plunge</strong>, enter <strong>Striding Lion</strong> state;\nAfter casting Intro Skill <strong>Lion Awakens</strong> or Resonance Liberation <strong>Strive: Lion's Vigor</strong>, if Lion's Spirit is full, use <strong>Basic Attack</strong> to enter <strong>Striding Lion</strong> state.\nIn the <strong>Striding Lion</strong> state:\nAttacks can be launched in mid-air. If Lingyang is on the ground, use Heavy Attack <strong>Glorious Plunge</strong> to get back in the air.\nLion's Spirit is continuously consumed, and the <strong>Striding Lion</strong> state ends in <strong class=\"color-glacio\">5</strong>s after Lion's Spirit runs out;\nIn the Resonance Liberation <strong>Lion's Vigor</strong> state, the consumption speed of Lion's Spirit is reduced by <strong class=\"color-glacio\">50%</strong>, extending <strong>Striding Lion</strong> state by up to <strong class=\"color-glacio\">10</strong>s.\nLingyang's <strong>Basic Attack</strong> is replaced with Basic Attack <strong>Feral Gyrate</strong>, which performs up to 2 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\nLingyang's <strong>Resonance Skill</strong> is replaced with <strong>Mountain Roamer</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\nWhen Lion's Spirit is less than <strong class=\"color-glacio\">10</strong>, use <strong>Basic Attack</strong> to perform <strong>Stormy Kicks</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>; after performing Basic Attack <strong>Stormy Kicks</strong>, the Mid-air Attack <strong>Radiant Plunge</strong> becomes available.\nConcerto Energy is restored when Lion's Spirit is consumed.\n \n<strong>Lion's Spirit</strong>\nLingyang can hold up to <strong class=\"color-glacio\">100</strong> Lion's Spirit.\nWhen casting Resonance Skill <strong>Furious Punches</strong>, Lion's Spirit is restored.\nWhen casting Intro Skill <strong>Lion Awakens</strong>, Lion's Spirit is restored.\nWhen casting Resonance Liberation <strong>Strive: Lion's Vigor</strong>, Lion's Spirit is restored."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "frosty-marks",
+      "name": "Frosty Marks",
+      "type": "Outro Skill",
+      "description": "Lingyang releases a shock wave centered on the skill target, dealing <strong class=\"color-glacio\">Glacio DMG</strong> equal to <strong class=\"color-glacio\">587.94%</strong> of Lingyang's ATK to targets within the range."
+    }
+  ],
+  "stats": { "hp": 831, "def": 99, "atk": 35, "energy": 125 }
+}

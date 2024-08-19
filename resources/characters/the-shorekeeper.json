@@ -1,0 +1,11 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "description": "The Shorekeeper of the Black Shores, a mysterious divine being governing the essence of aloofness, emerges in response to your summon. \n\nHaving spent eons in guardianship, the first stirrings of emotion and desire awaken within her heart, fostering a firm determination to connect with the world — and with you.",
+  "descriptionLocalized": {
+    "vi": "Thủ Ngạn Nhân của Hắc Hải Ngạn, một tồn tại thần bí lạnh lùng và khó tiếp cận, sẽ xuất hiện đáp lại lời hiệu triệu từ bạn (Rover).\n\nTrải qua nhiều thiên niên kỷ, những cảm xúc và ham muốn đầu tiên đã thức tỉnh trong trái tim cô, nuôi dưỡng quyết tâm vững chắc để kết nối với thế giới - và với bạn."
+  },
+  "quote": "The Shorekeeper'... This name suits me well enough. It aligns with my purpose and drive: they only exist because of you.",
+  "quoteLocalized": {
+    "vi": "Thủ Ngạn Nhân... Cái tên này quả thực hợp với tôi. Nó chất chứa mục đích cùng động lực của tôi: tồn tại do anh, cũng vì anh."
+  }
+}

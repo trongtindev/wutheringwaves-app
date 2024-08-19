@@ -1,0 +1,250 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400134, "quantity": 3 },
+        { "item": 42300040, "quantity": 4 },
+        { "item": 41100032, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400134, "quantity": 6 },
+        { "item": 42300040, "quantity": 8 },
+        { "item": 41100032, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400134, "quantity": 9 },
+        { "item": 42300040, "quantity": 12 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400134, "quantity": 12 },
+        { "item": 42300040, "quantity": 16 },
+        { "item": 41100033, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400134, "quantity": 16 },
+        { "item": 42300040, "quantity": 20 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "birthday": "October 2nd",
+  "birthplace": "Huanglong",
+  "description": "Yuanwu owns a boxing gym where he teaches martial arts and health management. He is well-respected in the community for his cordial demeanor and pleasant temperament.",
+  "descriptionLocalized": {
+    "vi": "Yuanwu sở hữu một phòng tập boxing nơi anh dạy võ thuật và quản lý sức khỏe. Anh được cộng đồng tôn trọng vì phong thái lịch thiệp và tính cách dễ chịu.",
+    "id": "Yuanwu memiliki sasana tinju tempat dia mengajarkan seni bela diri dan manajemen kesehatan. Dia sangat dihormati di masyarakat karena sikapnya yang ramah dan temperamennya yang menyenangkan.",
+    "th": "หยวนอู่เป็นเจ้าของยิมมวยที่เขาสอนศิลปะการต่อสู้และการจัดการสุขภาพ เขามีชื่อเสียงในชุมชนด้วยบุคลิกที่เป็นมิตรและอัธยาศัยดี"
+  },
+  "forte": [
+    {
+      "id": 137,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Electro DMG Bonus+1.80%"
+    },
+    {
+      "id": 138,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "DEF+2.28%"
+    },
+    {
+      "id": 139,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "DEF+2.28%"
+    },
+    {
+      "id": 140,
+      "cost": [
+        { "item": 43020053, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Electro DMG Bonus+1.80%"
+    },
+    {
+      "id": 141,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Electro DMG Bonus+4.20%"
+    },
+    {
+      "id": 142,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "DEF+5.32%"
+    },
+    {
+      "id": 143,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "DEF+5.32%"
+    },
+    {
+      "id": 144,
+      "cost": [
+        { "item": 43020054, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Electro DMG Bonus+4.20%"
+    }
+  ],
+  "quote": "Assuming I've thought my decisions through and acted with integrity, I am content.",
+  "quoteLocalized": {
+    "vi": "Nếu tôi đã suy nghĩ kỹ lưỡng về quyết định của mình và hành động một cách chính trực, tôi hài lòng.",
+    "id": "Jika saya telah memikirkan keputusan saya dengan matang dan bertindak dengan integritas, saya merasa puas.",
+    "th": "ถ้าฉันคิดไตร่ตรองการตัดสินใจของตัวเองอย่างถี่ถ้วนและกระทำด้วยความซื่อสัตย์ ฉันก็พอใจแล้ว"
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "steaming-cup-of-justice",
+      "name": "Steaming Cup of Justice",
+      "params": ["20%", "20%"],
+      "description": "When Yuanwu is in Forte Circuit's <strong>Lightning Infused</strong> state, his Basic Attack Speed is increased by {0}, and his Heavy Attack Speed is increased by {1}."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "fierce-heart-serene-mind",
+      "name": "Fierce Heart, Serene Mind",
+      "params": ["15"],
+      "description": "Intro Skill <strong>Thunder Bombardment</strong> additionally recovers {0} Resonance Energy for Yuanwu."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "upholder-of-integrity",
+      "name": "Upholder of Integrity",
+      "params": ["20%"],
+      "description": "When the Coordinated Attacks of Resonance Skill's <strong>Thunder Wedge</strong> hits a target, the damage is additionally increased by {0} of Yuanwu's DEF."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "retributive-knuckles",
+      "name": "Retributive Knuckles",
+      "params": ["200%", "10"],
+      "description": "When casting Resonance Liberation <strong>Blazing Might</strong>, the on-field character will gain a Shield equal to {0} of Yuanwu's DEF for {1}s."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "neighborhood-protector",
+      "name": "Neighborhood Protector",
+      "params": ["50%"],
+      "description": "When Resonance Skill <strong>Thunder Wedge</strong> is on the field, Yuanwu's Resonance Liberation DMG Bonus is increased by {0}."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "defender-of-all-realms",
+      "name": "Defender of All Realms",
+      "params": ["32%", "3"],
+      "description": "All team members nearby within the range of Resonance Skill <strong>Thunder Wedge</strong> will gain a {0} DEF increase, lasting {1}s."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "leihuangquan",
+      "name": "Leihuangquan",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nYuanwu performs up to 5 consecutive attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nYuanwu consumes Stamina to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nYuanwu consumes Stamina to launch a Mid-air Plunging Attack, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+    },
+    {
+      "slug": "leihuang-master",
+      "name": "Leihuang Master",
+      "type": "Resonance Skill",
+      "description": "<strong>Thunder Wedge</strong>\nYuanwu summons <strong>Thunder Wedge</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>, and forms a <strong>Thunder Field</strong> centered on the <strong>Thunder Wedge</strong>. <strong>Thunder Wedge</strong> lasts for <strong class=\"color-electro\">12</strong>s.\nForte Circuit <strong>Rumbling Spark</strong> and Resonance Liberation <strong>Blazing Might</strong> will immediately detonate Resonance Skill <strong>Thunder Wedge</strong> on the field, dealing <strong class=\"color-electro\">Electro DMG</strong>, considered as Resonance Skill Damage.\n \n<strong>Thunder Field</strong>\nThe on-field character gains the effects below when in the <strong>Thunder Field</strong>: a Coordinated Attack from Resonance Skill <strong>Thunder Wedge</strong> is triggered when attacks hit a target, dealing <strong class=\"color-electro\">Electro DMG</strong>. This can be triggered once every <strong class=\"color-electro\">1.2</strong>s. The effect lasts for <strong class=\"color-electro\">1.5</strong>s."
+    },
+    {
+      "slug": "blazing-might",
+      "name": "Blazing Might",
+      "type": "Resonance Liberation",
+      "description": "Awaken the power of thunder and provide Forte Circuit <strong>Lightning Infused</strong> status for all nearby characters for <strong class=\"color-electro\">10</strong>s, granting them increased Anti-interruption, then perform a powerful blow that deals <strong class=\"color-electro\">Electro DMG</strong>.\n "
+    },
+    {
+      "slug": "thunderweaver",
+      "name": "Thunderweaver",
+      "type": "Inherent Skill",
+      "description": "The damage multiplier of Resonance Skill <strong>Thunder Uprising</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">40%</strong>, and its depletion of enemy Vibration Strength is enhanced."
+    },
+    {
+      "slug": "reserved-confidence",
+      "name": "Reserved Confidence",
+      "type": "Inherent Skill",
+      "description": "The ranges of the Resonance Skill <strong>Thunder Field</strong> and <strong>Thunder Uprising</strong> are greatly expanded. When exiting during combat, if <strong>Readiness</strong> is not full, Yuanwu will automatically leave <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong>Thunder Wedge</strong> in place."
+    },
+    {
+      "slug": "thunder-bombardment",
+      "name": "Thunder Bombardment",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+    },
+    {
+      "slug": "unassuming-blade",
+      "name": "Unassuming Blade",
+      "type": "Forte Circuit",
+      "description": "<strong>Rumbling Spark</strong>\nWhen \"Readiness\" is full, long press Resonance Skill to consume all \"Readiness\" and cast Rumbling Spark, dealing <strong class=\"color-electro\">Electro DMG</strong> and entering the <strong>Lightning Infused</strong> state.\n \n<strong>Thunder Uprising</strong>\nWhen you have full \"Readiness\", Resonance Skill <strong>Thunder Wedge</strong> will cast <strong>Thunder Uprising</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Lightning Infused</strong>\nThe character in <strong>Lightning Infused</strong> state has a greatly increased anti-interruption.\nWhen Yuanwu is in this state:\n-<strong>Basic Attacks</strong>: Hits targets in a larger range, depletes enemy Vibration Strength faster;\n-<strong>Heavy Attacks</strong>: Attack speed is increased, deplete enemy Vibration Strength faster;\n-<strong>Dodge Counters</strong>: Attack speed is increased, deplete enemy Vibration Strength faster.\n-Use <strong>Basic Attack</strong> within <strong class=\"color-electro\">3</strong>s after casting a <strong>Heavy Attack</strong> or a successful <strong>Counterattack</strong> to cast <strong>Thunderweaver</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>, considered as Basic Attack damage;\nYuanwu does not recover \"Readiness\" in this state.\n \n<strong>Readiness</strong>\nYuanwu can hold up to <strong class=\"color-electro\">100</strong> \"Readiness\".\nWhen Resonance Skill <strong>Thunder Wedge</strong> is on the field, Yuanwu gains <strong class=\"color-electro\">6</strong> \"Readiness\" every second, even when he is not the on-field character;\nWhen Resonance Skill <strong>Thunder Wedge</strong> hits a target with a Coordinated Attack, Yuanwu gains <strong class=\"color-electro\">5</strong> \"Readiness\"."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "lightning-manipulation",
+      "name": "Lightning Manipulation",
+      "type": "Outro Skill",
+      "description": "Yuanwu unleashes thunderbolts in an area centered around the skill target, weakening the Vibration Strength of enemies upon impact."
+    }
+  ],
+  "stats": { "hp": 682, "def": 134, "atk": 18, "energy": 125 }
+}

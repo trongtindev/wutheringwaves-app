@@ -1,0 +1,109 @@
+{
+  "$schema": "../public/schema/banners.schema.json",
+  "items": [
+    { "type": "beginner", "name": "Beginner Convene" },
+    { "type": "beginner-choice", "name": "Beginner's Choice Convene" },
+    {
+      "type": "beginner-choice-custom",
+      "name": "Beginner's Choice Convene (Giveback Custom Convene)"
+    },
+    { "type": "standard-resonator", "name": "Standard Resonator Convene" },
+    { "type": "standard-weapon", "name": "Standard Weapon Convene" },
+    {
+      "type": "featured-resonator",
+      "name": "Prevail the Lasting Night - Jiyan",
+      "time": { "start": "2024-05-23 10:00", "end": "2024-06-13 09:59" },
+      "featuredRare": "Jiyan",
+      "featuredSecondaryRare": "Yinlin",
+      "featured": ["Chixia", "Danjin", "Mortefi"],
+      "thumbnail": "/events/covers/prevail-the-lasting-night.webp"
+    },
+    {
+      "type": "featured-weapon",
+      "time": { "start": "2024-05-23 10:00", "end": "2024-06-13 09:59" },
+      "name": "Absolute Pulsation - Jiyan - Verdant Summit",
+      "featuredRare": "Verdant Summit",
+      "featured": ["Dauntless Evernight", "Variation", "Hollow Mirage"],
+      "thumbnail": "/events/covers/absolute-pulsation-verdant-summit.webp"
+    },
+    {
+      "type": "featured-resonator",
+      "name": "When Thunder Pours - Yinlin",
+      "time": { "start": "2024-06-06 10:00", "end": "2024-06-26 11:59" },
+      "featuredRare": "Yinlin",
+      "featuredSecondaryRare": "Jiyan",
+      "featured": ["Aalto", "Taoqi", "Yuanwu"],
+      "thumbnail": "/events/covers/when-thunder-pours.webp"
+    },
+    {
+      "type": "featured-weapon",
+      "time": { "start": "2024-06-06 10:00", "end": "2024-06-26 11:59" },
+      "name": "Absolute Pulsation - Yinlin - Stringmaster",
+      "featuredRare": "Stringmaster",
+      "featured": ["Jinzhou Keeper", "Cadenza", "Lunar Cutter"],
+      "thumbnail": "/events/covers/stringmaster.webp"
+    },
+    {
+      "type": "featured-resonator",
+      "name": "Jinhsi | Thawborn Renewal",
+      "time": { "start": "2024-06-28 12:00", "end": "2024-07-22 09:59" },
+      "featuredRare": "Jinhsi",
+      "featured": ["Sanhua", "Danjin", "Yangyang"],
+      "thumbnail": "/events/covers/thawborn-renewal.webp"
+    },
+    {
+      "type": "featured-weapon",
+      "time": { "start": "2024-06-28 12:00", "end": "2024-07-22 09:59" },
+      "name": "Jinhsi | Ages of Harvest",
+      "featuredRare": "Ages of Harvest",
+      "featured": ["Discord", "Commando of Conviction", "Amity Accord"],
+      "thumbnail": "/events/covers/ages-of-harvest.webp"
+    },
+    {
+      "type": "featured-resonator",
+      "name": "Changli | Vermillion's Ploy",
+      "time": { "start": "2024-07-22 10:00", "end": "2024-08-14 11:59" },
+      "featuredRare": "Changli",
+      "featured": ["Sanhua", "Taoqi", "Mortefi"],
+      "thumbnail": "/events/covers/vermillion-ploy.webp"
+    },
+    {
+      "type": "featured-weapon",
+      "time": { "start": "2024-07-22 10:00", "end": "2024-08-14 11:59" },
+      "name": "Changli | Blazing Brilliance",
+      "featuredRare": "Blazing Brilliance",
+      "featured": ["Comet Flare", "Overture", "Undying Flame"],
+      "thumbnail": "/events/covers/blazing-brilliance.webp"
+    },
+    {
+      "type": "featured-resonator",
+      "name": "Zhezhi | Chromatic Prose",
+      "time": { "start": "2024-08-15 13:00", "end": "2024-09-07 09:59" },
+      "featuredRare": "Zhezhi",
+      "featured": ["Chixia", "Baizhi", "Sanhua"],
+      "thumbnail": "https://i.imgur.com/YGZYt4C.png"
+    },
+    {
+      "type": "featured-weapon",
+      "time": { "start": "2024-08-15 13:00", "end": "2024-09-07 09:59" },
+      "name": "Zhezhi | Rime-Draped Sprouts",
+      "featuredRare": "Rime-Draped Sprouts",
+      "featured": ["Dauntless Evernight", "Jinzhou Keeper", "Hollow Mirage"],
+      "thumbnail": "https://i.imgur.com/WbnXArc.png"
+    },
+    {
+      "type": "featured-resonator",
+      "name": "Xiangli Yao",
+      "time": { "start": "2024-09-07 10:00", "end": "2024-09-28 11:59" },
+      "featuredRare": "Xiangli Yao",
+      "featured": ["Danjin", "Aalto", "Yuanwu"]
+    },
+    {
+      "type": "featured-weapon",
+      "time": { "start": "2024-09-07 10:00", "end": "2024-09-28 11:59" },
+      "name": "Xiangli Yao | Verity's Handle",
+      "featuredRare": "Verity's Handle",
+      "featured": ["Marcato", "Helios Cleaver", "Novaburst"]
+    }
+  ]
+}

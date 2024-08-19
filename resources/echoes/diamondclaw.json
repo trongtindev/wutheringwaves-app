@@ -1,0 +1,17 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.046Z",
+  "publishedTime": "2024-06-28T15:43:21.825Z",
+  "skill": {
+    "id": 200043,
+    "cd": 8,
+    "params": [
+      ["30.00%+60", "8"],
+      ["34.50%+69", "8"],
+      ["39.00%+78", "8"],
+      ["43.50%+87", "8"],
+      ["48.00%+96", "8"]
+    ],
+    "description": "Transform into Crystal Scorpion and enter a Parry State. Counterattack when the Parry State is over, dealing {0} Physical DMG.\nCD: {1}s"
+  },
+  "slug": "diamondclaw"
+}

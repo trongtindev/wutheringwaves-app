@@ -1,0 +1,60 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 3 },
+        { "item": 2, "quantity": 4000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020041, "quantity": 3 },
+        { "item": 41100012, "quantity": 3 },
+        { "item": 2, "quantity": 8000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020042, "quantity": 4 },
+        { "item": 41100013, "quantity": 2 },
+        { "item": 2, "quantity": 16000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020043, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020044, "quantity": 4 },
+        { "item": 41100014, "quantity": 2 },
+        { "item": 2, "quantity": 32000 }
+      ],
+      "minLevel": 70
+    }
+  ],
+  "description": "The onset of pinnacle pursuit. A broadblade designed for novice Resonators. Contains a power not to be underestimated under its simple outlook.",
+  "modifiedTime": "2024-07-09T15:18:08.543Z",
+  "publishedTime": "2024-06-28T15:43:22.066Z",
+  "ranks": [
+    "Increases ATK by 5%.",
+    "Increases ATK by 6.25%.",
+    "Increases ATK by 7.5%.",
+    "Increases ATK by 8.75%.",
+    "Increases ATK by 10%."
+  ],
+  "skill": {
+    "params": [["5%"], ["6.25%"], ["7.5%"], ["8.75%"], ["10%"]],
+    "description": "Increases ATK by {0}."
+  },
+  "slug": "tyro-broadblade",
+  "stats": { "atkFlat": 22, "atk": 3.3 }
+}

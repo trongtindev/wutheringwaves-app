@@ -1,0 +1,250 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 3 },
+        { "item": 42300090, "quantity": 4 },
+        { "item": 41100032, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 6 },
+        { "item": 42300090, "quantity": 8 },
+        { "item": 41100032, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 9 },
+        { "item": 42300090, "quantity": 12 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 12 },
+        { "item": 42300090, "quantity": 16 },
+        { "item": 41100033, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 16 },
+        { "item": 42300090, "quantity": 20 },
+        { "item": 41100034, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "birthday": "October 11th",
+  "birthplace": "Huanglong",
+  "description": "Yangyang is an Outrider of the Midnight Rangers.\nOnce sheltered, now a fighter. She soars with the wind to protect others, like a skylark in flight.",
+  "descriptionLocalized": {
+    "id": "Yangyang adalah seorang Outrider dari Midnight Rangers.Dulu terlindungi, sekarang seorang pejuang. Dia terbang bersama angin untuk melindungi orang lain, seperti burung pipit yang terbang.",
+    "th": "หยางหยางเป็นนักเดินทางกลางคืนของ Midnight Rangersครั้งหนึ่งเคยถูกปกป้อง แต่ตอนนี้กลายเป็นนักสู้ เธอโบยบินไปกับสายลมเพื่อปกป้องผู้อื่น เหมือนนกกระจอกเทศที่โบยบิน",
+    "vi": "Yangyang là một Kỵ Sĩ của Lữ Đoàn Bóng Đêm. Từng được che chở, giờ đây là một chiến binh. Cô bay lượn như chim sơn ca, với gió để bảo vệ người khác."
+  },
+  "forte": [
+    {
+      "id": 155,
+      "cost": [
+        { "item": 43020013, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 156,
+      "cost": [
+        { "item": 43020013, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Aero DMG Bonus+1.80%"
+    },
+    {
+      "id": 157,
+      "cost": [
+        { "item": 43020014, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Aero DMG Bonus+4.20%"
+    },
+    {
+      "id": 158,
+      "cost": [
+        { "item": 43020014, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 159,
+      "cost": [
+        { "item": 43020014, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 160,
+      "cost": [
+        { "item": 43020014, "quantity": 3 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Aero DMG Bonus+4.20%"
+    },
+    {
+      "id": 153,
+      "cost": [
+        { "item": 43020013, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Aero DMG Bonus+1.80%"
+    },
+    {
+      "id": 154,
+      "cost": [
+        { "item": 43020013, "quantity": 3 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    }
+  ],
+  "quote": "I hope I can be the one to embrace all that you are, and share with you all that you carry.",
+  "quoteLocalized": {
+    "id": "Semoga akulah yang bisa merangkul semua dirimu, dan berbagi semua beban yang kau pikul.",
+    "th": "ฉันหวังว่าจะเป็นคนที่กอดทุกอย่างที่คุณเป็น และแบ่งปันทุกสิ่งที่คุณแบก",
+    "vi": "Tôi hy vọng mình có thể là người ôm trọn tất cả những gì bạn là, và chia sẻ với bạn tất cả những gì bạn mang theo."
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "sapphire-skies-soaring-sparrows",
+      "name": "Sapphire Skies, \nSoaring Sparrows",
+      "params": ["15%", "8"],
+      "description": "Intro Skill <strong>Cerulean Song</strong> increases Yangyang's Aero DMG Bonus by an additional {0} for {1}s."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "nesting-twigs-in-beaks-they-harrow",
+      "name": "Nesting Twigs, \nin Beaks They Harrow",
+      "params": ["10", "20"],
+      "description": "<strong>Heavy Attack</strong> recovers an additional {0} Resonance Energy for Yangyang when it hits a target, which can be triggered 1 time every {1}s."
+    },
+    {
+      "idx": "Resonance III-IV",
+      "slug": "nature-sings-in-symphony",
+      "name": "Nature Sings in Symphony",
+      "params": ["40%", "33%"],
+      "description": "Resonance Skill DMG Bonus is increased by {0}. The Wind Field's pulling effect on surrounding targets is enhanced, and the pulling range is expanded by {1}."
+    },
+    {
+      "idx": "Resonance IV-IV",
+      "slug": "close-your-eyes-and-listen-in",
+      "name": "Close Your Eyes and Listen in",
+      "params": ["95%"],
+      "description": "Mid-Air Attack <strong>Feather Release</strong>'s damage is increased by {0}."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "winds-whisper-in-harmony",
+      "name": "Winds Whisper in Harmony",
+      "params": ["85%"],
+      "description": "Resonance Liberation <strong>Wind Spirals</strong>'s damage is increased by {0}."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "a-tribute-to-life-s-sweet-hymn",
+      "name": "A Tribute to Life's Sweet Hymn",
+      "params": ["20%", "20"],
+      "description": "After casting Mid-Air Attack <strong>Feather Release</strong>, the ATK of all team members is increased by {0} for {1}s."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "feather-as-blade",
+      "name": "Feather as Blade",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nYangayang performs up to 4 consecutive attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack</strong>\nYangyang consumes STA to lunge forward, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack: Zephyr Song</strong>\nUse <strong>Basic Attack</strong> after <strong>Heavy Attack</strong> or <strong>Dodge Counter</strong> to perform Heavy Attack <strong>Zephyr Song</strong>, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nYangyang consumes STA to perform a Plunging Attack from mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to thrust forward, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+    },
+    {
+      "slug": "zephyr-domain",
+      "name": "Zephyr Domain",
+      "type": "Resonance Skill",
+      "description": "Yangyang wields her sword to create a whirling vortex of winds that gathers nearby enemies to the center, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+    },
+    {
+      "slug": "wind-spirals",
+      "name": "Wind Spirals",
+      "type": "Resonance Liberation",
+      "description": "Yangyang conjures a mighty Cyclone that gathers nearby enemies, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+    },
+    {
+      "slug": "compassion",
+      "name": "Compassion",
+      "type": "Inherent Skill",
+      "description": "Yangyang recovers <strong style=\"color: var(--theme-palette-color-1);\">30</strong> STA after she casts a Mid-air Attack <strong>Feather Release</strong>."
+    },
+    {
+      "slug": "lazuline-mercy",
+      "name": "Lazuline Mercy",
+      "type": "Inherent Skill",
+      "description": "Yangyang's Aero DMG Bonus is increased by <strong class=\"color-aero\">8%</strong> for <strong class=\"color-aero\">8</strong>s after casting Intro Skill <strong>Cerulean Song</strong>."
+    },
+    {
+      "slug": "cerulean-song",
+      "name": "Cerulean Song",
+      "type": "Intro Skill",
+      "description": "Yangyang sends the target into the air, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+    },
+    {
+      "slug": "echoing-feathers",
+      "name": "Echoing Feathers",
+      "type": "Forte Circuit",
+      "description": "<strong>Heavy Attack: Stormy Strike</strong>\nWhen Yangyang has <strong class=\"color-aero\">3</strong> Melodies, she can cast <strong>Stormy Strike</strong> after <strong>Heavy Attack</strong> or <strong>Dodge Counter</strong>, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack: Feather Release</strong>\nWhen Yangyang has <strong class=\"color-aero\">3</strong> Melodies, cast <strong>Basic Attack</strong> in mid-air to consume all Melodies and perform consecutive strikes, diving from mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>. As Yangyang lands, she sheathes her sword with an attack, dealing <strong class=\"color-aero\">Aero DMG</strong>, considered as Basic Attack DMG.\n \n<strong>Melody</strong>\nYangyang can hold up to <strong class=\"color-aero\">3</strong> Melodies\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody with every <strong>Basic Attack 4</strong> on hit.\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody for every Heavy Attack <strong>Zephyr Song</strong> on hit.\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody for every Resonance Skill <strong>Zephyr Domain</strong> on hit.\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody upon casting Intro Skill <strong>Cerulean Song</strong>."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "whispering-breeze",
+      "name": "Whispering Breeze",
+      "type": "Outro Skill",
+      "description": ""
+    }
+  ],
+  "stats": { "hp": 816, "def": 90, "atk": 20, "energy": 100 }
+}

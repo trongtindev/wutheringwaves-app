@@ -1,0 +1,282 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400044, "quantity": 3 },
+        { "item": 42300060, "quantity": 4 },
+        { "item": 41100012, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400044, "quantity": 6 },
+        { "item": 42300060, "quantity": 8 },
+        { "item": 41100012, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400044, "quantity": 9 },
+        { "item": 42300060, "quantity": 12 },
+        { "item": 41100013, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400044, "quantity": 12 },
+        { "item": 42300060, "quantity": 16 },
+        { "item": 41100013, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400044, "quantity": 16 },
+        { "item": 42300060, "quantity": 20 },
+        { "item": 41100014, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "bestEchoSets": [
+    { "different": 100, "items": ["Molten Rift"] },
+    { "different": 100, "items": ["Molten Rift", "Lingering Tunes"] }
+  ],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        { "cost": 4, "stats": ["Crit Rate", "Aero DMG"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["inferno-rider", "mech-abomination"],
+  "bestWeapons": [
+    { "item": "stringmaster", "different": 114.5, "rank": 1 },
+    { "item": "cosmic-ripples", "different": 100, "rank": 1 },
+    { "item": "augment", "different": 88.6, "rank": 1 },
+    { "item": "jinzhou-keeper", "different": 84.9, "rank": 1 },
+    { "item": "rectifier-of-night", "different": 77.2, "rank": 5 },
+    { "item": "guardian-rectifier", "different": 76.8, "rank": 5 }
+  ],
+  "birthday": "March 21st",
+  "birthplace": "New Federation",
+  "description": "A girl accompanied by one black and one white Wooly plushies. Encore, consultant from the Black Shores, is longing to create happy stories with candies, fairy tales, and her imagination.",
+  "descriptionLocalized": {
+    "vi": "Một cô gái đi cùng hai chú thú bông Wooly, một đen và một trắng. Encore, cố vấn từ Bờ Biển Đen, khao khát tạo nên những câu chuyện vui vẻ với kẹo ngọt, truyện cổ tích và trí tưởng tượng của mình.",
+    "id": "Seorang gadis yang ditemani oleh dua boneka bulu, satu hitam dan satu putih. Encore, seorang konsultan dari Black Shores, mendambakan untuk menciptakan cerita bahagia dengan permen, dongeng, dan imajinasinya.",
+    "th": "เด็กสาวคนหนึ่งที่พกตุ๊กตาขนแกะสีดำและสีขาวติดตัวไปด้วย เอนคอร์ ที่ปรึกษาจากชายฝั่งดำ มุ่งมั่นที่จะสร้างเรื่องราวดีๆ ด้วยขนม นวนิยาย และจินตนาการของเธอ"
+  },
+  "forte": [
+    {
+      "id": 73,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Fusion DMG Bonus+1.80%"
+    },
+    {
+      "id": 74,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 76,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Fusion DMG Bonus+1.80%"
+    },
+    {
+      "id": 77,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Fusion DMG Bonus+4.20%"
+    },
+    {
+      "id": 78,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 79,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 80,
+      "cost": [
+        { "item": 43020034, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400114, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Fusion DMG Bonus+4.20%"
+    },
+    {
+      "id": 75,
+      "cost": [
+        { "item": 43020033, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    }
+  ],
+  "quote": "A long, long time ago... Cosmos told Encore about a fun spot! Come on! Let's go check it out!",
+  "quoteLocalized": {
+    "vi": "Rất lâu rồi... Vũ Trụ đã kể cho Encore nghe về một địa điểm vui nhộn! Nào! Cùng đi xem nào!",
+    "id": "Dahulu kala... Cosmos memberi tahu Encore tentang tempat yang menyenangkan! Ayo! Mari kita periksa!",
+    "th": "Dahulu kala... Cosmos memberi tahu Encore tentang tempat yang menyenangkan! Ayo! Mari kita periksa!"
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance I-IV",
+      "slug": "wooly-s-fairy-tale",
+      "name": "Wooly's Fairy Tale",
+      "params": ["3%", "4", "6"],
+      "description": "When <strong>Basic Attack</strong> hits a target, Encore's Fusion DMG Bonus is increased by {0}, stacking up to {1} times for {2}s."
+    },
+    {
+      "idx": "Resonance II-IV",
+      "slug": "sheep-counting-lullaby",
+      "name": "Sheep-counting Lullaby",
+      "params": ["10", "10"],
+      "description": "Encore additionally restores {0} Resonance Energy when casting Basic Attack <strong>Woolies Attack</strong> or Resonance Skill <strong>Energetic Welcome</strong>. This can be triggered once every {1}s."
+    },
+    {
+      "idx": "Resonance III-IV",
+      "slug": "fog-the-black-shores",
+      "name": "Fog? The Black Shores!",
+      "params": ["40%"],
+      "description": "The DMG multiplier of Heavy Attack <strong>Cloudy: Frenzy</strong> and Heavy Attack <strong>Cosmos: Rupture</strong> is increased by {0}."
+    },
+    {
+      "idx": "Resonance IV-IV",
+      "slug": "adventure-let-s-go",
+      "name": "Adventure? Let’s go!",
+      "params": ["20%", "30"],
+      "description": "Heavy Attack <strong>Cosmos: Rupture</strong> increases the Fusion DMG Bonus of all team members by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance V-IV",
+      "slug": "hero-takes-the-stage",
+      "name": "Hero Takes the Stage!",
+      "params": ["35%"],
+      "description": "Resonance Skill DMG Bonus is increased by {0}."
+    },
+    {
+      "idx": "Resonance VI-IV",
+      "slug": "woolies-save-the-world",
+      "name": "Woolies Save the World!",
+      "params": ["1", "5%", "10", "5"],
+      "description": "During Resonance Liberation <strong>Cosmos Rave</strong>, Encore gains {0} stack(s) of \"Lost Lamb\" every time she deals damage, each stack increasing her ATK by {1} for {2}s, stacking up to {3} time(s)."
+    }
+  ],
+  "skillPriority": [
+    "Resonance Liberation",
+    "Forte Circuit",
+    "Resonance Skill",
+    "Basic Attack",
+    "Outro Skill"
+  ],
+  "skills": [
+    {
+      "slug": "wooly-attack",
+      "name": "Wooly Attack",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nEncore performs up to 4 consecutive attacks, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Basic Attack: Wooly Strike</strong>\nAfter <strong>Basic Attack 4</strong>, press the Basic Attack button to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Heavy Attack</strong>\nEncore consumes STA to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nEncore consumes STA to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "flaming-woolies",
+      "name": "Flaming Woolies",
+      "type": "Resonance Skill",
+      "description": "<strong>Flaming Woolies</strong>\r\nEncore summons Cloudy and Cosmos to attack with burning rays, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\r\n \r\n<strong>Energetic Welcome</strong>\r\nAfter casting <strong>Flaming Woolies</strong>, use <strong>Resonance Skill</strong> to perform <strong>Energetic Welcome</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "cosmos-rave",
+      "name": "Cosmos Rave",
+      "type": "Resonance Liberation",
+      "description": "As Encore loses control, Cosmos breaks free and wreaks havoc on its surroundings.\n \n<strong>Basic Attack: Cosmos - Frolicking</strong>\nDuring Cosmos Rave, the <strong>Basic Attack</strong> is replaced with <strong>Cosmos - Frolicking</strong>, which performs up to 4 consecutive attacks, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Basic Attack damage.\n \n<strong>Cosmos - Heavy Attack</strong>\nDuring Cosmos Rave, the <strong>Heavy Attack</strong> is replaced with <strong>Cosmos - Heavy Attack</strong>, consuming STA to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Resonance Skill: Cosmos - Rampage</strong>\nDuring Cosmos Rave, <strong>Flaming Woolies</strong> is replaced with <strong>Cosmos - Rampage</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill damage.\n \n<strong>Cosmos - Dodge Counter</strong>\nDuring Cosmos Rave, use <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Basic Attack damage."
+    },
+    {
+      "slug": "angry-cosmos",
+      "name": "Angry Cosmos",
+      "type": "Inherent Skill",
+      "description": "During the Resonance Liberation <strong>Cosmos Rave</strong>, when Encore's HP is above <strong style=\"color: var(--theme-palette-color-1);\">70%</strong>, DMG dealt is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong>."
+    },
+    {
+      "slug": "woolies-cheer-dance",
+      "name": "Woolies Cheer Dance",
+      "type": "Inherent Skill",
+      "description": "When Resonance Skill <strong>Flaming Woolies</strong> or Resonance Skill <strong>Cosmos - Rampage</strong> is cast, Encore's Fusion DMG Bonus is increased by <strong class=\"color-fusion\">10%</strong> for <strong class=\"color-fusion\">10</strong>s."
+    },
+    {
+      "slug": "woolies-can-help",
+      "name": "Woolies Can Help!",
+      "type": "Intro Skill",
+      "description": "Encore pounces at the enemies with Cosmos, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "black-white-woolies",
+      "name": "Black & White Woolies",
+      "type": "Forte Circuit",
+      "description": "<strong>Heavy Attack: Cloudy Frenzy</strong>\nWhen Encore's \"Mayhem\" is full, after casting a <strong>Heavy Attack</strong>, Encore will consume all \"Mayhem\" to enter the Mayhem state, reducing damage taken by <strong class=\"color-fusion\">70%</strong>. Switching Characters does not interrupt the Mayhem state.\nAfter the Mayhem state ends, Encore will cast <strong>Cloudy Frenzy</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Liberation damage.\n \n<strong>Heavy Attack: Cosmos Rupture</strong>\nDuring Cosmos Rampage, when casting <strong>Heavy Attack</strong>, if \"Mayhem\" is full, Encore will consume all \"Mayhem\" to enter Cosmos' Mayhem state, reducing damage taken by <strong class=\"color-fusion\">70%</strong>. Switching Characters does not interrupt the Cosmos' Mayhem state.\nAfter Cosmos' Mayhem state ends, Encore will cast <strong>Cosmos Rupture</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Liberation damage. \n<strong>Mayhem</strong>\nEncore can hold up to <strong class=\"color-fusion\">100</strong> \"Mayhem\".\nWhen Normal Attack <strong>Wooly Attack</strong> hits a target, Encore restores \"Mayhem\".\nWhen Resonance Skill <strong>Flaming Woolies</strong> hits a target, Encore restores \"Mayhem\".\nWhen Resonance Skill <strong>Energetic Welcome</strong> hits a target, Encore restores \"Mayhem\".\nWhen Intro Skill <strong>Woolies Helpers</strong> hits a target, Encore restores \"Mayhem\".\nDuring the duration of Resonance Liberation <strong>Cosmos Rave</strong>, Encore restores \"Mayhem\" when hitting a target."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "thermal-field",
+      "name": "Thermal Field",
+      "type": "Outro Skill",
+      "description": "Encore generates a Thermal Field centered around skill target, with a radius of <strong class=\"color-fusion\">3</strong>m. Targets inside the Thermal Field are continuously burned, suffering <strong class=\"color-fusion\">Fusion DMG</strong> equal to <strong class=\"color-fusion\">176.76%</strong> of Encore's ATK every <strong class=\"color-fusion\">1.5</strong>s for <strong class=\"color-fusion\">6</strong>s."
+    }
+  ],
+  "stats": { "hp": 841, "def": 102, "atk": 34, "energy": 125 }
+}

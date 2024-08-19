@@ -1,0 +1,299 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100021, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 3 },
+        { "item": 42300090, "quantity": 4 },
+        { "item": 41100022, "quantity": 4 },
+        { "item": 2, "quantity": 10000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 6 },
+        { "item": 42300090, "quantity": 8 },
+        { "item": 41100022, "quantity": 8 },
+        { "item": 2, "quantity": 15000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 9 },
+        { "item": 42300090, "quantity": 12 },
+        { "item": 41100023, "quantity": 4 },
+        { "item": 2, "quantity": 20000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 12 },
+        { "item": 42300090, "quantity": 16 },
+        { "item": 41100023, "quantity": 8 },
+        { "item": 2, "quantity": 40000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 41400054, "quantity": 16 },
+        { "item": 42300090, "quantity": 20 },
+        { "item": 41100024, "quantity": 4 },
+        { "item": 2, "quantity": 80000 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Moonlit Clouds"] }],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "name": "#1",
+      "items": [
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Aero DMG"] },
+        { "cost": 3, "stats": ["Aero DMG", "Energy Regen"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["impermanence-heron"],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        { "role": "Main DPS", "items": ["jiyan"] },
+        { "role": "Sub DPS", "items": ["aalto"] },
+        { "role": "Healer", "items": ["verina"] }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    { "item": "static-mist", "rank": 1, "different": 100 },
+    { "item": "novaburst", "rank": 1, "different": 80.5 },
+    { "item": "pistols-26", "rank": 1, "different": 79.8 },
+    { "item": "undying-flame", "rank": 1, "different": 78.6 },
+    { "item": "thunderbolt", "rank": 1, "different": 76.5 }
+  ],
+  "birthday": "June 11th",
+  "birthplace": "New Federation",
+  "description": "Aalto is an enigmatic Information Broker, known for his elusive nature and welcoming smile. Rumor has it he'll provide any information at the right price.",
+  "descriptionLocalized": {
+    "id": "Aalto adalah seorang Broker Informasi yang misterius, terkenal karena sifatnya yang sulit ditangkap dan senyumnya yang ramah. Desas-desus mengatakan bahwa dia akan memberikan informasi apa pun dengan harga yang tepat.",
+    "th": "Aalto เป็นนายหน้าข้อมูลลึกลับ รู้จักกันในเรื่องบุคลิกภาพที่ลึกลับและรอยยิ้มที่เป็นมิตร คำบอกเล่ากล่าวขานกันว่าเขาจะให้ข้อมูลใดๆ ตราบใดที่ราคาถูกต้อง",
+    "vi": "Aalto là một người môi giới thông tin bí ẩn, nổi tiếng với tính cách khó nắm bắt và nụ cười thân thiện. Lời đồn cho rằng anh ta sẽ cung cấp bất kỳ thông tin nào với giá phù hợp.",
+    "uk": "Аалто - загадковий інформаційний брокер, відомий своїм невловимим характером і привітною посмішкою. Подейкують, що він надасть будь-яку інформацію за адекватною ціною."
+  },
+  "forte": [
+    {
+      "id": 169,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Aero DMG Bonus+1.80%"
+    },
+    {
+      "id": 170,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 171,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 172,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100023, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Aero DMG Bonus+1.80%"
+    },
+    {
+      "id": 173,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Aero DMG Bonus+4.20%"
+    },
+    {
+      "id": 174,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 175,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 176,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100024, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Aero DMG Bonus+4.20%"
+    }
+  ],
+  "quote": "Well, if it isn't my loyal patron! What do you wish to inquire about today?",
+  "quoteLocalized": {
+    "id": "Wah, kalau bukan pelindungku yang setia! Apa yang ingin kau tanyakan hari ini?",
+    "th": "ดีแล้วนี่นา คุณผู้มีพระคุณที่รัก! วันนี้คุณอยากถามอะไร?",
+    "vi": "Ồ, nếu không phải là người bảo trợ trung thành của tôi! Hôm nay ngài muốn hỏi gì vậy?",
+    "uk": "Ну, якщо це не мій вірний покровитель! Про що ти хочеш запитати сьогодні?"
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "trickster-s-opening-show",
+      "name": "Trickster's Opening Show",
+      "params": ["4"],
+      "description": "The cooldown of Resonance Skill <strong>Shift Trick</strong> is reduced by {0}s."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "mistweaver-s-debut",
+      "name": "Mistweaver’s Debut",
+      "params": ["100%", "15%"],
+      "description": "\"Mist Avatar\" inherits {0} more HP from Aalto. When Aalto attacks targets taunted by the \"Mist Avatar(s)\", his ATK is increased by {1}."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "hazey-transition",
+      "name": "Hazey Transition",
+      "params": ["50%"],
+      "description": "When Aalto's <strong>Basic Attack</strong> or <strong>Mid-Air Attack</strong> passes through the \"Gate of Quandary\", 2 more bullets will be generated, dealing {0} of the DMG of <strong>Basic Attack</strong> or <strong>Mid-Air Attack</strong>."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "blake-bloom-for-finale",
+      "name": "Blake Bloom for Finale",
+      "params": ["30%", "30%"],
+      "description": "The damage of Resonance Skill <strong>Mist Bullets</strong> is increased by {0}; Aalto receives {1} less damage in his Forte Circuit <strong>Mistcloak Dash</strong> state."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "applause-of-the-lost",
+      "name": "Applause of the Lost",
+      "params": ["25%", "6"],
+      "description": "In the Forte Circuit <strong>Mistcloak Dash</strong> state, Aalto's Aero DMG Bonus is increased by {0} for {1}s."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "broker-s-secrets",
+      "name": "Broker’s Secrets",
+      "params": ["8%", "50%"],
+      "description": "Resonance Liberation <strong>Flower in the Mist</strong> now additionally increases Crit. Rate by {0}. When Aalto's Heavy Attack passes through the \"Gate of Quandary\", the damage dealt is additionally increased by {1}."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "half-truths",
+      "name": "Half Truths",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nAalto fires up to 5 consecutive shots, dealing <strong class=\"color-aero\">Aero DMG</strong>. Basic Attack 4 will spread the \"Mist\" forward, which lasts for <strong class=\"color-aero\">1.5</strong>s.\n \n<strong>Heavy Attack</strong>\nAalto enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nAalto consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.",
+      "nameLocalized": { "en": "Half Truths", "uk": "Напівправда" }
+    },
+    {
+      "slug": "shift-trick",
+      "name": "Shift Trick",
+      "type": "Resonance Skill",
+      "description": "<strong>Mist Avatar</strong>\r\nCasts \"Mist\" and <strong class=\"color-aero\">1</strong> \"Mist Avatar(s)\" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate <strong class=\"color-aero\">6</strong> <strong>Mist Bullets</strong> around them, dealing <strong class=\"color-aero\">Aero DMG</strong>.\r\n \r\n<strong>Mist Missiles</strong>\r\nDeals <strong class=\"color-aero\">Aero DMG</strong>, considered as Resonance Skill damage.",
+      "nameLocalized": { "en": "Shift Trick", "uk": "Трюк зі зміщенням" }
+    },
+    {
+      "slug": "flower-in-the-mist",
+      "name": "Flower in the Mist",
+      "type": "Resonance Liberation",
+      "description": "Generate a \"Gate of Quandary\" in front, dealing <strong class=\"color-aero\">Aero DMG</strong>. When bullets pass through the \"Gate of Quandary\", ATK is increased. \"Gate of Quandary\" lasts for <strong class=\"color-aero\">10</strong>s.",
+      "nameLocalized": { "en": "Flower in the Mist", "uk": "Квітка в тумані" }
+    },
+    {
+      "slug": "perfect-performance",
+      "name": "Perfect Performance",
+      "type": "Inherent Skill",
+      "description": "Aalto's <strong>Heavy Attack</strong> will always critically hit, triggered once every <strong style=\"color: var(--theme-palette-color-1);\">30</strong>s.",
+      "nameLocalized": {
+        "en": "Perfect Performance",
+        "uk": "Ідеальна продуктивність"
+      }
+    },
+    {
+      "slug": "mid-game-break",
+      "name": "Mid-game Break",
+      "type": "Inherent Skill",
+      "description": "Aalto will continuously recover Stamina when he is in the Forte Circuit <strong>Miscloak Dash</strong> state.",
+      "nameLocalized": {
+        "en": "Mid-game Break",
+        "uk": "Перерва в середині гри"
+      }
+    },
+    {
+      "slug": "feint-shot",
+      "name": "Feint Shot",
+      "type": "Intro Skill",
+      "description": "Aalto shows up out of thin air to performs rapid continuous shooting, dealing <strong class=\"color-aero\">Aero damage</strong>.",
+      "nameLocalized": { "en": "Feint Shot", "uk": "Фінт постріл" }
+    },
+    {
+      "slug": "misty-cover",
+      "name": "Misty Cover",
+      "type": "Forte Circuit",
+      "description": "When Aalto passes through \"Mist\" or \"Gate of Quandary\", he enters \"Mistcloak Dash\".\n \n<strong>Mistcloak Dash</strong>\nMovement speed increased;\nDuring this period, \"Mist Drops\" are continuously consumed, and for each <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" consumed, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> Resonance Skill <strong>Mist Missile</strong> is generated.\n \n<strong>Mist Drops</strong>\nAalto can hold up to <strong style=\"color: var(--theme-palette-color-1);\">6</strong> Mist Drops.\nWhen <strong>Basic Attack</strong> or <strong>Mid-air Attack</strong> passes through \"Mist\" and hits the target, <strong style=\"color: var(--theme-palette-color-1);\">1</strong> \"Mist Drop\" is recovered.",
+      "nameLocalized": { "en": "Misty Cover", "uk": "Туманна обкладинка" }
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking",
+      "nameLocalized": { "en": "Skillful Cooking", "uk": "Майстерне готування" }
+    },
+    {
+      "slug": "dissolving-mist",
+      "name": "Dissolving Mist",
+      "type": "Outro Skill",
+      "description": "Aalto shows up out of thin air to performs rapid continuous shooting, dealing {0}% <strong class=\"color-aero\">Aero DMG</strong>.",
+      "nameLocalized": { "en": "Dissolving Mist", "uk": "Розчиняючий туман" }
+    }
+  ],
+  "stats": { "hp": 788, "def": 88, "atk": 12, "energy": 150 }
+}

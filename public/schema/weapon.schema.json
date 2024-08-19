@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "stats": {
+      "type": "object",
+      "properties": {
+        "def": { "type": "number" },
+        "hp": { "type": "number" },
+        "atk": { "type": "number" },
+        "atkFlat": { "type": "number" },
+        "critRate": { "type": "number" },
+        "critDMG": { "type": "number" },
+        "energyRegen": { "type": "number" }
+      },
+      "required": ["atkFlat"]
+    },
+    "description": { "type": "string" },
+    "descriptionLocalized": { "type": "object" },
+    "skill": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "descriptionLocalized": { "type": "object" }
+      }
+    },
+    "ascensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "array",
+            "properties": {
+              "item": { "type": "string" },
+              "quantity": { "type": "integer" }
+            }
+          },
+          "minLevel": { "type": "integer" }
+        }
+      }
+    }
+  },
+  "title": "Weapon",
+  "type": "object"
+}

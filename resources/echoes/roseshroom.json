@@ -1,0 +1,17 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.136Z",
+  "publishedTime": "2024-06-28T15:43:21.836Z",
+  "skill": {
+    "id": 200032,
+    "cd": 15,
+    "params": [
+      ["3", "35.67%", "15"],
+      ["3", "41.02%", "15"],
+      ["3", "46.37%", "15"],
+      ["3", "51.72%", "15"],
+      ["3", "57.07%", "15"]
+    ],
+    "description": "Summon a Roseshroom that fires a laser, dealing {1} Havoc DMG up to {0} times.\n \nCD: {2}s"
+  },
+  "slug": "roseshroom"
+}

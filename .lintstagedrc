@@ -1,0 +1,4 @@
+{
+  "*.ts": ["eslint", "bun prettier.ts"],
+  "*.{css,json,vue}": "bun prettier.ts"
+}

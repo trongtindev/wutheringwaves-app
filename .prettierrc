@@ -1,0 +1,7 @@
+{
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-sort-json"],
+  "quoteProps": "as-needed",
+  "singleQuote": true,
+  "trailingComma": "all"
+}

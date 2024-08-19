@@ -1,0 +1,17 @@
+{
+  "modifiedTime": "2024-07-09T15:18:53.091Z",
+  "publishedTime": "2024-06-28T15:43:21.830Z",
+  "skill": {
+    "id": 200013,
+    "cd": 15,
+    "params": [
+      ["107.33%", "15"],
+      ["123.43%", "15"],
+      ["139.53%", "15"],
+      ["155.63%", "15"],
+      ["171.73%", "15"]
+    ],
+    "description": "Transform into Havoc Warrior to attack up to 3 times, dealing {0} Havoc DMG each time.\n \nCD: {1}s"
+  },
+  "slug": "havoc-warrior"
+}

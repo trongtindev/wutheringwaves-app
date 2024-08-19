@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "components": {
+    "schemas": {
+      "slug": {
+        "type": "string",
+        "enum": [
+          "aalto",
+          "baizhi",
+          "calcharo",
+          "changli",
+          "chixia",
+          "danjin",
+          "encore",
+          "jianxin",
+          "jinhsi",
+          "jiyan",
+          "lingyang",
+          "mortefi",
+          "rover",
+          "rover-electro",
+          "rover-havoc",
+          "sanhua",
+          "taoqi",
+          "the-shorekeeper",
+          "verina",
+          "xiangli-yao",
+          "yangyang",
+          "yinlin",
+          "youhu",
+          "yuanwu",
+          "zhezhi"
+        ]
+      },
+      "name": {
+        "type": "string",
+        "enum": [
+          "Aalto",
+          "Baizhi",
+          "Calcharo",
+          "Changli",
+          "Chixia",
+          "Danjin",
+          "Encore",
+          "Jianxin",
+          "Jinhsi",
+          "Jiyan",
+          "Lingyang",
+          "Mortefi",
+          "Rover",
+          "Rover (Electro)",
+          "Rover (Havoc)",
+          "Sanhua",
+          "Taoqi",
+          "The Shorekeeper",
+          "Verina",
+          "Xiangli Yao",
+          "Yangyang",
+          "Yinlin",
+          "Youhu",
+          "Yuanwu",
+          "Zhezhi"
+        ]
+      },
+      "role": { "type": "string", "enum": ["Main DPS", "Sub DPS", "Healer"] }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "description": "Xiangli Yao is the Chief Researcher of Huaxu Academy at Jinzhou.",
+  "descriptionLocalized": {
+    "vi": "Điều tra viên Hiệu trưởng Học viện Huaxu, Xiangli Yao, thể hiện chuyên môn đặc biệt trong nhiều lĩnh vực nghiên cứu khác nhau mặc dù ông còn trẻ.\n\nAnh ấy là một tâm hồn nhẹ nhàng nhưng lý trí, nắm bắt những hiểu biết độc đáo và cam kết đối với nghiên cứu của Automata Mechanics."
+  },
+  "quote": "As truthseekers, we gauge the universe from within a nutshell. I'd love to hear your insights.",
+  "quoteLocalized": {
+    "vi": "Là những người tìm kiếm sự thật, chúng ta đánh giá vũ trụ từ trong một cái tóm tắt. Tôi muốn nghe những hiểu biết của bạn."
+  },
+  "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125 }
+}

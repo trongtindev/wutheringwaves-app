@@ -1,0 +1,289 @@
+{
+  "$schema": "../../public/schema/character.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100011, "quantity": 4 },
+        { "item": 2, "quantity": 5000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 10000 },
+        { "item": 41400044, "quantity": 3 },
+        { "item": 42300080, "quantity": 4 },
+        { "item": 41100012, "quantity": 4 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 15000 },
+        { "item": 41400044, "quantity": 6 },
+        { "item": 42300080, "quantity": 8 },
+        { "item": 41100012, "quantity": 8 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 20000 },
+        { "item": 41400044, "quantity": 9 },
+        { "item": 42300080, "quantity": 12 },
+        { "item": 41100013, "quantity": 4 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 40000 },
+        { "item": 41400044, "quantity": 12 },
+        { "item": 42300080, "quantity": 16 },
+        { "item": 41100013, "quantity": 8 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 2, "quantity": 80000 },
+        { "item": 41400044, "quantity": 16 },
+        { "item": 42300080, "quantity": 20 },
+        { "item": 41100014, "quantity": 4 }
+      ],
+      "minLevel": 80
+    }
+  ],
+  "bestEchoSets": [{ "different": 100, "items": ["Moonlit Clouds"] }],
+  "bestEchoStats": [
+    {
+      "type": "4-3-3-1-1",
+      "items": [
+        { "cost": 4, "stats": ["Crit DMG", "Crit Rate"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 3, "stats": ["Fusion DMG"] },
+        { "cost": 1, "stats": ["ATK%"] },
+        { "cost": 1, "stats": ["ATK%"] }
+      ]
+    }
+  ],
+  "bestMainEchoes": ["impermanence-heron"],
+  "bestTeams": [
+    {
+      "name": "#1",
+      "items": [
+        { "role": "Main DPS", "items": ["jiyan", "jinhsi", "jianxin"] },
+        { "role": "Sub DPS", "items": ["mortefi"] },
+        { "role": "Healer", "items": ["verina"] }
+      ]
+    }
+  ],
+  "bestWeapons": [
+    { "different": 100, "rank": 1, "item": "static-mist" },
+    { "different": 80.4, "rank": 1, "item": "novaburst" },
+    { "different": 78.5, "rank": 1, "item": "undying-flame" },
+    { "different": 78.1, "rank": 1, "item": "pistols-26" },
+    { "different": 77.4, "rank": 1, "item": "thunderbolt" },
+    { "different": 70.4, "rank": 5, "item": "pistols-of-night" }
+  ],
+  "birthday": "November 6th",
+  "birthplace": "New Federation",
+  "description": "Mortefi, a skilled expert in Applied Tacetite Study and a member of the Academy’s Department of Safety, possesses the unique ability to transform his accumulated frustration into fiery flames.\nFrom a burning wrath that consumes all, the red dragon shall descend.",
+  "descriptionLocalized": {
+    "vi": "Mortefi, một chuyên gia lão luyện trong nghiên cứu Tacetite Ứng dụng và là thành viên của Khoa An toàn của Viện Hàn lâm, sở hữu khả năng độc đáo biến đổi sự thất vọng tích tụ của mình thành ngọn lửa rực cháy.Từ cơn thịnh nộ bốc cháy nuốt chửng tất cả, con rồng đỏ sẽ giáng xuống.",
+    "id": "Mortefi, seorang ahli terampil dalam Studi Tacetite Terapan dan anggota Departemen Keamanan Akademi, memiliki kemampuan unik untuk mengubah frustrasinya yang terakumulasi menjadi api yang menyala-nyala.Dari amukan api yang membakar segalanya, naga merah akan turun.",
+    "th": "Mortefi, ผู้เชี่ยวชาญด้านการประยุกต์ใช้ Tacite ในระดับสูง และเป็นสมาชิกของแผนกความปลอดภัยของสถาบัน มีความสามารถพิเศษในการเปลี่ยนความหงุดหงิดที่สะสมไว้ให้กลายเป็นเปลวไฟจากโทสะที่ลุกโชนและเผาผลาญทุกสิ่ง มังกรแดงจะลงมา"
+  },
+  "forte": [
+    {
+      "id": 89,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Fusion DMG Bonus+1.80%"
+    },
+    {
+      "id": 90,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 91,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "ATK+1.80%"
+    },
+    {
+      "id": 92,
+      "cost": [
+        { "item": 43020023, "quantity": 3 },
+        { "item": 41100013, "quantity": 3 },
+        { "item": 2, "quantity": 50000 }
+      ],
+      "name": "Fusion DMG Bonus+1.80%"
+    },
+    {
+      "id": 93,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Fusion DMG Bonus+4.20%"
+    },
+    {
+      "id": 94,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 95,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "ATK+4.20%"
+    },
+    {
+      "id": 96,
+      "cost": [
+        { "item": 43020024, "quantity": 3 },
+        { "item": 41100014, "quantity": 3 },
+        { "item": 41400094, "quantity": 1 },
+        { "item": 2, "quantity": 100000 }
+      ],
+      "name": "Fusion DMG Bonus+4.20%"
+    }
+  ],
+  "quote": "Fine, since you've done this much for me... Go ahead, tell me the wildest inventions you can think of, and watch me make them happen for you.",
+  "quoteLocalized": {
+    "vi": "Được rồi, vì bạn đã làm được nhiều như vậy cho tôi... Hãy tiếp tục, kể cho tôi nghe những ý tưởng hoang dã nhất mà bạn có thể nghĩ ra, và xem tôi sẽ biến chúng thành hiện thực cho bạn.",
+    "th": "Baiklah, karena kau sudah melakukan semua ini untukku... Lanjutkan, katakan padaku penemuan paling liar yang bisa kau pikirkan, dan saksikan aku mewujudkannya untukmu.",
+    "id": "Baiklah, karena kamu sudah melakukan ini untukku... Silahkan, katakan padaku penemuan terliar yang dapat kamu pikirkan, dan saksikan aku mewujudkannya untukmu."
+  },
+  "resonanceChain": [
+    {
+      "idx": "Resonance 1-4",
+      "slug": "solitary-etude",
+      "name": "Solitary Etude",
+      "params": ["2"],
+      "description": "During Resonance Liberation <strong>Burning Rhapsody</strong>, Mortefi launches Coordinated Attacks when the on-field character performs their Resonance Skills, firing {0} Resonance Liberation's <strong>Marcato</strong> hits, dealing <strong class=\"color-fusion\">Fusion Damage</strong>."
+    },
+    {
+      "idx": "Resonance 2-4",
+      "slug": "hypocritical-hymn",
+      "name": "Hypocritical Hymn",
+      "params": ["10", "20"],
+      "description": "After using the Echo Skill, Mortefi restores an additional {0} Resonance Energy. This can be triggered once every {1} second."
+    },
+    {
+      "idx": "Resonance 3-4",
+      "slug": "flaming-recitativo",
+      "name": "Flaming Recitativo",
+      "params": ["30%"],
+      "description": "During Resonance Liberation <strong>Burning Rhapsody</strong>, the Crit. DMG of Resonance Liberation's <strong>Marcato</strong> is increased by {0}."
+    },
+    {
+      "idx": "Resonance 4-4",
+      "slug": "cathartic-waltz",
+      "name": "Cathartic Waltz",
+      "params": ["7"],
+      "description": "The duration of Resonance Liberation <strong>Burning Rhapsody</strong> is extended by {0}s."
+    },
+    {
+      "idx": "Resonance 5-4",
+      "slug": "funerary-quartet",
+      "name": "Funerary Quartet",
+      "params": ["4", "50%"],
+      "description": "When Resonance Skill <strong>Passionate Variation</strong> or Resonance Skill <strong>Fury Fugue</strong> hits a target, {0} Resonance Liberation's <strong>Marcato</strong> hits will be fired, dealing <strong class=\"color-fusion\">Fusion Damage</strong>. DMG of Resonance Liberation's <strong>Marcato</strong> fired in this way is reduced by {1}."
+    },
+    {
+      "idx": "Resonance 6-4",
+      "slug": "apoplectic-instrumental",
+      "name": "Apoplectic Instrumental",
+      "params": ["20%", "20"],
+      "description": "When Resonance Liberation <strong>Violent Finale</strong> is cast, ATK of all team members is increased by {0} for {1}s."
+    }
+  ],
+  "skillPriority": [
+    "Resonance Liberation",
+    "Forte Circuit",
+    "Basic Attack",
+    "Resonance Skill",
+    "Intro Skill"
+  ],
+  "skills": [
+    {
+      "slug": "impromptu-show",
+      "name": "Impromptu Show",
+      "type": "Basic Attack",
+      "description": "<strong>Basic Attack</strong>\nMortefi uses his dual pistols and flames to perform up to 4 consecutive shots, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Heavy Attack</strong>\nMortefi enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nMortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "passionate-variation",
+      "name": "Passionate Variation",
+      "type": "Resonance Skill",
+      "description": "Launch a flashing lightning of flames forward, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "violent-finale",
+      "name": "Violent Finale",
+      "type": "Resonance Liberation",
+      "description": "Deal <strong class=\"color-fusion\">Fusion DMG</strong>, and apply <strong>Burning Rhapsody</strong> to all characters in the team.\n \n<strong>Burning Rhapsody</strong>\nWhen the on-field character's <strong>Basic Attack</strong> hits the target, Mortefi launches a Coordinated Attack, firing <strong class=\"color-fusion\">1</strong> <strong>Marcato</strong>.\nWhen the on-field character's <strong>Heavy Attack</strong> hits the target, Mortefi launches a Coordinated Attack, firing <strong class=\"color-fusion\">2</strong> <strong>Marcato</strong>.\nMortefi can launch one Coordinated Attack every <strong class=\"color-fusion\">0.35</strong>s.\n \n<strong>Marcato</strong>\nDeals <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "harmonic-control",
+      "name": "Harmonic Control",
+      "type": "Inherent Skill",
+      "description": "After casting Resonance Skill <strong>Passionate Variation</strong>, the damage of Resonance Skill <strong>Fury Fugue</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">25%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s."
+    },
+    {
+      "slug": "rhythmic-vibrato",
+      "name": "Rhythmic Vibrato",
+      "type": "Inherent Skill",
+      "description": "During Resonance Liberation <strong>Burning Rhapsody</strong>, each hit of Resonance Liberation <strong>Marcato</strong> will increase the damage of the next Resonance Liberation <strong>Marcato</strong> by <strong style=\"color: var(--theme-palette-color-1);\">1.5%</strong>, which can be triggered once every <strong style=\"color: var(--theme-palette-color-1);\">0.35</strong>s, stacking up to <strong style=\"color: var(--theme-palette-color-1);\">50</strong> times.\r\nThe effect will be reset after Resonance Liberation <strong>Burning Rhapsody</strong> ends."
+    },
+    {
+      "slug": "dissonance",
+      "name": "Dissonance",
+      "type": "Intro Skill",
+      "description": "Attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+    },
+    {
+      "slug": "fury-fugue",
+      "name": "Fury Fugue",
+      "type": "Forte Circuit",
+      "description": "<strong>Resonance Skill: Fury Fugue</strong>\nWhen Mortefi's \"Annoyance\" reaches <strong class=\"color-fusion\">100</strong>, his <strong>Resonance Skill</strong> is replaced with <strong>Fury Fudge</strong>.\nWhen casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill damage.\n \n<strong>Annoyance</strong>\nMortefi can hold up to <strong class=\"color-fusion\">100</strong> Annoyance.\nWhen Normal Attack <strong>Impromptu Show</strong> hits the target, “Annoyance” is restored.\nWhen Intro Skill <strong>Dissonance</strong> hits the target, “Annoyance” is restored.\nWhen Resonance Skill <strong>Passionate Variation</strong> hits the target, “Annoyance” is restored.\nWithin <strong class=\"color-fusion\">5</strong>s after casting <strong>Passionate Variation</strong>, Basic Attack <strong>Impromptu</strong> that hits the target additionally restores “Annoyance”."
+    },
+    {
+      "slug": "skillful-cooking",
+      "name": "Skillful Cooking",
+      "type": "Inherent Skill",
+      "description": "Has a chance to produce special dishes when cooking"
+    },
+    {
+      "slug": "rage-transposition",
+      "name": "Rage Transposition",
+      "type": "Outro Skill",
+      "description": ""
+    }
+  ],
+  "stats": { "hp": 802, "def": 93, "atk": 20, "energy": 125 }
+}

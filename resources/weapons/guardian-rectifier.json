@@ -1,0 +1,69 @@
+{
+  "$schema": "../../public/schema/weapon.schema.json",
+  "ascensions": [
+    {
+      "cost": [
+        { "item": 41100031, "quantity": 4 },
+        { "item": 2, "quantity": 6000 }
+      ],
+      "minLevel": 20
+    },
+    {
+      "cost": [
+        { "item": 43020031, "quantity": 4 },
+        { "item": 41100032, "quantity": 4 },
+        { "item": 2, "quantity": 12000 }
+      ],
+      "minLevel": 40
+    },
+    {
+      "cost": [
+        { "item": 43020032, "quantity": 5 },
+        { "item": 41100033, "quantity": 3 },
+        { "item": 2, "quantity": 24000 }
+      ],
+      "minLevel": 50
+    },
+    {
+      "cost": [
+        { "item": 43020033, "quantity": 4 },
+        { "item": 41100033, "quantity": 4 },
+        { "item": 2, "quantity": 36000 }
+      ],
+      "minLevel": 60
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 5 },
+        { "item": 41100034, "quantity": 3 },
+        { "item": 2, "quantity": 48000 }
+      ],
+      "minLevel": 70
+    },
+    {
+      "cost": [
+        { "item": 43020034, "quantity": 8 },
+        { "item": 41100034, "quantity": 5 },
+        { "item": 2, "quantity": 72000 }
+      ],
+      "minLevel": 80
+    },
+    { "cost": [{ "item": 2, "quantity": 0 }], "minLevel": 90 }
+  ],
+  "description": "The first Jinzhou Magistrate, in memory of the mysterious person who helped defend the border and build the city, created the Guardian series under his guidance. Today, it has become the cornerstone of the development of new weapons.",
+  "modifiedTime": "2024-07-09T15:18:08.486Z",
+  "publishedTime": "2024-06-28T15:43:22.054Z",
+  "ranks": [
+    "Increases Basic Attack and Heavy Attack DMG Bonus by 12%.",
+    "Increases Basic Attack and Heavy Attack DMG Bonus by 15%.",
+    "Increases Basic Attack and Heavy Attack DMG Bonus by 18%.",
+    "Increases Basic Attack and Heavy Attack DMG Bonus by 21%.",
+    "Increases Basic Attack and Heavy Attack DMG Bonus by 24%."
+  ],
+  "skill": {
+    "params": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]],
+    "description": "Increases Basic Attack and Heavy Attack DMG Bonus by {0}."
+  },
+  "slug": "guardian-rectifier",
+  "stats": { "atkFlat": 26, "atk": 5.4 }
+}
