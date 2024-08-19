@@ -10,7 +10,6 @@ const {
   SITE_URL,
   SITE_NAME,
   SITE_REPO,
-  SITE_PREVIEW,
   // api
   API_URL,
   API_TIMEOUT,
@@ -162,7 +161,6 @@ export default defineNuxtConfig({
 
   site: {
     url: SITE_URL,
-    indexable: SITE_PREVIEW !== 'false',
   },
 
   i18n: {
@@ -254,7 +252,6 @@ export default defineNuxtConfig({
       SITE_URL,
       SITE_NAME,
       SITE_REPO,
-      SITE_PREVIEW,
       // api
       API_URL,
       API_TIMEOUT: parseInt(API_TIMEOUT!),
