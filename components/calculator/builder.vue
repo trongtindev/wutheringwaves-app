@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
 import { mdiPlay } from '@mdi/js';
-// import introJs from 'intro.js';
-// import 'intro.js/introjs.css';
 
 // uses
 const { t } = useI18n();
@@ -31,49 +29,6 @@ const canStart = computed(() => {
 
   return true;
 });
-
-// functions
-// const showTours = () => {
-//   // const hints = document.querySelectorAll('[data-tour]');
-//   // if (hints.length == 0) {
-//   //   setTimeout(showTours, 25);
-//   //   return;
-//   // }
-//   // console.debug('showTours', 'start');
-//   // introJs
-//   //   .tour()
-//   //   .addStep({
-//   //     title: t('calculator.builder.tours.welcome.title'),
-//   //     intro: t('calculator.builder.tours.welcome.title'),
-//   //     position: 'top',
-//   //   })
-//   //   .addStep({
-//   //     title: t('calculator.builder.tours.teams.title'),
-//   //     intro: t('calculator.builder.tours.teams.title'),
-//   //     element: document.querySelector('#builder-teams'),
-//   //     position: 'top',
-//   //   })
-//   //   .addStep({
-//   //     title: t('calculator.builder.tours.sequences.title'),
-//   //     intro: t('calculator.builder.tours.sequences.title'),
-//   //     element: document.querySelector('#builder-sequences'),
-//   //     position: 'top',
-//   //   })
-//   //   .onStart(() => {
-//   //     isTours.value = true;
-//   //   })
-//   //   .start();
-// };
-
-// lifecycle
-// onNuxtReady(showTours);
-
-// onBeforeUnmount(() => {
-//   if (isTours.value) {
-//     console.debug('showTours', 'exit');
-//     introJs.tour().exit();
-//   }
-// });
 </script>
 
 <template>

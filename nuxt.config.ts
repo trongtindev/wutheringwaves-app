@@ -221,7 +221,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'firebase',
     prerender: {
       crawlLinks: NITRO_PRERENDER_CRAWL,
       routes: NITRO_PRERENDER ? ['/', '/sitemap.xml'] : [],

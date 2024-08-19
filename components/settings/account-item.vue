@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import moment from 'moment';
-import type { AccountDocument } from '~/composables/database';
+import type { AccountDocument } from '~/database/documents/account';
 
 // define
 const props = defineProps<{
