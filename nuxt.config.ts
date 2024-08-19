@@ -162,7 +162,7 @@ export default defineNuxtConfig({
 
   site: {
     url: SITE_URL,
-    indexable: SITE_PREVIEW !== 'true',
+    indexable: SITE_PREVIEW !== 'false',
   },
 
   i18n: {
