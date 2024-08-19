@@ -1,4 +1,4 @@
-import data from '@/resources/banners.json';
+import data from '~~/resources/banners.json';
 import { CardPoolType } from '~/interfaces/banner';
 
 export default defineEventHandler(() => {

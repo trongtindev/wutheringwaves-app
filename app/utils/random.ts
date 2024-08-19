@@ -11,7 +11,7 @@ export const randomRange = (min: number, max: number) => {
 
 export const randomArray = <T>(array: T[]) => {
   const random = Math.floor(Math.random() * array.length);
-  return array[random];
+  return array[random]!;
 };
 
 export const randomUniqueArray = <T>(array: T[], amount: number) => {
@@ -23,7 +23,7 @@ export const randomUniqueArray = <T>(array: T[], amount: number) => {
 
   while (amount > items.length) {
     const random = Math.floor(Math.random() * clone.length);
-    items.push(clone[random]);
+    items.push(clone[random]!);
     clone.splice(random, 1);
   }
 

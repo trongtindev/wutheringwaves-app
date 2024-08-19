@@ -7,7 +7,6 @@ const props = defineProps<{
   item: ICalculatorEcho;
   index: number;
 }>();
-const format = formatNumber;
 
 // uses
 const { t } = useI18n();
@@ -21,7 +20,7 @@ const rarity = ref(props.item.rarity);
 const possibleMainstats = computed(() => {
   if (props.item.item) {
     const index = { 1: 0, 3: 1, 4: 2 };
-    return echoMainStats[index[props.item.item.cost]].map((e) => {
+    return echoMainStats[index[props.item.item.cost]]!.map((e) => {
       return {
         type: e[0],
         label: t(`common.${e[0].replace('%', '')}`),
@@ -222,7 +221,7 @@ watch(
           </td>
           <td>
             <span v-if="item.mainstats">
-              {{ format(item.mainstats[1]) }}
+              {{ formatNumber(item.mainstats[1]) }}
             </span>
             <span v-else>
               {{ $t('common.none') }}

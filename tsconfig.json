@@ -6,7 +6,8 @@
     "noImplicitAny": false,
     "allowImportingTsExtensions": true,
     "skipLibCheck": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "noUncheckedIndexedAccess": false
   },
   "exclude": ["scripts/**/*.ts"],
   "extends": "./.nuxt/tsconfig.json"

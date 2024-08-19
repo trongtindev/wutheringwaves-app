@@ -39,18 +39,28 @@ const localesMetadata: LocaleObject[] = [
   {
     name: 'English',
     code: 'en',
-    iso: 'en',
+    language: 'en',
     isCatchallLocale: true,
     files: ['en/default.json'],
   },
-  { name: 'Indonesia', code: 'id', iso: 'id', files: ['id/default.json'] },
-  { name: '日本語', code: 'ja', iso: 'ja', files: ['ja/default.json'] },
-  { name: '한국어', code: 'ko', iso: 'ko', files: ['ko/default.json'] },
-  { name: 'ภาษาไทย', code: 'th', iso: 'th', files: ['th/default.json'] },
-  { name: 'Türkçe', code: 'tr', iso: 'tr', files: ['tr/default.json'] },
-  { name: 'Tiếng Việt', code: 'vi', iso: 'vi', files: ['vi/default.json'] },
-  { name: 'Ukrainian', code: 'uk', iso: 'uk', files: ['uk/default.json'] },
-  { name: '中文(简体)', code: 'zh', iso: 'zh', files: ['zh/default.json'] },
+  { name: 'Indonesia', code: 'id', language: 'id', files: ['id/default.json'] },
+  { name: '日本語', code: 'ja', language: 'ja', files: ['ja/default.json'] },
+  { name: '한국어', code: 'ko', language: 'ko', files: ['ko/default.json'] },
+  { name: 'ภาษาไทย', code: 'th', language: 'th', files: ['th/default.json'] },
+  { name: 'Türkçe', code: 'tr', language: 'tr', files: ['tr/default.json'] },
+  {
+    name: 'Tiếng Việt',
+    code: 'vi',
+    language: 'vi',
+    files: ['vi/default.json'],
+  },
+  { name: 'Ukrainian', code: 'uk', language: 'uk', files: ['uk/default.json'] },
+  {
+    name: '中文(简体)',
+    code: 'zh',
+    language: 'zh',
+    files: ['zh/default.json'],
+  },
 ];
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -79,6 +89,10 @@ export default defineNuxtConfig({
           id: CLARITY_ID!,
         },
       },
+    },
+    sourcemap: {
+      server: false,
+      client: false,
     },
   },
 
@@ -151,13 +165,8 @@ export default defineNuxtConfig({
     indexable: SITE_PREVIEW !== 'true',
   },
 
-  sourcemap: {
-    server: false,
-    client: false,
-  },
-
   i18n: {
-    vueI18n: './i18n/i18n.config.ts',
+    vueI18n: './app/i18n/i18n.config.ts',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
@@ -222,6 +231,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
+      concurrency: 10,
       crawlLinks: NITRO_PRERENDER_CRAWL,
       routes: NITRO_PRERENDER ? ['/', '/sitemap.xml'] : [],
     },
@@ -265,6 +275,9 @@ export default defineNuxtConfig({
     REDIS_URL,
   },
 
+  future: {
+    compatibilityVersion: 4,
+  },
   experimental: {
     viewTransition: true,
   },

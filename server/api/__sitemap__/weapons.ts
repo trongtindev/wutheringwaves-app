@@ -1,4 +1,4 @@
-import data from '~/resources/weapons.json';
+import data from '~~/resources/weapons.json';
 
 export default defineSitemapEventHandler(() => {
   return data.items

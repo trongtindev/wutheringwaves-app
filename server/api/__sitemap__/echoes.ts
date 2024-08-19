@@ -1,4 +1,4 @@
-import data from '~/resources/echoes.json';
+import data from '~~/resources/echoes.json';
 
 export default defineSitemapEventHandler(() => {
   return data.items

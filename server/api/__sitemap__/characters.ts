@@ -1,4 +1,4 @@
-import data from '~/resources/characters.json';
+import data from '~~/resources/characters.json';
 
 export default defineSitemapEventHandler(() => {
   return data.items

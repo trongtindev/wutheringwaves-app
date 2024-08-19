@@ -1,4 +1,4 @@
 {
-  "compilerOptions": { "outDir": "./" },
+  "compilerOptions": { "outDir": "./", "noUncheckedIndexedAccess": false },
   "extends": "../.nuxt/tsconfig.server.json"
 }

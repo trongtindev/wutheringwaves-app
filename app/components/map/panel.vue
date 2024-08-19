@@ -25,9 +25,9 @@ const initialize = async () => {
   defaultValues.value = prevMarkers;
   console.log('defaultValues', prevMarkers);
 
-  const mapData = await import('~/resources/map.json');
+  const mapData = await import('../../../resources/map.json');
   categories.value = mapData.default.categories as IMapCategory[];
-  tab.value = categories.value[0].name;
+  tab.value = categories.value[0]!.name;
 };
 
 // events
@@ -40,9 +40,7 @@ const onMarkers = (key: string, values: string[]) => {
   emits(
     'on-markers',
     Object.keys(markers.value)
-      .map((e) => {
-        return markers.value[e];
-      })
+      .map((e) => markers.value[e]!)
       .flatMap((e) => e),
   );
 };

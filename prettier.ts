@@ -1,7 +1,7 @@
 import fs from 'fs';
 import * as prettier from 'prettier';
 
-const path = process.argv[process.argv.length - 1];
+const path = process.argv[process.argv.length - 1]!;
 const config = JSON.parse(fs.readFileSync('./.prettierrc', 'utf-8'));
 const ignore = fs
   .readFileSync('./.gitignore', 'utf-8')
@@ -32,7 +32,7 @@ if (fs.statSync(path).isDirectory()) {
       ) {
         return false;
       }
-      const ext = file.split('.')[file.split('.').length - 1];
+      const ext = file.split('.')[file.split('.').length - 1]!;
       return ['ts', 'vue', 'json'].includes(ext);
     });
 

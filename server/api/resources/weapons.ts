@@ -1,4 +1,5 @@
-import data from '~/resources/weapons.json';
+import data from '~~/resources/weapons.json';
+
 export default defineEventHandler(() => {
   return data.items;
 });

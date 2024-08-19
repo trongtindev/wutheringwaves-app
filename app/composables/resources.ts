@@ -27,7 +27,7 @@ export const useResources = defineStore('useResources', () => {
 
   // functions
   const getBanners = async (selector?: IBanner) => {
-    const data = await import('~/resources/banners.json');
+    const data = await import('../../resources/banners.json');
     const clone = cloneObject(data.default.items);
     const items = clone
       .reverse()
@@ -57,7 +57,7 @@ export const useResources = defineStore('useResources', () => {
       if (!data) throw new Error('resources/weapons is null');
       weaponList.value = data;
     }
-    const clone = cloneObject(weaponList.value);
+    const clone = cloneObject(weaponList.value!);
     const items = clone
       .map((e) => {
         return {
@@ -82,7 +82,7 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getWeaponData = async (slug: string): Promise<IWeaponData> => {
-    const data = await import(`~/resources/weapons/${slug}.json`);
+    const data = await import(`~~/resources/weapons/${slug}.json`);
     return {
       ...data.default,
       stats: data.default.stats || {},
@@ -165,7 +165,7 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getCharacterData = async (slug: string): Promise<ICharacterData> => {
-    const data = await import(`~/resources/characters/${slug}.json`);
+    const data = await import(`~~/resources/characters/${slug}.json`);
     const clone = cloneObject(data.default);
     const sonataEffects = await getSonataEffects();
 
@@ -202,7 +202,7 @@ export const useResources = defineStore('useResources', () => {
       if (!data) throw new Error('resources/echoes is null');
       echoList.value = data;
     }
-    const clone = cloneObject(echoList.value);
+    const clone = cloneObject(echoList.value!);
     const attrs = await getAttributes();
     const sonataEffects = await getSonataEffects();
     const items = clone
@@ -236,12 +236,12 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getEchoData = async (slug: string): Promise<IEchoData> => {
-    const data = await import(`~/resources/echoes/${slug}.json`);
+    const data = await import(`~~/resources/echoes/${slug}.json`);
     return data.default;
   };
 
   const getCodes = async (): Promise<ICode[]> => {
-    const data = await import('~/resources/codes.json');
+    const data = await import('../../resources/codes.json');
     return data.default.items;
   };
 
@@ -251,7 +251,7 @@ export const useResources = defineStore('useResources', () => {
       if (!data) throw new Error('resources/items is null');
       itemList.value = data;
     }
-    const clone = cloneObject(itemList.value);
+    const clone = cloneObject(itemList.value!);
 
     const items = clone
       .filter((e) => {
@@ -275,7 +275,7 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getItemData = async (slug: string): Promise<IItemData> => {
-    const data = await import(`~/resources/items/${slug}.json`);
+    const data = await import(`~~/resources/items/${slug}.json`);
     return data.default as IItemData;
   };
 
@@ -285,7 +285,7 @@ export const useResources = defineStore('useResources', () => {
       if (!data) throw new Error('resources/trophies is null');
       trophyList.value = data;
     }
-    const clone = cloneObject(trophyList.value);
+    const clone = cloneObject(trophyList.value!);
     return clone.items.map((e) => {
       return {
         ...e,
@@ -312,24 +312,24 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getTrophyData = async () => {
-    const { groups, categories } = await import('@/resources/trophies');
+    const { groups, categories } = await import('../../resources/trophies');
     return { groups, categories };
   };
 
   const getTimeline = async (): Promise<ITimeline[][]> => {
-    const data = await import('~/resources/timeline.json');
+    const data = await import('../../resources/timeline.json');
     return data.default.items;
   };
 
   const getAttributes = async (): Promise<IAttribute[]> => {
-    const data = await import('~/resources/attributes.json');
+    const data = await import('../../resources/attributes.json');
     return data.default.items;
   };
 
   const getSonataEffects = async (
     selector?: Partial<ISonata>,
   ): Promise<ISonata[]> => {
-    const data = await import('~/resources/sonata.json');
+    const data = await import('../../resources/sonata.json');
     const clone = cloneObject(data.default.items);
     const items = clone.filter((e) => {
       if (selector) {
