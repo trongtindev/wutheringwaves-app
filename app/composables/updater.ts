@@ -22,8 +22,6 @@ export const useUpdater = defineStore('useUpdater', () => {
 
     if (desktopApp.enabled) {
       checkAppForUpdates();
-    } else {
-      checkWebForUpdates();
     }
   };
 
@@ -39,43 +37,10 @@ export const useUpdater = defineStore('useUpdater', () => {
     }
   };
 
-  const checkWebForUpdates = async () => {
-    if (import.meta.dev) return;
-
-    if (!interval) {
-      interval = setInterval(() => checkWebForUpdates(), 60 * 5 * 1000);
-    }
-
-    // fetch version
-    const { data, status } = await http.get<{ buildNumber: number }>(
-      '/api/version',
-    );
-    if (status != 200) return;
-
-    console.debug('updater', appConfig.buildNumber, data.buildNumber);
-    if (data.buildNumber && appConfig.buildNumber === data.buildNumber) {
-      return;
-    }
-    isUpdateAvailable.value = true;
-
-    // TODO: move to manager component
-    dialog.show({
-      title: i18n.t('updater.title'),
-      content: i18n.t('updater.message'),
-      cancelButtonText: i18n.t('updater.later'),
-      confirmButtonText: i18n.t('updater.refresh'),
-      onConfirm: () => {
-        reloadNuxtApp();
-      },
-      persistent: true,
-    });
-    clearInterval(interval);
-  };
-
   // lifecycle
   onMounted(() => initialize());
   onUnmounted(() => dispose());
 
   // exports
-  return { checkAppForUpdates, checkWebForUpdates };
+  return { checkAppForUpdates };
 });

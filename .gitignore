@@ -21,6 +21,4 @@ logs
 .env.local
 !.env.example
 
-.vercel
 .eslintcache
-.wrangler

@@ -9,6 +9,5 @@
     "strictPropertyInitialization": false,
     "noUncheckedIndexedAccess": false
   },
-  "exclude": ["scripts/**/*.ts"],
   "extends": "./.nuxt/tsconfig.json"
 }
