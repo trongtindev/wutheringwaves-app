@@ -87,6 +87,15 @@ export const useAccount = defineStore('useAccount', () => {
         .catch((error) => {
           console.error(error);
           console.warn('autoImport', account.playerId, error.message);
+
+          notification.create({
+            color: 'error',
+            title: i18n.t('common.error'),
+            message:
+              error.message == 'url_expired'
+                ? i18n.t('convene.import.urlExpired')
+                : error.message,
+          });
         })
         .finally(() => {
           console.debug('autoImport', account.playerId, 'finally');

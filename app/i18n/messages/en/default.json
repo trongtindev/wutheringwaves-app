@@ -262,6 +262,7 @@
     "import": {
       "title": "Import Convenes",
       "processing": "Processing...",
+      "urlExpired": "URL has expired, please try again.",
       "invalidLink": "Invalid link, please check it again",
       "guides": {
         "android": {

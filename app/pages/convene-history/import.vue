@@ -10,6 +10,7 @@ const { isIos, isAndroid } = useDevice();
 const sidebar = useSidebar();
 const importConvene = useImportConvene();
 const device = useDevice();
+const dialog = useDialog();
 
 // states
 const state = ref<'' | 'import'>('');
@@ -34,7 +35,13 @@ const onImport = (url: string) => {
     })
     .catch((error) => {
       console.error(error);
-      alert(error);
+      dialog.show({
+        title: i18n.t('common.error'),
+        content:
+          error.message == 'url_expired'
+            ? i18n.t('convene.import.urlExpired')
+            : error.message,
+      });
     })
     .finally(() => {
       resetState();

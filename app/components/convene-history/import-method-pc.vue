@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { mdiCheck, mdiContentCopy, mdiImport, mdiOpenInNew } from '@mdi/js';
 
-const props = defineProps<{
-  conveneHistoryUrl?: string;
-}>();
-
 const emits = defineEmits<{
   (e: 'on-import', url: string): Promise<void>;
 }>();
@@ -71,22 +67,6 @@ const powershellUrl = computed(() => {
 
 const powershellScript = computed(() => {
   return `[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12; Invoke-Expression (New-Object Net.WebClient).DownloadString("${powershellUrl.value}")`;
-});
-
-// changes
-watch(
-  () => props.conveneHistoryUrl,
-  (value) => {
-    if (!value) return;
-    url.value = value;
-  },
-);
-
-// lifecycle
-onMounted(() => {
-  if (props.conveneHistoryUrl) {
-    url.value = props.conveneHistoryUrl;
-  }
 });
 </script>
 

@@ -2,10 +2,6 @@
 import { mdiImport } from '@mdi/js';
 
 // define
-const props = defineProps<{
-  conveneHistoryUrl?: string;
-}>();
-
 const emits = defineEmits<{
   (e: 'on-import', url: string): Promise<void>;
 }>();
