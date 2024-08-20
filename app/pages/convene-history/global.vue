@@ -72,7 +72,7 @@ const pbdRange = computed(() => {
     const timeEnd = moment(displayBanner.value.time.end);
     const diff = timeEnd.diff(timeStart, 'days') + 1;
     return Array.from(Array(diff).keys()).map((i) => {
-      return timeStart.add(i, 'day');
+      return timeStart.clone().add(i, 'day');
     });
   }
 
