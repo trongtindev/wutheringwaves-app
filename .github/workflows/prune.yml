@@ -1,0 +1,21 @@
+name: Prune
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: vlaurin/action-ghcr-prune@v0.6.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          organization: trongtindev
+          container: wutheringwaves-app
+          dry-run: false
+          keep-younger-than: 7
+          keep-last: 3
+          prune-untagged: true
