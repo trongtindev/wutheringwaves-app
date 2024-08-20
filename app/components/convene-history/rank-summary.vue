@@ -2,6 +2,7 @@
 import type { ConveneDocument } from '~/database/documents/convene';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
 import type { IBannerSummary } from '~/interfaces/convene';
+import { mdiArrowUp, mdiArrowDown } from '@mdi/js';
 
 // define
 const props = defineProps<{
@@ -207,11 +208,7 @@ onNuxtReady(initialize);
           <template #append>
             <div class="d-flex align-center">
               <div class="mr-2">
-                {{
-                  totalPull < 50
-                    ? $t('convene.rank.bottom')
-                    : $t('convene.rank.top')
-                }}
+                <v-icon :icon="totalPull > 50 ? mdiArrowUp : mdiArrowDown" />
               </div>
               <div
                 class="text-h6 font-weight-bold"
@@ -244,11 +241,7 @@ onNuxtReady(initialize);
           <template #append>
             <div class="d-flex align-center">
               <div class="mr-2">
-                {{
-                  luckiness < 50
-                    ? $t('convene.rank.bottom')
-                    : $t('convene.rank.top')
-                }}
+                <v-icon :icon="luckiness > 50 ? mdiArrowUp : mdiArrowDown" />
               </div>
               <div
                 class="text-h6 font-weight-bold"
@@ -288,11 +281,7 @@ onNuxtReady(initialize);
           <template #append>
             <div class="d-flex align-center text-legendary">
               <div class="mr-2">
-                {{
-                  fiveAvg > 50
-                    ? $t('convene.rank.bottom')
-                    : $t('convene.rank.top')
-                }}
+                <v-icon :icon="fiveAvg < 50 ? mdiArrowUp : mdiArrowDown" />
               </div>
               <div
                 class="text-h6 font-weight-bold"
@@ -328,11 +317,7 @@ onNuxtReady(initialize);
           <template #append>
             <div class="d-flex align-center">
               <div class="mr-2">
-                {{
-                  fourAvg > 50
-                    ? $t('convene.rank.bottom')
-                    : $t('convene.rank.top')
-                }}
+                <v-icon :icon="fourAvg < 50 ? mdiArrowUp : mdiArrowDown" />
               </div>
               <div
                 class="text-h6 font-weight-bold"

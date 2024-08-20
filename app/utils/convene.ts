@@ -71,8 +71,10 @@ export const calculateWinRate = (args: {
       }
       return banner.type === type;
     });
+
     if (matchBanners.length == 0) {
-      console.warn('matchBanners', convene.name, matchBanners);
+      lastLoss = true;
+      totalExceptGuaranteed += 1;
       continue;
     }
 
@@ -82,11 +84,11 @@ export const calculateWinRate = (args: {
       continue;
     }
 
-    if (
+    const containsInBanner =
       banner.featuredRare === convene.name ||
       (banner.featuredSecondaryRare &&
-        banner.featuredSecondaryRare === convene.name)
-    ) {
+        banner.featuredSecondaryRare === convene.name);
+    if (!lastLoss && containsInBanner) {
       win += 1;
       totalExceptGuaranteed += 1;
     } else if (lastLoss) {

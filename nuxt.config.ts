@@ -26,6 +26,9 @@ const {
   // donate
   DONATE_URL,
   DONATE_DISABLED,
+  // github
+  GITHUB_OWNER,
+  GITHUB_REPO,
   // secrets
   REDIS_URL,
 } = import.meta.env;
@@ -110,6 +113,7 @@ export default defineNuxtConfig({
   ],
 
   routeRules: {
+    '/robots.txt': { proxy: '/api/robots' },
     '/guides/rss': { proxy: '/api/rss/guides' },
     // TODO: remove soon
     '/echos/**': { redirect: '/echoes/**' },
@@ -254,6 +258,9 @@ export default defineNuxtConfig({
       // donate
       DONATE_URL,
       DONATE_DISABLED,
+      // github
+      GITHUB_OWNER,
+      GITHUB_REPO,
     },
     REDIS_URL,
   },

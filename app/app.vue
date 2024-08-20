@@ -60,6 +60,11 @@ useHead({
       name: 'apple-mobile-web-app-capable',
       content: 'yes',
     },
+    {
+      name: 'robots',
+      content:
+        'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    },
   ],
   style: [
     {

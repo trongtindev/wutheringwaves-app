@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "types": ["@types/google.accounts", "@types/leaflet.markercluster"],
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     "noImplicitAny": false,
     "allowImportingTsExtensions": true,

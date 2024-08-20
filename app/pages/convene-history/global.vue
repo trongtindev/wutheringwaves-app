@@ -332,97 +332,49 @@ useSeoMeta({
 
         <!-- summary -->
         <v-row class="mt-1">
-          <v-col cols="12" sm="9">
-            <v-row>
-              <v-col cols="12" sm="7">
-                <v-card class="fill-height d-flex">
-                  <v-card-text>
-                    <table>
-                      <tr>
-                        <td class="py-4 pl-4 pr-2 text-center">
-                          <v-avatar :size="128" rounded>
-                            <v-img
-                              v-if="displayBanner && displayBanner.featuredRare"
-                              :src="`/${bannerType}/icons/${urlSlug(displayBanner.featuredRare)}.webp`"
-                            />
-                          </v-avatar>
-                        </td>
+          <v-col cols="12" sm="6">
+            <v-card class="fill-height d-flex">
+              <v-card-text>
+                <table>
+                  <tr>
+                    <td class="pr-2 text-center">
+                      <v-avatar :size="128" rounded>
+                        <v-img
+                          v-if="displayBanner && displayBanner.featuredRare"
+                          :src="`/${bannerType}/icons/${urlSlug(displayBanner.featuredRare)}.webp`"
+                        />
+                      </v-avatar>
+                    </td>
 
-                        <td class="pl-2 pr-2 text-h3" style="width: 50%">
-                          <div class="d-flex justify-end w-100">
-                            {{ format(totalSummoned) }}
-                          </div>
-                        </td>
+                    <td class="pl-2 pr-2 text-h3" style="width: 50%">
+                      <div class="d-flex justify-end w-100">
+                        {{ format(totalSummoned) }}
+                      </div>
+                    </td>
 
-                        <td class="pr-4" style="width: 30%">
-                          <div class="w-100">
-                            <div class="text-h6">
-                              <span v-if="displayBanner">
-                                {{ displayBanner.featuredRare }}
-                              </span>
-                              <span v-else>...</span>
-                            </div>
-                            <div class="text-gray-400">
-                              {{ $t('common.summoned') }}
-                            </div>
-                            <p class="text-gray-400">0% won 50:50</p>
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-                  </v-card-text>
-                </v-card>
-              </v-col>
-
-              <v-col cols="12" sm="5">
-                <v-card class="fill-height d-flex align-center">
-                  <div class="w-100">
-                    <table class="w-100">
-                      <tr>
-                        <td
-                          style="width: 60%"
-                          class="text-rarity5 py-4 pl-4 pr-2 text-right"
-                        >
-                          <div class="w-100 text-h3">0%</div>
-                        </td>
-
-                        <td style="width: 40%" class="text-rarity5 py-4 pr-4">
-                          <div>★★★★★</div>
-                          <div>
-                            Total
-                            {{ fiveStarList ? format(fiveStarList.length) : 0 }}
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td
-                          style="width: 60%"
-                          class="text-rarity4 py-4 pl-4 pr-2 text-right"
-                        >
-                          <div class="w-100 text-h3">0%</div>
-                        </td>
-                        <td style="width: 40%" class="text-rarity4 py-4 pr-4">
-                          <div>★★★★</div>
-                          <div>
-                            Total
-                            {{ fourStarList ? format(fourStarList.length) : 0 }}
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
+                    <td class="pr-4" style="width: 30%">
+                      <div class="w-100">
+                        <div class="text-h6">
+                          <span v-if="displayBanner">
+                            {{ displayBanner.featuredRare }}
+                          </span>
+                          <span v-else>...</span>
+                        </div>
+                        <div class="text-gray-400">
+                          {{ $t('common.summoned') }}
+                        </div>
+                        <p class="text-gray-400">0% won 50:50</p>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </v-card-text>
+            </v-card>
           </v-col>
 
-          <v-col cols="12" sm="3">
+          <v-col cols="12" sm="6">
             <v-card class="fill-height">
               <v-list>
-                <v-list-item :title="$t('convene.global.median')">
-                  <template #append> 0 </template>
-                </v-list-item>
                 <v-list-item :title="$t('convene.global.totalUsers')">
                   <template #append>
                     {{ format(totalUsers) }}
@@ -445,10 +397,14 @@ useSeoMeta({
 
         <!-- pullByDay -->
         <v-card class="mt-2">
-          <v-card-text>
+          <v-card-title>
+            {{ $t('common.pullByDay') }}
+          </v-card-title>
+          <v-card-text style="height: 400px">
             <Line
               id="pullByDay"
               :options="{
+                maintainAspectRatio: false,
                 responsive: true,
               }"
               :data="{
@@ -467,11 +423,17 @@ useSeoMeta({
         </v-card>
 
         <!-- rate -->
+
         <v-card class="mt-2">
-          <v-card-text>
+          <v-card-title>
+            {{ $t('common.winRate') }}
+          </v-card-title>
+
+          <v-card-text style="height: 400px">
             <Bar
               id="rate"
               :options="{
+                maintainAspectRatio: false,
                 responsive: true,
                 scales: {
                   x: {
@@ -504,12 +466,16 @@ useSeoMeta({
           </v-card-text>
         </v-card>
 
-        <!-- rc -->
+        <!-- sequences -->
         <v-card class="mt-2">
-          <v-card-text>
+          <v-card-title>
+            {{ $t('common.sequences') }}
+          </v-card-title>
+          <v-card-text style="height: 400px">
             <Bar
               id="rc"
               :options="{
+                maintainAspectRatio: false,
                 responsive: true,
                 scales: {
                   x: {
@@ -575,7 +541,6 @@ useSeoMeta({
               <v-card-title class="text-rarity5">
                 {{ $t('convene.global.fiveStar') }}
               </v-card-title>
-              <v-divider />
 
               <v-sheet v-if="fourStarList">
                 <convene-history-global-list-item
@@ -596,7 +561,6 @@ useSeoMeta({
               <v-card-title class="text-rarity4">
                 {{ $t('convene.global.fourStar') }}
               </v-card-title>
-              <v-divider />
 
               <v-sheet v-if="fourStarList">
                 <convene-history-global-list-item

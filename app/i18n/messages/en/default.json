@@ -255,7 +255,8 @@
     "remove": "Remove",
     "upcomingMessage": "Thank you for your interest, this feature is currently under development. Join the Discord to track the progress!",
     "selectBanner": "Select banner",
-    "preview": "Preview"
+    "preview": "Preview",
+    "winRate": "Win Rate"
   },
   "convene": {
     "message": "Wuthering Waves will delete convene history after 6 months, back up your convene history now!",
@@ -309,15 +310,11 @@
     "rank": {
       "title": "Your Global Rank",
       "level": "Your Total Pulls Rank",
-      "current": "Current {banner} median is {median} pulls",
       "more": "You have more pull than {percentage}% users",
       "less": "You have less pull than {percentage}% users",
-      "currentLuck": "Current {banner} median is {median}%",
       "luck5": "Luckiness 5★",
       "luck4": "Luckiness 4★",
       "luckWinRateOff": "Luckiness Win 50:50",
-      "medianTotal": "Global Median {median} pulls",
-      "medianLuck": "Global Median {median}%",
       "moreTotal": "More pulls than {percentage}% users",
       "lessTotal": "Less pulls than {percentage}% users",
       "moreLuck": "Luckier than {percentage}% users",
@@ -329,7 +326,6 @@
       "title": "Global Convene Stats",
       "fiveStar": "5★ List",
       "fourStar": "4★ List",
-      "median": "5★ Median",
       "totalUsers": "Total Users",
       "conveneTotal": "Convene Total",
       "worth": "Worth",
