@@ -8,5 +8,101 @@
   "quoteLocalized": {
     "vi": "Là những người tìm kiếm sự thật, chúng ta đánh giá vũ trụ từ trong một cái tóm tắt. Tôi muốn nghe những hiểu biết của bạn."
   },
-  "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125 }
+  "resonanceChain": [
+    {
+      "slug": "prodigy-of-groteges",
+      "name": "Prodigy of Protégés",
+      "params": ["8"],
+      "description": "When casting Resonance Skill Law of Reigns, deal 6 extra times of DMG, each equal to {0}% of that of Resonance Skill Law of Reigns."
+    },
+    {
+      "slug": "traces-of-predecessors",
+      "name": "Traces of Predecessors",
+      "params": ["30", "8"],
+      "description": "When **Resonance Skill** or **Resonance Liberation** Cogitation Model is cast, Crit. DMG is increased by {0}% for {1}s."
+    },
+    {
+      "slug": "ruins-of-ancient",
+      "name": "Ruins of Ancient",
+      "params": ["24", "63"],
+      "description": "After **Resonance Liberation** Cogitation Model is cast, the subsequent 5 Resonance Skills cast within {0}s are empowered to deal {1}% extra DMG."
+    },
+    {
+      "slug": "vessel-of-rebirth",
+      "name": "Vessel of Rebirth",
+      "params": ["25", "30"],
+      "description": "When casting **Resonance Liberation** Cogitation Model, all team members' **Resonance Liberation** gains {0}% DMG Bonus for {1}s."
+    },
+    {
+      "slug": "end-of-stars",
+      "name": "End of Stars",
+      "params": ["222.09", "120"],
+      "description": "The DMG Multiplier of **Outro Skill** Chain Rule is increased by {0}%. The DMG Multiplier of Resonance Liberation Cogitation Model is increased by {1}%."
+    },
+    {
+      "slug": "solace-of-the-ordinary",
+      "name": "Solace of the Ordinary",
+      "params": ["76"],
+      "description": "The Hypercubes obtained from **Resonance Liberation** Cogitation Model are enhanced, increasing the DMG Multiplier of **Resonance Skill** Law of Reigns by {0}%."
+    }
+  ],
+  "skills": [
+    {
+      "slug": "probe",
+      "type": "Basic Attack",
+      "name": "Probe",
+      "description": "**Basic Attack**\nPerform up to 5 consecutive attacks, dealing Electro DMG.\n\n**Heavy Attack**\nPerform a charged attack at the cost of STA, dealing Electro DMG.\n\n**Mid-air Attack**\nPerform a Plunging Attack from mid-air at the cost of STA, dealing Electro DMG.\n\n**Dodge Counter**\nUse Basic Attack after a successful Dodge to attack the target, dealing Electro DMG."
+    },
+    {
+      "slug": "deduction",
+      "type": "Resonance Skill",
+      "name": "Deduction",
+      "description": "Attack the target, dealing Electro DMG."
+    },
+    {
+      "slug": "cogitation-model",
+      "type": "Resonance Liberation",
+      "name": "Cogitation Model",
+      "description": "Attack the target, dealing Electro DMG. Enter **Intuition**. When in Intuition:\nObtain 3 Hypercube(s). Each time Resonance Skill **Law of Reigns** is cast, consume 1 Hypercube(s). Intuition ends once all Hypercubes are consumed.\nBasic Attack and Heavy Attack are replaced with Basic Attack Pivot - Impale, which performs up to 3 consecutive attacks, dealing Electro DMG.\nResonance Skill Deduction is replaced with Resonance Skill Divergence, which deals Electro DMG.\n**Dodge Counter** is replaced with **Dodge Counter Unfathomed**, considered as **Resonance Liberation DMG**."
+    },
+    {
+      "slug": "forever-seeking",
+      "type": "Forte Circuit",
+      "name": "Forever Seeking",
+      "description": "**Resonance Skill - Decipher**\n\nWhen Capacity reaches 100, Resonance Skill Deduction is replaced with Resonance Skill Decipher.\nConsume 100 Capacity to cast Resonance Skill Decipher, dealing Electro DMG, considered as Resonance Liberation DMG.\n\n**Resonance Skill - Law of Reigns**\nWhen in Intuition triggered by Resonance Liberation and Performance Capacity reaches 5, Resonance Skill Divergence is replaced with Resonance Skill Law of Reigns.\nConsume 5 Performance Capacity to cast Resonance Skill Law of Reigns, dealing Electro DMG, considered as Resonance Liberation DMG.\n\n**Mid-air Attack - Revamp**\nShortly after casting Resonance Skill Decipher or Resonance Skill Divergence, use Basic Attack to perform Mid-air Attack Revamp at the cost of STA, dealing Electro DMG, considered as Resonance Liberation DMG.\n\n**Capacity**\nXiangli Yao can hold up to 100 Capacity.\nEvery Normal Attack Probe on hit grants Capacity.\nEvery Resonance Skill Deduction on hit grants Capacity.\n\n**Performance Capacity**\nXiangli Yao can hold up to 5 Performance Capacity.\nWhen in Intuition triggered by Resonance Liberation:\nObtain 1 Performance Capacity when Stage 1 of Basic Attack Pivot - Impale hits a target.\nObtain 2 Performance Capacity when Stage 2 or 3 of Basic Attack Pivot - Impale hits a target.\nObtain 2 Performance Capacity for every Resonance Skill Divergence on hit.\nObtain 3 Performance Capacity for every Mid-air Attack Revamp on hit.\nObtain 2 Performance Capacity for every Dodge Counter Unfathomed on hit."
+    },
+    {
+      "slug": "principle",
+      "type": "Intro Skill",
+      "name": "Principle",
+      "description": "Attack the target, dealing Electro DMG."
+    },
+    {
+      "slug": "chain-Rule",
+      "type": "Outro Skill",
+      "name": "Chain Rule",
+      "params": ["237.63", "8", "2", "3"],
+      "description": "When the **incoming Resonator's Basic Attack** hits a target, Xiangli Yao will attack the same target, dealing Electro DMG equal to {0}% of Xiangli Yao's ATK. This effect lasts for {1}s and can be triggered once every {2}s, up to {3} times."
+    },
+    {
+      "slug": "knowing",
+      "type": "Inherent Skill",
+      "name": "Knowing",
+      "params": ["5"],
+      "description": "Gain {0}% Electro DMG Bonus."
+    },
+    {
+      "slug": "focus",
+      "type": "Inherent Skill",
+      "name": "Focus",
+      "description": "When in Intuition triggered by **Resonance Liberation**, Xiangli Yao's resistance to interruption is enhanced."
+    }
+  ],
+  "stats": { "hp": 10625, "atk": 425, "def": 1222, "energy": 125 },
+  "voiceActors": [
+    { "locale": "en", "name": "Shaun Mendum" },
+    { "locale": "jp", "name": "Kobayashi Chiaki" },
+    { "locale": "zh", "name": "Ban Ma" },
+    { "locale": "ko", "name": "Jung Eui Jin" }
+  ]
 }

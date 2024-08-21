@@ -11,13 +11,10 @@ const i18n = useI18n();
 
 // computed
 const descriptionLocalized = (() => {
-  if (
-    props.data.descriptionLocalized &&
-    props.data.descriptionLocalized[i18n.locale.value]
-  ) {
-    return props.data.descriptionLocalized[i18n.locale.value];
-  }
-  return props.data.description;
+  const content =
+    props.data.descriptionLocalized[i18n.locale.value] ||
+    props.data.description;
+  return parseColours(content);
 })();
 </script>
 

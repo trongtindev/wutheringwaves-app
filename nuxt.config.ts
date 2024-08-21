@@ -270,6 +270,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     viewTransition: true,
+    checkOutdatedBuildInterval: 60 * 5 * 1000,
   },
 
   compatibilityDate: '2024-07-05',

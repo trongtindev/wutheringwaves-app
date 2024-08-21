@@ -5,12 +5,10 @@ import { Bar, Line } from 'vue-chartjs';
 import { CardPoolType, type IBanner } from '~/interfaces/banner';
 import type { IBannerSummary } from '~/interfaces/convene';
 
-// Property 'formatNumber' does not exist on type
-const format = formatNumber;
-
 // uses
 const api = useApi();
 const i18n = useI18n();
+const device = useDevice();
 const resources = useResources();
 
 // fetch
@@ -348,7 +346,7 @@ useSeoMeta({
 
                     <td class="pl-2 pr-2 text-h3" style="width: 50%">
                       <div class="d-flex justify-end w-100">
-                        {{ format(totalSummoned) }}
+                        {{ formatNumber(totalSummoned) }}
                       </div>
                     </td>
 
@@ -377,17 +375,17 @@ useSeoMeta({
               <v-list>
                 <v-list-item :title="$t('convene.global.totalUsers')">
                   <template #append>
-                    {{ format(totalUsers) }}
+                    {{ formatNumber(totalUsers) }}
                   </template>
                 </v-list-item>
                 <v-list-item :title="$t('convene.global.conveneTotal')">
                   <template #append>
-                    {{ format(totalPull) }}
+                    {{ formatNumber(totalPull) }}
                   </template>
                 </v-list-item>
                 <v-list-item :title="$t('common.astrite')">
                   <template #append>
-                    {{ format(totalPull * 160) }}
+                    {{ formatNumber(totalPull * 160) }}
                   </template>
                 </v-list-item>
               </v-list>
@@ -400,11 +398,11 @@ useSeoMeta({
           <v-card-title>
             {{ $t('common.pullByDay') }}
           </v-card-title>
-          <v-card-text style="height: 400px">
+          <v-card-text :style="device.isDesktop ? 'height: 400px' : undefined">
             <Line
               id="pullByDay"
               :options="{
-                maintainAspectRatio: false,
+                maintainAspectRatio: device.isMobile,
                 responsive: true,
               }"
               :data="{
@@ -429,7 +427,7 @@ useSeoMeta({
             {{ $t('common.winRate') }}
           </v-card-title>
 
-          <v-card-text style="height: 400px">
+          <v-card-text :style="device.isDesktop ? 'height: 400px' : undefined">
             <Bar
               id="rate"
               :options="{
@@ -471,11 +469,11 @@ useSeoMeta({
           <v-card-title>
             {{ $t('common.sequences') }}
           </v-card-title>
-          <v-card-text style="height: 400px">
+          <v-card-text :style="device.isDesktop ? 'height: 400px' : undefined">
             <Bar
               id="rc"
               :options="{
-                maintainAspectRatio: false,
+                maintainAspectRatio: device.isMobile,
                 responsive: true,
                 scales: {
                   x: {

@@ -18,13 +18,13 @@ const nameLocalized = (() => {
 })();
 
 const descriptionLocalized = (() => {
-  if (
-    props.data.descriptionLocalized &&
-    props.data.descriptionLocalized[i18n.locale.value]
-  ) {
-    return props.data.descriptionLocalized[i18n.locale.value];
-  }
-  return props.data.description;
+  const content =
+    props.data.descriptionLocalized[i18n.locale.value] ||
+    props.data.description;
+  return parseColours(content).replace(
+    /\{(\d+)\}/g,
+    (_, j) => props.data.params[j] || '',
+  );
 })();
 </script>
 
@@ -44,7 +44,7 @@ const descriptionLocalized = (() => {
     </v-sheet>
 
     <v-card-text v-if="descriptionLocalized">
-      <div :innerHTML="descriptionLocalized.replaceAll('\n', '<br/>')" />
+      <div :innerHTML="descriptionLocalized" />
     </v-card-text>
     <v-sheet v-else class="pb-2" />
   </v-card>

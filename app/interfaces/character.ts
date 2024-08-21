@@ -57,6 +57,7 @@ export interface ICharacterSkillData {
     }[];
     level: number;
   }[];
+  params: string[];
   description: string;
   descriptionLocalized: ILocalized;
 }
@@ -67,7 +68,7 @@ export interface ICharacterRCData {
   nameLocalized?: ILocalized;
   params: string[];
   description: string;
-  descriptionLocalized?: ILocalized;
+  descriptionLocalized: ILocalized;
 }
 
 export interface ICharacterDataStats {

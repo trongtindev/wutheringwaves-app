@@ -184,6 +184,19 @@ export const useResources = defineStore('useResources', () => {
           ...e,
           icon: `/skills/icons/${e.slug}.webp`,
           nameLocalized: e.nameLocalized || {},
+          params: e.params || [],
+          descriptionLocalized: e.descriptionLocalized || {},
+        };
+      });
+    }
+
+    if (clone.resonanceChain) {
+      clone.resonanceChain = clone.resonanceChain.map((e) => {
+        return {
+          ...e,
+          icon: `/resonance_chain/icons/${e.slug}.webp`,
+          nameLocalized: e.nameLocalized || {},
+          params: e.params || [],
           descriptionLocalized: e.descriptionLocalized || {},
         };
       });
