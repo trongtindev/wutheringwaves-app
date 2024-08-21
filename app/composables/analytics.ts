@@ -13,9 +13,6 @@ export const useAnalytics = defineStore('useAnalytics', () => {
   // functions
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const logEvent = async (eventName: any, eventParams?: any) => {
-    if (gtag) {
-      gtag('event', eventName, eventParams);
-    }
     if (clarity) {
       clarity('event', eventName, eventParams);
     }
@@ -26,9 +23,6 @@ export const useAnalytics = defineStore('useAnalytics', () => {
     () => auth.user,
     () => {
       if (auth.user) {
-        if (gtag) {
-          gtag('set', { email: auth.user.email, name: auth.user.name });
-        }
         if (clarity) {
           clarity('identify', auth.user.email, auth.user.name);
         }
