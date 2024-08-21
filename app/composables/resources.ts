@@ -15,10 +15,6 @@ import type { ITrophy } from '~/interfaces/trophy';
 
 export const useResources = defineStore('useResources', () => {
   // states
-  const itemList = ref<any[]>();
-  const characterList = ref<any[]>();
-  const weaponList = ref<any[]>();
-  const echoList = ref<any[]>();
   const trophyList = ref<{
     items: any[];
     publishedTime: string;
@@ -52,32 +48,15 @@ export const useResources = defineStore('useResources', () => {
   const getWeapons = async (
     selector?: Partial<IWeapon>,
   ): Promise<IWeapon[]> => {
-    if (!weaponList.value) {
-      const data = await $fetch('/api/resources/weapons');
-      if (!data) throw new Error('resources/weapons is null');
-      weaponList.value = data;
-    }
-    const clone = cloneObject(weaponList.value!);
-    const items = clone
-      .map((e) => {
-        return {
-          ...e,
-          icon: `/weapons/icons/${e.slug}.webp`,
-          nameLocalized: e.nameLocalized || {},
-          upcoming: typeof e.upcoming === 'undefined' ? false : e.upcoming,
-        };
-      })
-      .filter((e) => {
-        if (selector) {
-          return Object.entries(selector).every(
-            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
-          );
-        }
-        return true;
-      })
-      .sort((a, b) => {
-        return a.name.localeCompare(b.name);
-      });
+    const clone = cloneObject(allWeapons());
+    const items = clone.filter((e) => {
+      if (selector) {
+        return Object.entries(selector).every(
+          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+        );
+      }
+      return true;
+    });
     return items as IWeapon[];
   };
 
@@ -93,12 +72,7 @@ export const useResources = defineStore('useResources', () => {
   const getCharacters = async (
     selector?: Partial<ICharacter>,
   ): Promise<ICharacter[]> => {
-    if (!characterList.value) {
-      const data = await $fetch('/api/resources/characters');
-      if (!data) throw new Error('resources/characters is null');
-      characterList.value = data;
-    }
-    const clone = cloneObject(characterList.value);
+    const clone = cloneObject(allCharacters());
     const attributes = await getAttributes();
 
     const items = clone
@@ -210,41 +184,16 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getEchoes = async (selector?: Partial<IEcho>): Promise<IEcho[]> => {
-    if (!echoList.value) {
-      const data = await $fetch('/api/resources/echoes');
-      if (!data) throw new Error('resources/echoes is null');
-      echoList.value = data;
-    }
-    const clone = cloneObject(echoList.value!);
-    const attrs = await getAttributes();
-    const sonataEffects = await getSonataEffects();
-    const items = clone
-      .filter((e) => {
-        if (selector) {
-          return Object.entries(selector).every(
-            ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
-          );
-        }
-        return true;
-      })
-      .map((e) => {
-        return {
-          ...e,
-          icon: `/echoes/icons/${e.slug}.webp`,
-          nameLocalized: e.nameLocalized || {},
-          attribute: attrs.find((item) => {
-            return item.slug === e.attribute || item.name === e.attribute;
-          })!,
-          sonataEffects: e.sonataEffects.map((sonataEffect) => {
-            return sonataEffects.find((item) => {
-              return item.slug === sonataEffect || item.name === sonataEffect;
-            })!;
-          }),
-        };
-      })
-      .sort((a, b) => {
-        return a.name.localeCompare(b.name);
-      });
+    const clone = cloneObject(allEchoes());
+    const items = clone.filter((e) => {
+      if (selector) {
+        return Object.entries(selector).every(
+          ([selectorKey, selectorValue]) => e[selectorKey] === selectorValue,
+        );
+      }
+      return true;
+    });
+
     return items;
   };
 
@@ -259,22 +208,8 @@ export const useResources = defineStore('useResources', () => {
   };
 
   const getItems = async (selector?: Partial<IItem>): Promise<IItem[]> => {
-    if (!itemList.value) {
-      const data = await $fetch('/api/resources/items');
-      if (!data) throw new Error('resources/items is null');
-      itemList.value = data;
-    }
-    const clone = cloneObject(itemList.value!);
-
+    const clone = cloneObject(allItems());
     const items = clone
-      .map((e) => {
-        return {
-          ...e,
-          icon: `${useRuntimeConfig().public.FILE_URL}/assets/items/${e.slug}_${e.id}.webp`,
-          nameLocalized: e.nameLocalized || {},
-          publishedTime: e.publishedTime || '2024-05-23T00:00:00.000Z',
-        };
-      })
       .filter((e) => {
         if (selector) {
           return Object.entries(selector).every(

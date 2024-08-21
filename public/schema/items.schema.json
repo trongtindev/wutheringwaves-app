@@ -23,18 +23,9 @@
           },
           "name": { "type": "string" },
           "nameLocalized": { "type": "object" },
-          "publishedTime": { "type": "string" },
           "modifiedTime": { "type": "string" }
         },
-        "required": [
-          "id",
-          "slug",
-          "rarity",
-          "category",
-          "name",
-          "publishedTime",
-          "modifiedTime"
-        ]
+        "required": ["id", "slug", "rarity", "category", "name", "modifiedTime"]
       }
     }
   },

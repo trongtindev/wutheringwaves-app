@@ -1,5 +1,9 @@
-import data from '~~/resources/echoes.json';
+import { allEchoes } from '~/utils/resources';
 
 export default defineEventHandler(() => {
-  return data.items;
+  const items = allEchoes();
+  return {
+    total: items.length,
+    items: items,
+  };
 });

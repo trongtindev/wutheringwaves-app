@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { IWeapon } from '@/interfaces/weapon';
-
 const i18n = useI18n();
 const resources = useResources();
 const database = useDatabase();
@@ -8,7 +6,7 @@ const account = useAccount();
 const importConvene = useImportConvene();
 
 // states
-const weapons = ref<IWeapon[]>(await resources.getWeapons());
+const weapons = await resources.getWeapons();
 const filterText = ref<string>();
 const filterType = ref<string>('All');
 const filterRarity = ref<number>(0);
@@ -16,7 +14,7 @@ const obtainedCount = ref({});
 
 // computed
 const items = computed(() => {
-  return weapons.value.filter((e) => {
+  return weapons.filter((e) => {
     if (filterText.value && filterText.value.length > 0) {
       if (!e.name.toLowerCase().includes(filterText.value.toLowerCase())) {
         return false;
@@ -42,7 +40,7 @@ const items = computed(() => {
 
 const categories = computed(() => {
   const items: string[] = [];
-  weapons.value.forEach((e) => {
+  weapons.forEach((e) => {
     if (!items.includes(e.type)) {
       items.push(e.type);
     }
@@ -78,8 +76,8 @@ watch(
 // lifecycle
 onNuxtReady(() => {
   if (import.meta.dev) {
-    console.debug(JSON.stringify(weapons.value.map((e) => e.name)));
-    console.debug(JSON.stringify(weapons.value.map((e) => e.slug)));
+    console.debug(JSON.stringify(weapons.map((e) => e.name)));
+    console.debug(JSON.stringify(weapons.map((e) => e.slug)));
   }
 
   calculatorOwned();

@@ -1,7 +1,7 @@
-import data from '~~/resources/characters.json';
+import { allCharacters } from '~/utils/resources';
 
 export default defineSitemapEventHandler(() => {
-  return data.items
+  return allCharacters()
     .map((e) => {
       return asSitemapUrl({
         loc: `/characters/${e.slug}`,

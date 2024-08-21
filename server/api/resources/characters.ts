@@ -1,5 +1,9 @@
-import data from '~~/resources/characters.json';
+import { allCharacters } from '~/utils/resources';
 
 export default defineEventHandler(() => {
-  return data.items;
+  const items = allCharacters();
+  return {
+    total: items.length,
+    items: items,
+  };
 });

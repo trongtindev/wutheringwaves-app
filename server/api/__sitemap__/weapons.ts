@@ -1,7 +1,7 @@
-import data from '~~/resources/weapons.json';
+import { allWeapons } from '~/utils/resources';
 
 export default defineSitemapEventHandler(() => {
-  return data.items
+  return allWeapons()
     .map((e) => {
       return asSitemapUrl({
         loc: `/weapons/${e.slug}`,

@@ -1,7 +1,7 @@
-import data from '~~/resources/echoes.json';
+import { allEchoes } from '~/utils/resources';
 
 export default defineSitemapEventHandler(() => {
-  return data.items
+  return allEchoes()
     .map((e) => {
       return asSitemapUrl({
         loc: `/echoes/${e.slug}`,

@@ -1,7 +1,7 @@
-import items from '~~/resources/items.json';
+import { allItems } from '~/utils/resources';
 
 export default defineSitemapEventHandler(() => {
-  return items
+  return allItems()
     .map((e) => {
       return asSitemapUrl({
         loc: `/items/${e.slug}`,

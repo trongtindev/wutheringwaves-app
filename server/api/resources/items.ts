@@ -1,6 +1,9 @@
-import items from '~~/resources/items.json';
+import { allItems } from '~/utils/resources';
 
 export default defineEventHandler(() => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return items as any[];
+  const items = allItems();
+  return {
+    total: items.length,
+    items: items,
+  };
 });
