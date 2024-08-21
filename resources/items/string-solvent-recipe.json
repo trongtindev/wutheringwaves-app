@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products.",
-  "description": "Grants the selected Resonators in the party 1 Con. Energy per second for 180 seconds, effective only on your own Characters in Co-op.",
+  "description": "Grants the selected Resonators in the party 1 Concerto Energy per second for 180 seconds, effective only on your own Resonators in Co-op.",
   "modifiedTime": "2024-07-09T15:18:54.285Z",
+  "obtainDescription": "Grants the selected Resonators in the party 1 Concerto Energy per second for 180 seconds, effective only on your own Resonators in Co-op.",
   "publishedTime": "2024-06-28T15:43:22.009Z"
 }

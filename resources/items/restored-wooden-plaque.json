@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A restored wooden plaque with mysterious carvings. You remember seeing a socket where it could fit somewhere before…",
   "description": "Restored Wooden Plaque",
   "modifiedTime": "2024-07-09T15:18:54.165Z",
+  "obtainDescription": "Put the two wooden plaque fragments together",
   "publishedTime": "2024-06-28T15:43:21.981Z"
 }

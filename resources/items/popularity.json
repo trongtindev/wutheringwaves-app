@@ -1,0 +1,5 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "An objective overview of the number of visitors at the Moonlit Fair and their feedback, gathered through big data analysis, anonymous questionnaires, community reviews, and random street interviews.",
+  "description": "Popularity Points are gained by completing Wishes. They indicate how successful the Moonlit Fair is."
+}

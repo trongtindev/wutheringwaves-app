@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The gem obtained after the necklace was destroyed.",
   "description": "The gem on the necklace pendant, which seems to be inlaid somewhere.",
   "modifiedTime": "2024-07-09T15:18:54.347Z",
+  "obtainDescription": "A gem that was taken off the pendant after the necklace was destroyed.",
   "publishedTime": "2024-06-28T15:43:22.022Z"
 }

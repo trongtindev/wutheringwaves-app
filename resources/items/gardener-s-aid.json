@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Among various supply services, some supply providers are particularly mysterious, such as the Black Shores. No one knows how it obtains these supplies, but the quality is indeed excellent.",
+  "description": "Basic Weapon Skill Breakthrough Material Bundle",
+  "obtainDescription": "Basic Weapon Skill Breakthrough Material Bundle"
+}

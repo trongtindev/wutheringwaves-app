@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Powerful catalytic fluids that can significantly accelerate the onset of action of all types of formulations.",
   "description": "Material for Synthesis",
   "modifiedTime": "2024-07-09T15:18:54.289Z",
+  "obtainDescription": "Material for Synthesis",
   "publishedTime": "2024-06-28T15:43:22.010Z"
 }

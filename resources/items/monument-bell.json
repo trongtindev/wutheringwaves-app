@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The ancient bell carried on the back of the Bell-Borne Geochelone. When the bell rings, the awakened past will leave a new mark in this era.",
   "description": "Drop from Bell-Borne Geochelone, used for skill upgrade.",
   "modifiedTime": "2024-07-09T15:18:53.987Z",
+  "obtainDescription": "Drop from Bell-Borne Geochelone, used for skill upgrade.",
   "publishedTime": "2024-06-28T15:43:21.949Z"
 }

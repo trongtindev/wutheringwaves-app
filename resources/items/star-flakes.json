@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A snack popular among the children of Jinzhou, made with deep-fried meat bits of starry shapes and served with a special power dip. It is said that you can make a wish after eating it. \"One star, two stars... you can't make a wish without eating it!\"",
-  "description": "Increases all party members' DEF by 35%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all team members' DEF by 35%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:54.277Z",
+  "obtainDescription": "Increases all team members' DEF by 35%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:22.007Z"
 }

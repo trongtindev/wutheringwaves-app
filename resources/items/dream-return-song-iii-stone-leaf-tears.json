@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "\"He comes back every year, fantasizing her never leaving\" Scripts once won the \"Audience's Choice Award\" in Jinzhou Theater. It tells a story about a couple of childhood sweethearts overcome obstacles to treat strange disease and rescue the whole village. The desolate yet beautiful scene of farewell won over the favor of young boys and girls. Its peripheral product, \"Crystalized Vane\", was once a heat in Jinzhou.",
   "description": "The tenth anniversary collector's edition of the storybook \"Stone Leaf Tear\".",
   "modifiedTime": "2024-07-09T15:18:53.570Z",
+  "obtainDescription": "The tenth anniversary collector's edition of \"Stone Leaf Tears\".",
   "publishedTime": "2024-06-28T15:43:21.887Z"
 }

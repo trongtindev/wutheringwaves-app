@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A special product that combines potions of different potencies, which may provide a variety of unexpected benefits.",
-  "description": "Used to grant selected Resonators immunity to a fatal damage and heal the Resonator for 25% of their max HP, lasting for 60s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Used to grant selected Resonators immunity to a fatal damage and heal 25% of the Resonator's Max HP, lasting for 60s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
   "modifiedTime": "2024-07-09T15:18:54.405Z",
+  "obtainDescription": "Used to grant selected Resonators immunity to a fatal damage and heal 25% of the Resonator's Max HP, lasting for 60s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
   "publishedTime": "2024-06-28T15:43:22.033Z"
 }

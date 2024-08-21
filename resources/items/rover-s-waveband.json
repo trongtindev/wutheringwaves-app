@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A Resonator's Forte is composed of countless invisible Wavebands. When the Remnant Wavebands are compiled to form a complete Resonance Chain, their Forte receives an upgrade in power.",
+  "description": "Can be used to activate Rover: Havoc's Resonance Chain.",
+  "obtainDescription": "Can be used to activate Rover: Havoc's Resonance Chain."
+}

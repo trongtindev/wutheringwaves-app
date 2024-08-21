@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "This sundial has a secret compartment. \nRotate the two disks to the right positions to unlock it and discover its hidden contents.",
   "description": "Jinhsi's Token: III",
   "modifiedTime": "2024-07-09T15:18:54.302Z",
+  "obtainDescription": "Jinhsi's Token: III",
   "publishedTime": "2024-06-28T15:43:22.012Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A research report on Jinzhou's first Resonator, placed on the \"Wei\" Shelf of Huaxu Academy's archives.",
   "description": "Open the information interface after use",
   "modifiedTime": "2024-07-09T15:18:53.340Z",
+  "obtainDescription": "Open the information interface after use",
   "publishedTime": "2024-06-28T15:43:21.855Z"
 }

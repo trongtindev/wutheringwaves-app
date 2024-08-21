@@ -1,6 +1,8 @@
 {
-  "bgDescription": "Th tea is a favorite of Aalto. As the water in the pot turns to mist and then back into water in the cup, the aroma of the tea is coupled with the soothing mist. \n\"Now, let's get down to business.\"\nIt seems Aalto's mastery of tea-making is just one of his many skills in the business world.",
-  "description": "Increases all party members' DEF by 14% and max HP by 12%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "This tea is a favorite of Aalto's. As the water in the pot turns to mist and then back into water in the cup, the aroma of the tea is coupled with the soothing mist.\n\"Now, let's get down to business.\"\nIt seems Aalto's mastery of tea-making is just one of his many skills in the business world.",
+  "description": "Increases all teammates' DEF by 14% and max HP by 12%, lasting for 30m. Only effective for your own Resonator in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.983Z",
+  "obtainDescription": "Increases all teammates' DEF by 14% and max HP by 12%, lasting for 30m. Only effective for your own Resonator in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.949Z"
 }

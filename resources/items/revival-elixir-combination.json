@@ -1,6 +1,8 @@
 {
-  "bgDescription": "Combination Revival Potion\n\n[Potion Effect]Stabilizes the Resonator's condition to a certain extent, aids in the recovery of consciousness.\n\n[Precautions]The interval between taking this type of potion is long, it is not recommended to use it excessively in a short period.\n\n[Contraindications]Prohibited to use in combination with the same type of potion or frequency stabilizing type of potion.",
-  "description": "Using this item can instantly restore consciousness to all Resonators in the team, and can only be used once every 60 minutes (only effective for your own Character in multiplayer games).",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Combination Revival Potion\n\n[Effect] Stabilizes the Resonator's condition to a certain extent and aids in their recovery.\n\n[Precautions] Long intervals between doses are recommended. Excessive use within a short period is not advisable.\n\n[Warning] Prohibited to use in combination with the same type of potion or any frequency stabilizing potions.",
+  "description": "Used to Instantly revive the selected Resonator. Can only be used once every 60 seconds. (Only effective for your own Resonators in Co-op Mode)",
   "modifiedTime": "2024-07-09T15:18:54.167Z",
+  "obtainDescription": "Used to immediately revive the selected Resonator. Can only be used once every 60 seconds. (Only effective for your own Resonators in Co-op Mode)",
   "publishedTime": "2024-06-28T15:43:21.982Z"
 }

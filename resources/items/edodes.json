@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Edodes offers a richer and more tender flavor compared to common mushrooms. Simply boiling Edodes in fresh water with a pinch of salt yields a taste akin to Jinzhou Stew.",
   "description": "A material used for Cooking and Synthesis.",
   "modifiedTime": "2024-07-09T15:18:53.592Z",
+  "obtainDescription": "A material used for Cooking and Synthesis.",
   "publishedTime": "2024-06-28T15:43:21.891Z"
 }

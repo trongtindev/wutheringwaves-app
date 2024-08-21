@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The echoes within the rift are hard to discern.",
-  "description": "Obtain collected random Echo.",
+  "description": "Can be used to obtain a random collected Echo.\nUpgrade the Data Bank to increase your chance of getting Echoes of higher Rarity.",
   "modifiedTime": "2024-07-09T15:18:53.997Z",
+  "obtainDescription": "Provides a random Echo you have unlocked.",
   "publishedTime": "2024-06-28T15:43:21.952Z"
 }

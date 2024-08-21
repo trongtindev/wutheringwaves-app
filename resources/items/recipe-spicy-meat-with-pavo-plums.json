@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A recipe that details how to make Spicy Meat with Pavo Plums.",
+  "description": "Used to learn how to cook Spicy Meat with Pavo Plums.",
+  "obtainDescription": "Used to learn how to cook Spicy Meat with Pavo Plums."
+}

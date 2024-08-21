@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The ripples of the waves converge into the sprouts of desire.\n\"That is the echo of your call.\"",
   "description": "Used to redeem items in the Store.",
   "modifiedTime": "2024-07-09T15:18:54.037Z",
+  "obtainDescription": "Token for redeeming items from the Store.",
   "publishedTime": "2024-06-28T15:43:21.958Z"
 }

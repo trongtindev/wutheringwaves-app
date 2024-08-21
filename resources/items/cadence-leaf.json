@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "An unusual substance resembling the shape of a new leaf. If you listen carefully, you can hear the faint rustle of it bathing in sunlight and sucking dew. In fact, it is able to absorb the wandering Frequency Energy from the environment.",
   "description": "An advanced material used to break through weapons and upgrade skills for Gauntlets Resonators.",
   "modifiedTime": "2024-07-09T15:18:53.445Z",
+  "obtainDescription": "Material for weapon breakthrough.",
   "publishedTime": "2024-06-28T15:43:21.870Z"
 }

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Information that records the ill-fated life of a woman.",
+  "description": "A record of Dewvetch's own voice left before her death.",
+  "obtainDescription": "A record of Dewvetch's own voice left before her death."
+}

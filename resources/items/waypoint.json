@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A temporary Resonance Beacon employed for location marking by utilizing beacon data from its surroundings. While retaining the same functions as Resonance Beacons, it offers enhanced mobility, rendering it indispensable for field workers.",
   "description": "A temporary Resonance Beacon that can be flexibly placed, it needs to be placed by consuming the core module.",
   "modifiedTime": "2024-07-09T15:18:54.436Z",
+  "obtainDescription": "A temporary Resonance Beacon that can be flexibly placed, it needs to be placed by consuming the core module.",
   "publishedTime": "2024-06-28T15:43:22.038Z"
 }

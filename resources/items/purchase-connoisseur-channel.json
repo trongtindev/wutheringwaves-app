@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Start listening to the Pioneer Podcast now to gain valuable insights for your outdoor adventures!",
   "description": "Unlocks the Insider Channel of the Pioneer Podcast.\r\n\r\nComplete the Podcast Tasks for various rewards.",
   "modifiedTime": "2024-07-09T15:18:54.127Z",
+  "obtainDescription": "Unlocks the Connoisseur Channel.",
   "publishedTime": "2024-06-28T15:43:21.973Z"
 }

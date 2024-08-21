@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "It contains a record of what happened during Jiaping's stay in the Exile camp, as well as some nonsensical feelings and expectations.",
+  "description": "Jiaping's Diary.",
+  "obtainDescription": "Jiaping's Diary."
+}

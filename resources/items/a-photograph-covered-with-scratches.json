@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A photograph with scratches spread on its back. Marks are made on the photo, indicating somewhere in the Tiger's Maw. Treasures might be found there.",
   "description": "A photograph indicating the location of treasures.",
   "modifiedTime": "2024-07-09T15:18:53.266Z",
+  "obtainDescription": "A Photograph Covered with Scratches",
   "publishedTime": "2024-06-28T15:43:21.844Z"
 }

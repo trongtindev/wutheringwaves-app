@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "This item can only be obtained when three Cliffrecluses grow into one piece.",
   "description": "Daily Quests Item",
   "modifiedTime": "2024-07-09T15:18:53.943Z",
+  "obtainDescription": "Daily Quests Item",
   "publishedTime": "2024-06-28T15:43:21.943Z"
 }

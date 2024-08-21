@@ -153,8 +153,8 @@ useSeoMeta({
           <v-card-text>
             <v-row>
               <v-col
-                v-for="(item, index) in upcomingCharacters"
-                :key="index"
+                v-for="item in upcomingCharacters"
+                :key="item.slug"
                 cols="6"
               >
                 <character-card :item="item" />

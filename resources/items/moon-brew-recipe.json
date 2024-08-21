@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A recipe that details how to make Moon Brew.",
+  "description": "Used to learn how to cook Moon Brew.",
+  "obtainDescription": "Used to learn how to cook Moon Brew."
+}

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A cylindrical storage that contains advanced frequencies. To activate it, users must rotate the cipher wheel to the correct position. This storage not only contains the database needed for routine training, but also incorporates simulation materials tailored to diverse scenarios. Therefore, it can fully exploit the potential of the absorbed Echoes.",
   "description": "Advanced Echo EXP item. Provides 2,000 EXP.",
   "modifiedTime": "2024-07-09T15:18:53.306Z",
+  "obtainDescription": "Advanced Echo EXP item..",
   "publishedTime": "2024-06-28T15:43:21.850Z"
 }

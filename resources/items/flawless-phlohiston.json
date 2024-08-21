@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A crystal shaped like a raging flame, known for its impeccable purity. As a result, some Resonators don't want to use these crystals solely for enhancement, instead opting to entrust professional craftsmen to process them into unique accessories.",
   "description": "A premium material used to break through weapons and upgrade skills for Pistols Resonators.",
   "modifiedTime": "2024-07-09T15:18:53.632Z",
+  "obtainDescription": "Material for weapon breakthrough.",
   "publishedTime": "2024-06-28T15:43:21.896Z"
 }

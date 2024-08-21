@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A resilient lotus blossoming amidst the freezing snow. When cooked with other ingredients, it can offer solace and warmth to those in need of comfort from the cold.",
+  "description": "A material used for Cooking and Synthesis.",
+  "obtainDescription": "A material used for Cooking and Synthesis."
+}

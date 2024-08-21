@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Echo Chest",
+  "description": "can get an Echo that has been unlocked in the iconography, and that Echo can spawn fire tags",
+  "obtainDescription": "open the blind box and get Echo"
+}

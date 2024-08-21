@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A scarlet Dewvetch. Natural moisture often builds on its buds, thus it is called Dewvetch.\nIt is a major nectariferous plant within Huanglong. Its honey has a natural, fresh fragrance, and it is refreshing and sweet to taste.",
   "description": "A material used for Synthesis.",
   "modifiedTime": "2024-07-09T15:18:53.548Z",
+  "obtainDescription": "A material used for Synthesis.",
   "publishedTime": "2024-06-28T15:43:21.884Z"
 }

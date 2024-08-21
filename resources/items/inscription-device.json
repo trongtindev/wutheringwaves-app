@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Portable Reverberation Marker produced by New Federation. It contains the mixture of high concentration Wutheronphage Cryptococcus (improved type II). With precisely calculated dose, user can mark down Resonating Sounds by injecting small amount of Wutheron.",
   "description": "Leave a Memo using the Memo system.",
   "modifiedTime": "2024-07-09T15:18:53.773Z",
+  "obtainDescription": "Use the Memo system to leave a Memo.",
   "publishedTime": "2024-06-28T15:43:21.915Z"
 }

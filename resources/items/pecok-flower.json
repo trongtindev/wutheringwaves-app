@@ -1,6 +1,8 @@
 {
-  "bgDescription": "A vibrant flower, its sap commonly utilized as dye.\nThe flower mud of the Pecok Flower serves as a base for printing colors, known for its fragrant scent and water-resistant properties. Frequently employed to authenticate documents and seals.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A vibrant flower, with its sap often processed into dye.\nKnown for its fragrance and water-resistant properties, the flower is commonly used to produce seal ink paste for official or personalized stamps.",
   "description": "A material used for Resonator Ascension.",
   "modifiedTime": "2024-07-09T15:18:54.049Z",
+  "obtainDescription": "A material used for Resonator Ascension.",
   "publishedTime": "2024-06-28T15:43:21.959Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "props left behind by soldiers seen in replicas",
   "description": "manual",
   "modifiedTime": "2024-07-09T15:18:53.815Z",
+  "obtainDescription": "Stargazing with Camellya at Location A",
   "publishedTime": "2024-06-28T15:43:21.922Z"
 }

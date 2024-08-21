@@ -1,6 +1,8 @@
 {
-  "bgDescription": "A roasted squab with crusty skins, tender meat, and a delicate taste. As a symbol of the hospitality that Huanglong people make for guests.",
-  "description": "Increases all party members' DEF by 50%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The squab, with crispy skin and tender meat, embodies Huanglong's warm hospitality, making it a must-have dish for welcoming guests and a favorite among visitors from all over the world.",
+  "description": "Increases all team members' DEF by 50%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.524Z",
+  "obtainDescription": "Increases all team members' DEF by 50%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.880Z"
 }

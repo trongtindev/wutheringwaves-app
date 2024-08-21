@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Adjust Echoes' frequencies, remove any noise, and unleash their true potential.",
-  "description": "A device for Tuning 3-star Echoes. Unlocks one Sub Attribute.",
+  "description": "A device for Tuning 3-star Echoes. Unlocks one Substat.",
   "modifiedTime": "2024-07-09T15:18:53.967Z",
+  "obtainDescription": "Used to tune 3-star Echoes.",
   "publishedTime": "2024-06-28T15:43:21.947Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A recipe that details how to make Perilla Salad.",
   "description": "Used to learn how to cook Perilla Salad.",
   "modifiedTime": "2024-07-09T15:18:54.053Z",
+  "obtainDescription": "Used to learn how to cook Perilla Salad.",
   "publishedTime": "2024-06-28T15:43:21.959Z"
 }

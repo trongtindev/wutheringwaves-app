@@ -96,7 +96,7 @@ const submit = async () => {
         return {
           type: SearchResultType.item,
           slug: `/items/${e.slug}`,
-          icon: `/items/icons/${e.slug}.webp`,
+          icon: e.icon,
           name: e.name,
           rarity: e.rarity,
         };

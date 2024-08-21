@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products.",
+  "description": "Instantly revives a designated Resonator. Can only be used once every 60s. Only effective on your own Resonators in Co-op Mode.",
+  "obtainDescription": "Instantly revives a designated Resonator. Can only be used once every 60s. Only effective on your own Resonators in Co-op Mode."
+}

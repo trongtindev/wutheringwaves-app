@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A cake that is baked in every kitchen in Huanglong when the Moon-Chasing Festival is around.\nShared on the reunion dinner among the elder and the young, who exchange good wishes in the moonlight sifting through the lush leaves of the osmanthus trees. Over the moon-chasing tale that's been told a thousand times before, everyone bites down on this sweet, fragrant treat and savors the joy of reunion.",
+  "description": "Restores 80 STA.",
+  "obtainDescription": "Restores 80 STA."
+}

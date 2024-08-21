@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "An audio player carefully preserved by Yanzi. It contains only the \"Dawn Ballad\" sung by Qianxin before she lost her voice. Due to the special nature of Qianxin's Resonance ability, when her voice is played, the residual frequencies of her Resonance can still be activated and provide a slight enhancement to the abilities of others.",
+  "description": "After use, it can play the \"Dawn Ballad\" sung by Qianxin before her voice was damaged.",
+  "obtainDescription": "A player that stores the singing voice of Qianxin before her voice was damaged."
+}

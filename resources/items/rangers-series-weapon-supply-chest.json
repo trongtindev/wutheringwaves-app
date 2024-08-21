@@ -1,5 +1,8 @@
 {
-  "description": "Open to claim one Rangers' Series Weapon of your choice:\n<color=Rare4>Dauntless Evernight*1</color>\n<color=Rare4>Commando of Conviction*1</color>\n<color=Rare4>Undying Flame*1</color>\n<color=Rare4>Amity Accord*1</color>\n<color=Rare4>Jinzhou Keeper*1</color>",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "",
+  "description": "Open to claim one Rangers' Series Weapon of your choice:\nDauntless Evernight*1\nCommando of Conviction*1\nUndying Flame*1\nAmity Accord*1\nJinzhou Keeper*1",
   "modifiedTime": "2024-07-09T15:18:54.137Z",
+  "obtainDescription": "Open to claim one Rangers' Series Weapon of your choice.",
   "publishedTime": "2024-06-28T15:43:21.975Z"
 }

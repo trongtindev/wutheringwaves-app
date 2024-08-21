@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Out of hatred for humans, the Hoochiefs in the Dim Forest will use tree cages to imprison passers-by. They use the hides of other creatures in the forest to crudely imitate humans and draw maps to remind the locations of the tree cages.",
   "description": "A map that marks the locations of the cages in the eastern forest and the Hoochief camp.",
   "modifiedTime": "2024-07-09T15:18:53.933Z",
+  "obtainDescription": "A map that marks the locations of the cages in the eastern forest and the Hoochief camp.",
   "publishedTime": "2024-06-28T15:43:21.942Z"
 }

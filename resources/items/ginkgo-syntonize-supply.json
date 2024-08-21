@@ -1,4 +1,6 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "",
   "description": "Provides an exclusive Syntonize Material for the Golden Eternal series weapon.",
   "modifiedTime": "2024-07-09T15:18:53.687Z",
   "publishedTime": "2024-06-28T15:43:21.902Z"

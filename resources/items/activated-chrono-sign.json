@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Confirming identity, code name: Rover. Top-level access to the Woodveil Hall laboratory granted. May this item guide you to the answers and enlightenment we seek.",
+  "description": "While equipped, this allows you to use the Chronopins left by CSC to temporarily slow down time in the surrounding area.",
+  "obtainDescription": "While equipped, this allows you to use the Chronopins left by CSC to temporarily slow down time in the surrounding area."
+}

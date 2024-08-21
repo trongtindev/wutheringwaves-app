@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A sugar cube supplement made from concentrated precious nutrients. Its active ingredients can be quickly absorbed by the human body.\nSweet and delicious, it's a favorite among children.",
-  "description": "Used to heal a selected Resonator for 30% of their max HP plus 2,000 extra HP. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Used to heal 30% of a selected Resonator's for Max HP, plus an extra 2,000 HP. (This effect only applies to your own Resonator(s) in Co-op Mode)",
   "modifiedTime": "2024-07-09T15:18:54.111Z",
+  "obtainDescription": "Used to heal 30% of a selected Resonator's for Max HP, plus an extra 2,000 HP. (This effect only applies to your own Resonator(s) in Co-op Mode)",
   "publishedTime": "2024-06-28T15:43:21.970Z"
 }

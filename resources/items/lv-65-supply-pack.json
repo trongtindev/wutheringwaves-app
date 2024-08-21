@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The special supply pack issued by the Store. It is delivered to the customer by Lollo Logistics.",
+  "description": "Reach designated Union Levels to claim this Supply Pack.",
+  "obtainDescription": "Reach designated Union Levels to claim this Supply Pack."
+}

@@ -2,6 +2,7 @@ import type { ILocalized } from './common';
 
 export interface IItem {
   id: number;
+  icon: string;
   slug: string;
   name: string;
   nameLocalized: ILocalized;

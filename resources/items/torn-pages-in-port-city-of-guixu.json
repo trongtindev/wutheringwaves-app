@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "They carry a deserted story and some nostalgic memories. The Storyteller of Jinzhou Theater is collecting these fragments.",
   "description": "Torn pages collected from Port City of Guixu",
   "modifiedTime": "2024-07-09T15:18:54.377Z",
+  "obtainDescription": "Torn pages collected from Port City of Guixu",
   "publishedTime": "2024-06-28T15:43:22.027Z"
 }

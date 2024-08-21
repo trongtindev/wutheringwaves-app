@@ -1,0 +1,5 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "You can never have too many funds if you want to hold a grand festival.",
+  "description": "Funds prepared for the Moonlit Fair that are used for construction or Wishes."
+}

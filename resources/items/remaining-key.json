@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A key left in a room turned into a ruin by the seawater, it should be able to open a door in the same floor.",
   "description": "A key in the style of the Lament.",
   "modifiedTime": "2024-07-09T15:18:54.158Z",
+  "obtainDescription": "A key in the style of the Lament.",
   "publishedTime": "2024-06-28T15:43:21.979Z"
 }

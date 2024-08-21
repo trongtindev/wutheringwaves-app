@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Hé Civilization Designed Key",
   "description": "A strange-looking key that seems like it can fit into a certain keyhole.",
   "modifiedTime": "2024-07-09T15:18:53.819Z",
+  "obtainDescription": "Strange-looking Key",
   "publishedTime": "2024-06-28T15:43:21.923Z"
 }

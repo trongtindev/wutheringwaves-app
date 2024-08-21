@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Maintaining a healthy body is crucial. The combination of gold and silver lotus seeds in this recipe provides warmth, nourishment, and a calming effect on both the body and mind. It was the first medicinal meal Jianxin learned during her mountain retreat and remains one of her go-to recipes for overall health and well-being.",
-  "description": "Increases all party members' max HP by 20%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all team members' Max HP by 33%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.892Z",
+  "obtainDescription": "Increases all team members' Max HP by 33%, lasting for 30m. Only effective on your own Resonators in Co-Op Mode.",
   "publishedTime": "2024-06-28T15:43:21.934Z"
 }

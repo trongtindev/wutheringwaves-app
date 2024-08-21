@@ -1,0 +1,5 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "In a world constructed out of energy and syntony, all words and stories can be sung in music.\n\"I came into this world, bringing naught but paper, rope, and a shadow.\"",
+  "description": "A note containing music scores of Solaris's unique music.\nCollect a certain number of these notes to claim rewards on the event page."
+}

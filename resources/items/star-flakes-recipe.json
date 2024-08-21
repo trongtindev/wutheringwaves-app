@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A recipe that details how to make making Star Flakes.",
   "description": "Used to learn how to cook Star Flakes.",
   "modifiedTime": "2024-07-09T15:18:54.275Z",
+  "obtainDescription": "Used to learn how to cook Star Flakes.",
   "publishedTime": "2024-06-28T15:43:22.007Z"
 }

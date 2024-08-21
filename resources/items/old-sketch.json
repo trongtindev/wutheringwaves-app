@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "\"I hid the treasure, in the place where the painting is!\"",
   "description": "A sketch appears faded due to ages. It constitutes a past memory and a treasure to a child.",
   "modifiedTime": "2024-07-09T15:18:54.033Z",
+  "obtainDescription": "A sketch appears faded due to ages. It constitutes a past memory and a treasure to a child.",
   "publishedTime": "2024-06-28T15:43:21.957Z"
 }

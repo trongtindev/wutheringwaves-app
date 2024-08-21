@@ -1,6 +1,8 @@
 {
-  "bgDescription": "Single Revival Potion\n[Effect] Partially stabilizes Resonators' states and aids in regaining consciousness.\n[Precautions] Long intervals between doses are recommended. Excessive use within a short period is not advisable.\n[Contraindications] Avoid using this potion alongside similar potions or frequency-stabilizing potions.",
-  "description": "Instantly revives designated Resonator. Can only be used once every 60 seconds. Only effective on your own Resonator in Co-op mode.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Single Revival Potion\n[Effect] Stabilizes the Resonator's condition to a certain extent and aids in their recovery.\n[Precautions] Long intervals between doses are recommended. Excessive use within a short period is not advisable.\n[Warning] Prohibited to use in combination with the same type of potion or any frequency stabilizing potions.",
+  "description": "Instantly revives a designated Resonator. Can only be used once every 60s. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:54.226Z",
+  "obtainDescription": "Instantly revives a designated Resonator. Can only be used once every 60s. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.994Z"
 }

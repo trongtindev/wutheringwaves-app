@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A record called Time Footnote, which records the story of a person who calls himself a Measurer.",
   "description": "Data materials picked up in the Port City of Guixu.",
   "modifiedTime": "2024-07-09T15:18:54.360Z",
+  "obtainDescription": "Data materials picked up in the Port City of Guixu.",
   "publishedTime": "2024-06-28T15:43:22.025Z"
 }

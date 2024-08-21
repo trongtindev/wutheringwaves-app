@@ -267,6 +267,14 @@ export const useResources = defineStore('useResources', () => {
     const clone = cloneObject(itemList.value!);
 
     const items = clone
+      .map((e) => {
+        return {
+          ...e,
+          icon: `${useRuntimeConfig().public.FILE_URL}/assets/items/${e.slug}_${e.id}.webp`,
+          nameLocalized: e.nameLocalized || {},
+          publishedTime: e.publishedTime || '2024-05-23T00:00:00.000Z',
+        };
+      })
       .filter((e) => {
         if (selector) {
           return Object.entries(selector).every(
@@ -274,12 +282,6 @@ export const useResources = defineStore('useResources', () => {
           );
         }
         return true;
-      })
-      .map((e) => {
-        return {
-          ...e,
-          nameLocalized: e.nameLocalized || {},
-        };
       })
       .sort((a, b) => {
         return a.name.localeCompare(b.name);

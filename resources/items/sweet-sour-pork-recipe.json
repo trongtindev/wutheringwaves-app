@@ -1,7 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A recipe that details how to make Sweet & Sour Pork.",
   "description": "Used to learn how to cook Sweet & Sour Pork.",
   "modifiedTime": "2024-07-09T15:18:54.322Z",
-  "obtainDescription": "You can get the recipe for Sweet & Sour Pork after reaching level 4 in Windchimer Delivery. Level this up by looking for <b>Windchimers</b> scattered around <b>Mt. Firmament</b>!\nYou can unlock <b>Windchimer</b> Delivery after completing <b>Chapter 1: Act 7</b> of the main quest.",
+  "obtainDescription": "Used to learn how to cook Sweet & Sour Pork.",
   "publishedTime": "2024-06-28T15:43:22.016Z"
 }

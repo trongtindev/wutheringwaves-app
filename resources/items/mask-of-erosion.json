@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A mask worn by Fractsidus active members. Due to long-term use, its ability to stabilize frequency has been greatly mitigated. One can clearly feel the torment of being drowning in negative emotions from the mask.",
   "description": "A material used to break through weapons, ascend Resonators, and upgrade skills.",
   "modifiedTime": "2024-07-09T15:18:53.940Z",
+  "obtainDescription": "A material used to break through weapons, ascend Resonators, and upgrade skills.",
   "publishedTime": "2024-06-28T15:43:21.943Z"
 }

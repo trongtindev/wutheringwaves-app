@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "This nutritionally balanced, simple dish is a breakfast staple in Huanglong and a regular dish found in every household and the breakfast shops in Jinzhou. For someone who has lived in Jinzhou for many years like Xiangli Yao, it is an easy first choice for breakfast.\nA sip of tea after a bite perfectly balances the flavors, satisfying your appetite while awakening your taste buds and mind after a deep sleep.",
+  "description": "Increases all team members' ATK by 8% and Energy Regen by 12%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
+  "obtainDescription": "Increases all team members' ATK by 8% and Energy Regen by 12%, lasting for 30m. Only effective on your own Resonators in Co-op Mode."
+}

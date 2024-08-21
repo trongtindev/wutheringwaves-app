@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products.",
-  "description": "Increases the damage of all Resonators' Echo skills in the party by 40% for 180 seconds, effective only on your own Characters in Co-op.",
+  "description": "Increases the damage of all Resonators' Echo skills in the party by 40% for 180s, effective only on your own Resonators in Co-op.",
   "modifiedTime": "2024-07-09T15:18:54.378Z",
+  "obtainDescription": "Increases the damage of all Resonators' Echo skills in the party by 40% for 180s, effective only on your own Resonators in Co-op.",
   "publishedTime": "2024-06-28T15:43:22.028Z"
 }

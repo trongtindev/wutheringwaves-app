@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Golden-ringed Dragonfly is a wetland and water predator. Its diet includes flying insects and small fish and shrimp. It is known for rapid flying and predating speed.",
   "description": "Material for crafting.",
   "modifiedTime": "2024-07-09T15:18:53.707Z",
+  "obtainDescription": "Material for crafting.",
   "publishedTime": "2024-06-28T15:43:21.905Z"
 }

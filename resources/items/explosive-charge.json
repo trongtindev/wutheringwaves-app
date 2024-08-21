@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A special fruit that looks like a bomb, which can produce a bomb-like explosion when it encounters a violent impact or temperature change, and is often used as a substitute for explosives. Special means are needed for transportation and storage.",
   "description": "A natural fruit with explosive properties that can be used as a substitute for a bomb.",
   "modifiedTime": "2024-07-09T15:18:53.609Z",
+  "obtainDescription": "A natural fruit with explosive properties that can be used as a substitute for a bomb.",
   "publishedTime": "2024-06-28T15:43:21.893Z"
 }

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The collaboration between Jewel Boba and the Pioneer Association's Second Coming of Solaris has begun, bringing exclusive \"jewels\" to Second Coming of Solaris!\nThis secret key includes an in-game item redemption code, which can be used to claim the exclusive Jewel Boba Collaboration Pack in the game client.",
+  "description": "An in-game item redemption code that can be used to redeem Second Coming of Solaris x Jewel Boba Collaboration Pack.",
+  "obtainDescription": "An in-game item redemption code that can be used to redeem Second Coming of Solaris x Jewel Boba Collaboration Pack."
+}

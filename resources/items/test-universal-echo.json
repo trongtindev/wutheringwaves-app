@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Echo Details",
+  "description": "test/Universal Echoes can substitute any Echo consumed during Tuning.",
+  "obtainDescription": "test/Description for obtaining Universal Echoes."
+}

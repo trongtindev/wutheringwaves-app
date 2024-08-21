@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A mellow and refreshing wine enjoyed during the Moon-Chasing Festival.\nIn Jinzhou, there is a famous play about a person who drinks a thousand cups of wine so that, as he's awake, he can still walk in a dream, for there are places only reachable in the dreamland. The sweet taste enjoyed with closed eyes is the taste of home.",
+  "description": "Increases Energy Regen of all Resonators on the team by 20%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
+  "obtainDescription": "Increases Energy Regen of all Resonators on the team by 20%, lasting for 30m. Only effective on your own Resonators in Co-op Mode."
+}

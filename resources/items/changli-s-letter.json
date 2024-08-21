@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "With a subtle delightful scent, it reads: \"Behold Hongzhen in its entirety, next to a ring and hanging eaves. When eternal snow thaws into flowing streams, let us reconvene.\"\nIt appears to be an invitation.",
+  "description": "A letter penned by Changli, containing a message for you.",
+  "obtainDescription": "A letter penned by Changli, containing a message for you."
+}

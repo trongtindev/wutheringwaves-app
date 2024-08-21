@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "An ore bearing a likeness to the Sentinel's scale. Can be used to repair weapons.",
+  "description": "A material used for Crafting.",
+  "obtainDescription": "A material used for Crafting."
+}

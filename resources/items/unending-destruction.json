@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The card in Scar's hand with the mark of a black sheep. The flame attached to it seems to never extinguish. That flame will burn forever with Scar's never-ending desire for destruction.",
   "description": "Drop from Scar, used for skill upgrade.",
   "modifiedTime": "2024-07-09T15:18:54.390Z",
+  "obtainDescription": "Drop from Scar, used for skill upgrade.",
   "publishedTime": "2024-06-28T15:43:22.030Z"
 }

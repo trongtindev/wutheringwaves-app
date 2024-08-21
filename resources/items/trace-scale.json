@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A crystal-clear scale that seems to reveal a different world within. It possesses an ability called Chrono Trace, which records surrounding time and space, allowing them to be revisited in the future. It is said to have intricate connections with Sentinel Jué.",
+  "description": "A unique item that unlocks Scale of Past when equipped.",
+  "obtainDescription": "A unique item that can be used to unlock Scale of Past."
+}

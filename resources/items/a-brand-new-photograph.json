@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A photograph as good as brand new, with marks on it pointing to somewhere in the Dim Forest. Perhaps it’s a map to treasures.",
   "description": "A photograph indicating the location of treasures.",
   "modifiedTime": "2024-07-09T15:18:53.260Z",
+  "obtainDescription": "A Brand New Photograph",
   "publishedTime": "2024-06-28T15:43:21.843Z"
 }

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Zhezhi likes her Roasted Flatbread sweet. She improved on the original recipe by adding her favorite sweetener. This simple, modest pastry restores energy quickly upon consumption and doesn't go bad for a long time. After learning how to make it, Zhezhi always stores lots of it at home and considers it an essential snack for her sketching trips.",
+  "description": "Increases all team members' DEF by 220, lasting for 15m. Only effective on your own Resonators in Co-op Mode.",
+  "obtainDescription": "Increases all team members' DEF by 220, lasting for 15m. Only effective on your own Resonators in Co-op Mode."
+}

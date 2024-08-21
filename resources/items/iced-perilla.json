@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "In moments of research block, Baizhi turns to the chilled Perilla she always has on hand for a refreshing pause. The cool, herbal flavor soothes her senses and helps calm her racing thoughts. As she finishes her plate, her mind clears and she's able to refocus on her work with renewed determination.",
-  "description": "Increases all party members' Crit. Rate by 12%, lasting for 15m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all teammates' Crit. Rate by 12%, lasting for 15m. Only effective for your own Resonator in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.759Z",
+  "obtainDescription": "Increases all teammates' Crit. Rate by 12%, lasting for 15m. Only effective for your own Resonator in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.913Z"
 }

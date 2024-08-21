@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A recipe that details how to make Rising Loong.",
   "description": "Used to learn how to cook Rising Loong.",
   "modifiedTime": "2024-07-09T15:18:54.171Z",
+  "obtainDescription": "Used to learn how to cook Rising Loong.",
   "publishedTime": "2024-06-28T15:43:21.982Z"
 }

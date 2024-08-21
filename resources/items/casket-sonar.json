@@ -1,6 +1,8 @@
 {
-  "bgDescription": "This sonar detector locates unique collectibles by detecting the specific frequencies they emit, making it easier to locate and retrieve any missed collectibles.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Built upon the principles of previous sonar technology, this instrument can detect and pinpoint special collectibles by utilizing specific frequencies.",
   "description": "A portable gadget designed for pinpointing undiscovered special collectibles. Re-activating it requires Sonar Circuits.",
   "modifiedTime": "2024-07-09T15:18:53.480Z",
+  "obtainDescription": "A portable gadget designed for pinpointing undiscovered special collectibles. Re-activating it requires Sonar Circuits.",
   "publishedTime": "2024-06-28T15:43:21.874Z"
 }

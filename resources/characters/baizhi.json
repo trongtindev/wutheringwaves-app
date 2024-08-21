@@ -234,9 +234,7 @@
       "name": "Emergency Plan",
       "type": "Resonance Skill",
       "description": "Baizhi calls You'tan to attack the target, dealing Glacio DMG** while immediately healing all characters on nearby teams.",
-      "nameLocalized": {
-        "uk": "План надзвичайних ситуацій"
-      }
+      "nameLocalized": { "uk": "План надзвичайних ситуацій" }
     },
     {
       "slug": "momentary-union",
@@ -257,9 +255,7 @@
       "name": "Stimulus Feedback",
       "type": "Inherent Skill",
       "description": "Baizhi's **Heavy Attack** on hit heals the character with the lowest HP on a nearby team by 0.25%** of her Max HP.",
-      "nameLocalized": {
-        "uk": "Зворотний зв'язок стимулу"
-      }
+      "nameLocalized": { "uk": "Зворотний зв'язок стимулу" }
     },
     {
       "slug": "overflowing-frost",
@@ -280,9 +276,7 @@
       "name": "Skillful Cooking",
       "type": "Inherent Skill",
       "description": "Has a chance to produce special dishes when cooking",
-      "nameLocalized": {
-        "uk": "Майстерне Приготування"
-      }
+      "nameLocalized": { "uk": "Майстерне Приготування" }
     },
     {
       "slug": "rejuvinating-flow",

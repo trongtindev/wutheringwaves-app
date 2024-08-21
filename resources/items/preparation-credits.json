@@ -1,0 +1,5 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The supplies prepared for the Moonlit Fair must be meticulously planned and allocated to ensure they fulfill as many wishes as possible.",
+  "description": "A written application for materials and planning list used for Wishes. Automatically restored to the upper limit at 04:00."
+}

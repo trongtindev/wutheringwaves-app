@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Vinegar is a fermented sour liquid condiment, found in every kitchen for as long as the human civilization exists.",
   "description": "A material used for Cooking.",
   "modifiedTime": "2024-07-09T15:18:54.407Z",
+  "obtainDescription": "A material used for Cooking.",
   "publishedTime": "2024-06-28T15:43:22.033Z"
 }

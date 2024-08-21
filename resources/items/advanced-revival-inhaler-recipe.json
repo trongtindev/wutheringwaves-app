@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products.",
-  "description": "Used to immediately heal a selected downed Resonator for 25% of their max HP. This item can only be used once every 60s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Used to immediately revive and heal 25% of a selected downed Resonator's Max HP. This item can only be used once every 60s. (This effect only applies to your own Resonators in Co-op Mode)",
   "modifiedTime": "2024-07-09T15:18:53.301Z",
+  "obtainDescription": "Used to immediately revive and heal 25% of a selected downed Resonator's Max HP. This item can only be used once every 60s. (This effect only applies to your own Resonators in Co-op Mode)",
   "publishedTime": "2024-06-28T15:43:21.849Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A beautiful jade has been carved into the shape of a ginkgo leaf.",
   "description": "Used to increase the Syntony Level of Golden Eternal weapons.",
   "modifiedTime": "2024-07-09T15:18:53.684Z",
+  "obtainDescription": "Used to increase the Syntony Level of Golden Eternal weapons.",
   "publishedTime": "2024-06-28T15:43:21.902Z"
 }

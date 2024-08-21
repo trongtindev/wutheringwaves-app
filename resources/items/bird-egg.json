@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A gift from birds, and a regular on dinner tables.",
   "description": "A material used for Cooking.",
   "modifiedTime": "2024-07-09T15:18:53.413Z",
+  "obtainDescription": "A material used for Cooking.",
   "publishedTime": "2024-06-28T15:43:21.865Z"
 }

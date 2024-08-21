@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A compound potion that enhances offensive capabilities. It combines a potion efficacy catalyst with different solution developed for different resonance properties. When not in use, the two compounds separate naturally and need to be shaken well before use and then applied to the weapon.",
-  "description": "Increases all party members' Aero DMG Bonus by 15%, lasting for 180s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all teammates' Aero DMG Bonus by 15%, lasting for 180s. Only effective for your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.311Z",
+  "obtainDescription": "Increases all teammates' Aero DMG Bonus by 15%, lasting for 180s. Only effective for your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.851Z"
 }

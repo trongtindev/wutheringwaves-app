@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A diary left behind by Chixia's father during his lifetime. Seems to record his conversation with a friend.",
+  "description": "Chixia's father's diary.",
+  "obtainDescription": "Chixia's father's diary."
+}

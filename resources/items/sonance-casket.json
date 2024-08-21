@@ -1,6 +1,8 @@
 {
-  "bgDescription": "The Sonance Casket is a product of the natural decay and collapse of the Sonoro Sphere, containing the unlost past. Since the Sonoro Sphere is an important source of information for humans to understand the history and civilization of the Lament, the Sonance Casket, as a \"fragment\" and \"condensation\" of the Sonoro Sphere, is considered to have a high archaeological value and is regarded as an \"antique\" by people.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The Sonance Casket is a product of the natural decay and collapse of the Sonoro Sphere, containing the unlost past. Since the Sonoro Sphere is an important source of information for humans to understand the history of the Lament and the evolution of the civilization, the Sonance Casket, as a \"fragment\" and \"condensation\" of the Sonoro Sphere, is considered to have a high archaeological value and is regarded as an \"antique\" by people.",
   "description": "Can be exchanged for resources after being handed over to the relic merchant.",
   "modifiedTime": "2024-07-09T15:18:54.232Z",
+  "obtainDescription": "Can be exchanged for resources after being handed over to the relic merchant.",
   "publishedTime": "2024-06-28T15:43:21.996Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Portable liquid supplements filled using an advanced process that provides a quick and easy way to recharge and rejuvenate.\n“An energy supply in your pocket. A must-have for adventures.\"",
-  "description": "Used to heal a selected Resonator for 100 HP per second over 30s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Used to heal the selected Resonator for 100 HP per second over 30s. Only effective for your own Resonators in Co-op.",
   "modifiedTime": "2024-07-09T15:18:53.376Z",
+  "obtainDescription": "Used to heal the selected Resonator for 100 HP per second over 30s. Only effective for your own Resonators in Co-op.",
   "publishedTime": "2024-06-28T15:43:21.860Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Common bladderwort in river crevices. An insectivorous plant that is not harmful to human. Its stamens secrete a unique fragrant substance that attracts insects.",
   "description": "A material used for cooking.",
   "modifiedTime": "2024-07-09T15:18:53.439Z",
+  "obtainDescription": "A material used for cooking.",
   "publishedTime": "2024-06-28T15:43:21.869Z"
 }

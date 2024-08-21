@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "\"In this vast expanse, every goodbye could be a farewell for life.\nBe well. Farewell.\"",
+  "description": "A book obtained at Mt. Firmament.",
+  "obtainDescription": "A book obtained at Mt. Firmament."
+}

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A box that Muzhi secretly entrusted Rover to transport. Seems to contain some Tacetite weapons, with its recipient unknown...",
   "description": "A box given to the Rover by the boss of the Boar Gang.",
   "modifiedTime": "2024-07-09T15:18:54.459Z",
+  "obtainDescription": "The box given to the Rover by the boss of the Boar Gang.",
   "publishedTime": "2024-06-28T15:43:22.041Z"
 }

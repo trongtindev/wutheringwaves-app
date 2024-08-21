@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "They are casual daily records by the staff at the Mine. The Storyteller of Jinzhou Theater is collecting these.",
+  "description": "Data Chip collected from Tiger's Maw",
+  "obtainDescription": "Data Chip collected from Tiger's Maw"
+}

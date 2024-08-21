@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Scenery photos taken by Athos. He accidentally left behind his camera, hoping that Rover would find the camera through these landscape photos.",
   "description": "The scenic photo near the camp of the Ninth Investigation Corps of the Central Plains.",
   "modifiedTime": "2024-07-09T15:18:54.202Z",
+  "obtainDescription": "The scenic photo near the camp of the Ninth Investigation Corps of the Central Plains.",
   "publishedTime": "2024-06-28T15:43:21.990Z"
 }

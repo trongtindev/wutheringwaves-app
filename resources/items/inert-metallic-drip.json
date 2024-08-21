@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A fluid metallic drip whose activity has been greatly diminished. Its surface appears lackluster, covered with a dense layer of passivation film. However, under suitable temperatures, the residual Frequency Energy within it can still be utilized.",
   "description": "A basic material used to break through weapons and upgrade skills for Sword Resonators.",
   "modifiedTime": "2024-07-09T15:18:53.770Z",
+  "obtainDescription": "Material for weapon breakthrough.",
   "publishedTime": "2024-06-28T15:43:21.914Z"
 }

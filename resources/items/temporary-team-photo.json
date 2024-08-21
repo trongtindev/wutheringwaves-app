@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "You and Jiyan are preparing for the race, and the careful photographer has captured an interesting scene.",
   "description": "Wenshu gave you this commemorative photo. You can enlarge it for details.",
   "modifiedTime": "2024-07-09T15:18:54.337Z",
+  "obtainDescription": "A commemorative photo of you and Jiyan in the relay race.",
   "publishedTime": "2024-06-28T15:43:22.020Z"
 }

@@ -21,26 +21,26 @@ const data = await resources.getItemData(item.slug);
 if (!data) throw createError({ statusCode: 404 });
 
 // computed
-const title = computed(() => {
-  return i18n.t('meta.items.id.title', { name: nameLocalized.value });
-});
+const nameLocalized = (() => {
+  return item.nameLocalized[i18n.locale.value] || item.name;
+})();
+
+const title = (() => {
+  return i18n.t('meta.items.id.title', { name: nameLocalized });
+})();
 
 const description = computed(() => {
   if (item.name.toLowerCase().includes('recipe')) {
     return i18n.t('meta.items.id.description.recipe', {
-      name: nameLocalized.value,
+      name: nameLocalized,
     });
   }
   return i18n.t('meta.items.id.description.default', {
-    name: nameLocalized.value,
+    name: nameLocalized,
   });
 });
 
-const nameLocalized = computed(() => {
-  return i18n.t(item.name);
-});
-
-const obtainDescriptionLocalized = computed(() => {
+const obtainDescriptionLocalized = (() => {
   const content =
     data.obtainDescriptionLocalized &&
     data.obtainDescriptionLocalized[i18n.locale.value]
@@ -51,30 +51,28 @@ const obtainDescriptionLocalized = computed(() => {
     return content;
   } else if (item.name.toLowerCase().includes('waveband')) {
     return i18n.t('items.obtainedFromConvenes', {
-      item: nameLocalized.value,
+      item: nameLocalized,
       character: '?',
     });
   }
   return null;
-});
+})();
 
-const relatedItems = computed(() => {
+const relatedItems = (() => {
   return shuffleArray(items)
     .filter((e) => e.category == item.category)
     .splice(0, 24);
-});
+})();
 
 // seo meta
-const ogImage = `${SITE_URL}/items/icons/${item.slug}.webp`;
-
 useAppBar().title = i18n.t('items.title');
-useHead({ title: title.value });
+useHead({ title });
 useSeoMeta({
   ogType: 'article',
-  ogTitle: title.value,
+  ogTitle: title,
   description,
   ogDescription: description,
-  ogImage,
+  ogImage: item.icon,
 });
 useJsonld({
   '@context': 'https://schema.org',
@@ -91,8 +89,8 @@ useJsonld({
     logo: `${SITE_URL}/icon-512-maskable.png`,
   },
   url: `${SITE_URL}/items/${item.slug}`,
-  image: ogImage,
-  thumbnailUrl: ogImage,
+  image: item.icon,
+  thumbnailUrl: item.icon,
   description: description.value,
   dateCreated: item.publishedTime,
   datePublished: item.publishedTime,
@@ -101,7 +99,7 @@ useJsonld({
 useJsonld({
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  contentUrl: ogImage,
+  contentUrl: item.icon,
   license: `${SITE_URL}/license`,
   acquireLicensePage: `${SITE_URL}/license/#how-to-use`,
   creditText: 'WutheringWaves.app',
@@ -148,20 +146,14 @@ if (headers['if-modified-since']) {
       <v-card-title tag="h1">
         {{ nameLocalized }}
       </v-card-title>
-      <v-divider />
 
       <v-card-text>
         <v-row>
-          <v-col cols="12" md="4">
-            <v-img :src="`/items/icons/${item.slug}.webp`" :height="256" />
+          <v-col cols="12" md="3">
+            <v-img :src="item.icon" :height="256" />
           </v-col>
 
           <v-col>
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip :text="item.id.toString()" />
-              <v-chip :text="item.category" />
-            </div>
-
             <div class="mt-2">
               {{ data.description }}
             </div>
@@ -181,7 +173,7 @@ if (headers['if-modified-since']) {
           <v-card-title tag="h2">
             {{ $t('items.howToObtain', [nameLocalized]) }}
           </v-card-title>
-          <v-divider />
+
           <v-card-text>
             <div :innerHTML="parse(obtainDescriptionLocalized)"></div>
           </v-card-text>
@@ -194,7 +186,7 @@ if (headers['if-modified-since']) {
           <v-card-title tag="h2">
             {{ $t('items.howToUnlock', [nameLocalized]) }}
           </v-card-title>
-          <v-divider />
+
           <v-card-text>
             <div :innerHTML="parse(data.unlockDescription)"></div>
           </v-card-text>
@@ -207,7 +199,6 @@ if (headers['if-modified-since']) {
           <v-card-title tag="h2">
             {{ $t('items.cookingIngredients') }}
           </v-card-title>
-          <v-divider />
 
           <div class="mt-3 mb-3">
             <v-list-item
@@ -222,7 +213,7 @@ if (headers['if-modified-since']) {
                 <v-avatar class="border" rounded>
                   <v-img
                     v-if="itemDict[element.item]"
-                    :src="`/items/icons/${itemDict[element.item].slug}.webp`"
+                    :src="itemDict[element.item].icon"
                   />
                 </v-avatar>
               </template>
@@ -237,13 +228,12 @@ if (headers['if-modified-since']) {
       <v-card-title tag="h2">
         {{ $t('common.related') }} {{ item.name }}
       </v-card-title>
-      <v-divider />
 
       <v-card-text>
         <v-row>
           <v-col
-            v-for="(element, index) in relatedItems"
-            :key="index"
+            v-for="element in relatedItems"
+            :key="element.slug"
             cols="6"
             sm="4"
             md="3"

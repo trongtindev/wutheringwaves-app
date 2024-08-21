@@ -1,0 +1,5 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A special technology from the Black Shores that can help Resonators manage Waveplate resources.\n\"Always be prepared to avoid wastage.\"",
+  "description": "This refined Waveplate has a higher storage limit.\nOnce the Waveplates are full, this starts replenishing at the rate of 1 per 12 minutes. Use it to add an equal amount of Waveplates."
+}

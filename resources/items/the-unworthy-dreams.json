@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A young woman dreams of the vibrant garden back in her hometown.\nAn elderly man envisions pouring tea for his late wife, just as he did in their early days together.\nYet IT claims these dreams are worthless, devoid of meaning.\nDo you also agree that they should be erased?",
+  "description": "An item obtained from clearing the Nonexistent Dream.",
+  "obtainDescription": "An item obtained from clearing the Nonexistent Dream."
+}

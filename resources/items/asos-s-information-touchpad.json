@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A touchpad left behind by Athos in the Memento Square.",
+  "description": "Return the information touchpad to Asos.",
+  "obtainDescription": "Return the information touchpad to Asos."
+}

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A condiment dubbed as the king of all condiments that brings the taste that’s indispensable for every dish.",
   "description": "A material used for Cooking.",
   "modifiedTime": "2024-07-09T15:18:54.189Z",
+  "obtainDescription": "A material used for Cooking.",
   "publishedTime": "2024-06-28T15:43:21.987Z"
 }

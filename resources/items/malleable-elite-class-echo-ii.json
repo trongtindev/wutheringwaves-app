@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The echoes within the rift are hard to discern.",
-  "description": "Open to claim one <color=Rare5>5-Star Elite Class Echo</color> of your choice.\n\nList of Echoes:\nFreezing Frost Set - Roseshroom - Glacio DMG Bonus\nMolten Rift Set - Havoc Dreadmane - Fusion DMG Bonus\nVoid Thunder Set - Flautist - Electro DMG Bonus\nSierra Gale Set - Carapace - Aero DMG Bonus\nCelestial Light Set - Cyan-Feathered Heron - Spectro DMG Bonus\nHavoc Eclipse Set - Tambourinist - Havoc DMG Bonus",
+  "description": "Open to claim one 5-Star Elite Class Echo of your choice.\n\nList of Echoes:\nFreezing Frost Set: Glacio Dreadmane (Glacio DMG Bonus)\nMolten Rift Set: Havoc Dreadmane (Fusion DMG Bonus)\nVoid Thunder Set: Lumiscale Construct (Electro DMG Bonus)\nSierra Gale Set: Carapace (Aero DMG Bonus)\nCelestial Light Set: Cyan-Feathered Heron (Spectro DMG Bonus)\nHavoc Eclipse Set: Tambourinist (Havoc DMG Bonus)",
   "modifiedTime": "2024-07-09T15:18:53.930Z",
+  "obtainDescription": "Open to claim one 5-Star Elite Class Echo of your choice.",
   "publishedTime": "2024-06-28T15:43:21.940Z"
 }

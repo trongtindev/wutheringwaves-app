@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A flower that carries an elder's deep feelings",
   "description": "A Dewvetch flower that represents a woman named \"Dewvetch\" from the Danjin family.",
   "modifiedTime": "2024-07-09T15:18:54.245Z",
+  "obtainDescription": "A Dewvetch flower that represents a woman named \"Dewvetch\" from the Danjin family.",
   "publishedTime": "2024-06-28T15:43:21.999Z"
 }

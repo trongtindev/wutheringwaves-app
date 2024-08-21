@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A gem-like plant with scarlet, sweet, and juicy fruit, perfect for immediate consumption or sauce making.",
   "description": "A material used for cooking.",
   "modifiedTime": "2024-07-09T15:18:53.682Z",
+  "obtainDescription": "A material used for cooking.",
   "publishedTime": "2024-06-28T15:43:21.902Z"
 }

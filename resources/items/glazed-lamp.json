@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "An ancient lamp crafted from special minerals. Its luminous blue radiance flickers ceaselessly, as if infused with boundless energy that endures through the ages.",
+  "description": "A key item in the Rite of Offering. Can be used to activate the Altar of Initiation.",
+  "obtainDescription": "A key item in the Rite of Offering. Can be used to activate the Altar of Initiation."
+}

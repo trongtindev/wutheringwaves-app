@@ -76,7 +76,7 @@ if (props.data.ascensions) {
             <v-responsive :aspect-ratio="1">
               <v-img
                 v-if="dictItems[cost.item]"
-                :src="`/items/icons/${dictItems[cost.item].slug}.webp`"
+                :src="dictItems[cost.item].icon"
                 :alt="$t(dictItems[cost.item].name)"
                 class="align-end h-100"
                 cover

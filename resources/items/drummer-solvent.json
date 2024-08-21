@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Using a solid solvent made by a special process. Just one table can make the entire squad's ears ring with a thrilling rhythm, as if they were holding drumsticks instead of weapons.",
-  "description": "Boosts the Energy Regen of all Resonators in the party by 30% for 180 seconds, effective only on your own Characters in Co-op.",
+  "description": "Boosts the Energy Regen of all Resonators in the party by 30% for 180 seconds, effective only on your own Resonators in Co-op.",
   "modifiedTime": "2024-07-09T15:18:53.583Z",
+  "obtainDescription": "Boosts the Energy Regen of all Resonators in the party by 30% for 180 seconds, effective only on your own Resonators in Co-op.",
   "publishedTime": "2024-06-28T15:43:21.889Z"
 }

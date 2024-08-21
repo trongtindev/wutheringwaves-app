@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A symbol of long-standing mutual trust between Rover and various affiliations. By establishing stable friendships with different affiliations, Rover may gain stronger support in the future.",
   "description": "",
   "modifiedTime": "2024-07-09T15:18:53.772Z",

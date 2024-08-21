@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "ItemInfo_70010066_BgDescription",
+  "description": "ItemInfo_70010066_AttributesDescription",
+  "obtainDescription": "Wood for making a Plum Blossom Pole, sturdy and hard."
+}

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A common card, sprayed with the Exiles' favorite color, is an important access card to the Exiles camp.",
   "description": "A proof of free access to the Exiles camp.",
   "modifiedTime": "2024-07-09T15:18:54.206Z",
+  "obtainDescription": "A proof of free access to the camp.",
   "publishedTime": "2024-06-28T15:43:21.990Z"
 }

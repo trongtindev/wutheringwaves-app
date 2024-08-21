@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The golden feathers of Impermanence Heron, from which a dirty and rotten smell constantly flows. A researcher once tried to seal the feathers in various metal containers, but the containers would corrode in a moment.",
-  "description": "Impermanence Heron's drop, Resonator breakthrough item.",
+  "description": "The Impermanence Heron's drop, a Resonator's Ascension item.",
   "modifiedTime": "2024-07-09T15:18:53.701Z",
+  "obtainDescription": "The Impermanence Heron's drop, a Resonator's Ascension item.",
   "publishedTime": "2024-06-28T15:43:21.904Z"
 }

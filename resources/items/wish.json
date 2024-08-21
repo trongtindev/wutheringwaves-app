@@ -1,0 +1,5 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Completed Wish Tags are stored carefully as invaluable mementos to everyone who has worked hard to make the Moonlit Fair possible.",
+  "description": "The Wish Tag of a fulfilled wish. Used to improve characters' stats."
+}

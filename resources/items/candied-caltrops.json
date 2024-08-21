@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "One of the famous signature dishes of the Panhua Restaurant. Its sweet and soft taste is very popular among the children of Jinzhou.",
-  "description": "Increases all party members' DEF by 18% and max HP by 15%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all team members' DEF by 18% and Max HP by 15%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.474Z",
+  "obtainDescription": "Increases all team members' DEF by 18% and Max HP by 15%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.873Z"
 }

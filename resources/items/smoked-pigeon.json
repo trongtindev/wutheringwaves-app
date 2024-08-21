@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Mortefi's signature dish, created during his time wandering in the wilderness. Despite early struggles with controlling his powers, he has now mastered the art of cooking it. A perfect balance of crispy outer layer and tender interior, it boasts a sweet and fragrant flavor while maintaining the freshness of the meat itself.",
-  "description": "Increases all party members' DEF by 55%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all teammates' DEF by 55%, lasting for 30m. Only effective for your own Resonator in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:54.229Z",
+  "obtainDescription": "Increases all teammates' DEF by 55%, lasting for 30m. Only effective for your own Resonator in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.995Z"
 }

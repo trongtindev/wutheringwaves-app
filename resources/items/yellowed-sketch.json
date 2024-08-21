@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A sketch drawn with a naive stroke, pressed between faded leaves of a damaged diary. It portrays a family of four and separate image on each one.",
   "description": "Sketch Obtained in the camp of the Séance Society.",
   "modifiedTime": "2024-07-09T15:18:54.472Z",
+  "obtainDescription": "A yellowed sketch.",
   "publishedTime": "2024-06-28T15:43:22.043Z"
 }

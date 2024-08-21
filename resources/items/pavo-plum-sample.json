@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Like Pavo Plums found elsewhere, this fruit looks incredibly delicious. However, knowing its taste, you wouldn't be quick to eat it.",
-  "description": "A Pavo Plum sample collected near the hot spring. It should come in handy for Bingge.",
+  "description": "A Pavo Plum sample collected near the hot spring. It should come in handy for Bing'ge.",
   "modifiedTime": "2024-07-09T15:18:54.042Z",
+  "obtainDescription": "A Pavo Plum sample collected near the hot spring.",
   "publishedTime": "2024-06-28T15:43:21.958Z"
 }

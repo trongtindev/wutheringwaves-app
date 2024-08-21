@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "An unusual substance resembling the shape of a plant bud. If you listen carefully, you can sense the pleasure of sprouting from the ground. However, it can never grow into a complete plant.",
   "description": "A medium material used to break through weapons and upgrade skills for Gauntlets Resonators.",
   "modifiedTime": "2024-07-09T15:18:53.443Z",
+  "obtainDescription": "Material for weapon breakthrough.",
   "publishedTime": "2024-06-28T15:43:21.869Z"
 }

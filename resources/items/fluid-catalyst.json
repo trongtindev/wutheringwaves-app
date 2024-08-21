@@ -1,6 +1,8 @@
 {
-  "bgDescription": "catalytic fluids that can accelerate the onset of action of all types of potions.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Catalytic fluids that can accelerate the onset of action of all types of potions.",
   "description": "Material for Synthesis",
   "modifiedTime": "2024-07-09T15:18:53.642Z",
+  "obtainDescription": "Material for Synthesis",
   "publishedTime": "2024-06-28T15:43:21.898Z"
 }

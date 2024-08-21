@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A free herbal tea distributed by the Jinzhou government. It is known for its refreshing and detoxifying effects and is popular among the working class. \"Thank you to everyone who works hard for Jinzhou.\"",
-  "description": "Increases all party members' max HP by 1000, lasting for 15m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all team member's Max HP by 800, lasting for 15m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:54.156Z",
+  "obtainDescription": "Increases all team members' Max HP by 800, lasting for 15m. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.979Z"
 }

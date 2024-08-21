@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "\"In the Huanglong region, ancient buildings were traditionally built using wood, but it proved to be insufficient in meeting modern strength requirements. Hence, Huanglong began to explore alternative building materials that could replicate the traditional wooden texture while providing sturdiness.\nThese Wood-textured Shards can be found all throughout the region, with varying shapes and origins – from houses and shops to military camps and academies. Although uncovering the stories behind them is a challenging task, the Pioneer Association relentlessly pursues this endeavor. Each shard holds a piece of history waiting to be discovered.",
   "description": "Special drops from the Huanglong region, which can be used to exchange for various items in the Souvenir Store.",
   "modifiedTime": "2024-07-09T15:18:54.446Z",
+  "obtainDescription": "Special drops from the Huanglong region, which can be used to exchange for various items in the Souvenir Store.",
   "publishedTime": "2024-06-28T15:43:22.040Z"
 }

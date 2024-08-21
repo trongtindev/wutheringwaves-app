@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The Lootmapper identifies frequencies to assist users in locating nearby undiscovered Supply Chests and Tidal Heritage. It serves as an indispensable tool to facilitate exploration in the wilderness.",
   "description": "Used to find the undiscovered treasures around the drop point.",
   "modifiedTime": "2024-07-09T15:18:53.882Z",
+  "obtainDescription": "Used to find the undiscovered treasures around the drop point.",
   "publishedTime": "2024-06-28T15:43:21.932Z"
 }

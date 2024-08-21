@@ -1,6 +1,8 @@
 {
-  "bgDescription": "A small frog often found on the banks of the rivers and lakes. A heterochrome species of Black-Striped Frog. Since it is relatively scarce and more vulnerable to enemies due to the color, some amphibian fans will catch Goldenback Frogs after rain and take them home as petes.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A small frog often found on the banks of the rivers and lakes. A heterochrome species of Black-Striped Frog. Since it is relatively scarce and more vulnerable to enemies due to the color, some amphibian fans will catch Goldenback Frogs after rain and take them home as pets.",
   "description": "Material for cooking.",
   "modifiedTime": "2024-07-09T15:18:53.709Z",
+  "obtainDescription": "Material for cooking.",
   "publishedTime": "2024-06-28T15:43:21.905Z"
 }

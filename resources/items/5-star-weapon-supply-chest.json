@@ -1,5 +1,8 @@
 {
-  "description": "Open to claim one 5-star Winter Brume series weapon of your choice:\n<color=Rare5>Lustrous Razor *1</color>\n<color=Rare5>Emerald of Genesis *1</color>\n<color=Rare5>Static Mist *1</color>\n<color=Rare5>Abyss Surges *1</color>\n<color=Rare5>Cosmic Ripples *1</color>",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "",
+  "description": "Open to claim one 5-star Winter Brume series weapon of your choice:\nLustrous Razor *1\nEmerald of Genesis *1\nStatic Mist *1\nAbyss Surges *1\nCosmic Ripples *1",
   "modifiedTime": "2024-07-09T15:18:53.248Z",
+  "obtainDescription": "Provides a 5-star Winter Brume series weapon.",
   "publishedTime": "2024-06-28T15:43:21.842Z"
 }

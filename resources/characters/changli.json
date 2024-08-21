@@ -250,9 +250,7 @@
       "name": "Blazing Enlightment",
       "type": "Basic Attack",
       "description": "**Basic Attack**\nPerform up to 4 consecutive attacks, dealing Fusion DMG.\nAfter releasing **Ground Basic Attack Stage 4**, Changli enters **True Sight**, lasting for 12s.\n\n**Mid-air Attack**\nConsume Stamina to perform up to 4 consecutive attacks in mid-air, dealing Fusion DMG.\nAfter releasing **Mid-air Attack Stage 4**, Changli enters **True Sight**, lasting for 12s.\n\n**Heavy Attack**\nHold **Basic Attack** on the ground to consume Stamina to perform an upward strike, dealing Fusion DMG**. Use **Basic Attack** within a certain time to release **Mid-air Attack Stage 3**.\n\n**Mid-air Heavy Attack**\nShortly after holding **Basic Attack** in mid-air or using Basic Attack **True Sight: Charge**, use **Basic Attack** to consume Stamina to perform a Plunging Attack, dealing Fusion DMG. Use **Basic Attack** within a certain time to release **Basic Attack Stage 3**.\n\n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Fusion DMG.",
-      "nameLocalized": {
-        "uk": "Палаюче просвітлення"
-      },
+      "nameLocalized": { "uk": "Палаюче просвітлення" },
       "descriptionLocalized": {
         "uk": "<strong>Базова Атака</strong>\nВиконує до 4 атак поспіль, завдаючи <strong class=\"color-fusion\">Ф'южн шкоду</strong>.\nПісля нанесення <strong>Базову атаку 4 стадії на землі</strong>, Чанлі входить в <strong>Істинний погляд</strong>, який триває 12 сек.\n\n<strong>Атака в повітрі</strong>\nВикористовуючи витривалість, можна виконати до 4 атак поспіль у повітрі, завдаючи  <strong class=\"color-fusion\">Ф'южн шкоду</strong>.\nПісля нанесення <strong>Атаки в повітрі 4 стадія</strong>, Чанлі входить в <strong>Істинний погляд</strong>, який триває 12 сек.\n\n<strong>Потужна атака</strong>\nЗатискуючи <strong>Базову Атаку</strong> на землі витрачає Витривалість, щоб виконати підкидуваний удар вгору, наносячи <strong class=\"color-fusion\">Ф'южн шкоду</strong>. Використовуючи <strong>Базову Атаку</strong> протягом певного часу для того, щоб вивільнити <strong>Атаку в повітрі 3 стадія</strong>.\n\n<strong>Потужна Атака в повітрі</strong>\nНевдовзі після проведення <strong>Базової Атаки</strong> у повітрі або використовуючи Базову Атаку  <strong>Істинний погляд: Charge</strong>, використайте <strong>Базову Атаку</strong>, щоб використати Витривалість для нанесення a Атаку в падінні, наносячи <strong class=\"color-fusion\">Ф'южн шкоду</strong>.  Використовуючи <strong>Базову Атаку</strong> протягом певного часу для того, щоб вивільнити <strong>Базову атаку 3 стадії</strong>.\n\n<strong>Бонус парирування</strong>\nВикористайте <strong>Базову Атаку</strong> після успішного <strong>Парирування</strong>, щоб нанести  <strong class=\"color-fusion\">Ф'южн шкоду</strong> ворогу."
       }
@@ -262,9 +260,7 @@
       "name": "Tripartite Flames",
       "type": "Resonance Skill",
       "description": "**True Sight: Capture**\nAfter releasing **Resonance Skill**, Changli rapidly attacks the enemy and enters **True Sight**, lasting for 12s. In the end, Changli releases a Plunging Attack, dealing Fusion DMG**.\n**True Sight: Capture** has 2 initial attempts and can be used up to 2 times. The number of attempts is increased by 1 every 12s.\n\n**Basic Attack: True Sight - Conquest**\nWhen in **True Sight**, if Changli uses **Ground Basic Attack**, she releases **True Sight: Conquest**, rapidly approaching the enemy and dealing Fusion DMG**, considered as Resonance Skill DMG. After releasing **True Sight: Conquest**, **True Sight** ends.\n\n**Basic Attack: True Sight - Charge**\nWhen in **True Sight**, if Changli **jumps** or uses **Basic Attack** in mid-air, she releases **True Sight: Charge**, dashing towards the enemy and dealing Fusion DMG**, considered as Resonance Skill DMG. After releasing **True Sight: Charge**, **True Sight** ends.",
-      "nameLocalized": {
-        "uk": "Тристороннє полум'я"
-      },
+      "nameLocalized": { "uk": "Тристороннє полум'я" },
       "descriptionLocalized": {
         "uk": "<strong>Істинний погляд: Захоплення</strong>\nПісля випуску <strong>Навички резонансу</strong> Чанлі швидко атакує ворога та входить у <strong>Істинний погляд</strong>, що триває 12 секунд. Чанлі зрештою виконує Атаку в падінні наносячи <strong class=\"color-fusion\">Ф'южн шкоду</strong>.\n<strong>Істинний погляд: Захоплення</strong> має 2 початкові спроби і може використовуватися до 2 разів. Кількість спроб збільшується на 1 кожні 12 секунд.\n\n<strong>Базова Атака: Істинний погляд - Підкорення</strong>\nКоли Чанлі в стані <strong>Істинний погляд</strong>, якщо використати<strong>Базову Атаку на землі</strong>, вона випускає <strong>Істинний погляд - Підкорення</strong>, блискавично наближаючись до ворога та наносить <strong class=\"color-fusion\">Ф'южн шкоду</strong>, яка вважається, як шкода Навички резонансу. Після того, як випустили <strong>Істинний погляд - Підкорення</strong>, <strong> Істинний погляд</strong> закінчується.\n\n<strong>Базова Атака: Істинний погляд - Заряд</strong>\nКоли Чанлі в стані <strong>Істинний погляд</strong>, якщо вона <strong>стрибає</strong> або використовує <strong>Базову Атаку</strong> у повітрі, вона вивільнила <strong>Істинний погляд - Заряд</strong>, кидаючись на ворога і наносить йому <strong class=\"color-fusion\">Ф'южн шкоду</strong>,  яка вважається, як шкода Навички резонансу. Після вивільнення <strong>Істинний погляд - Заряд</strong>, <strong> Істинний погляд</strong> закінчується."
       }
@@ -304,9 +300,7 @@
       "name": "Obedience of Rules",
       "type": "Intro Skill",
       "description": "Changli appears in mid-air, attacks the target, and enters **True Sight**, lasting for 12s.",
-      "nameLocalized": {
-        "uk": "Дотримання правил"
-      },
+      "nameLocalized": { "uk": "Дотримання правил" },
       "descriptionLocalized": {
         "uk": "Чанглі з'являється в повітрі, атакує ціль і входить в <strong>Істинний погляд</strong>, що триває 12 секунд."
       }
@@ -336,9 +330,7 @@
       "name": "Strategy of Duality",
       "type": "Outro Skill",
       "description": "Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by 20%** and their Resonance Liberation DMG by 25%**, lasting for 10**s. Switching to another Resonator ends this effect.",
-      "nameLocalized": {
-        "uk": "Стратегія подвійності"
-      },
+      "nameLocalized": { "uk": "Стратегія подвійності" },
       "descriptionLocalized": {
         "uk": "Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by <strong class=\"color-fusion\">20%</strong> and their Resonance Liberation DMG by <strong class=\"color-fusion\">25%</strong>, lasting for <strong class=\"color-fusion\">10</strong>s. Switching to another Resonator ends this effect.\nНавичка Відходу Чанлі збільшує переключеному Резонатору Ф'южен шкоду <strong class=\"color-fusion\">25%</strong> протягом <strong class=\"color-fusion\">10</strong>сек. При переключенні на наступного Резонатора це ефект зникає"
       }

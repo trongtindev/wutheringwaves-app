@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A delicate small knife, engraved with patterns like a crocodile.",
   "description": "A small knife given by Mr. Zi.",
   "modifiedTime": "2024-07-09T15:18:53.535Z",
+  "obtainDescription": "A small knife given by Mr. Zi.",
   "publishedTime": "2024-06-28T15:43:21.882Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Calcharo has a fondness for Huanglong's Food Ration Bar. He believes it efficiently satisfies basic energy needs in the wild and has a unique taste. To cater to some of the younger merc's preferences, Calcharo has enhanced the bar by adding dried fruits, sugar beans, and various seasonings, creating a variety of flavors.",
-  "description": "Increases the DEF of all Resonators in the team by 36% for 15 minutes. In multiplayer games, it only affects your own characters.",
+  "description": "Increases the DEF of all Resonators in the team by 36% for 15 minutes. In Co-op games, it only affects your own Resonators.",
   "modifiedTime": "2024-07-09T15:18:54.139Z",
+  "obtainDescription": "Increases the DEF of all Resonators in the team by 36% for 15 minutes. In Co-op games, it only affects your own Resonators.",
   "publishedTime": "2024-06-28T15:43:21.975Z"
 }

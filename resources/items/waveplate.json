@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Data values reflecting the real-time status of the Resonator. When the Resonator is active, the Waveplate gradually depletes. Once it reaches a critical level, the Resonator's mobility becomes restricted.",
   "description": "Waveplates gradually restores over time and there is a storage limit.\nAstrites can be consumed to exchange for Waveplates.",
   "modifiedTime": "2024-07-09T15:18:54.422Z",

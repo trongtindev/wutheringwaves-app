@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Mysterious melodies echo endless from the crevice...",
+  "description": "Open to obtain a random Echo of the following Sonata Effect: Endless Vibrations.\n\n2pcs Set: ATK + 10%.\n\n5pcs Set: While on the field, ATK increases by 5% every 1.5s. This effect stacks up to 4 times. Outro Skill DMG + 60%.",
+  "obtainDescription": "Echo blind box"
+}

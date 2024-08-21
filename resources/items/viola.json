@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The Exiles prefer Viola, a plant of great vitality. They cook the young shoots of Viola as a source of vegetable.\nExperienced observers can determine the whereabouts of the Exiles by the distribution of Viola.",
   "description": "A material used for Cooking.",
   "modifiedTime": "2024-07-09T15:18:54.409Z",
+  "obtainDescription": "A material used for cooking.",
   "publishedTime": "2024-06-28T15:43:22.033Z"
 }

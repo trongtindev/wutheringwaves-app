@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A purple leaf with a faint, peculiar energy.",
   "description": "Jinhsi's Token: II",
   "modifiedTime": "2024-07-09T15:18:53.838Z",
+  "obtainDescription": "Jinhsi's Token: II",
   "publishedTime": "2024-06-28T15:43:21.925Z"
 }

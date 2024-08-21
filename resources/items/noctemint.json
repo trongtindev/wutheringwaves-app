@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "If applied externally, Noctemint soothes inflammation and relieves itching; if brewed with tea, Noctemint refreshes the user's mind. It is a daily essential, especially for warriors from the Midnight Rangers stationed in the wild. Chewing a few leaves offers a refreshing sensation from tongue to brain, assisting warriors through the enduring night.",
   "description": "A material used for Cooking and Synthesis.",
   "modifiedTime": "2024-07-09T15:18:54.027Z",
+  "obtainDescription": "A material used for Cooking and Synthesis.",
   "publishedTime": "2024-06-28T15:43:21.956Z"
 }

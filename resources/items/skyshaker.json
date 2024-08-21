@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A special firecracker made by following a secret blueprint found in Xisha. Refrain from using this in crowded areas as it is both powerful and loud.",
+  "description": "A special firecracker sold at the Fireworks Shop. After equipping this to Utility, you can throw firecrackers to damage enemies. ()",
+  "obtainDescription": "A special firecracker sold at the Fireworks Shop. After equipping this to Utility, you can throw firecrackers to damage enemies."
+}

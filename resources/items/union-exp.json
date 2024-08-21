@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Rich experience helps to adapt to the survival rules of this world.",
   "description": "Union Level EXP. Obtained from exploration.",
   "modifiedTime": "2024-07-09T15:18:54.392Z",
+  "obtainDescription": "Union Level EXP. Obtained from exploration.",
   "publishedTime": "2024-06-28T15:43:22.030Z"
 }

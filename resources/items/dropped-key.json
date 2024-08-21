@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A key dropped by Blobfly in Kaimi Remnant Site. It got quite the ancient looks and style.",
   "description": "The key dropped by Blobfly.",
   "modifiedTime": "2024-07-09T15:18:53.580Z",
+  "obtainDescription": "The key dropped by Blobfly.",
   "publishedTime": "2024-06-28T15:43:21.889Z"
 }

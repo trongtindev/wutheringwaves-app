@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Notebook of Sizhe, which records his unconstrained ideas during his investigation missions.",
   "description": "The information touchpad of Sizhe, returning it may have a reward.",
   "modifiedTime": "2024-07-09T15:18:54.060Z",
+  "obtainDescription": "The information touchpad of Sizhe, returning it may have a reward.",
   "publishedTime": "2024-06-28T15:43:21.962Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Representing the past of this ruin, it is a precious gift to the future.",
   "description": "A dried flower, well preserved in an old storage box.",
   "modifiedTime": "2024-07-09T15:18:53.574Z",
+  "obtainDescription": "A dried flower, well preserved in an old storage box.",
   "publishedTime": "2024-06-28T15:43:21.888Z"
 }

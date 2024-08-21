@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A small, compact proportioning data card, the data of which is read by the Synthesizer to gain access to Synthesis' corresponding products.",
-  "description": "Used to heal a selected Resonator for 3% of their max HP plus 300 extra HP per second over 30s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Used to heal 3% of a selected Resonator's Max HP, plus an extra 300 HP per second over 30s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
   "modifiedTime": "2024-07-09T15:18:54.098Z",
+  "obtainDescription": "Used to heal 3% of a selected Resonator's Max HP, plus an extra 300 HP per second over 30s. (This effect only applies to your own Resonator(s) in Co-op Mode)",
   "publishedTime": "2024-06-28T15:43:21.968Z"
 }

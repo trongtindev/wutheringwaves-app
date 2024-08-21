@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A tranquil flower, casting its gentle radiance amidst the shadows.",
+  "description": "A material used for Resonator Ascension.",
+  "obtainDescription": "A material used for Resonator Ascension."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "An ingenious gadget that captures sounds and transforms them into energy. It can be used in tuning. It is said to be of great interests to some collectors, who'd provide resources in exchange for them.",
+  "description": "Can be exchanged for resources when handed over to Xian'ge.",
+  "obtainDescription": "Can be exchanged for resources when handed over to Xian'ge."
+}

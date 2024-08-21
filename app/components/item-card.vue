@@ -18,12 +18,7 @@ const nameLocalized = (() => {
 
 <template>
   <v-card :to="localePath(`/items/${item.slug}`)">
-    <v-img
-      :aspect-ratio="1 / 1"
-      :src="`/items/icons/${item.slug}.webp`"
-      :alt="nameLocalized"
-      cover
-    />
+    <v-img :aspect-ratio="1 / 1" :src="item.icon" :alt="nameLocalized" cover />
 
     <v-card-title
       :class="`text-rarity${item.rarity}`"

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Seven pairs of packed delivery boxes, containing the strange inventions of the Cruising Drake. Strange packing methods were used in order to carry the strange inventions.",
+  "description": "A delivery box invented by the Jiaolong Gang.",
+  "obtainDescription": "Deliver to the designated customer"
+}

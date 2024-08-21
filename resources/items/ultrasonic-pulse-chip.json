@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Developed by Huaxu Academy, this chip can release vortex flow and facilitate researches surrounding the Whining Aix's Mire.",
   "description": "Release a powerful vortex to cleanse muds and the mud shield of Tacet Discords.",
   "modifiedTime": "2024-07-09T15:18:54.386Z",
+  "obtainDescription": "A chip that can release pulse vortex.",
   "publishedTime": "2024-06-28T15:43:22.029Z"
 }

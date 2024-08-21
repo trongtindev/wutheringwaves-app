@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Carnivorous reptiles, mainly living by waters or in wetlands. Their skin is covered with leathery scales. While their whole body is blue, musclar spines are found on their back. They favor wet, warm environments and small shrimp, crabs for diet.",
   "description": "Material for crafting.",
   "modifiedTime": "2024-07-09T15:18:53.356Z",
+  "obtainDescription": "Material for crafting.",
   "publishedTime": "2024-06-28T15:43:21.857Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Minerals formed over time from the remains of dead plants within Tacet Fields that had sunken into its terrains. Due to the retained woody plant-like structural appearances, these minerals were given the name \"Floramber\", though they are unrelated to ambers in terms of shape or form.",
   "description": "A material used for Crafting.",
   "modifiedTime": "2024-07-09T15:18:53.636Z",
+  "obtainDescription": "A material used for Crafting.",
   "publishedTime": "2024-06-28T15:43:21.897Z"
 }

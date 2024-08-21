@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A boost part disassembled from various weapons, featuring impressive versatility. By collecting enough quantity of these parts, you can apply them to enhance the performance of Tacetite Weapons.",
   "description": "A material used for Crafting.",
   "modifiedTime": "2024-07-09T15:18:53.431Z",
+  "obtainDescription": "A material used for Crafting.",
   "publishedTime": "2024-06-28T15:43:21.868Z"
 }

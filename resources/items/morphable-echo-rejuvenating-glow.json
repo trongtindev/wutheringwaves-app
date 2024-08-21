@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The breath from the crevice brings peace and calm...",
+  "description": "Open to obtain a random Echo of the following Sonata Effect: Rejuvenating Glow.\r\n2pcs Set: Healing Bonus + 10%.\r\n5pcs Set: Increases the ATK of all party members by 15% for 30s upon healing allies.",
+  "obtainDescription": "ItemInfo_50000057_ObtainedShowDescription"
+}

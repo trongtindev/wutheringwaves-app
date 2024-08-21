@@ -1,6 +1,8 @@
 {
-  "bgDescription": "Gloom Slough is commonly found in the ruins of villages or cities, named for the glow it emits, which resembles a ghost fire but has no heat.\n\nGloom Slough feeds on luminescent plants, and the shed skin it leaves behind preserves the luminescent enzymes concentrated on the surface of the original insect body.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Gloom Slough is commonly found among the ruins of villages or cities, and is named for the glowing light that resembles a candle flame without the heat.\nGloom Cicada's diet is mainly fluorescent plants, and the sloughs they produce are left with the sedimented fluorescent matters from the insects' skin.",
   "description": "A material used for cooking.",
   "modifiedTime": "2024-07-09T15:18:53.699Z",
+  "obtainDescription": "Material for cooking.",
   "publishedTime": "2024-06-28T15:43:21.904Z"
 }

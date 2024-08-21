@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Meat obtained from fish, featuring a tender cut with a refreshing taste. With skilled hands, it can be transformed into exquisite dishes.",
   "description": "A material used for Cooking.",
   "modifiedTime": "2024-07-09T15:18:53.628Z",
+  "obtainDescription": "A material used for Cooking.",
   "publishedTime": "2024-06-28T15:43:21.896Z"
 }

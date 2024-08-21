@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "An amazing device created by the Court of Savantae. Able to collect scattered Acoustic Prints.",
   "description": "Strange Court of Savantae device.",
   "modifiedTime": "2024-07-09T15:18:54.237Z",
+  "obtainDescription": "Strange Court of Savantae device.",
   "publishedTime": "2024-06-28T15:43:21.997Z"
 }

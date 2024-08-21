@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A Resonator's Forte is composed of countless Wavebands. When these Wavebands form a complete Resonance Chain, the Resonator can unleash their full power.",
+  "description": "Used to activate Xiangli Yao's Sequences.",
+  "obtainDescription": "Used to activate the corresponding Resonator's Sequences."
+}

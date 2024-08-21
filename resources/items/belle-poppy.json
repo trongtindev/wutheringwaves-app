@@ -1,6 +1,8 @@
 {
-  "bgDescription": "Belle Poppy was once the symbol of the Port City of Guixu. It nearly went extinct when Incinero Petals were rampant.\nHowever, at the outskirts of the city ruins, Belle Poppy was found to bloom still at its home, having endured the disaster.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Once the symbol of the Port City of Guixu, it nearly went extinct when Incinero Petals were rampant.\nHowever, at the outskirts of the city ruins, Belle Poppy was found to bloom still at its home, having endured the disaster.",
   "description": "A material used for Resonator Ascension.",
   "modifiedTime": "2024-07-09T15:18:53.409Z",
+  "obtainDescription": "A material used for Resonator Ascension.",
   "publishedTime": "2024-06-28T15:43:21.865Z"
 }

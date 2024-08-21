@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A ritual vessel gifted by Sentinel Jué.\nLegend holds that upon the Lament's arrival in Jinzhou, time became entangled, with no more clear line between mornings and nights.\nThe Magistrate used the Sentinel's dagger as the gnomon of the sundial to determine the date and time.",
+  "description": "Dropped by challenging Sentinel Jué. Can be used to upgrade skills.",
+  "obtainDescription": "Dropped by challenging Sentinel Jué. Can be used to upgrade skills."
+}

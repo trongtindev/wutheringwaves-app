@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "These resources come from all over Solaris-3, delivered on time by Lollo Logistics for customers. When traveling in dangerous areas, mutual support is indispensable for safe travel.",
+  "description": "Advanced Experience Package",
+  "obtainDescription": "Advanced Experience Package"
+}

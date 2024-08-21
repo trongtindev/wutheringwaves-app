@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Special Operation Diary D12547",
   "description": "Special Operation Diary D12547",
   "modifiedTime": "2024-07-09T15:18:54.247Z",
+  "obtainDescription": "Special Operation Diary D12547",
   "publishedTime": "2024-06-28T15:43:22.000Z"
 }

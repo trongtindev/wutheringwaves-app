@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The main source of sweetness, often associated with a sense of happiness.",
   "description": "A material used for Cooking.",
   "modifiedTime": "2024-07-09T15:18:54.301Z",
+  "obtainDescription": "A material used for Cooking.",
   "publishedTime": "2024-06-28T15:43:22.012Z"
 }

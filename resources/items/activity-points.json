@@ -1,4 +1,5 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Following the direction of the pointer, you travel on the land of Solaris-3, these journeys will never be forgotten.",
   "description": "Item obtained from dailies, can be collected to receive daily rewards.",
   "modifiedTime": "2024-07-09T15:18:53.285Z",

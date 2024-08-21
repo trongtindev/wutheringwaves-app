@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "It's an investigation report without an exact date. You can now read it after the Storyteller has repaired it, though this may take effort.",
   "description": "Data Chip collected from Norfall Barrens",
   "modifiedTime": "2024-07-09T15:18:53.322Z",
+  "obtainDescription": "Data Chip collected from Norfall Barrens",
   "publishedTime": "2024-06-28T15:43:21.852Z"
 }

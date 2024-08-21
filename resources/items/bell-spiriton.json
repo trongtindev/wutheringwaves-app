@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A rare material from the Bell-Borne Geochelone, which only appears at a specific frequency. It's said that in the hands of a skilled apothecary, it can be refined into a miraculous medicine.",
+  "description": "A special material from the Bell-Borne Geochelone.",
+  "obtainDescription": "A rare material that only resonates under specific frequencies from the Bell-Borne Geochelone. It's said that in the hands of a skilled apothecary, it can be refined into a miraculous medicine."
+}

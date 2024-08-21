@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A common dish that has become a hallmark of Huanglong cuisine. Golden and exquisite, it is a breakfast plate beloved by people of all ages.\nAs it is always found on the dining tables of Huanglong, most folks see it as an everyday indulgence. But those who have been away from their homes always find themselves longing for its delicate fragrance.",
+  "description": "Increases all team members' ATK by 6% and Energy Regen by 10%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
+  "obtainDescription": "Increases all team members' ATK by 6% and Energy Regen by 10%, lasting for 30m. Only effective on your own Resonators in Co-op Mode."
+}

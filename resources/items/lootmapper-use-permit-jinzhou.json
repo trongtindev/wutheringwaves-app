@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The use permit of the Lootmapper in Jinzhou. To ensure frequency safety in Jinzhou, users are permitted to use the Lootmapper only within authorized areas in compliance with this official permit.",
   "description": "Grants the bearer of this permit the access to the Lootmapper in given regions.",
   "modifiedTime": "2024-07-09T15:18:53.880Z",
+  "obtainDescription": "Grants the bearer of this permit the access to the Lootmapper in given regions.",
   "publishedTime": "2024-06-28T15:43:21.932Z"
 }

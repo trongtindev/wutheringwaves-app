@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The Court of Savantae Committee left many mysteries in Mt. Firmament: its unfinished research buried deep in the mountains and the ending that befell the researchers. Perhaps you'll be able to uncover these dust-sealed secrets with this key.",
+  "description": "A key used to open the Woodveil Hall laboratory.",
+  "obtainDescription": "A key used to open the Woodveil Hall laboratory."
+}

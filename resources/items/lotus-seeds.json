@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "An aquatic plant prized for its ornamental and practical value. Its seeds are renowned for their fragrance in Jinzhou.",
   "description": "Material for cooking.",
   "modifiedTime": "2024-07-09T15:18:53.893Z",
+  "obtainDescription": "Material for cooking.",
   "publishedTime": "2024-06-28T15:43:21.935Z"
 }

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A specialty mineral with a shape of needle clusters. Sharp and tough. Mostly used in cutting metals or other crystals or making weapons.",
   "description": "A material used for Crafting.",
   "modifiedTime": "2024-07-09T15:18:54.198Z",
+  "obtainDescription": "A material used for Crafting.",
   "publishedTime": "2024-06-28T15:43:21.989Z"
 }

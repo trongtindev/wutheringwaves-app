@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A recipe that details how to make Spicy Pulled Chicken.",
   "description": "Used to learn how to cook Spicy Pulled Chicken.",
   "modifiedTime": "2024-07-09T15:18:54.268Z",
+  "obtainDescription": "Used to learn how to cook Spicy Pulled Chicken.",
   "publishedTime": "2024-06-28T15:43:22.005Z"
 }

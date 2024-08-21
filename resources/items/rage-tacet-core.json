@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The Tacet Core of Inferno Rider, surrounded by the never-ending fire of rage. The raging flames, fueled by the supreme clamor, vow to burn everything to ashes.",
-  "description": "Inferno Rider's drop, Resonator breakthrough item.",
+  "description": "The Inferno Rider's drop, a Resonator's Ascension item.",
   "modifiedTime": "2024-07-09T15:18:54.135Z",
+  "obtainDescription": "The Inferno Rider's drop, a Resonator's Ascension item.",
   "publishedTime": "2024-06-28T15:43:21.975Z"
 }

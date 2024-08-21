@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A component that requires a large amount of computing power to run. It can stably output power, and when loaded on a Terminal, it can significantly improve the owner's mobility.",
-  "description": "Increases Max Stamina by 10 points.\nCan be obtained from upgrading the Data Bank.",
+  "description": "Increases Max STA by 10 points.\nCan be obtained from upgrading the Data Bank.",
   "modifiedTime": "2024-07-09T15:18:53.650Z",
+  "obtainDescription": "Increases Max STA by 10 points.",
   "publishedTime": "2024-06-28T15:43:21.899Z"
 }

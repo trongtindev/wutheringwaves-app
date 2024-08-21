@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A recipe that details how to make Egg Pancake.",
+  "description": "Used to learn how to cook Egg Pancake.",
+  "obtainDescription": "Used to learn how to cook Egg Pancake."
+}

@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A special product that combines potions of different potencies, which may provide a variety of unexpected benefits.",
-  "description": "Allows the selected Resonators in the party to regain 20 Concerto Energy when releasing Concerto Skills in the next 60s. Only works on your own Characters in Co-op.",
+  "description": "Allows the selected Resonators in the team to regain 20 Concerto Energy when releasing Intro Skills within 60s.  Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.727Z",
+  "obtainDescription": "Allows the selected Resonators in the team to regain 20 Concerto Energy when releasing Intro Skills within 60s.  Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.908Z"
 }

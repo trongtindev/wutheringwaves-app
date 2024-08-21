@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "In order to give Pinwen an inexpensive, precious, and inviting gift, Qingru has decided to ask for your help at a hefty price.",
+  "description": "\"The Precious\" given by Qingru.",
+  "obtainDescription": "Qingru's \"heavy gold\"."
+}

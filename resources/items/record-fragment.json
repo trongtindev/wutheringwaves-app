@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A broken old record, it looks like a product from decades ago",
   "description": "A broken old record, it is unclear what specific use it has",
   "modifiedTime": "2024-07-09T15:18:54.145Z",
+  "obtainDescription": "A broken old record, it is unclear what specific use it has",
   "publishedTime": "2024-06-28T15:43:21.976Z"
 }

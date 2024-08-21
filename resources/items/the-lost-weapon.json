@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The Weapon dropped by Yunhe, a relatively old standard in the Midnight Rangers.",
   "description": "The lost weapon.",
   "modifiedTime": "2024-07-09T15:18:54.349Z",
+  "obtainDescription": "The lost weapon.",
   "publishedTime": "2024-06-28T15:43:22.023Z"
 }

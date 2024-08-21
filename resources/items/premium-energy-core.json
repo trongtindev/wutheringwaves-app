@@ -1,6 +1,8 @@
 {
-  "bgDescription": "A supplement storing a large amount of Tacetite Energy. Its energy density is fully capable of sustaining the functioning of most Tacetite Weapons. Many experienced Resonators often preassemble and preheat this supplement, in case of any weapon malfunctions during intense battles.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "A supplement storing high-density Tacetite Energy, fully capable of powering most Tacetite Weapons. Experienced Resonators often preassemble and preheat this supplement to prevent weapon malfunctions during intense battles.",
   "description": "Provides 20,000 Weapon EXP.",
   "modifiedTime": "2024-07-09T15:18:54.102Z",
+  "obtainDescription": "Provides 20,000 Weapon EXP.",
   "publishedTime": "2024-06-28T15:43:21.969Z"
 }

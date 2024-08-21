@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A larger fragment of a wooden plaque with mysterious carvings, possibly used in ancient rituals. The meaning of the patterns is unknown.",
   "description": "A Wooden Plaque for some kind of ancient rituals.",
   "modifiedTime": "2024-07-09T15:18:54.449Z",
+  "obtainDescription": "A Wooden Plaque for some kind of ancient rituals.",
   "publishedTime": "2024-06-28T15:43:22.040Z"
 }

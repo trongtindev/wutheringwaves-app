@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A must-have dish in the Panhua Restaurant, the poached chicken is added with a special sauce. Some people want to replicate the taste of the Panhua Restaurant's Poached Chicken, but there is always a difference. After all, a restaurant must have some skills.",
-  "description": "Reduce Grapple Cooldown of the designated Resonator in the team by 15% for 15 minutes. This effect only applies on your own characters in Co-op Mode.",
+  "description": "Reduces Cooldown for Grapple by 15% for a designated Resonator for 15m. Only effective for your own Resonator in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:54.086Z",
+  "obtainDescription": "Reduces Cooldown for Grapple by 15% for a designated Resonator for 15m. Only effective for your own Resonator in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.965Z"
 }

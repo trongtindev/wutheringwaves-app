@@ -1,6 +1,8 @@
 {
-  "bgDescription": "The sound material made from suspicious audio which appeared in the <i>Blazing Prairie</i>.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "The sound material made from suspicious audio which appeared in the Blazing Prairie.",
   "description": "The sound material that can reproduce the scene after use.",
   "modifiedTime": "2024-07-09T15:18:54.318Z",
+  "obtainDescription": "The sound material that can reproduce the scene after use.",
   "publishedTime": "2024-06-28T15:43:22.015Z"
 }

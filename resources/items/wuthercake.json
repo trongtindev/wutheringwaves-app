@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A kind of pure golden pastry made with a lot of egg yolks. It can maintain its crisp taste even in a humid environment. You can eat it with confidence at any time.",
-  "description": "Increases all party members' ATK by 30%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all team members' ATK by 30%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:54.465Z",
+  "obtainDescription": "Increases all team members' ATK by 30%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:22.042Z"
 }

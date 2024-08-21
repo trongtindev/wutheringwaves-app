@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Chrysopa possesses two pairs of wings made of transparent membranes with delicate reticulate veins resembling leaves.\nIt primarily preys on small insects and serves as a natural predator for many pests, making it a valuable resource for biological pest control.",
   "description": "Material for crafting.",
   "modifiedTime": "2024-07-09T15:18:53.501Z",
+  "obtainDescription": "Material for crafting.",
   "publishedTime": "2024-06-28T15:43:21.877Z"
 }

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Those blessed by the deity aspired to raise a gate, however modest it may seem to the divine eyes. Even in its decay, the solitary gate stood sentinel: upholding reverence, for the divine is near.",
+  "description": "An energy device crafted by the Court of Savantae. Can be used to disable the sealing device of Mianloong Chamber.",
+  "obtainDescription": "An energy device crafted by the Court of Savantae. Can be used to disable the sealing device of Mianloong Chamber."
+}

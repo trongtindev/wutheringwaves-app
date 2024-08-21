@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "\"Lo, Lo, Lollo Logistics! I want to be a proud courier today!\"",
   "description": "Data Chip collected from Whining Aix's Mire.",
   "modifiedTime": "2024-07-09T15:18:53.865Z",
+  "obtainDescription": "Data collected at Whining Aix's Mire.",
   "publishedTime": "2024-06-28T15:43:21.929Z"
 }

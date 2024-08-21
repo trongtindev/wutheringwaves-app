@@ -1,5 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "",
   "description": "The combat data obtained from the Tactical Hologram: Calamity can be exchanged for various rewards in the Simulation Training Store.",
   "modifiedTime": "2024-07-09T15:18:53.541Z",
+  "obtainDescription": "The combat data obtained from the Tactical Hologram: Calamity can be exchanged for various rewards in the Simulation Training Store.",
   "publishedTime": "2024-06-28T15:43:21.883Z"
 }

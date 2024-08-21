@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Luohan Clearwater, an unrecognizable term for Mahe, is used among pharmacies years ago, referring to the potion made by boiling Coriolus, Perilla, and Lemongrass. To make the Jade Treasure Soup, Koko gave you a portion.",
+  "description": "Special potion used for cooking Jade Treasure Soup.",
+  "obtainDescription": "Special potion used for cooking Jade Treasure Soup."
+}

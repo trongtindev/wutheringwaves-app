@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "Originally a dish invented by Huanglong miners who were too busy to cook, Maocai is prepared simply by mixing and stewing all ingredients with spices in one pot.",
-  "description": "Increases all party members' Crit. Rate by 28%, lasting for 30m. (This effect only applies to your own Resonator(s) in Co-op Mode)",
+  "description": "Increases all team members' Crit. Rate by 28%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.804Z",
+  "obtainDescription": "Increases all team members' Crit. Rate by 28%, lasting for 30m. Only effective on your own Resonators in Co-op Mode.",
   "publishedTime": "2024-06-28T15:43:21.920Z"
 }

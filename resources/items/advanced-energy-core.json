@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A supplement storing a small amount of Tacetite Energy. It can be used in the core modules of Tacetite Weapons to increase power output. Weapons are the allies of Resonators and Tacetites serve as their food. Only by nourishing weapons well can they be handier and more powerful in battles.",
   "description": "Provides 8,000 Weapon EXP.",
   "modifiedTime": "2024-07-09T15:18:53.293Z",
+  "obtainDescription": "Provides 8,000 Weapon EXP.",
   "publishedTime": "2024-06-28T15:43:21.848Z"
 }

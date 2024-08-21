@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "They seem to come from a diary of a courier. The Storyteller of Jinzhou Theater is collecting these fragments.",
+  "description": "Torn pages collected from Whining Aix's Mire",
+  "obtainDescription": "Torn pages collected from Whining Aix's Mire"
+}

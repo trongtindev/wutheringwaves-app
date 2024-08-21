@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Lightweight and soft feathers that are often used in crafting of accessories or toys.",
+  "description": "Material for crafting.",
+  "obtainDescription": "Material for crafting."
+}

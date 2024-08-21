@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "Dream Fragment",
+  "description": "Dream Fragment",
+  "obtainDescription": "Dream Fragment"
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "\"I don't want to be your enemy, nor do I plan to destroy anything... Destruction... is not my end goal. It is not a matter of anyone's desires, but an inevitable conclusion.\nEmbrace IT... You will come to realize that resistance is futile.\"",
+  "description": "An item obtained from defeating Dreamless in Somnoire.",
+  "obtainDescription": "An item obtained from defeating Dreamless in Somnoire."
+}

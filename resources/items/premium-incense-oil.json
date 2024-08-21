@@ -1,6 +1,8 @@
 {
-  "bgDescription": "An extremely rare seasoning with an unrivaled and wonderful aroma that can be smelled when the bottle is opened.\nIt is said that adding it to Dish not only adds flavor to the dish, but depending on the Dish, it also improves a certain Sensor ability of the eater.\n\"What the hell is that smell? It smells so good ......\"\n\"I know ...... It's the smell of motor oil! It's the best smelling motor oil I've ever smelled!\"\n\"What?\"",
-  "description": "Material for Synthesis",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "An extremely rare seasoning with an unrivaled aroma that fills your nose once the bottle is uncorked.\nIt is said this seasoning not only enhances the dish's flavor but also, depending on the ingredients used, changes one's perceptions in a particular way.\n \"What do I smell? It smells so good...\"\n \"Oh, I know... It's the aroma of motor oil! The best I've ever smelled!\"\n \"Huh?\"",
+  "description": "An ingredient used to cook special dishes.",
   "modifiedTime": "2024-07-09T15:18:54.107Z",
+  "obtainDescription": "An ingredient used to cook special dishes.",
   "publishedTime": "2024-06-28T15:43:21.969Z"
 }

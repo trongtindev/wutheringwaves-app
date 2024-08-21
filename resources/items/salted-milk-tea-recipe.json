@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A recipe that details how to make Salted Milk Tea.",
   "description": "Used to learn how to cook Salted Milk Tea.",
   "modifiedTime": "2024-07-09T15:18:54.190Z",
+  "obtainDescription": "Used to learn how to cook Salted Milk Tea.",
   "publishedTime": "2024-06-28T15:43:21.987Z"
 }

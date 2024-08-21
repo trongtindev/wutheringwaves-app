@@ -1,6 +1,8 @@
 {
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "The special supply pack issued by the Store. It is delivered to the customer by Lollo Logistics. Open to claim rich supplies.",
-  "description": "Open to claim one medium material for weapon breakthrough or skill upgrade of your choice:\n<color=Rare3>Reactive Metallic Drip *1</color>\n<color=Rare3>Extracted Phlogiston *1</color>\n<color=Rare3>Adagio Helix *1</color>\n<color=Rare3>Waveworn Residue 226 *1</color>\n<color=Rare3>Cadence Bud *1</color>",
+  "description": "Open to claim one medium material for weapon breakthrough or skill upgrade of your choice:\nReactive Metallic Drip *1\nExtracted Phlogiston *1\nAdagio Helix *1\nWaveworn Residue 226 *1\nCadence Bud *1",
   "modifiedTime": "2024-07-09T15:18:54.077Z",
+  "obtainDescription": "Reach designated Union Levels to claim this Supply Pack.",
   "publishedTime": "2024-06-28T15:43:21.964Z"
 }

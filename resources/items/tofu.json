@@ -1,7 +1,8 @@
 {
-  "$schema": "./.schema.json",
+  "$schema": "../../public/schema/item.schema.json",
   "bgDescription": "A nutritious ingredient made from beans, widely used in various specialty dishes due to its unique taste.",
   "description": "Ingredients obtained through culinary research.",
   "modifiedTime": "2024-07-09T15:18:54.369Z",
+  "obtainDescription": "Ingredients obtained through culinary research.",
   "publishedTime": "2024-06-28T15:43:22.026Z"
 }

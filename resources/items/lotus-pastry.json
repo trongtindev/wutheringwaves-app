@@ -1,6 +1,8 @@
 {
-  "bgDescription": "One of the special desserts in Mt. Firmament. It resembles the fruit of the Silver Lotus. In fact, the residents of Mt. Firmament do incorporate Silver Lotus into this dessert.\nIt is said that the Silver Lotus only grows in thick snow, blooming amidst the cold. The people of Mt. Firmament believe this flower blooms in deep snow to show gratitude to the forest and to uphold a belief in eternal blossoming. Thus, they have wrapped this promise within this pastry. As the stars rise and the moon sets, as snow falls and melts, the people of Mt. Firmament will never forget their promises.",
-  "description": "Increase Crit. DMG of all Resonators in the team by 32% for 30 minutes. Only effective for your own characters in the multiplayer mode.",
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "One of the specialties in Mt. Firmament. It resembles the fruit of the Silver Lotus. In fact, the residents of Mt. Firmament do incorporate Silver Lotus into this pastry.\nIt is said that the Silver Lotus only grows in thick snow, blooming amidst the cold. The residents on Mt. Firmament believe that this flower blooms in deep snow to show gratitude to the forest and to uphold a belief in eternal blossoming. Thus, they have wrapped this promise within this pastry. As the stars rise and the moon sets, as snow falls and melts, the people of Mt. Firmament will never forget their promises.",
+  "description": "Increases Crit. DMG of all Resonators on the team by 32%, lasting for 30m. Only effective for your own Resonators in Co-Op Mode.",
   "modifiedTime": "2024-07-09T15:18:53.890Z",
+  "obtainDescription": "Increases Crit. DMG of all Resonators on the team by 32%, lasting for 30m. Only effective for your own Resonators in Co-Op Mode.",
   "publishedTime": "2024-06-28T15:43:21.934Z"
 }

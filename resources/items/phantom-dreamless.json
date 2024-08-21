@@ -1,0 +1,6 @@
+{
+  "$schema": "../../public/schema/item.schema.json",
+  "bgDescription": "",
+  "description": "Unlocks the Phantom Appearance of the corresponding Echo.",
+  "obtainDescription": "Unlock Phantom Appearance"
+}
