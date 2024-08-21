@@ -184,7 +184,7 @@
       "slug": "solitary-etude",
       "name": "Solitary Etude",
       "params": ["2"],
-      "description": "During Resonance Liberation <strong>Burning Rhapsody</strong>, Mortefi launches Coordinated Attacks when the on-field character performs their Resonance Skills, firing {0} Resonance Liberation's <strong>Marcato</strong> hits, dealing <strong class=\"color-fusion\">Fusion Damage</strong>."
+      "description": "During Resonance Liberation **Burning Rhapsody**, Mortefi launches Coordinated Attacks when the on-field character performs their Resonance Skills, firing {0} Resonance Liberation's **Marcato** hits, dealing Fusion Damage**."
     },
     {
       "idx": "Resonance 2-4",
@@ -198,28 +198,28 @@
       "slug": "flaming-recitativo",
       "name": "Flaming Recitativo",
       "params": ["30%"],
-      "description": "During Resonance Liberation <strong>Burning Rhapsody</strong>, the Crit. DMG of Resonance Liberation's <strong>Marcato</strong> is increased by {0}."
+      "description": "During Resonance Liberation **Burning Rhapsody**, the Crit. DMG of Resonance Liberation's **Marcato** is increased by {0}."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "cathartic-waltz",
       "name": "Cathartic Waltz",
       "params": ["7"],
-      "description": "The duration of Resonance Liberation <strong>Burning Rhapsody</strong> is extended by {0}s."
+      "description": "The duration of Resonance Liberation **Burning Rhapsody** is extended by {0}s."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "funerary-quartet",
       "name": "Funerary Quartet",
       "params": ["4", "50%"],
-      "description": "When Resonance Skill <strong>Passionate Variation</strong> or Resonance Skill <strong>Fury Fugue</strong> hits a target, {0} Resonance Liberation's <strong>Marcato</strong> hits will be fired, dealing <strong class=\"color-fusion\">Fusion Damage</strong>. DMG of Resonance Liberation's <strong>Marcato</strong> fired in this way is reduced by {1}."
+      "description": "When Resonance Skill **Passionate Variation** or Resonance Skill **Fury Fugue** hits a target, {0} Resonance Liberation's **Marcato** hits will be fired, dealing Fusion Damage**. DMG of Resonance Liberation's **Marcato** fired in this way is reduced by {1}."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "apoplectic-instrumental",
       "name": "Apoplectic Instrumental",
       "params": ["20%", "20"],
-      "description": "When Resonance Liberation <strong>Violent Finale</strong> is cast, ATK of all team members is increased by {0} for {1}s."
+      "description": "When Resonance Liberation **Violent Finale** is cast, ATK of all team members is increased by {0} for {1}s."
     }
   ],
   "skillPriority": [
@@ -234,43 +234,43 @@
       "slug": "impromptu-show",
       "name": "Impromptu Show",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nMortefi uses his dual pistols and flames to perform up to 4 consecutive shots, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Heavy Attack</strong>\nMortefi enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nMortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "**Basic Attack**\nMortefi uses his dual pistols and flames to perform up to 4 consecutive shots, dealing Fusion DMG**.\n \n**Heavy Attack**\nMortefi enters the aiming state for a more powerful shot.\nThe aimed shot fired after charging finishes deals Fusion DMG**.\n \n**Mid-air Attack**\nMortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG**.\n \n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Fusion DMG**."
     },
     {
       "slug": "passionate-variation",
       "name": "Passionate Variation",
       "type": "Resonance Skill",
-      "description": "Launch a flashing lightning of flames forward, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "Launch a flashing lightning of flames forward, dealing Fusion DMG**."
     },
     {
       "slug": "violent-finale",
       "name": "Violent Finale",
       "type": "Resonance Liberation",
-      "description": "Deal <strong class=\"color-fusion\">Fusion DMG</strong>, and apply <strong>Burning Rhapsody</strong> to all characters in the team.\n \n<strong>Burning Rhapsody</strong>\nWhen the on-field character's <strong>Basic Attack</strong> hits the target, Mortefi launches a Coordinated Attack, firing <strong class=\"color-fusion\">1</strong> <strong>Marcato</strong>.\nWhen the on-field character's <strong>Heavy Attack</strong> hits the target, Mortefi launches a Coordinated Attack, firing <strong class=\"color-fusion\">2</strong> <strong>Marcato</strong>.\nMortefi can launch one Coordinated Attack every <strong class=\"color-fusion\">0.35</strong>s.\n \n<strong>Marcato</strong>\nDeals <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "Deal Fusion DMG**, and apply **Burning Rhapsody** to all characters in the team.\n \n**Burning Rhapsody**\nWhen the on-field character's **Basic Attack** hits the target, Mortefi launches a Coordinated Attack, firing 1** **Marcato**.\nWhen the on-field character's **Heavy Attack** hits the target, Mortefi launches a Coordinated Attack, firing 2** **Marcato**.\nMortefi can launch one Coordinated Attack every 0.35**s.\n \n**Marcato**\nDeals Fusion DMG**."
     },
     {
       "slug": "harmonic-control",
       "name": "Harmonic Control",
       "type": "Inherent Skill",
-      "description": "After casting Resonance Skill <strong>Passionate Variation</strong>, the damage of Resonance Skill <strong>Fury Fugue</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">25%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">8</strong>s."
+      "description": "After casting Resonance Skill **Passionate Variation**, the damage of Resonance Skill **Fury Fugue** is increased by 25%** for 8**s."
     },
     {
       "slug": "rhythmic-vibrato",
       "name": "Rhythmic Vibrato",
       "type": "Inherent Skill",
-      "description": "During Resonance Liberation <strong>Burning Rhapsody</strong>, each hit of Resonance Liberation <strong>Marcato</strong> will increase the damage of the next Resonance Liberation <strong>Marcato</strong> by <strong style=\"color: var(--theme-palette-color-1);\">1.5%</strong>, which can be triggered once every <strong style=\"color: var(--theme-palette-color-1);\">0.35</strong>s, stacking up to <strong style=\"color: var(--theme-palette-color-1);\">50</strong> times.\r\nThe effect will be reset after Resonance Liberation <strong>Burning Rhapsody</strong> ends."
+      "description": "During Resonance Liberation **Burning Rhapsody**, each hit of Resonance Liberation **Marcato** will increase the damage of the next Resonance Liberation **Marcato** by 1.5%**, which can be triggered once every 0.35**s, stacking up to 50** times.\r\nThe effect will be reset after Resonance Liberation **Burning Rhapsody** ends."
     },
     {
       "slug": "dissonance",
       "name": "Dissonance",
       "type": "Intro Skill",
-      "description": "Attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "Attack the target, dealing Fusion DMG**."
     },
     {
       "slug": "fury-fugue",
       "name": "Fury Fugue",
       "type": "Forte Circuit",
-      "description": "<strong>Resonance Skill: Fury Fugue</strong>\nWhen Mortefi's \"Annoyance\" reaches <strong class=\"color-fusion\">100</strong>, his <strong>Resonance Skill</strong> is replaced with <strong>Fury Fudge</strong>.\nWhen casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill damage.\n \n<strong>Annoyance</strong>\nMortefi can hold up to <strong class=\"color-fusion\">100</strong> Annoyance.\nWhen Normal Attack <strong>Impromptu Show</strong> hits the target, “Annoyance” is restored.\nWhen Intro Skill <strong>Dissonance</strong> hits the target, “Annoyance” is restored.\nWhen Resonance Skill <strong>Passionate Variation</strong> hits the target, “Annoyance” is restored.\nWithin <strong class=\"color-fusion\">5</strong>s after casting <strong>Passionate Variation</strong>, Basic Attack <strong>Impromptu</strong> that hits the target additionally restores “Annoyance”."
+      "description": "**Resonance Skill: Fury Fugue**\nWhen Mortefi's \"Annoyance\" reaches 100**, his **Resonance Skill** is replaced with **Fury Fudge**.\nWhen casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG**, considered as Resonance Skill damage.\n \n**Annoyance**\nMortefi can hold up to 100** Annoyance.\nWhen Normal Attack **Impromptu Show** hits the target, “Annoyance” is restored.\nWhen Intro Skill **Dissonance** hits the target, “Annoyance” is restored.\nWhen Resonance Skill **Passionate Variation** hits the target, “Annoyance” is restored.\nWithin 5**s after casting **Passionate Variation**, Basic Attack **Impromptu** that hits the target additionally restores “Annoyance”."
     },
     {
       "slug": "skillful-cooking",

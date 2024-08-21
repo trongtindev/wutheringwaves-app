@@ -129,7 +129,6 @@ export default defineNuxtConfig({
       '/guides/rss',
       '/guides/editor',
       '/errors',
-      '/commit',
       '/calculator/import',
       '/calculator/inventory',
       '/calculator/simulation',

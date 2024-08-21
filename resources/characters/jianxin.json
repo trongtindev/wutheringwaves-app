@@ -170,42 +170,42 @@
       "slug": "verdant-branchlet",
       "name": "Verdant Branchlet",
       "params": ["100%", "10"],
-      "description": "After casting Intro Skill <strong>Essence of Tao</strong>, Jianxin gains {0} extra \"Chi\" from <strong>Basic Attacks</strong> for {1}s."
+      "description": "After casting Intro Skill **Essence of Tao**, Jianxin gains {0} extra \"Chi\" from **Basic Attacks** for {1}s."
     },
     {
       "idx": "ResonantChain_440_NodeIndex",
       "slug": "tao-seeker-s-journey",
       "name": "Tao Seeker's Journey",
       "params": ["1"],
-      "description": "Resonance Skill <strong>Calming Air</strong> can be used 1 more time."
+      "description": "Resonance Skill **Calming Air** can be used 1 more time."
     },
     {
       "idx": "ResonantChain_444_NodeIndex",
       "slug": "principles-of-wuwei",
       "name": "Principles of Wuwei",
       "params": ["2.5"],
-      "description": "After staying in the <strong>Parry Stance</strong> of Resonance Skill <strong>Calming Air</strong> for {0}s, Resonance Skill <strong>Chi Counter</strong> becomes immediately available."
+      "description": "After staying in the **Parry Stance** of Resonance Skill **Calming Air** for {0}s, Resonance Skill **Chi Counter** becomes immediately available."
     },
     {
       "idx": "ResonantChain_448_NodeIndex",
       "slug": "multitide-reflection",
       "name": "Multitide Reflection",
       "params": ["80%", "14"],
-      "description": "When performing Forte Circuit <strong>Heavy Attack: Primordial Chi Spiral</strong>, Jianxin's Resonance Liberation <strong>Purification Force Field</strong> damage is increased by {0} for {1}s."
+      "description": "When performing Forte Circuit **Heavy Attack: Primordial Chi Spiral**, Jianxin's Resonance Liberation **Purification Force Field** damage is increased by {0} for {1}s."
     },
     {
       "idx": "ResonantChain_452_NodeIndex",
       "slug": "mirroring-introspection",
       "name": "Mirroring Introspection",
       "params": ["33%"],
-      "description": "The range of Resonance Liberation <strong>Purification Force Field</strong> is increased by {0}."
+      "description": "The range of Resonance Liberation **Purification Force Field** is increased by {0}."
     },
     {
       "idx": "ResonantChain_456_NodeIndex",
       "slug": "truth-from-within",
       "name": "Truth from Within",
       "params": ["5", "1", "556.67%"],
-      "description": "During Forte Circuit <strong>Heavy Attack: Primordial Qi Spiral</strong>, if Jianxin performs <strong>Pushing Punch</strong>, enhanced Resonance Skill <strong>Special Chi Counter</strong> can be used {1} time(s) in {0}s.  <strong>Special Chi Counter</strong>: Deals <strong class=\"color-aero\">Aero DMG</strong> equal to {2} of Jianxin's ATK, considered as Heavy Attack DMG. Obtain a Zhoutian Progress 4 Shield (Benefits from Inherent Skill <strong>Reflection</strong>'s bonus effect.)"
+      "description": "During Forte Circuit **Heavy Attack: Primordial Qi Spiral**, if Jianxin performs **Pushing Punch**, enhanced Resonance Skill **Special Chi Counter** can be used {1} time(s) in {0}s.  **Special Chi Counter**: Deals Aero DMG** equal to {2} of Jianxin's ATK, considered as Heavy Attack DMG. Obtain a Zhoutian Progress 4 Shield (Benefits from Inherent Skill **Reflection**'s bonus effect.)"
     }
   ],
   "skillPriority": [
@@ -220,43 +220,43 @@
       "slug": "fengyiquan",
       "name": "Fengyiquan",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nJianxin performs up to 4 consecutive attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack</strong>\nJianxin consumes Stamina to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nJianxin consumes Stamina to plunge and unleash a powerful kick, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "**Basic Attack**\nJianxin performs up to 4 consecutive attacks, dealing Aero DMG**.\n \n**Heavy Attack**\nJianxin consumes Stamina to attack the target, dealing Aero DMG**.\n \n**Mid-air Attack**\nJianxin consumes Stamina to plunge and unleash a powerful kick, dealing Aero DMG**.\n \n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Aero DMG**."
     },
     {
       "slug": "calming-air",
       "name": "Calming Air",
       "type": "Resonance Skill",
-      "description": "Hold <strong>Resonance Skill</strong> to enter <strong>Parry Stance</strong>.\n \n<strong>Chi Counter</strong>\nWhen Jianxin is attacked in the <strong>Parry Stance</strong>, she does not take damage and immediately performs <strong>Chi Counter</strong>, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Chi Parry</strong>\nRelease the <strong>Resonance Skill</strong> button during <strong>Parry Stance</strong> to interrupt <strong>Parry Stance</strong> and perform <strong>Chi Parry</strong>, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "Hold **Resonance Skill** to enter **Parry Stance**.\n \n**Chi Counter**\nWhen Jianxin is attacked in the **Parry Stance**, she does not take damage and immediately performs **Chi Counter**, dealing Aero DMG**.\n \n**Chi Parry**\nRelease the **Resonance Skill** button during **Parry Stance** to interrupt **Parry Stance** and perform **Chi Parry**, dealing Aero DMG**."
     },
     {
       "slug": "purification-force-field",
       "name": "Purification Force Field",
       "type": "Resonance Liberation",
-      "description": "Creates a strong wind field, continuously pulling targets within the wind field to the center and causing <strong class=\"color-aero\">Aero DMG</strong>. When the wind field disappears, it will cause <strong class=\"color-aero\">Aero DMG</strong> to all targets within the range again."
+      "description": "Creates a strong wind field, continuously pulling targets within the wind field to the center and causing Aero DMG**. When the wind field disappears, it will cause Aero DMG** to all targets within the range again."
     },
     {
       "slug": "formless-release",
       "name": "Formless Release",
       "type": "Inherent Skill",
-      "description": "Damage of Resonance Liberation <strong>Purification Force Field</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong>."
+      "description": "Damage of Resonance Liberation **Purification Force Field** is increased by 20%**."
     },
     {
       "slug": "reflection",
       "name": "Reflection",
       "type": "Inherent Skill",
-      "description": "The Shield obtained with Heavy Attack <strong>Primordial Chi Spiral</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">20%</strong>."
+      "description": "The Shield obtained with Heavy Attack **Primordial Chi Spiral** is increased by 20%**."
     },
     {
       "slug": "essence-of-tao",
       "name": "Essence of Tao",
       "type": "Intro Skill",
-      "description": "Pull in targets within the range, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "Pull in targets within the range, dealing Aero DMG**."
     },
     {
       "slug": "primordial-chi-spiral",
       "name": "Primordial Chi Spiral",
       "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: Primordial Chi Spiral</strong>\nWhen \"Chi\" reaches max stacks, hold <strong>Heavy Attack</strong> to cast <strong>Primordial Chi Spiral</strong> and start <strong>Zhoutian Progress</strong>.\n \n<strong>Zhoutian Progress</strong>\nJianxin's anti-interruption is increased, and her the damage taken is reduced by <strong class=\"color-aero\">50%</strong>:\nJianxin continuously consumes \"Chi\" and casts <strong>Chi Strike</strong> to attack targets nearby, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nAs <strong>Zhoutian Progress</strong> accumulates, Jianxin reaches different Zhoutian and gain effects accordingly.\nBefore Minor Zhoutian: Gain Zhoutian Progress 1 shield. When Zhoutian Progress is interrupted, cast <strong>Pushing Punch</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nMinor Zhoutian: Gain Zhoutian Progress 2 shield and cast <strong>Shock</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.  When <strong>Zhoutian Progress</strong> is interrupted, cast <strong>Yielding Pull</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nMajor Zhoutian: Inner: Gain Zhoutian Progress 3 shield and cast <strong>Shock</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>. When Zhoutian Progress is interrupted, cast <strong>Yielding Pull</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nMajor Zhoutian: Outer: Gain Zhoutian Progress 4 shield and cast <strong>Shock</strong> to attack the target, dealing <strong class=\"color-aero\">Aero DMG</strong>.\nWhen you release <strong>Basic Attack</strong> button, interrupt <strong>Zhoutian Progress</strong> and lose all \"Chi\";\nWhen all \"Chi\" is consumed, end <strong>Zhoutian Progress</strong>.\n \nWhen <strong>Zhoutian Progress</strong> ends, regain a shield according to the Zhoutian Progress you reached;\nAs the shield provided by <strong>Heavy Attack: Primordial Chi Spiral</strong> persists, restore HP for the on-field character once every <strong class=\"color-aero\">6</strong>s.\n \n<strong>Chi</strong>\nJianxin can hold up to <strong class=\"color-aero\">120</strong> Chi.\nChi is obtained when a Normal Attack <strong>Fengyiquan</strong> hits the target.\nChi is obtained when the Resonance Skill <strong>Calming Air</strong> is cast.\nChi is obtained when the Resonance Skill <strong>Chi Counter</strong> or Resonance Skill <strong>Chi Parry</strong> hits the target.\nChi is obtained when the Intro Skill <strong>Essence of Tao</strong> hits the target."
+      "description": "**Heavy Attack: Primordial Chi Spiral**\nWhen \"Chi\" reaches max stacks, hold **Heavy Attack** to cast **Primordial Chi Spiral** and start **Zhoutian Progress**.\n \n**Zhoutian Progress**\nJianxin's anti-interruption is increased, and her the damage taken is reduced by 50%**:\nJianxin continuously consumes \"Chi\" and casts **Chi Strike** to attack targets nearby, dealing Aero DMG**.\nAs **Zhoutian Progress** accumulates, Jianxin reaches different Zhoutian and gain effects accordingly.\nBefore Minor Zhoutian: Gain Zhoutian Progress 1 shield. When Zhoutian Progress is interrupted, cast **Pushing Punch** to attack the target, dealing Aero DMG**.\nMinor Zhoutian: Gain Zhoutian Progress 2 shield and cast **Shock** to attack the target, dealing Aero DMG**.  When **Zhoutian Progress** is interrupted, cast **Yielding Pull** to attack the target, dealing Aero DMG**.\nMajor Zhoutian: Inner: Gain Zhoutian Progress 3 shield and cast **Shock** to attack the target, dealing Aero DMG**. When Zhoutian Progress is interrupted, cast **Yielding Pull** to attack the target, dealing Aero DMG**.\nMajor Zhoutian: Outer: Gain Zhoutian Progress 4 shield and cast **Shock** to attack the target, dealing Aero DMG**.\nWhen you release **Basic Attack** button, interrupt **Zhoutian Progress** and lose all \"Chi\";\nWhen all \"Chi\" is consumed, end **Zhoutian Progress**.\n \nWhen **Zhoutian Progress** ends, regain a shield according to the Zhoutian Progress you reached;\nAs the shield provided by **Heavy Attack: Primordial Chi Spiral** persists, restore HP for the on-field character once every 6**s.\n \n**Chi**\nJianxin can hold up to 120** Chi.\nChi is obtained when a Normal Attack **Fengyiquan** hits the target.\nChi is obtained when the Resonance Skill **Calming Air** is cast.\nChi is obtained when the Resonance Skill **Chi Counter** or Resonance Skill **Chi Parry** hits the target.\nChi is obtained when the Intro Skill **Essence of Tao** hits the target."
     },
     {
       "slug": "skillful-cooking",

@@ -89,16 +89,6 @@
     "form": { "submit": "Post comment" },
     "replies": "Replies"
   },
-  "commit": {
-    "character": {
-      "overview": "Overview",
-      "quote": "Quote",
-      "description": "Description",
-      "skills": "Skills"
-    },
-    "successfully": "Thank you for your contribution, your request has been sent and is being reviewed.",
-    "viewPullRequest": "View Pull Request"
-  },
   "common": {
     "name": "Name",
     "time": "Time",

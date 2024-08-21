@@ -9,7 +9,7 @@ export const parseContent = (content: string) => {
 
 export const parseMarkdown = (input: string) => {
   const md = markdownit({ html: true });
-  return md.render(input);
+  return md.render(input.replaceAll('\n', '<br/>'));
 };
 
 export const parseColours = (input: string) => {

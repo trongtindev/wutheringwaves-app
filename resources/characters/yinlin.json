@@ -203,42 +203,42 @@
       "slug": "morality-s-crossroads",
       "name": "Morality's Crossroads",
       "params": ["70%"],
-      "description": "Resonance Skill <strong>Magnetic Roar</strong> and <strong>Lightning Execution</strong> deal {0} more damage."
+      "description": "Resonance Skill **Magnetic Roar** and **Lightning Execution** deal {0} more damage."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "ensnarled-by-rapport",
       "name": "Ensnarled by Rapport",
       "params": ["100%", "5", "5"],
-      "description": "Resonance Skill <strong>Electromagnetic Blast</strong> recovers an additional {1} \"Judgement Point(s)\" and {2} Resonance Energy on hit."
+      "description": "Resonance Skill **Electromagnetic Blast** recovers an additional {1} \"Judgement Point(s)\" and {2} Resonance Energy on hit."
     },
     {
       "idx": "Resonance 3-4",
       "slug": "unyielding-verdict",
       "name": "Unyielding Verdict",
       "params": ["55%"],
-      "description": "Forte Circuit <strong>Judgment Strike</strong>'s DMG multiplier is increased by 55%."
+      "description": "Forte Circuit **Judgment Strike**'s DMG multiplier is increased by 55%."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "steadfast-conviction",
       "name": "Steadfast Conviction",
       "params": ["20%", "12"],
-      "description": "When Forte Circuit <strong>Judgment Strike</strong> hits a target, the ATK of all team members is increased by {0} for {1}s."
+      "description": "When Forte Circuit **Judgment Strike** hits a target, the ATK of all team members is increased by {0} for {1}s."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "resounding-will",
       "name": "Resounding Will",
       "params": ["100%"],
-      "description": "Resonance Liberation <strong>Thundering Wrath</strong> deals {0} extra damage to targets with Forte Circuit's <strong>Sinner's Mark</strong> or <strong>Punishment Mark</strong>."
+      "description": "Resonance Liberation **Thundering Wrath** deals {0} extra damage to targets with Forte Circuit's **Sinner's Mark** or **Punishment Mark**."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "pursuit-of-justice",
       "name": "Pursuit of Justice",
       "params": ["10"],
-      "description": "In the first 30s after casting Resonance Liberation <strong>Thundering Wrath</strong>, when Yinlin's <strong>Basic Attack</strong> hits a target, <strong>Furious Thunder</strong> will be triggered, dealing <strong class=\"color-electro\">Electro DMG</strong> equal to 419.59% of Yinlin's ATK. Every <strong>Basic Attack</strong> hit can trigger <strong>Furious Thunder</strong> 1 time, up to 4 times. This is considered Resonance Skill DMG."
+      "description": "In the first 30s after casting Resonance Liberation **Thundering Wrath**, when Yinlin's **Basic Attack** hits a target, **Furious Thunder** will be triggered, dealing Electro DMG** equal to 419.59% of Yinlin's ATK. Every **Basic Attack** hit can trigger **Furious Thunder** 1 time, up to 4 times. This is considered Resonance Skill DMG."
     }
   ],
   "skills": [
@@ -246,43 +246,43 @@
       "slug": "zapstring-s-dance",
       "name": "Zapstring's Dance",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nYinlin controls the puppet \"Zapstring\" to perform up to 4 attacks, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Heavy Attack</strong>\nYinlin consumes Stamina to control \"Zapstring\", dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nYinlin consumes Stamina to control \"Zapstring\" and perform a Mid-air Plunging Attack, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+      "description": "**Basic Attack**\nYinlin controls the puppet \"Zapstring\" to perform up to 4 attacks, dealing Electro DMG**.\n \n**Heavy Attack**\nYinlin consumes Stamina to control \"Zapstring\", dealing Electro DMG**.\n \n**Mid-air Attack**\nYinlin consumes Stamina to control \"Zapstring\" and perform a Mid-air Plunging Attack, dealing Electro DMG**.\n \n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Electro DMG**."
     },
     {
       "slug": "magnetic-roar",
       "name": "Magnetic Roar",
       "type": "Resonance Skill",
-      "description": "<strong>Magnetic Roar</strong>\nThe puppet \"Zapstring\" deals <strong class=\"color-electro\">Electro DMG</strong> to the target, and puts Yinlin into the <strong>Execution Mode</strong>.\n \n<strong>Execution Mode</strong>\n<strong>Basic Attack</strong> and <strong>Dodge Counter</strong> will trigger 1 <strong>Electromagnetic Blast</strong> when hitting a target.\nEach stage of <strong>Basic Attack</strong> or <strong>Dodge Counter</strong> can only trigger 1 <strong>Electromagnetic Blast</strong>, up to 4 times.\n \n<strong>Electromagnetic Blast</strong>\nAttack all targets marked with Resonance Circuit <strong>Sinner's Mark</strong>, dealing <strong class=\"color-electro\">Electro DMG</strong>.\n \n<strong>Lightning Execution</strong>\nUse Resonance Skill after casting Resonance Skill <strong>Magnetic Roar</strong> to cast <strong>Lightning Execution</strong> to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>.\nIf Resonance Skill <strong>Lightning Execution</strong> is not activated in a while or this Character is switched, this Skill will be put on Cooldown."
+      "description": "**Magnetic Roar**\nThe puppet \"Zapstring\" deals Electro DMG** to the target, and puts Yinlin into the **Execution Mode**.\n \n**Execution Mode**\n**Basic Attack** and **Dodge Counter** will trigger 1 **Electromagnetic Blast** when hitting a target.\nEach stage of **Basic Attack** or **Dodge Counter** can only trigger 1 **Electromagnetic Blast**, up to 4 times.\n \n**Electromagnetic Blast**\nAttack all targets marked with Resonance Circuit **Sinner's Mark**, dealing Electro DMG**.\n \n**Lightning Execution**\nUse Resonance Skill after casting Resonance Skill **Magnetic Roar** to cast **Lightning Execution** to attack the target, dealing Electro DMG**.\nIf Resonance Skill **Lightning Execution** is not activated in a while or this Character is switched, this Skill will be put on Cooldown."
     },
     {
       "slug": "thundering-wrath",
       "name": "Thundering Wrath",
       "type": "Resonance Liberation",
-      "description": "Command \"Zapstring\" to call for thunder to fall upon a large range, dealing <strong class=\"color-electro\">Electro DMG</strong>."
+      "description": "Command \"Zapstring\" to call for thunder to fall upon a large range, dealing Electro DMG**."
     },
     {
       "slug": "pain-immersion",
       "name": "Pain Immersion",
       "type": "Inherent Skill",
-      "description": "After using Resonance Skill <strong>Magnetic Roar</strong>, Yinlin's Crit. Rate is increased by <strong style=\"color: var(--theme-palette-color-1);\">15%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">5</strong>s."
+      "description": "After using Resonance Skill **Magnetic Roar**, Yinlin's Crit. Rate is increased by 15%** for 5**s."
     },
     {
       "slug": "deadly-focus",
       "name": "Deadly Focus",
       "type": "Inherent Skill",
-      "description": "The damage of Resonance Skill <strong>Lightning Execution</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> when hitting targets marked with \"Sinner's Mark\", and Yinlin's ATK is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong> for <strong style=\"color: var(--theme-palette-color-1);\">4</strong>s when this is triggered."
+      "description": "The damage of Resonance Skill **Lightning Execution** is increased by 10%** when hitting targets marked with \"Sinner's Mark\", and Yinlin's ATK is increased by 10%** for 4**s when this is triggered."
     },
     {
       "slug": "raging-storm",
       "name": "Raging Storm",
       "type": "Intro Skill",
-      "description": "Command puppet \"Zapstring\" to attack, dealing <strong class=\"color-electro\">Electro DMG</strong> in a large range."
+      "description": "Command puppet \"Zapstring\" to attack, dealing Electro DMG** in a large range."
     },
     {
       "slug": "chameleon-cipher",
       "name": "Chameleon Cipher",
       "type": "Forte Circuit",
-      "description": "<strong>Chameleon Cipher</strong>\nWhen Yinlin's \"Judgment Points\" is full, her <strong>Heavy Attack</strong> is replaced with <strong>Chameleon Cipher</strong>, which consumes all \"Judgment Points\" to attack the target, dealing <strong class=\"color-electro\">Electro DMG</strong>. When it hits a target marked with <strong>Sinner's Mark</strong>, the <strong>Sinner's Mark</strong> is replaced with <strong>Punishment Mark</strong>, lasting for <strong class=\"color-electro\">18</strong>s.\n \n<strong>Sinner's Mark</strong>\nNormal Attack <strong>Zapstring's Dance</strong>, Resonance Liberation <strong>Thundering Wrath</strong>, and Intro Skill <strong>Roaring Storm</strong> will apply <strong>Sinner's Mark</strong> on hit.\n<strong>Sinner's Mark</strong> is removed when Yinlin exits.\n \n<strong>\"Punishment Mark\"</strong>\nWhen a target marked with <strong>Punishment Mark</strong> is damaged, <strong>Judgement Strike</strong> will fall, dealing <strong class=\"color-electro\">Electro DMG</strong> to all targets marked with <strong>Punishment Mark</strong>. This can be triggered up to once per second.\n \n<strong>Judgment Points</strong>\nYinlin can hold up to <strong class=\"color-electro\">100</strong> Judgement Points.\nWhen Normal Attack <strong>Zapstring's Dance</strong> hits a target, restores \"Judgment Points\".\nUpon casting Resonance Skill <strong>Magnetic Roar</strong>, restores \"Judgment Points\".\nWhen Resonance Skill <strong>Electromagnetic Blast</strong> hits a target, restores \"Judgment Points\".\nUpon casting Resonance Skill <strong>Magnetic Roar</strong>, restores \"Judgment Points\"."
+      "description": "**Chameleon Cipher**\nWhen Yinlin's \"Judgment Points\" is full, her **Heavy Attack** is replaced with **Chameleon Cipher**, which consumes all \"Judgment Points\" to attack the target, dealing Electro DMG**. When it hits a target marked with **Sinner's Mark**, the **Sinner's Mark** is replaced with **Punishment Mark**, lasting for 18**s.\n \n**Sinner's Mark**\nNormal Attack **Zapstring's Dance**, Resonance Liberation **Thundering Wrath**, and Intro Skill **Roaring Storm** will apply **Sinner's Mark** on hit.\n**Sinner's Mark** is removed when Yinlin exits.\n \n**\"Punishment Mark\"**\nWhen a target marked with **Punishment Mark** is damaged, **Judgement Strike** will fall, dealing Electro DMG** to all targets marked with **Punishment Mark**. This can be triggered up to once per second.\n \n**Judgment Points**\nYinlin can hold up to 100** Judgement Points.\nWhen Normal Attack **Zapstring's Dance** hits a target, restores \"Judgment Points\".\nUpon casting Resonance Skill **Magnetic Roar**, restores \"Judgment Points\".\nWhen Resonance Skill **Electromagnetic Blast** hits a target, restores \"Judgment Points\".\nUpon casting Resonance Skill **Magnetic Roar**, restores \"Judgment Points\"."
     },
     {
       "slug": "skillful-cooking",

@@ -177,28 +177,28 @@
       "slug": "wooly-s-fairy-tale",
       "name": "Wooly's Fairy Tale",
       "params": ["3%", "4", "6"],
-      "description": "When <strong>Basic Attack</strong> hits a target, Encore's Fusion DMG Bonus is increased by {0}, stacking up to {1} times for {2}s."
+      "description": "When **Basic Attack** hits a target, Encore's Fusion DMG Bonus is increased by {0}, stacking up to {1} times for {2}s."
     },
     {
       "idx": "Resonance II-IV",
       "slug": "sheep-counting-lullaby",
       "name": "Sheep-counting Lullaby",
       "params": ["10", "10"],
-      "description": "Encore additionally restores {0} Resonance Energy when casting Basic Attack <strong>Woolies Attack</strong> or Resonance Skill <strong>Energetic Welcome</strong>. This can be triggered once every {1}s."
+      "description": "Encore additionally restores {0} Resonance Energy when casting Basic Attack **Woolies Attack** or Resonance Skill **Energetic Welcome**. This can be triggered once every {1}s."
     },
     {
       "idx": "Resonance III-IV",
       "slug": "fog-the-black-shores",
       "name": "Fog? The Black Shores!",
       "params": ["40%"],
-      "description": "The DMG multiplier of Heavy Attack <strong>Cloudy: Frenzy</strong> and Heavy Attack <strong>Cosmos: Rupture</strong> is increased by {0}."
+      "description": "The DMG multiplier of Heavy Attack **Cloudy: Frenzy** and Heavy Attack **Cosmos: Rupture** is increased by {0}."
     },
     {
       "idx": "Resonance IV-IV",
       "slug": "adventure-let-s-go",
       "name": "Adventure? Let’s go!",
       "params": ["20%", "30"],
-      "description": "Heavy Attack <strong>Cosmos: Rupture</strong> increases the Fusion DMG Bonus of all team members by {0} for {1}s."
+      "description": "Heavy Attack **Cosmos: Rupture** increases the Fusion DMG Bonus of all team members by {0} for {1}s."
     },
     {
       "idx": "Resonance V-IV",
@@ -212,7 +212,7 @@
       "slug": "woolies-save-the-world",
       "name": "Woolies Save the World!",
       "params": ["1", "5%", "10", "5"],
-      "description": "During Resonance Liberation <strong>Cosmos Rave</strong>, Encore gains {0} stack(s) of \"Lost Lamb\" every time she deals damage, each stack increasing her ATK by {1} for {2}s, stacking up to {3} time(s)."
+      "description": "During Resonance Liberation **Cosmos Rave**, Encore gains {0} stack(s) of \"Lost Lamb\" every time she deals damage, each stack increasing her ATK by {1} for {2}s, stacking up to {3} time(s)."
     }
   ],
   "skillPriority": [
@@ -227,43 +227,43 @@
       "slug": "wooly-attack",
       "name": "Wooly Attack",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nEncore performs up to 4 consecutive attacks, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Basic Attack: Wooly Strike</strong>\nAfter <strong>Basic Attack 4</strong>, press the Basic Attack button to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Heavy Attack</strong>\nEncore consumes STA to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nEncore consumes STA to perform a Mid-Air Plunging Attack, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "**Basic Attack**\nEncore performs up to 4 consecutive attacks, dealing Fusion DMG**.\n \n**Basic Attack: Wooly Strike**\nAfter **Basic Attack 4**, press the Basic Attack button to attack the target, dealing Fusion DMG**.\n \n**Heavy Attack**\nEncore consumes STA to attack the target, dealing Fusion DMG**.\n \n**Mid-air Attack**\nEncore consumes STA to perform a Mid-Air Plunging Attack, dealing Fusion DMG**.\n \n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Fusion DMG**."
     },
     {
       "slug": "flaming-woolies",
       "name": "Flaming Woolies",
       "type": "Resonance Skill",
-      "description": "<strong>Flaming Woolies</strong>\r\nEncore summons Cloudy and Cosmos to attack with burning rays, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\r\n \r\n<strong>Energetic Welcome</strong>\r\nAfter casting <strong>Flaming Woolies</strong>, use <strong>Resonance Skill</strong> to perform <strong>Energetic Welcome</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "**Flaming Woolies**\r\nEncore summons Cloudy and Cosmos to attack with burning rays, dealing Fusion DMG**.\r\n \r\n**Energetic Welcome**\r\nAfter casting **Flaming Woolies**, use **Resonance Skill** to perform **Energetic Welcome**, dealing Fusion DMG**."
     },
     {
       "slug": "cosmos-rave",
       "name": "Cosmos Rave",
       "type": "Resonance Liberation",
-      "description": "As Encore loses control, Cosmos breaks free and wreaks havoc on its surroundings.\n \n<strong>Basic Attack: Cosmos - Frolicking</strong>\nDuring Cosmos Rave, the <strong>Basic Attack</strong> is replaced with <strong>Cosmos - Frolicking</strong>, which performs up to 4 consecutive attacks, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Basic Attack damage.\n \n<strong>Cosmos - Heavy Attack</strong>\nDuring Cosmos Rave, the <strong>Heavy Attack</strong> is replaced with <strong>Cosmos - Heavy Attack</strong>, consuming STA to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Heavy Attack damage.\n \n<strong>Resonance Skill: Cosmos - Rampage</strong>\nDuring Cosmos Rave, <strong>Flaming Woolies</strong> is replaced with <strong>Cosmos - Rampage</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill damage.\n \n<strong>Cosmos - Dodge Counter</strong>\nDuring Cosmos Rave, use <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Basic Attack damage."
+      "description": "As Encore loses control, Cosmos breaks free and wreaks havoc on its surroundings.\n \n**Basic Attack: Cosmos - Frolicking**\nDuring Cosmos Rave, the **Basic Attack** is replaced with **Cosmos - Frolicking**, which performs up to 4 consecutive attacks, dealing Fusion DMG**, considered as Basic Attack damage.\n \n**Cosmos - Heavy Attack**\nDuring Cosmos Rave, the **Heavy Attack** is replaced with **Cosmos - Heavy Attack**, consuming STA to attack the target, dealing Fusion DMG**, considered as Heavy Attack damage.\n \n**Resonance Skill: Cosmos - Rampage**\nDuring Cosmos Rave, **Flaming Woolies** is replaced with **Cosmos - Rampage**, dealing Fusion DMG**, considered as Resonance Skill damage.\n \n**Cosmos - Dodge Counter**\nDuring Cosmos Rave, use **Basic Attack** after a successful **Dodge** to attack the target, dealing Fusion DMG**, considered as Basic Attack damage."
     },
     {
       "slug": "angry-cosmos",
       "name": "Angry Cosmos",
       "type": "Inherent Skill",
-      "description": "During the Resonance Liberation <strong>Cosmos Rave</strong>, when Encore's HP is above <strong style=\"color: var(--theme-palette-color-1);\">70%</strong>, DMG dealt is increased by <strong style=\"color: var(--theme-palette-color-1);\">10%</strong>."
+      "description": "During the Resonance Liberation **Cosmos Rave**, when Encore's HP is above 70%**, DMG dealt is increased by 10%**."
     },
     {
       "slug": "woolies-cheer-dance",
       "name": "Woolies Cheer Dance",
       "type": "Inherent Skill",
-      "description": "When Resonance Skill <strong>Flaming Woolies</strong> or Resonance Skill <strong>Cosmos - Rampage</strong> is cast, Encore's Fusion DMG Bonus is increased by <strong class=\"color-fusion\">10%</strong> for <strong class=\"color-fusion\">10</strong>s."
+      "description": "When Resonance Skill **Flaming Woolies** or Resonance Skill **Cosmos - Rampage** is cast, Encore's Fusion DMG Bonus is increased by 10%** for 10**s."
     },
     {
       "slug": "woolies-can-help",
       "name": "Woolies Can Help!",
       "type": "Intro Skill",
-      "description": "Encore pounces at the enemies with Cosmos, dealing <strong class=\"color-fusion\">Fusion DMG</strong>."
+      "description": "Encore pounces at the enemies with Cosmos, dealing Fusion DMG**."
     },
     {
       "slug": "black-white-woolies",
       "name": "Black & White Woolies",
       "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: Cloudy Frenzy</strong>\nWhen Encore's \"Mayhem\" is full, after casting a <strong>Heavy Attack</strong>, Encore will consume all \"Mayhem\" to enter the Mayhem state, reducing damage taken by <strong class=\"color-fusion\">70%</strong>. Switching Characters does not interrupt the Mayhem state.\nAfter the Mayhem state ends, Encore will cast <strong>Cloudy Frenzy</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Liberation damage.\n \n<strong>Heavy Attack: Cosmos Rupture</strong>\nDuring Cosmos Rampage, when casting <strong>Heavy Attack</strong>, if \"Mayhem\" is full, Encore will consume all \"Mayhem\" to enter Cosmos' Mayhem state, reducing damage taken by <strong class=\"color-fusion\">70%</strong>. Switching Characters does not interrupt the Cosmos' Mayhem state.\nAfter Cosmos' Mayhem state ends, Encore will cast <strong>Cosmos Rupture</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Liberation damage. \n<strong>Mayhem</strong>\nEncore can hold up to <strong class=\"color-fusion\">100</strong> \"Mayhem\".\nWhen Normal Attack <strong>Wooly Attack</strong> hits a target, Encore restores \"Mayhem\".\nWhen Resonance Skill <strong>Flaming Woolies</strong> hits a target, Encore restores \"Mayhem\".\nWhen Resonance Skill <strong>Energetic Welcome</strong> hits a target, Encore restores \"Mayhem\".\nWhen Intro Skill <strong>Woolies Helpers</strong> hits a target, Encore restores \"Mayhem\".\nDuring the duration of Resonance Liberation <strong>Cosmos Rave</strong>, Encore restores \"Mayhem\" when hitting a target."
+      "description": "**Heavy Attack: Cloudy Frenzy**\nWhen Encore's \"Mayhem\" is full, after casting a **Heavy Attack**, Encore will consume all \"Mayhem\" to enter the Mayhem state, reducing damage taken by 70%**. Switching Characters does not interrupt the Mayhem state.\nAfter the Mayhem state ends, Encore will cast **Cloudy Frenzy**, dealing Fusion DMG**, considered as Resonance Liberation damage.\n \n**Heavy Attack: Cosmos Rupture**\nDuring Cosmos Rampage, when casting **Heavy Attack**, if \"Mayhem\" is full, Encore will consume all \"Mayhem\" to enter Cosmos' Mayhem state, reducing damage taken by 70%**. Switching Characters does not interrupt the Cosmos' Mayhem state.\nAfter Cosmos' Mayhem state ends, Encore will cast **Cosmos Rupture**, dealing Fusion DMG**, considered as Resonance Liberation damage. \n**Mayhem**\nEncore can hold up to 100** \"Mayhem\".\nWhen Normal Attack **Wooly Attack** hits a target, Encore restores \"Mayhem\".\nWhen Resonance Skill **Flaming Woolies** hits a target, Encore restores \"Mayhem\".\nWhen Resonance Skill **Energetic Welcome** hits a target, Encore restores \"Mayhem\".\nWhen Intro Skill **Woolies Helpers** hits a target, Encore restores \"Mayhem\".\nDuring the duration of Resonance Liberation **Cosmos Rave**, Encore restores \"Mayhem\" when hitting a target."
     },
     {
       "slug": "skillful-cooking",
@@ -275,7 +275,7 @@
       "slug": "thermal-field",
       "name": "Thermal Field",
       "type": "Outro Skill",
-      "description": "Encore generates a Thermal Field centered around skill target, with a radius of <strong class=\"color-fusion\">3</strong>m. Targets inside the Thermal Field are continuously burned, suffering <strong class=\"color-fusion\">Fusion DMG</strong> equal to <strong class=\"color-fusion\">176.76%</strong> of Encore's ATK every <strong class=\"color-fusion\">1.5</strong>s for <strong class=\"color-fusion\">6</strong>s."
+      "description": "Encore generates a Thermal Field centered around skill target, with a radius of 3**m. Targets inside the Thermal Field are continuously burned, suffering Fusion DMG** equal to 176.76%** of Encore's ATK every 1.5**s for 6**s."
     }
   ],
   "stats": { "hp": 841, "def": 102, "atk": 34, "energy": 125 }

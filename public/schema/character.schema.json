@@ -49,12 +49,7 @@
           "nameLocalized": { "type": "object" },
           "description": { "type": "string" },
           "descriptionLocalized": { "type": "object" },
-          "params": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
+          "params": { "type": "array", "items": { "type": "string" } }
         },
         "required": ["slug", "type", "name", "description"]
       }

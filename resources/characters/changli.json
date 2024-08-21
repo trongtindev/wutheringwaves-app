@@ -199,7 +199,7 @@
       "slug": "hidden-thoughts",
       "name": "Hidden Thoughts",
       "params": ["10%"],
-      "description": "Resonance Skill <strong>Tripartite Flames</strong> and Heavy Attack <strong>Flaming Vow</strong> increases Changli's DMG dealt by {0} and resistance to interruption."
+      "description": "Resonance Skill **Tripartite Flames** and Heavy Attack **Flaming Vow** increases Changli's DMG dealt by {0} and resistance to interruption."
     },
     {
       "idx": "ResonantChain_488_NodeIndex",
@@ -213,7 +213,7 @@
       "slug": "learned-secrets",
       "name": "Learned Secrets",
       "params": ["80%"],
-      "description": "Resonance Liberation <strong>Radiance of Fealty</strong> DMG is increased by {0}."
+      "description": "Resonance Liberation **Radiance of Fealty** DMG is increased by {0}."
     },
     {
       "idx": "ResonantChain_496_NodeIndex",
@@ -227,14 +227,14 @@
       "slug": "sacrificed-gains",
       "name": "Sacrificed Gains",
       "params": ["50%", "50%"],
-      "description": "Heavy Attack <strong>Flaming Vow</strong>'s multiplier is increased by {0}. When Heavy Attack <strong>Flaming Vow</strong> is released, Changli's ATK is increased by an additional {1}."
+      "description": "Heavy Attack **Flaming Vow**'s multiplier is increased by {0}. When Heavy Attack **Flaming Vow** is released, Changli's ATK is increased by an additional {1}."
     },
     {
       "idx": "ResonantChain_504_NodeIndex",
       "slug": "realized-plans",
       "name": "Realized Plans",
       "params": ["40%"],
-      "description": "Resonance Skill <strong>Tripartite Flames</strong>, Heavy Attack <strong>Flaming Vow</strong>, and Resonance Liberation <strong>Radiance of Fealty</strong> ignore an additional {0} of the target's DEF when dealing damage."
+      "description": "Resonance Skill **Tripartite Flames**, Heavy Attack **Flaming Vow**, and Resonance Liberation **Radiance of Fealty** ignore an additional {0} of the target's DEF when dealing damage."
     }
   ],
   "skillPriority": [
@@ -249,13 +249,11 @@
       "slug": "blazing-enlightment",
       "name": "Blazing Enlightment",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nPerform up to 4 consecutive attacks, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\nAfter releasing <strong>Ground Basic Attack Stage 4</strong>, Changli enters <strong>True Sight</strong>, lasting for 12s.\n\n<strong>Mid-air Attack</strong>\nConsume Stamina to perform up to 4 consecutive attacks in mid-air, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\nAfter releasing <strong>Mid-air Attack Stage 4</strong>, Changli enters <strong>True Sight</strong>, lasting for 12s.\n\n<strong>Heavy Attack</strong>\nHold <strong>Basic Attack</strong> on the ground to consume Stamina to perform an upward strike, dealing <strong class=\"color-fusion\">Fusion DMG</strong>. Use <strong>Basic Attack</strong> within a certain time to release <strong>Mid-air Attack Stage 3</strong>.\n\n<strong>Mid-air Heavy Attack</strong>\nShortly after holding <strong>Basic Attack</strong> in mid-air or using Basic Attack <strong>True Sight: Charge</strong>, use <strong>Basic Attack</strong> to consume Stamina to perform a Plunging Attack, dealing <strong class=\"color-fusion\">Fusion DMG</strong>. Use <strong>Basic Attack</strong> within a certain time to release <strong>Basic Attack Stage 3</strong>.\n\n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.",
+      "description": "**Basic Attack**\nPerform up to 4 consecutive attacks, dealing Fusion DMG.\nAfter releasing **Ground Basic Attack Stage 4**, Changli enters **True Sight**, lasting for 12s.\n\n**Mid-air Attack**\nConsume Stamina to perform up to 4 consecutive attacks in mid-air, dealing Fusion DMG.\nAfter releasing **Mid-air Attack Stage 4**, Changli enters **True Sight**, lasting for 12s.\n\n**Heavy Attack**\nHold **Basic Attack** on the ground to consume Stamina to perform an upward strike, dealing Fusion DMG**. Use **Basic Attack** within a certain time to release **Mid-air Attack Stage 3**.\n\n**Mid-air Heavy Attack**\nShortly after holding **Basic Attack** in mid-air or using Basic Attack **True Sight: Charge**, use **Basic Attack** to consume Stamina to perform a Plunging Attack, dealing Fusion DMG. Use **Basic Attack** within a certain time to release **Basic Attack Stage 3**.\n\n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Fusion DMG.",
       "nameLocalized": {
-        "en": "Blazing Enlightment",
         "uk": "Палаюче просвітлення"
       },
       "descriptionLocalized": {
-        "en": "<strong>Basic Attack</strong>\nPerform up to 4 consecutive attacks, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\nAfter releasing <strong>Ground Basic Attack Stage 4</strong>, Changli enters <strong>True Sight</strong>, lasting for 12s.\n\n<strong>Mid-air Attack</strong>\nConsume Stamina to perform up to 4 consecutive attacks in mid-air, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\nAfter releasing <strong>Mid-air Attack Stage 4</strong>, Changli enters <strong>True Sight</strong>, lasting for 12s.\n\n<strong>Heavy Attack</strong>\nHold <strong>Basic Attack</strong> on the ground to consume Stamina to perform an upward strike, dealing <strong class=\"color-fusion\">Fusion DMG</strong>. Use <strong>Basic Attack</strong> within a certain time to release <strong>Mid-air Attack Stage 3</strong>.\n\n<strong>Mid-air Heavy Attack</strong>\nShortly after holding <strong>Basic Attack</strong> in mid-air or using Basic Attack <strong>True Sight: Charge</strong>, use <strong>Basic Attack</strong> to consume Stamina to perform a Plunging Attack, dealing <strong class=\"color-fusion\">Fusion DMG</strong>. Use <strong>Basic Attack</strong> within a certain time to release <strong>Basic Attack Stage 3</strong>.\n\n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.",
         "uk": "<strong>Базова Атака</strong>\nВиконує до 4 атак поспіль, завдаючи <strong class=\"color-fusion\">Ф'южн шкоду</strong>.\nПісля нанесення <strong>Базову атаку 4 стадії на землі</strong>, Чанлі входить в <strong>Істинний погляд</strong>, який триває 12 сек.\n\n<strong>Атака в повітрі</strong>\nВикористовуючи витривалість, можна виконати до 4 атак поспіль у повітрі, завдаючи  <strong class=\"color-fusion\">Ф'южн шкоду</strong>.\nПісля нанесення <strong>Атаки в повітрі 4 стадія</strong>, Чанлі входить в <strong>Істинний погляд</strong>, який триває 12 сек.\n\n<strong>Потужна атака</strong>\nЗатискуючи <strong>Базову Атаку</strong> на землі витрачає Витривалість, щоб виконати підкидуваний удар вгору, наносячи <strong class=\"color-fusion\">Ф'южн шкоду</strong>. Використовуючи <strong>Базову Атаку</strong> протягом певного часу для того, щоб вивільнити <strong>Атаку в повітрі 3 стадія</strong>.\n\n<strong>Потужна Атака в повітрі</strong>\nНевдовзі після проведення <strong>Базової Атаки</strong> у повітрі або використовуючи Базову Атаку  <strong>Істинний погляд: Charge</strong>, використайте <strong>Базову Атаку</strong>, щоб використати Витривалість для нанесення a Атаку в падінні, наносячи <strong class=\"color-fusion\">Ф'южн шкоду</strong>.  Використовуючи <strong>Базову Атаку</strong> протягом певного часу для того, щоб вивільнити <strong>Базову атаку 3 стадії</strong>.\n\n<strong>Бонус парирування</strong>\nВикористайте <strong>Базову Атаку</strong> після успішного <strong>Парирування</strong>, щоб нанести  <strong class=\"color-fusion\">Ф'южн шкоду</strong> ворогу."
       }
     },
@@ -263,13 +261,11 @@
       "slug": "tripartite-flames",
       "name": "Tripartite Flames",
       "type": "Resonance Skill",
-      "description": "<strong>True Sight: Capture</strong>\nAfter releasing <strong>Resonance Skill</strong>, Changli rapidly attacks the enemy and enters <strong>True Sight</strong>, lasting for 12s. In the end, Changli releases a Plunging Attack, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n<strong>True Sight: Capture</strong> has 2 initial attempts and can be used up to 2 times. The number of attempts is increased by 1 every 12s.\n\n<strong>Basic Attack: True Sight - Conquest</strong>\nWhen in <strong>True Sight</strong>, if Changli uses <strong>Ground Basic Attack</strong>, she releases <strong>True Sight: Conquest</strong>, rapidly approaching the enemy and dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill DMG. After releasing <strong>True Sight: Conquest</strong>, <strong>True Sight</strong> ends.\n\n<strong>Basic Attack: True Sight - Charge</strong>\nWhen in <strong>True Sight</strong>, if Changli <strong>jumps</strong> or uses <strong>Basic Attack</strong> in mid-air, she releases <strong>True Sight: Charge</strong>, dashing towards the enemy and dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill DMG. After releasing <strong>True Sight: Charge</strong>, <strong>True Sight</strong> ends.",
+      "description": "**True Sight: Capture**\nAfter releasing **Resonance Skill**, Changli rapidly attacks the enemy and enters **True Sight**, lasting for 12s. In the end, Changli releases a Plunging Attack, dealing Fusion DMG**.\n**True Sight: Capture** has 2 initial attempts and can be used up to 2 times. The number of attempts is increased by 1 every 12s.\n\n**Basic Attack: True Sight - Conquest**\nWhen in **True Sight**, if Changli uses **Ground Basic Attack**, she releases **True Sight: Conquest**, rapidly approaching the enemy and dealing Fusion DMG**, considered as Resonance Skill DMG. After releasing **True Sight: Conquest**, **True Sight** ends.\n\n**Basic Attack: True Sight - Charge**\nWhen in **True Sight**, if Changli **jumps** or uses **Basic Attack** in mid-air, she releases **True Sight: Charge**, dashing towards the enemy and dealing Fusion DMG**, considered as Resonance Skill DMG. After releasing **True Sight: Charge**, **True Sight** ends.",
       "nameLocalized": {
-        "en": "Tripartite Flames",
         "uk": "Тристороннє полум'я"
       },
       "descriptionLocalized": {
-        "en": "<strong>True Sight: Capture</strong>\nAfter releasing <strong>Resonance Skill</strong>, Changli rapidly attacks the enemy and enters <strong>True Sight</strong>, lasting for 12s. In the end, Changli releases a Plunging Attack, dealing <strong class=\"color-fusion\">Fusion DMG</strong>.\n<strong>True Sight: Capture</strong> has 2 initial attempts and can be used up to 2 times. The number of attempts is increased by 1 every 12s.\n\n<strong>Basic Attack: True Sight - Conquest</strong>\nWhen in <strong>True Sight</strong>, if Changli uses <strong>Ground Basic Attack</strong>, she releases <strong>True Sight: Conquest</strong>, rapidly approaching the enemy and dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill DMG. After releasing <strong>True Sight: Conquest</strong>, <strong>True Sight</strong> ends.\n\n<strong>Basic Attack: True Sight - Charge</strong>\nWhen in <strong>True Sight</strong>, if Changli <strong>jumps</strong> or uses <strong>Basic Attack</strong> in mid-air, she releases <strong>True Sight: Charge</strong>, dashing towards the enemy and dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill DMG. After releasing <strong>True Sight: Charge</strong>, <strong>True Sight</strong> ends.",
         "uk": "<strong>Істинний погляд: Захоплення</strong>\nПісля випуску <strong>Навички резонансу</strong> Чанлі швидко атакує ворога та входить у <strong>Істинний погляд</strong>, що триває 12 секунд. Чанлі зрештою виконує Атаку в падінні наносячи <strong class=\"color-fusion\">Ф'южн шкоду</strong>.\n<strong>Істинний погляд: Захоплення</strong> має 2 початкові спроби і може використовуватися до 2 разів. Кількість спроб збільшується на 1 кожні 12 секунд.\n\n<strong>Базова Атака: Істинний погляд - Підкорення</strong>\nКоли Чанлі в стані <strong>Істинний погляд</strong>, якщо використати<strong>Базову Атаку на землі</strong>, вона випускає <strong>Істинний погляд - Підкорення</strong>, блискавично наближаючись до ворога та наносить <strong class=\"color-fusion\">Ф'южн шкоду</strong>, яка вважається, як шкода Навички резонансу. Після того, як випустили <strong>Істинний погляд - Підкорення</strong>, <strong> Істинний погляд</strong> закінчується.\n\n<strong>Базова Атака: Істинний погляд - Заряд</strong>\nКоли Чанлі в стані <strong>Істинний погляд</strong>, якщо вона <strong>стрибає</strong> або використовує <strong>Базову Атаку</strong> у повітрі, вона вивільнила <strong>Істинний погляд - Заряд</strong>, кидаючись на ворога і наносить йому <strong class=\"color-fusion\">Ф'южн шкоду</strong>,  яка вважається, як шкода Навички резонансу. Після вивільнення <strong>Істинний погляд - Заряд</strong>, <strong> Істинний погляд</strong> закінчується."
       }
     },
@@ -277,10 +273,9 @@
       "slug": "radiance-of-fealty",
       "name": "Radiance of Fealty",
       "type": "Resonance Liberation",
-      "description": "Deal <strong class=\"color-fusion\">Fusion DMG</strong> to nearby targets, obtaining 4 stacks of [Enflamement], and entering <strong>Fiery Feather</strong>.\n\n<strong>Fiery Feather</strong>\nWhen Changli releases Heavy Attack <strong>Flaming Sacrifice</strong> within 10s, her ATK is increased by <strong class=\"color-fusion\">25%</strong>, after which <strong>Fiery Feather</strong> ends.",
-      "nameLocalized": { "en": "Radiance of Fealty", "uk": "Промінь вірності" },
+      "description": "Deal Fusion DMG** to nearby targets, obtaining 4 stacks of [Enflamement], and entering **Fiery Feather**.\n\n**Fiery Feather**\nWhen Changli releases Heavy Attack **Flaming Sacrifice** within 10s, her ATK is increased by 25%**, after which **Fiery Feather** ends.",
+      "nameLocalized": { "uk": "Промінь вірності" },
       "descriptionLocalized": {
-        "en": "Deal <strong class=\"color-fusion\">Fusion DMG</strong> to nearby targets, obtaining 4 stacks of [Enflamement], and entering <strong>Fiery Feather</strong>.\n\n<strong>Fiery Feather</strong>\nWhen Changli releases Heavy Attack <strong>Flaming Sacrifice</strong> within 10s, her ATK is increased by <strong class=\"color-fusion\">25%</strong>, after which <strong>Fiery Feather</strong> ends.",
         "uk": "Наносить <strong class=\"color-fusion\">Ф'южн шкоду</strong> найближчим цілям, отримуючи 4 стопки [Enflamement] і вводячи <strong>Полум'яне перо</strong>.\n\n<strong>Полум'яне перо</strong>\nКоли Чанглі виконує Потужну Атаку <strong>Полум'яна жертва</strong> яка триває протягом 10 секунд,  її атака збільшується на <strong class=\"color-fusion\">25%</strong>, після чого закінчується <strong>Полум'яне перо</strong>."
       }
     },
@@ -288,10 +283,9 @@
       "slug": "secret-strategist",
       "name": "Secret Strategist",
       "type": "Inherent Skill",
-      "description": "When Changli releases Basic Attack: <strong>True Sight - Conquest</strong> or Basic Attack: <strong>True Sight - Charge</strong>, for each stack of [Enflamement], Changli's Fusion DMG is increased by <strong class=\"color-fusion\">5%</strong>.",
-      "nameLocalized": { "en": "Secret Strategist", "uk": "Таємний стратег" },
+      "description": "When Changli releases Basic Attack: **True Sight - Conquest** or Basic Attack: **True Sight - Charge**, for each stack of [Enflamement], Changli's Fusion DMG is increased by 5%**.",
+      "nameLocalized": { "uk": "Таємний стратег" },
       "descriptionLocalized": {
-        "en": "When Changli releases Basic Attack: <strong>True Sight - Conquest</strong> or Basic Attack: <strong>True Sight - Charge</strong>, for each stack of [Enflamement], Changli's Fusion DMG is increased by <strong class=\"color-fusion\">5%</strong>.",
         "uk": "Після того як Чанлі вивільняє Базову Атаку: <strong>Істинний погляд - Підкорення</strong> або Базову Атаку:  <strong>Істинний погляд - Заряд</strong>, за кожен набір [Enflamement], Чанглі Ф'южн шкода збільшується на <strong class=\"color-fusion\">5%</strong>\n"
       }
     },
@@ -299,10 +293,9 @@
       "slug": "sweeping-force",
       "name": "Sweeping Force",
       "type": "Inherent Skill",
-      "description": "When Changli releases Heavy Attack <strong>Flaming Sacrifice</strong> or Resonance Liberation <strong>Radiance of Fealty</strong>, Changli's Fusion DMG Bonus is increased by <strong class=\"color-fusion\">20%</strong>, and Changli ignores <strong class=\"color-fusion\">15%</strong> of the target's DEF when dealing damage.",
-      "nameLocalized": { "en": "Sweeping Force", "uk": "Сила підчищення" },
+      "description": "When Changli releases Heavy Attack **Flaming Sacrifice** or Resonance Liberation **Radiance of Fealty**, Changli's Fusion DMG Bonus is increased by 20%**, and Changli ignores 15%** of the target's DEF when dealing damage.",
+      "nameLocalized": { "uk": "Сила підчищення" },
       "descriptionLocalized": {
-        "en": "When Changli releases Heavy Attack <strong>Flaming Sacrifice</strong> or Resonance Liberation <strong>Radiance of Fealty</strong>, Changli's Fusion DMG Bonus is increased by <strong class=\"color-fusion\">20%</strong>, and Changli ignores <strong class=\"color-fusion\">15%</strong> of the target's DEF when dealing damage.",
         "uk": "Коли Чанлі вивільняє Потужну Атаку <strong>Полум'яна жертва</strong> або Резонансне звільнення <strong>Промінь вірності</strong>, Бонус Ф'южен шкоди Чанлі збільшується на <strong class=\"color-fusion\">20%</strong>, вона ігнорує <strong class=\"color-fusion\">15%</strong> захисту цілі коли наносить шкоду."
       }
     },
@@ -310,13 +303,11 @@
       "slug": "obedience-of-rules",
       "name": "Obedience of Rules",
       "type": "Intro Skill",
-      "description": "Changli appears in mid-air, attacks the target, and enters <strong>True Sight</strong>, lasting for 12s.",
+      "description": "Changli appears in mid-air, attacks the target, and enters **True Sight**, lasting for 12s.",
       "nameLocalized": {
-        "en": "Obedience of Rules",
         "uk": "Дотримання правил"
       },
       "descriptionLocalized": {
-        "en": "Changli appears in mid-air, attacks the target, and enters <strong>True Sight</strong>, lasting for 12s.",
         "uk": "Чанглі з'являється в повітрі, атакує ціль і входить в <strong>Істинний погляд</strong>, що триває 12 секунд."
       }
     },
@@ -324,10 +315,9 @@
       "slug": "flaming-vow",
       "name": "Flaming Vow",
       "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: Flaming Sacrifice</strong>\nWhen releasing <strong>Heavy Attack</strong>, if Changli carries 4 stacks of [Enflamement], she consumes all stacks of [Enflamement] to release <strong>Flaming Sacrifice</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill DMG.\n\n<strong>Enflamement</strong>\nChangli can hold up to 4 stacks of [Enflamement].\nChangli obtains 1 stack of [Enflamement] for every Basic Attack: <strong>True Sight - Conquest</strong> on hit.\nChangli obtains 1 stack of [Enflamement] for every Basic Attack: <strong>True Sight - Charge</strong> on hit.\nChangli obtains 4 stacks of [Enflamement] for every Resonance Liberation <strong>Radiance of Fealty</strong>.",
-      "nameLocalized": { "en": "Flaming Vow", "uk": "Полум'яна клятва" },
+      "description": "**Heavy Attack: Flaming Sacrifice**\nWhen releasing **Heavy Attack**, if Changli carries 4 stacks of [Enflamement], she consumes all stacks of [Enflamement] to release **Flaming Sacrifice**, dealing Fusion DMG**, considered as Resonance Skill DMG.\n\n**Enflamement**\nChangli can hold up to 4 stacks of [Enflamement].\nChangli obtains 1 stack of [Enflamement] for every Basic Attack: **True Sight - Conquest** on hit.\nChangli obtains 1 stack of [Enflamement] for every Basic Attack: **True Sight - Charge** on hit.\nChangli obtains 4 stacks of [Enflamement] for every Resonance Liberation **Radiance of Fealty**.",
+      "nameLocalized": { "uk": "Полум'яна клятва" },
       "descriptionLocalized": {
-        "en": "<strong>Heavy Attack: Flaming Sacrifice</strong>\nWhen releasing <strong>Heavy Attack</strong>, if Changli carries 4 stacks of [Enflamement], she consumes all stacks of [Enflamement] to release <strong>Flaming Sacrifice</strong>, dealing <strong class=\"color-fusion\">Fusion DMG</strong>, considered as Resonance Skill DMG.\n\n<strong>Enflamement</strong>\nChangli can hold up to 4 stacks of [Enflamement].\nChangli obtains 1 stack of [Enflamement] for every Basic Attack: <strong>True Sight - Conquest</strong> on hit.\nChangli obtains 1 stack of [Enflamement] for every Basic Attack: <strong>True Sight - Charge</strong> on hit.\nChangli obtains 4 stacks of [Enflamement] for every Resonance Liberation <strong>Radiance of Fealty</strong>.",
         "uk": "<strong>Потужна Атака: Полум'яна жертва</strong>\nПри вивільнені <strong>Потужної Атаки</strong>, якщо Чанлі несе 4 стеки [Enflamement], вона споживає всі стеки [Enflamement], щоб вивільнити <strong>Полум'яна жертва</strong> наносячи <strong class=\"color-fusion\">Ф'жен шкоду</strong>, яка вважається, як шкода Навички резонансу.\n\n<strong>Запалення</strong>\nЧанлі може вмістити до 4 стеків [Enflamement].\nЧанлі отримує 1 стек [Enflamement] за кожну Базову Атаку <strong>Істинний погляд - Підкорення</strong> за удар.\nЧанлі отримує 1 стек [Enflamement] за кожну Базову Атаку <strong>Істинний погляд - Заряд</strong> за удар.\nЧанлі отримує 4 стеки [Enflamement]  за кожне Резонансне Звільнення <strong>Проміня вірності</strong>."
       }
     },
@@ -336,9 +326,8 @@
       "name": "Skillful Cooking",
       "type": "Inherent Skill",
       "description": "Has a chance to produce special dishes when cooking",
-      "nameLocalized": { "en": "Skillful Cooking", "uk": "Вміле приготування" },
+      "nameLocalized": { "uk": "Вміле приготування" },
       "descriptionLocalized": {
-        "en": "Has a chance to produce special dishes when cooking",
         "uk": "Має можливість створювати особливі страви під час приготування їжі"
       }
     },
@@ -346,13 +335,11 @@
       "slug": "strategy-of-duality",
       "name": "Strategy of Duality",
       "type": "Outro Skill",
-      "description": "Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by <strong class=\"color-fusion\">20%</strong> and their Resonance Liberation DMG by <strong class=\"color-fusion\">25%</strong>, lasting for <strong class=\"color-fusion\">10</strong>s. Switching to another Resonator ends this effect.",
+      "description": "Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by 20%** and their Resonance Liberation DMG by 25%**, lasting for 10**s. Switching to another Resonator ends this effect.",
       "nameLocalized": {
-        "en": "Strategy of Duality",
         "uk": "Стратегія подвійності"
       },
       "descriptionLocalized": {
-        "en": "Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by <strong class=\"color-fusion\">20%</strong> and their Resonance Liberation DMG by <strong class=\"color-fusion\">25%</strong>, lasting for <strong class=\"color-fusion\">10</strong>s. Switching to another Resonator ends this effect.",
         "uk": "Changli's Outro Skill increases the switched-in Resonator's Fusion DMG by <strong class=\"color-fusion\">20%</strong> and their Resonance Liberation DMG by <strong class=\"color-fusion\">25%</strong>, lasting for <strong class=\"color-fusion\">10</strong>s. Switching to another Resonator ends this effect.\nНавичка Відходу Чанлі збільшує переключеному Резонатору Ф'южен шкоду <strong class=\"color-fusion\">25%</strong> протягом <strong class=\"color-fusion\">10</strong>сек. При переключенні на наступного Резонатора це ефект зникає"
       }
     }

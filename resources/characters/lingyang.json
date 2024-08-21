@@ -152,42 +152,42 @@
       "slug": "lion-of-light-blessings-abound",
       "name": "Lion of Light, Blessings Abound",
       "params": [],
-      "description": "During Resonance Liberation <strong>Lion's Vigor</strong>, Lingyang's Anti-Interruption is enhanced."
+      "description": "During Resonance Liberation **Lion's Vigor**, Lingyang's Anti-Interruption is enhanced."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "dominant-and-fierce-power-unbound",
       "name": "Dominant and Fierce, \nPower Unbound",
       "params": ["10", "20"],
-      "description": "Intro Skill <strong>Lion Awakens</strong> additionally recovers {0} Resonance Energy for Lingyang, triggered once every {1}s."
+      "description": "Intro Skill **Lion Awakens** additionally recovers {0} Resonance Energy for Lingyang, triggered once every {1}s."
     },
     {
       "idx": "Resonance 3-4",
       "slug": "jaw-dropping-feats-loud-and-wide",
       "name": "Jaw-Dropping Feats, \nLoud and Wide",
       "params": ["20%", "10%"],
-      "description": "During Resonance Liberation <strong>Lion's Vigor</strong>, Lingyang's Basic Attack DMG Bonus is increased by {0}, and Resonance Skill DMG Bonus increased by {1}."
+      "description": "During Resonance Liberation **Lion's Vigor**, Lingyang's Basic Attack DMG Bonus is increased by {0}, and Resonance Skill DMG Bonus increased by {1}."
     },
     {
       "idx": "Resonance 4-4",
       "slug": "immortals-bow-in-reverence-flawed",
       "name": "Immortals Bow, \nin Reverence Flawed",
       "params": ["20%", "30"],
-      "description": "Outro Skill <strong>Frosty Marks</strong> increases the Glacio DMG Bonus of all team members by {0} for {1}s."
+      "description": "Outro Skill **Frosty Marks** increases the Glacio DMG Bonus of all team members by {0} for {1}s."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "seven-stars-shine-stepped-upon-high",
       "name": "Seven Stars Shine, \nStepped upon High",
       "params": ["200%"],
-      "description": "Resonance Liberation <strong>Strive: Lion's Vigor</strong> additionally deals <strong class=\"color-glacio\">Glacio DMG</strong> equal to {0} of Lingyang's ATK."
+      "description": "Resonance Liberation **Strive: Lion's Vigor** additionally deals Glacio DMG** equal to {0} of Lingyang's ATK."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "demons-tremble-divine-power-nigh",
       "name": "Demons Tremble, \nDivine Power Nigh",
       "params": ["3", "100%"],
-      "description": "In the Forte Circuit <strong>Striding Lion</strong> state, during the first {0}s after every Resonance Skill <strong>Mountain Roamer</strong>, the Basic Attack DMG Bonus for Lingyang's next Basic Attack is increased by {1}."
+      "description": "In the Forte Circuit **Striding Lion** state, during the first {0}s after every Resonance Skill **Mountain Roamer**, the Basic Attack DMG Bonus for Lingyang's next Basic Attack is increased by {1}."
     }
   ],
   "skills": [
@@ -195,43 +195,43 @@
       "slug": "majestic-fists",
       "name": "Majestic Fists",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nLingyang performs up to 5 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Basic Attack: Feral Roars</strong>\nAfter Resonance Skill <strong>Furious Punches</strong> is cast, <strong>Basic Attack 5</strong> is replaced with <strong>Feral Roars</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Heavy Attack</strong>\nLingyang consumes Stamina to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nLingyang consumes Stamina to perform a Mid-air Plunging Attack, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+      "description": "**Basic Attack**\nLingyang performs up to 5 consecutive attacks, dealing Glacio DMG**.\n \n**Basic Attack: Feral Roars**\nAfter Resonance Skill **Furious Punches** is cast, **Basic Attack 5** is replaced with **Feral Roars**, dealing Glacio DMG**.\n \n**Heavy Attack**\nLingyang consumes Stamina to attack the target, dealing Glacio DMG**.\n \n**Mid-air Attack**\nLingyang consumes Stamina to perform a Mid-air Plunging Attack, dealing Glacio DMG**.\n \n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to attack the target, dealing Glacio DMG**."
     },
     {
       "slug": "ancient-arts",
       "name": "Ancient Arts",
       "type": "Resonance Skill",
-      "description": "<strong>Ancient Arts</strong>\nAttack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Furious Punches</strong>\nWhen <strong>Basic Attacks 3, 4, or 5</strong> or Basic Attack <strong>Feral Roars</strong> hits the target, Resonance Skill <strong>Ancient Arts</strong> is replaced with Resonance Skill <strong>Swift Punches</strong>.\nIf Lingyang uses <strong>Basic Attack</strong> after casting Basic Attack <strong>Feral Roars</strong> and Resonance Skill <strong>Swift Punches</strong>, he will start from <strong>Basic Attack 3</strong>.\n \nLingyang's Resonance Skill will not reset his Basic Attack stage."
+      "description": "**Ancient Arts**\nAttack the target, dealing Glacio DMG**.\n \n**Furious Punches**\nWhen **Basic Attacks 3, 4, or 5** or Basic Attack **Feral Roars** hits the target, Resonance Skill **Ancient Arts** is replaced with Resonance Skill **Swift Punches**.\nIf Lingyang uses **Basic Attack** after casting Basic Attack **Feral Roars** and Resonance Skill **Swift Punches**, he will start from **Basic Attack 3**.\n \nLingyang's Resonance Skill will not reset his Basic Attack stage."
     },
     {
       "slug": "strive-lion-s-vigor",
       "name": "Strive: Lion's Vigor",
       "type": "Resonance Liberation",
-      "description": "Attack the target, dealing <strong class=\"color-glacio\">Glacio DMG</strong>, and receive the blessing of <strong>Lion's Vigor</strong>, which lasts for <strong class=\"color-glacio\">50%</strong>s.\n \n<strong>Lion's Vigor</strong>\nLingyang's <strong class=\"color-glacio\">Glacio DMG Bonus</strong> is increased by <strong class=\"color-glacio\">50%</strong>;"
+      "description": "Attack the target, dealing Glacio DMG**, and receive the blessing of **Lion's Vigor**, which lasts for 50%**s.\n \n**Lion's Vigor**\nLingyang's Glacio DMG Bonus** is increased by 50%**;"
     },
     {
       "slug": "lion-s-pride",
       "name": "Lion's Pride",
       "type": "Inherent Skill",
-      "description": "Damage of the Intro Skill <strong>Lion Awakens</strong> is increased by <strong style=\"color: var(--theme-palette-color-1);\">50%</strong>."
+      "description": "Damage of the Intro Skill **Lion Awakens** is increased by 50%**."
     },
     {
       "slug": "diligent-practice",
       "name": "Diligent Practice",
       "type": "Inherent Skill",
-      "description": "Under the <strong>Striding Lion</strong> state, within <strong class=\"color-glacio\">3</strong>s after each <strong>Basic Attack</strong>, the next <strong>Mountain Roamer</strong> will deal an additional <strong class=\"color-glacio\">Glacio DMG</strong>, equal to <strong class=\"color-glacio\">150%</strong> of <strong>Mountain Roamer</strong> damage, considered as Resonance Skill damage."
+      "description": "Under the **Striding Lion** state, within 3**s after each **Basic Attack**, the next **Mountain Roamer** will deal an additional Glacio DMG**, equal to 150%** of **Mountain Roamer** damage, considered as Resonance Skill damage."
     },
     {
       "slug": "lion-awakens",
       "name": "Lion Awakens",
       "type": "Intro Skill",
-      "description": "Lingyang enters the battlefield, dealing <strong class=\"color-glacio\">Glacio DMG</strong>."
+      "description": "Lingyang enters the battlefield, dealing Glacio DMG**."
     },
     {
       "slug": "unification-of-spirits",
       "name": "Unification of Spirits",
       "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: Glorious Plunge</strong>\nWhen Lion's Spirit is full, use <strong>Heavy Attack</strong> to perform <strong>Glorious Plunge</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Mid-air Attack: Tail Strike</strong>\nWhen Lion's Spirit is not full, use <strong>Basic Attack</strong> after <strong>Heavy Attack</strong> to perform <strong>Tail Strike</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\n \n<strong>Striding Lion</strong>\nAfter casting Heavy Attack <strong>Glorious Plunge</strong>, enter <strong>Striding Lion</strong> state;\nAfter casting Intro Skill <strong>Lion Awakens</strong> or Resonance Liberation <strong>Strive: Lion's Vigor</strong>, if Lion's Spirit is full, use <strong>Basic Attack</strong> to enter <strong>Striding Lion</strong> state.\nIn the <strong>Striding Lion</strong> state:\nAttacks can be launched in mid-air. If Lingyang is on the ground, use Heavy Attack <strong>Glorious Plunge</strong> to get back in the air.\nLion's Spirit is continuously consumed, and the <strong>Striding Lion</strong> state ends in <strong class=\"color-glacio\">5</strong>s after Lion's Spirit runs out;\nIn the Resonance Liberation <strong>Lion's Vigor</strong> state, the consumption speed of Lion's Spirit is reduced by <strong class=\"color-glacio\">50%</strong>, extending <strong>Striding Lion</strong> state by up to <strong class=\"color-glacio\">10</strong>s.\nLingyang's <strong>Basic Attack</strong> is replaced with Basic Attack <strong>Feral Gyrate</strong>, which performs up to 2 consecutive attacks, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\nLingyang's <strong>Resonance Skill</strong> is replaced with <strong>Mountain Roamer</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>.\nWhen Lion's Spirit is less than <strong class=\"color-glacio\">10</strong>, use <strong>Basic Attack</strong> to perform <strong>Stormy Kicks</strong>, dealing <strong class=\"color-glacio\">Glacio DMG</strong>; after performing Basic Attack <strong>Stormy Kicks</strong>, the Mid-air Attack <strong>Radiant Plunge</strong> becomes available.\nConcerto Energy is restored when Lion's Spirit is consumed.\n \n<strong>Lion's Spirit</strong>\nLingyang can hold up to <strong class=\"color-glacio\">100</strong> Lion's Spirit.\nWhen casting Resonance Skill <strong>Furious Punches</strong>, Lion's Spirit is restored.\nWhen casting Intro Skill <strong>Lion Awakens</strong>, Lion's Spirit is restored.\nWhen casting Resonance Liberation <strong>Strive: Lion's Vigor</strong>, Lion's Spirit is restored."
+      "description": "**Heavy Attack: Glorious Plunge**\nWhen Lion's Spirit is full, use **Heavy Attack** to perform **Glorious Plunge**, dealing Glacio DMG**.\n \n**Mid-air Attack: Tail Strike**\nWhen Lion's Spirit is not full, use **Basic Attack** after **Heavy Attack** to perform **Tail Strike**, dealing Glacio DMG**.\n \n**Striding Lion**\nAfter casting Heavy Attack **Glorious Plunge**, enter **Striding Lion** state;\nAfter casting Intro Skill **Lion Awakens** or Resonance Liberation **Strive: Lion's Vigor**, if Lion's Spirit is full, use **Basic Attack** to enter **Striding Lion** state.\nIn the **Striding Lion** state:\nAttacks can be launched in mid-air. If Lingyang is on the ground, use Heavy Attack **Glorious Plunge** to get back in the air.\nLion's Spirit is continuously consumed, and the **Striding Lion** state ends in 5**s after Lion's Spirit runs out;\nIn the Resonance Liberation **Lion's Vigor** state, the consumption speed of Lion's Spirit is reduced by 50%**, extending **Striding Lion** state by up to 10**s.\nLingyang's **Basic Attack** is replaced with Basic Attack **Feral Gyrate**, which performs up to 2 consecutive attacks, dealing Glacio DMG**.\nLingyang's **Resonance Skill** is replaced with **Mountain Roamer**, dealing Glacio DMG**.\nWhen Lion's Spirit is less than 10**, use **Basic Attack** to perform **Stormy Kicks**, dealing Glacio DMG**; after performing Basic Attack **Stormy Kicks**, the Mid-air Attack **Radiant Plunge** becomes available.\nConcerto Energy is restored when Lion's Spirit is consumed.\n \n**Lion's Spirit**\nLingyang can hold up to 100** Lion's Spirit.\nWhen casting Resonance Skill **Furious Punches**, Lion's Spirit is restored.\nWhen casting Intro Skill **Lion Awakens**, Lion's Spirit is restored.\nWhen casting Resonance Liberation **Strive: Lion's Vigor**, Lion's Spirit is restored."
     },
     {
       "slug": "skillful-cooking",
@@ -243,7 +243,7 @@
       "slug": "frosty-marks",
       "name": "Frosty Marks",
       "type": "Outro Skill",
-      "description": "Lingyang releases a shock wave centered on the skill target, dealing <strong class=\"color-glacio\">Glacio DMG</strong> equal to <strong class=\"color-glacio\">587.94%</strong> of Lingyang's ATK to targets within the range."
+      "description": "Lingyang releases a shock wave centered on the skill target, dealing Glacio DMG** equal to 587.94%** of Lingyang's ATK to targets within the range."
     }
   ],
   "stats": { "hp": 831, "def": 99, "atk": 35, "energy": 125 }

@@ -152,14 +152,14 @@
       "slug": "sapphire-skies-soaring-sparrows",
       "name": "Sapphire Skies, \nSoaring Sparrows",
       "params": ["15%", "8"],
-      "description": "Intro Skill <strong>Cerulean Song</strong> increases Yangyang's Aero DMG Bonus by an additional {0} for {1}s."
+      "description": "Intro Skill **Cerulean Song** increases Yangyang's Aero DMG Bonus by an additional {0} for {1}s."
     },
     {
       "idx": "Resonance 2-4",
       "slug": "nesting-twigs-in-beaks-they-harrow",
       "name": "Nesting Twigs, \nin Beaks They Harrow",
       "params": ["10", "20"],
-      "description": "<strong>Heavy Attack</strong> recovers an additional {0} Resonance Energy for Yangyang when it hits a target, which can be triggered 1 time every {1}s."
+      "description": "**Heavy Attack** recovers an additional {0} Resonance Energy for Yangyang when it hits a target, which can be triggered 1 time every {1}s."
     },
     {
       "idx": "Resonance III-IV",
@@ -173,21 +173,21 @@
       "slug": "close-your-eyes-and-listen-in",
       "name": "Close Your Eyes and Listen in",
       "params": ["95%"],
-      "description": "Mid-Air Attack <strong>Feather Release</strong>'s damage is increased by {0}."
+      "description": "Mid-Air Attack **Feather Release**'s damage is increased by {0}."
     },
     {
       "idx": "Resonance 5-4",
       "slug": "winds-whisper-in-harmony",
       "name": "Winds Whisper in Harmony",
       "params": ["85%"],
-      "description": "Resonance Liberation <strong>Wind Spirals</strong>'s damage is increased by {0}."
+      "description": "Resonance Liberation **Wind Spirals**'s damage is increased by {0}."
     },
     {
       "idx": "Resonance 6-4",
       "slug": "a-tribute-to-life-s-sweet-hymn",
       "name": "A Tribute to Life's Sweet Hymn",
       "params": ["20%", "20"],
-      "description": "After casting Mid-Air Attack <strong>Feather Release</strong>, the ATK of all team members is increased by {0} for {1}s."
+      "description": "After casting Mid-Air Attack **Feather Release**, the ATK of all team members is increased by {0} for {1}s."
     }
   ],
   "skills": [
@@ -195,43 +195,43 @@
       "slug": "feather-as-blade",
       "name": "Feather as Blade",
       "type": "Basic Attack",
-      "description": "<strong>Basic Attack</strong>\nYangayang performs up to 4 consecutive attacks, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack</strong>\nYangyang consumes STA to lunge forward, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Heavy Attack: Zephyr Song</strong>\nUse <strong>Basic Attack</strong> after <strong>Heavy Attack</strong> or <strong>Dodge Counter</strong> to perform Heavy Attack <strong>Zephyr Song</strong>, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack</strong>\nYangyang consumes STA to perform a Plunging Attack from mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Dodge Counter</strong>\nUse <strong>Basic Attack</strong> after a successful <strong>Dodge</strong> to thrust forward, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "**Basic Attack**\nYangayang performs up to 4 consecutive attacks, dealing Aero DMG**.\n \n**Heavy Attack**\nYangyang consumes STA to lunge forward, dealing Aero DMG**.\n \n**Heavy Attack: Zephyr Song**\nUse **Basic Attack** after **Heavy Attack** or **Dodge Counter** to perform Heavy Attack **Zephyr Song**, dealing Aero DMG**.\n \n**Mid-air Attack**\nYangyang consumes STA to perform a Plunging Attack from mid-air, dealing Aero DMG**.\n \n**Dodge Counter**\nUse **Basic Attack** after a successful **Dodge** to thrust forward, dealing Aero DMG**."
     },
     {
       "slug": "zephyr-domain",
       "name": "Zephyr Domain",
       "type": "Resonance Skill",
-      "description": "Yangyang wields her sword to create a whirling vortex of winds that gathers nearby enemies to the center, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "Yangyang wields her sword to create a whirling vortex of winds that gathers nearby enemies to the center, dealing Aero DMG**."
     },
     {
       "slug": "wind-spirals",
       "name": "Wind Spirals",
       "type": "Resonance Liberation",
-      "description": "Yangyang conjures a mighty Cyclone that gathers nearby enemies, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "Yangyang conjures a mighty Cyclone that gathers nearby enemies, dealing Aero DMG**."
     },
     {
       "slug": "compassion",
       "name": "Compassion",
       "type": "Inherent Skill",
-      "description": "Yangyang recovers <strong style=\"color: var(--theme-palette-color-1);\">30</strong> STA after she casts a Mid-air Attack <strong>Feather Release</strong>."
+      "description": "Yangyang recovers 30** STA after she casts a Mid-air Attack **Feather Release**."
     },
     {
       "slug": "lazuline-mercy",
       "name": "Lazuline Mercy",
       "type": "Inherent Skill",
-      "description": "Yangyang's Aero DMG Bonus is increased by <strong class=\"color-aero\">8%</strong> for <strong class=\"color-aero\">8</strong>s after casting Intro Skill <strong>Cerulean Song</strong>."
+      "description": "Yangyang's Aero DMG Bonus is increased by 8%** for 8**s after casting Intro Skill **Cerulean Song**."
     },
     {
       "slug": "cerulean-song",
       "name": "Cerulean Song",
       "type": "Intro Skill",
-      "description": "Yangyang sends the target into the air, dealing <strong class=\"color-aero\">Aero DMG</strong>."
+      "description": "Yangyang sends the target into the air, dealing Aero DMG**."
     },
     {
       "slug": "echoing-feathers",
       "name": "Echoing Feathers",
       "type": "Forte Circuit",
-      "description": "<strong>Heavy Attack: Stormy Strike</strong>\nWhen Yangyang has <strong class=\"color-aero\">3</strong> Melodies, she can cast <strong>Stormy Strike</strong> after <strong>Heavy Attack</strong> or <strong>Dodge Counter</strong>, dealing <strong class=\"color-aero\">Aero DMG</strong>.\n \n<strong>Mid-air Attack: Feather Release</strong>\nWhen Yangyang has <strong class=\"color-aero\">3</strong> Melodies, cast <strong>Basic Attack</strong> in mid-air to consume all Melodies and perform consecutive strikes, diving from mid-air, dealing <strong class=\"color-aero\">Aero DMG</strong>. As Yangyang lands, she sheathes her sword with an attack, dealing <strong class=\"color-aero\">Aero DMG</strong>, considered as Basic Attack DMG.\n \n<strong>Melody</strong>\nYangyang can hold up to <strong class=\"color-aero\">3</strong> Melodies\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody with every <strong>Basic Attack 4</strong> on hit.\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody for every Heavy Attack <strong>Zephyr Song</strong> on hit.\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody for every Resonance Skill <strong>Zephyr Domain</strong> on hit.\nYangyang obtains <strong class=\"color-aero\">1</strong> Melody upon casting Intro Skill <strong>Cerulean Song</strong>."
+      "description": "**Heavy Attack: Stormy Strike**\nWhen Yangyang has 3** Melodies, she can cast **Stormy Strike** after **Heavy Attack** or **Dodge Counter**, dealing Aero DMG**.\n \n**Mid-air Attack: Feather Release**\nWhen Yangyang has 3** Melodies, cast **Basic Attack** in mid-air to consume all Melodies and perform consecutive strikes, diving from mid-air, dealing Aero DMG**. As Yangyang lands, she sheathes her sword with an attack, dealing Aero DMG**, considered as Basic Attack DMG.\n \n**Melody**\nYangyang can hold up to 3** Melodies\nYangyang obtains 1** Melody with every **Basic Attack 4** on hit.\nYangyang obtains 1** Melody for every Heavy Attack **Zephyr Song** on hit.\nYangyang obtains 1** Melody for every Resonance Skill **Zephyr Domain** on hit.\nYangyang obtains 1** Melody upon casting Intro Skill **Cerulean Song**."
     },
     {
       "slug": "skillful-cooking",
