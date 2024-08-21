@@ -57,15 +57,6 @@ const useApiFactory = () => {
 
   instance.interceptors.response.use(
     async (response) => {
-      // if (response.status >= 200 && response.status <= 299) {
-      //   if (import.meta.server && response.config.cache) {
-      //     let { key, ttl } = response.config.cache;
-
-      //     console.log('write cache', key, ttl);
-      //     await useStorage('redis').setItem(key, response.data, { ex: 5000 });
-      //   }
-      // }
-
       return response;
     },
     async (error) => {

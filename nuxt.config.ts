@@ -29,8 +29,6 @@ const {
   // github
   GITHUB_OWNER,
   GITHUB_REPO,
-  // secrets
-  REDIS_URL,
 } = import.meta.env;
 
 const NITRO_PRERENDER = import.meta.env.NITRO_PRERENDER !== 'false';
@@ -222,12 +220,6 @@ export default defineNuxtConfig({
       crawlLinks: NITRO_PRERENDER_CRAWL,
       routes: NITRO_PRERENDER ? ['/', '/sitemap.xml'] : [],
     },
-    storage: {
-      cache: {
-        driver: 'redis',
-        url: REDIS_URL,
-      },
-    },
   },
 
   appConfig: {
@@ -261,7 +253,6 @@ export default defineNuxtConfig({
       GITHUB_OWNER,
       GITHUB_REPO,
     },
-    REDIS_URL,
   },
 
   future: {
