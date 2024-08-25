@@ -22,6 +22,7 @@ export default withNuxt({}).append({
     '@typescript-eslint/unified-signatures': 0,
     '@typescript-eslint/no-useless-constructor': 1,
     '@typescript-eslint/no-extraneous-class': 1,
+    '@typescript-eslint/no-empty-object-type': 0,
 
     // other
     'no-useless-escape': 0,
